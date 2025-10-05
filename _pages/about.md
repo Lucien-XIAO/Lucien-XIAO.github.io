@@ -21,7 +21,7 @@ My academic interests lie broadly in optimal transport, optimization, probabilty
 ## Education
 - 🎓 **MS (M2) in Probability**, 2025–2026  
   *Sorbonne University co-qualified with ENS-PSL*
-- 🎓 **MS (M1) in Machine Learning**, 2024–2025  
+- 🎓 **MS (M1) in Mathematics and applications**, 2024–2025  
   *Sorbonne University*
-- 🎓 **Double majors in Mathematics and Physics**, 2020-2024  
+- 🎓 **Double Bachelors in Mathematics and Physics**, 2020-2024  
   *Sorbonne University*
