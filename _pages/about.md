@@ -27,5 +27,5 @@ Here is my [CV](../assets/CV.pdf)
   *Sorbonne University co-qualified with ENS-PSL*
 - 🎓 **MS (M1) in Mathematics and applications**, 2024–2025  
   *Sorbonne University*
-- 🎓 **Double Bachelors in Mathematics and Physics**, 2020-2024  
+- 🎓 **Double Bachelor's degree in Mathematics and Physics**, 2020-2024  
   *Sorbonne University*
