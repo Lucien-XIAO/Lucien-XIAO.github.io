@@ -11,6 +11,10 @@ I am a second year Master's student in [Probability and Random Models (M2 PMA)](
 
 My academic interests lie broadly in optimal transport, optimization, probabilty theory, stochastic analysis and their applications in machine learning.
 
+I have been fortunate to work on several research projects, including the study of bi-Lipschitz equivalence of separated nets in Banach spaces with [Alexandros ESKENAZIS](https://www.alexandroseskenazis.com/) on M1 and collective motion modeling with [Diane PEURICHARD](https://sites.google.com/site/dianepeurichard/home) on L3.
+
+Here is my [CV](../assets/CV.pdf)
+
 ## Interests
 - Optimal transport
 - Optimization
