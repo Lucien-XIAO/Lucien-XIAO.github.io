@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a second year Master's student in [Probability and Random Models (M2 PMA)](https://www.lpsm.paris/masters/modale/index) at [Sorbonne University](https://www.sorbonne-universite.fr/), co-qualified with [École Normale Supérieure, Paris (ENS-PSL)](https://www.ens.psl.eu/). Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [Sorbonne University](https://www.sorbonne-universite.fr/).
+I am a second year Master's student in [Probability and Random Models (M2 PMA)](https://www.lpsm.paris/masters/modale/index) of [LPSM](https://www.lpsm.paris/) at [Sorbonne University](https://www.sorbonne-universite.fr/), co-qualified with [École Normale Supérieure, Paris (ENS-PSL)](https://www.ens.psl.eu/). Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [Sorbonne University](https://www.sorbonne-universite.fr/).
 
 My academic interests lie broadly in optimal transport, optimization, probabilty theory, stochastic analysis and their applications in machine learning.
 
