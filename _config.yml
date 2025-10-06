@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Yuguang XIAO / Personal Homepage"
 title_separator          : "-"
-name                     : &name "Yuguang XIAO"
+name                     : &name "Yuguang XIAO (肖煜光)"
 description              : &description "M2 student at Sorbonne University"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://lucien-xiao.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "A M2 student in Probablity and Random models"
   location         : "Paris, France"
-  employer         : "Sorbonne University"
+  employer         : "[LPSM, Sorbonne University](https://www.lpsm.paris/)"
   uri              : # URL
   email            : "yuguang.xiao.maths@gmail.com" 
 
