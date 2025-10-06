@@ -1,20 +1,11 @@
 ---
-title: "Teaching experience 1"
+title: "Private Mathematics Tutor — École Polytechnique"
 collection: teaching
-type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+type: "Undergraduate tutoring"
+permalink: /teaching/2023-fall-private-tutoring
+venue: "École Polytechnique"
+date: 2023-09-01
+location: "Paris, France"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+I provide one-on-one and small-group tutoring in **Analysis** and **Linear Algebra** for first-year undergraduates at École Polytechnique. My focus is on problem-solving techniques, building rigorous proof skills, and connecting theory to standard exercises.
