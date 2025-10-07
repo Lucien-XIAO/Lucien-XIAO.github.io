@@ -16,11 +16,11 @@ I have been fortunate to work on several research projects, including the study 
 Here is my [CV](../assets/CV.pdf).
 
 ## Interests
-- Optimal transport
-- Optimization
 - Probabilty theory
 - Stochastic analysis
-- Applications in Machine learning
+- Optimal transport
+- Optimization
+- Applications in statistical physics
   
 ## Education
 - 🎓 **MS (M2) in Probability**, 2025–2026  
@@ -29,3 +29,5 @@ Here is my [CV](../assets/CV.pdf).
   *Sorbonne University*
 - 🎓 **Double Bachelor's degree in Mathematics and Physics**, 2020-2024  
   *Sorbonne University*
+- 🎓 **High School Diploma in Science**, 2016-2019
+  *Wuhan No.3 high school*
