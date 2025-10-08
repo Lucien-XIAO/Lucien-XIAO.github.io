@@ -23,11 +23,11 @@ Here is my [CV](../assets/CV.pdf).
 - Applications in statistical physics
   
 ## Education
-- 🎓 **MS (M2) in Probability**, 2025–2026  
+- 🎓 **MS (M2) in Probability**, 2025–2026    
   *Sorbonne University co-qualified with ENS-PSL*
-- 🎓 **MS (M1) in Mathematics and applications**, 2024–2025  
+- 🎓 **MS (M1) in Mathematics and applications**, 2024–2025    
   *Sorbonne University*
 - 🎓 **Double Bachelor's degree in Mathematics and Physics**, 2020-2024  
   *Sorbonne University*
-- 🎓 **High School Diploma in Science**, 2016-2019
+- 🎓 **High School Diploma in Science**, 2016-2019  
   *Wuhan No.3 high school*
