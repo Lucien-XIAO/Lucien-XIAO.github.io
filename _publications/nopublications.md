@@ -1,14 +1,5 @@
 ---
-title: 
-collection: 
-category: 
-permalink: 
-excerpt: 
-date: 
-venue: 
-slidesurl: 
-paperurl: 
-bibtexurl: 
-citation: 
+title: "No Publications Yet"
+permalink: /publications/nopublications/
 ---
 I don’t have any publications yet. But in future, ...
