@@ -10,7 +10,7 @@ permalink: /more-information/internships/
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
-## 🧪 Separated Nets in Banach Space with Bi-Lipschitz Maps, [report](../interships/StageM1/rapport_M1.pdf)and [slides](../interships/StageM1/diapo_M1.pdf)
+## 🧪 Separated Nets in Banach Space with Bi-Lipschitz Maps, [report](../interships/StageM1/rapport_M1.pdf) and [slides](../interships/StageM1/diapo_M1.pdf)
 
 _Encadrant_: [Alexandros ESKENAZIS](https://www.alexandroseskenazis.com/)  
 *End of Jan. 2025 – End of May 2025*
