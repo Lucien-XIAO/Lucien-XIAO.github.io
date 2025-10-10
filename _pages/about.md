@@ -49,7 +49,7 @@ Here is my [CV](../assets/CV.pdf).
   *Wuhan No.3 high school*
 
 ## Some interesting results
-Some pictures illustrating my research, created with Python. Enjoy visual mathematics and Physics!
+Some pictures or animations illustrating my research, created with Python. Enjoy visual mathematics and Physics!
 <p align="center">
   <img src="../interships/StageL3/resultats_visualises/N%2050%2C%20M%201.gif" alt="Result 1" width="45%">
   <img src="../interships/StageL3/resultats_visualises/N%2050%2C%20M%203.gif" alt="Result 2" width="45%">
