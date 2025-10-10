@@ -47,3 +47,9 @@ Here is my [CV](../assets/CV.pdf).
   *SU*
 - 🎓 **High School Diploma in Science**, 2016-2019  
   *Wuhan No.3 high school*
+
+## Some interesting results
+<p align="center">
+  <img src="../interships/StageL3/resultats_visualises/N 50,M 1.gif" alt="Result 1" width="45%">
+  <img src="../interships/StageL3/resultats_visualises/N 50,M 3.gif.gif" alt="Result 2" width="45%">
+</p>
