@@ -9,15 +9,19 @@ redirect_from:
 
 I am a second year Master's student in [Probability and Random Models (M2 PMA)](https://www.lpsm.paris/masters/modale/index) with major stochastic process of [LPSM](https://www.lpsm.paris/) at [Sorbonne University](https://www.sorbonne-universite.fr/), co-qualified with [ENS-PSL](https://www.ens.psl.eu/). 
 
-Here is my course selection:
+Here is my course selection
+
 **Semester 1**
+
 - Stochastic Calculus and Diffusion Processes (9 ECTS) by [Nicolas Fournier](https://perso.lpsm.paris/~nfournier/)
 - Discrete Markovian Models (6 ECTS) by [Thomas Duquesne](https://perso.lpsm.paris/~tduquesne/)
-- Markov Processes and Applications (3 ECTS) [Thomas Duquesne](https://perso.lpsm.paris/~tduquesne/)
-- Convergence of Measures, Large Deviations, Percolation (6 ECTS) [Thierry Lévy](https://www.lpsm.paris/users/levyt/index)
-- Poissonian Clouds, Levy Processes, and Excursions (6 ECTS) [Thomas Duquesne](https://perso.lpsm.paris/~tduquesne/)
+- Markov Processes and Applications (3 ECTS) by [Thomas Duquesne](https://perso.lpsm.paris/~tduquesne/)
+- Convergence of Measures, Large Deviations, Percolation (6 ECTS) by [Thierry Lévy](https://www.lpsm.paris/users/levyt/index)
+- Poissonian Clouds, Levy Processes, and Excursions (6 ECTS) by [Thomas Duquesne](https://perso.lpsm.paris/~tduquesne/)  
+
 **Semester 2**
--
+- electives to be chosen
+
 
 Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [Sorbonne University](https://www.sorbonne-universite.fr/).
 
