@@ -70,7 +70,6 @@ Some pictures illustrating my research, created with Python. Enjoy visual mathem
   The black dot represents the Earth, the blue curve corresponds to the actual satellite trajectory, and the red curve represents the actual Moon trajectory (real data obtained from NASA).  
   Using the 3-body model, we simulated the green trajectory for the satellite and the yellow trajectory for the Moon.
 </p>
-</p>
 
 
 
