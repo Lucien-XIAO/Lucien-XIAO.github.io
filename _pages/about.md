@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a second year Master's student in [Probability and Random Models (M2 PMA)](https://www.lpsm.paris/masters/modale/index) with major stochastic process of [LPSM](https://www.lpsm.paris/) at [Sorbonne University](https://www.sorbonne-universite.fr/), co-qualified with [ENS-PSL](https://www.ens.psl.eu/). 
+I am a second year Master's student in Probability and Random Models ([M2-PMA](https://www.lpsm.paris/masters/modale/index)) with major stochastic process of [LPSM](https://www.lpsm.paris/) at Sorbonne University ([SU](https://www.sorbonne-universite.fr/)), co-qualified with École Normale Supérieure, Paris ([ENS-PSL](https://www.ens.psl.eu/)). 
 
-Here is my course selection
+Here is my M2-PMA course selection
 
 **Semester 1**
 
@@ -23,7 +23,7 @@ Here is my course selection
 - electives to be chosen
 
 
-Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [Sorbonne University](https://www.sorbonne-universite.fr/).
+Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [SU](https://www.sorbonne-universite.fr/).
 
 My academic interests lie broadly in optimal transport, optimization, probabilty theory, stochastic analysis and their applications in statistical physics.
 
@@ -40,10 +40,10 @@ Here is my [CV](../assets/CV.pdf).
   
 ## Education
 - 🎓 **MS (M2) in Probability**, 2025–2026    
-  *Sorbonne University co-qualified with ENS-PSL*
+  *SU co-qualified with ENS-PSL*
 - 🎓 **MS (M1) in Mathematics and applications**, 2024–2025    
-  *Sorbonne University*
+  *SU*
 - 🎓 **Double Bachelor's degree in Mathematics and Physics**, 2020-2024  
-  *Sorbonne University*
+  *SU*
 - 🎓 **High School Diploma in Science**, 2016-2019  
   *Wuhan No.3 high school*
