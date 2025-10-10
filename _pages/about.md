@@ -56,7 +56,7 @@ Some pictures illustrating my research, created with Python. Enjoy visual mathem
 </p>
 
 <p align="center" style="max-width:800px; margin:auto; font-size:0.95em; line-height:1.5;">
-  Visualization results from my L3 internship on <em>collective motion in the presence of predators</em>. 
+   <strong>1 : </strong>Visualization results from my L3 internship on <em>collective motion in the presence of predators</em>. 
   The left animation shows the dynamics of a flock of 50 green agents when a single red predator is introduced, 
   while the right one shows the same system with three predators. I mainly focused on the modeling and analysis of such predator–prey interactions with python Code in my report.
 </p>
@@ -65,7 +65,7 @@ Some pictures illustrating my research, created with Python. Enjoy visual mathem
   <img src="../interships/Stage_phys_L3/M_E_S_3body.PNG" alt="Result 3" width="70%">
 </p>
 <p align="center" style="max-width:800px; margin:auto; font-size:0.95em; line-height:1.5;">
-  Result from my L3 physics internship on celestial mechanics.  
+  <strong>2 : </strong>Result from my L3 physics internship on celestial mechanics.  
   We studied the classical <em>N-body model</em> in astrophysics and plotted the trajectories of the Moon and an Earth-orbiting satellite relative to the Earth.  
   The black dot represents the Earth, the blue curve corresponds to the actual satellite trajectory, and the red curve represents the actual Moon trajectory (real data obtained from NASA).  
   Using the 3-body model, we simulated the green trajectory for the satellite and the yellow trajectory for the Moon.
