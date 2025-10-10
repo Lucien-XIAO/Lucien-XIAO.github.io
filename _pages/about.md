@@ -62,7 +62,15 @@ Some pictures illustrating my research, created with Python. Enjoy visual mathem
 </p>
 
 <p align="center">
-  <img src="../interships/Stage_phys_L3/M_E_S_3body.PNG" alt="Result 3">
+  <img src="../interships/Stage_phys_L3/M_E_S_3body.PNG" alt="Result 3" width="70%">
 </p>
+<p align="center" style="max-width:800px; margin:auto; font-size:0.95em; line-height:1.5;">
+  Result from my L3 physics internship on celestial mechanics.  
+  We studied the classical <em>N-body model</em> in astrophysics and plotted the trajectories of the Moon and an Earth-orbiting satellite relative to the Earth.  
+  The black dot represents the Earth, the blue curve corresponds to the actual satellite trajectory, and the red curve represents the actual Moon trajectory (real data obtained from NASA).  
+  Using the 3-body model, we simulated the green trajectory for the satellite and the yellow trajectory for the Moon.
+</p>
+</p>
+
 
 
