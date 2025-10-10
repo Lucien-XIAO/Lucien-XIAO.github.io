@@ -29,8 +29,6 @@ My academic interests lie broadly in optimal transport, optimization, probabilty
 
 I have been fortunate to work on several research projects, including the study of bi-Lipschitz equivalence of separated nets in Banach spaces with [Alexandros ESKENAZIS](https://www.alexandroseskenazis.com/) ([report](../interships/StageM1/rapport_M1.pdf), [slides](../interships/StageM1/diapo_M1.pdf)) on M1 and collective motion modeling with [Diane PEURICHARD](https://sites.google.com/site/dianepeurichard/home) ([report](../interships/StageL3/rappot.pdf), [slides](../interships/StageL3/diapo.pdf)) on L3.
 
-Here is my [CV](../assets/CV.pdf).
-
 ## Interests
 - Probabilty theory
 - Stochastic analysis
