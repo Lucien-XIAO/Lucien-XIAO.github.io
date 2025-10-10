@@ -53,3 +53,9 @@ Here is my [CV](../assets/CV.pdf).
   <img src="../interships/StageL3/resultats_visualises/N%2050%2C%20M%201.gif" alt="Result 1" width="45%">
   <img src="../interships/StageL3/resultats_visualises/N%2050%2C%20M%203.gif" alt="Result 2" width="45%">
 </p>
+
+<p align="center" style="max-width:800px; margin:auto; font-size:0.95em; line-height:1.5;">
+  <strong>Figure:</strong> Visualization results from my L3 internship on <em>collective motion in the presence of predators</em>. 
+  The left animation shows the dynamics of a flock of 50 green agents when a single red predator is introduced, 
+  while the right one shows the same system with three predators. I mainly focused on the modeling and analysis of such predator–prey interactions.
+</p>
