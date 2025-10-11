@@ -25,7 +25,7 @@ Here is my M2-PMA course selection
 
 Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [SU](https://www.sorbonne-universite.fr/).
 
-My academic interests lie broadly in optimal transport, optimization, probabilty theory, stochastic analysis and their applications in statistical physics. By the way, we call the student and professor at Sorbonne Université "[Sorbonnard](https://www.dictionnaire-academie.fr/article/A9S2158)".
+My academic interests lie broadly in optimal transport, optimization, probabilty theory, stochastic analysis and their applications in statistical physics. 
 
 I have been fortunate to work on several research projects, including the study of bi-Lipschitz equivalence of separated nets in Banach spaces with [Alexandros ESKENAZIS](https://www.alexandroseskenazis.com/) ([report](../interships/StageM1/rapport_M1.pdf), [slides](../interships/StageM1/diapo_M1.pdf)) on M1 and collective motion modeling with [Diane PEURICHARD](https://sites.google.com/site/dianepeurichard/home) ([report](../interships/StageL3/rappot.pdf), [slides](../interships/StageL3/diapo.pdf)) on L3.
 
