@@ -46,6 +46,9 @@ I have been fortunate to work on several research projects, including the study 
 - 🎓 **High School Diploma in Science**, 2016-2019  
   *Wuhan No.3 high school*
 
+## Various Notes 
+- Measure Theory (not finished). [[PDF]](../_publications/Various_Notes/Measure_theory.pdf) *(updated {{ "now" | date: "%B %d, %Y" }})*
+  
 ## Some interesting results
 Some pictures or animations illustrating my research, created with Python. Enjoy visual mathematics and Physics!
 <p align="center">
