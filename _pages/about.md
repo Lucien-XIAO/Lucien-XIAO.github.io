@@ -25,7 +25,7 @@ Here is my M2-PMA course selection
 - Integrable probability & The Kardar-Parisi-Zhang Universality Class by [Guillaume Barraquand](https://www.phys.ens.psl.eu/~barraquand/)
 - Determinantal processes, random matrices and hyperuniformity by [Raphaël Lachièze-Rey](https://helios2.mi.parisdescartes.fr/~rlachiez/)
 - Rough Paths et EDS by [Lorenzo Zambotti](https://www.lpsm.paris/users/zambotti/index)
-- Intership
+- Internship (Master thesis) at Laboratory
 
 
 Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [SU](https://www.sorbonne-universite.fr/).
