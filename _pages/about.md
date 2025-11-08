@@ -22,10 +22,10 @@ Here is my M2-PMA course selection
 - Poissonian Clouds, Levy Processes, and Excursions (6 ECTS) by [Thomas Duquesne](https://perso.lpsm.paris/~tduquesne/)  
 
 **Semester 2**
-- Integrable probability & The Kardar-Parisi-Zhang Universality Class by [Guillaume Barraquand](https://www.phys.ens.psl.eu/~barraquand/)
-- Determinantal processes, random matrices and hyperuniformity by [Raphaël Lachièze-Rey](https://helios2.mi.parisdescartes.fr/~rlachiez/)
-- Rough Paths and Stochastic differential equation by [Lorenzo Zambotti](https://www.lpsm.paris/users/zambotti/index)
-- Internship (Master thesis) at Laboratory
+- Integrable probability & The Kardar-Parisi-Zhang Universality Class (6 ECTS) by [Guillaume Barraquand](https://www.phys.ens.psl.eu/~barraquand/)
+- Determinantal processes, random matrices and hyperuniformity (6 ECTS) by [Raphaël Lachièze-Rey](https://helios2.mi.parisdescartes.fr/~rlachiez/)
+- Rough Paths and Stochastic differential equation (6 ECTS) by [Lorenzo Zambotti](https://www.lpsm.paris/users/zambotti/index)
+- Internship (Master thesis) at Laboratory (12 ECTS)
 
 
 Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [SU](https://www.sorbonne-universite.fr/).
