@@ -13,7 +13,7 @@ redirect_from:
   - /about.html
 
 ---
-Here is the detailed official introduction of the M2-PMA 2025-2026 (French version) [pdf]()
+Here is the detailed official introduction of the M2-PMA 2025-2026 (French version) [pdf](PMA\brochure2025.pdf)
 
 Here is my M2-PMA course selection (Major stochastic process)
 
