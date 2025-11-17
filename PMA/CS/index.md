@@ -8,7 +8,7 @@ layout: single
 Here is a detailed introduction to the CS course.
 
 * **Professeur:** [Nicolas Fournier](https://perso.lpsm.paris/~nfournier/)
-* **Course office web:** https://perso.lpsm.paris/~nfournier/
+* **Course official web:** https://perso.lpsm.paris/~nfournier/
 * **Class format:** Lecture course with TDs
 * **ECTS:** 9 ECTS 
 * **Content:**
