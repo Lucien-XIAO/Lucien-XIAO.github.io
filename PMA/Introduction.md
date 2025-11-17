@@ -17,7 +17,7 @@ Here is the detailed official introduction of the M2-PMA 2025-2026 (French versi
 
 M2-PMA is basically one of the strongest M2 programs in France for pure probability (the other being Université Paris-Saclay’s [M2 Mathématiques de l’aléatoire](https://www.universite-paris-saclay.fr/formation/master/mathematiques-et-applications/m2-mathematiques-de-laleatoire#programme)); of course we also can’t ignore the rising new force of Université de Dauphine-PSL’s M2 [MATH](https://dauphine.psl.eu/en/training/masters-degrees/mathematics-and-applied-mathematics/applied-and-theoretical-mathematics-masters-year-2).
 
-In the 2025–2026 academic year, M2-PMA added a major called "EDProba," which means "PDE + Probability." This major is jointly offered with M2 Modélisation. The first semester has 15 ECTS in Modélisation and 15 ECTS in PMA. The course options for the following semester are also fairly fixed (look at Brochure 2025-2026), and there isn’t as much freedom for PMA students in that semester. If you are enrolled as a Modélisation student, you will ultimately receive the Modélisation diploma, rather than the PMA diploma.
+In the 2025–2026 academic year, M2-PMA added a major called "EDProba," which means "PDE + Probability." This major is jointly offered with M2 Modélisation. The first semester has 15 ECTS in Modélisation and 15 ECTS in PMA. The course options for the following semester are also fairly fixed, and there isn’t as much freedom for PMA students in that semester (look at Brochure 2025-2026). If you are enrolled as a Modélisation student, you will ultimately receive the Modélisation diploma, rather than the PMA diploma.
 
 **Application recommendations or conditions**
 
