@@ -19,7 +19,7 @@ M2-PMA is basically one of the strongest M2 programs in France for pure probabil
 
 In the 2025–2026 academic year, M2-PMA added a major called "EDProba," which means "PDE + Probability." This major is jointly offered with M2 Modélisation. One semester has 15 ECTS in Modélisation and 15 ECTS in PMA. The course options for the following semester are also fairly fixed, and there isn’t as much freedom for PMA students in that semester. If you are enrolled as a Modélisation student, you will ultimately receive the Modélisation diploma, rather than the PMA diploma.
 
-*Application recommendations or conditions*
+**Application recommendations or conditions**
 
 I was admitted to M2-PMA from Sorbonne University M1 via eCandidat (Sorbonne University's application procedure). My M1 courses were: first semester: 1. Advanced Probability 2. Statistics; second semester: 1. Advanced Functional Analysis 2. Stochastic Calculus and Stochastic Control 3. M1 thesis
 
