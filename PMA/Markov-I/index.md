@@ -25,9 +25,9 @@ Here is the textbook version 2023-2024 of this Course. [[pdf](/PMA/Markov-I/Poly
 ## Previous Examens
 
 Here is some previous examens: 
-* 2021-2022 [[session1](/PMA/Markov-I/Exam_markov_1_2021-2022.pdf)]; No resources for session2
-* 2022-2023 [[session1](/PMA/Markov-I/Exam_markov_1_2022-2023.pdf)]; No resources for session2
-* 2023-2024 [[session1](/PMA/Markov-I/Exam_markov_1_2023-2024.pdf)]; No resources for session2
-* 2024-2025 No resources for session1; [[session2](/PMA/Markov-I/Exam_markov_1_2021-2022.pdf)] (The same examen of 2021-2022 session 1)
-* 2025-2026 [[session1](/PMA/Markov-I/Exam_markov_1_2025-2026.pdf)]; No resources for session2
+* 2021-2022: [[session1](/PMA/Markov-I/Exam_markov_1_2021-2022.pdf)]; No resources for session2
+* 2022-2023: [[session1](/PMA/Markov-I/Exam_markov_1_2022-2023.pdf)]; No resources for session2
+* 2023-2024: [[session1](/PMA/Markov-I/Exam_markov_1_2023-2024.pdf)]; No resources for session2
+* 2024-2025: No resources for session1; [[session2](/PMA/Markov-I/Exam_markov_1_2021-2022.pdf)] (The same examen of 2021-2022 session 1)
+* 2025-2026: [[session1](/PMA/Markov-I/Exam_markov_1_2025-2026.pdf)]; No resources for session2
 
