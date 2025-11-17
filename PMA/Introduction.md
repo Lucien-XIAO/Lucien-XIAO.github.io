@@ -14,7 +14,7 @@ redirect_from:
 
 ---
 
-Here is my M2-PMA course selection
+Here is my M2-PMA course selection (Major stochastic process)
 
 **Semester 1**
 
