@@ -26,7 +26,8 @@ Here is a detailed introduction to the CS course.
 Here is the textbook of this Course. [[pdf](/PMA/CS/PolyCS.pdf)]
 
 ## TDs
-
+* TDs in PDF [[pdf](/PMA/CS/TD/TDCS.pdf)]
+* Solutions of TDs in PDF [[pdf](/PMA/CS/TD/Solution_TD.pdf)]
 
 ## Additional materials
 
