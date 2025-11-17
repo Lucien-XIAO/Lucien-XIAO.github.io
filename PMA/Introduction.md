@@ -1,6 +1,6 @@
 ---
 
-title: M2–Probability and random models
+title: M2 – Probability and Random Models 
 
 permalink: /PMA/
 
