@@ -8,6 +8,7 @@ layout: single
 Here is a detailed introduction to the CS course.
 
 * **Professeur:** [Nicolas Fournier](https://perso.lpsm.paris/~nfournier/)
+* **Course office web:** https://perso.lpsm.paris/~nfournier/
 * **Class format:** Lecture course with TDs
 * **ECTS:** 9 ECTS 
 * **Content:**
@@ -24,7 +25,13 @@ Here is a detailed introduction to the CS course.
 
 Here is the textbook of this Course. [[pdf](/PMA/CS/PolyCS.pdf)]
 
-## Brownian Motion, Martingales, and Stochastic Calculus by Le Gall
+## TDs
 
+
+## Additional materials
+
+**“Brownian Motion, Martingales, and Stochastic Calculus” by Jean-François Le Gall**
 * Book in PDF [[pdf](/PMA/CS/le_gall/Brownian_motion.pdf)]
 * Solutions of this book exercises in PDF [[pdf](/PMA/CS/le_gall/Solution_Brownian_Motion.pdf)]
+
+
