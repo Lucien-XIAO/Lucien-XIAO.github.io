@@ -8,7 +8,7 @@ layout: single
 Here is a detailed introduction to the Markov I course.
 
 * **Professeur:** [Thomas Duquesne](https://perso.lpsm.paris/~tduquesne/)
-* **ECTS:** 6+3 ECTS
+* **ECTS:** 6+3 ECTS (For major applied probability and EDProba, it's only 6 ECTS - don't need to study Poisson cloud)
 * **Content:**
     * Markov chain (including random graphs)
     * Markov process (continuous time + discrete state)
