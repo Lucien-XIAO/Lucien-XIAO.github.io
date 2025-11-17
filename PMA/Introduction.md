@@ -14,6 +14,7 @@ redirect_from:
 
 ---
 Here is the detailed official introduction of the M2-PMA 2025-2026 (French version) [[brochure 2025-2026]](PMA\brochure2025.pdf)
+M2-PMA is basically one of the strongest M2 programs in France for pure probability (the other being Université Paris-Saclay’s [M2 Mathématiques de l’aléatoire](https://www.universite-paris-saclay.fr/formation/master/mathematiques-et-applications/m2-mathematiques-de-laleatoire#programme)); of course we also can’t ignore the rising new force of Université de Dauphine-PSL’s M2 [MATH](https://dauphine.psl.eu/en/training/masters-degrees/mathematics-and-applied-mathematics/applied-and-theoretical-mathematics-masters-year-2).
 
 I was admitted to M2-PMA from Sorbonne University M1 via eCandidat (Sorbonne University's application procedure). My M1 courses were: first semester: 1. Advanced Probability 2. Statistics; second semester: 1. Advanced Functional Analysis 2. Stochastic Calculus and Stochastic Control 3. M1 thesis
 
