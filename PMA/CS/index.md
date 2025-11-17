@@ -29,6 +29,12 @@ Here is the textbook of this Course. [[pdf](/PMA/CS/PolyCS.pdf)]
 * TDs in PDF [[pdf](/PMA/CS/TD/TDCS.pdf)]
 * Solutions of TDs in PDF [[pdf](/PMA/CS/TD/Solution_TD.pdf)]
 
+## Previous Examens
+* 2021-2022: [[session1](/PMA/CS/final/M2CS-Ex2022.pdf)];
+* 2022-2023: [[session1](/PMA/CS/final/M2CS-Ex2023.pdf)];
+* 2023-2024: [[session1](/PMA/CS/final/M2CS-Ex2024.pdf)];
+* 2024-2025: [[session1](/PMA/CS/final/M2CS-Ex2025.pdf)];
+
 ## Additional materials
 
 **“Brownian Motion, Martingales, and Stochastic Calculus” by Jean-François Le Gall**
