@@ -36,7 +36,7 @@ Here is my M2-PMA course selection (Major stochastic process)
 **Semester 1**
 
 - Stochastic Calculus and Diffusion Processes
-- [Markov I (Discrete Markovian Models + Markov Processes and Applications)](PMA/Markov-I)
+- [Markov I (Discrete Markovian Models + Markov Processes and Applications)](PMA/Markov-I/markov-1.md)
 - Convergence of Measures, Large Deviations, Percolation 
 - Markov II (Poissonian Clouds, Levy Processes, and Excursions)
   
