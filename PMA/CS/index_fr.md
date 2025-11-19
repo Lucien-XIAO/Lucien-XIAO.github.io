@@ -35,7 +35,7 @@ Voici le polycopié de ce cours. [[pdf](/PMA/CS/PolyCS.pdf)]
 * 2023-2024 : [[session1](/PMA/CS/final/M2CS-Ex2024.pdf)] ; Pas de ressources pour la session 2
 * 2024-2025 : [[session1](/PMA/CS/final/M2CS-Ex2025.pdf)] ; Pas de ressources pour la session 2
 
-## Matériaux Additionnels
+## Matériaux Additionnels (In English🇬🇧)
 
 **“Brownian Motion, Martingales, and Stochastic Calculus” par Jean-François Le Gall**
 * Livre en PDF [[pdf](/PMA/CS/le_gall/Brownian_motion.pdf)]
