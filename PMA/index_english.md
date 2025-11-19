@@ -2,7 +2,7 @@
 
 title: M2 – Probability and Random Models (PMA)
 
-permalink: /PMA/
+permalink: /PMA/English/
 
 author_profile: true
 
