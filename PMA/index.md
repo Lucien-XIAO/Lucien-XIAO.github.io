@@ -23,7 +23,7 @@ M2-PMA is basically one of the strongest M2 programs in France for pure probabil
 
 M2-PMA admits about 20–30 people each year, including some ENS-PSL normaliens or normaliennes, engineers from X, and some very strong international students, for example from the University of Science and Technology of China ([the Sino-French program](https://cfmath.org/#about)). Most of them choose the Major in Stochastic Processes — roughly 20 people.
 
-In the 2025–2026 academic year, M2-PMA added a major called "EDProba," which means "PDE + Probability." This major is jointly offered with M2 Modélisation. The first semester has 15 ECTS in Modélisation and 15 ECTS in PMA. The course options for the following semester are also fairly fixed, and there isn’t as much freedom for PMA students in that semester (look at Brochure 2025-2026). If you are enrolled as a Modélisation student, you will ultimately receive the Modélisation diploma, rather than the PMA diploma.
+In the 2025–2026 academic year, M2-PMA added a major called "[EDProba](https://www.ljll.fr/MathModel/presentation/edproba.html)" which means "PDE + Probability." This major is jointly offered with M2 [Modélisation](https://www.ljll.fr/MathModel/). The first semester has 15 ECTS in Modélisation and 15 ECTS in PMA. The course options for the following semester are also fairly fixed, and there isn’t as much freedom for PMA students in that semester (look at Brochure 2025-2026). If you are enrolled as a Modélisation student, you will ultimately receive the Modélisation diploma, rather than the PMA diploma.
 
 **Application recommendations or conditions**
 
