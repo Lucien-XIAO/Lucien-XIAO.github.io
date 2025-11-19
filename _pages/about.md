@@ -34,7 +34,7 @@ I have been fortunate to work on several research projects, including the study 
   *Wuhan No.3 high school*
 
 ## Various Notes 
-- Measure Theory (not finished). [[PDF]](../_publications/Various_Notes/Measure_theory.pdf) *(updated {{ "now" | date: "%B %d, %Y" }})*
+- Measure Theory (not finished). [[PDF]](../publications/Various_Notes/Measure_theory.pdf) *(updated {{ "now" | date: "%B %d, %Y" }})*
   
 ## Some interesting results
 Some pictures or animations illustrating my research, created with Python. Enjoy visual mathematics and Physics!
