@@ -9,11 +9,11 @@ Voici une introduction détaillée du cours CGP.
 
 * **Professeur :** [Thierry Lévy](https://www.lpsm.paris/users/levyt/index)
 * **Site web officiel du cours :** https://www.lpsm.paris/users/levyt/cgp
-* **Format du cours :** Cours magistral avec TD (Travaux Dirigés)
+* **Format du cours :** Cours magistral avec TDs
 * **ECTS :** 6 ECTS 
 * **Contenu :**
     * Convergence des mesures
-    * Grandes déviations
+    * Grandes déviations 
     * Percolation
 * **Coefficient de difficulté :** ⭐⭐⭐⭐
 * **Caractéristiques :**
