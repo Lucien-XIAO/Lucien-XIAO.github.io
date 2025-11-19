@@ -1,5 +1,6 @@
 ---
 title: "Convergence des mesures, Grandes déviations, Percolation (CGP)"
+permalink: /PMA/CGP/fr/
 layout: single 
 ---
 
