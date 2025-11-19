@@ -1,5 +1,4 @@
 ---
-
 title: M2 – Probabilités et Modèles Aléatoires (PMA)
 
 permalink: /PMA/
@@ -7,12 +6,10 @@ permalink: /PMA/
 author_profile: true
 
 redirect_from:
-
-  - /about/
-
-  - /about.html
-
+  - /about/
+  - /about.html
 ---
+
 **[Passer à la version Anglaise🇬🇧 / Switch to English version🇬🇧](/PMA/)**
 
 Voici l'introduction officielle détaillée du M2-PMA 2025-2026 [[brochure 2025-2026]](/PMA/brochure2025.pdf) et le site web officiel du M2-PMA [[site web](https://www.lpsm.paris/masters/modale/index)].
