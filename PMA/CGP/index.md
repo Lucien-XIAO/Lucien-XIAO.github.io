@@ -1,10 +1,6 @@
 ---
 title: "Convergence of measures, Large deviations, Percolation (CGP)"
-
-permalink: /CGP/
-
 layout: single 
-
 ---
 
 ## Course details
