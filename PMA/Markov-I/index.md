@@ -1,5 +1,5 @@
 ---
-title: "Markov I: Discrete Markovian Models + Markov Processes and Applications"
+title: "Markov I: Discrete Markovian Models + Markov Processes and Applications + Poissonian Clouds"
 layout: single 
 ---
 
@@ -12,8 +12,8 @@ Here is a detailed introduction to the Markov I course.
 * **ECTS:** 6+3 ECTS (For major applied probability and EDProba, it's only 6 ECTS - don't need to study Poisson cloud)
 * **Content:**
     * Markov chain (including random graphs)
-    * Markov process (continuous time + discrete state)
-    * Poisson cloud
+    * Markov process and applications (continuous time with discrete state)
+    * Poissonian clouds
 * **Difficulty coefficient:** ⭐⭐⭐
 * **Characteristics:**
     * The pace is fast and there’s a lot of content, but it’s not very difficult.
