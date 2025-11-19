@@ -1,5 +1,6 @@
 ---
 title: "Markov I : Modèles Markoviens Discrets + Processus de Markov et Applications + Nuages Poissonniens"
+permalink: /PMA/Markov-I/fr/
 layout: single 
 ---
 
