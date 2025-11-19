@@ -1,5 +1,5 @@
 ---
-title: "Markov I : Modèles Markoviens Discrets + Processus de Markov et Applications"
+title: "Markov I : Modèles Markoviens Discrets + Processus de Markov et Applications + Nuages Poissonniens"
 layout: single 
 ---
 
@@ -12,8 +12,8 @@ Voici une introduction détaillée du cours Markov I.
 * **ECTS :** 6+3 ECTS (Pour la majeure probabilités appliquées et EDProba, c'est seulement 6 ECTS — la partie Nuage de Poisson n'est pas à étudier)
 * **Contenu :**
     * Chaînes de Markov (incluant les graphes aléatoires)
-    * Processus de Markov (temps continu + espace d'états discret)
-    * Nuage de Poisson
+    * Processus de Markov et applications (temps continu avec espace d'états discret)
+    * Nuages de Poisson
 * **Coefficient de difficulté :** ⭐⭐⭐
 * **Caractéristiques :**
     * Le rythme est rapide et le contenu est dense, mais ce n'est pas très difficile.
