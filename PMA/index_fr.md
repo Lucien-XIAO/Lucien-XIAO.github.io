@@ -1,7 +1,7 @@
 ---
 title: M2 – Probabilités et Modèles Aléatoires (PMA)
 
-permalink: /PMA/
+permalink: /PMA/fr/
 
 author_profile: true
 
