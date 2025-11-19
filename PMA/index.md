@@ -38,9 +38,9 @@ Here is my M2-PMA course selection (Major stochastic process)
 **Semester 1**
 
 - [Stochastic Calculus and Diffusion Processes](/PMA/CS/)
-- [Markov I (Discrete Markovian Models + Markov Processes and Applications)](/PMA/Markov-I/)
+- [Markov I (Discrete Markovian Models + Markov Processes and Applications + Poissonian Clouds)](/PMA/Markov-I/)
 - [Convergence of Measures, Large Deviations, Percolation](/PMA/CGP/) 
-- [Markov II (Poissonian Clouds, Levy Processes, and Excursions)](/PMA/Markov-II/)
+- [Markov II (Clouds Theory, Levy Processes, and Excursions)](/PMA/Markov-II/)
   
 **Semester 2**
 - Integrable probability & The KPZ (Kardar-Parisi-Zhang) Universality Class
