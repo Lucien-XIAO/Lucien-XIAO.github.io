@@ -1,5 +1,6 @@
 ---
 title: "Calcul Stochastique et Processus de Diffusion (CS)"
+permalink: /PMA/CS/fr/
 layout: single 
 ---
 
