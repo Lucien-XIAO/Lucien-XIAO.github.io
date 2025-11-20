@@ -39,7 +39,7 @@ M2-PMA 每年录取约 20–30 名学生，包括来自 ENS-PSL 的 normaliens �
 
 **第二学期：**
 1. 高等泛函分析  
-2. 随机微积分与随机控制导论  
+2. 随机计算与随机控制导论  
 3. M1 毕业论文  
 
 根据我的个人理解以及目前掌握的信息，对于已经在索邦大学 M1 Mathématiques et Applications 就读的学生，M2-PMA 的录取最看重的是 “高等概率（Probabilités Approfondies）” 课程（教师：[Thierry Lévy](https://www.lpsm.paris/users/levyt/probas_approfondies)）。该课程中 **14/20 以上的成绩就非常有竞争力**。
