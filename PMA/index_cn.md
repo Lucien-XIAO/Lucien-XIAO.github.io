@@ -13,6 +13,10 @@ redirect_from:
   - /about.html
 
 ---
+**[Passer à la version Française🇫🇷 / Switch to French version🇫🇷 / 转至法语版本🇫🇷](/PMA/)**
+
+**[Passer à la version Anglaise🇬🇧 / Switch to English version🇬🇧 / 转至英语版本🇬🇧](/PMA/English/)**
+
 下面是 **M2-PMA 2025–2026 官方详细介绍 (法语版本)** [[brochure 2025-2026]](/PMA/brochure2025.pdf) 以及 **M2-PMA 官方网站** [[site web](https://www.lpsm.paris/masters/modale/index)]。
 
 ## **M2-PMA 简介（简要版）**
