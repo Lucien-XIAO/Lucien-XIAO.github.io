@@ -21,7 +21,7 @@ redirect_from:
 
 ## **M2-PMA 简介（简要版）**
 
-M2-PMA 从根本上说，是法国在纯概率或随机过程方向最扎实的 Master 2 项目之一（另一个是巴黎萨克雷大学的 [M2 Mathématiques de l’aléatoire](https://www.universite-paris-saclay.fr/formation/master/mathematiques-et-applications/m2-mathematiques-de-laleatoire#programme)）。当然，我们也不能忽视巴黎多菲纳-PSL 大学新崛起的 M2 [MATH](https://dauphine.psl.eu/en/training/masters-degrees/mathematics-and-applied-mathematics/applied-and-theoretical-mathematics-masters-year-2)。
+M2-PMA 从根本上说，是法国在纯概率或随机过程方向最扎实的 Master 2 项目之一（另一个是巴黎萨克雷大学的 [M2 Mathématiques de l’aléatoire](https://www.universite-paris-saclay.fr/formation/master/mathematiques-et-applications/m2-mathematiques-de-laleatoire#programme), 当然，我们也不能忽视巴黎多菲纳-PSL 大学新崛起的 M2 [MATH](https://dauphine.psl.eu/en/training/masters-degrees/mathematics-and-applied-mathematics/applied-and-theoretical-mathematics-masters-year-2)). 这个Ｍ2包含三个主修方向分别是"随机过程"，"应用概率" 和 "EDProba"。
 
 M2-PMA 每年录取约 20–30 名学生，包括来自 ENS-PSL 的 normaliens 或 normaliennes、来自 École Polytechnique 的工程师背景学生，以及一些优秀的国际学生，例如来自中国科学技术大学（中法数学人才班 [Sino-French Program](https://cfmath.org/#about)）的学生。其中大多数选择随机过程方向的主修——大约 20 人左右。
 
