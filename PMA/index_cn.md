@@ -13,7 +13,7 @@ redirect_from:
   - /about.html
 
 ---
-下面是 **M2-PMA 2025–2026 官方详细介绍** [[brochure 2025-2026]](/PMA/brochure2025.pdf) 以及 **M2-PMA 官方网站** [[site web](https://www.lpsm.paris/masters/modale/index)]。
+下面是 **M2-PMA 2025–2026 官方详细介绍 (法语版本)** [[brochure 2025-2026]](/PMA/brochure2025.pdf) 以及 **M2-PMA 官方网站** [[site web](https://www.lpsm.paris/masters/modale/index)]。
 
 ## **M2-PMA 简介（简要版）**
 
