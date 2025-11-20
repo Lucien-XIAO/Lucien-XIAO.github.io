@@ -45,7 +45,7 @@ M2-PMA 每年录取约 20–30 名学生，包括来自 ENS-PSL 的 normaliens �
 - 鞅及其收敛性  
 - 马尔可夫链  
 
-其内容与 Jean-François Le Gall 的教材 *Measure Theory, Probability, and Stochastic Processes* 几乎一致。
+其内容与 [Jean-François Le Gall]((https://www.imo.universite-paris-saclay.fr/~jean-francois.le-gall/)) 的教材 *Measure Theory, Probability, and Stochastic Processes* 几乎一致。
 
 据我所知，从 2025–2026 学年开始，M1 课程体系已改革，原“高等概率”课程被拆分为：
 - **Probabilités approfondies (UM4MA311)**
