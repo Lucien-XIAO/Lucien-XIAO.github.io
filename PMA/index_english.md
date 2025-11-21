@@ -36,7 +36,7 @@ I was admitted to M2-PMA from Sorbonne University M1 via eCandidat (Sorbonne Uni
 2. Statistics
 
 **Second semester:** 
-1. Advanced Functional Analysis
+1. Advanced Functional Analysis and Variational Calculus
 2. Stochastic Calculus and Stochastic Control
 3. M1 thesis
 
