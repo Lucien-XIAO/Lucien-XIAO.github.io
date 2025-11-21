@@ -25,7 +25,7 @@ M2-PMA 从根本上说，是法国在纯概率或随机过程方向最扎实的 
 
 M2-PMA 每年录取约 20–30 名学生，包括来自 ENS-PSL 的 normaliens 或 normaliennes、来自 École Polytechnique 的工程师背景学生，以及一些优秀的国际学生，例如来自中国科学技术大学（中法数学人才班 [Sino-French Program](https://cfmath.org/#about)）的学生。其中大多数选择随机过程方向的主修——大约 20 人左右。
 
-在 2025–2026 学年，M2-PMA 新增了一个主修方向 “[EDProba](https://www.ljll.fr/MathModel/presentation/edproba.html)”，即“偏微分方程（EDP）+ 概率”。该主修与 M2 [Modélisation（数学建模）](https://www.ljll.fr/MathModel/) 共同开设。第一学期安排为 Modélisation 方向 15 学分 + PMA 方向 15 学分。第二学期的选修也相当有限，EDProba 学生在这一学期并没有太多选择空间（详见 2025–2026 手册）。如果你是以 Modélisation 学生身份注册的，最终获得的是 Modélisation 的学位，而不是 PMA 学位。
+在 2025–2026 学年，M2-PMA 新增了一个主修方向 “[EDProba](https://www.ljll.fr/MathModel/presentation/edproba.html)”，即“偏微分方程（EDP）+ 概率（proba）”。该主修与 M2 [Modélisation（数学建模）](https://www.ljll.fr/MathModel/) 共同开设。第一学期安排为 Modélisation 方向 15 学分 + PMA 方向 15 学分。第二学期的选修也相当有限，EDProba 学生在这一学期并没有太多选择空间（详见 2025–2026 手册）。如果你是以 Modélisation 学生身份注册的，最终获得的是 Modélisation 的学位，而不是 PMA 学位。
 
 ---
 
@@ -38,7 +38,7 @@ M2-PMA 每年录取约 20–30 名学生，包括来自 ENS-PSL 的 normaliens �
 2. 统计学  
 
 **第二学期：**
-1. 高等泛函分析  
+1. 高等泛函分析与变分法 
 2. 随机计算与随机控制导论  
 3. M1 毕业论文  
 
