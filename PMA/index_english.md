@@ -21,7 +21,7 @@ Here is the detailed official introduction of the M2-PMA 2025-2026 (French versi
 
 **A brief introduction to PMA**
 
-M2-PMA is basically one of the strongest M2 programs in France for pure probability or Stochastic Processes (the other being Université Paris-Saclay’s [M2 Mathématiques de l’aléatoire](https://www.universite-paris-saclay.fr/formation/master/mathematiques-et-applications/m2-mathematiques-de-laleatoire#programme), of course we also can’t ignore the rising new force of Université Paris Dauphine-PSL’s M2 [MATH](https://dauphine.psl.eu/en/training/masters-degrees/mathematics-and-applied-mathematics/applied-and-theoretical-mathematics-masters-year-2). This M2 has 3 majors - "Stochastic process", "Applied probablity" and "EDProba".
+M2-PMA is basically one of the strongest M2 programs in France for pure probability or Stochastic Processes (the other being Université Paris-Saclay’s [M2 Mathématiques de l’aléatoire](https://www.universite-paris-saclay.fr/formation/master/mathematiques-et-applications/m2-mathematiques-de-laleatoire#presentation), of course we also can’t ignore the rising new force of Université Paris Dauphine-PSL’s M2 [MATH](https://dauphine.psl.eu/en/training/masters-degrees/mathematics-and-applied-mathematics/applied-and-theoretical-mathematics-masters-year-2). This M2 has 3 majors - "Stochastic process", "Applied probablity" and "EDProba".
 
 M2-PMA admits about 20–30 people each year, including some ENS-PSL normaliens or normaliennes, engineers from X, and some very strong international students, for example from the University of Science and Technology of China ([the Sino-French program](https://cfmath.org/#about)). Most of them choose the Major in Stochastic Processes — roughly 20 people.
 
