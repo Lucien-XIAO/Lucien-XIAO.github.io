@@ -26,9 +26,21 @@ Pour l'année universitaire 2025–2026, le M2-PMA a ajouté une majeure appelé
 
 **Recommandations ou conditions d'admission**
 
-J'ai été admis au M2-PMA après un M1 Mathématiques et Applications de Sorbonne Université via eCandidat (la procédure de candidature de Sorbonne Université). Mes cours de M1 étaient : premier semestre : 1. Probabilités Approfondies 2. Statistiques ; deuxième semestre : 1. Analyse Fonctionnelle Approfondie 2. Introduction au Calcul Stochastique et Contrôle Stochastique 3. Mémoire de M1
+J'ai été admis au M2-PMA après un M1 Mathématiques et Applications de Sorbonne Université via eCandidat (la procédure de candidature de Sorbonne Université). Mes cours de M1 étaient : 
 
-Selon mon opinion personnelle et les informations dont je dispose, pour les étudiants déjà inscrits en M1 Mathématiques et Applications à SU, l'admission au M2-PMA accorde la plus grande importance aux notes du cours de Probabilités Approfondies (avec [Thierry Lévy](https://www.lpsm.paris/users/levyt/probas_approfondies)) ; toute note supérieure à 14/20 est très compétitive. Ce cours est principalement le prérequis essentiel pour le programme M2-PMA, incluant l'espérance conditionnelle, les martingales, la convergence des martingales et les chaînes de Markov. (le contenu spécifique est presque identique au livre de [Jean-François Le Gall](https://www.imo.universite-paris-saclay.fr/~jean-francois.le-gall/) intitulé "[Measure Theory, Probability, and Stochastic Processes](https://link.springer.com/book/10.1007/978-3-031-14205-5)"). À ma connaissance, à partir de 2025-2026, le programme du M1 a été réformé. L'UE ancienne "Probabilités approfondies" a été scindée en "Probabilités approfondies (UM4MA311)" et une partie du contenu a été intégrée à "Martingales et contrôle stochastique (UM4MA280)".
+**Premier semestre:** 
+1. Probabilités Approfondies
+2. Statistiques ;
+
+**Deuxième semestre:**
+1. Analyse Fonctionnelle Approfondie
+2. Introduction au Calcul Stochastique et Contrôle Stochastique
+3. Mémoire de M1
+
+Selon mon opinion personnelle et les informations dont je dispose, pour les étudiants déjà inscrits en M1 Mathématiques et Applications à SU, l'admission au M2-PMA accorde la plus grande importance aux notes du cours de Probabilités Approfondies (avec [Thierry Lévy](https://www.lpsm.paris/users/levyt/probas_approfondies)) ; toute note supérieure à 14/20 est très compétitive. Ce cours est principalement le prérequis essentiel pour le programme M2-PMA, incluant l'espérance conditionnelle, les martingales, la convergence des martingales et les chaînes de Markov. (le contenu spécifique est presque identique au livre de [Jean-François Le Gall](https://www.imo.universite-paris-saclay.fr/~jean-francois.le-gall/) intitulé "[Measure Theory, Probability, and Stochastic Processes](https://link.springer.com/book/10.1007/978-3-031-14205-5)"). À ma connaissance, à partir de 2025-2026, le programme du M1 a été réformé. L'UE ancienne "Probabilités approfondies" a été scindée en 
+
+- **"Probabilités approfondies (UM4MA311)"**
+- **une partie du contenu a été intégrée à "Martingales et contrôle stochastique (UM4MA280)"**
 
 **Ma sélection de cours ou matériel PMA**
 
