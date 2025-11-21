@@ -30,10 +30,10 @@ J'ai été admis au M2-PMA après un M1 Mathématiques et Applications de Sorbon
 
 **Premier semestre:** 
 1. Probabilités Approfondies
-2. Statistiques ;
+2. Statistiques
 
 **Deuxième semestre:**
-1. Analyse Fonctionnelle Approfondie
+1. Analyse Fonctionnelle Approfondie et calcul des variations
 2. Introduction au Calcul Stochastique et Contrôle Stochastique
 3. Mémoire de M1
 
