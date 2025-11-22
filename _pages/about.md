@@ -7,6 +7,8 @@ redirect_from:
   - /about.html
 ---
 
+**[Passer à la version Anglaise🇬🇧 / Switch to English version🇬🇧 ](/en/)**
+
 Je suis actuellement étudiant en M2 en Probabilités et Modèles Aléatoires ([M2-PMA](https://www.lpsm.paris/masters/modale/index)) avec Majeure Processus Stochastiques, au [LPSM](https://www.lpsm.paris/) de Sorbonne Université ([SU](https://www.sorbonne-universite.fr/)), co-habilitée par l'École Normale Supérieure de Paris ([ENS-PSL](https://www.ens.psl.eu/)).
 
 Auparavant, j'ai obtenu une double Licence de Mathématiques et Physique à [SU](https://www.sorbonne-universite.fr/).
