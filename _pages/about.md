@@ -1,43 +1,40 @@
 ---
 permalink: /
-title: "About Me"
+title: "À propos de moi"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a second year Master's student in Probability and Random Models ([M2-PMA](https://www.lpsm.paris/masters/modale/index)) with major stochastic process of [LPSM](https://www.lpsm.paris/) at Sorbonne Université ([SU](https://www.sorbonne-universite.fr/)), co-qualified with École Normale Supérieure, Paris ([ENS-PSL](https://www.ens.psl.eu/)).
+Je suis actuellement étudiant en M2 en Probabilités et Modèles Aléatoires ([M2-PMA](https://www.lpsm.paris/masters/modale/index)) avec Majeure Processus Stochastiques, au [LPSM](https://www.lpsm.paris/) de Sorbonne Université ([SU](https://www.sorbonne-universite.fr/)), co-habilitée par l'École Normale Supérieure de Paris ([ENS-PSL](https://www.ens.psl.eu/)).
 
-(Not a normalien student and Not ENS-PSL M2 student.)
+Auparavant, j'ai obtenu une double Licence de Mathématiques et Physique à [SU](https://www.sorbonne-universite.fr/).
 
-Previously, I completed a double Bachelor's degree in Mathematics and Physics at  [SU](https://www.sorbonne-universite.fr/).
+Mes intérêts académiques portent principalement sur les marches aléatoires, la théorie des probabilités, l'analyse stochastique et leurs applications en physique statistique. 
 
-My academic interests lie broadly in random walk, probabilty theory, stochastic analysis and their applications in statistical physics. 
+J'ai eu la chance de travailler sur plusieurs projets de recherche, notamment l'étude de l'équivalence bi-Lipschitz des réseaux séparés dans les espaces de Banach avec [Alexandros ESKENAZIS](https://www.alexandroseskenazis.com/) ([rapport](../interships/StageM1/rapport_M1.pdf), [présentation](../interships/StageM1/diapo_M1.pdf)) en M1, ainsi que sur la modélisation du mouvement collectif avec [Diane PEURICHARD](https://sites.google.com/site/dianepeurichard/home) ([rapport](../interships/StageL3/rappot.pdf), [présentation](../interships/StageL3/diapo.pdf)) en L3.
 
-I have been fortunate to work on several research projects, including the study of bi-Lipschitz equivalence of separated nets in Banach spaces with [Alexandros ESKENAZIS](https://www.alexandroseskenazis.com/) ([report](../interships/StageM1/rapport_M1.pdf), [slides](../interships/StageM1/diapo_M1.pdf)) on M1 and collective motion modeling with [Diane PEURICHARD](https://sites.google.com/site/dianepeurichard/home) ([report](../interships/StageL3/rappot.pdf), [slides](../interships/StageL3/diapo.pdf)) on L3.
+## Intérêts
+- Théorie des probabilités
+- Analyse stochastique
+- Marches aléatoires
+- Applications en physique statistique
 
-## Interests
-- Probabilty theory
-- Stochastic analysis
-- Random walk
-- Applications in statistical physics
-
-## Education
-- 🎓 **MS (M2) in Probability**, 2025–2026    
-  *SU co-qualified with ENS-PSL*
-- 🎓 **MS (M1) in Mathematics and applications**, 2024–2025    
+## Formation
+- 🎓 **Master 2 (M2) en Probabilités**, 2025–2026     
+  *SU co-habilité avec l'ENS-PSL*
+- 🎓 **Master 1 (M1) de Mathématiques et applications**, 2024–2025     
   *SU*
-- 🎓 **Double Bachelor's degree in Mathematics and Physics**, 2020-2024  
+- 🎓 **Double Licence Mathématiques et Physique**, 2020-2024  
   *SU*
-- 🎓 **High School Diploma in Science**, 2016-2019  
-  *Wuhan No.3 high school*
+- 🎓 **Diplôme de fin d'études secondaires (Filière scientifique)**, 2016-2019  
+  *Lycée No.3 de Wuhan*
 
-## Various Notes 
-- Measure Theory (not finished). [[PDF]](../publications/Various_Notes/Measure_theory.pdf) *(updated {{ "now" | date: "%B %d, %Y" }})*
+## Notes diverses 
+- Théorie de la Mesure (en cours). [[PDF]](../publications/Various_Notes/Measure_theory.pdf) *(mis à jour le {{ "now" | date: "%d %B %Y" }})*
   
-## Visitors Map
+## Carte des visiteurs
 <div style="margin-top: 1.5rem; text-align: center;">
   <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=Ry9Pwc6MSE_msikSt6L8O_3AgKOkFiHyEz9ZUHUKwE4"></script>
 </div>
-
