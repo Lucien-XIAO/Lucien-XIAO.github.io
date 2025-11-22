@@ -1,6 +1,6 @@
 ---
 permalink: /fr/
-title: "À propos de moi"
+title: "Yuguang XIAO"
 author_profile: true
 redirect_from: 
   - /about/
