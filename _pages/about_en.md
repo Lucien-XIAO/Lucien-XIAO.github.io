@@ -6,7 +6,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a second year Master's student in Probability and Random Models ([M2-PMA](https://www.lpsm.paris/masters/modale/index)) with major stochastic process of [LPSM](https://www.lpsm.paris/) at Sorbonne Université ([SU](https://www.sorbonne-universite.fr/)), co-qualified with École Normale Supérieure, Paris ([ENS-PSL](https://www.ens.psl.eu/)). 
+A second year Master's (M2) student in Probability and Random Models ([M2-PMA](https://www.lpsm.paris/masters/modale/index)) with major stochastic process of [LPSM](https://www.lpsm.paris/) at Sorbonne Université ([SU](https://www.sorbonne-universite.fr/)), co-qualified with École Normale Supérieure, Paris ([ENS-PSL](https://www.ens.psl.eu/)). 
 
 Previously, I completed a double Bachelor's degree in Mathematics and Physics at [SU](https://www.sorbonne-universite.fr/).
 
