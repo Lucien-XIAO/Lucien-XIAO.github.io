@@ -4,27 +4,79 @@
     <meta charset="UTF-8">
     <title>Bond Percolation</title>
     <style>
-        body { font-family: -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; background: #fff; }
-        .controls { background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #ddd; display: flex; gap: 15px; align-items: center; margin-bottom: 10px; }
-        label { font-size: 12px; color: #666; margin-right: 5px; }
-        input { padding: 5px; border: 1px solid #ccc; border-radius: 4px; width: 60px; }
-        button { padding: 8px 15px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #0056b3; }
-        canvas { border: 1px solid #eee; margin-top: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        #stats { font-family: monospace; color: #555; margin-top: 5px; font-size: 14px; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 10px; 
+            background: #fff; 
+            margin: 0;
+        }
+        .controls { 
+            background: #f8f9fa; 
+            padding: 12px 20px; 
+            border-radius: 8px; 
+            border: 1px solid #e9ecef; 
+            display: flex; 
+            gap: 15px; 
+            align-items: center; 
+            margin-bottom: 5px; 
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        label { font-size: 11px; color: #6c757d; font-weight: 600; margin-bottom: 3px; }
+        input { padding: 6px; border: 1px solid #ced4da; border-radius: 4px; width: 60px; font-size: 14px; }
+        button { 
+            padding: 0 16px; 
+            background: #0d6efd; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-weight: 600; 
+            height: 34px; 
+            margin-top: 16px; /* Align with inputs */
+            transition: background 0.2s;
+        }
+        button:hover { background: #0b5ed7; }
+        canvas { 
+            background: white; 
+            border: 1px solid #dee2e6; 
+            border-radius: 4px; 
+            margin-top: 10px; 
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03); 
+            max-width: 100%;
+            height: auto;
+        }
+        #stats { 
+            font-family: monospace; 
+            color: #495057; 
+            margin-top: 8px; 
+            font-size: 13px; 
+            height: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="controls">
-        <div><label>Size(N)</label><input type="number" id="n" value="20" min="5"></div>
-        <div><label>Prob(p)</label><input type="number" id="p" value="0.5" step="0.01" min="0" max="1"></div>
+        <div class="input-group">
+            <label>Size (N)</label>
+            <input type="number" id="n" value="30" min="5" max="100">
+        </div>
+        <div class="input-group">
+            <label>Prob (p)</label>
+            <input type="number" id="p" value="0.5" step="0.01" min="0" max="1">
+        </div>
         <button onclick="run()">Run Simulation</button>
     </div>
+    
     <div id="stats">Ready</div>
-    <canvas id="cvs" width="600" height="600"></canvas>
+    <canvas id="cvs" width="650" height="650"></canvas>
 
     <script>
-        // 并查集类
+        // --- 核心算法 (不变) ---
         class UF {
             constructor(n) { this.p = [...Array(n).keys()]; }
             find(i) { if(this.p[i]!==i) this.p[i]=this.find(this.p[i]); return this.p[i]; }
@@ -34,25 +86,32 @@
                 return false;
             }
         }
-        function color(id) { return `hsl(${(id*137.5)%360},70%,50%)`; }
+        function color(id) { 
+            // 调整了色相偏移，让颜色分布更自然
+            return `hsl(${(id*137.508)%360}, 75%, 50%)`; 
+        }
         
         function run() {
             const cvs = document.getElementById("cvs");
             const ctx = cvs.getContext("2d");
-            const n = parseInt(document.getElementById("n").value) || 20;
-            const p = parseFloat(document.getElementById("p").value) || 0.5;
+            const nInput = document.getElementById("n");
+            const pInput = document.getElementById("p");
             const stats = document.getElementById("stats");
+            
+            let n = parseInt(nInput.value) || 20;
+            let p = parseFloat(pInput.value);
+            if(isNaN(p)) p = 0.5;
             
             stats.innerText = "Computing...";
             
-            // 稍作延迟以允许UI刷新
+            // 延迟执行以防止UI卡顿
             setTimeout(() => {
                 const num = n*n;
                 const uf = new UF(num);
                 let active = new Array(num).fill(false);
                 let hB=[], vB=[];
 
-                // 生成键和连通性
+                // 1. 生成数据
                 for(let r=0; r<n; r++) {
                     hB[r]=[];
                     for(let c=0; c<n-1; c++) {
@@ -76,26 +135,50 @@
                     }
                 }
 
-                // 绘图
-                const pad=20, w=cvs.width-2*pad, step=w/(n-1);
-                ctx.clearRect(0,0,600,600);
+                // 2. 绘图参数 (这里改小了数值)
+                const pad = 25;
+                const w = cvs.width - 2*pad;
+                const step = w / (n-1);
                 
-                // 背景
-                ctx.strokeStyle="#eee"; ctx.lineWidth=1;
+                ctx.clearRect(0,0,cvs.width,cvs.height);
+                
+                // === A. 绘制更淡、更细的背景网格 ===
+                ctx.strokeStyle = "#F0F0F0"; // 极淡灰
+                ctx.lineWidth = 1;           // 固定为1像素，保持精致
+                
                 ctx.beginPath();
                 for(let i=0; i<n; i++) {
-                    let pos=pad+i*step;
-                    ctx.moveTo(pad,pos); ctx.lineTo(600-pad,pos);
-                    ctx.moveTo(pos,pad); ctx.lineTo(pos,600-pad);
+                    let pos = pad + i*step;
+                    // 整数化坐标以防止模糊
+                    pos = Math.floor(pos) + 0.5; 
+                    ctx.moveTo(pad, pos); ctx.lineTo(cvs.width-pad, pos);
+                    ctx.moveTo(pos, pad); ctx.lineTo(pos, cvs.height-pad);
                 }
                 ctx.stroke();
 
-                // 绘制键和点
-                ctx.lineWidth = Math.max(2, step*0.25);
-                const rad = Math.max(2, step*0.35);
+                // 背景微小幽灵点 (可选，这里设得非常小)
+                const ghostRad = Math.max(1.5, step * 0.1); 
+                ctx.fillStyle = "#F0F0F0";
+                for(let r=0; r<n; r++) {
+                    for(let c=0; c<n; c++) {
+                        ctx.beginPath();
+                        ctx.arc(pad+c*step, pad+r*step, ghostRad, 0, 2*Math.PI);
+                        ctx.fill();
+                    }
+                }
+
+                // === B. 绘制前景 (变细、变小) ===
+                
+                // 动态计算尺寸：改小了系数 0.12 和 0.18
+                // Math.max 保证在 n 很大时至少能看见 1.5px 的线
+                const lineWidth = Math.max(1.5, step * 0.12); 
+                const nodeRadius = Math.max(2.0, step * 0.18); 
 
                 const drawLine = (r1,c1,r2,c2, clr) => {
-                    ctx.strokeStyle=clr; ctx.beginPath();
+                    ctx.strokeStyle = clr; 
+                    ctx.lineWidth = lineWidth;
+                    ctx.lineCap = "round"; // 圆头线帽，连接处更平滑
+                    ctx.beginPath();
                     ctx.moveTo(pad+c1*step, pad+r1*step);
                     ctx.lineTo(pad+c2*step, pad+r2*step);
                     ctx.stroke();
@@ -111,9 +194,9 @@
                 for(let i=0; i<num; i++) {
                     if(active[i]) {
                         let r=Math.floor(i/n), c=i%n;
-                        ctx.fillStyle=color(uf.find(i));
+                        ctx.fillStyle = color(uf.find(i));
                         ctx.beginPath();
-                        ctx.arc(pad+c*step, pad+r*step, rad, 0, 7);
+                        ctx.arc(pad+c*step, pad+r*step, nodeRadius, 0, 2*Math.PI);
                         ctx.fill();
                     }
                 }
