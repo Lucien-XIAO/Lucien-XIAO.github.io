@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bond Percolation</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; background: #fff; }
+        .controls { background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #ddd; display: flex; gap: 15px; align-items: center; margin-bottom: 10px; }
+        label { font-size: 12px; color: #666; margin-right: 5px; }
+        input { padding: 5px; border: 1px solid #ccc; border-radius: 4px; width: 60px; }
+        button { padding: 8px 15px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        canvas { border: 1px solid #eee; margin-top: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        #stats { font-family: monospace; color: #555; margin-top: 5px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <div><label>Size(N)</label><input type="number" id="n" value="20" min="5"></div>
+        <div><label>Prob(p)</label><input type="number" id="p" value="0.5" step="0.01" min="0" max="1"></div>
+        <button onclick="run()">Run Simulation</button>
+    </div>
+    <div id="stats">Ready</div>
+    <canvas id="cvs" width="600" height="600"></canvas>
 
+    <script>
+        // 并查集类
+        class UF {
+            constructor(n) { this.p = [...Array(n).keys()]; }
+            find(i) { if(this.p[i]!==i) this.p[i]=this.find(this.p[i]); return this.p[i]; }
+            union(i, j) { 
+                let rI = this.find(i), rJ = this.find(j);
+                if(rI!==rJ) { this.p[rI] = rJ; return true; }
+                return false;
+            }
+        }
+        function color(id) { return `hsl(${(id*137.5)%360},70%,50%)`; }
+        
+        function run() {
+            const cvs = document.getElementById("cvs");
+            const ctx = cvs.getContext("2d");
+            const n = parseInt(document.getElementById("n").value) || 20;
+            const p = parseFloat(document.getElementById("p").value) || 0.5;
+            const stats = document.getElementById("stats");
+            
+            stats.innerText = "Computing...";
+            
+            // 稍作延迟以允许UI刷新
+            setTimeout(() => {
+                const num = n*n;
+                const uf = new UF(num);
+                let active = new Array(num).fill(false);
+                let hB=[], vB=[];
+
+                // 生成键和连通性
+                for(let r=0; r<n; r++) {
+                    hB[r]=[];
+                    for(let c=0; c<n-1; c++) {
+                        if(Math.random()<p) {
+                            hB[r][c]=true;
+                            let i1=r*n+c, i2=r*n+c+1;
+                            uf.union(i1, i2);
+                            active[i1]=active[i2]=true;
+                        }
+                    }
+                }
+                for(let r=0; r<n-1; r++) {
+                    vB[r]=[];
+                    for(let c=0; c<n; c++) {
+                        if(Math.random()<p) {
+                            vB[r][c]=true;
+                            let i1=r*n+c, i2=(r+1)*n+c;
+                            uf.union(i1, i2);
+                            active[i1]=active[i2]=true;
+                        }
+                    }
+                }
+
+                // 绘图
+                const pad=20, w=cvs.width-2*pad, step=w/(n-1);
+                ctx.clearRect(0,0,600,600);
+                
+                // 背景
+                ctx.strokeStyle="#eee"; ctx.lineWidth=1;
+                ctx.beginPath();
+                for(let i=0; i<n; i++) {
+                    let pos=pad+i*step;
+                    ctx.moveTo(pad,pos); ctx.lineTo(600-pad,pos);
+                    ctx.moveTo(pos,pad); ctx.lineTo(pos,600-pad);
+                }
+                ctx.stroke();
+
+                // 绘制键和点
+                ctx.lineWidth = Math.max(2, step*0.25);
+                const rad = Math.max(2, step*0.35);
+
+                const drawLine = (r1,c1,r2,c2, clr) => {
+                    ctx.strokeStyle=clr; ctx.beginPath();
+                    ctx.moveTo(pad+c1*step, pad+r1*step);
+                    ctx.lineTo(pad+c2*step, pad+r2*step);
+                    ctx.stroke();
+                };
+
+                // 画线
+                for(let r=0; r<n; r++) for(let c=0; c<n-1; c++) 
+                    if(hB[r][c]) drawLine(r,c,r,c+1, color(uf.find(r*n+c)));
+                for(let r=0; r<n-1; r++) for(let c=0; c<n; c++) 
+                    if(vB[r][c]) drawLine(r,c,r+1,c, color(uf.find(r*n+c)));
+                
+                // 画点
+                for(let i=0; i<num; i++) {
+                    if(active[i]) {
+                        let r=Math.floor(i/n), c=i%n;
+                        ctx.fillStyle=color(uf.find(i));
+                        ctx.beginPath();
+                        ctx.arc(pad+c*step, pad+r*step, rad, 0, 7);
+                        ctx.fill();
+                    }
+                }
+
+                // 统计
+                let roots = new Set();
+                for(let i=0; i<num; i++) if(active[i]) roots.add(uf.find(i));
+                stats.innerText = `Done. Active clusters: ${roots.size}`;
+            }, 10);
+        }
+        
+        // 自动运行一次
+        window.onload = run;
+    </script>
+</body>
+</html>
