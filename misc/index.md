@@ -20,6 +20,7 @@ Some pictures or animations illustrating my research, created with Python. Enjoy
   while the right one shows the same system with three predators. I mainly focused on the modeling and analysis of such predator–prey interactions with python Code in my report.
 </p>
 
+<hr>
 <p align="center">
   <img src="../interships/Stage_phys_L3/M_E_S_3body.PNG" alt="Result 3" width="70%">
 </p>
