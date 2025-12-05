@@ -10,6 +10,8 @@ redirect_from:
 ## Some interesting results
 Some pictures or animations illustrating my research, created with Python. Enjoy visual mathematics and Physics!
 
+<hr>
+
 <iframe src="./percolation_sim.html" width="100%" height="750px" style="border:none; overflow:hidden;"></iframe>
 
 <p align="center" style="max-width:800px; margin:auto; font-size:0.95em; line-height:1.5; margin-top: 20px;">
