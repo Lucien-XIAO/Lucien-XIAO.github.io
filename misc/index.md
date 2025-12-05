@@ -9,7 +9,6 @@ redirect_from:
 
 ## Some interesting results
 Some pictures or animations illustrating my research, created with Python. Enjoy visual mathematics and Physics!
-<hr>
 
 <iframe src="./percolation_sim.html" width="100%" height="750px" style="border:none; overflow:hidden;"></iframe>
 
@@ -18,6 +17,9 @@ Some pictures or animations illustrating my research, created with Python. Enjoy
   In this model, <strong>p</strong> represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they are connected to at least one open bond, preventing isolated colored nodes.  
   Try varying <strong>p</strong> around the critical threshold (0.5) to observe the phase transition in connectivity.
 </p>
+
+<hr>
+
 <p align="center">
   <img src="../interships/StageL3/resultats_visualises/N%2050%2C%20M%201.gif" alt="Result 1" width="45%">
   <img src="../interships/StageL3/resultats_visualises/N%2050%2C%20M%203.gif" alt="Result 2" width="45%">
