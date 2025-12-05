@@ -33,220 +33,153 @@ Some pictures or animations illustrating my research, created with Python. Enjoy
 
 <hr>
 
-<div id="percolation-tool-container" style="text-align: center; margin-top: 40px;">
+<div style="text-align: center; margin-top: 40px;">
+<iframe width="100%" height="720" frameborder="0" style="border:none; overflow:hidden;" srcdoc='
+<!DOCTYPE html>
+<html>
+<head>
 <style>
-.perc-controls{background:#f8f9fa;border:1px solid #e9ecef;padding:15px;border-radius:8px;display:inline-flex;gap:15px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:10px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}.perc-input-group{display:flex;flex-direction:column;text-align:left}.perc-input-group label{font-size:12px;color:#6c757d;margin-bottom:4px;font-weight:600}.perc-input-group input{padding:6px 10px;border:1px solid #ced4da;border-radius:4px;width:70px;font-size:14px}.perc-btn{padding:0 20px;background-color:#0d6efd;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:600;height:38px;margin-top:18px;transition:background 0.2s}.perc-btn:hover{background-color:#0b5ed7}#percolationCanvas{background:white;border:1px solid #dee2e6;box-shadow:0 4px 6px rgba(0,0,0,0.05);border-radius:4px;max-width:100%;height:auto;margin-top:10px}#perc-stats{margin-top:8px;color:#495057;font-size:0.9em;font-family:monospace}
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0; padding: 10px; background: #fff; }
+  .controls { background: #f8f9fa; border: 1px solid #e9ecef; padding: 10px 20px; border-radius: 8px; display: flex; gap: 15px; align-items: center; margin-bottom: 10px; font-size: 14px; }
+  .grp { display: flex; flex-direction: column; text-align: left; }
+  label { font-size: 11px; color: #666; font-weight: 600; margin-bottom: 2px; }
+  input { width: 60px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; }
+  button { background: #0d6efd; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; height: 36px; margin-top: 15px; font-weight: 600; }
+  button:hover { background: #0b5ed7; }
+  #cvs { background: white; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-radius: 4px; max-width: 100%; height: auto; }
+  #st { font-family: monospace; color: #555; font-size: 12px; margin-top: 5px; min-height: 18px; }
 </style>
-
-<div class="perc-controls">
-  <div class="perc-input-group">
-    <label for="n-input">Size (N)</label>
-    <input type="number" id="n-input" value="20" min="5" max="100">
+</head>
+<body>
+  <div class="controls">
+    <div class="grp"><label>Size (N)</label><input type="number" id="n" value="20" min="5" max="100"></div>
+    <div class="grp"><label>Prob (p)</label><input type="number" id="p" value="0.5" step="0.01" min="0" max="1"></div>
+    <button id="btn">Run Simulation</button>
   </div>
-  <div class="perc-input-group">
-    <label for="p-input">Prob (p)</label>
-    <input type="number" id="p-input" value="0.5" min="0" max="1" step="0.01">
-  </div>
-  <button id="run-btn" class="perc-btn">Run Simulation</button>
-</div>
+  <div id="st">Ready</div>
+  <canvas id="cvs" width="600" height="600"></canvas>
+<script>
+  // 简易并查集
+  class UnionFind {
+    constructor(n) { this.parent = [...Array(n).keys()]; }
+    find(i) { if (this.parent[i] !== i) this.parent[i] = this.find(this.parent[i]); return this.parent[i]; }
+    union(i, j) { 
+      let rootI = this.find(i), rootJ = this.find(j);
+      if (rootI !== rootJ) { this.parent[rootI] = rootJ; return true; }
+      return false; 
+    }
+  }
 
-<div id="perc-stats">Status: Loading script...</div>
-<br>
-<canvas id="percolationCanvas" width="600" height="600"></canvas>
+  function getColor(id) { return "hsl(" + ((id * 137.5) % 360) + ", 70%, 50%)"; }
+
+  function run() {
+    var cvs = document.getElementById("cvs");
+    var ctx = cvs.getContext("2d");
+    var nInput = document.getElementById("n");
+    var pInput = document.getElementById("p");
+    var status = document.getElementById("st");
+
+    var n = parseInt(nInput.value) || 20;
+    var p = parseFloat(pInput.value);
+    if (isNaN(p)) p = 0.5;
+
+    status.innerText = "Simulating...";
+
+    // 延时执行以免阻塞UI
+    setTimeout(function() {
+      var num = n * n;
+      var uf = new UnionFind(num);
+      var active = new Array(num).fill(false);
+      var hBonds = [], vBonds = [];
+
+      // 1. 生成数据
+      for (var r = 0; r < n; r++) {
+        hBonds[r] = [];
+        for (var c = 0; c < n - 1; c++) {
+          if (Math.random() < p) {
+            hBonds[r][c] = true;
+            var i1 = r * n + c, i2 = r * n + c + 1;
+            uf.union(i1, i2);
+            active[i1] = active[i2] = true;
+          }
+        }
+      }
+      for (var r = 0; r < n - 1; r++) {
+        vBonds[r] = [];
+        for (var c = 0; c < n; c++) {
+          if (Math.random() < p) {
+            vBonds[r][c] = true;
+            var i1 = r * n + c, i2 = (r + 1) * n + c;
+            uf.union(i1, i2);
+            active[i1] = active[i2] = true;
+          }
+        }
+      }
+
+      // 2. 绘图
+      var pad = 20;
+      var size = cvs.width - 2 * pad;
+      var cell = size / (n - 1);
+      
+      ctx.clearRect(0, 0, cvs.width, cvs.height);
+
+      // 背景网格
+      ctx.strokeStyle = "#eee";
+      ctx.lineWidth = Math.max(1, cell * 0.1);
+      ctx.beginPath();
+      for (var i = 0; i < n; i++) {
+        var pos = pad + i * cell;
+        ctx.moveTo(pad, pos); ctx.lineTo(cvs.width - pad, pos);
+        ctx.moveTo(pos, pad); ctx.lineTo(pos, cvs.height - pad);
+      }
+      ctx.stroke();
+
+      // 前景
+      ctx.lineWidth = Math.max(2, cell * 0.25);
+      var rad = Math.max(2, cell * 0.35);
+
+      function line(r1, c1, r2, c2, color) {
+        ctx.strokeStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(pad + c1 * cell, pad + r1 * cell);
+        ctx.lineTo(pad + c2 * cell, pad + r2 * cell);
+        ctx.stroke();
+      }
+
+      // 画线
+      for (var r = 0; r < n; r++) for (var c = 0; c < n - 1; c++) 
+        if (hBonds[r][c]) line(r, c, r, c + 1, getColor(uf.find(r * n + c)));
+      
+      for (var r = 0; r < n - 1; r++) for (var c = 0; c < n; c++) 
+        if (vBonds[r][c]) line(r, c, r + 1, c, getColor(uf.find(r * n + c)));
+
+      // 画点
+      for (var i = 0; i < num; i++) {
+        if (active[i]) {
+          var r = Math.floor(i / n), c = i % n;
+          ctx.fillStyle = getColor(uf.find(i));
+          ctx.beginPath();
+          ctx.arc(pad + c * cell, pad + r * cell, rad, 0, 6.28);
+          ctx.fill();
+        }
+      }
+
+      // 统计
+      var roots = new Set();
+      for(var i=0; i<num; i++) if(active[i]) roots.add(uf.find(i));
+      status.innerText = "Done. Connected Clusters: " + roots.size;
+
+    }, 10);
+  }
+
+  document.getElementById("btn").onclick = run;
+  run(); // 初始运行
+</script>
+</body>
+</html>
+'></iframe>
 </div>
 
 <p align="center" style="max-width:800px; margin:auto; font-size:0.95em; line-height:1.5; margin-top: 20px;">
-  <strong>3 : </strong>Interactive visualization of <em>Bond Percolation</em> on a 2D square lattice.  
-  In this model, <strong>p</strong> represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they are connected to at least one open bond, preventing isolated colored nodes.  
-  Try varying <strong>p</strong> around the critical threshold (0.5) to observe the phase transition in connectivity.
+  <strong>3 : </strong>Interactive visualization of <em>Bond Percolation</em>. (p = bond probability). Isolated nodes are hidden.
 </p>
-
-{% raw %}
-<script>
-(function() {
-    // 确保DOM加载后再执行
-    function init() {
-        var btn = document.getElementById('run-btn');
-        var stats = document.getElementById('perc-stats');
-        
-        if (!btn) {
-            // 如果还没加载完，稍后再试
-            setTimeout(init, 100);
-            return;
-        }
-
-        // 绑定点击事件
-        btn.addEventListener('click', runSimulation);
-
-        // 初始运行一次
-        runSimulation();
-    }
-
-    // 类定义：并查集
-    function UnionFind(size) {
-        this.parent = new Array(size);
-        for (var i = 0; i < size; i++) {
-            this.parent[i] = i;
-        }
-    }
-    UnionFind.prototype.find = function(i) {
-        if (this.parent[i] !== i) {
-            this.parent[i] = this.find(this.parent[i]);
-        }
-        return this.parent[i];
-    };
-    UnionFind.prototype.union = function(i, j) {
-        var rootI = this.find(i);
-        var rootJ = this.find(j);
-        if (rootI !== rootJ) {
-            this.parent[rootI] = rootJ;
-            return true;
-        }
-        return false;
-    };
-
-    function getColor(id) {
-        var hue = (id * 137.508) % 360; 
-        return "hsl(" + hue + ", 70%, 50%)";
-    }
-
-    function runSimulation() {
-        var canvas = document.getElementById('percolationCanvas');
-        var stats = document.getElementById('perc-stats');
-        var nInput = document.getElementById('n-input');
-        var pInput = document.getElementById('p-input');
-
-        if (!canvas) return;
-
-        stats.innerText = "Status: Computing...";
-
-        // 使用 setTimeout 让 UI 有机会刷新出 Computing 字样
-        setTimeout(function() {
-            var n = parseInt(nInput.value);
-            var p = parseFloat(pInput.value);
-            
-            if (isNaN(n) || n < 2) n = 20;
-            if (isNaN(p) || p < 0 || p > 1) p = 0.5;
-
-            var ctx = canvas.getContext('2d');
-            var numNodes = n * n;
-            var uf = new UnionFind(numNodes);
-            var hBonds = [];
-            var vBonds = [];
-            var activeNodes = new Array(numNodes).fill(false);
-
-            // 生成横向
-            for (var r = 0; r < n; r++) {
-                hBonds[r] = [];
-                for (var c = 0; c < n - 1; c++) {
-                    var isOpen = Math.random() < p;
-                    hBonds[r][c] = isOpen;
-                    if (isOpen) {
-                        var idx1 = r * n + c;
-                        var idx2 = r * n + (c + 1);
-                        uf.union(idx1, idx2);
-                        activeNodes[idx1] = true;
-                        activeNodes[idx2] = true;
-                    }
-                }
-            }
-
-            // 生成纵向
-            for (var r = 0; r < n - 1; r++) {
-                vBonds[r] = [];
-                for (var c = 0; c < n; c++) {
-                    var isOpen = Math.random() < p;
-                    vBonds[r][c] = isOpen;
-                    if (isOpen) {
-                        var idx1 = r * n + c;
-                        var idx2 = (r + 1) * n + c;
-                        uf.union(idx1, idx2);
-                        activeNodes[idx1] = true;
-                        activeNodes[idx2] = true;
-                    }
-                }
-            }
-
-            // 绘图
-            var padding = 40;
-            var drawWidth = canvas.width - 2 * padding;
-            var cellSize = drawWidth / (n - 1);
-            
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // 背景
-            ctx.strokeStyle = '#EEEEEE';
-            ctx.fillStyle = '#EEEEEE';
-            ctx.lineWidth = Math.max(1, cellSize * 0.1);
-            ctx.beginPath();
-            for(var i=0; i<n; i++) {
-                var pos = padding + i * cellSize;
-                ctx.moveTo(padding, pos); ctx.lineTo(canvas.width - padding, pos);
-                ctx.moveTo(pos, padding); ctx.lineTo(pos, canvas.height - padding);
-            }
-            ctx.stroke();
-
-            var ghostRadius = Math.max(2, cellSize * 0.15);
-            for(var r=0; r<n; r++) {
-                for(var c=0; c<n; c++) {
-                    ctx.beginPath();
-                    ctx.arc(padding + c*cellSize, padding + r*cellSize, ghostRadius, 0, 2*Math.PI);
-                    ctx.fill();
-                }
-            }
-
-            // 前景
-            var lineWidth = Math.max(2, cellSize * 0.25);
-            var nodeRadius = Math.max(3, cellSize * 0.35);
-            ctx.lineWidth = lineWidth;
-            ctx.lineCap = 'round';
-
-            for(var r=0; r<n; r++) {
-                for(var c=0; c<n-1; c++) {
-                    if(hBonds[r][c]) {
-                        ctx.strokeStyle = getColor(uf.find(r * n + c));
-                        ctx.beginPath();
-                        ctx.moveTo(padding + c*cellSize, padding + r*cellSize);
-                        ctx.lineTo(padding + (c+1)*cellSize, padding + r*cellSize);
-                        ctx.stroke();
-                    }
-                }
-            }
-            for(var r=0; r<n-1; r++) {
-                for(var c=0; c<n; c++) {
-                    if(vBonds[r][c]) {
-                        ctx.strokeStyle = getColor(uf.find(r * n + c));
-                        ctx.beginPath();
-                        ctx.moveTo(padding + c*cellSize, padding + r*cellSize);
-                        ctx.lineTo(padding + c*cellSize, padding + (r+1)*cellSize);
-                        ctx.stroke();
-                    }
-                }
-            }
-
-            for(var r=0; r<n; r++) {
-                for(var c=0; c<n; c++) {
-                    var idx = r * n + c;
-                    if(activeNodes[idx]) {
-                        ctx.fillStyle = getColor(uf.find(idx));
-                        ctx.beginPath();
-                        ctx.arc(padding + c*cellSize, padding + r*cellSize, nodeRadius, 0, 2*Math.PI);
-                        ctx.fill();
-                    }
-                }
-            }
-
-            // 统计
-            var uniqueRoots = new Set();
-            for(var i=0; i<numNodes; i++) {
-                if (activeNodes[i]) uniqueRoots.add(uf.find(i));
-            }
-            stats.innerText = "Status: Done. Clusters found: " + uniqueRoots.size;
-        }, 10);
-    }
-
-    // 启动
-    init();
-})();
-</script>
-{% endraw %}
