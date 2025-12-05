@@ -34,86 +34,25 @@ Some pictures or animations illustrating my research, created with Python. Enjoy
 <hr>
 
 <div id="percolation-tool-container" style="text-align: center; margin-top: 40px;">
+<style>
+.perc-controls{background:#f8f9fa;border:1px solid #e9ecef;padding:15px;border-radius:8px;display:inline-flex;gap:15px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:10px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}.perc-input-group{display:flex;flex-direction:column;text-align:left}.perc-input-group label{font-size:12px;color:#6c757d;margin-bottom:4px;font-weight:600}.perc-input-group input{padding:6px 10px;border:1px solid #ced4da;border-radius:4px;width:70px;font-size:14px}.perc-btn{padding:0 20px;background-color:#0d6efd;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:600;height:38px;margin-top:18px;transition:background 0.2s}.perc-btn:hover{background-color:#0b5ed7}#percolationCanvas{background:white;border:1px solid #dee2e6;box-shadow:0 4px 6px rgba(0,0,0,0.05);border-radius:4px;max-width:100%;height:auto;margin-top:10px}#perc-stats{margin-top:8px;color:#495057;font-size:0.9em;font-family:monospace}
+</style>
 
-    <style>
-        .perc-controls {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            padding: 15px;
-            border-radius: 8px;
-            display: inline-flex;
-            gap: 15px;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        .perc-input-group {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-        .perc-input-group label {
-            font-size: 12px;
-            color: #6c757d;
-            margin-bottom: 4px;
-            font-weight: 600;
-        }
-        .perc-input-group input {
-            padding: 6px 10px;
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-            width: 70px;
-            font-size: 14px;
-        }
-        .perc-btn {
-            padding: 0 20px;
-            background-color: #0d6efd;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            height: 38px;
-            margin-top: 18px; /* Visual alignment */
-            transition: background 0.2s;
-        }
-        .perc-btn:hover {
-            background-color: #0b5ed7;
-        }
-        #percolationCanvas {
-            background: white;
-            border: 1px solid #dee2e6;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-radius: 4px;
-            max-width: 100%;
-            height: auto;
-            margin-top: 10px;
-        }
-        #perc-stats {
-            margin-top: 8px;
-            color: #495057;
-            font-size: 0.9em;
-            font-family: monospace;
-        }
-    </style>
+<div class="perc-controls">
+  <div class="perc-input-group">
+    <label for="n-input">Size (N)</label>
+    <input type="number" id="n-input" value="20" min="5" max="100">
+  </div>
+  <div class="perc-input-group">
+    <label for="p-input">Prob (p)</label>
+    <input type="number" id="p-input" value="0.5" min="0" max="1" step="0.01">
+  </div>
+  <button id="run-btn" class="perc-btn">Run Simulation</button>
+</div>
 
-    <div class="perc-controls">
-        <div class="perc-input-group">
-            <label for="n-input">Size (N)</label>
-            <input type="number" id="n-input" value="20" min="5" max="100">
-        </div>
-        <div class="perc-input-group">
-            <label for="p-input">Prob (p)</label>
-            <input type="number" id="p-input" value="0.5" min="0" max="1" step="0.01">
-        </div>
-        <button class="perc-btn" onclick="runPercolationSim()">Run Simulation</button>
-    </div>
-    
-    <div id="perc-stats">Status: Waiting for script...</div>
-    <br>
-    <canvas id="percolationCanvas" width="600" height="600"></canvas>
+<div id="perc-stats">Status: Loading script...</div>
+<br>
+<canvas id="percolationCanvas" width="600" height="600"></canvas>
 </div>
 
 <p align="center" style="max-width:800px; margin:auto; font-size:0.95em; line-height:1.5; margin-top: 20px;">
@@ -124,185 +63,190 @@ Some pictures or animations illustrating my research, created with Python. Enjoy
 
 {% raw %}
 <script>
-    // 1. 定义并查集类 (Class Definition)
-    class UnionFind {
-        constructor(size) {
-            this.parent = new Array(size);
-            for (let i = 0; i < size; i++) {
-                this.parent[i] = i;
-            }
-        }
-        find(i) {
-            if (this.parent[i] !== i) {
-                this.parent[i] = this.find(this.parent[i]);
-            }
-            return this.parent[i];
-        }
-        union(i, j) {
-            let rootI = this.find(i);
-            let rootJ = this.find(j);
-            if (rootI !== rootJ) {
-                this.parent[rootI] = rootJ;
-                return true;
-            }
-            return false;
-        }
-    }
-
-    // 2. 颜色辅助函数
-    function getPercColor(id) {
-        const hue = (id * 137.508) % 360; 
-        return "hsl(" + hue + ", 70%, 50%)";
-    }
-
-    // 3. 主运行函数 (Main Function)
-    function runPercolationSim() {
-        // 获取 DOM 元素
-        const canvas = document.getElementById('percolationCanvas');
-        const stats = document.getElementById('perc-stats');
-        const nInput = document.getElementById('n-input');
-        const pInput = document.getElementById('p-input');
-
-        // 错误检查
-        if (!canvas || !stats) {
-            console.error("Canvas element not found. Retrying...");
+(function() {
+    // 确保DOM加载后再执行
+    function init() {
+        var btn = document.getElementById('run-btn');
+        var stats = document.getElementById('perc-stats');
+        
+        if (!btn) {
+            // 如果还没加载完，稍后再试
+            setTimeout(init, 100);
             return;
         }
 
-        const ctx = canvas.getContext('2d');
-        const n = parseInt(nInput.value);
-        const p = parseFloat(pInput.value);
+        // 绑定点击事件
+        btn.addEventListener('click', runSimulation);
 
-        if (isNaN(n) || n < 2) { alert("Size N must be > 1"); return; }
-        if (isNaN(p) || p < 0 || p > 1) { alert("Probability p must be between 0 and 1"); return; }
+        // 初始运行一次
+        runSimulation();
+    }
 
-        stats.innerText = "Status: Calculating...";
+    // 类定义：并查集
+    function UnionFind(size) {
+        this.parent = new Array(size);
+        for (var i = 0; i < size; i++) {
+            this.parent[i] = i;
+        }
+    }
+    UnionFind.prototype.find = function(i) {
+        if (this.parent[i] !== i) {
+            this.parent[i] = this.find(this.parent[i]);
+        }
+        return this.parent[i];
+    };
+    UnionFind.prototype.union = function(i, j) {
+        var rootI = this.find(i);
+        var rootJ = this.find(j);
+        if (rootI !== rootJ) {
+            this.parent[rootI] = rootJ;
+            return true;
+        }
+        return false;
+    };
 
-        // --- 算法部分 Start ---
-        const numNodes = n * n;
-        const uf = new UnionFind(numNodes);
-        let hBonds = []; 
-        let vBonds = [];
-        let activeNodes = new Array(numNodes).fill(false);
+    function getColor(id) {
+        var hue = (id * 137.508) % 360; 
+        return "hsl(" + hue + ", 70%, 50%)";
+    }
 
-        // 横向键
-        for (let r = 0; r < n; r++) {
-            hBonds[r] = [];
-            for (let c = 0; c < n - 1; c++) {
-                const isOpen = Math.random() < p;
-                hBonds[r][c] = isOpen;
-                if (isOpen) {
-                    const idx1 = r * n + c;
-                    const idx2 = r * n + (c + 1);
-                    uf.union(idx1, idx2);
-                    activeNodes[idx1] = true; activeNodes[idx2] = true;
+    function runSimulation() {
+        var canvas = document.getElementById('percolationCanvas');
+        var stats = document.getElementById('perc-stats');
+        var nInput = document.getElementById('n-input');
+        var pInput = document.getElementById('p-input');
+
+        if (!canvas) return;
+
+        stats.innerText = "Status: Computing...";
+
+        // 使用 setTimeout 让 UI 有机会刷新出 Computing 字样
+        setTimeout(function() {
+            var n = parseInt(nInput.value);
+            var p = parseFloat(pInput.value);
+            
+            if (isNaN(n) || n < 2) n = 20;
+            if (isNaN(p) || p < 0 || p > 1) p = 0.5;
+
+            var ctx = canvas.getContext('2d');
+            var numNodes = n * n;
+            var uf = new UnionFind(numNodes);
+            var hBonds = [];
+            var vBonds = [];
+            var activeNodes = new Array(numNodes).fill(false);
+
+            // 生成横向
+            for (var r = 0; r < n; r++) {
+                hBonds[r] = [];
+                for (var c = 0; c < n - 1; c++) {
+                    var isOpen = Math.random() < p;
+                    hBonds[r][c] = isOpen;
+                    if (isOpen) {
+                        var idx1 = r * n + c;
+                        var idx2 = r * n + (c + 1);
+                        uf.union(idx1, idx2);
+                        activeNodes[idx1] = true;
+                        activeNodes[idx2] = true;
+                    }
                 }
             }
-        }
 
-        // 纵向键
-        for (let r = 0; r < n - 1; r++) {
-            vBonds[r] = [];
-            for (let c = 0; c < n; c++) {
-                const isOpen = Math.random() < p;
-                vBonds[r][c] = isOpen;
-                if (isOpen) {
-                    const idx1 = r * n + c;
-                    const idx2 = (r + 1) * n + c;
-                    uf.union(idx1, idx2);
-                    activeNodes[idx1] = true; activeNodes[idx2] = true;
+            // 生成纵向
+            for (var r = 0; r < n - 1; r++) {
+                vBonds[r] = [];
+                for (var c = 0; c < n; c++) {
+                    var isOpen = Math.random() < p;
+                    vBonds[r][c] = isOpen;
+                    if (isOpen) {
+                        var idx1 = r * n + c;
+                        var idx2 = (r + 1) * n + c;
+                        uf.union(idx1, idx2);
+                        activeNodes[idx1] = true;
+                        activeNodes[idx2] = true;
+                    }
                 }
             }
-        }
-        // --- 算法部分 End ---
 
-        // --- 绘图部分 Start ---
-        const padding = 40;
-        const drawWidth = canvas.width - 2 * padding;
-        const cellSize = drawWidth / (n - 1);
-        
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // 绘图
+            var padding = 40;
+            var drawWidth = canvas.width - 2 * padding;
+            var cellSize = drawWidth / (n - 1);
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // 画背景 (Ghost Lattice)
-        ctx.strokeStyle = '#EEEEEE';
-        ctx.fillStyle = '#EEEEEE';
-        ctx.lineWidth = Math.max(1, cellSize * 0.1);
-        
-        ctx.beginPath();
-        for(let i=0; i<n; i++) {
-            let pos = padding + i * cellSize;
-            ctx.moveTo(padding, pos); ctx.lineTo(canvas.width - padding, pos);
-            ctx.moveTo(pos, padding); ctx.lineTo(pos, canvas.height - padding);
-        }
-        ctx.stroke();
-
-        const ghostRadius = Math.max(2, cellSize * 0.15);
-        for(let r=0; r<n; r++) {
-            for(let c=0; c<n; c++) {
-                ctx.beginPath();
-                ctx.arc(padding + c*cellSize, padding + r*cellSize, ghostRadius, 0, 2*Math.PI);
-                ctx.fill();
+            // 背景
+            ctx.strokeStyle = '#EEEEEE';
+            ctx.fillStyle = '#EEEEEE';
+            ctx.lineWidth = Math.max(1, cellSize * 0.1);
+            ctx.beginPath();
+            for(var i=0; i<n; i++) {
+                var pos = padding + i * cellSize;
+                ctx.moveTo(padding, pos); ctx.lineTo(canvas.width - padding, pos);
+                ctx.moveTo(pos, padding); ctx.lineTo(pos, canvas.height - padding);
             }
-        }
+            ctx.stroke();
 
-        // 画前景
-        const lineWidth = Math.max(2, cellSize * 0.25);
-        const nodeRadius = Math.max(3, cellSize * 0.35);
-
-        function getNodeColor(r, c) {
-            return getPercColor(uf.find(r * n + c));
-        }
-
-        ctx.lineWidth = lineWidth;
-        ctx.lineCap = 'round';
-
-        // 画键
-        for(let r=0; r<n; r++) {
-            for(let c=0; c<n-1; c++) {
-                if(hBonds[r][c]) {
-                    ctx.strokeStyle = getNodeColor(r, c);
+            var ghostRadius = Math.max(2, cellSize * 0.15);
+            for(var r=0; r<n; r++) {
+                for(var c=0; c<n; c++) {
                     ctx.beginPath();
-                    ctx.moveTo(padding + c*cellSize, padding + r*cellSize);
-                    ctx.lineTo(padding + (c+1)*cellSize, padding + r*cellSize);
-                    ctx.stroke();
-                }
-            }
-        }
-        for(let r=0; r<n-1; r++) {
-            for(let c=0; c<n; c++) {
-                if(vBonds[r][c]) {
-                    ctx.strokeStyle = getNodeColor(r, c);
-                    ctx.beginPath();
-                    ctx.moveTo(padding + c*cellSize, padding + r*cellSize);
-                    ctx.lineTo(padding + c*cellSize, padding + (r+1)*cellSize);
-                    ctx.stroke();
-                }
-            }
-        }
-
-        // 画节点
-        for(let r=0; r<n; r++) {
-            for(let c=0; c<n; c++) {
-                if(activeNodes[r * n + c]) {
-                    ctx.fillStyle = getNodeColor(r, c);
-                    ctx.beginPath();
-                    ctx.arc(padding + c*cellSize, padding + r*cellSize, nodeRadius, 0, 2*Math.PI);
+                    ctx.arc(padding + c*cellSize, padding + r*cellSize, ghostRadius, 0, 2*Math.PI);
                     ctx.fill();
                 }
             }
-        }
-        
-        // 更新结果文字
-        const uniqueRoots = new Set();
-        for(let i=0; i<numNodes; i++) {
-            if (activeNodes[i]) uniqueRoots.add(uf.find(i));
-        }
-        stats.innerText = "Status: Done! Found " + uniqueRoots.size + " connected clusters.";
+
+            // 前景
+            var lineWidth = Math.max(2, cellSize * 0.25);
+            var nodeRadius = Math.max(3, cellSize * 0.35);
+            ctx.lineWidth = lineWidth;
+            ctx.lineCap = 'round';
+
+            for(var r=0; r<n; r++) {
+                for(var c=0; c<n-1; c++) {
+                    if(hBonds[r][c]) {
+                        ctx.strokeStyle = getColor(uf.find(r * n + c));
+                        ctx.beginPath();
+                        ctx.moveTo(padding + c*cellSize, padding + r*cellSize);
+                        ctx.lineTo(padding + (c+1)*cellSize, padding + r*cellSize);
+                        ctx.stroke();
+                    }
+                }
+            }
+            for(var r=0; r<n-1; r++) {
+                for(var c=0; c<n; c++) {
+                    if(vBonds[r][c]) {
+                        ctx.strokeStyle = getColor(uf.find(r * n + c));
+                        ctx.beginPath();
+                        ctx.moveTo(padding + c*cellSize, padding + r*cellSize);
+                        ctx.lineTo(padding + c*cellSize, padding + (r+1)*cellSize);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            for(var r=0; r<n; r++) {
+                for(var c=0; c<n; c++) {
+                    var idx = r * n + c;
+                    if(activeNodes[idx]) {
+                        ctx.fillStyle = getColor(uf.find(idx));
+                        ctx.beginPath();
+                        ctx.arc(padding + c*cellSize, padding + r*cellSize, nodeRadius, 0, 2*Math.PI);
+                        ctx.fill();
+                    }
+                }
+            }
+
+            // 统计
+            var uniqueRoots = new Set();
+            for(var i=0; i<numNodes; i++) {
+                if (activeNodes[i]) uniqueRoots.add(uf.find(i));
+            }
+            stats.innerText = "Status: Done. Clusters found: " + uniqueRoots.size;
+        }, 10);
     }
 
-    // 4. 立即执行一次
-    // 放在最后，确保 HTML 元素已经存在
-    runPercolationSim();
-
+    // 启动
+    init();
+})();
 </script>
 {% endraw %}
