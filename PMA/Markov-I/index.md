@@ -14,11 +14,6 @@ Here is a detailed introduction to the Markov I course.
     * Markov chain (including random graphs)
     * Markov process and applications (continuous time with discrete state)
     * Poissonian clouds
-* **Difficulty coefficient:** ⭐⭐⭐
-* **Characteristics:**
-    * The pace is fast and there’s a lot of content, but it’s not very difficult.
-    * The teacher especially likes to use original questions from past finals on the final exam.
-    * You may bring notes and any handwritten or printed material (including your own answers from previous exams) to the final exam
 
 Here is the textbook version 2023-2024 of this Course. [[pdf](/PMA/Markov-I/Poly_Markov_I.pdf)]
 
