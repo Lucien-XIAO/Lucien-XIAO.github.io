@@ -16,9 +16,5 @@ Voici une introduction détaillée du cours CGP.
     * Convergence des mesures
     * Grandes déviations 
     * Percolation
-* **Coefficient de difficulté :** ⭐⭐⭐⭐
-* **Caractéristiques :**
-    * Les formats d'examen varient et il n'y a pas de modèle fixe
-    * Une solide maîtrise de la topologie et de l'analyse fonctionnelle est requise, notamment pour l'étude du Chapitre 1
 
 Tous les matériaux peuvent être trouvés sur le site web du cours. [[site web](https://www.lpsm.paris/users/levyt/cgp)]
