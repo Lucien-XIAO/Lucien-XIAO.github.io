@@ -15,11 +15,6 @@ Voici une introduction détaillée du cours Markov I.
     * Chaînes de Markov (incluant les graphes aléatoires)
     * Processus de Markov et applications (temps continu avec espace d'états discret)
     * Nuages de Poisson
-* **Coefficient de difficulté :** ⭐⭐⭐
-* **Caractéristiques :**
-    * Le rythme est rapide et le contenu est dense, mais ce n'est pas très difficile.
-    * L'enseignant aime particulièrement utiliser des questions originales tirées d'anciens examens finaux pour l'examen final.
-    * Vous êtes autorisé à apporter des notes et tout matériel manuscrit ou imprimé (y compris vos propres réponses des examens précédents) à l'examen final.
 
 Voici le polycopié version 2023-2024 de ce cours. [[pdf](/PMA/Markov-I/Poly_Markov_I.pdf)]
 
