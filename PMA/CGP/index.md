@@ -15,10 +15,6 @@ Here is a detailed introduction to the CGP course.
     * Convergence of measures
     * Large deviations
     * Percolation
-* **Difficulty coefficient:** ⭐⭐⭐⭐
-* **Characteristics:**
-    * The exam formats vary and there is no fixed pattern
-    * A strong command of topology and functional analysis is required, especially studying Chapter 1
 
 All materials can be found on the course website. [[web](https://www.lpsm.paris/users/levyt/cgp)]
 
