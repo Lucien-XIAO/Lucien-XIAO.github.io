@@ -17,7 +17,7 @@ redirect_from:
 
 **[Passer à la version Chinoise🇨🇳 / Switch to Chinese version🇨🇳 / 转至中文版本🇨🇳](/PMA/cn/)**
 
-Here is the detailed official introduction of the M2-PMA 2025-2026 (French version) [[brochure 2025-2026]](\PMA\brochure2025.pdf) and the official website of M2-PMA [[web](https://www.lpsm.paris/masters/modale/index)].
+Here is the detailed official introduction of the M2-PMA 2025-2026 (French version) [[brochure 2025-2026]](\PMA\brochure25_26.pdf) and the official website of M2-PMA [[web](https://www.lpsm.paris/masters/modale/index)].
 
 **A brief introduction to PMA**
 
