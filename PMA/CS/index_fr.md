@@ -18,11 +18,6 @@ Voici une introduction détaillée du cours CS.
     * Semi-martingales continues
     * Intégration Stochastique
     * Équations Différentielles Stochastiques
-* **Coefficient de difficulté :** ⭐⭐⭐⭐⭐
-* **Caractéristiques :**
-    * Ce cours est enseigné selon le livre de Jean-François Le Gall : "[Mouvement Brownien, Martingales et Calcul Stochastique](https://link.springer.com/book/10.1007/978-3-319-31089-3)".
-    * Nécessite une solide capacité en convergence des martingales et en martingales.
-    * Les examens sont très difficiles, mais le style du professeur dans la composition des questions est très cohérent à chaque fois (ce qui se reflète dans les méthodes de résolution).
 
 Voici le polycopié de ce cours. [[pdf](/PMA/CS/PolyCS.pdf)]
 
