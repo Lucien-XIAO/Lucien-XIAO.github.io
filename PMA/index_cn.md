@@ -66,7 +66,4 @@ M2-PMA 每年录取约 20–30 名学生，包括来自 ENS-PSL 的 normaliens �
 - [Markov II（云过程理论、Lévy 过程与游程理论）](/PMA/Markov-II/fr/)
 
 ### **第二学期**
-- 可积概率论与 KPZ（Kardar–Parisi–Zhang）普适类  
-- 行列式过程、随机矩阵与超均匀性  
-- 粗糙路径与随机微分方程  
-- 实验室科研实习（硕士论文）
+
