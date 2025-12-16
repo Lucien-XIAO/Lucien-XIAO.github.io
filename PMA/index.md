@@ -54,7 +54,4 @@ Voici ma sélection de cours M2-PMA (Majeure Processus stochastiques)
 - [Markov II (Théorie des Nuages, Processus de Lévy, et Excursions)](/PMA/Markov-II/fr/)
 
 **Semestre 2**
-- Probabilités Intégrables et la Classe d'Universalité KPZ (Kardar-Parisi-Zhang)
-- Processus Déterminantaux, Matrices Aléatoires et Hyperuniformité
-- Chemins Rugueux et Équations Différentielles Stochastiques
-- Stage (Mémoire de Master) en Laboratoire
+
