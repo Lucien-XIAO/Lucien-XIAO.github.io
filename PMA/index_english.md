@@ -56,7 +56,4 @@ Here is my M2-PMA course selection (Major stochastic process)
 - [Markov II (Clouds Theory, Levy Processes, and Excursions)](/PMA/Markov-II/)
   
 **Semester 2**
-- Integrable probability & The KPZ (Kardar-Parisi-Zhang) Universality Class
-- Determinantal processes, random matrices and hyperuniformity
-- Rough Paths and Stochastic differential equation
-- Internship (Master thesis) at Laboratory 
+
