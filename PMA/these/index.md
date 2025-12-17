@@ -1,5 +1,5 @@
 ---
-title: 
+title: Doctorat (Thèse) – Synthèse du processus de candidature  
 
 permalink: /PMA/these/
 
@@ -9,8 +9,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
-# Doctorat (Thèse) – Synthèse du processus de candidature  
 **Mathématiques – École Doctorale ED 386 (Paris Centre)**
 
 ## 1. Conditions préalables
