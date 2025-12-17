@@ -1,7 +1,13 @@
 ---
 title: "Règles du Semestre 2 : Mémoire et Stage (M2)"
-layout: page
+
 permalink: /PMA/Info/rule2/
+
+author_profile: true
+
+redirect_from:
+  - /about/
+  - /about.html
 ---
 
 ## 1. Organisation des cours optionnels
