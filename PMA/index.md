@@ -56,7 +56,8 @@ Voici ma sélection de cours M2-PMA (Majeure Processus stochastiques)
 **Semestre 2**
 - À choisir
 
-#Autres Informations#
+# Autres Informations
+
 **[Doctorat (Thèse) – Synthèse du processus de candidature](/PMA/these/)**
 
 
