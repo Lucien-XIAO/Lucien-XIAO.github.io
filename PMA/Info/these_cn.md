@@ -1,6 +1,6 @@
 ---
 title: 博士（博士论文）——申请流程概要
-permalink: /PMA/Info/these/
+permalink: /PMA/Info/these_cn/
 author_profile: true
 redirect_from:
   - /about/
