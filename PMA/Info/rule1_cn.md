@@ -1,6 +1,6 @@
 ---
 title: 第一学期的验证与重读（留级）——M2
-permalink: /PMA/Info/rule1/
+permalink: /PMA/Info/rule1_cn/
 author_profile: true
 redirect_from:
   - /about/
