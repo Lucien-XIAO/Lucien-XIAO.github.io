@@ -1,6 +1,6 @@
 ---
 title: "第二学期规则：论文与实习（M2）"
-permalink: /PMA/Info/rule2/
+permalink: /PMA/Info/rule2_cn/
 author_profile: true
 redirect_from:
   - /about/
