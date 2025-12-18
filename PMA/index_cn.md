@@ -69,7 +69,10 @@ M2-PMA 每年录取约 20–30 名学生，包括来自 ENS-PSL 的 normaliens �
 - 待选
 
 # 其他的消息
+
 **[博士（博士论文）——申请流程概要](\PMA\Info\these_cn\)**
+
 **[第一学期的验证与重读（留级）——M2](\PMA\Info\rule1_cn\)**
+
 **[第二学期规则：论文与实习（M2）](\PMA\Info\rule2_cn\)**
 
