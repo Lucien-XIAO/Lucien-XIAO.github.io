@@ -56,4 +56,10 @@ Here is my M2-PMA course selection (Major stochastic process)
 - [Markov II (Clouds Theory, Levy Processes, and Excursions)](/PMA/Markov-II/)
   
 **Semester 2**
+- ...
+
+# Other information
+**[Doctorate (PhD) – Overview of the Application Process]{\PMA\Info\these_en\}**
+**[Validation of the 1st Semester and Repeating a Year – M2]{\PMA\Info\rule1_en\}**
+**[Semester 2 Rules: Thesis and Internship (M2)](\PMA\Info\rule2_en\)**
 
