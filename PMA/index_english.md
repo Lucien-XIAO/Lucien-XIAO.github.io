@@ -60,9 +60,9 @@ Here is my M2-PMA course selection (Major stochastic process)
 
 # Other information
 
-**[Doctorate (PhD) – Overview of the Application Process]{\PMA\Info\these_en\}**
+**[Doctorate (PhD) – Overview of the Application Process](\PMA\Info\these_en\)**
 
-**[Validation of the 1st Semester and Repeating a Year – M2]{\PMA\Info\rule1_en\}**
+**[Validation of the 1st Semester and Repeating a Year – M2](\PMA\Info\rule1_en\)**
 
 **[Semester 2 Rules: Thesis and Internship (M2)](\PMA\Info\rule2_en\)**
 
