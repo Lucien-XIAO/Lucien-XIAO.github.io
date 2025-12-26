@@ -44,6 +44,8 @@ In my personal opinion and based on the information I have, for students who hav
 - **"Probabilités approfondies (UM4MA311)"** 
 - **a part of "Martingales et contrôle stochastique (UM4MA280)"**
 
+For this course, I recommend the documents “Measure Theory, Probability, and Stochastic Processes” by Jean-François Le Gall, “[M2 Revisions](/PMA/M2_Revisions.pdf)” by Nicolas Fournier, and the corrected exercises “Martingales and Markov Chains” by Paolo Baldi, Laurent Mazliak, and Pierre Priouret.
+
 **My PMA course selection or materials**
 
 Here is my M2-PMA course selection (Major stochastic process)
