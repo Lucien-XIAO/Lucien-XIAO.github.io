@@ -55,7 +55,7 @@ M2-PMA 每年录取约 20–30 名学生，包括来自 ENS-PSL 的 normaliens �
 - **Probabilités approfondies (UM4MA311)**
 - **Martingales et contrôle stochastique (UM4MA280)**（包含原课程部分内容）
 
----
+对于本单元，我推荐您参考以下资料：Jean-François Le Gall的《Measure Theory, Probability, and Stochastic Processes》、Nicolas Fournier的《[M2复习资料](/PMA/M2_Revisions.pdf)》，以及Paolo Baldi、Laurent Mazliak和Pierre Priouret合著的习题集《Martingales et chaînes de Markov》。
 
 ## **我的 M2-PMA 课程选择（随机过程主修）**
 
