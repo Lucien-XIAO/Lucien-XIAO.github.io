@@ -58,8 +58,8 @@ Voici ma sélection de cours M2-PMA (Majeure Processus stochastiques)
 - [Markov II (Théorie des Nuages, Processus de Lévy, et Excursions)](/PMA/Markov-II/fr/)
 
 **Autres documents**
-- [Probabilités numériques et méthode de Monte-Carlo](https://drive.google.com/drive/folders/16ki3rS5Vhuii5Gbw53_LuuD1OMEjEK8y)
-- [Statistique et Apprentissage](/PMA/SA/M2stat2025.pdf)
+- Probabilités numériques et méthode de Monte-Carlo: [[google drive]](https://drive.google.com/drive/folders/16ki3rS5Vhuii5Gbw53_LuuD1OMEjEK8y)
+- Statistique et Apprentissage: [[poly2025]](/PMA/SA/M2stat2025.pdf) by Catherine Matias
 
 **Semestre 2**
 - À choisir
