@@ -42,7 +42,7 @@ Selon mon opinion personnelle et les informations dont je dispose, pour les étu
 - **"Probabilités approfondies (UM4MA311)"**
 - **une partie de "Martingales et contrôle stochastique (UM4MA280)"**
 
-Pour cette UE, je vous recommande les documents “Measure Theory, Probability, and Stochastic Processes” de Jean-François Le Gall, “[M2 Revisions](/PMA/M2_Revisions.pdf)” de Nicolas Fournier, ainsi que les exercices corrigés “Martingales et chaînes de Markov” de Paolo Baldi, Laurent Mazliak et Pierre Priouret.
+Pour cette UE, je vous recommande les documents “Measure Theory, Probability, and Stochastic Processes” de Jean-François Le Gall, “[M2 Revisions](/PMA/M2_Revisions.pdf)” de Nicolas Fournier, ainsi que les exercices corrigés “[Martingales et chaînes de Markov](https://www.editions-hermann.fr/livre/martingales-et-chaines-de-markov-paolo-baldi)” de Paolo Baldi, Laurent Mazliak et Pierre Priouret.
 
 ---
 
