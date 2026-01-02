@@ -39,3 +39,6 @@ Voici le polycopié de ce cours. [[pdf](/PMA/CS/PolyCS.pdf)]
 
 **"Brownian Motion" par Peter Mörters et Yuval Peres**
 * Notes de cours en PDF [[pdf](/PMA/CS/Brownian_Motion.pdf)]
+
+**"[Continuous Martingales and Brownian Motion](https://link.springer.com/book/10.1007/978-3-662-06400-9)" Par Daniel Revuz, Marc Yor**
+
