@@ -52,11 +52,11 @@ Voici ma sélection de cours M2-PMA (Majeure Processus stochastiques)
 
 **Semestre 1**
 
-- [Calcul Stochastique et Processus de Diffusion](/PMA/CS/fr/)
-- [Markov I (Modèles Markoviens Discrets + Processus de Markov et Applications + Nuages Poissonniens)](/PMA/Markov-I/fr/)
-- [Convergence des Mesures, Grandes Déviations, Percolation](/PMA/CGP/fr/) 
-- [Markov II (Théorie des Nuages, Processus de Lévy, et Excursions)](/PMA/Markov-II/fr/)
-
+- [Calcul Stochastique et Processus de Diffusion]
+- [Markov I (Modèles Markoviens Discrets + Processus de Markov et Applications + Nuages Poissonniens)]
+- [Convergence des Mesures, Grandes Déviations, Percolation]
+- [Markov II (Théorie des Nuages, Processus de Lévy, et Excursions)]
+  
 **Autres documents**
 - Probabilités numériques et méthode de Monte-Carlo: [[google drive]](https://drive.google.com/drive/folders/16ki3rS5Vhuii5Gbw53_LuuD1OMEjEK8y)
 - Statistique et Apprentissage: [[poly2025]](/PMA/SA/M2stat2025.pdf)
