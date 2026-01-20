@@ -21,8 +21,8 @@ main:
   - title: "CV"
     url: /assets/CV.pdf
   
-  - title: "M2-PMA (25-26)"
-    url: /PMA/   
+  #- title: "M2-PMA (25-26)"
+    #url: /PMA/   
 
   - title: "Misc"
     url: /misc/   
