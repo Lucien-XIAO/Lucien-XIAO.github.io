@@ -62,7 +62,12 @@ Voici ma sélection de cours M2-PMA (Majeure Processus stochastiques)
 - Statistique et Apprentissage: [[poly2025]](/PMA/SA/M2stat2025.pdf)
 
 **Semestre 2**
-- À choisir
+- Rough paths et applications aux équations différencielles stochastiques
+- Invariants asymptomatiques et marches aléatoires sur les graphes et sur les groupes
+- Systèmes désordonnés et polymères dirigés
+- Invariance conforme en mécanique statistique
+- Modèles probabilistes pour les neurosciences
+- Integrable probability and the Kardar-Parisi-Zhang universality class
 
 ---
 
