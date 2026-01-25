@@ -79,6 +79,8 @@ Voici ma sélection de cours M2-PMA (Majeure Processus stochastiques)
 
 **[Règles du Semestre 2 : Mémoire et Stage (M2)](/PMA/Info/rule2/)**
 
+**[Cours et modalités d’évaluation du S2 2025-2026](/PMA/Info/2eUEs/)**
+
 
 
 
