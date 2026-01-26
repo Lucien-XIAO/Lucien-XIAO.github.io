@@ -63,7 +63,7 @@ Voici ma sélection de cours M2-PMA (Majeure Processus stochastiques)
 
 **Semestre 2**
 - Rough paths et applications aux équations différencielles stochastiques
-- Invariants asymptomatiques et marches aléatoires sur les graphes et sur les groupes
+- Determinantal processes, random matrices and hyperuniformity
 - Systèmes désordonnés et polymères dirigés
 - Invariance conforme en mécanique statistique
 - Modèles probabilistes pour les neurosciences
