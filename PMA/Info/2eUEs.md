@@ -1,5 +1,5 @@
 ---
-title: Cours et modalités d’évaluation du S2 2025-2026
+title: Tableau Récapitulatif : Cours et Modalités d'Évaluation du S2 2025-2026
 
 permalink: /PMA/Info/2eUEs/
 
@@ -9,7 +9,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-# Tableau Récapitulatif : Cours et Modalités d'Évaluation
 
 | Enseignant | Sujet du Cours | Modalités d'Évaluation |
 | :--- | :--- | :--- |
