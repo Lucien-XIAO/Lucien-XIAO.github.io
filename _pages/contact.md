@@ -9,7 +9,7 @@ author_profile: true
   
   <p style="margin-bottom: 30px; color: #666;">If you have any questions or would like to get in touch, please fill out the form below.</p>
 
-  <form action="https://formspree.io/f/你的ID" method="POST" style="display: flex; flex-direction: column; gap: 25px;">
+  <form action="https://formspree.io/f/mnjboyqv" method="POST" style="display: flex; flex-direction: column; gap: 25px;">
     
     <div style="display: flex; flex-direction: column;">
       <label style="font-size: 0.9em; font-weight: bold; margin-bottom: 5px;">Full Name *</label>
