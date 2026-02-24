@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /teaching/
+Disallow: /misc/
+Disallow: /publications/
+Disallow: /talks/
+Disallow: /interships/
