@@ -25,12 +25,12 @@ author:
   # Biographic information
   avatar           : "yuguang.png"
   name             : "Yuguang XIAO (肖煜光)"
-  pronouns         : # example: "she/her"  
+  pronouns         : “he/him”
   bio              : "A M2 student in Probablity and Random models"
   location         : "Paris, France"
   employer         : "LPSM, Sorbonne University"
   uri              : # URL
-  email            : "yuguang.xiao.maths@gmail.com" 
+  email            : #
 
   # Academic websites
   academia         : # URL
