@@ -6,3 +6,4 @@ Disallow: /misc/
 Disallow: /publications/
 Disallow: /talks/
 Disallow: /interships/
+Disallow: /*.pdf$
