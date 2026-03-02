@@ -16,9 +16,11 @@ I have been fortunate to work on several research projects, including the study 
 
 ## Interests
 - Probabilty theory
-- Stochastic analysis
-- Random walk
+- Random matrice
+- Disordered system
+- Directed polymers
 - Applications in statistical physics
+
 
 ## Various Notes 
 - Measure Theory (not finished). [[PDF]](../publications/Various_Notes/Measure_theory.pdf) *(updated {{ "now" | date: "%B %d, %Y" }})*
