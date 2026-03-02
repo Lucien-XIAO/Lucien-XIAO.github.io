@@ -20,16 +20,6 @@ I have been fortunate to work on several research projects, including the study 
 - Random walk
 - Applications in statistical physics
 
-## Education
-- 🎓 **MS (M2) in Probability**, 2025–2026    
-  *SU co-qualified with ENS-PSL*
-- 🎓 **MS (M1) in Mathematics and applications**, 2024–2025    
-  *SU*
-- 🎓 **Double Bachelor's degree in Mathematics and Physics**, 2020-2024  
-  *SU*
-- 🎓 **High School Diploma in Science**, 2016-2019  
-  *Wuhan No.3 high school*
-
 ## Various Notes 
 - Measure Theory (not finished). [[PDF]](../publications/Various_Notes/Measure_theory.pdf) *(updated {{ "now" | date: "%B %d, %Y" }})*
   
