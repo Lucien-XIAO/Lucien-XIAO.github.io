@@ -1,0 +1,18 @@
+<nav class="top-nav">
+  <div class="nav-container">
+    <div class="nav-left">
+      <a href="/" {% if page.url == "/" %}class="nav-active"{% endif %}>Home</a>
+      {% for item in site.data.navigation.main %}
+        <a href="{{ item.url }}"
+          {% if page.url contains item.url %}class="nav-active"{% endif %}>
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </div>
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-toggle" title="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="/assets/css/pma-theme.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body class="theme-claude pma-page">
+  {% include nav.html %}
+  <div class="pma-wrapper">
+    <nav class="pma-breadcrumb">
+      <a href="/"><i class="fa-solid fa-house"></i> Accueil</a>
+      {% if page.parent_title %}
+        <span class="breadcrumb-sep">›</span>
+        <a href="{{ page.parent_url }}">{{ page.parent_title }}</a>
+      {% endif %}
+      {% if page.breadcrumb %}
+        <span class="breadcrumb-sep">›</span>
+        <span>{{ page.breadcrumb }}</span>
+      {% endif %}
+    </nav>
+    <main class="pma-main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    if (toggle) {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        toggle.innerHTML = saved === 'dark'
+          ? '<i class="fa-solid fa-sun"></i>'
+          : '<i class="fa-solid fa-moon"></i>';
+      }
+      toggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        toggle.innerHTML = next === 'dark'
+          ? '<i class="fa-solid fa-sun"></i>'
+          : '<i class="fa-solid fa-moon"></i>';
+      });
+    }
+  </script>
+</body>
+</html>

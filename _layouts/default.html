@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  {% include head.html %}
+</head>
+<body class="theme-claude">
+  {% include nav.html %}
+  <div class="wrapper">
+    {% include sidebar.html %}
+    <section class="content">
+      {{ content }}
+    </section>
+    {% include footer.html %}
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.section').forEach((el) => el.classList.add('visible'));
+    });
+  </script>
+</body>
+</html>
