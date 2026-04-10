@@ -820,3 +820,78 @@ body.theme-claude .exp-details li::before {
     margin-bottom: 32px;
   }
 }
+
+/* --- Page layout (no sidebar: talks, teaching, pub) --- */
+body.theme-claude .page-wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.theme-claude .page-main {
+  flex: 1;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+body.theme-claude .page-wrapper .site-footer {
+  padding: 0;
+  text-align: center;
+}
+
+body.theme-claude .page-wrapper .site-footer p {
+  border-top: 1px solid var(--claude-footer-border) !important;
+  padding-top: 20px;
+}
+
+@media (max-width: 640px) {
+  body.theme-claude .page-wrapper {
+    padding: 0 20px;
+  }
+  body.theme-claude .page-main {
+    padding-top: 80px;
+  }
+}
+
+/* --- Floating Math Symbols (global) --- */
+.math-float-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.math-sym {
+  position: absolute;
+  font-family: "STIX Two Math", "Latin Modern Math", "Cambria Math", Georgia, serif;
+  font-style: italic;
+  color: var(--claude-accent, #C2714F);
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: math-float-up linear infinite;
+}
+
+@keyframes math-float-up {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  8% {
+    opacity: var(--sym-opacity, 0.18);
+  }
+  90% {
+    opacity: var(--sym-opacity, 0.18);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(var(--sym-rot, 20deg)) scale(var(--sym-scale, 1.1));
+    opacity: 0;
+  }
+}

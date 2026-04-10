@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A second year Master's (M2) student in Probability and Random Models (M2-PMA) with major stochastic process at Sorbonne Université. Previously, I completed a double Bachelor's degree in Mathematics and Physics at Sorbonne Université.">
 <meta name="keywords" content="Yuguang XIAO, 肖煜光, Sorbonne Université, M2-PMA, Probability and Random Models, Stochastic Processes, Master's Degree, Double Bachelor's Degree, Mathematics, Physics">
-<link rel="canonical" href="http://localhost:4000/PMA/Markov-I/fr/" />
+<link rel="canonical" href="http://0.0.0.0:4000/PMA/Markov-I/fr/" />
 <link rel="icon" href="assets/img/favicon.png" type="image/png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,75 @@
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
 <body class="theme-claude pma-page">
+  <div class="math-float-canvas" id="math-float-canvas"></div>
+<script>
+  (function() {
+    const symbols = [
+      // Basic Math & Greek Letters
+      '∫', '∑', '∞', '∂', 'ℙ', '𝔼', '∇', 'Δ', 'θ', 'λ', 'μ', 'σ',
+      'α', 'β', 'γ', 'ξ', 'π', 'ρ', 'τ', 'φ', 'ω', 'Ω', 'ℱ', '∩', '∪',
+      // Probability & Stochastic Processes
+      'ℙ(X=x)', '𝔼[X]', 'dμ(x)', 'B<sub>t</sub>', 'W<sub>t</sub>', 'd X<sub>t</sub> = μ dt + σ d W<sub>t</sub>',
+      'Var(X) = 𝔼[(X-μ)<sup>2</sup>]', 'Cov(X,Y) = 𝔼[XY] - 𝔼[X]𝔼[Y]',
+      'X<sub>n</sub> → N(0, σ<sup>2</sup>)', 'ℙ(A|B) = ℙ(B|A)ℙ(A)/ℙ(B)',
+      'φ<sub>X</sub>(t) = 𝔼[e<sup>itX</sup>]', 'H(X) = -∑ p(x)log p(x)',
+      // Statistical Mechanics & Ising Model
+      'ℋ = -J∑σ<sub>i</sub>σ<sub>j</sub>', 'Z = ∑ e<sup>-βℋ</sup>', 'σ<sub>i</sub> ∈ {±1}',
+      'm = tanh(βJm + h)', 'F = -kT ln Z', '⟨σ<sub>i</sub>σ<sub>j</sub>⟩ ∼ e<sup>-r/ξ</sup>',
+      'S = k<sub>B</sub> ln Ω', 'T<sub>c</sub> = 2J / k<sub>B</sub> ln(1+√2)'
+    ];
+    const canvas = document.getElementById('math-float-canvas');
+    if (!canvas) return;
+
+    const numSymbols = 26; // number of symbols to show
+
+    for (let i = 0; i < numSymbols; i++) {
+      // Distribute evenly across the screen width (0 to 100vw)
+      const baseLeft = (i / numSymbols) * 100; 
+      createSymbol(baseLeft);
+    }
+
+    function createSymbol(baseLeft) {
+      const span = document.createElement('span');
+      span.className = 'math-sym';
+      span.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      
+      // Randomize starting properties
+      // Add a tiny jitter around the base lane so it looks natural, but stays in its lane
+      const jitter = (Math.random() - 0.5) * 3; 
+      const startLeft = Math.max(2, Math.min(98, baseLeft + jitter)); 
+      
+      const startBottom = -(Math.random() * 20 + 5); // Start slightly below screen
+      const delay = Math.random() * 5; // animation delay
+      const duration = Math.random() * 8 + 8; // 8 to 16s duration
+      const fontSize = Math.random() * 24 + 20; // 20px to 44px
+      const opacity = Math.random() * 0.12 + 0.10; // 0.10 to 0.22 max opacity
+      const rotation = (Math.random() - 0.5) * 60; // -30 to 30 deg rotation
+      const scale = Math.random() * 0.5 + 0.8; // 0.8 to 1.3
+
+      span.style.left = startLeft + 'vw';
+      span.style.bottom = startBottom + 'vh';
+      span.style.fontSize = fontSize + 'px';
+      span.style.animationDuration = duration + 's';
+      span.style.animationDelay = delay + 's';
+      
+      // Pass custom properties to CSS animation
+      span.style.setProperty('--sym-opacity', opacity);
+      span.style.setProperty('--sym-rot', rotation + 'deg');
+      span.style.setProperty('--sym-scale', scale);
+
+      canvas.appendChild(span);
+
+      // Recreate symbol after animation ends to keep it going forever
+      span.addEventListener('animationend', () => {
+        span.remove();
+        // Respawn in the same horizontal lane to avoid dense cluster overlap
+        createSymbol(baseLeft);
+      });
+    }
+  })();
+</script>
+
   <nav class="top-nav">
   <div class="nav-container">
     <div class="nav-left">

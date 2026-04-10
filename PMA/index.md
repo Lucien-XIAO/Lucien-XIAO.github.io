@@ -172,7 +172,7 @@ layout: pma
           <div class="ue-name">T.E.R.</div>
           <div class="ue-code">MU4MA245</div>
         </div>
-        <span class="ue-ects">—</span>
+        <span class="ue-ects">6 ECTS</span>
         <span class="badge badge-blue">✓ Recommandé</span>
       </li>
       <li class="ue-item">
