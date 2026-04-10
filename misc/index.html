@@ -1,0 +1,60 @@
+---
+title: Miscellaneous
+permalink: /misc/
+layout: page
+author_profile: true
+redirect_from:
+  - /about/
+  - /about.html
+---
+
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  <div class="pma-hero" style="border-left: 4px solid #8b5cf6; padding-left: 20px; margin-bottom: 40px;">
+    <h1>Miscellaneous & Interesting Results</h1>
+    <p style="color: var(--claude-secondary); font-size: 16px;">Some pictures or animations illustrating my research, created with Python. Enjoy visual mathematics and Physics!</p>
+  </div>
+
+  <div class="experience-container" style="display: flex; flex-direction: column; gap: 30px;">
+    
+    <!-- Item 1 -->
+    <div class="exp-card" style="padding: 24px;">
+      <h3 style="margin-top: 0; color: var(--claude-primary); font-size: 1.25rem;">Bond Percolation</h3>
+      
+      <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--claude-border); margin-bottom: 20px;">
+        <iframe src="./percolation_sim.html" width="100%" height="750px" style="border:none; overflow:hidden; display: block; background-color: var(--claude-bg);"></iframe>
+      </div>
+      
+      <p style="color: var(--claude-text); font-size: 15px; line-height: 1.6; margin: 0;">
+        Interactive visualization of <em>Bond Percolation</em> on a 2D square lattice. In this model, <strong>p</strong> represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they are connected to at least one open bond, preventing isolated colored nodes. Try varying <strong>p</strong> around the critical threshold (0.5) to observe the phase transition in connectivity.
+      </p>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="exp-card" style="padding: 24px;">
+      <h3 style="margin-top: 0; color: var(--claude-primary); font-size: 1.25rem;">Collective Motion with Predators</h3>
+      
+      <div style="display: flex; gap: 20px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap;">
+        <img src="{{ site.baseurl }}/interships/StageL3/resultats_visualises/N%2050%2C%20M%201.gif" alt="Predator dynamics 1" style="max-width: 45%; border-radius: 8px; border: 1px solid var(--claude-border);">
+        <img src="{{ site.baseurl }}/interships/StageL3/resultats_visualises/N%2050%2C%20M%203.gif" alt="Predator dynamics 2" style="max-width: 45%; border-radius: 8px; border: 1px solid var(--claude-border);">
+      </div>
+      
+      <p style="color: var(--claude-text); font-size: 15px; line-height: 1.6; margin: 0;">
+        Visualization results from my L3 internship on <em>collective motion in the presence of predators</em>. The left animation shows the dynamics of a flock of 50 green agents when a single red predator is introduced, while the right one shows the same system with three predators. I mainly focused on the modeling and analysis of such predator–prey interactions with Python code in my report.
+      </p>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="exp-card" style="padding: 24px;">
+      <h3 style="margin-top: 0; color: var(--claude-primary); font-size: 1.25rem;">N-body Model in Astrophysics</h3>
+      
+      <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <img src="{{ site.baseurl }}/interships/Stage_phys_L3/M_E_S_3body.PNG" alt="N-body trajectory" style="max-width: 70%; border-radius: 8px; border: 1px solid var(--claude-border);">
+      </div>
+      
+      <p style="color: var(--claude-text); font-size: 15px; line-height: 1.6; margin: 0;">
+        Result from my L3 physics internship on celestial mechanics. We studied the classical <em>N-body model</em> in astrophysics and plotted the trajectories of the Moon and an Earth-orbiting satellite relative to the Earth. The black dot represents the Earth, the blue curve corresponds to the actual satellite trajectory, and the red curve represents the actual Moon trajectory (real data obtained from NASA). Using the 3-body model, we simulated the green trajectory for the satellite and the yellow trajectory for the Moon.
+      </p>
+    </div>
+
+  </div>
+</div>
