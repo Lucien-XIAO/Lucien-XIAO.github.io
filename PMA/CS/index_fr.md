@@ -73,19 +73,3 @@ breadcrumb: Calcul Stochastique
     </div>
   </div>
 </div>
-
-<!-- ===== EXAMENS ===== -->
-<div class="pma-section">
-  <h2 class="pma-section-title"><i class="fa-solid fa-file-pen"></i> Examens précédents</h2>
-  <div class="exam-table-wrapper">
-    <table class="exam-table">
-      <thead><tr><th>Année</th><th>Session 1</th><th>Session 2</th></tr></thead>
-      <tbody>
-        <tr><td>2021–2022</td><td><a class="exam-link" href="/PMA/CS/final/M2CS-Ex2022.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Session 1</a></td><td><span class="no-resource">Pas de ressources</span></td></tr>
-        <tr><td>2022–2023</td><td><a class="exam-link" href="/PMA/CS/final/M2CS-Ex2023.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Session 1</a></td><td><span class="no-resource">Pas de ressources</span></td></tr>
-        <tr><td>2023–2024</td><td><a class="exam-link" href="/PMA/CS/final/M2CS-Ex2024.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Session 1</a></td><td><span class="no-resource">Pas de ressources</span></td></tr>
-        <tr><td>2024–2025</td><td><a class="exam-link" href="/PMA/CS/final/M2CS-Ex2025.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Session 1</a></td><td><span class="no-resource">Pas de ressources</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A second year Master's (M2) student in Probability and Random Models (M2-PMA) with major stochastic process at Sorbonne Université. Previously, I completed a double Bachelor's degree in Mathematics and Physics at Sorbonne Université.">
+<meta name="keywords" content="Yuguang XIAO, 肖煜光, Sorbonne Université, M2-PMA, Probability and Random Models, Stochastic Processes, Master's Degree, Double Bachelor's Degree, Mathematics, Physics">
+<link rel="canonical" href="http://0.0.0.0:4000/cv/" />
+<link rel="icon" href="assets/img/favicon.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css crossorigin=anonymous>
+<script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/css/font_sans_serif.css">
+<link rel="stylesheet" href="/assets/css/style-no-dark-mode_old.css">
+<link rel="stylesheet" href="/assets/css/publications-no-dark-mode_old.css">
+<link rel="stylesheet" href="/assets/css/theme-claude.css">
+<title>Curriculum Vitae</title>
+
+</head>
+<body class="theme-claude">
+  <div class="math-float-canvas" id="math-float-canvas"></div>
+<script>
+  (function() {
+    const symbols = [
+      // Basic Math & Greek Letters
+      '∫', '∑', '∞', '∂', 'ℙ', '𝔼', '∇', 'Δ', 'θ', 'λ', 'μ', 'σ',
+      'α', 'β', 'γ', 'ξ', 'π', 'ρ', 'τ', 'φ', 'ω', 'Ω', 'ℱ', '∩', '∪',
+      // Probability & Stochastic Processes
+      'ℙ(X=x)', '𝔼[X]', 'dμ(x)', 'B<sub>t</sub>', 'W<sub>t</sub>', 'd X<sub>t</sub> = μ dt + σ d W<sub>t</sub>',
+      'Var(X) = 𝔼[(X-μ)<sup>2</sup>]', 'Cov(X,Y) = 𝔼[XY] - 𝔼[X]𝔼[Y]',
+      'X<sub>n</sub> → N(0, σ<sup>2</sup>)', 'ℙ(A|B) = ℙ(B|A)ℙ(A)/ℙ(B)',
+      'φ<sub>X</sub>(t) = 𝔼[e<sup>itX</sup>]', 'H(X) = -∑ p(x)log p(x)',
+      // Statistical Mechanics & Ising Model
+      'ℋ = -J∑σ<sub>i</sub>σ<sub>j</sub>', 'Z = ∑ e<sup>-βℋ</sup>', 'σ<sub>i</sub> ∈ {±1}',
+      'm = tanh(βJm + h)', 'F = -kT ln Z', '⟨σ<sub>i</sub>σ<sub>j</sub>⟩ ∼ e<sup>-r/ξ</sup>',
+      'S = k<sub>B</sub> ln Ω', 'T<sub>c</sub> = 2J / k<sub>B</sub> ln(1+√2)'
+    ];
+    const canvas = document.getElementById('math-float-canvas');
+    if (!canvas) return;
+
+    const numSymbols = 26; // number of symbols to show
+
+    for (let i = 0; i < numSymbols; i++) {
+      // Distribute evenly across the screen width (0 to 100vw)
+      const baseLeft = (i / numSymbols) * 100; 
+      createSymbol(baseLeft);
+    }
+
+    function createSymbol(baseLeft) {
+      const span = document.createElement('span');
+      span.className = 'math-sym';
+      span.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      
+      // Randomize starting properties
+      // Add a tiny jitter around the base lane so it looks natural, but stays in its lane
+      const jitter = (Math.random() - 0.5) * 3; 
+      const startLeft = Math.max(2, Math.min(98, baseLeft + jitter)); 
+      
+      const startBottom = -(Math.random() * 20 + 5); // Start slightly below screen
+      const delay = Math.random() * 5; // animation delay
+      const duration = Math.random() * 8 + 8; // 8 to 16s duration
+      const fontSize = Math.random() * 24 + 20; // 20px to 44px
+      const opacity = Math.random() * 0.12 + 0.10; // 0.10 to 0.22 max opacity
+      const rotation = (Math.random() - 0.5) * 60; // -30 to 30 deg rotation
+      const scale = Math.random() * 0.5 + 0.8; // 0.8 to 1.3
+
+      span.style.left = startLeft + 'vw';
+      span.style.bottom = startBottom + 'vh';
+      span.style.fontSize = fontSize + 'px';
+      span.style.animationDuration = duration + 's';
+      span.style.animationDelay = delay + 's';
+      
+      // Pass custom properties to CSS animation
+      span.style.setProperty('--sym-opacity', opacity);
+      span.style.setProperty('--sym-rot', rotation + 'deg');
+      span.style.setProperty('--sym-scale', scale);
+
+      canvas.appendChild(span);
+
+      // Recreate symbol after animation ends to keep it going forever
+      span.addEventListener('animationend', () => {
+        span.remove();
+        // Respawn in the same horizontal lane to avoid dense cluster overlap
+        createSymbol(baseLeft);
+      });
+    }
+  })();
+</script>
+
+  <nav class="top-nav">
+  <div class="nav-container">
+    <div class="nav-left">
+      <a href="/" >Home</a>
+      
+        <a href="/pub/"
+          >
+          Publications
+        </a>
+      
+        <a href="/talks/"
+          >
+          Talks
+        </a>
+      
+        <a href="/teaching/"
+          >
+          Teaching
+        </a>
+      
+        <a href="/cv/"
+          class="nav-active">
+          CV
+        </a>
+      
+        <a href="/PMA/"
+          >
+          M2-PMA (25-26)
+        </a>
+      
+        <a href="/misc/"
+          >
+          Misc
+        </a>
+      
+    </div>
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-toggle" title="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+  <div class="page-wrapper">
+    <main class="page-main">
+      <div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  <div class="pma-hero" style="border-left: 4px solid #ef4444; padding-left: 20px; margin-bottom: 40px;">
+    <h1>Education &amp; Academic Background</h1>
+    <p style="color: var(--claude-secondary); font-size: 16px;">My academic journey and curriculum vitae.</p>
+  </div>
+
+  <h2 style="color: var(--claude-primary); font-size: 1.5rem; margin-top: 40px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--claude-border); font-weight: 600;">Education</h2>
+
+  <div class="section-body">
+
+    <!-- Degree 1 -->
+    <div class="card timeline-item">
+      <div class="experience-item">
+        <img class="institution-logo" src="/assets/img/SU_logo.jpg" alt="Sorbonne Logo" />
+        <div class="experience-content">
+          <p class="exp-title"><strong>M.S. in Probability</strong></p>
+          <p class="exp-detail">Sorbonne Université</p>
+          <p class="exp-period">2026 (expected)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Degree 2 -->
+    <div class="card timeline-item">
+      <div class="experience-item">
+        <img class="institution-logo" src="/assets/img/SU_logo.jpg" alt="Sorbonne Logo" />
+        <div class="experience-content">
+          <p class="exp-title"><strong>First-Year M.S. (M1) in Mathematics &amp; Applications</strong></p>
+          <p class="exp-detail">Sorbonne Université</p>
+          <p class="exp-period">2024 – 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Degree 3 -->
+    <div class="card timeline-item">
+      <div class="experience-item">
+        <img class="institution-logo" src="/assets/img/SU_logo.jpg" alt="Sorbonne Logo" />
+        <div class="experience-content">
+          <p class="exp-title"><strong>B.S. in Mathematics</strong></p>
+          <p class="exp-detail">Sorbonne Université</p>
+          <div style="margin-top: 8px; font-size: 15px; color: var(--claude-text); opacity: 0.9;">
+            <ul>
+              <li>Completed an intensive one-year program to obtain a second Bachelor's degree in Mathematics.</li>
+            </ul>
+          </div>
+          <p class="exp-period">2023 – 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Degree 4 -->
+    <div class="card timeline-item">
+      <div class="experience-item">
+        <img class="institution-logo" src="/assets/img/SU_logo.jpg" alt="Sorbonne Logo" />
+        <div class="experience-content">
+          <p class="exp-title"><strong>B.S. in Physics (Minor in Mathematics)</strong></p>
+          <p class="exp-detail">Sorbonne Université</p>
+          <div style="margin-top: 8px; font-size: 15px; color: var(--claude-text); opacity: 0.9;">
+            <ul>
+              <li>Completed the MIPI (Math, CS, Physics, Engineering) track in the first year, followed by a Physics Major and Mathematics Minor.</li>
+            </ul>
+          </div>
+          <p class="exp-period">2020 – 2023</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <p>&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+</footer>
+
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.section').forEach((el) => el.classList.add('visible'));
+    });
+    const toggle = document.getElementById('themeToggle');
+    if (toggle) {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        toggle.querySelector('i').className = saved === 'dark'
+          ? 'fa-solid fa-sun'
+          : 'fa-solid fa-moon';
+      }
+      toggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        toggle.querySelector('i').className = next === 'dark'
+          ? 'fa-solid fa-sun'
+          : 'fa-solid fa-moon';
+      });
+    }
+  </script>
+</body>
+</html>
