@@ -663,6 +663,7 @@ body.theme-claude strong {
 
     body.theme-claude .content {
       padding: 32px 0 48px;
+      margin-left: 0;
     }
 
     body.theme-claude .site-footer {
@@ -682,6 +683,43 @@ body.theme-claude strong {
     body.theme-claude .theme-switcher {
       bottom: 16px;
       right: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body.theme-claude .nav-container {
+      padding: 0 16px;
+    }
+
+    body.theme-claude .nav-left {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      flex: 1;
+    }
+
+    body.theme-claude .nav-left::-webkit-scrollbar {
+      display: none;
+    }
+
+    body.theme-claude .nav-left a {
+      flex-shrink: 0;
+    }
+
+    body.theme-claude .nav-right {
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+    
+    body.theme-claude .page-wrapper {
+      padding: 0 20px;
+    }
+
+    body.theme-claude .exp-card {
+      padding: 20px;
     }
   }
 
