@@ -329,6 +329,11 @@ layout: pma
       <div class="info-link-card-title">Cours S2 2025–2026</div>
       <div class="info-link-card-desc">Tableau des cours et modalités d'évaluation</div>
     </a>
+    <a href="/PMA/Info/Validation-M2/" class="info-link-card">
+      <div class="info-link-card-icon"><i class="fa-solid fa-table-list"></i></div>
+      <div class="info-link-card-title">Validation du Master 2 et Modalités de Fin d'Année</div>
+      <div class="info-link-card-desc">Récapitulatif des procédures administratives, des 3 situations de validation au 30 septembre et des modalités de soutenance.</div>
+    </a>
   </div>
 </div>
 
