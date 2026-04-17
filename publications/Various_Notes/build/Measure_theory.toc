@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Elements of the theory of cardinals}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Cardinals}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Countable sets}{4}{}%
+\contentsline {section}{\numberline {2}Some complements of topology}{7}{}%
+\contentsline {subsection}{\numberline {2.1}The completed line}{7}{}%
+\contentsline {subsection}{\numberline {2.2}Upper and lower limits}{8}{}%
+\contentsline {subsection}{\numberline {2.3}Topology on a set. Metric space}{10}{}%
+\contentsline {subsection}{\numberline {2.4}Countable base of open sets; separability}{11}{}%
+\contentsline {subsection}{\numberline {2.5}Examples of topology constructions}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Induced topology}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.2}Product topology}{12}{}%
+\contentsline {subsection}{\numberline {2.6}Distance from a point to a set}{13}{}%
+\contentsline {section}{\numberline {3}Sigma-algebras of subsets of a set}{14}{}%
+\contentsline {subsection}{\numberline {3.1}Set-theoretic preliminaries}{14}{}%
+\contentsline {subsection}{\numberline {3.2}Sigma-algebra and Borel sigma-algebra}{15}{}%
+\contentsline {subsection}{\numberline {3.3}Other examples of sigma-algebras}{18}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Inverse-image sigma-algebra}{18}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Image sigma-algebra}{18}{}%
+\contentsline {subsection}{\numberline {3.4}Transport lemma}{18}{}%
+\contentsline {section}{\numberline {4}Measurable functions}{21}{}%
+\contentsline {subsection}{\numberline {4.1}Definitions}{21}{}%
+\contentsline {subsection}{\numberline {4.2}Operations on measurable functions}{23}{}%
+\contentsline {subsection}{\numberline {4.3}Simple functions on a measurable space}{25}{}%
