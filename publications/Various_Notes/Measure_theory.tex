@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{mathrsfs}
 \usepackage{amsmath, amssymb, amsthm, mathtools}
@@ -37,6 +37,17 @@
     \vspace*{1cm}
 \end{titlepage}
 \newpage
+\section*{Preface}
+
+I completed these notes while pursuing my Master 2 (M2) in \textit{Probabilités et Modèles aléatoires} at Sorbonne Université during the summer of 2026. The profound and elegant nature of measure theory forms the bedrock of modern probability, and navigating it requires a guide that is both rigorous and accessible. 
+
+The primary motivation behind this work is to introduce students and researchers worldwide to an exceptionally well-crafted French textbook: \textit{Théorie de l'intégration}, written by Marc Briane and Gilles Pagès (published by De Boeck Supérieur, 2017). In the Francophone academic world, this text is highly regarded for its pedagogical clarity, deep theoretical insights, and its ability to seamlessly bridge abstract integration theory with applied probability. 
+
+However, as the original text is in French, I wanted to overcome the language barrier and make its brilliant exposition available to a broader English-speaking audience. My work in this document primarily consists of synthesizing the original French content and translating its core ideas into English. Furthermore, I have incorporated my own insights, derivations, and examples—highlighting the connections and intuitions that I found most valuable as an M2 probability student.
+
+It is my hope that these notes serve not only as a faithful homage to Briane and Pagès's masterful work but also as a valuable, self-contained resource for anyone looking to master measure theory. Whether you are encountering Lebesgue integration for the first time or seeking a rigorous brush-up for advanced probabilistic modeling, I hope you find this document illuminating.
+\vspace{1em}
+\clearpage
 \tableofcontents
 \newpage
 \section{Elements of the theory of cardinals}
@@ -558,10 +569,10 @@ Moreover,
 \end{proposition}
 
 \begin{proof}
-Since $(\overline{\mathbb{R}},\delta)$ is compact, the sequence $(x_n)$ has a cluster value (Bolzano--Weierstrass theorem).
+Since $(\overline{\mathbb{R}},\delta)$ is compact, the sequence $(x_n)$ has a cluster value (by the Bolzano--Weierstrass theorem).
 Let $\ell$ be a cluster value of $(x_n)$.
-There exists an extracted subsequence $(x_{\varphi(n)})$ which converges to $\ell$ in $(\overline{\mathbb{R}},\delta)$.
-Given that $x_{\varphi(n)}\le \sup_{k\ge \varphi(n)} x_k$, which decreases to $\limsup_{n} x_n$, we obtain, using the compatibility of the topology on $\overline{\mathbb{R}}$ with the order on $\overline{\mathbb{R}}$, that
+There exists a subsequence $(x_{\varphi(n)})$ converging to $\ell$ in $(\overline{\mathbb{R}},\delta)$.
+Given that $x_{\varphi(n)}\le \sup_{k\ge \varphi(n)} x_k$, and the right side decreases to $\limsup_{n} x_n$, we obtain (by the compatibility of the topology and the order on $\overline{\mathbb{R}}$) that
 \[
 \ell \le \limsup_{n} x_n.
 \]
@@ -827,10 +838,10 @@ These set-maps $f_d$ and $f_r^{-1}$ satisfy Hausdorff’s formulas: if $(A_i)_{i
 \[
 \left\{
 \begin{aligned}
-&f_d\!\Bigl(\bigcup_{i\in I}A_i\Bigr)=\bigcup_{i\in I} f_d(A_i),\qquad
-&&f_d\!\Bigl(\bigcap_{i\in I}A_i\Bigr)\subset\bigcap_{i\in I} f_d(A_i)\ \ \text{(with equality if $f$ is injective)},\\
-&f_r^{-1}\!\Bigl(\bigcup_{j\in J}B_j\Bigr)=\bigcup_{j\in J} f_r^{-1}(B_j),\qquad
-&&f_r^{-1}\!\Bigl(\bigcap_{j\in J}B_j\Bigr)=\bigcap_{j\in J} f_r^{-1}(B_j),\\
+&f_d\!\Bigl(\bigcup_{i\in I}A_i\Bigr)=\bigcup_{i\in I} f_d(A_i),\\
+&f_d\!\Bigl(\bigcap_{i\in I}A_i\Bigr)\subset\bigcap_{i\in I} f_d(A_i)\quad \text{(with equality if $f$ is injective)},\\
+&f_r^{-1}\!\Bigl(\bigcup_{j\in J}B_j\Bigr)=\bigcup_{j\in J} f_r^{-1}(B_j),\\
+&f_r^{-1}\!\Bigl(\bigcap_{j\in J}B_j\Bigr)=\bigcap_{j\in J} f_r^{-1}(B_j),\\
 &{}^{c}\!f_r^{-1}(B)=f_r^{-1}({}^{c}\!B).
 \end{aligned}
 \right.
@@ -1014,11 +1025,13 @@ Let $X$ be a topological space possessing a countable base $(\omega_n)_{n\in\mat
 \begin{application}
 We work on the real line $X=\mathbb R$. Every interval $I\subset\mathbb R$ is Borel in $\mathbb R$ since one can always write it as the union of an open interval and at most two singletons (closed). Conversely, certain families of intervals generate the Borel sigma-algebra. Thus
 \[
+\begin{aligned}
 \mathcal B(\mathbb R)
-= \sigma\bigl(\{[a,+\infty[,\, a\in\mathbb Q\}\bigr)
-= \sigma\bigl(\{]a,+\infty[,\, a\in\mathbb Q\}\bigr)
-= \sigma\bigl(\{]-\infty,a],\, a\in\mathbb Q\}\bigr)
-= \sigma\bigl(\{]-\infty,a[,\, a\in\mathbb Q\}\bigr).
+&= \sigma\bigl(\{[a,+\infty[,\, a\in\mathbb Q\}\bigr) \\
+&= \sigma\bigl(\{]a,+\infty[,\, a\in\mathbb Q\}\bigr) \\
+&= \sigma\bigl(\{]-\infty,a],\, a\in\mathbb Q\}\bigr) \\
+&= \sigma\bigl(\{]-\infty,a[,\, a\in\mathbb Q\}\bigr).
+\end{aligned}
 \]
 
 \end{application}

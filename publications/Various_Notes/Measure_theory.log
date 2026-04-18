@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.28)  18 APR 2026 01:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.28)  18 APR 2026 03:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count196
 \c@section=\count197
@@ -264,12 +264,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=59.0pt
+* \marginparwidth=44.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -288,7 +288,9 @@ Package pdftex.def Info: figures/cover.jpg  used on input line 32.
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figures/cover.jpg>] (./Measure_theory.toc
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figures/cover.jpg>]
+
+[1] (./Measure_theory.toc
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -306,29 +308,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-[1]
+[2
 
-[2]
+]
 
 [3]
 
 [4]
-<figures/Figure1.png, id=34, 384.43625pt x 360.34625pt>
+
+[5]
+
+[6]
+<figures/Figure1.png, id=39, 384.43625pt x 360.34625pt>
 File: figures/Figure1.png Graphic file (type png)
 <use figures/Figure1.png>
-Package pdftex.def Info: figures/Figure1.png  used on input line 320.
+Package pdftex.def Info: figures/Figure1.png  used on input line 331.
 (pdftex.def)             Requested size: 187.89914pt x 176.12582pt.
 
 
-[5 <./figures/Figure1.png>]
-
-[6]
-
-[7{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[7 <./figures/Figure1.png>]
 
 [8]
 
-[9]
+[9{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [10]
 
@@ -343,11 +345,6 @@ Package pdftex.def Info: figures/Figure1.png  used on input line 320.
 [15]
 
 [16]
-Overfull \hbox (8.52338pt too wide) detected at line 1022
-\OMS/cmsy/m/n/10.95 B\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 R\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 ^^[[]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 a; \OT1/cmr/m/n/10.95 +\OMS/cmsy/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 Q\OMS/cmsy/m/n/10.95 g[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^[[]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 a; \OT1/cmr/m/n/10.95 +\OMS/cmsy/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 Q\OMS/cmsy/m/n/10.95 g[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^[[]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ] \OMS/cmsy/m/n/10.95 ^^@ 1\OML/cmm/m/it/10.95 ; a\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 Q\OMS/cmsy/m/n/10.95 g[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^[[]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ] \OMS/cmsy/m/n/10.95 ^^@ 1\OML/cmm/m/it/10.95 ; a\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 Q\OMS/cmsy/m/n/10.95 g[]\OML/cmm/m/it/10.95 :
- []
-
-
 
 [17]
 
@@ -356,16 +353,16 @@ Overfull \hbox (8.52338pt too wide) detected at line 1022
 [19]
 
 [20]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 1199.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/bbm-macros/ubbm.fd
-File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-)
 
 [21]
 
 [22]
 
 [23]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 1212.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
 
 [24]
 
@@ -373,25 +370,33 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 [26]
 
-[27] (./Measure_theory.aux)
+[27]
+
+[28]
+
+[29]
+
+[30]
+
+[31] (./Measure_theory.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4463 strings out of 473190
- 69890 string characters out of 5715800
- 479429 words of memory out of 5000000
- 27645 multiletter control sequences out of 15000+600000
- 572612 words of font info for 90 fonts, out of 8000000 for 9000
+ 4465 strings out of 473190
+ 69893 string characters out of 5715800
+ 477434 words of memory out of 5000000
+ 27648 multiletter control sequences out of 15000+600000
+ 572722 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,18n,70p,649b,383s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/yuguangxiao/Library/texlive/2025/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Measure_theory.pdf (28 pages, 588369 bytes).
+ 63i,18n,70p,649b,407s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/yuguangxiao/Library/texlive/2025/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Measure_theory.pdf (32 pages, 578167 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 233 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

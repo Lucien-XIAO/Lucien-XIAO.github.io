@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.28)  18 APR 2026 01:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.28)  18 APR 2026 03:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -12,8 +12,8 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count196
 \c@section=\count197
@@ -297,12 +297,12 @@ e
 * \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=59.0pt
+* \marginparwidth=44.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -322,7 +322,9 @@ Package pdftex.def Info: figures/cover.jpg  used on input line 32.
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
-es/cover.jpg>] (build/Measure_theory.toc
+es/cover.jpg>]
+
+[1] (build/Measure_theory.toc
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 
 
@@ -344,32 +346,40 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-[1]
+[2
 
-[2]
+]
 
 [3]
 
 [4]
-<figures/Figure1.png, id=34, 384.43625pt x 360.34625pt>
+
+[5]
+
+[6]
+<figures/Figure1.png, id=39, 384.43625pt x 360.34625pt>
 File: figures/Figure1.png Graphic file (type png)
 <use figures/Figure1.png>
-Package pdftex.def Info: figures/Figure1.png  used on input line 320.
+Package pdftex.def Info: figures/Figure1.png  used on input line 331.
 (pdftex.def)             Requested size: 187.89914pt x 176.12582pt.
 
 
-[5 <./figures/Figure1.png>]
-
-[6]
-
-[7{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}]
+[7 <./figures/Figure1.png>]
 
 [8]
 
-[9]
+[9{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}]
 
 [10]
+Overfull \hbox (2.06885pt too wide) in paragraph at lines 572--576
+\OT1/cmr/m/n/12 which con-verges to $\OML/cmm/m/it/12 `$ \OT1/cmr/m/n/12 in $([
+]\OML/cmm/m/it/12 ; ^^N\OT1/cmr/m/n/12 )$. Given that $\OML/cmm/m/it/12 x[] \OM
+S/cmsy/m/n/12 ^^T [][] \OML/cmm/m/it/12 x[]$\OT1/cmr/m/n/12 , which de-creases 
+to $[][] \OML/cmm/m/it/12 x[]$\OT1/cmr/m/n/12 ,
+ []
+
+
 
 [11]
 
@@ -382,21 +392,8 @@ Package pdftex.def Info: figures/Figure1.png  used on input line 320.
 [15]
 
 [16]
-Overfull \hbox (8.52338pt too wide) detected at line 1022
-\OMS/cmsy/m/n/10.95 B\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 R\OT1/cmr/m/n/10.95 )
- = \OML/cmm/m/it/10.95 ^^[[]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 [\OML/cmm/m
-/it/10.95 a; \OT1/cmr/m/n/10.95 +\OMS/cmsy/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/
-cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 Q\OMS/cmsy/m/n/10.95
- g[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^[[]\OMS/cmsy/m/n/10.95 f\OT1/cm
-r/m/n/10.95 ]\OML/cmm/m/it/10.95 a; \OT1/cmr/m/n/10.95 +\OMS/cmsy/m/n/10.95 1\O
-T1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.
-95 Q\OMS/cmsy/m/n/10.95 g[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^[[]\OMS/
-cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ] \OMS/cmsy/m/n/10.95 ^^@ 1\OML/cmm/m/it/10.
-95 ; a\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95 2 \U/msb
-/m/n/10.95 Q\OMS/cmsy/m/n/10.95 g[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^
-[[]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ] \OMS/cmsy/m/n/10.95 ^^@ 1\OML/cmm/
-m/it/10.95 ; a\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95 
-2 \U/msb/m/n/10.95 Q\OMS/cmsy/m/n/10.95 g[]\OML/cmm/m/it/10.95 :
+Overfull \hbox (24.88513pt too wide) detected at line 848
+[]
  []
 
 
@@ -408,17 +405,33 @@ m/it/10.95 ; a\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 ;  a \OMS/cmsy/m/n/10.95
 [19]
 
 [20]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 119
-9.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/bbm-macros/ubbm.fd
-File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-)
+Overfull \hbox (49.728pt too wide) detected at line 1033
+\OMS/cmsy/m/n/12 B\OT1/cmr/m/n/12 (\U/msb/m/n/12 R\OT1/cmr/m/n/12 ) = \OML/cmm/
+m/it/12 ^^[[]\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 a; \OT1/cmr/m/
+n/12 +\OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ;  a \OMS/cmsy/m/n/12
+ 2 \U/msb/m/n/12 Q\OMS/cmsy/m/n/12 g[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]
+\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 a; \OT1/cmr/m/n/12 +\OMS/cm
+sy/m/n/12 1\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ;  a \OMS/cmsy/m/n/12 2 \U/msb/m/n
+/12 Q\OMS/cmsy/m/n/12 g[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]\OMS/cmsy/m/n
+/12 f\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ^^@ 1\OML/cmm/m/it/12 ; a\OT1/cmr/m/n/1
+2 ]\OML/cmm/m/it/12 ;  a \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 Q\OMS/cmsy/m/n/12 g[]
+ \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 ] \O
+MS/cmsy/m/n/12 ^^@ 1\OML/cmm/m/it/12 ; a\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ;  a 
+\OMS/cmsy/m/n/12 2 \U/msb/m/n/12 Q\OMS/cmsy/m/n/12 g[]\OML/cmm/m/it/12 :
+ []
+
+
 
 [21]
 
 [22]
 
 [23]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 121
+0.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
 
 [24]
 
@@ -426,48 +439,56 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 [26]
 
-[27] (build/Measure_theory.aux)
+[27]
+
+[28]
+
+[29]
+
+[30]
+
+[31] (build/Measure_theory.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4464 strings out of 473190
- 69938 string characters out of 5715800
- 479429 words of memory out of 5000000
- 27645 multiletter control sequences out of 15000+600000
- 572612 words of font info for 90 fonts, out of 8000000 for 9000
+ 4466 strings out of 473190
+ 69941 string characters out of 5715800
+ 479434 words of memory out of 5000000
+ 27648 multiletter control sequences out of 15000+600000
+ 572722 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,18n,70p,649b,383s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,18n,70p,649b,407s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/yuguangxiao/Library/texlive/2025/texmf-var/fonts/pk/ljfour/public/bb
-m/bbm10.657pk></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
+m/bbm12.600pk></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9
+i7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
 .pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/tex
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on build/Measure_theory.pdf (28 pages, 588369 bytes).
+ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on build/Measure_theory.pdf (32 pages, 578170 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 233 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
