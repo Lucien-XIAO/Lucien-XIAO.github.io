@@ -266,7 +266,9 @@ layout: pma
           <span class="parcours-idx">02</span>
           <div class="parcours-course-body">
             <span class="parcours-course-name">Systèmes désordonnés et polymères dirigés</span>
-            <span class="parcours-course-sub">6 ECTS</span>
+            <span class="parcours-course-sub">6 ECTS
+              · <a href="/PMA/doc/Diapo_DS.pdf" class="parcours-doc-link"><i class="fa-regular fa-file-powerpoint"></i> diapo</a>
+            </span>
           </div>
         </li>
         <li class="parcours-course-item">

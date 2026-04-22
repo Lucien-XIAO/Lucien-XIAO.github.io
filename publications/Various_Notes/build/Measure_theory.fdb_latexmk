@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1776512042.746 "/Users/yuguangxiao/Desktop/my_website/publications/Various_Notes/Measure_theory.tex" "build/Measure_theory.pdf" "Measure_theory" 1776512043.1736 0
-  "/Users/yuguangxiao/Desktop/my_website/publications/Various_Notes/Measure_theory.tex" 1776512042.17757 82088 e088795dced0286980ef37fe5aaebc93 ""
+["pdflatex"] 1776687583.6006 "/Users/yuguangxiao/Desktop/my_website/publications/Various_Notes/Measure_theory.tex" "build/Measure_theory.pdf" "Measure_theory" 1776687584.02265 0
+  "/Users/yuguangxiao/Desktop/my_website/publications/Various_Notes/Measure_theory.tex" 1776687583.04971 83856 8b909f3efaea60194057050cd8b02715 ""
   "/Users/yuguangxiao/Library/texlive/2025/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk" 1776475663.00195 8424 01abda99d83c141728d52c0b92928925 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -104,9 +104,9 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1759020384 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1759020351 3345727 b7eb94a64f5a6512162e17bf617dabda ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "Measure_theory.tex" 1776512042.17757 82088 e088795dced0286980ef37fe5aaebc93 ""
-  "build/Measure_theory.aux" 1776512043.12075 3674 e3152c53052f5f2f842428d45e5b0ca9 "pdflatex"
-  "build/Measure_theory.toc" 1776512043.12115 1802 fbada10b992436b42cc8da73230d17a2 "pdflatex"
+  "Measure_theory.tex" 1776687583.04971 83856 8b909f3efaea60194057050cd8b02715 ""
+  "build/Measure_theory.aux" 1776687583.96435 3888 b2fa439f2ac0277cf84ceca6e2c236f6 "pdflatex"
+  "build/Measure_theory.toc" 1776687583.96499 1934 09fabdd6392cabe45127f908d11d25de "pdflatex"
   "figures/Figure1.png" 1755693280 75030 a31f409c6dce43c298a0353494ed3e22 ""
   "figures/cover.jpg" 1764065974 168273 2629b992817c4e37ebe69a1c451b4acf ""
   (generated)

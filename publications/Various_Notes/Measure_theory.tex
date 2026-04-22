@@ -50,6 +50,7 @@ It is my hope that these notes serve not only as a faithful homage to Briane and
 \clearpage
 \tableofcontents
 \newpage
+
 \section{Elements of the theory of cardinals}
 \subsection{Cardinals}
 \begin{definition}
@@ -1490,5 +1491,69 @@ We then consider the sequences $f_n^+$ and $f_n^-$ relative to $f^+$ and $f^-$ c
 \begin{remark}
 The fundamental approximation lemma rests effectively on the idea developed in the preliminary “From Riemann to Lebesgue” consisting of approximating a function $f$ by regularly cutting the “axis” of ordinates, instead of the “axis” of abscissas (as for step functions).
 \end{remark}
+
+\clearpage
+
+\section{Measures}
+\subsection{Definition and examples}
+
+\begin{definition}
+\begin{enumerate}[label=(\alph*),leftmargin=1.5em]
+    \item Let $(X, \mathscr{A})$ be a measurable space. We call a (positive) measure on $(X, \mathscr{A})$ any mapping $\mu : \mathscr{A} \to \overline{\mathbb{R}}_+$ satisfying:
+    \begin{itemize}
+        \item[(i)] $\mu(\emptyset) = 0$,
+        \item[(ii)] If $(A_n)_{n \geq 1}$ is a sequence of elements of $\mathscr{A}$, pairwise disjoint (possibly empty):
+        $$ \mu\left(\bigcup_{n \geq 1} A_n\right) = \sum_{n \geq 1} \mu(A_n) \qquad [\text{property of } \sigma\text{-additivity}]. $$
+    \end{itemize}
+    \item If $\mu(X) < +\infty$, the measure $\mu$ is said to be finite or bounded. If $\mu(X) = 1$, $\mu$ is a probability measure.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+The above hypotheses entail the ``simple additivity'' of the measure $\mu$: for any family $A_1, \dots, A_n$ of subsets of $\mathscr{A}$, pairwise disjoint,
+$$ \mu(A_1 \cup \dots \cup A_n) = \mu(A_1) + \dots + \mu(A_n) $$
+(we simply set $A_k := \emptyset$ for $k > n$ and apply jointly (i) and (ii)).
+\end{remark}
+
+\begin{example}
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=1.5em]
+    \item The zero measure on $(X, \mathscr{P}(X))$: $\forall A \in \mathscr{P}(X), \ \mu(A) := 0$.
+    \item The gross measure: $\mu(\emptyset) := 0$ and $\forall A \in \mathscr{P}(X), \ A \neq \emptyset, \ \mu(A) := +\infty$.
+    \item The Dirac measure at point $a \in X$:
+    \begin{equation}
+    \forall A \in \mathscr{P}(X), \quad \mu(A) := \begin{cases} 1 & \text{if } a \in A \\ 0 & \text{if } a \notin A. \end{cases} \tag{6.1}
+    \end{equation}
+    The Dirac measure at $a$ is denoted $\delta_a$.
+    \item The \textit{counting measure} on $(X, \mathscr{P}(X))$:
+    $$ \forall A \in \mathscr{P}(X), \quad \mu(A) := \begin{cases} \text{card}(A) & \text{if } A \text{ is finite,} \\ +\infty & \text{otherwise.} \end{cases} \quad (^1) $$
+    
+    It is immediate that $\text{card}(\emptyset) = 0$; on the other hand, if $A_1, \dots, A_n$ are pairwise disjoint subsets of $X$, $\text{card}(A_1 \cup \cdots \cup A_n) = \text{card}(A_1) + \cdots + \text{card}(A_n)$. The $\sigma$-additivity clearly follows from this relation. This indeed makes $m$ a measure.
+    
+    The counting measure is also characterized by the fact that, for all $x \in X$, $m(\{x\}) = 1$.
+    
+    This example is important because it makes the connection between integration and summable families indexed by $X$, and between integration and series when $X = \mathbb{N}$.
+    
+    The above examples are all defined on the trivial $\sigma$-algebra $\mathscr{P}(X)$ of all subsets of $X$. These measures exist \textit{a fortiori} by restriction to any $\sigma$-algebra $\mathscr{A}$ on $X$. On the other hand, it is generally not possible to define a measure on the entirety of $\mathscr{P}(X)$.
+
+    \item Let $\mu$ be a measure on $(X, \mathscr{A})$ and $B \in \mathscr{A}$. We define the \textit{trace measure} of $\mu$ on $B$ by $\mu_B := \mu(\cdot \cap B)$. If $\mu(B) \in \mathbb{R}_+^*$, we define the \textit{conditional measure} given $B$ by
+    $$ \mu(\cdot / B) := \frac{\mu(\cdot \cap B)}{\mu(B)}. $$
+
+    \item The \textit{Lebesgue measure} on $\mathbb{R}^d$: this example is, by far, the most important of the list. It is indeed the Lebesgue measure that is the basis for the extension of the Riemann integral to Borel functions from $\mathbb{R}$ to $\mathbb{R}$, and then from $\mathbb{R}^d$ to $\mathbb{R}$.
+    
+    A few preliminaries are necessary to state the theorem of existence and characterization of the Lebesgue measure: let $a \in \mathbb{R}^d$ and $A \in \mathscr{B}(\mathbb{R}^d)$, we denote $a + A := \{a + x, x \in A\}$. The mapping $\tau_a : x \mapsto x - a$ being clearly continuous from $\mathbb{R}^d$ to $\mathbb{R}^d$, hence Borel measurable, the set $a + A = \tau_a^{-1}(A) \in \mathscr{B}(\mathbb{R}^d)$.
+\end{enumerate}
+\end{example}
+
+\begin{theorem}
+There exists a unique measure on $(\mathbb{R}^d, \mathscr{B}(\mathbb{R}^d))$ called the \textit{Lebesgue measure} on $\mathbb{R}^d$ and denoted $\lambda_d$ satisfying:
+\begin{itemize}
+    \item[(i)] $\lambda_d([0, 1]^d) = 1$,
+    \item[(ii)] $\forall a \in \mathbb{R}^d, \ \forall A \in \mathscr{B}(\mathbb{R}^d), \quad \lambda_d(a + A) = \lambda_d(A)$.
+\end{itemize}
+\end{theorem}
+
+We will often denote by the simple letter $\lambda$ the Lebesgue measure on the real line $\mathbb{R}$. We will temporarily assume the existence of $\lambda_d$. Initially, we will simply show that, in dimension 1, the Lebesgue measure $\lambda(I)$ of an interval $I$ coincides with its length (\textit{cf.} paragraph 6.1.2). This will nevertheless allow us to establish the uniqueness part of the theorem (\textit{cf.} Application 6.1). A first approach to the construction of $\lambda$ on $\mathbb{R}$ as a consequence of Carathéodory's theorem is proposed in section 6.3. The complete construction is addressed in section 6.5.2, after the detailed proof of Carathéodory's theorem. It can be skipped on a first reading.
+
+The Lebesgue measure $\lambda_d$ on $\mathbb{R}^d$ will be constructed even further on, in chapter 11, when we tackle the notion of product measure. This phase will be the subject of section 11.2.2.
 
 \end{document}
