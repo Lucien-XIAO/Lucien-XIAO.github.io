@@ -76,4 +76,27 @@ title: Curriculum Vitae
     </div>
 
   </div>
+
+  <h2 style="color: var(--claude-primary); font-size: 1.5rem; margin-top: 40px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--claude-border); font-weight: 600;">Skills</h2>
+
+  <div class="section-body">
+    <div class="card" style="padding: 24px;">
+      <div style="margin-bottom: 24px;">
+        <h3 style="font-size: 1.2rem; margin-bottom: 12px; font-weight: 600; color: var(--claude-text);">Languages</h3>
+        <ul style="margin-top: 8px; font-size: 15px; color: var(--claude-text); opacity: 0.9; padding-left: 24px;">
+          <li style="margin-bottom: 8px;"><strong>Mandarin:</strong> Native</li>
+          <li style="margin-bottom: 8px;"><strong>French:</strong> Fluent</li>
+          <li style="margin-bottom: 8px;"><strong>English:</strong> Fluent</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; margin-bottom: 12px; font-weight: 600; color: var(--claude-text);">Technical Skills</h3>
+        <ul style="margin-top: 8px; font-size: 15px; color: var(--claude-text); opacity: 0.9; padding-left: 24px;">
+          <li style="margin-bottom: 8px;"><strong>Python:</strong> Proficient</li>
+          <li style="margin-bottom: 8px;"><strong>LaTeX:</strong> Proficient</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </div>
