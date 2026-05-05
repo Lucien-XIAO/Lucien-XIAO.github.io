@@ -18,7 +18,10 @@
     const canvas = document.getElementById('math-float-canvas');
     if (!canvas) return;
 
-    const numSymbols = 26; // number of symbols to show
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    const numSymbols = window.innerWidth < 720 ? 7 : 12;
 
     for (let i = 0; i < numSymbols; i++) {
       // Distribute evenly across the screen width (0 to 100vw)
@@ -33,14 +36,14 @@
       
       // Randomize starting properties
       // Add a tiny jitter around the base lane so it looks natural, but stays in its lane
-      const jitter = (Math.random() - 0.5) * 3; 
+      const jitter = (Math.random() - 0.5) * 4; 
       const startLeft = Math.max(2, Math.min(98, baseLeft + jitter)); 
       
-      const startBottom = -(Math.random() * 20 + 5); // Start slightly below screen
-      const delay = Math.random() * 5; // animation delay
-      const duration = Math.random() * 8 + 8; // 8 to 16s duration
-      const fontSize = Math.random() * 24 + 20; // 20px to 44px
-      const opacity = Math.random() * 0.12 + 0.10; // 0.10 to 0.22 max opacity
+      const startBottom = -(Math.random() * 24 + 8);
+      const delay = Math.random() * 10;
+      const duration = Math.random() * 18 + 22;
+      const fontSize = Math.random() * 18 + 18;
+      const opacity = Math.random() * 0.055 + 0.035;
       const rotation = (Math.random() - 0.5) * 60; // -30 to 30 deg rotation
       const scale = Math.random() * 0.5 + 0.8; // 0.8 to 1.3
 
