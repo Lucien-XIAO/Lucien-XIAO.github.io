@@ -1,0 +1,167 @@
+---
+title: MathReader
+permalink: /mathreader/
+layout: page
+author_profile: true
+---
+
+<div class="mathreader-page">
+  <section class="mathreader-hero" aria-labelledby="mathreader-title">
+    <div class="mathreader-hero-copy">
+      <span class="mathreader-kicker">macOS research tool · SwiftUI + PDFKit</span>
+      <h1 id="mathreader-title">MathReader</h1>
+      <p class="mathreader-lead">
+        MathReader is a personal macOS app for reading mathematical papers and lecture notes with an AI assistant beside
+        the PDF. It is built around the actual workflow of doing mathematics: selecting a passage, recognizing formulas,
+        asking for a derivation, annotating the PDF, and keeping references organized.
+      </p>
+      <div class="mathreader-actions">
+        <a href="https://github.com/Lucien-XIAO/MathReader-macOS/releases/tag/V2.2" target="_blank"
+          rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Release V2.2</a>
+        <a href="#workflow"><i class="fa-solid fa-arrow-down"></i> Workflow</a>
+      </div>
+    </div>
+
+    <div class="mathreader-showcase" aria-label="MathReader interface preview">
+      <div class="mathreader-window">
+        <div class="mathreader-window-bar">
+          <span></span><span></span><span></span>
+          <strong>MathReader</strong>
+        </div>
+        <div class="mathreader-window-body">
+          <aside class="mathreader-mock-sidebar">
+            <div class="mathreader-logo-tile">
+              <img src="{{ site.baseurl }}/assets/img/mathreader-logo.svg" alt="MathReader app icon">
+            </div>
+            <div class="mock-topic active">Probability</div>
+            <div class="mock-topic">Markov chains</div>
+            <div class="mock-topic">Statistical physics</div>
+          </aside>
+          <div class="mathreader-mock-pdf">
+            <div class="mock-pdf-title">Lecture notes</div>
+            <div class="mock-line wide"></div>
+            <div class="mock-line"></div>
+            <div class="mock-formula">E[f(X) | G]</div>
+            <div class="mock-line short"></div>
+            <div class="mock-highlight"></div>
+            <div class="mock-line"></div>
+          </div>
+          <div class="mathreader-mock-ai">
+            <div class="mock-ai-title">AI</div>
+            <p>Recognize the selected formula and derive it step by step.</p>
+            <div class="mock-ai-chip">LaTeX ready</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mathreader-section" id="purpose">
+    <h2>What It Is For</h2>
+    <p>
+      The project is a reader for mathematically dense PDFs. Instead of switching between a PDF viewer, a browser,
+      a note-taking app, and a bibliography manager, MathReader puts those actions into one reading surface.
+    </p>
+    <div class="mathreader-feature-grid">
+      <article class="mathreader-feature">
+        <i class="fa-solid fa-highlighter"></i>
+        <h3>Read and Annotate</h3>
+        <p>Highlight, underline, strike out, add notes, erase annotations, and save changes back to the PDF.</p>
+      </article>
+      <article class="mathreader-feature">
+        <i class="fa-solid fa-crop-simple"></i>
+        <h3>Formula OCR</h3>
+        <p>Drag a rectangle over formulas, figures, or text and send the captured region to a vision model.</p>
+      </article>
+      <article class="mathreader-feature">
+        <i class="fa-solid fa-brain"></i>
+        <h3>Mathematical AI</h3>
+        <p>Ask for translations, explanations, citation parsing, or rigorous step-by-step derivations.</p>
+      </article>
+      <article class="mathreader-feature">
+        <i class="fa-solid fa-quote-right"></i>
+        <h3>Reference Tools</h3>
+        <p>Store paper metadata, copy LaTeX citations, generate BibTeX, and export Markdown notes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="mathreader-section" id="workflow">
+    <h2>Reading Workflow</h2>
+    <div class="mathreader-workflow">
+      <div class="mathreader-step">
+        <span>01</span>
+        <div>
+          <h3>Import papers into topics</h3>
+          <p>Build a small research library by topic, or paste an arXiv link to fetch metadata and download the PDF.</p>
+        </div>
+      </div>
+      <div class="mathreader-step">
+        <span>02</span>
+        <div>
+          <h3>Read with context</h3>
+          <p>The reader remembers your last position and uses the current PDF page as background context for AI answers.</p>
+        </div>
+      </div>
+      <div class="mathreader-step">
+        <span>03</span>
+        <div>
+          <h3>Select, capture, or ask</h3>
+          <p>Select text for translation, capture a formula as an image, or ask a follow-up in the side panel.</p>
+        </div>
+      </div>
+      <div class="mathreader-step">
+        <span>04</span>
+        <div>
+          <h3>Export usable notes</h3>
+          <p>Save paper notes together with BibTeX and AI conversations as a Markdown file.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mathreader-section" id="details">
+    <h2>Implementation Notes</h2>
+    <div class="mathreader-detail-grid">
+      <div>
+        <h3>Native macOS foundation</h3>
+        <p>
+          The app is written in SwiftUI with PDFKit, WebKit, Vision, and AppKit. The interface combines a topic-based
+          library, a continuous PDF reader, and a resizable assistant panel.
+        </p>
+      </div>
+      <div>
+        <h3>Multiple assistant modes</h3>
+        <p>
+          MathReader supports API-based analysis and web assistant modes, including DeepSeek Web, Gemini Web, ChatGPT Web,
+          and Claude Web. Text models and vision models can be configured separately.
+        </p>
+      </div>
+      <div>
+        <h3>Academic metadata</h3>
+        <p>
+          Imported papers can store authors, year, abstract, DOI, arXiv ID, URL, tags, citation key, and personal notes.
+        </p>
+      </div>
+      <div>
+        <h3>Multilingual reading</h3>
+        <p>
+          The app interface and assistant prompts support English, Chinese, and French, useful for reading across lecture
+          notes, papers, and seminar materials.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mathreader-section mathreader-status">
+    <div>
+      <h2>Project Status</h2>
+      <p>
+        MathReader is an evolving personal tool. The current public release is V2.2, and the project is especially aimed
+        at students or researchers who read technical PDFs with many formulas.
+      </p>
+    </div>
+    <a href="https://github.com/Lucien-XIAO/MathReader-macOS/releases/tag/V2.2" target="_blank"
+      rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View on GitHub</a>
+  </section>
+</div>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="512" height="512">
+  <defs>
+    <!-- 深邃学术蓝渐变背景 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    
+    <!-- 数学符号高亮渐变 -->
+    <linearGradient id="sigmaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- macOS 标准圆角矩形底座 (Squircle) -->
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="url(#bgGradient)"/>
+
+  <!-- PDF 文献背景轮廓 -->
+  <path d="M 320 260 h 250 l 150 150 v 350 a 40 40 0 0 1 -40 40 H 320 a 40 40 0 0 1 -40 -40 V 300 a 40 40 0 0 1 40 -40 z" fill="none" stroke="#334155" stroke-width="24" stroke-linejoin="round"/>
+  <!-- 文献折角细节 -->
+  <path d="M 570 260 v 110 a 40 40 0 0 0 40 40 h 110" fill="none" stroke="#334155" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- 核心视觉：数学符号 Sigma -->
+  <path d="M 660 380 H 400 L 520 540 L 400 700 H 660" fill="none" stroke="url(#sigmaGradient)" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- AI / Vision 智能火花 -->
+  <path d="M 720 280 Q 720 330 770 330 Q 720 330 720 380 Q 720 330 670 330 Q 720 330 720 280 Z" fill="#facc15"/>
+</svg>

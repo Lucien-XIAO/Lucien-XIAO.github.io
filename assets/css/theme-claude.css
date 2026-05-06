@@ -1145,6 +1145,556 @@ body.theme-claude .math-sym {
   color: var(--claude-accent);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body.theme-claude .section.is-collapsible .section-title {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 11px;
+  outline: none;
+  user-select: none;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+body.theme-claude .section.is-collapsible .section-title::after {
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  content: "";
+  display: inline-block;
+  height: 7px;
+  margin-top: -4px;
+  opacity: 0.72;
+  transform: rotate(45deg);
+  transition: opacity 0.2s ease, transform 0.24s ease;
+  width: 7px;
+}
+
+body.theme-claude .section.is-collapsible .section-title:hover,
+body.theme-claude .section.is-collapsible .section-title:focus-visible {
+  border-bottom-color: var(--claude-teal);
+  color: var(--claude-teal);
+}
+
+body.theme-claude .section.is-collapsible .section-title:focus-visible {
+  box-shadow: 0 3px 0 rgba(93, 123, 111, 0.18);
+}
+
+body.theme-claude .section.is-collapsible .section-title:active {
+  transform: translateY(1px);
+}
+
+body.theme-claude .section.is-collapsed {
+  margin-bottom: 30px;
+}
+
+body.theme-claude .section.is-collapsed .section-title {
+  margin-bottom: 0;
+}
+
+body.theme-claude .section.is-collapsed .section-title::after {
+  opacity: 0.58;
+  transform: rotate(-45deg);
+}
+
+body.theme-claude .section.is-collapsible .section-body {
+  overflow: hidden;
+  transition: height 0.34s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s ease, transform 0.22s ease;
+}
+
+body.theme-claude .section.is-collapsed .section-body {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+}
+
+body.theme-claude .nav-left a:active,
+body.theme-claude .social-icons a:active,
+body.theme-claude .action-links a:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body.theme-claude .section,
+  body.theme-claude .section.is-collapsible .section-body,
+  body.theme-claude .section.is-collapsible .section-title,
+  body.theme-claude .section.is-collapsible .section-title::after {
+    transition: none;
+  }
+}
+
+/* --- MathReader project page --- */
+body.theme-claude .mathreader-page {
+  color: var(--claude-text);
+  margin: 34px auto 0;
+  max-width: 900px;
+}
+
+body.theme-claude .mathreader-hero {
+  align-items: center;
+  border-bottom: 1px solid var(--claude-footer-border);
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  padding-bottom: 42px;
+}
+
+body.theme-claude .mathreader-kicker {
+  background: var(--claude-accent-soft);
+  border: 1px solid var(--claude-border);
+  border-radius: 999px;
+  color: var(--claude-accent);
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+  padding: 6px 12px;
+}
+
+body.theme-claude .mathreader-hero h1 {
+  color: var(--claude-text);
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+
+body.theme-claude .mathreader-lead {
+  color: var(--claude-secondary);
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+body.theme-claude .mathreader-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+body.theme-claude .mathreader-actions a,
+body.theme-claude .mathreader-status a {
+  align-items: center;
+  background: rgba(194, 113, 79, 0.055);
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  color: var(--claude-text);
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+}
+
+body.theme-claude .mathreader-actions a:hover,
+body.theme-claude .mathreader-status a:hover {
+  background: var(--claude-accent-soft);
+  border-color: rgba(194, 113, 79, 0.36);
+  color: var(--claude-text);
+  transform: translateY(-1px);
+}
+
+body.theme-claude .mathreader-status a {
+  flex: 0 0 auto;
+}
+
+body.theme-claude .mathreader-actions a:active,
+body.theme-claude .mathreader-status a:active {
+  transform: translateY(1px);
+}
+
+body.theme-claude .mathreader-showcase {
+  min-width: 0;
+}
+
+body.theme-claude .mathreader-window {
+  background: color-mix(in srgb, var(--claude-bg) 88%, var(--claude-social-bg));
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  box-shadow: 0 18px 44px rgba(61, 57, 41, 0.12);
+  overflow: hidden;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+body.theme-claude .mathreader-window:hover {
+  box-shadow: 0 22px 54px rgba(61, 57, 41, 0.16);
+  transform: translateY(-3px);
+}
+
+body.theme-claude .mathreader-window-bar {
+  align-items: center;
+  border-bottom: 1px solid var(--claude-border);
+  display: flex;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 13px;
+}
+
+body.theme-claude .mathreader-window-bar span {
+  border-radius: 50%;
+  display: block;
+  height: 10px;
+  width: 10px;
+}
+
+body.theme-claude .mathreader-window-bar span:nth-child(1) { background: #e76f51; }
+body.theme-claude .mathreader-window-bar span:nth-child(2) { background: #e9c46a; }
+body.theme-claude .mathreader-window-bar span:nth-child(3) { background: #2a9d8f; }
+
+body.theme-claude .mathreader-window-bar strong {
+  color: var(--claude-secondary);
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+body.theme-claude .mathreader-window-body {
+  display: grid;
+  grid-template-columns: 96px minmax(138px, 1fr) 120px;
+  min-height: 312px;
+}
+
+body.theme-claude .mathreader-mock-sidebar,
+body.theme-claude .mathreader-mock-pdf,
+body.theme-claude .mathreader-mock-ai {
+  min-width: 0;
+  padding: 14px;
+}
+
+body.theme-claude .mathreader-mock-sidebar {
+  background: rgba(194, 113, 79, 0.055);
+  border-right: 1px solid var(--claude-border);
+}
+
+body.theme-claude .mathreader-logo-tile {
+  align-items: center;
+  background: var(--claude-social-bg);
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  display: flex;
+  height: 58px;
+  justify-content: center;
+  margin-bottom: 14px;
+  width: 58px;
+}
+
+body.theme-claude .mathreader-logo-tile img {
+  height: 44px;
+  width: 44px;
+}
+
+body.theme-claude .mock-topic {
+  border-radius: 7px;
+  color: var(--claude-secondary);
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  overflow: hidden;
+  padding: 7px 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.theme-claude .mock-topic.active {
+  background: var(--claude-accent-soft);
+  color: var(--claude-accent);
+}
+
+body.theme-claude .mathreader-mock-pdf {
+  background: var(--claude-social-bg);
+}
+
+body.theme-claude .mock-pdf-title,
+body.theme-claude .mock-ai-title {
+  color: var(--claude-text);
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+body.theme-claude .mock-line {
+  background: color-mix(in srgb, var(--claude-text) 16%, transparent);
+  border-radius: 999px;
+  height: 7px;
+  margin-bottom: 12px;
+  width: 76%;
+}
+
+body.theme-claude .mock-line.wide { width: 92%; }
+body.theme-claude .mock-line.short { width: 52%; }
+
+body.theme-claude .mock-formula {
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  color: var(--claude-teal);
+  font-family: "STIX Two Math", "Latin Modern Math", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 16px 0;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+body.theme-claude .mock-highlight {
+  animation: mathreaderPulse 2.4s ease-in-out infinite;
+  background: rgba(250, 204, 21, 0.24);
+  border-radius: 6px;
+  height: 24px;
+  margin-bottom: 12px;
+  width: 78%;
+}
+
+body.theme-claude .mathreader-mock-ai {
+  background: rgba(47, 111, 104, 0.075);
+  border-left: 1px solid var(--claude-border);
+}
+
+body.theme-claude .mathreader-mock-ai p {
+  color: var(--claude-secondary);
+  font-size: 11.5px;
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+
+body.theme-claude .mock-ai-chip {
+  background: var(--claude-social-bg);
+  border: 1px solid var(--claude-border);
+  border-radius: 999px;
+  color: var(--claude-teal);
+  display: inline-flex;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 5px 8px;
+}
+
+body.theme-claude .mathreader-section {
+  margin-top: 48px;
+}
+
+body.theme-claude .mathreader-section h2 {
+  border-bottom: 2px solid var(--claude-accent);
+  color: var(--claude-accent);
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 760;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+}
+
+body.theme-claude .mathreader-section > p {
+  color: var(--claude-secondary);
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin: 0 0 22px;
+  max-width: 760px;
+}
+
+body.theme-claude .mathreader-feature-grid,
+body.theme-claude .mathreader-detail-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body.theme-claude .mathreader-feature,
+body.theme-claude .mathreader-detail-grid > div {
+  background: rgba(194, 113, 79, 0.035);
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  padding: 18px;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+body.theme-claude .mathreader-feature:hover,
+body.theme-claude .mathreader-detail-grid > div:hover {
+  border-color: rgba(194, 113, 79, 0.36);
+  transform: translateY(-2px);
+}
+
+body.theme-claude .mathreader-feature i {
+  color: var(--claude-teal);
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+body.theme-claude .mathreader-feature h3,
+body.theme-claude .mathreader-detail-grid h3,
+body.theme-claude .mathreader-step h3 {
+  color: var(--claude-text);
+  font-size: 15.5px;
+  font-weight: 780;
+  margin: 0 0 7px;
+}
+
+body.theme-claude .mathreader-feature p,
+body.theme-claude .mathreader-detail-grid p,
+body.theme-claude .mathreader-step p,
+body.theme-claude .mathreader-status p {
+  color: var(--claude-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+body.theme-claude .mathreader-workflow {
+  border-left: 2px solid var(--claude-border);
+  display: grid;
+  gap: 18px;
+  margin-left: 18px;
+  padding-left: 28px;
+}
+
+body.theme-claude .mathreader-step {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  position: relative;
+}
+
+body.theme-claude .mathreader-step::before {
+  background: var(--claude-accent);
+  border: 3px solid var(--claude-bg);
+  border-radius: 50%;
+  content: "";
+  height: 10px;
+  left: -34px;
+  position: absolute;
+  top: 7px;
+  width: 10px;
+}
+
+body.theme-claude .mathreader-step span {
+  color: var(--claude-accent);
+  font-family: "SF Mono", Consolas, monospace;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+body.theme-claude .mathreader-status {
+  align-items: center;
+  background: linear-gradient(90deg, var(--claude-accent-soft), transparent 72%);
+  border-left: 3px solid var(--claude-accent);
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px 22px;
+}
+
+body.theme-claude .mathreader-status h2 {
+  margin-bottom: 10px;
+}
+
+@keyframes mathreaderPulse {
+  0%, 100% { opacity: 0.44; transform: scaleX(0.94); transform-origin: left center; }
+  50% { opacity: 1; transform: scaleX(1); transform-origin: left center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-claude .mock-highlight {
+    animation: none;
+  }
+
+  body.theme-claude .mathreader-window,
+  body.theme-claude .mathreader-actions a,
+  body.theme-claude .mathreader-status a,
+  body.theme-claude .mathreader-feature,
+  body.theme-claude .mathreader-detail-grid > div {
+    transition: none;
+  }
+}
+
+@media (max-width: 860px) {
+  body.theme-claude .mathreader-hero {
+    grid-template-columns: 1fr;
+  }
+
+  body.theme-claude .mathreader-hero h1 {
+    font-size: 34px;
+  }
+
+  body.theme-claude .mathreader-window-body {
+    grid-template-columns: 92px minmax(0, 1fr);
+  }
+
+  body.theme-claude .mathreader-mock-ai {
+    border-left: none;
+    border-top: 1px solid var(--claude-border);
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  body.theme-claude .mathreader-page {
+    margin-top: 20px;
+  }
+
+  body.theme-claude .mathreader-hero h1 {
+    font-size: 30px;
+  }
+
+  body.theme-claude .mathreader-window-body,
+  body.theme-claude .mathreader-feature-grid,
+  body.theme-claude .mathreader-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.theme-claude .mathreader-mock-sidebar {
+    align-items: center;
+    border-bottom: 1px solid var(--claude-border);
+    border-right: none;
+    display: flex;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  body.theme-claude .mathreader-logo-tile {
+    flex: 0 0 auto;
+    height: 48px;
+    margin: 0;
+    width: 48px;
+  }
+
+  body.theme-claude .mathreader-logo-tile img {
+    height: 36px;
+    width: 36px;
+  }
+
+  body.theme-claude .mock-topic {
+    margin: 0;
+    max-width: 88px;
+  }
+
+  body.theme-claude .mathreader-workflow {
+    margin-left: 10px;
+    padding-left: 22px;
+  }
+
+  body.theme-claude .mathreader-step {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  body.theme-claude .mathreader-step::before {
+    left: -28px;
+  }
+
+  body.theme-claude .mathreader-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 1080px) {
   body.theme-claude .wrapper {
     padding: 0 22px;

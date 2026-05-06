@@ -14,6 +14,7 @@
   </div>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.nav-active')?.scrollIntoView({ block: 'nearest', inline: 'center' });
       document.querySelectorAll('.section').forEach((el) => el.classList.add('visible'));
     });
     const toggle = document.getElementById('themeToggle');
