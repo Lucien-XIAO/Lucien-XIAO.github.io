@@ -477,6 +477,12 @@ body.theme-claude .exp-detail {
   color: var(--claude-secondary);
 }
 
+body.theme-claude .exp-subject {
+  color: var(--claude-text);
+  font-style: italic;
+  font-weight: 700;
+}
+
 body.theme-claude .exp-period {
   font-size: 13px;
   color: var(--claude-accent);
