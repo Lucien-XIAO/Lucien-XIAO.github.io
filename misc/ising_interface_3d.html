@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Ising Box Random Interface</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --ink: #302d22;
+      --muted: #7f7668;
+      --accent: #c2714f;
+      --panel: rgba(250, 249, 247, 0.88);
+      --border: rgba(194, 113, 79, 0.22);
+      --teal: #2f6f68;
+      --plus: #c8443c;
+      --minus: #315da8;
+      --interface: #ffd54f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    #scene {
+      cursor: grab;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    #scene:active {
+      cursor: grabbing;
+    }
+
+    .hud {
+      backdrop-filter: blur(12px);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: minmax(190px, 1.25fr) minmax(92px, 0.48fr) minmax(130px, 0.7fr) auto auto auto;
+      left: 12px;
+      padding: 11px;
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      z-index: 4;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      min-width: 0;
+    }
+
+    .input-row {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+    }
+
+    label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    input[type="range"] {
+      accent-color: var(--accent);
+      min-width: 0;
+      width: 100%;
+    }
+
+    input[data-numeric],
+    select {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--ink);
+      font-size: 13px;
+      height: 34px;
+      padding: 0 8px;
+      width: 76px;
+    }
+
+    select {
+      width: 100%;
+    }
+
+    button {
+      align-items: center;
+      background: rgba(194, 113, 79, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      color: var(--ink);
+      cursor: pointer;
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 750;
+      height: 34px;
+      justify-content: center;
+      padding: 0 12px;
+      transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+      white-space: nowrap;
+    }
+
+    button:hover {
+      background: rgba(194, 113, 79, 0.14);
+      border-color: rgba(194, 113, 79, 0.42);
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .stats {
+      align-items: center;
+      backdrop-filter: blur(12px);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      bottom: 12px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 12px;
+      gap: 8px 13px;
+      left: 50%;
+      max-width: calc(100% - 24px);
+      padding: 8px 11px;
+      position: absolute;
+      transform: translateX(-50%);
+      z-index: 4;
+    }
+
+    .stats strong {
+      color: var(--teal);
+    }
+
+    @media (max-width: 760px) {
+      .hud {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .hud {
+        gap: 8px;
+        grid-template-columns: 1fr 1fr;
+        padding: 9px;
+      }
+
+      .input-group:first-child {
+        grid-column: 1 / -1;
+      }
+
+      button {
+        font-size: 12px;
+        height: 32px;
+        padding: 0 8px;
+      }
+
+      .stats {
+        bottom: 8px;
+        font-size: 11px;
+        justify-content: center;
+        width: calc(100% - 16px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="scene" aria-label="3D L by L by L Ising box simulation"></canvas>
+
+  <section class="hud" aria-label="3D Ising box controls">
+    <div class="input-group">
+      <label for="temperature">Temperature T</label>
+      <div class="input-row">
+        <input id="temperature" type="range" min="2.00" max="7.00" step="0.01" value="3.20">
+        <input id="temperatureValue" data-numeric type="text" inputmode="decimal" pattern="[0-9.,]*" value="3.20">
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="size">Box size L</label>
+      <select id="size">
+        <option value="18">18</option>
+        <option value="24" selected>24</option>
+        <option value="30">30</option>
+        <option value="36">36</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="speed">Sweeps / tick</label>
+      <input id="speed" type="range" min="1" max="5" step="1" value="1">
+    </div>
+
+    <button class="primary" id="toggle">Pause</button>
+    <button id="reset">Reset</button>
+    <button id="thermalize">Thermalize</button>
+  </section>
+
+  <div class="stats" id="stats"></div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.164.1/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "https://unpkg.com/three@0.164.1/examples/jsm/controls/OrbitControls.js";
+
+    const BETA_CRITICAL_3D = 0.2216544;
+    const TEMPERATURE_CRITICAL = 1 / BETA_CRITICAL_3D;
+    const PLUS_COLOR = new THREE.Color(0xc8443c);
+    const MINUS_COLOR = new THREE.Color(0x315da8);
+    const INTERFACE_COLOR = 0xffd54f;
+    const SIMULATION_FRAME_MS = 120;
+
+    class IsingBoxModel {
+      constructor(L, temperature) {
+        this.L = L;
+        this.layerSize = L * L;
+        this.temperature = temperature;
+        this.beta = 1 / temperature;
+        this.spins = new Int8Array(L * L * L);
+        this.sweepCount = 0;
+        this.initialize();
+      }
+
+      index(x, y, z) {
+        return x + this.L * z + this.layerSize * y;
+      }
+
+      boundaryValue(y) {
+        return y >= this.L / 2 ? 1 : -1;
+      }
+
+      isBoundary(x, y, z) {
+        return x === 0 || x === this.L - 1 || y === 0 || y === this.L - 1 || z === 0 || z === this.L - 1;
+      }
+
+      initialize() {
+        const heights = this.initialHeightField();
+
+        for (let y = 0; y < this.L; y += 1) {
+          for (let z = 0; z < this.L; z += 1) {
+            for (let x = 0; x < this.L; x += 1) {
+              const idx = this.index(x, y, z);
+              this.spins[idx] = y >= heights[x + this.L * z] ? 1 : -1;
+            }
+          }
+        }
+
+        this.applyFixedBoundary();
+      }
+
+      initialHeightField() {
+        const field = new Float32Array(this.L * this.L);
+        const base = this.L / 2;
+        const amplitude = Math.max(1.5, this.L / 9);
+
+        for (let z = 0; z < this.L; z += 1) {
+          for (let x = 0; x < this.L; x += 1) {
+            const wave = Math.sin((x / this.L) * Math.PI * 2) + Math.cos((z / this.L) * Math.PI * 2);
+            field[x + this.L * z] = base + 0.45 * amplitude * wave + randomRange(-amplitude, amplitude);
+          }
+        }
+
+        const buffer = new Float32Array(field.length);
+        for (let pass = 0; pass < 4; pass += 1) {
+          for (let z = 0; z < this.L; z += 1) {
+            for (let x = 0; x < this.L; x += 1) {
+              let sum = 0;
+              let count = 0;
+              for (let dz = -1; dz <= 1; dz += 1) {
+                for (let dx = -1; dx <= 1; dx += 1) {
+                  const nx = clamp(x + dx, 0, this.L - 1);
+                  const nz = clamp(z + dz, 0, this.L - 1);
+                  sum += field[nx + this.L * nz];
+                  count += 1;
+                }
+              }
+              buffer[x + this.L * z] = clamp(sum / count, 2, this.L - 2);
+            }
+          }
+          field.set(buffer);
+        }
+
+        return field;
+      }
+
+      applyFixedBoundary() {
+        for (let y = 0; y < this.L; y += 1) {
+          const value = this.boundaryValue(y);
+          for (let z = 0; z < this.L; z += 1) {
+            this.spins[this.index(0, y, z)] = value;
+            this.spins[this.index(this.L - 1, y, z)] = value;
+          }
+          for (let x = 0; x < this.L; x += 1) {
+            this.spins[this.index(x, y, 0)] = value;
+            this.spins[this.index(x, y, this.L - 1)] = value;
+          }
+        }
+
+        for (let z = 0; z < this.L; z += 1) {
+          for (let x = 0; x < this.L; x += 1) {
+            this.spins[this.index(x, 0, z)] = -1;
+            this.spins[this.index(x, this.L - 1, z)] = 1;
+          }
+        }
+      }
+
+      setTemperature(temperature) {
+        this.temperature = temperature;
+        this.beta = 1 / temperature;
+      }
+
+      sweep() {
+        const accept4 = Math.exp(-4 * this.beta);
+        const accept8 = Math.exp(-8 * this.beta);
+        const accept12 = Math.exp(-12 * this.beta);
+
+        for (let parity = 0; parity < 2; parity += 1) {
+          for (let y = 1; y < this.L - 1; y += 1) {
+            for (let z = 1; z < this.L - 1; z += 1) {
+              for (let x = 1; x < this.L - 1; x += 1) {
+                if (((x + y + z) & 1) !== parity) continue;
+
+                const idx = this.index(x, y, z);
+                const spin = this.spins[idx];
+                const neighborSum =
+                  this.spins[idx - 1] +
+                  this.spins[idx + 1] +
+                  this.spins[idx - this.L] +
+                  this.spins[idx + this.L] +
+                  this.spins[idx - this.layerSize] +
+                  this.spins[idx + this.layerSize];
+                const deltaEnergy = 2 * spin * neighborSum;
+
+                if (
+                  deltaEnergy <= 0 ||
+                  (deltaEnergy === 4 && Math.random() < accept4) ||
+                  (deltaEnergy === 8 && Math.random() < accept8) ||
+                  (deltaEnergy === 12 && Math.random() < accept12)
+                ) {
+                  this.spins[idx] = -spin;
+                }
+              }
+            }
+          }
+        }
+
+        this.sweepCount += 1;
+      }
+
+      run(sweeps) {
+        for (let i = 0; i < sweeps; i += 1) {
+          this.sweep();
+        }
+      }
+
+      interfaceHeight() {
+        const heights = new Float32Array(this.L * this.L);
+
+        for (let z = 0; z < this.L; z += 1) {
+          for (let x = 0; x < this.L; x += 1) {
+            let columnMagnetization = 0;
+            for (let y = 0; y < this.L; y += 1) {
+              columnMagnetization += this.spins[this.index(x, y, z)];
+            }
+            const height = (this.L - columnMagnetization) / 2;
+            heights[x + this.L * z] = clamp(height - 0.5, 1, this.L - 2);
+          }
+        }
+
+        return heights;
+      }
+
+      roughness(heights) {
+        let sum = 0;
+        let count = 0;
+
+        for (let z = 1; z < this.L - 1; z += 1) {
+          for (let x = 1; x < this.L - 1; x += 1) {
+            sum += heights[x + this.L * z];
+            count += 1;
+          }
+        }
+
+        const mean = sum / count;
+        let variance = 0;
+
+        for (let z = 1; z < this.L - 1; z += 1) {
+          for (let x = 1; x < this.L - 1; x += 1) {
+            const centered = heights[x + this.L * z] - mean;
+            variance += centered * centered;
+          }
+        }
+
+        return Math.sqrt(variance / count);
+      }
+
+      magnetization() {
+        let total = 0;
+        for (let i = 0; i < this.spins.length; i += 1) {
+          total += this.spins[i];
+        }
+        return total / this.spins.length;
+      }
+
+      shellCapacity() {
+        return Math.min(this.spins.length, 6 * this.L * this.L);
+      }
+    }
+
+    const canvas = document.getElementById("scene");
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setClearColor(0xffffff, 1);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 600);
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.08;
+    controls.target.set(0, 0, 0);
+
+    scene.add(new THREE.AmbientLight(0xffffff, 0.74));
+    const keyLight = new THREE.DirectionalLight(0xffffff, 1.7);
+    keyLight.position.set(32, 48, 28);
+    scene.add(keyLight);
+    const rimLight = new THREE.DirectionalLight(0xfff0d8, 0.75);
+    rimLight.position.set(-28, 20, -36);
+    scene.add(rimLight);
+
+    const boardGroup = new THREE.Group();
+    scene.add(boardGroup);
+
+    const temperature = document.getElementById("temperature");
+    const temperatureValue = document.getElementById("temperatureValue");
+    const sizeSelect = document.getElementById("size");
+    const speed = document.getElementById("speed");
+    const toggle = document.getElementById("toggle");
+    const reset = document.getElementById("reset");
+    const thermalize = document.getElementById("thermalize");
+    const stats = document.getElementById("stats");
+
+    let model = new IsingBoxModel(Number(sizeSelect.value), Number(temperature.value));
+    let running = true;
+    let plusShell = null;
+    let minusShell = null;
+    let shellGeometry = null;
+    let surfaceMesh = null;
+    let surfaceGeometry = null;
+    let boundaryObjects = [];
+    let labelObjects = [];
+    let dummy = new THREE.Object3D();
+    let lastSimulationAt = 0;
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function randomRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function clearObjects(objects) {
+      for (const object of objects) {
+        boardGroup.remove(object);
+        if (object.geometry) object.geometry.dispose();
+        if (object.material) {
+          if (object.material.map) object.material.map.dispose();
+          object.material.dispose();
+        }
+      }
+      objects.length = 0;
+    }
+
+    function buildSceneObjects() {
+      if (plusShell) {
+        boardGroup.remove(plusShell);
+        plusShell.material.dispose();
+      }
+      if (minusShell) {
+        boardGroup.remove(minusShell);
+        minusShell.material.dispose();
+      }
+      if (shellGeometry) {
+        shellGeometry.dispose();
+      }
+      if (surfaceMesh) {
+        boardGroup.remove(surfaceMesh);
+        surfaceMesh.material.dispose();
+      }
+      if (surfaceGeometry) {
+        surfaceGeometry.dispose();
+      }
+      clearObjects(boundaryObjects);
+      clearObjects(labelObjects);
+
+      shellGeometry = new THREE.BoxGeometry(0.74, 0.74, 0.74);
+      const shellMaterialBase = {
+        depthWrite: false,
+        opacity: 0.34,
+        transparent: true,
+      };
+      plusShell = new THREE.InstancedMesh(
+        shellGeometry,
+        new THREE.MeshLambertMaterial({ ...shellMaterialBase, color: PLUS_COLOR }),
+        model.shellCapacity()
+      );
+      minusShell = new THREE.InstancedMesh(
+        shellGeometry,
+        new THREE.MeshLambertMaterial({ ...shellMaterialBase, color: MINUS_COLOR }),
+        model.shellCapacity()
+      );
+      plusShell.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+      minusShell.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+      boardGroup.add(minusShell);
+      boardGroup.add(plusShell);
+
+      buildInterfaceSurface();
+      addBoundaryFrame();
+      addLabels();
+      fitCamera();
+      updateSceneGeometry();
+    }
+
+    function cellPosition(x, y, z) {
+      const half = (model.L - 1) / 2;
+      return {
+        x: x - half,
+        y: y - half,
+        z: z - half,
+      };
+    }
+
+    function updateShellMesh() {
+      let plusCount = 0;
+      let minusCount = 0;
+
+      for (let y = 0; y < model.L; y += 1) {
+        for (let z = 0; z < model.L; z += 1) {
+          for (let x = 0; x < model.L; x += 1) {
+            if (!model.isBoundary(x, y, z)) continue;
+
+            const spin = model.spins[model.index(x, y, z)];
+            const pos = cellPosition(x, y, z);
+            dummy.position.set(pos.x, pos.y, pos.z);
+            dummy.scale.set(1, 1, 1);
+            dummy.updateMatrix();
+
+            if (spin === 1) {
+              plusShell.setMatrixAt(plusCount, dummy.matrix);
+              plusCount += 1;
+            } else {
+              minusShell.setMatrixAt(minusCount, dummy.matrix);
+              minusCount += 1;
+            }
+          }
+        }
+      }
+
+      plusShell.count = plusCount;
+      minusShell.count = minusCount;
+      plusShell.instanceMatrix.needsUpdate = true;
+      minusShell.instanceMatrix.needsUpdate = true;
+    }
+
+    function buildInterfaceSurface() {
+      const vertices = new Float32Array(model.L * model.L * 3);
+      const indices = [];
+      const half = (model.L - 1) / 2;
+
+      for (let z = 0; z < model.L; z += 1) {
+        for (let x = 0; x < model.L; x += 1) {
+          const offset = (x + model.L * z) * 3;
+          vertices[offset] = x - half;
+          vertices[offset + 1] = 0;
+          vertices[offset + 2] = z - half;
+        }
+      }
+
+      for (let z = 0; z < model.L - 1; z += 1) {
+        for (let x = 0; x < model.L - 1; x += 1) {
+          const a = x + model.L * z;
+          const b = x + 1 + model.L * z;
+          const c = x + model.L * (z + 1);
+          const d = x + 1 + model.L * (z + 1);
+          indices.push(a, c, b, b, c, d);
+        }
+      }
+
+      surfaceGeometry = new THREE.BufferGeometry();
+      surfaceGeometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
+      surfaceGeometry.setIndex(indices);
+      surfaceMesh = new THREE.Mesh(
+        surfaceGeometry,
+        new THREE.MeshStandardMaterial({
+          color: INTERFACE_COLOR,
+          emissive: 0x5f4a00,
+          metalness: 0.02,
+          opacity: 0.84,
+          roughness: 0.48,
+          side: THREE.DoubleSide,
+          transparent: true,
+        })
+      );
+      surfaceMesh.renderOrder = 2;
+      boardGroup.add(surfaceMesh);
+    }
+
+    function updateInterfaceSurface(heights) {
+      const half = (model.L - 1) / 2;
+      const positions = surfaceGeometry.attributes.position.array;
+
+      for (let z = 0; z < model.L; z += 1) {
+        for (let x = 0; x < model.L; x += 1) {
+          const index = x + model.L * z;
+          positions[index * 3 + 1] = heights[index] - half;
+        }
+      }
+
+      surfaceGeometry.attributes.position.needsUpdate = true;
+      surfaceGeometry.computeVertexNormals();
+    }
+
+    function addBoundaryFrame() {
+      const L = model.L;
+      const half = (L - 1) / 2;
+      const outside = half + 0.72;
+      const topY = outside;
+      const bottomY = -outside;
+      const redMaterial = new THREE.MeshLambertMaterial({ color: PLUS_COLOR });
+      const blueMaterial = new THREE.MeshLambertMaterial({ color: MINUS_COLOR });
+      const edge = 0.26;
+      const length = L + 1.1;
+      const halfHeight = L / 2 + 0.2;
+
+      addRail(new THREE.Vector3(0, topY, -outside), new THREE.Vector3(length, edge, edge), redMaterial);
+      addRail(new THREE.Vector3(0, topY, outside), new THREE.Vector3(length, edge, edge), redMaterial);
+      addRail(new THREE.Vector3(-outside, topY, 0), new THREE.Vector3(edge, edge, length), redMaterial);
+      addRail(new THREE.Vector3(outside, topY, 0), new THREE.Vector3(edge, edge, length), redMaterial);
+
+      addRail(new THREE.Vector3(0, bottomY, -outside), new THREE.Vector3(length, edge, edge), blueMaterial);
+      addRail(new THREE.Vector3(0, bottomY, outside), new THREE.Vector3(length, edge, edge), blueMaterial);
+      addRail(new THREE.Vector3(-outside, bottomY, 0), new THREE.Vector3(edge, edge, length), blueMaterial);
+      addRail(new THREE.Vector3(outside, bottomY, 0), new THREE.Vector3(edge, edge, length), blueMaterial);
+
+      for (const x of [-outside, outside]) {
+        for (const z of [-outside, outside]) {
+          addRail(new THREE.Vector3(x, L / 4, z), new THREE.Vector3(edge, halfHeight, edge), redMaterial);
+          addRail(new THREE.Vector3(x, -L / 4, z), new THREE.Vector3(edge, halfHeight, edge), blueMaterial);
+        }
+      }
+    }
+
+    function addRail(position, scale, material) {
+      const mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), material.clone());
+      mesh.position.copy(position);
+      mesh.scale.copy(scale);
+      boardGroup.add(mesh);
+      boundaryObjects.push(mesh);
+    }
+
+    function addLabels() {
+      const half = (model.L - 1) / 2;
+      const outside = half + 0.72;
+      const compact = window.innerWidth < 560;
+
+      if (compact) {
+        labelObjects.push(makeLabel("+ top", "#c8443c", new THREE.Vector3(-half * 0.1, outside + 0.9, outside + 0.8), 3.0));
+        labelObjects.push(makeLabel("- bottom", "#315da8", new THREE.Vector3(-half * 0.1, -outside + 2.1, outside + 0.9), 3.0));
+        labelObjects.push(makeLabel("+ fixed", "#c8443c", new THREE.Vector3(half * 0.75, model.L / 4, outside * 0.22), 2.9));
+        labelObjects.push(makeLabel("- fixed", "#315da8", new THREE.Vector3(half * 0.75, -model.L / 4, outside * 0.22), 2.9));
+
+        for (const label of labelObjects) {
+          boardGroup.add(label);
+        }
+        return;
+      }
+
+      labelObjects.push(makeLabel("+ top boundary", "#c8443c", new THREE.Vector3(0, outside + 1.2, outside + 2.2), 3.8));
+      labelObjects.push(makeLabel("- bottom boundary", "#315da8", new THREE.Vector3(-half * 0.25, -outside + 2.0, outside + 2.2), 3.1));
+      labelObjects.push(makeLabel("+ fixed side", "#c8443c", new THREE.Vector3(outside + 0.5, model.L / 4, outside * 0.34), 3.0));
+      labelObjects.push(makeLabel("- fixed side", "#315da8", new THREE.Vector3(outside + 0.5, -model.L / 4, outside * 0.34), 3.0));
+
+      for (const label of labelObjects) {
+        boardGroup.add(label);
+      }
+    }
+
+    function makeLabel(text, color, position, scale) {
+      const labelCanvas = document.createElement("canvas");
+      labelCanvas.width = 640;
+      labelCanvas.height = 128;
+      const context = labelCanvas.getContext("2d");
+      context.clearRect(0, 0, labelCanvas.width, labelCanvas.height);
+      context.font = "700 46px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif";
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+      context.fillStyle = color;
+      context.fillText(text, labelCanvas.width / 2, labelCanvas.height / 2);
+
+      const texture = new THREE.CanvasTexture(labelCanvas);
+      const material = new THREE.SpriteMaterial({ depthTest: false, map: texture, transparent: true });
+      const sprite = new THREE.Sprite(material);
+      sprite.position.copy(position);
+      sprite.scale.set(scale * 3.5, scale * 0.7, 1);
+      sprite.renderOrder = 10;
+      return sprite;
+    }
+
+    function updateSceneGeometry() {
+      const heights = model.interfaceHeight();
+      updateShellMesh();
+      updateInterfaceSurface(heights);
+
+      const roughness = model.roughness(heights);
+      const magnetization = model.magnetization();
+      const phaseText = model.temperature < TEMPERATURE_CRITICAL ? "low T, phase separated" : "high T, disordered";
+      stats.innerHTML = [
+        `T=<strong>${model.temperature.toFixed(2)}</strong>`,
+        `beta=<strong>${model.beta.toFixed(3)}</strong>`,
+        `T_c~<strong>${TEMPERATURE_CRITICAL.toFixed(3)}</strong>`,
+        `box=<strong>${model.L}^3</strong>`,
+        `sweeps=<strong>${model.sweepCount}</strong>`,
+        `W=<strong>${roughness.toFixed(2)}</strong>`,
+        `m=<strong>${magnetization.toFixed(2)}</strong>`,
+        phaseText,
+      ].join("<span>|</span>");
+    }
+
+    function fitCamera() {
+      const L = model.L;
+      const mobile = window.innerWidth < 560;
+      const distance = L * (mobile ? 3.4 : 1.25);
+      camera.fov = mobile ? 52 : 40;
+      camera.position.set(distance * 0.92, distance * 0.68, distance * 0.92);
+      controls.target.set(0, 0, 0);
+      controls.minDistance = L * 0.55;
+      controls.maxDistance = L * (mobile ? 8 : 3.1);
+      camera.updateProjectionMatrix();
+      controls.update();
+    }
+
+    function syncTemperature(value) {
+      const parsed = Number(String(value).replace(",", "."));
+      const next = clamp(Number.isFinite(parsed) ? parsed : 3.2, Number(temperature.min), Number(temperature.max));
+      temperature.value = next.toFixed(2);
+      temperatureValue.value = next.toFixed(2);
+      model.setTemperature(next);
+      updateSceneGeometry();
+    }
+
+    function rebuildModel() {
+      model = new IsingBoxModel(Number(sizeSelect.value), Number(temperature.value));
+      buildSceneObjects();
+    }
+
+    function resizeRenderer() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
+
+    function animate(timestamp = 0) {
+      if (running && timestamp - lastSimulationAt >= SIMULATION_FRAME_MS) {
+        model.run(Number(speed.value));
+        updateSceneGeometry();
+        lastSimulationAt = timestamp;
+      }
+      controls.update();
+      renderer.render(scene, camera);
+      window.requestAnimationFrame(animate);
+    }
+
+    temperature.addEventListener("input", (event) => syncTemperature(event.target.value));
+    temperatureValue.addEventListener("change", (event) => syncTemperature(event.target.value));
+    sizeSelect.addEventListener("change", rebuildModel);
+
+    toggle.addEventListener("click", () => {
+      running = !running;
+      toggle.textContent = running ? "Pause" : "Run";
+      toggle.classList.toggle("primary", running);
+    });
+
+    reset.addEventListener("click", rebuildModel);
+
+    thermalize.addEventListener("click", () => {
+      const wasRunning = running;
+      running = false;
+      toggle.textContent = "Run";
+      toggle.classList.remove("primary");
+      setTimeout(() => {
+        model.run(60);
+        updateSceneGeometry();
+        running = wasRunning;
+        toggle.textContent = running ? "Pause" : "Run";
+        toggle.classList.toggle("primary", running);
+      }, 20);
+    });
+
+    window.addEventListener("resize", () => {
+      resizeRenderer();
+      fitCamera();
+    });
+
+    resizeRenderer();
+    model.run(24);
+    buildSceneObjects();
+    animate();
+  </script>
+</body>
+</html>
