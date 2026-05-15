@@ -17,6 +17,24 @@
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.nav-active')?.scrollIntoView({ block: 'nearest', inline: 'center' });
 
+      const decodeContact = (value) => value
+        .split('-')
+        .map((code) => String.fromCharCode(Number(code) - 7))
+        .join('');
+
+      document.querySelectorAll('.js-email-link[data-contact-code]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+
+          const email = decodeContact(link.dataset.contactCode || '');
+          const targetSelector = link.dataset.emailTarget;
+          const target = targetSelector ? document.querySelector(targetSelector) : null;
+          if (target) target.textContent = email;
+
+          window.location.href = `mai${'lto'}:${email}`;
+        });
+      });
+
       document.querySelectorAll('.section').forEach((el, index) => {
         el.classList.add('visible');
         el.style.transitionDelay = `${Math.min(index * 35, 180)}ms`;

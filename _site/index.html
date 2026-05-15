@@ -151,9 +151,11 @@
         onerror="this.src='assets/img/avatar.jpg'" /></a>
     <h1 class="site-name">Yuguang XIAO</h1>
     <h2 class="site-name-cn">肖煜光</h2>
-    <p class="site-email">yuguang.xiao.maths [at] gmail.com</p>
+    <p class="site-email" id="contact-email">yuguang dot xiao dot maths [at] gmail dot com</p>
     <div class="social-icons">
-      <a href="mailto:yuguang.xiao.maths@gmail.com" title="Email" target="_blank" rel="noopener">
+      <a href="#contact-email" class="js-email-link"
+        data-contact-code="128-124-110-124-104-117-110-53-127-112-104-118-53-116-104-123-111-122-71-110-116-104-112-115-53-106-118-116"
+        data-email-target="#contact-email" title="Reveal email" aria-label="Reveal email">
         <i class="fa-solid fa-envelope"></i>
       </a>
       <a href="https://github.com/Lucien-XIAO" title="GitHub" target="_blank" rel="noopener">
@@ -329,6 +331,24 @@
   </div>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
+      const decodeContact = (value) => value
+        .split('-')
+        .map((code) => String.fromCharCode(Number(code) - 7))
+        .join('');
+
+      document.querySelectorAll('.js-email-link[data-contact-code]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+
+          const email = decodeContact(link.dataset.contactCode || '');
+          const targetSelector = link.dataset.emailTarget;
+          const target = targetSelector ? document.querySelector(targetSelector) : null;
+          if (target) target.textContent = email;
+
+          window.location.href = `mai${'lto'}:${email}`;
+        });
+      });
+
       document.querySelectorAll('.section').forEach((el) => el.classList.add('visible'));
     });
     
