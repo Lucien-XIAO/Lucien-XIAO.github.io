@@ -176,20 +176,30 @@
       fr: "Physique statistique",
       zh: "统计物理",
     },
-    "Probability theory": {
-      en: "Probability theory",
-      fr: "Théorie des probabilités",
-      zh: "概率论",
+    "Probability theory and stochastic processes": {
+      en: "Probability theory and stochastic processes",
+      fr: "Théorie des probabilités et processus stochastiques",
+      zh: "概率论与随机过程",
     },
-    "Non-Markovian random walks": {
-      en: "Non-Markovian random walks",
-      fr: "Marches aléatoires non markoviennes",
-      zh: "非马尔可夫随机游走",
+    "Non-Markovian random walks and memory effects": {
+      en: "Non-Markovian random walks and memory effects",
+      fr: "Marches aléatoires non markoviennes et effets de mémoire",
+      zh: "非马尔可夫随机游走与记忆效应",
     },
-    "Statistical mechanics: XY model, height models, long-range Ising model, etc.": {
-      en: "Statistical mechanics: XY model, height models, long-range Ising model, etc.",
-      fr: "Mécanique statistique : modèle XY, modèles de hauteur, modèle d'Ising à longue portée, etc.",
-      zh: "统计力学：XY 模型、高度模型、长程 Ising 模型等。",
+    "Interacting particle systems and stochastic dynamics": {
+      en: "Interacting particle systems and stochastic dynamics",
+      fr: "Systèmes de particules en interaction et dynamiques stochastiques",
+      zh: "相互作用粒子系统与随机动力学",
+    },
+    "Statistical mechanics: Ising-type models, XY models, height functions, and phase transitions": {
+      en: "Statistical mechanics: Ising-type models, XY models, height functions, and phase transitions",
+      fr: "Mécanique statistique : modèles de type Ising, modèles XY, fonctions de hauteur et transitions de phase",
+      zh: "统计力学：Ising 型模型、XY 模型、高度函数与相变",
+    },
+    "Mathematical neuroscience: Hawkes processes and stochastic models of neural activity": {
+      en: "Mathematical neuroscience: Hawkes processes and stochastic models of neural activity",
+      fr: "Neurosciences mathématiques : processus de Hawkes et modèles stochastiques de l'activité neuronale",
+      zh: "数学神经科学：Hawkes 过程与神经活动的随机模型",
     },
     "[Apr 2026]": {
       en: "[Apr 2026]",
