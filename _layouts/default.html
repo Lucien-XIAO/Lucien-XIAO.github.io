@@ -22,16 +22,35 @@
         .map((code) => String.fromCharCode(Number(code) - 7))
         .join('');
 
+      const contactMessages = {
+        en: 'Email copied to clipboard',
+        fr: 'Adresse e-mail copiée',
+        zh: '邮箱地址已复制',
+      };
+
+      const currentLanguage = () => {
+        const lang = (document.documentElement.lang || document.documentElement.dataset.language || 'en').toLowerCase();
+        if (lang.startsWith('zh')) return 'zh';
+        if (lang.startsWith('fr')) return 'fr';
+        return 'en';
+      };
+
       document.querySelectorAll('.js-email-link[data-contact-code]').forEach((link) => {
-        link.addEventListener('click', (event) => {
+        link.addEventListener('click', async (event) => {
           event.preventDefault();
 
           const email = decodeContact(link.dataset.contactCode || '');
           const targetSelector = link.dataset.emailTarget;
           const target = targetSelector ? document.querySelector(targetSelector) : null;
-          if (target) target.textContent = email;
+          const fallbackText = email.replace('@', ' [at] ').replace(/\./g, ' dot ');
 
-          window.location.href = `mai${'lto'}:${email}`;
+          try {
+            if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+            await navigator.clipboard.writeText(email);
+            if (target) target.textContent = contactMessages[currentLanguage()];
+          } catch (error) {
+            if (target) target.textContent = fallbackText;
+          }
         });
       });
 

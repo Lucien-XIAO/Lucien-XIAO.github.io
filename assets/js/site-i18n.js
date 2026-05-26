@@ -74,9 +74,9 @@
       zh: "切换深色模式",
     },
     "contact.reveal": {
-      en: "Reveal email",
-      fr: "Afficher l'adresse e-mail",
-      zh: "显示邮箱",
+      en: "Copy email address",
+      fr: "Copier l'adresse e-mail",
+      zh: "复制邮箱地址",
     },
     "footer.copyright": {
       en: "© 2026 Yuguang XIAO. All rights reserved.",
