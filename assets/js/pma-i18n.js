@@ -122,7 +122,7 @@
     },
     "À partir de 2025–2026, le programme M1 a été réformé. L'ancienne UE \"Probabilités approfondies\" a été scindée en Probabilités approfondies (UM4MA311) et une partie de Martingales et contrôle stochastique (UM4MA280).": {
       en: "Starting in 2025-2026, the M1 program was reformed. The former Advanced Probability course unit was split into Advanced Probability (UM4MA311) and part of Martingales and Stochastic Control (UM4MA280).",
-      zh: "从 2025-2026 年起，M1 项目进行了改革。原来的 “Probabilités approfondies” UE 被拆分为 Probabilités approfondies (UM4MA311) 以及 Martingales et contrôle stochastique (UM4MA280) 的一部分。",
+      zh: "从 2025-2026 年起，M1 项目进行了改革。原来的“高等概率”课程被拆分为“高等概率”（UM4MA311）以及“鞅与随机控制”（UM4MA280）的一部分。",
     },
     "Ressources recommandées": {
       en: "Recommended resources",
@@ -147,6 +147,14 @@
     "★ Recommandé (parcours)": {
       en: "★ Recommended (track)",
       zh: "★ 推荐（方向）",
+    },
+    "★ Recommandé (proba app)": {
+      en: "★ Recommended (applied probability)",
+      zh: "★ 推荐（应用概率）",
+    },
+    "★ Recommandé (EDProba)": {
+      en: "★ Recommended (EDProba)",
+      zh: "★ 推荐（EDProba）",
     },
     "Semestre 1": {
       en: "Semester 1",
@@ -228,12 +236,32 @@
       en: "Markov chains and processes (Markov I)",
       zh: "马尔可夫链与过程（Markov I）",
     },
+    "Markov I": {
+      en: "Markov I",
+      zh: "Markov I",
+    },
+    "Markov I : Chaînes de Markov, Processus de Markov et Nuages Poissonniens": {
+      en: "Markov I: Markov chains, Markov processes, and Poisson point clouds",
+      zh: "Markov I：马尔可夫链、马尔可夫过程与泊松点云",
+    },
     "Convergence des Mesures, Grandes Déviations, Percolation": {
       en: "Convergence of measures, large deviations, and percolation",
       zh: "测度收敛、大偏差与渗流",
     },
+    "Convergence des Mesures, Grandes Déviations, Percolation (CGP)": {
+      en: "Convergence of measures, large deviations, and percolation (CGP)",
+      zh: "测度收敛、大偏差与渗流（CGP）",
+    },
     "Markov II — Nuages, Lévy, Excursions": {
       en: "Markov II - Poisson point clouds, Lévy processes, and excursions",
+      zh: "Markov II：泊松点云、Lévy 过程与游程",
+    },
+    "Markov II": {
+      en: "Markov II",
+      zh: "Markov II",
+    },
+    "Markov II : Nuages Poissonniens, Processus de Lévy et Excursions": {
+      en: "Markov II: Poisson point clouds, Lévy processes, and excursions",
       zh: "Markov II：泊松点云、Lévy 过程与游程",
     },
     "Determinantal processes, random matrices and hyperuniformity": {
@@ -637,6 +665,30 @@
     "Inégalités de concentration": {
       en: "Concentration inequalities",
       zh: "集中不等式",
+    },
+    "Examen": {
+      en: "Exam",
+      zh: "考试",
+    },
+    "Examen écrit": {
+      en: "Written exam",
+      zh: "笔试",
+    },
+    "Projet": {
+      en: "Project",
+      zh: "项目",
+    },
+    "Projet + Examen": {
+      en: "Project + exam",
+      zh: "项目 + 考试",
+    },
+    "Projets personnels": {
+      en: "Personal projects",
+      zh: "个人项目",
+    },
+    "Non précisé": {
+      en: "Not specified",
+      zh: "未说明",
     },
 
     "Validation du 1er Semestre & Redoublement": {
@@ -1133,6 +1185,26 @@
       en: "Defense BEFORE December 15. Diploma available in January/February, without ceremony",
       zh: "12 月 15 日之前答辩。文凭可在一月/二月领取（无仪式）",
     },
+    "attestation de réussite du M2": {
+      en: "M2 completion certificate",
+      zh: "M2 通过证明",
+    },
+    "30 septembre": {
+      en: "September 30",
+      zh: "9 月 30 日",
+    },
+    "Cérémonie de remise mi-décembre": {
+      en: "Graduation ceremony in mid-December",
+      zh: "12 月中旬毕业典礼",
+    },
+    "Prévenir I. Kourkova entre le 15 et le 30 sept.": {
+      en: "Notify I. Kourkova between September 15 and 30",
+      zh: "9 月 15 日至 30 日之间通知 I. Kourkova",
+    },
+    "Soutenance AVANT le 15 décembre": {
+      en: "Defense BEFORE December 15",
+      zh: "12 月 15 日前答辩",
+    },
     "3. Redoublement": {
       en: "3. Retaking the year",
       zh: "3. 留级",
@@ -1222,6 +1294,10 @@
       en: "Stochastic Calculus and Diffusion Processes",
       zh: "随机微积分与扩散过程",
     },
+    "Calcul Stochastique et Processus de Diffusion (CS)": {
+      en: "Stochastic Calculus and Diffusion Processes (CS)",
+      zh: "随机微积分与扩散过程（CS）",
+    },
     "Cours fondamental du M2-PMA : du mouvement brownien aux équations différentielles stochastiques.": {
       en: "Core M2-PMA course: from Brownian motion to stochastic differential equations.",
       zh: "M2-PMA 核心课程：从布朗运动到随机微分方程。",
@@ -1234,9 +1310,33 @@
       en: "Theory of Poisson point clouds, Lévy processes, and excursion theory.",
       zh: "泊松点云理论、Lévy 过程与游程理论。",
     },
+    "Pour la majeure Probabilités appliquées et EDProba, seuls 6 ECTS sont retenus — la partie Nuages de Poisson n'est pas au programme.": {
+      en: "For the Applied Probability and EDProba tracks, only 6 ECTS are counted; the Poisson point cloud part is not included in the syllabus.",
+      zh: "对于应用概率方向和 EDProba 方向，只计 6 ECTS；泊松点云部分不在课程要求内。",
+    },
     "Détails du cours": {
       en: "Course details",
       zh: "课程详情",
+    },
+    "Ressources": {
+      en: "Resources",
+      zh: "资源",
+    },
+    "Ressources du cours": {
+      en: "Course resources",
+      zh: "课程资源",
+    },
+    "Polycopié": {
+      en: "Lecture notes",
+      zh: "讲义",
+    },
+    "Polycopié & TDs": {
+      en: "Lecture notes & problem sheets",
+      zh: "讲义与习题",
+    },
+    "Matériaux additionnels (In English 🇬🇧)": {
+      en: "Additional materials (in English)",
+      zh: "补充材料（英文）",
     },
     "Professeur": {
       en: "Instructor",
@@ -1254,9 +1354,69 @@
       en: "Website",
       zh: "网站",
     },
+    "Site officiel du cours": {
+      en: "Official course website",
+      zh: "课程官网",
+    },
     "Contenu du cours": {
       en: "Course content",
       zh: "课程内容",
+    },
+    "Convergence des mesures de probabilité": {
+      en: "Convergence of probability measures",
+      zh: "概率测度收敛",
+    },
+    "Théorie des grandes déviations": {
+      en: "Large deviation theory",
+      zh: "大偏差理论",
+    },
+    "Percolation": {
+      en: "Percolation",
+      zh: "渗流",
+    },
+    "Filtrations et Martingales": {
+      en: "Filtrations and martingales",
+      zh: "滤过与鞅",
+    },
+    "Mouvement Brownien": {
+      en: "Brownian motion",
+      zh: "布朗运动",
+    },
+    "Intégration Stochastique": {
+      en: "Stochastic integration",
+      zh: "随机积分",
+    },
+    "Semi-martingales continues": {
+      en: "Continuous semimartingales",
+      zh: "连续半鞅",
+    },
+    "Équations Différentielles Stochastiques (EDS)": {
+      en: "Stochastic differential equations (SDEs)",
+      zh: "随机微分方程（SDE）",
+    },
+    "Chaînes de Markov (incluant les graphes aléatoires)": {
+      en: "Markov chains, including random graphs",
+      zh: "马尔可夫链（包括随机图）",
+    },
+    "Processus de Markov et applications (temps continu, espace d'états discret)": {
+      en: "Markov processes and applications (continuous time, discrete state space)",
+      zh: "马尔可夫过程及应用（连续时间、离散状态空间）",
+    },
+    "Nuages de Poisson": {
+      en: "Poisson point clouds",
+      zh: "泊松点云",
+    },
+    "Nuages Poissonniens (Poissonian Clouds)": {
+      en: "Poisson point clouds",
+      zh: "泊松点云",
+    },
+    "Processus de Lévy": {
+      en: "Lévy processes",
+      zh: "Lévy 过程",
+    },
+    "Théorie des Excursions": {
+      en: "Excursion theory",
+      zh: "游程理论",
     },
     "Cours magistral + TD": {
       en: "Lecture + problem session",
@@ -1270,21 +1430,73 @@
       en: "Lecture course (no problem sessions)",
       zh: "大课（无习题课）",
     },
+    "6 + 3 ECTS (PS) / 6 ECTS (autres)": {
+      en: "6 + 3 ECTS (Stochastic Processes) / 6 ECTS (other tracks)",
+      zh: "6 + 3 ECTS（随机过程方向）/ 6 ECTS（其他方向）",
+    },
     "Tous les matériaux (polycopiés, TDs, corrigés) sont disponibles directement sur le site web officiel du cours.": {
       en: "All materials (lecture notes, problem sheets, solutions) are available directly on the official course website.",
       zh: "所有材料（讲义、习题、解答）都可以直接在课程官方网站上获取。",
+    },
+    "Polycopié du cours": {
+      en: "Course lecture notes",
+      zh: "课程讲义",
+    },
+    "TDs (énoncés)": {
+      en: "Problem sheets",
+      zh: "习题题目",
     },
     "Accéder au site du cours": {
       en: "Open the course website",
       zh: "打开课程网站",
     },
+    "Polycopié (2023–2024)": {
+      en: "Lecture notes, 2023-2024",
+      zh: "讲义，2023-2024",
+    },
     "Polycopié version 2023–2024": {
       en: "Lecture notes, 2023-2024 version",
       zh: "讲义，2023-2024 版",
     },
+    "Polycopié (2015–2016)": {
+      en: "Lecture notes, 2015-2016",
+      zh: "讲义，2015-2016",
+    },
     "Polycopié version 2015–2016": {
       en: "Lecture notes, 2015-2016 version",
       zh: "讲义，2015-2016 版",
+    },
+    "Solutions des TDs": {
+      en: "Problem sheet solutions",
+      zh: "习题解答",
+    },
+    "Solutions Le Gall": {
+      en: "Le Gall solutions",
+      zh: "Le Gall 解答",
+    },
+    "M2 Revisions – N. Fournier": {
+      en: "M2 revision notes - N. Fournier",
+      zh: "M2 复习讲义 - N. Fournier",
+    },
+    "Martingales & Chaînes de Markov – Baldi et al.": {
+      en: "Martingales & Markov chains - Baldi et al.",
+      zh: "鞅与马尔可夫链 - Baldi 等",
+    },
+    "Le Gall (version française)": {
+      en: "Le Gall (French version)",
+      zh: "Le Gall（法文版）",
+    },
+    "Le Gall – BM, Martingales & SC": {
+      en: "Le Gall - Brownian motion, martingales & stochastic calculus",
+      zh: "Le Gall - 布朗运动、鞅与随机微积分",
+    },
+    "Mörters & Peres – Brownian Motion": {
+      en: "Mörters & Peres - Brownian Motion",
+      zh: "Mörters & Peres - 布朗运动",
+    },
+    "Revuz & Yor – Continuous Martingales": {
+      en: "Revuz & Yor - Continuous Martingales",
+      zh: "Revuz & Yor - 连续鞅",
     },
   };
 
