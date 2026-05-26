@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ising Random Interface</title>
+  <script src="/assets/js/site-i18n.js" defer></script>
   <style>
     :root {
       --bg: #fff;
@@ -264,6 +265,10 @@
   </main>
 
   <script>
+    function t(source) {
+      return window.SiteI18n ? window.SiteI18n.text(source) : source;
+    }
+
     const BETA_CRITICAL = 0.5 * Math.log(1 + Math.sqrt(2));
     const TEMPERATURE_CRITICAL = 1 / BETA_CRITICAL;
     const COLORS = {
@@ -502,7 +507,9 @@
       const board = cssSize - pad * 2;
       const heights = model.interfaceHeight();
       const roughness = model.roughness(heights);
-      const phaseText = model.temperature < TEMPERATURE_CRITICAL ? "low T, phase separated" : "high T, disordered";
+      const phaseText = model.temperature < TEMPERATURE_CRITICAL
+        ? t("low T, phase separated")
+        : t("high T, disordered");
 
       ctx.clearRect(0, 0, cssSize, cssSize);
       ctx.fillStyle = "#fff";
@@ -590,15 +597,15 @@
       ctx.textBaseline = "middle";
 
       ctx.fillStyle = "rgba(200, 68, 60, 0.95)";
-      ctx.fillText("+ boundary", pad + board / 2, 18);
+      ctx.fillText(t("+ boundary"), pad + board / 2, 18);
 
       ctx.fillStyle = "rgba(49, 93, 168, 0.95)";
-      ctx.fillText("- boundary", pad + board / 2, cssSize - 28);
+      ctx.fillText(t("- boundary"), pad + board / 2, cssSize - 28);
 
       ctx.translate(17, pad + board / 4);
       ctx.rotate(-Math.PI / 2);
       ctx.fillStyle = "rgba(200, 68, 60, 0.9)";
-      ctx.fillText("+ fixed", 0, 0);
+      ctx.fillText(t("+ fixed"), 0, 0);
       ctx.restore();
 
       ctx.save();
@@ -608,7 +615,7 @@
       ctx.font = "700 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillText("- fixed", 0, 0);
+      ctx.fillText(t("- fixed"), 0, 0);
       ctx.restore();
     }
 
@@ -624,9 +631,13 @@
     temperatureValue.addEventListener("change", (event) => syncTemperature(event.target.value));
     sizeSelect.addEventListener("change", rebuildModel);
 
+    function renderToggleLabel() {
+      toggle.textContent = running ? t("Pause") : t("Run");
+    }
+
     toggle.addEventListener("click", () => {
       running = !running;
-      toggle.textContent = running ? "Pause" : "Run";
+      renderToggleLabel();
       toggle.classList.toggle("primary", running);
     });
 
@@ -635,18 +646,22 @@
     thermalize.addEventListener("click", () => {
       const previous = running;
       running = false;
-      toggle.textContent = "Run";
+      renderToggleLabel();
       toggle.classList.remove("primary");
       setTimeout(() => {
         model.run(700);
         draw();
         running = previous;
-        toggle.textContent = running ? "Pause" : "Run";
+        renderToggleLabel();
         toggle.classList.toggle("primary", running);
       }, 20);
     });
 
     window.addEventListener("resize", draw);
+    window.addEventListener("site-language-change", () => {
+      renderToggleLabel();
+      draw();
+    });
 
     setupCanvas();
     model.run(250);

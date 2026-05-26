@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bond Percolation</title>
+    <script src="/assets/js/site-i18n.js" defer></script>
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
@@ -76,6 +77,12 @@
     <canvas id="cvs" width="650" height="650"></canvas>
 
     <script>
+        function t(source) {
+            return window.SiteI18n ? window.SiteI18n.text(source) : source;
+        }
+
+        let lastClusterCount = null;
+
         // --- 核心算法 (不变) ---
         class UF {
             constructor(n) { this.p = [...Array(n).keys()]; }
@@ -102,7 +109,7 @@
             let p = parseFloat(pInput.value);
             if(isNaN(p)) p = 0.5;
             
-            stats.innerText = "Computing...";
+            stats.innerText = t("Computing...");
             
             // 延迟执行以防止UI卡顿
             setTimeout(() => {
@@ -204,9 +211,18 @@
                 // 统计
                 let roots = new Set();
                 for(let i=0; i<num; i++) if(active[i]) roots.add(uf.find(i));
-                stats.innerText = `Done. Active clusters: ${roots.size}`;
+                lastClusterCount = roots.size;
+                stats.innerText = `${t("Done. Active clusters:")} ${lastClusterCount}`;
             }, 10);
         }
+
+        window.addEventListener("site-language-change", () => {
+            const stats = document.getElementById("stats");
+            if (!stats) return;
+            stats.innerText = lastClusterCount === null
+                ? t("Ready")
+                : `${t("Done. Active clusters:")} ${lastClusterCount}`;
+        });
         
         // 自动运行一次
         window.onload = run;

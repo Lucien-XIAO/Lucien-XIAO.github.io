@@ -10,23 +10,30 @@
 main:
     
   - title: "Publications"
+    i18n_key: nav.publications
     url: /pub/
 
   - title: "Talks"
+    i18n_key: nav.talks
     url: /talks/    
 
   - title: "Teaching"
+    i18n_key: nav.teaching
     url: /teaching/   
     
   - title: "CV"
+    i18n_key: nav.cv
     url: /cv/
   
   - title: "M2-PMA (25-26)"
+    i18n_key: nav.pma
     url: /PMA/   
 
   - title: "MathReader"
+    i18n_key: nav.mathreader
     url: /mathreader/
 
   - title: "Misc"
+    i18n_key: nav.misc
     url: /misc/   
     

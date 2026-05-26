@@ -127,6 +127,46 @@ body.theme-claude .nav-left a.nav-active {
   background: rgba(194, 113, 79, 0.1);
 }
 
+body.theme-claude .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+body.theme-claude .language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+body.theme-claude .language-flag {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--claude-border);
+  border-radius: 50%;
+  background: var(--claude-social-bg);
+  color: var(--claude-text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(61, 57, 41, 0.05);
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+body.theme-claude .language-flag:hover {
+  border-color: rgba(194, 113, 79, 0.46);
+  background: rgba(194, 113, 79, 0.08);
+  transform: translateY(-1px);
+}
+
+body.theme-claude .language-flag[hidden] {
+  display: none;
+}
 
 body.theme-claude .nav-right .theme-toggle {
   background: none;
@@ -733,6 +773,22 @@ body.theme-claude strong {
     body.theme-claude .nav-right {
       flex-shrink: 0;
       margin-left: 10px;
+      gap: 6px;
+    }
+
+    body.theme-claude .language-switcher {
+      gap: 4px;
+    }
+
+    body.theme-claude .language-flag {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+
+    body.theme-claude .nav-right .theme-toggle {
+      font-size: 18px;
+      padding: 6px;
     }
     
     body.theme-claude .page-wrapper {

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3D Ising Box Random Interface</title>
+  <script src="/assets/js/site-i18n.js" defer></script>
   <style>
     :root {
       --bg: #fff;
@@ -242,6 +243,10 @@
   <script type="module">
     import * as THREE from "three";
     import { OrbitControls } from "https://unpkg.com/three@0.164.1/examples/jsm/controls/OrbitControls.js";
+
+    function t(source) {
+      return window.SiteI18n ? window.SiteI18n.text(source) : source;
+    }
 
     const BETA_CRITICAL_3D = 0.2216544;
     const TEMPERATURE_CRITICAL = 1 / BETA_CRITICAL_3D;
@@ -704,10 +709,10 @@
       const compact = window.innerWidth < 560;
 
       if (compact) {
-        labelObjects.push(makeLabel("+ top", "#c8443c", new THREE.Vector3(-half * 0.1, outside + 0.9, outside + 0.8), 3.0));
-        labelObjects.push(makeLabel("- bottom", "#315da8", new THREE.Vector3(-half * 0.1, -outside + 2.1, outside + 0.9), 3.0));
-        labelObjects.push(makeLabel("+ fixed", "#c8443c", new THREE.Vector3(half * 0.75, model.L / 4, outside * 0.22), 2.9));
-        labelObjects.push(makeLabel("- fixed", "#315da8", new THREE.Vector3(half * 0.75, -model.L / 4, outside * 0.22), 2.9));
+        labelObjects.push(makeLabel(t("+ top"), "#c8443c", new THREE.Vector3(-half * 0.1, outside + 0.9, outside + 0.8), 3.0));
+        labelObjects.push(makeLabel(t("- bottom"), "#315da8", new THREE.Vector3(-half * 0.1, -outside + 2.1, outside + 0.9), 3.0));
+        labelObjects.push(makeLabel(t("+ fixed"), "#c8443c", new THREE.Vector3(half * 0.75, model.L / 4, outside * 0.22), 2.9));
+        labelObjects.push(makeLabel(t("- fixed"), "#315da8", new THREE.Vector3(half * 0.75, -model.L / 4, outside * 0.22), 2.9));
 
         for (const label of labelObjects) {
           boardGroup.add(label);
@@ -715,10 +720,10 @@
         return;
       }
 
-      labelObjects.push(makeLabel("+ top boundary", "#c8443c", new THREE.Vector3(0, outside + 1.2, outside + 2.2), 3.8));
-      labelObjects.push(makeLabel("- bottom boundary", "#315da8", new THREE.Vector3(-half * 0.25, -outside + 2.0, outside + 2.2), 3.1));
-      labelObjects.push(makeLabel("+ fixed side", "#c8443c", new THREE.Vector3(outside + 0.5, model.L / 4, outside * 0.34), 3.0));
-      labelObjects.push(makeLabel("- fixed side", "#315da8", new THREE.Vector3(outside + 0.5, -model.L / 4, outside * 0.34), 3.0));
+      labelObjects.push(makeLabel(t("+ top boundary"), "#c8443c", new THREE.Vector3(0, outside + 1.2, outside + 2.2), 3.8));
+      labelObjects.push(makeLabel(t("- bottom boundary"), "#315da8", new THREE.Vector3(-half * 0.25, -outside + 2.0, outside + 2.2), 3.1));
+      labelObjects.push(makeLabel(t("+ fixed side"), "#c8443c", new THREE.Vector3(outside + 0.5, model.L / 4, outside * 0.34), 3.0));
+      labelObjects.push(makeLabel(t("- fixed side"), "#315da8", new THREE.Vector3(outside + 0.5, -model.L / 4, outside * 0.34), 3.0));
 
       for (const label of labelObjects) {
         boardGroup.add(label);
@@ -753,7 +758,9 @@
 
       const roughness = model.roughness(heights);
       const magnetization = model.magnetization();
-      const phaseText = model.temperature < TEMPERATURE_CRITICAL ? "low T, phase separated" : "high T, disordered";
+      const phaseText = model.temperature < TEMPERATURE_CRITICAL
+        ? t("low T, phase separated")
+        : t("high T, disordered");
       stats.innerHTML = [
         `T=<strong>${model.temperature.toFixed(2)}</strong>`,
         `beta=<strong>${model.beta.toFixed(3)}</strong>`,
@@ -816,9 +823,13 @@
     temperatureValue.addEventListener("change", (event) => syncTemperature(event.target.value));
     sizeSelect.addEventListener("change", rebuildModel);
 
+    function renderToggleLabel() {
+      toggle.textContent = running ? t("Pause") : t("Run");
+    }
+
     toggle.addEventListener("click", () => {
       running = !running;
-      toggle.textContent = running ? "Pause" : "Run";
+      renderToggleLabel();
       toggle.classList.toggle("primary", running);
     });
 
@@ -827,13 +838,13 @@
     thermalize.addEventListener("click", () => {
       const wasRunning = running;
       running = false;
-      toggle.textContent = "Run";
+      renderToggleLabel();
       toggle.classList.remove("primary");
       setTimeout(() => {
         model.run(60);
         updateSceneGeometry();
         running = wasRunning;
-        toggle.textContent = running ? "Pause" : "Run";
+        renderToggleLabel();
         toggle.classList.toggle("primary", running);
       }, 20);
     });
@@ -841,6 +852,12 @@
     window.addEventListener("resize", () => {
       resizeRenderer();
       fitCamera();
+    });
+    window.addEventListener("site-language-change", () => {
+      renderToggleLabel();
+      clearObjects(labelObjects);
+      addLabels();
+      updateSceneGeometry();
     });
 
     resizeRenderer();

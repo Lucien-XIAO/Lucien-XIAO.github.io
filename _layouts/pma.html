@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ page.lang | default: 'fr' }}" data-default-lang="{{ page.lang | default: 'fr' }}">
 <head>
+  <script src="/assets/js/pma-i18n.js?v=2" defer></script>
   {% include head.html %}
   <link rel="stylesheet" href="/assets/css/pma-theme.css">
   <script>
@@ -19,7 +20,7 @@
   {% include nav.html %}
   <div class="pma-wrapper">
     <nav class="pma-breadcrumb">
-      <a href="/"><i class="fa-solid fa-house"></i> Accueil</a>
+      <a href="/"><i class="fa-solid fa-house"></i> <span data-i18n="pma.breadcrumb.home">Accueil</span></a>
       {% if page.parent_title %}
         <span class="breadcrumb-sep">›</span>
         <a href="{{ page.parent_url }}">{{ page.parent_title }}</a>
