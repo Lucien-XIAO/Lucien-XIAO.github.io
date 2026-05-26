@@ -73,11 +73,6 @@
       fr: "Changer le mode sombre",
       zh: "切换深色模式",
     },
-    "sidebar.tagline": {
-      en: "Probability and random models",
-      fr: "Probabilités et modèles aléatoires",
-      zh: "概率论与随机模型",
-    },
     "contact.reveal": {
       en: "Reveal email",
       fr: "Afficher l'adresse e-mail",

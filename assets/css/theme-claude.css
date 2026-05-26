@@ -1059,13 +1059,6 @@ body.theme-claude .site-name-cn {
   margin-bottom: 10px;
 }
 
-body.theme-claude .site-tagline {
-  color: var(--claude-teal);
-  font-size: 13px;
-  font-weight: 600;
-  margin: 0 0 10px;
-}
-
 body.theme-claude .social-icons a {
   border: 1px solid rgba(194, 113, 79, 0.08);
   box-shadow: 0 4px 14px rgba(61, 57, 41, 0.08);
