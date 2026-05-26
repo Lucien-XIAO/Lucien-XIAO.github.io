@@ -210,7 +210,7 @@
     },
     "4 UEs · 30 ECTS": {
       en: "4 course units · 30 ECTS",
-      zh: "4 门 UE · 30 ECTS",
+      zh: "4 门课 · 30 ECTS",
     },
     "6 cours optionnels": {
       en: "6 optional courses",
@@ -223,6 +223,46 @@
     "9 ECTS · Nuages Poissonniens": {
       en: "9 ECTS · Poisson point clouds",
       zh: "9 ECTS · 泊松点云",
+    },
+    "Chaînes et Processus de Markov (Markov I)": {
+      en: "Markov chains and processes (Markov I)",
+      zh: "马尔可夫链与过程（Markov I）",
+    },
+    "Convergence des Mesures, Grandes Déviations, Percolation": {
+      en: "Convergence of measures, large deviations, and percolation",
+      zh: "测度收敛、大偏差与渗流",
+    },
+    "Markov II — Nuages, Lévy, Excursions": {
+      en: "Markov II - Poisson point clouds, Lévy processes, and excursions",
+      zh: "Markov II：泊松点云、Lévy 过程与游程",
+    },
+    "Determinantal processes, random matrices and hyperuniformity": {
+      en: "Determinantal processes, random matrices, and hyperuniformity",
+      zh: "行列式点过程、随机矩阵与超均匀性",
+    },
+    "Invariance conforme en mécanique statistique": {
+      en: "Conformal invariance in statistical mechanics",
+      zh: "统计力学中的共形不变性",
+    },
+    "Modèles probabilistes pour les neurosciences": {
+      en: "Probabilistic models for neuroscience",
+      zh: "神经科学中的概率模型",
+    },
+    "Integrable probability and the KPZ universality class": {
+      en: "Integrable probability and the KPZ universality class",
+      zh: "可积概率与 KPZ 普适类",
+    },
+    "Ising model": {
+      en: "Ising model",
+      zh: "Ising 模型",
+    },
+    "rapport": {
+      en: "report",
+      zh: "报告",
+    },
+    "diapo": {
+      en: "slides",
+      zh: "幻灯片",
     },
     "Ressources & Informations": {
       en: "Resources & Information",
@@ -1180,7 +1220,7 @@
     },
     "Calcul Stochastique et Processus de Diffusion": {
       en: "Stochastic Calculus and Diffusion Processes",
-      zh: "随机积分与扩散过程",
+      zh: "随机微积分与扩散过程",
     },
     "Cours fondamental du M2-PMA : du mouvement brownien aux équations différentielles stochastiques.": {
       en: "Core M2-PMA course: from Brownian motion to stochastic differential equations.",
@@ -1282,8 +1322,11 @@
     ".legend-label",
     ".semester-label",
     ".ue-name",
+    ".parcours-sem-label",
+    ".parcours-sem-ects",
     ".parcours-course-name",
     ".parcours-course-sub",
+    ".parcours-doc-link",
     ".info-link-card-title",
     ".info-link-card-desc",
     ".pma-main h2",
@@ -1344,6 +1387,7 @@
   function collect() {
     document.querySelectorAll(SELECTORS.join(",")).forEach((element) => {
       if (element.dataset.pmaI18nReady) return;
+      if (element.classList.contains("parcours-course-sub") && element.querySelector(".parcours-doc-link")) return;
       element.dataset.pmaI18nReady = "true";
       element.dataset.pmaI18nText = translationKey(element);
       element.dataset.pmaI18nHtml = element.innerHTML;
