@@ -116,9 +116,9 @@
       en: "M1 thesis",
       zh: "M1 论文",
     },
-    "L'admission accorde la plus grande importance aux notes de Probabilités Approfondies (avec Thierry Lévy). Toute note supérieure à 14/20 est très compétitive. Ce cours est le prérequis essentiel : espérance conditionnelle, martingales, convergence des martingales, chaînes de Markov.": {
-      en: "Admission gives the greatest importance to grades in Advanced Probability with Thierry Lévy. Any grade above 14/20 is very competitive. This course is the essential prerequisite: conditional expectation, martingales, martingale convergence, and Markov chains.",
-      zh: "录取时最看重的是 Thierry Lévy 的高等概率课程成绩。任何高于 14/20 的成绩都非常有竞争力。这门课是核心先修课：条件期望、鞅、鞅收敛、马尔可夫链。",
+    "L'admission accorde la plus grande importance aux notes de Probabilités Approfondies (avec Thierry LÉVY). Toute note supérieure à 14/20 est très compétitive. Ce cours est le prérequis essentiel : espérance conditionnelle, martingales, convergence des martingales, chaînes de Markov.": {
+      en: "Admission gives the greatest importance to grades in Advanced Probability with Thierry LÉVY. Any grade above 14/20 is very competitive. This course is the essential prerequisite: conditional expectation, martingales, martingale convergence, and Markov chains.",
+      zh: "录取时最看重的是 Thierry LÉVY 的高等概率课程成绩。任何高于 14/20 的成绩都非常有竞争力。这门课是核心先修课：条件期望、鞅、鞅收敛、马尔可夫链。",
     },
     "À partir de 2025–2026, le programme M1 a été réformé. L'ancienne UE \"Probabilités approfondies\" a été scindée en Probabilités approfondies (UM4MA311) et une partie de Martingales et contrôle stochastique (UM4MA280).": {
       en: "Starting in 2025-2026, the M1 program was reformed. The former Advanced Probability course unit was split into Advanced Probability (UM4MA311) and part of Martingales and Stochastic Control (UM4MA280).",
@@ -397,13 +397,13 @@
       en: "Laboratories: LJLL, LPSM, MAP5, IMJ, etc.",
       zh: "实验室：LJLL、LPSM、MAP5、IMJ 等",
     },
-    "Président de l'ED : Idris Kharroubi": {
-      en: "Head of the doctoral school: Idris Kharroubi",
-      zh: "博士学院负责人：Idris Kharroubi",
+    "Président de l'ED : Idris KHARROUBI": {
+      en: "Head of the doctoral school: Idris KHARROUBI",
+      zh: "博士学院负责人：Idris KHARROUBI",
     },
-    "Secrétariat : Jean-François Venutti": {
-      en: "Administration: Jean-François Venutti",
-      zh: "秘书处：Jean-François Venutti",
+    "Secrétariat : Jean-François VENUTTI": {
+      en: "Administration: Jean-François VENUTTI",
+      zh: "秘书处：Jean-François VENUTTI",
     },
     "Site web : ed386.sorbonne-universite.fr": {
       en: "Website: ed386.sorbonne-universite.fr",
@@ -1112,9 +1112,9 @@
       en: "Supervision: double supervision (internship supervisor + Sorbonne Université instructor)",
       zh: "指导：双重指导（实习导师 + 索邦大学教师）",
     },
-    "Convention : Via la plateforme SU (signature via Yann Poncin)": {
-      en: "Agreement: via the SU platform (signature via Yann Poncin)",
-      zh: "协议：通过 SU 平台办理（由 Yann Poncin 签署流程）",
+    "Convention : Via la plateforme SU (signature via Yann PONCIN)": {
+      en: "Agreement: via the SU platform (signature via Yann PONCIN)",
+      zh: "协议：通过 SU 平台办理（由 Yann PONCIN 签署流程）",
     },
     "Durée et Délais": {
       en: "Duration and deadlines",
@@ -1197,9 +1197,9 @@
       en: "Graduation ceremony in mid-December",
       zh: "12 月中旬毕业典礼",
     },
-    "Prévenir I. Kourkova entre le 15 et le 30 sept.": {
-      en: "Notify I. Kourkova between September 15 and 30",
-      zh: "9 月 15 日至 30 日之间通知 I. Kourkova",
+    "Prévenir I. KOURKOVA entre le 15 et le 30 sept.": {
+      en: "Notify I. KOURKOVA between September 15 and 30",
+      zh: "9 月 15 日至 30 日之间通知 I. KOURKOVA",
     },
     "Soutenance AVANT le 15 décembre": {
       en: "Defense BEFORE December 15",
@@ -1213,9 +1213,9 @@
       en: "Semester 1 validated / Wish to postpone S2",
       zh: "第一学期已通过 / 希望延后第二学期",
     },
-    "Prévenir I. Kourkova entre le 15 et le 30 sept.(Clôture logicielle des réinscriptions par SU le 30/09)": {
-      en: "Notify I. Kourkova between September 15 and 30 (SU closes the re-enrollment software on 30/09)",
-      zh: "在 9 月 15 日至 30 日之间通知 I. Kourkova（SU 重新注册系统于 9 月 30 日关闭）",
+    "Prévenir I. KOURKOVA entre le 15 et le 30 sept.(Clôture logicielle des réinscriptions par SU le 30/09)": {
+      en: "Notify I. KOURKOVA between September 15 and 30 (SU closes the re-enrollment software on 30/09)",
+      zh: "在 9 月 15 日至 30 日之间通知 I. KOURKOVA（SU 重新注册系统于 9 月 30 日关闭）",
     },
     "2. Modalités de Soutenance (Mémoire / Stage)": {
       en: "2. Defense procedures (thesis / internship)",
@@ -1245,9 +1245,9 @@
       en: "The advisor reads the report, invites 2-3 specialists, and sets the date.",
       zh: "导师阅读报告，邀请 2-3 位专家，并确定日期。",
     },
-    "L'encadrant envoie la note + une justification (selon la grille du M2) à I. Kourkova.": {
-      en: "The advisor sends the grade and a justification, following the M2 scale, to I. Kourkova.",
-      zh: "导师根据 M2 评分标准，将成绩和说明发送给 I. Kourkova。",
+    "L'encadrant envoie la note + une justification (selon la grille du M2) à I. KOURKOVA.": {
+      en: "The advisor sends the grade and a justification, following the M2 scale, to I. KOURKOVA.",
+      zh: "导师根据 M2 评分标准，将成绩和说明发送给 I. KOURKOVA。",
     },
     "Rappeler la deadline du 30 septembre à l'encadrant. Ne pas envoyer le rapport à la direction.": {
       en: "Remind the advisor of the September 30 deadline. Do not send the report to the program direction.",
@@ -1257,29 +1257,29 @@
       en: "Company (bank, EDF, CEA...)",
       zh: "企业（银行、EDF、CEA 等）",
     },
-    "Prendre contact avec I. Kourkova pour fixer la date (Jussieu ou en ligne). L'encadrant entreprise doit être présent.": {
-      en: "Contact I. Kourkova to set the date, either at Jussieu or online. The company supervisor must be present.",
-      zh: "联系 I. Kourkova 确定日期（Jussieu 现场或线上）。企业导师必须出席。",
+    "Prendre contact avec I. KOURKOVA pour fixer la date (Jussieu ou en ligne). L'encadrant entreprise doit être présent.": {
+      en: "Contact I. KOURKOVA to set the date, either at Jussieu or online. The company supervisor must be present.",
+      zh: "联系 I. KOURKOVA 确定日期（Jussieu 现场或线上）。企业导师必须出席。",
     },
-    "I. Kourkova évalue la soutenance (ou L. Abbas-Turki pour la finance).": {
-      en: "I. Kourkova evaluates the defense (or L. Abbas-Turki for finance).",
-      zh: "由 I. Kourkova 评估答辩（金融方向由 L. Abbas-Turki）。",
+    "I. KOURKOVA évalue la soutenance (ou L. ABBAS-TURKI pour la finance).": {
+      en: "I. KOURKOVA evaluates the defense (or L. ABBAS-TURKI for finance).",
+      zh: "由 I. KOURKOVA 评估答辩（金融方向由 L. ABBAS-TURKI）。",
     },
-    "Envoyer le rapport à I. Kourkova à l'avance pour qu'elle l'étudie.": {
-      en: "Send the report to I. Kourkova in advance so that she can review it.",
-      zh: "提前将报告发送给 I. Kourkova，以便她阅读。",
+    "Envoyer le rapport à I. KOURKOVA à l'avance pour qu'elle l'étudie.": {
+      en: "Send the report to I. KOURKOVA in advance so that she can review it.",
+      zh: "提前将报告发送给 I. KOURKOVA，以便她阅读。",
     },
     "3. Thèse et Contrat Doctoral": {
       en: "3. PhD and doctoral contract",
       zh: "3. 博士与博士合同",
     },
-    "Postuler en thèse : Le relevé de notes suffit (Y. Poncin peut fournir un relevé provisoire du S2). Pas besoin d'avoir soutenu. Commencer le contrat (Être payé) : Une attestation de réussite du M2 est OBLIGATOIRE. Elle n'est délivrée qu'une fois le mémoire soutenu (Situation 1). Contrat au 1er octobre : Être en Situation 1 le 30 septembre. Contrat au 1er septembre : Soutenir avant le 31 août et demander l'attestation le 1er septembre à la rentrée.": {
-      en: "Applying for a PhD: the transcript is enough; Y. Poncin can provide a provisional S2 transcript. You do not need to have defended yet. Starting the contract (being paid): a certificate of successful M2 completion is mandatory. It is issued only once the thesis has been defended (Situation 1). Contract starting October 1: be in Situation 1 on September 30. Contract starting September 1: defend before August 31 and request the certificate on September 1 at the start of the academic year.",
-      zh: "申请博士：成绩单即可；Y. Poncin 可以提供第二学期临时成绩单。不需要已经答辩。开始博士合同（获得薪水）：必须有 M2 通过证明。该证明只有在论文答辩完成后才会发放（情况 1）。10 月 1 日开始合同：9 月 30 日必须处于情况 1。9 月 1 日开始合同：8 月 31 日前完成答辩，并在 9 月 1 日开学时申请证明。",
+    "Postuler en thèse : Le relevé de notes suffit (Y. PONCIN peut fournir un relevé provisoire du S2). Pas besoin d'avoir soutenu. Commencer le contrat (Être payé) : Une attestation de réussite du M2 est OBLIGATOIRE. Elle n'est délivrée qu'une fois le mémoire soutenu (Situation 1). Contrat au 1er octobre : Être en Situation 1 le 30 septembre. Contrat au 1er septembre : Soutenir avant le 31 août et demander l'attestation le 1er septembre à la rentrée.": {
+      en: "Applying for a PhD: the transcript is enough; Y. PONCIN can provide a provisional S2 transcript. You do not need to have defended yet. Starting the contract (being paid): a certificate of successful M2 completion is mandatory. It is issued only once the thesis has been defended (Situation 1). Contract starting October 1: be in Situation 1 on September 30. Contract starting September 1: defend before August 31 and request the certificate on September 1 at the start of the academic year.",
+      zh: "申请博士：成绩单即可；Y. PONCIN 可以提供第二学期临时成绩单。不需要已经答辩。开始博士合同（获得薪水）：必须有 M2 通过证明。该证明只有在论文答辩完成后才会发放（情况 1）。10 月 1 日开始合同：9 月 30 日必须处于情况 1。9 月 1 日开始合同：8 月 31 日前完成答辩，并在 9 月 1 日开学时申请证明。",
     },
-    "Contacts administratifs : Yann Poncin (Scolarité, Attestations, Relevés) | I. Kourkova (Direction, Notes, Soutenances) Attention : Utilisez uniquement votre adresse prenom.nom@etu.sorbonne-universite.fr pour recevoir les invitations aux cérémonies et correspondre avec l'administration.": {
-      en: "Administrative contacts: Yann Poncin (student office, certificates, transcripts) | I. Kourkova (direction, grades, defenses). Important: use only your prenom.nom@etu.sorbonne-universite.fr address to receive ceremony invitations and correspond with the administration.",
-      zh: "行政联系人：Yann Poncin（学籍、证明、成绩单）| I. Kourkova（项目管理、成绩、答辩）。注意：请只使用 prenom.nom@etu.sorbonne-universite.fr 邮箱接收仪式邀请并与行政部门通信。",
+    "Contacts administratifs : Yann PONCIN (Scolarité, Attestations, Relevés) | I. KOURKOVA (Direction, Notes, Soutenances) Attention : Utilisez uniquement votre adresse prenom.nom@etu.sorbonne-universite.fr pour recevoir les invitations aux cérémonies et correspondre avec l'administration.": {
+      en: "Administrative contacts: Yann PONCIN (student office, certificates, transcripts) | I. KOURKOVA (direction, grades, defenses). Important: use only your prenom.nom@etu.sorbonne-universite.fr address to receive ceremony invitations and correspond with the administration.",
+      zh: "行政联系人：Yann PONCIN（学籍、证明、成绩单）| I. KOURKOVA（项目管理、成绩、答辩）。注意：请只使用 prenom.nom@etu.sorbonne-universite.fr 邮箱接收仪式邀请并与行政部门通信。",
     },
 
     "Convergence des Mesures, Grandes Déviations et Percolation": {
@@ -1470,33 +1470,33 @@
       en: "Problem sheet solutions",
       zh: "习题解答",
     },
-    "Solutions Le Gall": {
-      en: "Le Gall solutions",
-      zh: "Le Gall 解答",
+    "Solutions LE GALL": {
+      en: "LE GALL solutions",
+      zh: "LE GALL 解答",
     },
-    "M2 Revisions – N. Fournier": {
-      en: "M2 revision notes - N. Fournier",
-      zh: "M2 复习讲义 - N. Fournier",
+    "M2 Revisions – N. FOURNIER": {
+      en: "M2 revision notes - N. FOURNIER",
+      zh: "M2 复习讲义 - N. FOURNIER",
     },
-    "Martingales & Chaînes de Markov – Baldi et al.": {
-      en: "Martingales & Markov chains - Baldi et al.",
-      zh: "鞅与马尔可夫链 - Baldi 等",
+    "Martingales & Chaînes de Markov – BALDI et al.": {
+      en: "Martingales & Markov chains - BALDI et al.",
+      zh: "鞅与马尔可夫链 - BALDI 等",
     },
-    "Le Gall (version française)": {
-      en: "Le Gall (French version)",
-      zh: "Le Gall（法文版）",
+    "LE GALL (version française)": {
+      en: "LE GALL (French version)",
+      zh: "LE GALL（法文版）",
     },
-    "Le Gall – BM, Martingales & SC": {
-      en: "Le Gall - Brownian motion, martingales & stochastic calculus",
-      zh: "Le Gall - 布朗运动、鞅与随机微积分",
+    "LE GALL – BM, Martingales & SC": {
+      en: "LE GALL - Brownian motion, martingales & stochastic calculus",
+      zh: "LE GALL - 布朗运动、鞅与随机微积分",
     },
-    "Mörters & Peres – Brownian Motion": {
-      en: "Mörters & Peres - Brownian Motion",
-      zh: "Mörters & Peres - 布朗运动",
+    "MÖRTERS & PERES – Brownian Motion": {
+      en: "MÖRTERS & PERES - Brownian Motion",
+      zh: "MÖRTERS & PERES - 布朗运动",
     },
-    "Revuz & Yor – Continuous Martingales": {
-      en: "Revuz & Yor - Continuous Martingales",
-      zh: "Revuz & Yor - 连续鞅",
+    "REVUZ & YOR – Continuous Martingales": {
+      en: "REVUZ & YOR - Continuous Martingales",
+      zh: "REVUZ & YOR - 连续鞅",
     },
   };
 

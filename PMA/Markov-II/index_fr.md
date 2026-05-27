@@ -23,7 +23,7 @@ breadcrumb: Markov II
     <div class="course-meta-grid">
       <div class="course-meta-item">
         <div class="course-meta-label">Professeur</div>
-        <div class="course-meta-value"><a href="https://perso.lpsm.paris/~tduquesne/" target="_blank">Thomas Duquesne</a></div>
+        <div class="course-meta-value"><a href="https://perso.lpsm.paris/~tduquesne/" target="_blank">Thomas DUQUESNE</a></div>
       </div>
       <div class="course-meta-item">
         <div class="course-meta-label">Crédits ECTS</div>

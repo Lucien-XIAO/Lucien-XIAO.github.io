@@ -24,7 +24,7 @@ breadcrumb: Calcul Stochastique
     <div class="course-meta-grid">
       <div class="course-meta-item">
         <div class="course-meta-label">Professeur</div>
-        <div class="course-meta-value"><a href="https://perso.lpsm.paris/~nfournier/" target="_blank">Nicolas Fournier</a></div>
+        <div class="course-meta-value"><a href="https://perso.lpsm.paris/~nfournier/" target="_blank">Nicolas FOURNIER</a></div>
       </div>
       <div class="course-meta-item">
         <div class="course-meta-label">Crédits ECTS</div>
@@ -66,10 +66,10 @@ breadcrumb: Calcul Stochastique
   <div class="resource-group">
     <div class="resource-group-title"><i class="fa-brands fa-firefox-browser"></i> Matériaux additionnels <span style="font-size:12px;font-weight:400;color:var(--claude-secondary);">(In English 🇬🇧)</span></div>
     <div class="resource-grid">
-      <a class="resource-btn" href="/PMA/CS/le_gall/Brownian_motion.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Le Gall – BM, Martingales &amp; SC</a>
-      <a class="resource-btn" href="/PMA/CS/le_gall/Solution_Brownian_Motion.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Solutions Le Gall</a>
-      <a class="resource-btn" href="/PMA/CS/Brownian_Motion.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Mörters &amp; Peres – Brownian Motion</a>
-      <a class="resource-btn" href="https://link.springer.com/book/10.1007/978-3-662-06400-9" target="_blank"><i class="fa-solid fa-book"></i> Revuz &amp; Yor – Continuous Martingales</a>
+      <a class="resource-btn" href="/PMA/CS/le_gall/Brownian_motion.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> LE GALL – BM, Martingales &amp; SC</a>
+      <a class="resource-btn" href="/PMA/CS/le_gall/Solution_Brownian_Motion.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Solutions LE GALL</a>
+      <a class="resource-btn" href="/PMA/CS/Brownian_Motion.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> MÖRTERS &amp; PERES – Brownian Motion</a>
+      <a class="resource-btn" href="https://link.springer.com/book/10.1007/978-3-662-06400-9" target="_blank"><i class="fa-solid fa-book"></i> REVUZ &amp; YOR – Continuous Martingales</a>
     </div>
   </div>
 </div>

@@ -30,57 +30,57 @@ breadcrumb: Cours S2
       </thead>
       <tbody>
         <tr>
-          <td>B. Fernandez</td>
+          <td>B. FERNANDEZ</td>
           <td>La dynamique du modèle de Kuramoto</td>
           <td>Étude d'article, approfondissement du cours</td>
         </tr>
         <tr>
-          <td>R. Dujardin</td>
+          <td>R. DUJARDIN</td>
           <td>Introduction à la théorie ergodique</td>
           <td>Oral (si &lt; 6–7 étudiants), sinon Examen</td>
         </tr>
         <tr>
-          <td>A. Erschler</td>
+          <td>A. ERSCHLER</td>
           <td>Invariants asymptotiques et marches aléatoires…</td>
           <td>Dépendra du nombre d'étudiants</td>
         </tr>
         <tr>
-          <td>C. Boutiller, T. Lupu</td>
+          <td>C. BOUTILLER, T. LUPU</td>
           <td>Mécanique statistique critique en dimension 2…</td>
           <td>Oral — liste de sujets 10j avant, exposé 30 min + questions</td>
         </tr>
         <tr>
-          <td>G. Barraquand</td>
+          <td>G. BARRAQUAND</td>
           <td>Probabilités Intégrables et la classe KPZ</td>
           <td><span class="badge badge-red">Examen écrit</span></td>
         </tr>
         <tr>
-          <td>P. Lammers</td>
+          <td>P. LAMMERS</td>
           <td>Modèle d'Ising</td>
           <td><span class="badge badge-red">Examen</span></td>
         </tr>
         <tr>
-          <td>B. Jourdain</td>
+          <td>B. JOURDAIN</td>
           <td>Transport optimal (martingale)</td>
           <td><span class="badge badge-red">Examen</span></td>
         </tr>
         <tr>
-          <td>A. Riera</td>
+          <td>A. RIERA</td>
           <td>Géométrie planaire discrète aléatoire</td>
           <td>Dépendra du nombre d'étudiants</td>
         </tr>
         <tr>
-          <td>I. Castillo</td>
+          <td>I. CASTILLO</td>
           <td>Bayésien non paramétrique et applications</td>
           <td><span class="badge badge-red">Examen</span></td>
         </tr>
         <tr>
-          <td>O. Wintenberger</td>
+          <td>O. WINTENBERGER</td>
           <td>Théorie et Analyse des Valeurs Extrêmes</td>
           <td><span class="badge badge-blue">Projet</span> + <span class="badge badge-red">Examen</span></td>
         </tr>
         <tr>
-          <td>R. Lachièze-Rey</td>
+          <td>R. LACHIÈZE-REY</td>
           <td>Determinantal processes, random matrices and hyperuniformity</td>
           <td>Oral de fin de cours (compréhension globale + discussion sur une partie)</td>
         </tr>
@@ -90,42 +90,42 @@ breadcrumb: Cours S2
           <td><span class="badge badge-orange">Non précisé</span></td>
         </tr>
         <tr>
-          <td>N. Broutin</td>
+          <td>N. BROUTIN</td>
           <td>Limites d'échelles de graphes aléatoires</td>
           <td>Oral (sauf si grand nombre d'étudiants)</td>
         </tr>
         <tr>
-          <td>J.-F. Delmas</td>
+          <td>J.-F. DELMAS</td>
           <td>Les Grands réseaux aléatoires denses (Graphons)</td>
           <td>Oral type cours + présentation d'article</td>
         </tr>
         <tr>
-          <td>M. Thieullen</td>
+          <td>M. THIEULLEN</td>
           <td>Modèles Probabilistes pour les Neurosciences</td>
           <td>Étude d'article, rapport écrit + présentation orale</td>
         </tr>
         <tr>
-          <td>G. Nuel</td>
+          <td>G. NUEL</td>
           <td>Propagation d'évidence dans les réseaux bayésiens</td>
           <td><span class="badge badge-blue">Projets personnels</span></td>
         </tr>
         <tr>
-          <td>Q. Berger</td>
+          <td>Q. BERGER</td>
           <td>Systèmes désordonnés et polymères dirigés</td>
           <td>Probablement lecture d'article et exposé (dépend du nombre)</td>
         </tr>
         <tr>
-          <td>L. Zambotti</td>
+          <td>L. ZAMBOTTI</td>
           <td>Rough Paths et applications aux EDS</td>
           <td><span class="badge badge-red">Examen</span></td>
         </tr>
         <tr>
-          <td>M. Tomasevic</td>
+          <td>M. TOMASEVIC</td>
           <td>Processus de type McKean-Vlasov et EDP Paraboliques</td>
           <td>Examen écrit (discutable)</td>
         </tr>
         <tr>
-          <td>A. Ben-Hamou</td>
+          <td>A. BEN-HAMOU</td>
           <td>Inégalités de concentration</td>
           <td><span class="badge badge-red">Examen</span></td>
         </tr>

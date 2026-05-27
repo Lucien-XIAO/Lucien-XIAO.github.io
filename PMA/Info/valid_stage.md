@@ -43,7 +43,7 @@ breadcrumb: Validation M2
         <tr>
           <td><strong>3. Redoublement</strong></td>
           <td>Semestre 1 validé<br>Souhait d'ajourner le S2</td>
-          <td><span class="badge badge-red">Prévenir I. Kourkova entre le 15 et le 30 sept.</span><br>(Clôture logicielle des réinscriptions par SU le 30/09)</td>
+          <td><span class="badge badge-red">Prévenir I. KOURKOVA entre le 15 et le 30 sept.</span><br>(Clôture logicielle des réinscriptions par SU le 30/09)</td>
         </tr>
       </tbody>
     </table>
@@ -64,14 +64,14 @@ breadcrumb: Validation M2
         <tr>
           <td><strong>Académique</strong><br><small>(Labo, ENS, X, INRIA...)</small></td>
           <td>L'encadrant lit le rapport, convoque 2-3 spécialistes et fixe la date.</td>
-          <td>L'encadrant envoie la note + une justification (selon la grille du M2) à I. Kourkova.</td>
+          <td>L'encadrant envoie la note + une justification (selon la grille du M2) à I. KOURKOVA.</td>
           <td>Rappeler la deadline du <span class="badge badge-red">30 septembre</span> à l'encadrant. Ne pas envoyer le rapport à la direction.</td>
         </tr>
         <tr>
           <td><strong>Entreprise</strong><br><small>(Banque, EDF, CEA...)</small></td>
-          <td>Prendre contact avec I. Kourkova pour fixer la date (Jussieu ou en ligne). L'encadrant entreprise doit être présent.</td>
-          <td>I. Kourkova évalue la soutenance (ou L. Abbas-Turki pour la finance).</td>
-          <td>Envoyer le rapport à I. Kourkova à l'avance pour qu'elle l'étudie.</td>
+          <td>Prendre contact avec I. KOURKOVA pour fixer la date (Jussieu ou en ligne). L'encadrant entreprise doit être présent.</td>
+          <td>I. KOURKOVA évalue la soutenance (ou L. ABBAS-TURKI pour la finance).</td>
+          <td>Envoyer le rapport à I. KOURKOVA à l'avance pour qu'elle l'étudie.</td>
         </tr>
       </tbody>
     </table>
@@ -81,7 +81,7 @@ breadcrumb: Validation M2
   <div class="alert alert-tip" style="margin-bottom:24px;">
     <i class="fa-solid fa-file-contract"></i>
     <span>
-      <strong>Postuler en thèse :</strong> Le relevé de notes suffit (Y. Poncin peut fournir un relevé provisoire du S2). Pas besoin d'avoir soutenu.<br><br>
+      <strong>Postuler en thèse :</strong> Le relevé de notes suffit (Y. PONCIN peut fournir un relevé provisoire du S2). Pas besoin d'avoir soutenu.<br><br>
       <strong>Commencer le contrat (Être payé) :</strong> Une <span class="badge badge-blue">attestation de réussite du M2</span> est OBLIGATOIRE. Elle n'est délivrée qu'une fois le mémoire soutenu (Situation 1).
       <ul style="margin-top: 8px; margin-bottom: 0; padding-left: 20px;">
         <li><em>Contrat au 1er octobre :</em> Être en Situation 1 le 30 septembre.</li>
@@ -94,7 +94,7 @@ breadcrumb: Validation M2
     <i class="fa-solid fa-address-book" style="color: #475569;"></i>
     <span style="color: #334155;">
       <strong>Contacts administratifs :</strong><br>
-      Yann Poncin (Scolarité, Attestations, Relevés) | I. Kourkova (Direction, Notes, Soutenances)<br>
+      Yann PONCIN (Scolarité, Attestations, Relevés) | I. KOURKOVA (Direction, Notes, Soutenances)<br>
       <strong style="color: #ef4444;">Attention :</strong> Utilisez uniquement votre adresse <code>prenom.nom@etu.sorbonne-universite.fr</code> pour recevoir les invitations aux cérémonies et correspondre avec l'administration.
     </span>
   </div>

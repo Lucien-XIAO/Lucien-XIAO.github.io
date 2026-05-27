@@ -57,7 +57,7 @@ layout: pma
 
   <div class="alert alert-important">
     <i class="fa-solid fa-triangle-exclamation"></i>
-    <span>L'admission accorde la <strong>plus grande importance aux notes de Probabilités Approfondies</strong> (avec <a href="https://www.lpsm.paris/users/levyt/probas_approfondies" style="font-weight:700">Thierry Lévy</a>). Toute note supérieure à <strong>14/20</strong> est très compétitive. Ce cours est le prérequis essentiel : espérance conditionnelle, martingales, convergence des martingales, chaînes de Markov.</span>
+    <span>L'admission accorde la <strong>plus grande importance aux notes de Probabilités Approfondies</strong> (avec <a href="https://www.lpsm.paris/users/levyt/probas_approfondies" style="font-weight:700">Thierry LÉVY</a>). Toute note supérieure à <strong>14/20</strong> est très compétitive. Ce cours est le prérequis essentiel : espérance conditionnelle, martingales, convergence des martingales, chaînes de Markov.</span>
   </div>
 
   <div class="alert alert-warning">
@@ -68,9 +68,9 @@ layout: pma
   <div class="resource-group" style="margin-top:20px;">
     <div class="resource-group-title"><i class="fa-solid fa-book"></i> Ressources recommandées</div>
     <div class="resource-grid">
-      <a class="resource-btn" href="https://www.imo.universite-paris-saclay.fr/~jean-francois.le-gall/IPPA2.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Le Gall (version française)</a>
-      <a class="resource-btn" href="/PMA/M2_Revisions.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> M2 Revisions – N. Fournier</a>
-      <a class="resource-btn" href="https://www.editions-hermann.fr/livre/martingales-et-chaines-de-markov-paolo-baldi" target="_blank"><i class="fa-solid fa-book"></i> Martingales &amp; Chaînes de Markov – Baldi et al.</a>
+      <a class="resource-btn" href="https://www.imo.universite-paris-saclay.fr/~jean-francois.le-gall/IPPA2.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> LE GALL (version française)</a>
+      <a class="resource-btn" href="/PMA/M2_Revisions.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> M2 Revisions – N. FOURNIER</a>
+      <a class="resource-btn" href="https://www.editions-hermann.fr/livre/martingales-et-chaines-de-markov-paolo-baldi" target="_blank"><i class="fa-solid fa-book"></i> Martingales &amp; Chaînes de Markov – BALDI et al.</a>
     </div>
   </div>
 </div>

@@ -23,7 +23,7 @@ breadcrumb: CGP
     <div class="course-meta-grid">
       <div class="course-meta-item">
         <div class="course-meta-label">Professeur</div>
-        <div class="course-meta-value"><a href="https://www.lpsm.paris/users/levyt/index" target="_blank">Thierry Lévy</a></div>
+        <div class="course-meta-value"><a href="https://www.lpsm.paris/users/levyt/index" target="_blank">Thierry LÉVY</a></div>
       </div>
       <div class="course-meta-item">
         <div class="course-meta-label">Crédits ECTS</div>

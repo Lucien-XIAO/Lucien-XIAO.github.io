@@ -165,7 +165,7 @@ breadcrumb: Règles S2
   <li><i class="fa-solid fa-lock"></i> <strong>Pré-requis :</strong> Validation du 1er semestre obligatoire (compensation acceptée)</li>
   <li><i class="fa-solid fa-file-signature"></i> <strong>Validation pédagogique :</strong> Soumettre la fiche de stage <strong>avant</strong> signature</li>
   <li><i class="fa-solid fa-users"></i> <strong>Encadrement :</strong> Double encadrement (Maître de stage + Enseignant Sorbonne Université)</li>
-  <li><i class="fa-solid fa-pen-to-square"></i> <strong>Convention :</strong> Via la plateforme SU (signature via Yann Poncin)</li>
+  <li><i class="fa-solid fa-pen-to-square"></i> <strong>Convention :</strong> Via la plateforme SU (signature via Yann PONCIN)</li>
 </ul>
 
 <h3 class="sub-section-title"><i class="fa-solid fa-hourglass-half"></i> Durée et Délais</h3>

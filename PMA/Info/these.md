@@ -56,8 +56,8 @@ breadcrumb: Doctorat
   <ul class="ed-box-list">
     <li><i class="fa-solid fa-university"></i> <strong>Universités :</strong> Sorbonne Université, Université Paris Diderot, Université Paris Descartes</li>
     <li><i class="fa-solid fa-flask"></i> <strong>Laboratoires :</strong> LJLL, LPSM, MAP5, IMJ, etc.</li>
-    <li><i class="fa-solid fa-user"></i> <strong>Président de l'ED :</strong> Idris Kharroubi</li>
-    <li><i class="fa-solid fa-envelope"></i> <strong>Secrétariat :</strong> Jean-François Venutti</li>
+    <li><i class="fa-solid fa-user"></i> <strong>Président de l'ED :</strong> Idris KHARROUBI</li>
+    <li><i class="fa-solid fa-envelope"></i> <strong>Secrétariat :</strong> Jean-François VENUTTI</li>
     <li><i class="fa-solid fa-globe"></i> <strong>Site web :</strong> <a href="http://ed386.sorbonne-universite.fr/fr/index.html" target="_blank">ed386.sorbonne-universite.fr</a></li>
   </ul>
 </div>
