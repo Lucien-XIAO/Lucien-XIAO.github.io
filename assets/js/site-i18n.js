@@ -136,6 +136,11 @@
       fr: "Centres d'intérêt",
       zh: "研究兴趣",
     },
+    "Research Directions": {
+      en: "Research Directions",
+      fr: "Axes de recherche",
+      zh: "研究方向",
+    },
     "News": {
       en: "News",
       fr: "Actualités",
@@ -155,6 +160,11 @@
       en: "Various Notes",
       fr: "Notes diverses",
       zh: "学习笔记",
+    },
+    "Selected Materials": {
+      en: "Selected Materials",
+      fr: "Documents choisis",
+      zh: "精选材料",
     },
     "Probability": {
       en: "Probability",
@@ -195,6 +205,66 @@
       en: "Mathematical neuroscience: Hawkes processes and stochastic models of neural activity",
       fr: "Neurosciences mathématiques : processus de Hawkes et modèles stochastiques de l'activité neuronale",
       zh: "数学神经科学：Hawkes 过程与神经活动的随机模型",
+    },
+    "Stochastic Processes": {
+      en: "Stochastic Processes",
+      fr: "Processus stochastiques",
+      zh: "随机过程",
+    },
+    "I am interested in random walks, Markov and non-Markovian dynamics, and the probabilistic structures behind memory effects.": {
+      en: "I am interested in random walks, Markov and non-Markovian dynamics, and the probabilistic structures behind memory effects.",
+      fr: "Je m'intéresse aux marches aléatoires, aux dynamiques markoviennes et non markoviennes, ainsi qu'aux structures probabilistes derrière les effets de mémoire.",
+      zh: "我关注随机游走、马尔可夫与非马尔可夫动力学，以及记忆效应背后的概率结构。",
+    },
+    "Statistical Mechanics": {
+      en: "Statistical Mechanics",
+      fr: "Mécanique statistique",
+      zh: "统计力学",
+    },
+    "My current work concerns long-range Ising-type models and related questions on phase transitions, interfaces, and interacting particle systems.": {
+      en: "My current work concerns long-range Ising-type models and related questions on phase transitions, interfaces, and interacting particle systems.",
+      fr: "Mes travaux actuels portent sur des modèles de type Ising à longue portée et sur des questions liées aux transitions de phase, aux interfaces et aux systèmes de particules en interaction.",
+      zh: "我目前的工作围绕长程 Ising 型模型，以及相变、界面和相互作用粒子系统中的相关问题展开。",
+    },
+    "Mathematical Modeling": {
+      en: "Mathematical Modeling",
+      fr: "Modélisation mathématique",
+      zh: "数学建模",
+    },
+    "I also enjoy probabilistic models arising from collective motion and neuroscience, especially Hawkes processes and stochastic models of neural activity.": {
+      en: "I also enjoy probabilistic models arising from collective motion and neuroscience, especially Hawkes processes and stochastic models of neural activity.",
+      fr: "Je m'intéresse aussi aux modèles probabilistes issus du mouvement collectif et des neurosciences, en particulier aux processus de Hawkes et aux modèles stochastiques de l'activité neuronale.",
+      zh: "我也对来自集体运动和神经科学的概率模型感兴趣，尤其是 Hawkes 过程和神经活动的随机模型。",
+    },
+    "Academic background and research experience.": {
+      en: "Academic background and research experience.",
+      fr: "Formation académique et expériences de recherche.",
+      zh: "教育背景与研究经历。",
+    },
+    "PMA Path": {
+      en: "PMA Path",
+      fr: "Parcours PMA",
+      zh: "PMA 课程路径",
+    },
+    "Notes on the M2 Probability and Random Models program.": {
+      en: "Notes on the M2 Probability and Random Models program.",
+      fr: "Notes sur le M2 Probabilités et Modèles Aléatoires.",
+      zh: "关于 M2 概率与随机模型项目的整理。",
+    },
+    "A macOS tool for reading and organizing mathematical papers.": {
+      en: "A macOS tool for reading and organizing mathematical papers.",
+      fr: "Un outil macOS pour lire et organiser des articles mathématiques.",
+      zh: "用于阅读和整理数学论文的 macOS 工具。",
+    },
+    "Measure Theory Notes": {
+      en: "Measure Theory Notes",
+      fr: "Notes de théorie de la mesure",
+      zh: "测度论笔记",
+    },
+    "Self-compiled notes, currently in progress.": {
+      en: "Self-compiled notes, currently in progress.",
+      fr: "Notes personnelles en cours de rédaction.",
+      zh: "个人整理的笔记，目前仍在完善中。",
     },
     "[Apr 2026]": {
       en: "[Apr 2026]",
