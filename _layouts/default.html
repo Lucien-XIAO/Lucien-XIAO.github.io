@@ -35,6 +35,51 @@
         return 'en';
       };
 
+      let contactToastTimer;
+      const showContactToast = (message) => {
+        let toast = document.querySelector('.contact-toast');
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.className = 'contact-toast';
+          toast.setAttribute('role', 'status');
+          toast.setAttribute('aria-live', 'polite');
+          document.body.appendChild(toast);
+        }
+
+        toast.textContent = message;
+        window.clearTimeout(contactToastTimer);
+        toast.classList.add('is-visible');
+        contactToastTimer = window.setTimeout(() => {
+          toast.classList.remove('is-visible');
+        }, 1600);
+      };
+
+      const copyText = async (text) => {
+        if (navigator.clipboard && window.isSecureContext) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch (error) {
+            // Fall back to the selection-based copy path below.
+          }
+        }
+
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        textarea.setSelectionRange(0, textarea.value.length);
+        try {
+          return document.execCommand('copy');
+        } finally {
+          textarea.remove();
+        }
+      };
+
       document.querySelectorAll('.js-email-link[data-contact-code]').forEach((link) => {
         link.addEventListener('click', async (event) => {
           event.preventDefault();
@@ -45,11 +90,12 @@
           const fallbackText = email.replace('@', ' [at] ').replace(/\./g, ' dot ');
 
           try {
-            if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
-            await navigator.clipboard.writeText(email);
-            if (target) target.textContent = contactMessages[currentLanguage()];
+            const copied = await copyText(email);
+            if (!copied) throw new Error('Copy unavailable');
+            showContactToast(contactMessages[currentLanguage()]);
           } catch (error) {
             if (target) target.textContent = fallbackText;
+            showContactToast(contactMessages[currentLanguage()]);
           }
         });
       });
