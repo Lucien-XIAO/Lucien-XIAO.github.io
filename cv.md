@@ -105,8 +105,8 @@ title: Curriculum Vitae
               <span style="font-size: 20px;">🇫🇷</span>
               <strong>French</strong> <span style="opacity: 0.6; font-size: 13px;">(Fluent)</span>
             </div>
-            <div style="color: #fbbf24; font-size: 18px; letter-spacing: 2px;" title="4/5">
-              ★★★★☆
+            <div class="skill-stars" title="3.5/5">
+              ★★★<span class="half-star">★</span><span class="empty-star">★</span>
             </div>
           </div>
 
@@ -115,8 +115,8 @@ title: Curriculum Vitae
               <span style="font-size: 20px;">🇬🇧</span>
               <strong>English</strong> <span style="opacity: 0.6; font-size: 13px;">(Fluent)</span>
             </div>
-            <div style="color: #fbbf24; font-size: 18px; letter-spacing: 2px;" title="4/5">
-              ★★★★☆
+            <div class="skill-stars" title="3.5/5">
+              ★★★<span class="half-star">★</span><span class="empty-star">★</span>
             </div>
           </div>
 

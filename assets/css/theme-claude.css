@@ -1283,6 +1283,24 @@ body.theme-claude .material-link em {
   line-height: 1.45;
 }
 
+body.theme-claude .skill-stars {
+  color: #fbbf24;
+  font-size: 18px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+body.theme-claude .skill-stars .half-star {
+  background: linear-gradient(90deg, #fbbf24 0 50%, rgba(140, 133, 119, 0.28) 50% 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+body.theme-claude .skill-stars .empty-star {
+  color: rgba(140, 133, 119, 0.28);
+}
+
 body.theme-claude .news-card {
   display: block;
   max-width: 760px;
