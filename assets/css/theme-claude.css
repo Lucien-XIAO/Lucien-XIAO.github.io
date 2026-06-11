@@ -358,11 +358,11 @@ body.theme-claude .sidebar-map {
   justify-content: center;
   align-items: center;
   margin: 48px auto 0;
-  width: 240px; /* 调整宽度以对齐文字边缘 */
+  width: 240px;
   background-color: transparent;
-  border: none; /* 移除边框 */
+  border: none;
   border-radius: 12px;
-  box-shadow: none; /* 移除阴影 */
+  box-shadow: none;
   transition: all 0.3s ease;
   box-sizing: border-box;
   overflow: hidden;
@@ -371,7 +371,6 @@ body.theme-claude .sidebar-map {
 
 body.theme-claude .sidebar-map:hover {
   transform: translateY(-4px);
-  /* 悬浮时可以保留轻微的阴影或不加，这里先移除以保持极简 */
 }
 
 body.theme-claude .sidebar-map img,
@@ -1934,7 +1933,10 @@ body.theme-claude .mathreader-status h2 {
   }
 
   body.theme-claude .sidebar-map {
-    display: none;
+    display: flex;
+    width: min(210px, 72vw);
+    margin-top: 28px;
+    opacity: 0.82;
   }
 
   body.theme-claude .intro-copy::before {
@@ -1954,6 +1956,11 @@ body.theme-claude .mathreader-status h2 {
 @media (max-width: 480px) {
   body.theme-claude .wrapper {
     padding: 0 24px;
+  }
+
+  body.theme-claude .sidebar-map {
+    width: min(190px, 76vw);
+    margin-top: 24px;
   }
 
   body.theme-claude .card,
