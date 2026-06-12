@@ -373,6 +373,11 @@ body.theme-claude .sidebar-map:hover {
   transform: translateY(-4px);
 }
 
+body.theme-claude .sidebar-map a {
+  display: block;
+  width: 100%;
+}
+
 body.theme-claude .sidebar-map img,
 body.theme-claude .sidebar-map canvas {
   max-width: 100%;
