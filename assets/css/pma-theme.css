@@ -51,7 +51,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--claude-accent);
-  background: rgba(194, 113, 79, 0.1);
+  background: rgba(164, 59, 50, 0.1);
   padding: 5px 14px;
   border-radius: 30px;
   margin-bottom: 18px;
@@ -86,7 +86,7 @@
   text-decoration: none;
   border: 1px solid var(--claude-border);
   color: var(--claude-text);
-  background: rgba(194, 113, 79, 0.05);
+  background: rgba(164, 59, 50, 0.05);
   transition: all 0.2s ease;
 }
 .pma-hero-links a i { color: var(--claude-accent); }
@@ -122,7 +122,7 @@
 
 /* ---- Info Box ---- */
 .info-box {
-  background: rgba(194, 113, 79, 0.06);
+  background: rgba(164, 59, 50, 0.06);
   border-left: 4px solid var(--claude-accent);
   border-radius: 0 10px 10px 0;
   padding: 20px 24px;
@@ -229,9 +229,9 @@
   font-size: 14px;
   color: var(--claude-text);
   padding: 9px 14px;
-  background: rgba(194, 113, 79, 0.04);
+  background: rgba(164, 59, 50, 0.04);
   border-radius: 8px;
-  border: 1px solid rgba(194, 113, 79, 0.1);
+  border: 1px solid rgba(164, 59, 50, 0.1);
 }
 .content-list li::before {
   content: '';
@@ -264,7 +264,7 @@
   padding: 10px 18px;
   border-radius: 10px;
   border: 1px solid var(--claude-border);
-  background: rgba(194, 113, 79, 0.05);
+  background: rgba(164, 59, 50, 0.05);
   color: var(--claude-text);
   font-size: 14px;
   font-weight: 600;
@@ -295,7 +295,7 @@
 .exam-table th {
   text-align: left;
   padding: 11px 16px;
-  background: rgba(194, 113, 79, 0.08);
+  background: rgba(164, 59, 50, 0.08);
   color: var(--claude-accent);
   font-weight: 700;
   font-size: 12px;
@@ -310,7 +310,7 @@
   vertical-align: middle;
 }
 .exam-table tr:last-child td { border-bottom: none; }
-.exam-table tr:hover td { background: rgba(194, 113, 79, 0.03); }
+.exam-table tr:hover td { background: rgba(164, 59, 50, 0.03); }
 .exam-link {
   color: var(--claude-accent);
   text-decoration: none;
@@ -419,7 +419,7 @@
   gap: 8px;
   margin-bottom: 20px;
   padding: 14px 16px;
-  background: rgba(194,113,79,.04);
+  background: rgba(164, 59, 50,.04);
   border-radius: 10px;
   border: 1px solid var(--claude-border);
 }
@@ -451,15 +451,15 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  border-bottom: 2px solid rgba(194,113,79,.1);
+  border-bottom: 2px solid rgba(164, 59, 50,.1);
 }
-.parcours-sem-s1 { background: rgba(194,113,79,.05); border-bottom-color: rgba(194,113,79,.15); }
+.parcours-sem-s1 { background: rgba(164, 59, 50,.05); border-bottom-color: rgba(164, 59, 50,.15); }
 .parcours-sem-s2 { background: rgba(37,99,235,.03); border-bottom-color: rgba(37,99,235,.1); }
 
 .parcours-sem-num {
   font-size: 15px; font-weight: 900;
   color: var(--claude-accent);
-  background: rgba(194,113,79,.1);
+  background: rgba(164, 59, 50,.1);
   width: 32px; height: 32px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 8px;
@@ -543,7 +543,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 }
 .info-link-card-icon {
   width: 40px; height: 40px;
-  background: rgba(194,113,79,.1);
+  background: rgba(164, 59, 50,.1);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -613,7 +613,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
   font-size: 14px;
   color: var(--claude-text);
   line-height: 1.65;
-  background: rgba(194,113,79,.04);
+  background: rgba(164, 59, 50,.04);
   border-radius: 8px;
 }
 .rule-list li > i:first-child {
@@ -650,7 +650,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 
 /* ---- Formula Box ---- */
 .formula-box {
-  background: rgba(194,113,79,.06);
+  background: rgba(164, 59, 50,.06);
   border: 1px solid var(--claude-border);
   border-radius: 10px;
   padding: 20px 24px;
@@ -670,7 +670,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 .grade-table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .grade-table th {
   padding: 10px 16px;
-  background: rgba(194,113,79,.08);
+  background: rgba(164, 59, 50,.08);
   color: var(--claude-accent);
   font-weight: 700; font-size: 12px;
   text-align: left; text-transform: uppercase; letter-spacing: .05em;
@@ -678,7 +678,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 }
 .grade-table td {
   padding: 11px 16px;
-  border-bottom: 1px solid rgba(194,113,79,.1);
+  border-bottom: 1px solid rgba(164, 59, 50,.1);
   vertical-align: top;
   color: var(--claude-text);
   line-height: 1.6;
@@ -741,7 +741,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 .eval-table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .eval-table th {
   padding: 12px 16px;
-  background: rgba(194,113,79,.08);
+  background: rgba(164, 59, 50,.08);
   color: var(--claude-accent);
   font-weight: 700; font-size: 12px;
   text-align: left; white-space: nowrap;
@@ -754,7 +754,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
   color: var(--claude-text); vertical-align: top; line-height: 1.55;
 }
 .eval-table tr:last-child td { border-bottom: none; }
-.eval-table tr:hover td { background: rgba(194,113,79,.03); }
+.eval-table tr:hover td { background: rgba(164, 59, 50,.03); }
 .eval-table td:first-child { font-weight: 600; white-space: nowrap; }
 .eval-table td:nth-child(2) { min-width: 200px; }
 .eval-table td:last-child { min-width: 260px; color: var(--claude-secondary); }
@@ -802,6 +802,206 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
   left: 0; top: 4px;
   color: var(--claude-accent);
   font-size: 13px;
+}
+
+/* ---- Chinese academic refinement ---- */
+.pma-page .pma-wrapper {
+  max-width: 940px;
+}
+
+.pma-breadcrumb {
+  background: rgba(var(--claude-paper-rgb), 0.62);
+  border: 1px solid rgba(164, 59, 50, 0.12);
+  border-radius: 8px;
+  display: inline-flex;
+  padding: 8px 12px;
+}
+
+.pma-hero {
+  background:
+    linear-gradient(135deg, rgba(var(--claude-paper-rgb), 0.86), rgba(47, 111, 104, 0.04)),
+    linear-gradient(90deg, rgba(164, 59, 50, 0.055), transparent 48%);
+  border: 1px solid rgba(164, 59, 50, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgba(52, 68, 61, 0.06);
+  overflow: hidden;
+  padding: 30px 32px;
+  position: relative;
+}
+
+.pma-hero::before {
+  background: linear-gradient(180deg, var(--claude-accent), var(--claude-jade));
+  content: "";
+  height: 72px;
+  left: 0;
+  opacity: 0.58;
+  position: absolute;
+  top: 30px;
+  width: 4px;
+}
+
+.pma-hero-label {
+  background: rgba(164, 59, 50, 0.085);
+  border: 1px solid rgba(164, 59, 50, 0.16);
+  border-radius: 6px;
+  color: var(--claude-accent);
+}
+
+.pma-hero h1,
+.pma-section-title,
+.rule-section-title {
+  font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+}
+
+.pma-hero h1 {
+  color: color-mix(in srgb, var(--claude-text) 92%, var(--claude-jade));
+}
+
+.pma-section-title {
+  border-bottom: 1px solid rgba(164, 59, 50, 0.22);
+  color: var(--claude-text);
+  gap: 12px;
+}
+
+.pma-section-title i {
+  color: var(--claude-jade);
+}
+
+.pma-section-title::before {
+  background: var(--claude-accent);
+  border-radius: 2px;
+  content: "";
+  height: 22px;
+  width: 4px;
+}
+
+.course-info-card,
+.parcours-col,
+.info-link-card,
+.ed-box,
+.condition-card,
+.exam-table-wrapper,
+.eval-table-wrapper {
+  background:
+    linear-gradient(135deg, rgba(var(--claude-paper-rgb), 0.86), rgba(73, 111, 138, 0.035));
+  border-color: rgba(164, 59, 50, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(52, 68, 61, 0.055);
+}
+
+.info-box {
+  background:
+    linear-gradient(90deg, rgba(164, 59, 50, 0.08), rgba(var(--claude-paper-rgb), 0.72) 72%);
+  border-left-color: var(--claude-accent);
+}
+
+.content-list li,
+.rule-list li,
+.timeline-card,
+.calendar-item {
+  background: rgba(var(--claude-paper-rgb), 0.58);
+  border: 1px solid rgba(164, 59, 50, 0.12);
+}
+
+.content-list li::before,
+.calendar-dot {
+  background: var(--claude-jade);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.pma-hero-links a,
+.resource-btn,
+.exam-link,
+.parcours-doc-link {
+  background: rgba(var(--claude-paper-rgb), 0.68);
+  border-color: rgba(164, 59, 50, 0.16);
+}
+
+.pma-hero-links a:hover,
+.resource-btn:hover,
+.exam-link:hover {
+  background: var(--claude-accent);
+  border-color: var(--claude-accent);
+}
+
+.exam-table th,
+.eval-table th {
+  background: rgba(164, 59, 50, 0.075);
+  color: var(--claude-accent);
+}
+
+.ue-item {
+  background: rgba(var(--claude-paper-rgb), 0.72);
+  border-radius: 8px;
+}
+
+.ue-item:hover,
+.info-link-card:hover {
+  border-color: rgba(164, 59, 50, 0.34);
+  box-shadow: 0 14px 32px rgba(52, 68, 61, 0.08);
+}
+
+.parcours-sem-header {
+  border-bottom-color: rgba(164, 59, 50, 0.13);
+}
+
+.parcours-sem-s1 {
+  background: rgba(164, 59, 50, 0.055);
+}
+
+.parcours-sem-s2 {
+  background: rgba(73, 111, 138, 0.055);
+  border-bottom-color: rgba(73, 111, 138, 0.14);
+}
+
+.parcours-sem-num,
+.rule-num,
+.info-link-card-icon {
+  border-radius: 3px;
+}
+
+.parcours-sem-num,
+.rule-num {
+  background: var(--claude-accent);
+  color: #fff9ef;
+}
+
+.parcours-sem-s2 .parcours-sem-num {
+  background: rgba(73, 111, 138, 0.14);
+  color: var(--claude-blue);
+}
+
+.parcours-course-item:hover {
+  background: rgba(164, 59, 50, 0.045);
+}
+
+.parcours-idx {
+  color: rgba(164, 59, 50, 0.28);
+}
+
+.alert-tip {
+  background: rgba(73, 111, 138, 0.08);
+  border-color: rgba(73, 111, 138, 0.22);
+  color: var(--claude-blue);
+}
+
+.alert-warning {
+  background: rgba(180, 124, 48, 0.08);
+  border-color: rgba(180, 124, 48, 0.22);
+  color: #7B5521;
+}
+
+.alert-important {
+  background: rgba(164, 59, 50, 0.075);
+  border-color: rgba(164, 59, 50, 0.22);
+  color: var(--claude-accent);
+}
+
+.alert-success {
+  background: rgba(47, 111, 104, 0.08);
+  border-color: rgba(47, 111, 104, 0.22);
+  color: var(--claude-jade);
 }
 
 /* ---- Responsive ---- */
