@@ -24,7 +24,7 @@
     <div class="visitor-map sidebar-map" aria-label="Visitor globe">
       <div class="visitor-globe-slot"
         data-globe-src="https://cdn.livetrafficfeed.com/static/globe-widget/live.v2.js?w=200&root=1&n=a43b32&o=24302c">
-        <a href="https://s01.flagcounter.com/more/xiaoyuguang" target="_blank" rel="noopener"
+        <a data-globe-fallback href="https://s01.flagcounter.com/more/xiaoyuguang" target="_blank" rel="noopener"
           title="View visitor map details">
           <img
             src="https://s01.flagcounter.com/map/xiaoyuguang/size_t/txt_24302C/border_D6CBBE/pageviews_1/viewers_0/flags_1/"
@@ -39,11 +39,19 @@
 
           if (!isProduction || !slot) return;
 
-          slot.textContent = '';
           var script = document.createElement('script');
+          var fallback = slot.querySelector('[data-globe-fallback]');
           script.type = 'text/javascript';
           script.id = 'LTF_globe';
           script.src = slot.dataset.globeSrc;
+          script.async = true;
+          script.onload = function () {
+            window.setTimeout(function () {
+              if (fallback && slot.querySelector('#LTF_Cont, canvas, iframe')) {
+                fallback.remove();
+              }
+            }, 200);
+          };
           slot.appendChild(script);
         })();
       </script>
