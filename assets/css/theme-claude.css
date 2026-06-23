@@ -3123,3 +3123,68 @@ body.theme-claude .mathreader-mock-ai {
     width: 46px;
   }
 }
+
+/* --- Homepage Paris photo strip --- */
+body.theme-claude.has-paris-strip .paris-photo-strip {
+  background: #101820;
+  border-bottom: 1px solid var(--claude-footer-border);
+  height: 190px;
+  margin-top: 70px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+body.theme-claude.has-paris-strip .paris-photo-strip img {
+  display: block;
+  filter: saturate(0.98) contrast(1.02) brightness(0.96);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  width: 100%;
+}
+
+body.theme-claude.has-paris-strip .paris-photo-strip::after {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.12)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 22%, transparent 78%, rgba(255, 255, 255, 0.10));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+body.theme-claude.has-paris-strip .content {
+  padding-top: 42px;
+}
+
+@media (max-width: 1080px) {
+  body.theme-claude.has-paris-strip .paris-photo-strip {
+    height: 160px;
+  }
+
+  body.theme-claude.has-paris-strip .sidebar {
+    padding-top: 34px;
+  }
+
+  body.theme-claude.has-paris-strip .content {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.theme-claude.has-paris-strip .paris-photo-strip {
+    height: 136px;
+    margin-top: 62px;
+  }
+
+  body.theme-claude.has-paris-strip .sidebar {
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  body.theme-claude.has-paris-strip .paris-photo-strip {
+    height: 118px;
+  }
+}

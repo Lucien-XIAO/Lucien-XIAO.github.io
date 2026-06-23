@@ -3,9 +3,12 @@
 <head>
   {% include head.html %}
 </head>
-<body class="theme-claude">
+<body class="theme-claude has-paris-strip">
   {% include math_float.html %}
   {% include nav.html %}
+  <div class="paris-photo-strip" aria-label="Paris skyline">
+    <img src="/assets/img/paris-banner.jpg?v=1" alt="Paris skyline at night over the Seine" decoding="async" />
+  </div>
   <div class="wrapper">
     {% include sidebar.html %}
     <section class="content">
