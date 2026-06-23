@@ -2486,12 +2486,12 @@ body.theme-claude {
 }
 
 body.theme-claude .math-float-canvas {
-  opacity: 0.22;
+  opacity: 0.12;
 }
 
 body.theme-claude .math-sym {
   color: var(--claude-accent);
-  --sym-opacity: 0.055;
+  --sym-opacity: 0.035;
 }
 
 body.theme-claude .top-nav {
@@ -2621,11 +2621,11 @@ body.theme-claude .site-name {
 body.theme-claude .site-name-cn {
   color: var(--claude-secondary);
   display: block;
-  font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  margin-bottom: 15px;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Inter", sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  margin-bottom: 16px;
 }
 
 body.theme-claude .site-email {
