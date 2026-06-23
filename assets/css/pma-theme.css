@@ -16,8 +16,8 @@ body.theme-claude.pma-page .math-float-canvas {
   border: 1px solid var(--claude-footer-border);
   border-radius: 8px;
   box-sizing: border-box;
-  height: 154px;
-  margin: 104px auto 0;
+  height: 236px;
+  margin: 100px auto 0;
   max-width: 960px;
   overflow: hidden;
   position: relative;
@@ -29,7 +29,7 @@ body.theme-claude.pma-page .math-float-canvas {
   filter: saturate(0.92) contrast(0.98) brightness(0.96);
   height: 100%;
   object-fit: cover;
-  object-position: center 52%;
+  object-position: center 54%;
   width: 100%;
 }
 
@@ -47,7 +47,7 @@ body.theme-claude.pma-page .math-float-canvas {
 .pma-page .pma-wrapper {
   max-width: 960px;
   margin: 0 auto;
-  padding: 28px 40px 80px;
+  padding: 36px 40px 80px;
   box-sizing: border-box;
   min-height: 100vh;
   position: relative;
@@ -1074,7 +1074,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 @media (max-width: 768px) {
   .pma-campus-strip {
     border-radius: 6px;
-    height: 96px;
+    height: 142px;
     margin-top: 84px;
     width: calc(100% - 40px);
   }
@@ -1090,7 +1090,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
     overflow-x: auto;
   }
 
-  .pma-page .pma-wrapper { padding: 24px 20px 60px; }
+  .pma-page .pma-wrapper { padding: 30px 20px 60px; }
   .pma-hero h1 { font-size: 26px; }
   .courses-grid { grid-template-columns: 1fr; }
   .admission-course-grid { grid-template-columns: 1fr; }
