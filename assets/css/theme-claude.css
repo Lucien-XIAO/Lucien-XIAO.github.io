@@ -2402,3 +2402,374 @@ body.theme-claude .mathreader-mock-ai {
     width: 32px;
   }
 }
+
+/* ============================================
+   Homepage redesign: academic dossier
+   ============================================ */
+
+body.theme-claude .home-redesign {
+  --home-panel: rgba(var(--claude-paper-rgb), 0.82);
+  --home-panel-soft: rgba(var(--claude-paper-rgb), 0.58);
+  --home-line: rgba(164, 59, 50, 0.14);
+}
+
+body.theme-claude .home-redesign .section {
+  margin-bottom: 48px;
+}
+
+body.theme-claude .home-hero {
+  align-items: stretch;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: minmax(0, 1.22fr) minmax(260px, 0.78fr);
+  margin-bottom: 54px;
+  padding-top: 4px;
+}
+
+body.theme-claude .home-hero-copy {
+  position: relative;
+}
+
+body.theme-claude .home-hero-copy::before {
+  background: linear-gradient(180deg, var(--claude-accent), var(--claude-jade), transparent);
+  border-radius: 3px;
+  content: "";
+  height: 86px;
+  left: -24px;
+  opacity: 0.46;
+  position: absolute;
+  top: 8px;
+  width: 4px;
+}
+
+body.theme-claude .home-kicker {
+  color: var(--claude-accent);
+  font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  margin: 0 0 13px;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+body.theme-claude .home-hero h1 {
+  color: var(--claude-text);
+  font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+  font-size: 39px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.12;
+  margin: 0 0 22px;
+  max-width: 760px;
+}
+
+body.theme-claude .home-lead {
+  color: var(--claude-text);
+  font-size: 16.5px;
+  line-height: 1.78;
+  margin: 0 0 15px;
+  max-width: 760px;
+}
+
+body.theme-claude .home-lead.secondary {
+  color: var(--claude-secondary);
+}
+
+body.theme-claude .home-lead a {
+  color: var(--claude-accent);
+  font-weight: 600;
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+body.theme-claude .home-lead a:hover {
+  color: var(--claude-jade);
+  text-decoration: underline;
+}
+
+body.theme-claude .home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+body.theme-claude .home-actions a {
+  align-items: center;
+  background: var(--home-panel);
+  border: 1px solid rgba(164, 59, 50, 0.15);
+  border-radius: 8px;
+  color: var(--claude-text);
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 9px;
+  min-height: 40px;
+  padding: 0 14px;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+body.theme-claude .home-actions a i {
+  color: var(--claude-jade);
+}
+
+body.theme-claude .home-actions a:hover {
+  background: rgba(164, 59, 50, 0.08);
+  border-color: rgba(164, 59, 50, 0.32);
+  color: var(--claude-text);
+  transform: translateY(-2px);
+}
+
+body.theme-claude .home-current-panel {
+  align-self: start;
+  background:
+    linear-gradient(135deg, var(--home-panel), rgba(47, 111, 104, 0.052)),
+    linear-gradient(90deg, rgba(164, 59, 50, 0.06), transparent 54%);
+  border: 1px solid rgba(164, 59, 50, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(52, 68, 61, 0.08);
+  min-height: 304px;
+  overflow: hidden;
+  padding: 22px;
+  position: relative;
+}
+
+body.theme-claude .home-current-panel::after {
+  color: rgba(164, 59, 50, 0.08);
+  content: "∂";
+  font-family: "STIX Two Math", "Latin Modern Math", Georgia, serif;
+  font-size: 122px;
+  line-height: 1;
+  position: absolute;
+  right: -10px;
+  top: -16px;
+}
+
+body.theme-claude .current-panel-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+body.theme-claude .current-panel-header span,
+body.theme-claude .current-panel-header strong {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.theme-claude .current-panel-header span {
+  color: var(--claude-accent);
+}
+
+body.theme-claude .current-panel-header strong {
+  color: var(--claude-secondary);
+}
+
+body.theme-claude .current-formula {
+  border-bottom: 1px solid rgba(47, 111, 104, 0.18);
+  border-top: 1px solid rgba(47, 111, 104, 0.18);
+  color: var(--claude-jade);
+  font-family: "STIX Two Math", "Latin Modern Math", "Cambria Math", Georgia, serif;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 22px;
+  padding: 18px 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+body.theme-claude .current-facts {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+body.theme-claude .current-facts div {
+  border-left: 3px solid rgba(164, 59, 50, 0.24);
+  padding-left: 12px;
+}
+
+body.theme-claude .current-facts dt {
+  color: var(--claude-accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+body.theme-claude .current-facts dd {
+  color: var(--claude-text);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+body.theme-claude .research-map-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body.theme-claude .research-map-card {
+  background:
+    linear-gradient(135deg, var(--home-panel), rgba(73, 111, 138, 0.035));
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(52, 68, 61, 0.052);
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  min-height: 210px;
+  padding: 17px;
+  position: relative;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+body.theme-claude .research-map-card:hover {
+  border-color: rgba(164, 59, 50, 0.34);
+  box-shadow: 0 16px 34px rgba(52, 68, 61, 0.08);
+  transform: translateY(-2px);
+}
+
+body.theme-claude .research-map-card .research-direction-index {
+  grid-row: 1 / span 3;
+}
+
+body.theme-claude .research-card-label {
+  color: var(--claude-accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+body.theme-claude .research-map-card h4 {
+  color: var(--claude-text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.32;
+  margin: 0 0 10px;
+}
+
+body.theme-claude .research-map-card p:last-child {
+  color: var(--claude-secondary);
+  font-size: 14px;
+  line-height: 1.62;
+  margin: 0;
+}
+
+body.theme-claude .home-split,
+body.theme-claude .home-timeline-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+}
+
+body.theme-claude .home-note-card {
+  background:
+    linear-gradient(90deg, rgba(164, 59, 50, 0.08), rgba(var(--claude-paper-rgb), 0.72) 72%);
+  border-left: 3px solid var(--claude-accent);
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(52, 68, 61, 0.05);
+  padding: 17px 18px;
+}
+
+body.theme-claude .note-date {
+  color: var(--claude-accent);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+body.theme-claude .home-note-card p {
+  margin: 0;
+}
+
+body.theme-claude .home-materials {
+  grid-template-columns: 1fr;
+}
+
+body.theme-claude .timeline-group-title {
+  align-items: center;
+  color: var(--claude-jade);
+  display: flex;
+  font-size: 12px;
+  font-weight: 850;
+  gap: 9px;
+  letter-spacing: 0.1em;
+  margin: 0 0 18px 20px;
+  text-transform: uppercase;
+}
+
+body.theme-claude .timeline-group-title::before {
+  background: var(--claude-accent);
+  border-radius: 2px;
+  content: "";
+  height: 10px;
+  transform: rotate(45deg);
+  width: 10px;
+}
+
+@media (max-width: 980px) {
+  body.theme-claude .home-hero,
+  body.theme-claude .research-map-grid,
+  body.theme-claude .home-split,
+  body.theme-claude .home-timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.theme-claude .home-current-panel {
+    min-height: 0;
+  }
+
+  body.theme-claude .home-hero h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 560px) {
+  body.theme-claude .home-hero-copy::before {
+    left: -14px;
+  }
+
+  body.theme-claude .home-hero h1 {
+    font-size: 25px;
+    overflow-wrap: normal;
+  }
+
+  body.theme-claude .home-lead {
+    font-size: 15.5px;
+    overflow-wrap: break-word;
+  }
+
+  body.theme-claude .home-actions a {
+    width: 100%;
+  }
+
+  body.theme-claude .research-map-card {
+    grid-template-columns: 34px minmax(0, 1fr);
+    padding: 15px;
+  }
+
+  body.theme-claude .current-formula {
+    font-size: 23px;
+  }
+}

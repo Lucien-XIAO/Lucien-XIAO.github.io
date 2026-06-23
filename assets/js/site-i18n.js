@@ -166,6 +166,106 @@
       fr: "Documents choisis",
       zh: "精选材料",
     },
+    "Probability · Statistical Mechanics · Mathematical Modeling": {
+      en: "Probability · Statistical Mechanics · Mathematical Modeling",
+      fr: "Probabilités · Mécanique statistique · Modélisation mathématique",
+      zh: "概率论 · 统计力学 · 数学建模",
+    },
+    "I study stochastic structures behind interfaces, memory and interacting systems.": {
+      en: "I study stochastic structures behind interfaces, memory and interacting systems.",
+      fr: "J'étudie les structures stochastiques derrière les interfaces, la mémoire et les systèmes en interaction.",
+      zh: "我研究界面、记忆效应与相互作用系统背后的随机结构。",
+    },
+    "View CV": {
+      en: "View CV",
+      fr: "Voir le CV",
+      zh: "查看简历",
+    },
+    "Explore PMA": {
+      en: "Explore PMA",
+      fr: "Explorer le PMA",
+      zh: "浏览 PMA",
+    },
+    "Open MathReader": {
+      en: "Open MathReader",
+      fr: "Ouvrir MathReader",
+      zh: "打开 MathReader",
+    },
+    "Current Focus": {
+      en: "Current Focus",
+      fr: "Travail actuel",
+      zh: "当前重点",
+    },
+    "Problem": {
+      en: "Problem",
+      fr: "Problème",
+      zh: "问题",
+    },
+    "Methods": {
+      en: "Methods",
+      fr: "Méthodes",
+      zh: "方法",
+    },
+    "Place": {
+      en: "Place",
+      fr: "Lieu",
+      zh: "地点",
+    },
+    "Long-range Ising model, interfaces and phase transitions.": {
+      en: "Long-range Ising model, interfaces and phase transitions.",
+      fr: "Modèle d'Ising à longue portée, interfaces et transitions de phase.",
+      zh: "长程 Ising 模型、界面与相变。",
+    },
+    "Random walks, Markov dynamics and interacting particle systems.": {
+      en: "Random walks, Markov dynamics and interacting particle systems.",
+      fr: "Marches aléatoires, dynamiques de Markov et systèmes de particules en interaction.",
+      zh: "随机游走、Markov 动力学与相互作用粒子系统。",
+    },
+    "Research Map": {
+      en: "Research Map",
+      fr: "Carte de recherche",
+      zh: "研究地图",
+    },
+    "Memory, paths and random dynamics": {
+      en: "Memory, paths and random dynamics",
+      fr: "Mémoire, trajectoires et dynamiques aléatoires",
+      zh: "记忆、路径与随机动力学",
+    },
+    "Interfaces and collective behavior": {
+      en: "Interfaces and collective behavior",
+      fr: "Interfaces et comportement collectif",
+      zh: "界面与集体行为",
+    },
+    "Particles, motion and neuroscience": {
+      en: "Particles, motion and neuroscience",
+      fr: "Particules, mouvement et neurosciences",
+      zh: "粒子、运动与神经科学",
+    },
+    "Current Thread": {
+      en: "Current Thread",
+      fr: "Fil actuel",
+      zh: "当前线索",
+    },
+    "Entry Points": {
+      en: "Entry Points",
+      fr: "Points d'entrée",
+      zh: "入口",
+    },
+    "Apr 2026": {
+      en: "Apr 2026",
+      fr: "avr. 2026",
+      zh: "2026 年 4 月",
+    },
+    "Academic Path": {
+      en: "Academic Path",
+      fr: "Parcours académique",
+      zh: "学术路径",
+    },
+    "Research Record": {
+      en: "Research Record",
+      fr: "Expériences de recherche",
+      zh: "研究记录",
+    },
     "Probability": {
       en: "Probability",
       fr: "Probabilités",
@@ -1314,6 +1414,16 @@
   };
 
   const HTML_TRANSLATIONS = {
+    "home.hero.lead": {
+      en: 'I am an M2 student in Probability and Random Models (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>) at <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>, in the Stochastic Processes track. I am currently completing my M2 research internship at <a href="https://lama-umr8050.fr/">LAMA</a> (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>) under the direction of <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>, working on the long-range Ising model and related questions in probability and statistical mechanics.',
+      fr: 'Je suis étudiant en M2 Probabilités et Modèles Aléatoires (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>) à <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>, parcours Processus stochastiques. Je suis actuellement en stage de recherche de M2 au <a href="https://lama-umr8050.fr/">LAMA</a> (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>) sous la direction d\'<a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>, autour du modèle d\'Ising à longue portée et de questions connexes en probabilité et mécanique statistique.',
+      zh: '我是 <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a> 概率与随机模型硕士二年级（<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>）学生，方向为随机过程。目前我在 <a href="https://lama-umr8050.fr/">LAMA</a>（<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>）进行 M2 研究实习，由 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 指导，研究长程 Ising 模型以及概率论和统计力学中的相关问题。',
+    },
+    "home.hero.past": {
+      en: 'Previously, I worked on bi-Lipschitz equivalence of separated nets in Banach spaces with <a href="https://www.alexandroseskenazis.com/">Alexandros ESKENAZIS</a>, and on collective motion modeling with <a href="https://sites.google.com/site/dianepeurichard/home">Diane PEURICHARD</a>.',
+      fr: 'Auparavant, j\'ai travaillé sur l\'équivalence bi-lipschitzienne de réseaux séparés dans les espaces de Banach avec <a href="https://www.alexandroseskenazis.com/">Alexandros ESKENAZIS</a>, ainsi que sur la modélisation du mouvement collectif avec <a href="https://sites.google.com/site/dianepeurichard/home">Diane PEURICHARD</a>.',
+      zh: '此前，我曾与 <a href="https://www.alexandroseskenazis.com/">Alexandros ESKENAZIS</a> 研究 Banach 空间中分离网的双 Lipschitz 等价，也曾与 <a href="https://sites.google.com/site/dianepeurichard/home">Diane PEURICHARD</a> 研究集体运动建模。',
+    },
     "home.about.p1": {
       en: 'I am currently completing my M2 internship at the <a href="https://lama-umr8050.fr/">LAMA</a> (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>), under the supervision of <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>. My internship focuses on the long-range Ising model and related questions in probability and statistical mechanics. I am also a second year Master\'s (M2) student in Probability and Random Models (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>), in the Stochastic Processes track, at <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.',
       fr: 'Je suis actuellement en stage de M2 au <a href="https://lama-umr8050.fr/">LAMA</a> (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>), sous la direction d\'<a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>. Ce stage porte sur le modèle d\'Ising à longue portée et des questions connexes en probabilité et en mécanique statistique. Je suis également étudiant en deuxième année de master (M2) Probabilités et Modèles Aléatoires (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>), parcours processus stochastiques, à <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.',
