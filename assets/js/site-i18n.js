@@ -236,6 +236,21 @@
       fr: "Je m'intéresse aussi aux modèles probabilistes issus du mouvement collectif et des neurosciences, en particulier aux processus de Hawkes et aux modèles stochastiques de l'activité neuronale.",
       zh: "我也对来自集体运动和神经科学的概率模型感兴趣，尤其是 Hawkes 过程和神经活动的随机模型。",
     },
+    "M2-PMA · Stochastic Processes": {
+      en: "M2-PMA · Stochastic Processes",
+      fr: "M2-PMA · Processus stochastiques",
+      zh: "M2-PMA · 随机过程",
+    },
+    "LAMA / UPEC · M2 internship": {
+      en: "LAMA / UPEC · M2 internship",
+      fr: "LAMA / UPEC · Stage de M2",
+      zh: "LAMA / UPEC · M2 实习",
+    },
+    "Long-range Ising model": {
+      en: "Long-range Ising model",
+      fr: "Modèle d'Ising à longue portée",
+      zh: "长程 Ising 模型",
+    },
     "Academic background and research experience.": {
       en: "Academic background and research experience.",
       fr: "Formation académique et expériences de recherche.",
