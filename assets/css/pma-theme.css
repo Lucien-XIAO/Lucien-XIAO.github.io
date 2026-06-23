@@ -5,8 +5,8 @@
 
 body.theme-claude.pma-page {
   background:
-    linear-gradient(180deg, rgba(var(--claude-paper-rgb), 0.74), rgba(var(--claude-paper-rgb), 0.90) 38%, rgba(var(--claude-paper-rgb), 0.94)),
-    url("/assets/img/pma-background.jpg?v=1") center 34% / cover fixed no-repeat;
+    linear-gradient(180deg, rgba(var(--claude-paper-rgb), 0.60), rgba(var(--claude-paper-rgb), 0.80) 38%, rgba(var(--claude-paper-rgb), 0.90)),
+    url("/assets/img/pma-background.jpg?v=2") center 58% / cover fixed no-repeat;
 }
 
 body.theme-claude.pma-page .math-float-canvas {
@@ -1045,7 +1045,8 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 @media (max-width: 768px) {
   body.theme-claude.pma-page {
     background-attachment: scroll;
-    background-position: center top;
+    background-position: center top, center 72%;
+    background-size: auto, auto 128%;
   }
 
   body.theme-claude.pma-page .nav-container {
