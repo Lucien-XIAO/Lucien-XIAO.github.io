@@ -3,13 +3,36 @@
    Extends claude theme palette
    ============================================ */
 
+body.theme-claude.pma-page {
+  background:
+    linear-gradient(180deg, rgba(var(--claude-paper-rgb), 0.74), rgba(var(--claude-paper-rgb), 0.90) 38%, rgba(var(--claude-paper-rgb), 0.94)),
+    url("/assets/img/pma-background.jpg?v=1") center 34% / cover fixed no-repeat;
+}
+
+body.theme-claude.pma-page .math-float-canvas {
+  opacity: 0.08;
+}
+
 /* ---- Page Wrapper ---- */
 .pma-page .pma-wrapper {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 88px 40px 80px;
   box-sizing: border-box;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.pma-page .pma-main {
+  background: rgba(var(--claude-paper-rgb), 0.88);
+  border: 1px solid color-mix(in srgb, var(--claude-border) 78%, transparent);
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 22px 60px rgba(35, 46, 52, 0.10);
+  padding: 34px;
+  width: 100%;
+  backdrop-filter: blur(12px);
 }
 
 .pma-page .site-footer {
@@ -26,6 +49,13 @@
   font-size: 14px;
   color: var(--claude-secondary);
   margin-bottom: 36px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 9px 12px;
+  border: 1px solid color-mix(in srgb, var(--claude-border) 76%, transparent);
+  border-radius: 6px;
+  background: rgba(var(--claude-paper-rgb), 0.82);
+  backdrop-filter: blur(10px);
 }
 .pma-breadcrumb a {
   color: var(--claude-accent);
@@ -189,6 +219,13 @@
   margin-bottom: 28px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--claude-border);
+}
+
+.admission-course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 .course-meta-item { display: flex; flex-direction: column; gap: 5px; }
 .course-meta-label {
@@ -1006,13 +1043,32 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
+  body.theme-claude.pma-page {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  body.theme-claude.pma-page .nav-container {
+    grid-template-columns: minmax(0, 1fr) auto;
+    overflow: hidden;
+  }
+
+  body.theme-claude.pma-page .nav-left {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+  }
+
   .pma-page .pma-wrapper { padding: 76px 20px 60px; }
+  .pma-page .pma-main { padding: 24px 18px; }
   .pma-hero h1 { font-size: 26px; }
   .courses-grid { grid-template-columns: 1fr; }
+  .admission-course-grid { grid-template-columns: 1fr; }
   .course-meta-grid { grid-template-columns: 1fr 1fr; }
   .info-cards-grid { grid-template-columns: 1fr 1fr; }
   .condition-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
+  .course-meta-grid { grid-template-columns: 1fr; }
   .info-cards-grid { grid-template-columns: 1fr; }
 }

@@ -37,7 +37,7 @@ layout: pma
     J'ai été admis au M2-PMA après un M1 Mathématiques et Applications à Sorbonne Université via <strong>eCandidat</strong>. Mes cours de M1 étaient :
   </p>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+  <div class="admission-course-grid">
     <div class="course-info-card" style="margin-bottom:0;">
       <div class="content-list-title">Premier semestre</div>
       <ul class="content-list">
@@ -338,4 +338,3 @@ layout: pma
     </a>
   </div>
 </div>
-
