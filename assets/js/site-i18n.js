@@ -341,10 +341,10 @@
       fr: "Modélisation du mouvement collectif",
       zh: "集体运动建模",
     },
-    "April 2026 - June 2026": {
-      en: "April 2026 - June 2026",
-      fr: "avril 2026 - juin 2026",
-      zh: "2026 年 4 月 - 2026 年 6 月",
+    "April 2026 - July 2026": {
+      en: "April 2026 - July 2026",
+      fr: "avril 2026 - juillet 2026",
+      zh: "2026 年 4 月 - 2026 年 7 月",
     },
     "Report": {
       en: "Report",
@@ -1340,9 +1340,9 @@
       zh: '我很幸运参与过几个研究项目，包括与 <a href="https://www.alexandroseskenazis.com/">Alexandros ESKENAZIS</a> 研究 Banach 空间中分离网的双 Lipschitz 等价，以及与 <a href="https://sites.google.com/site/dianepeurichard/home">Diane PEURICHARD</a> 研究集体运动建模。',
     },
     "home.news.ising": {
-      en: 'I’ll be working on the long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> at Université Paris-Est Créteil (UPEC) as my M2 internship from April 20 to June 20, 2026.',
-      fr: 'Je travaillerai sur le modèle d\'Ising à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> à l\'Université Paris-Est Créteil (UPEC) dans le cadre de mon stage de M2, du 20 avril au 20 juin 2026.',
-      zh: '我将在 2026 年 4 月 20 日至 6 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 做 M2 实习，研究长程 Ising 模型。',
+      en: 'I’ll be working on the long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> at Université Paris-Est Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.',
+      fr: 'Je travaillerai sur le modèle d\'Ising à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> à l\'Université Paris-Est Créteil (UPEC) dans le cadre de mon stage de M2, du 20 avril au 20 juillet 2026.',
+      zh: '我将在 2026 年 4 月 20 日至 7 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 做 M2 实习，研究长程 Ising 模型。',
     },
     "misc.percolation": {
       en: 'Interactive visualization of <em>Bond Percolation</em> on a 2D square lattice. In this model, <strong>p</strong> represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they are connected to at least one open bond, preventing isolated colored nodes. Try varying <strong>p</strong> around the critical threshold (0.5) to observe the phase transition in connectivity.',
