@@ -13,12 +13,15 @@ body.theme-claude.pma-page .math-float-canvas {
 
 .pma-campus-strip {
   background: #dce7e7;
-  border-bottom: 1px solid var(--claude-footer-border);
-  height: 210px;
-  margin-top: 70px;
+  border: 1px solid var(--claude-footer-border);
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 154px;
+  margin: 104px auto 0;
+  max-width: 960px;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: calc(100% - 80px);
 }
 
 .pma-campus-strip img {
@@ -32,8 +35,8 @@ body.theme-claude.pma-page .math-float-canvas {
 
 .pma-campus-strip::after {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.12)),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.16), transparent 22%, transparent 78%, rgba(255, 255, 255, 0.12));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.18)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18), transparent 24%, transparent 76%, rgba(255, 255, 255, 0.16));
   content: "";
   inset: 0;
   pointer-events: none;
@@ -44,7 +47,7 @@ body.theme-claude.pma-page .math-float-canvas {
 .pma-page .pma-wrapper {
   max-width: 960px;
   margin: 0 auto;
-  padding: 34px 40px 80px;
+  padding: 28px 40px 80px;
   box-sizing: border-box;
   min-height: 100vh;
   position: relative;
@@ -1070,8 +1073,10 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   .pma-campus-strip {
-    height: 132px;
-    margin-top: 62px;
+    border-radius: 6px;
+    height: 96px;
+    margin-top: 84px;
+    width: calc(100% - 40px);
   }
 
   body.theme-claude.pma-page .nav-container {
@@ -1085,7 +1090,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
     overflow-x: auto;
   }
 
-  .pma-page .pma-wrapper { padding: 26px 20px 60px; }
+  .pma-page .pma-wrapper { padding: 24px 20px 60px; }
   .pma-hero h1 { font-size: 26px; }
   .courses-grid { grid-template-columns: 1fr; }
   .admission-course-grid { grid-template-columns: 1fr; }
