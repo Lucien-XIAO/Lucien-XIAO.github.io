@@ -4,20 +4,47 @@
    ============================================ */
 
 body.theme-claude.pma-page {
-  background:
-    linear-gradient(180deg, rgba(var(--claude-paper-rgb), 0.60), rgba(var(--claude-paper-rgb), 0.80) 38%, rgba(var(--claude-paper-rgb), 0.90)),
-    url("/assets/img/pma-background.jpg?v=2") center 58% / cover fixed no-repeat;
+  background: var(--claude-bg);
 }
 
 body.theme-claude.pma-page .math-float-canvas {
   opacity: 0.08;
 }
 
+.pma-campus-strip {
+  background: #dce7e7;
+  border-bottom: 1px solid var(--claude-footer-border);
+  height: 210px;
+  margin-top: 70px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.pma-campus-strip img {
+  display: block;
+  filter: saturate(0.92) contrast(0.98) brightness(0.96);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%;
+  width: 100%;
+}
+
+.pma-campus-strip::after {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.12)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16), transparent 22%, transparent 78%, rgba(255, 255, 255, 0.12));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
 /* ---- Page Wrapper ---- */
 .pma-page .pma-wrapper {
   max-width: 960px;
   margin: 0 auto;
-  padding: 88px 40px 80px;
+  padding: 34px 40px 80px;
   box-sizing: border-box;
   min-height: 100vh;
   position: relative;
@@ -25,14 +52,13 @@ body.theme-claude.pma-page .math-float-canvas {
 }
 
 .pma-page .pma-main {
-  background: rgba(var(--claude-paper-rgb), 0.88);
-  border: 1px solid color-mix(in srgb, var(--claude-border) 78%, transparent);
-  border-radius: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   box-sizing: border-box;
-  box-shadow: 0 22px 60px rgba(35, 46, 52, 0.10);
-  padding: 34px;
+  box-shadow: none;
+  padding: 0;
   width: 100%;
-  backdrop-filter: blur(12px);
 }
 
 .pma-page .site-footer {
@@ -1043,10 +1069,9 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
 
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
-  body.theme-claude.pma-page {
-    background-attachment: scroll;
-    background-position: center top, center 72%;
-    background-size: auto, auto 128%;
+  .pma-campus-strip {
+    height: 132px;
+    margin-top: 62px;
   }
 
   body.theme-claude.pma-page .nav-container {
@@ -1060,8 +1085,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
     overflow-x: auto;
   }
 
-  .pma-page .pma-wrapper { padding: 76px 20px 60px; }
-  .pma-page .pma-main { padding: 24px 18px; }
+  .pma-page .pma-wrapper { padding: 26px 20px 60px; }
   .pma-hero h1 { font-size: 26px; }
   .courses-grid { grid-template-columns: 1fr; }
   .admission-course-grid { grid-template-columns: 1fr; }
