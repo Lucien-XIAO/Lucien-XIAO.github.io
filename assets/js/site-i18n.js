@@ -93,6 +93,11 @@
       fr: "Profil académique",
       zh: "学术概况",
     },
+    "cv.personal_photographs": {
+      en: "Personal photographs",
+      fr: "Photographies personnelles",
+      zh: "个人照片",
+    },
   };
 
   const TEXT_TRANSLATIONS = {
@@ -495,6 +500,11 @@
       en: "Yellow Crane Tower, Wuhan",
       fr: "Pavillon de la Grue jaune, Wuhan",
       zh: "武汉黄鹤楼",
+    },
+    "Shanghai, China": {
+      en: "Shanghai, China",
+      fr: "Shanghai, Chine",
+      zh: "拍摄于上海，中国",
     },
     "Paris at night over the Seine": {
       en: "Paris at night over the Seine",

@@ -3221,7 +3221,7 @@ body.theme-claude .cv-hero {
   border-bottom: 1px solid var(--claude-border);
   display: grid;
   gap: 38px;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 260px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 340px);
   margin-bottom: 38px;
   padding: 14px 0 42px;
 }
@@ -3273,10 +3273,17 @@ body.theme-claude .cv-hero-meta span {
   padding: 6px 9px;
 }
 
-body.theme-claude .cv-hero-photo {
+body.theme-claude .cv-hero-gallery {
   justify-self: end;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 340px;
+  width: 100%;
+}
+
+body.theme-claude .cv-hero-photo {
   margin: 0;
-  max-width: 260px;
   width: 100%;
 }
 
@@ -3292,11 +3299,19 @@ body.theme-claude .cv-hero-photo img {
   width: 100%;
 }
 
+body.theme-claude .cv-hero-photo-wuhan img {
+  object-position: center 42%;
+}
+
+body.theme-claude .cv-hero-photo-shanghai img {
+  object-position: center 50%;
+}
+
 body.theme-claude .cv-hero-photo figcaption {
   color: var(--claude-secondary);
   font-size: 12px;
   margin-top: 10px;
-  text-align: right;
+  text-align: center;
 }
 
 body.theme-claude .misc-figure-grid {
@@ -3355,13 +3370,13 @@ body.theme-claude .cv-section-title {
     padding-left: 18px;
   }
 
-  body.theme-claude .cv-hero-photo {
+  body.theme-claude .cv-hero-gallery {
     justify-self: start;
-    max-width: 260px;
+    max-width: 360px;
   }
 
   body.theme-claude .cv-hero-photo figcaption {
-    text-align: left;
+    text-align: center;
   }
 
   body.theme-claude .misc-figure-grid {
@@ -3378,7 +3393,7 @@ body.theme-claude .cv-section-title {
     font-size: 34px;
   }
 
-  body.theme-claude .cv-hero-photo {
-    max-width: 220px;
+  body.theme-claude .cv-hero-gallery {
+    gap: 12px;
   }
 }

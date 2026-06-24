@@ -19,10 +19,16 @@ title: Curriculum Vitae
         <span>Born on 15 February 2001 in Wuhan, China</span>
       </div>
     </div>
-    <figure class="cv-hero-photo">
-      <img src="{{ site.baseurl }}/assets/img/cv-wuhan-tower.jpg?v=1" alt="Yellow Crane Tower at night in Wuhan" decoding="async" />
-      <figcaption>Yellow Crane Tower, Wuhan</figcaption>
-    </figure>
+    <div class="cv-hero-gallery" aria-label="Personal photographs" data-i18n-aria-label="cv.personal_photographs">
+      <figure class="cv-hero-photo cv-hero-photo-wuhan">
+        <img src="{{ site.baseurl }}/assets/img/cv-wuhan-tower.jpg?v=1" alt="Yellow Crane Tower at night in Wuhan" decoding="async" />
+        <figcaption>Yellow Crane Tower, Wuhan</figcaption>
+      </figure>
+      <figure class="cv-hero-photo cv-hero-photo-shanghai">
+        <img src="{{ site.baseurl }}/assets/img/cv-shanghai.jpg?v=1" alt="Portrait of Yuguang XIAO in Shanghai, China" decoding="async" />
+        <figcaption>Shanghai, China</figcaption>
+      </figure>
+    </div>
   </section>
 
   <h2 class="cv-section-title">Education</h2>
