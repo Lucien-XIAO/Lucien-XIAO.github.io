@@ -416,6 +416,11 @@
       fr: "Séminaires, ateliers et présentations en conférence.",
       zh: "研讨班、工作坊与会议报告。",
     },
+    "Photographed on Jiefang Park Road, Wuhan, China": {
+      en: "Photographed on Jiefang Park Road, Wuhan, China",
+      fr: "Photographié sur Jiefang Park Road, Wuhan, Chine",
+      zh: "拍摄于 解放公园路，Wuhan, Chine",
+    },
     "No Talks Yet": {
       en: "No Talks Yet",
       fr: "Aucun exposé pour le moment",
