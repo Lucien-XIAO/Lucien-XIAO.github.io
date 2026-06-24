@@ -421,15 +421,15 @@
       fr: "Je n'ai pas encore de publications, mais elles viendront certainement. Revenez plus tard pour les mises à jour.",
       zh: "目前我还没有正式发表的论文，但以后一定会有。欢迎之后再来看看更新。",
     },
-    "Invited Talks & Presentations": {
-      en: "Invited Talks & Presentations",
-      fr: "Exposés invités et présentations",
-      zh: "受邀报告与展示",
+    "Talks & Seminars": {
+      en: "Talks & Seminars",
+      fr: "Exposés et séminaires",
+      zh: "报告与研讨班",
     },
-    "Seminars, workshops, and conference presentations.": {
-      en: "Seminars, workshops, and conference presentations.",
-      fr: "Séminaires, ateliers et présentations en conférence.",
-      zh: "研讨班、工作坊与会议报告。",
+    "Seminars attended, workshops, and presentations.": {
+      en: "Seminars attended, workshops, and presentations.",
+      fr: "Séminaires suivis, ateliers et présentations.",
+      zh: "参加的研讨班、工作坊与报告。",
     },
     "Photographed on Jiefang Park Road, Wuhan, China": {
       en: "Photographed on Jiefang Park Road, Wuhan, China",
@@ -445,6 +445,36 @@
       en: "I don't have any scheduled talks at the moment.",
       fr: "Je n'ai pas d'exposé prévu pour le moment.",
       zh: "目前还没有已安排的报告。",
+    },
+    "University of Paris-Est Créteil (UPEC) Probability Seminar": {
+      en: "University of Paris-Est Créteil (UPEC) Probability Seminar",
+      fr: "Séminaire de probabilité de l'Université Paris-Est Créteil (UPEC)",
+      zh: "Université Paris-Est Créteil (UPEC) 概率研讨班",
+    },
+    "Speaker:": {
+      en: "Speaker:",
+      fr: "Intervenant :",
+      zh: "主讲人：",
+    },
+    "Joseph CHEN": {
+      en: "Joseph CHEN",
+      fr: "Joseph CHEN",
+      zh: "Joseph CHEN",
+    },
+    "Speaker: Joseph CHEN": {
+      en: "Speaker: Joseph CHEN",
+      fr: "Intervenant : Joseph CHEN",
+      zh: "主讲人：Joseph CHEN",
+    },
+    "Apr. 2026": {
+      en: "Apr. 2026",
+      fr: "avr. 2026",
+      zh: "2026 年 4 月",
+    },
+    "I attended this probability seminar during my M2 internship at LAMA / UPEC.": {
+      en: "I attended this probability seminar during my M2 internship at LAMA / UPEC.",
+      fr: "J'ai suivi ce séminaire de probabilité pendant mon stage de M2 au LAMA / UPEC.",
+      zh: "我在 LAMA / UPEC 的 M2 实习期间参加了这个概率研讨班。",
     },
     "Teaching Experience": {
       en: "Teaching Experience",
