@@ -506,15 +506,15 @@
       fr: "sept. 2023 – juin 2026",
       zh: "2023 年 9 月 – 2026 年 6 月",
     },
-    "Tutoring in analysis and linear algebra for undergraduate (first-year) students.": {
-      en: "Tutoring in analysis and linear algebra for undergraduate (first-year) students.",
-      fr: "Tutorat en analyse et algèbre linéaire pour des étudiants de première année.",
-      zh: "为本科一年级学生辅导分析与线性代数。",
+    "Provided continuous one-to-one mathematics tutoring for the same student over three academic years, covering the full mathematics curriculum of the Bachelor of Science program.": {
+      en: "Provided continuous one-to-one mathematics tutoring for the same student over three academic years, covering the full mathematics curriculum of the Bachelor of Science program.",
+      fr: "Accompagnement individuel continu du même étudiant pendant trois années académiques, couvrant l'ensemble du programme de mathématiques du Bachelor of Science.",
+      zh: "连续三年为同一位学生提供一对一数学辅导，覆盖其 Bachelor of Science 阶段的全部数学课程。",
     },
-    "Personalized mentoring to help students grasp advanced mathematical abstractions.": {
-      en: "Personalized mentoring to help students grasp advanced mathematical abstractions.",
-      fr: "Accompagnement personnalisé pour aider les étudiants à saisir les abstractions mathématiques avancées.",
-      zh: "提供个性化辅导，帮助学生理解较抽象的高等数学概念。",
+    "Led question-answer sessions, conceptual explanations, and problem-solving practice across the student's mathematics coursework.": {
+      en: "Led question-answer sessions, conceptual explanations, and problem-solving practice across the student's mathematics coursework.",
+      fr: "Séances de questions-réponses, explications conceptuelles et entraînement à la résolution d'exercices tout au long de son parcours en mathématiques.",
+      zh: "围绕该学生的数学课程进行答疑、概念讲解与习题训练，贯穿其三年的数学学习。",
     },
     "Education & Academic Background": {
       en: "Education & Academic Background",
