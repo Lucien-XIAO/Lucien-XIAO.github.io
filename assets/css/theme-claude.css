@@ -922,8 +922,18 @@ body.theme-claude .experience-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 24px;
+  margin-top: 14px;
 }
+
+body.theme-claude .teaching-period-title {
+  color: var(--claude-accent);
+  font-size: 13px;
+  font-weight: 780;
+  letter-spacing: 0.09em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
 body.theme-claude .exp-card {
   background: var(--claude-bg);
   border: 1px solid var(--claude-border);

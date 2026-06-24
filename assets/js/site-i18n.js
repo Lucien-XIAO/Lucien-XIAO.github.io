@@ -491,6 +491,11 @@
       fr: "Photographié au sixième étage de l'Université Paris Dauphine - PSL",
       zh: "拍摄于Université Paris Dauphine - PSL 六楼",
     },
+    "Before June 2026": {
+      en: "Before June 2026",
+      fr: "Avant juin 2026",
+      zh: "2026 年 6 月以前",
+    },
     "Private Mathematics Tutor": {
       en: "Private Mathematics Tutor",
       fr: "Tuteur privé en mathématiques",
