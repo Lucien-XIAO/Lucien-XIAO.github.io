@@ -88,6 +88,11 @@
       fr: "Accueil",
       zh: "首页",
     },
+    "pma.campus.caption": {
+      en: "Campus Jussieu, Sorbonne Université, Paris",
+      fr: "Campus de Jussieu, Sorbonne Université, Paris",
+      zh: "Jussieu 校区，索邦大学，巴黎",
+    },
     "cv.academic_profile": {
       en: "Academic profile",
       fr: "Profil académique",
@@ -518,8 +523,8 @@
     },
     "Campus Jussieu, Sorbonne Université, Paris": {
       en: "Campus Jussieu, Sorbonne Université, Paris",
-      fr: "Campus Jussieu, Sorbonne Université, Paris",
-      zh: "Campus Jussieu, Sorbonne Université, Paris",
+      fr: "Campus de Jussieu, Sorbonne Université, Paris",
+      zh: "Jussieu 校区，索邦大学，巴黎",
     },
     "Collective motion with one predator": {
       en: "Collective motion with one predator",
@@ -1559,6 +1564,11 @@
     document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
       const translated = translateKey(element.dataset.i18nAriaLabel, language, element.getAttribute("aria-label") || "");
       element.setAttribute("aria-label", translated);
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+      const translated = translateKey(element.dataset.i18nAlt, language, element.getAttribute("alt") || "");
+      element.setAttribute("alt", translated);
     });
   }
 
