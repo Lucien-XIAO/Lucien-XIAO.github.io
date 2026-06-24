@@ -436,6 +436,11 @@
       fr: "Mes expériences d'enseignement et de tutorat.",
       zh: "我的教学与辅导经历。",
     },
+    "Photographed on the sixth floor of Université Paris Dauphine - PSL": {
+      en: "Photographed on the sixth floor of Université Paris Dauphine - PSL",
+      fr: "Photographié au sixième étage de l'Université Paris Dauphine - PSL",
+      zh: "拍摄于Université Paris Dauphine - PSL 六楼",
+    },
     "Private Mathematics Tutor": {
       en: "Private Mathematics Tutor",
       fr: "Tuteur privé en mathématiques",
