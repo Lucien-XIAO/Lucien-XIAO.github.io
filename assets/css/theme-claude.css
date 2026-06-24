@@ -3449,11 +3449,11 @@ body.theme-claude .talks-hero h1 {
 body.theme-claude .publications-hero h1 {
   color: var(--claude-primary);
   font-family: "Noto Serif SC", "Georgia", serif;
-  font-size: clamp(40px, 6.5vw, 66px);
+  font-size: clamp(38px, 5.2vw, 54px);
   font-weight: 700;
-  line-height: 1.02;
+  line-height: 1.06;
   margin: 0 0 16px;
-  max-width: 760px;
+  max-width: 700px;
 }
 
 body.theme-claude .teaching-lede,
@@ -3591,7 +3591,7 @@ body.theme-claude .publications-hero-photo img {
   }
 
   body.theme-claude .publications-hero h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   body.theme-claude .cv-hero-photo,
