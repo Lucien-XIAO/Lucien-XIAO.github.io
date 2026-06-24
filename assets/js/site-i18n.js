@@ -396,6 +396,11 @@
       fr: "Mes travaux de recherche et textes en préparation.",
       zh: "我的学术研究与工作论文。",
     },
+    "Photographed in Roma, Italy": {
+      en: "Photographed in Roma, Italy",
+      fr: "Photographié à Rome, Italie",
+      zh: "拍摄于 Roma, Italy",
+    },
     "No Publications Yet": {
       en: "No Publications Yet",
       fr: "Aucune publication pour le moment",

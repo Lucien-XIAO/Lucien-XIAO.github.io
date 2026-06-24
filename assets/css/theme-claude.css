@@ -3342,13 +3342,15 @@ body.theme-claude .cv-section-title {
 
 /* --- Teaching page photo header --- */
 body.theme-claude .teaching-page,
-body.theme-claude .talks-page {
+body.theme-claude .talks-page,
+body.theme-claude .publications-page {
   margin: 34px auto 40px;
   max-width: 900px;
 }
 
 body.theme-claude .teaching-hero,
-body.theme-claude .talks-hero {
+body.theme-claude .talks-hero,
+body.theme-claude .publications-hero {
   align-items: center;
   border-bottom: 1px solid var(--claude-border);
   display: grid;
@@ -3359,7 +3361,8 @@ body.theme-claude .talks-hero {
 }
 
 body.theme-claude .teaching-hero-copy,
-body.theme-claude .talks-hero-copy {
+body.theme-claude .talks-hero-copy,
+body.theme-claude .publications-hero-copy {
   padding-left: 22px;
 }
 
@@ -3371,8 +3374,13 @@ body.theme-claude .talks-hero-copy {
   border-left: 3px solid #2563eb;
 }
 
+body.theme-claude .publications-hero-copy {
+  border-left: 3px solid var(--claude-accent);
+}
+
 body.theme-claude .teaching-kicker,
-body.theme-claude .talks-kicker {
+body.theme-claude .talks-kicker,
+body.theme-claude .publications-kicker {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -3388,8 +3396,13 @@ body.theme-claude .talks-kicker {
   color: #1d4ed8;
 }
 
+body.theme-claude .publications-kicker {
+  color: var(--claude-accent);
+}
+
 body.theme-claude .teaching-hero h1,
-body.theme-claude .talks-hero h1 {
+body.theme-claude .talks-hero h1,
+body.theme-claude .publications-hero h1 {
   color: var(--claude-primary);
   font-family: "Noto Serif SC", "Georgia", serif;
   font-size: clamp(38px, 5vw, 54px);
@@ -3399,7 +3412,8 @@ body.theme-claude .talks-hero h1 {
 }
 
 body.theme-claude .teaching-lede,
-body.theme-claude .talks-lede {
+body.theme-claude .talks-lede,
+body.theme-claude .publications-lede {
   color: var(--claude-secondary);
   font-size: 16px;
   line-height: 1.7;
@@ -3408,7 +3422,8 @@ body.theme-claude .talks-lede {
 }
 
 body.theme-claude .teaching-hero-photo,
-body.theme-claude .talks-hero-photo {
+body.theme-claude .talks-hero-photo,
+body.theme-claude .publications-hero-photo {
   justify-self: end;
   margin: 0;
   max-width: 260px;
@@ -3416,7 +3431,8 @@ body.theme-claude .talks-hero-photo {
 }
 
 body.theme-claude .teaching-hero-photo img,
-body.theme-claude .talks-hero-photo img {
+body.theme-claude .talks-hero-photo img,
+body.theme-claude .publications-hero-photo img {
   aspect-ratio: 3 / 4;
   border: 1px solid var(--claude-border);
   border-radius: 6px;
@@ -3428,8 +3444,13 @@ body.theme-claude .talks-hero-photo img {
   width: 100%;
 }
 
+body.theme-claude .publications-hero-photo img {
+  object-position: center 54%;
+}
+
 body.theme-claude .teaching-hero-photo figcaption,
-body.theme-claude .talks-hero-photo figcaption {
+body.theme-claude .talks-hero-photo figcaption,
+body.theme-claude .publications-hero-photo figcaption {
   color: var(--claude-secondary);
   font-size: 12px;
   line-height: 1.45;
@@ -3450,9 +3471,14 @@ body.theme-claude .talks-hero-photo figcaption {
     margin-top: 18px;
   }
 
+  body.theme-claude .publications-page {
+    margin-top: 18px;
+  }
+
   body.theme-claude .cv-hero,
   body.theme-claude .teaching-hero,
-  body.theme-claude .talks-hero {
+  body.theme-claude .talks-hero,
+  body.theme-claude .publications-hero {
     gap: 28px;
     grid-template-columns: 1fr;
     padding-bottom: 34px;
@@ -3460,20 +3486,23 @@ body.theme-claude .talks-hero-photo figcaption {
 
   body.theme-claude .cv-hero-copy,
   body.theme-claude .teaching-hero-copy,
-  body.theme-claude .talks-hero-copy {
+  body.theme-claude .talks-hero-copy,
+  body.theme-claude .publications-hero-copy {
     padding-left: 18px;
   }
 
   body.theme-claude .cv-hero-photo,
   body.theme-claude .teaching-hero-photo,
-  body.theme-claude .talks-hero-photo {
+  body.theme-claude .talks-hero-photo,
+  body.theme-claude .publications-hero-photo {
     justify-self: start;
     max-width: 260px;
   }
 
   body.theme-claude .cv-hero-photo figcaption,
   body.theme-claude .teaching-hero-photo figcaption,
-  body.theme-claude .talks-hero-photo figcaption {
+  body.theme-claude .talks-hero-photo figcaption,
+  body.theme-claude .publications-hero-photo figcaption {
     text-align: left;
   }
 
@@ -3489,13 +3518,15 @@ body.theme-claude .talks-hero-photo figcaption {
 @media (max-width: 420px) {
   body.theme-claude .cv-hero h1,
   body.theme-claude .teaching-hero h1,
-  body.theme-claude .talks-hero h1 {
+  body.theme-claude .talks-hero h1,
+  body.theme-claude .publications-hero h1 {
     font-size: 34px;
   }
 
   body.theme-claude .cv-hero-photo,
   body.theme-claude .teaching-hero-photo,
-  body.theme-claude .talks-hero-photo {
+  body.theme-claude .talks-hero-photo,
+  body.theme-claude .publications-hero-photo {
     max-width: 220px;
   }
 }
