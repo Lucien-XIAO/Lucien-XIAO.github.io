@@ -496,10 +496,10 @@
       fr: "Paris la nuit, vue sur la Seine",
       zh: "塞纳河畔的巴黎夜景",
     },
-    "Sorbonne campus courtyard, Paris": {
-      en: "Sorbonne campus courtyard, Paris",
-      fr: "Cour intérieure du campus Sorbonne, Paris",
-      zh: "巴黎索邦大学校园内庭",
+    "Campus Jussieu, Sorbonne Université, Paris": {
+      en: "Campus Jussieu, Sorbonne Université, Paris",
+      fr: "Campus Jussieu, Sorbonne Université, Paris",
+      zh: "Campus Jussieu, Sorbonne Université, Paris",
     },
     "Collective motion with one predator": {
       en: "Collective motion with one predator",
