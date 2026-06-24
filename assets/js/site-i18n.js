@@ -491,6 +491,31 @@
       fr: "Pavillon de la Grue jaune, Wuhan",
       zh: "武汉黄鹤楼",
     },
+    "Paris at night over the Seine": {
+      en: "Paris at night over the Seine",
+      fr: "Paris la nuit, vue sur la Seine",
+      zh: "塞纳河畔的巴黎夜景",
+    },
+    "Sorbonne campus courtyard, Paris": {
+      en: "Sorbonne campus courtyard, Paris",
+      fr: "Cour intérieure du campus Sorbonne, Paris",
+      zh: "巴黎索邦大学校园内庭",
+    },
+    "Collective motion with one predator": {
+      en: "Collective motion with one predator",
+      fr: "Mouvement collectif avec un prédateur",
+      zh: "一个捕食者下的集体运动",
+    },
+    "Collective motion with three predators": {
+      en: "Collective motion with three predators",
+      fr: "Mouvement collectif avec trois prédateurs",
+      zh: "三个捕食者下的集体运动",
+    },
+    "Three-body simulation: Earth, Moon, and satellite trajectories": {
+      en: "Three-body simulation: Earth, Moon, and satellite trajectories",
+      fr: "Simulation à trois corps : trajectoires de la Terre, de la Lune et d'un satellite",
+      zh: "三体模拟：地球、月球与卫星轨道",
+    },
     "M.S. in Probability": {
       en: "M.S. in Probability",
       fr: "Master en probabilités",

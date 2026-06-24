@@ -43,6 +43,21 @@ body.theme-claude.pma-page .math-float-canvas {
   position: absolute;
 }
 
+.pma-campus-caption {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(245, 235, 224, 0.88);
+  border-radius: 4px;
+  bottom: 14px;
+  color: #40372f;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 6px 8px;
+  position: absolute;
+  right: 18px;
+  z-index: 1;
+}
+
 /* ---- Page Wrapper ---- */
 .pma-page .pma-wrapper {
   max-width: 960px;
@@ -1075,6 +1090,12 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
   .pma-campus-strip {
     height: 168px;
     margin-top: 62px;
+  }
+
+  .pma-campus-caption {
+    bottom: 8px;
+    font-size: 11px;
+    right: 10px;
   }
 
   body.theme-claude.pma-page .nav-container {
