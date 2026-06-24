@@ -266,10 +266,10 @@
       fr: "Parcours PMA",
       zh: "PMA 课程路径",
     },
-    "Notes on the M2 Probability and Random Models program.": {
-      en: "Notes on the M2 Probability and Random Models program.",
-      fr: "Notes sur le M2 Probabilités et Modèles Aléatoires.",
-      zh: "关于 M2 概率与随机模型项目的整理。",
+    "Guide to the M2 Probability and Random Models program.": {
+      en: "Guide to the M2 Probability and Random Models program.",
+      fr: "Guide du M2 Probabilités et Modèles Aléatoires.",
+      zh: "M2 概率与随机模型项目指引。",
     },
     "A macOS tool for reading and organizing mathematical papers.": {
       en: "A macOS tool for reading and organizing mathematical papers.",
