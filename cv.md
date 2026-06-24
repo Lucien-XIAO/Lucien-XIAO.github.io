@@ -14,9 +14,8 @@ title: Curriculum Vitae
       <h1>Education & Academic Background</h1>
       <p class="cv-lede">Education, academic background, research experience, and skills.</p>
       <div class="cv-hero-meta" aria-label="Academic profile" data-i18n-aria-label="cv.academic_profile">
-        <span>Sorbonne Université</span>
+        <span>Sorbonne Université, Paris</span>
         <span>Probability and random models</span>
-        <span>Paris</span>
       </div>
     </div>
     <figure class="cv-hero-photo">
@@ -35,7 +34,7 @@ title: Curriculum Vitae
         <img class="institution-logo" src="{{ site.baseurl }}/assets/img/SU_logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>M.S. in Probability</strong></p>
-          <p class="exp-detail">Sorbonne Université</p>
+          <p class="exp-detail">Sorbonne Université, Paris</p>
           <p class="exp-period">2026 (expected)</p>
         </div>
       </div>
@@ -47,7 +46,7 @@ title: Curriculum Vitae
         <img class="institution-logo" src="{{ site.baseurl }}/assets/img/SU_logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>First-Year M.S. (M1) in Mathematics & Applications</strong></p>
-          <p class="exp-detail">Sorbonne Université</p>
+          <p class="exp-detail">Sorbonne Université, Paris</p>
           <p class="exp-period">2024 – 2025</p>
         </div>
       </div>
@@ -59,7 +58,7 @@ title: Curriculum Vitae
         <img class="institution-logo" src="{{ site.baseurl }}/assets/img/SU_logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>B.S. in Mathematics</strong></p>
-          <p class="exp-detail">Sorbonne Université</p>
+          <p class="exp-detail">Sorbonne Université, Paris</p>
           <div style="margin-top: 8px; font-size: 15px; color: var(--claude-text); opacity: 0.9;">
             <ul>
               <li>Completed an intensive one-year program to obtain a second Bachelor's degree in Mathematics.</li>
@@ -76,7 +75,7 @@ title: Curriculum Vitae
         <img class="institution-logo" src="{{ site.baseurl }}/assets/img/SU_logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>B.S. in Physics (Minor in Mathematics)</strong></p>
-          <p class="exp-detail">Sorbonne Université</p>
+          <p class="exp-detail">Sorbonne Université, Paris</p>
           <div style="margin-top: 8px; font-size: 15px; color: var(--claude-text); opacity: 0.9;">
             <ul>
               <li>Completed the MIPI (Math, CS, Physics, Engineering) track in the first year, followed by a Physics Major and Mathematics Minor.</li>
