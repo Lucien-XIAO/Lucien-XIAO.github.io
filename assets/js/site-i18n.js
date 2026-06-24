@@ -481,6 +481,11 @@
       fr: "Probabilités et modèles aléatoires",
       zh: "概率与随机模型",
     },
+    "Born on 15 February 2001 in Wuhan, China": {
+      en: "Born on 15 February 2001 in Wuhan, China",
+      fr: "Né le 15 février 2001 à Wuhan, Chine",
+      zh: "2001年2月15日出生于中国武汉",
+    },
     "Paris": {
       en: "Paris",
       fr: "Paris",

@@ -16,6 +16,7 @@ title: Curriculum Vitae
       <div class="cv-hero-meta" aria-label="Academic profile" data-i18n-aria-label="cv.academic_profile">
         <span>Sorbonne Université, Paris</span>
         <span>Probability and random models</span>
+        <span>Born on 15 February 2001 in Wuhan, China</span>
       </div>
     </div>
     <figure class="cv-hero-photo">
