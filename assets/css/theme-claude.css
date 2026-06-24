@@ -3389,6 +3389,10 @@ body.theme-claude .publications-hero {
   padding: 14px 0 42px;
 }
 
+body.theme-claude .publications-hero {
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 390px);
+}
+
 body.theme-claude .teaching-hero-copy,
 body.theme-claude .talks-hero-copy,
 body.theme-claude .publications-hero-copy {
@@ -3474,7 +3478,12 @@ body.theme-claude .publications-hero-photo img {
 }
 
 body.theme-claude .publications-hero-photo img {
-  object-position: center 54%;
+  aspect-ratio: 4 / 3;
+  object-position: center center;
+}
+
+body.theme-claude .publications-hero-photo {
+  max-width: 390px;
 }
 
 body.theme-claude .teaching-hero-photo figcaption,
@@ -3528,6 +3537,10 @@ body.theme-claude .publications-hero-photo figcaption {
     max-width: 260px;
   }
 
+  body.theme-claude .publications-hero-photo {
+    max-width: 100%;
+  }
+
   body.theme-claude .cv-hero-photo figcaption,
   body.theme-claude .teaching-hero-photo figcaption,
   body.theme-claude .talks-hero-photo figcaption,
@@ -3557,5 +3570,9 @@ body.theme-claude .publications-hero-photo figcaption {
   body.theme-claude .talks-hero-photo,
   body.theme-claude .publications-hero-photo {
     max-width: 220px;
+  }
+
+  body.theme-claude .publications-hero-photo {
+    max-width: 100%;
   }
 }
