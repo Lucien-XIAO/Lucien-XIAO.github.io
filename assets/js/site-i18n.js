@@ -93,6 +93,11 @@
       fr: "Campus de Jussieu, Sorbonne Université, Paris",
       zh: "Jussieu 校区，索邦大学，巴黎",
     },
+    "mathreader.chateau.caption": {
+      en: "Château d'If, Marseille (famous through The Count of Monte Cristo)",
+      fr: "Château d'If, Marseille (rendu célèbre par Le Comte de Monte-Cristo)",
+      zh: "Château d'If, Marseille（因《基督山伯爵》而出名）",
+    },
     "cv.academic_profile": {
       en: "Academic profile",
       fr: "Profil académique",
