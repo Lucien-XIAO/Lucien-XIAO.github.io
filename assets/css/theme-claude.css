@@ -3390,7 +3390,9 @@ body.theme-claude .publications-hero {
 }
 
 body.theme-claude .publications-hero {
-  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 390px);
+  align-items: start;
+  display: block;
+  padding-top: 22px;
 }
 
 body.theme-claude .teaching-hero-copy,
@@ -3409,6 +3411,7 @@ body.theme-claude .talks-hero-copy {
 
 body.theme-claude .publications-hero-copy {
   border-left: 3px solid var(--claude-accent);
+  max-width: 760px;
 }
 
 body.theme-claude .teaching-kicker,
@@ -3434,14 +3437,23 @@ body.theme-claude .publications-kicker {
 }
 
 body.theme-claude .teaching-hero h1,
-body.theme-claude .talks-hero h1,
-body.theme-claude .publications-hero h1 {
+body.theme-claude .talks-hero h1 {
   color: var(--claude-primary);
   font-family: "Noto Serif SC", "Georgia", serif;
   font-size: clamp(38px, 5vw, 54px);
   font-weight: 700;
   line-height: 1.07;
   margin: 0 0 18px;
+}
+
+body.theme-claude .publications-hero h1 {
+  color: var(--claude-primary);
+  font-family: "Noto Serif SC", "Georgia", serif;
+  font-size: clamp(40px, 6.5vw, 66px);
+  font-weight: 700;
+  line-height: 1.02;
+  margin: 0 0 16px;
+  max-width: 760px;
 }
 
 body.theme-claude .teaching-lede,
@@ -3483,7 +3495,8 @@ body.theme-claude .publications-hero-photo img {
 }
 
 body.theme-claude .publications-hero-photo {
-  max-width: 390px;
+  margin-top: 30px;
+  max-width: none;
 }
 
 body.theme-claude .teaching-hero-photo figcaption,
@@ -3494,6 +3507,12 @@ body.theme-claude .publications-hero-photo figcaption {
   line-height: 1.45;
   margin-top: 10px;
   text-align: right;
+}
+
+body.theme-claude .publications-hero-photo img {
+  aspect-ratio: 16 / 7;
+  border-radius: 7px;
+  box-shadow: 0 18px 42px rgba(61, 57, 41, 0.11);
 }
 
 @media (max-width: 720px) {
@@ -3515,10 +3534,13 @@ body.theme-claude .publications-hero-photo figcaption {
 
   body.theme-claude .cv-hero,
   body.theme-claude .teaching-hero,
-  body.theme-claude .talks-hero,
-  body.theme-claude .publications-hero {
+  body.theme-claude .talks-hero {
     gap: 28px;
     grid-template-columns: 1fr;
+    padding-bottom: 34px;
+  }
+
+  body.theme-claude .publications-hero {
     padding-bottom: 34px;
   }
 
@@ -3541,6 +3563,10 @@ body.theme-claude .publications-hero-photo figcaption {
     max-width: 100%;
   }
 
+  body.theme-claude .publications-hero-photo img {
+    aspect-ratio: 4 / 3;
+  }
+
   body.theme-claude .cv-hero-photo figcaption,
   body.theme-claude .teaching-hero-photo figcaption,
   body.theme-claude .talks-hero-photo figcaption,
@@ -3560,9 +3586,12 @@ body.theme-claude .publications-hero-photo figcaption {
 @media (max-width: 420px) {
   body.theme-claude .cv-hero h1,
   body.theme-claude .teaching-hero h1,
-  body.theme-claude .talks-hero h1,
-  body.theme-claude .publications-hero h1 {
+  body.theme-claude .talks-hero h1 {
     font-size: 34px;
+  }
+
+  body.theme-claude .publications-hero h1 {
+    font-size: 36px;
   }
 
   body.theme-claude .cv-hero-photo,
