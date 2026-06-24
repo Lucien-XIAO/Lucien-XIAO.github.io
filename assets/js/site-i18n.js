@@ -88,6 +88,11 @@
       fr: "Accueil",
       zh: "首页",
     },
+    "cv.academic_profile": {
+      en: "Academic profile",
+      fr: "Profil académique",
+      zh: "学术概况",
+    },
   };
 
   const TEXT_TRANSLATIONS = {
@@ -465,6 +470,26 @@
       en: "My academic journey and curriculum vitae.",
       fr: "Mon parcours académique et mon curriculum vitae.",
       zh: "我的学术经历与个人简历。",
+    },
+    "Education, academic background, research experience, and skills.": {
+      en: "Education, academic background, research experience, and skills.",
+      fr: "Formation, parcours académique, expérience de recherche et compétences.",
+      zh: "教育背景、学术经历、研究经验与技能。",
+    },
+    "Probability and random models": {
+      en: "Probability and random models",
+      fr: "Probabilités et modèles aléatoires",
+      zh: "概率与随机模型",
+    },
+    "Paris": {
+      en: "Paris",
+      fr: "Paris",
+      zh: "巴黎",
+    },
+    "Yellow Crane Tower, Wuhan": {
+      en: "Yellow Crane Tower, Wuhan",
+      fr: "Pavillon de la Grue jaune, Wuhan",
+      zh: "武汉黄鹤楼",
     },
     "M.S. in Probability": {
       en: "M.S. in Probability",

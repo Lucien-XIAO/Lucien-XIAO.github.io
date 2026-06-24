@@ -7,13 +7,25 @@ redirect_from:
 title: Curriculum Vitae
 ---
 
-<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-  <div class="pma-hero" style="border-left: 4px solid #ef4444; padding-left: 20px; margin-bottom: 40px;">
-    <h1>Education & Academic Background</h1>
-    <p style="color: var(--claude-secondary); font-size: 16px;">My academic journey and curriculum vitae.</p>
-  </div>
+<div class="cv-page">
+  <section class="cv-hero">
+    <div class="cv-hero-copy">
+      <p class="cv-kicker">Curriculum Vitae</p>
+      <h1>Education & Academic Background</h1>
+      <p class="cv-lede">Education, academic background, research experience, and skills.</p>
+      <div class="cv-hero-meta" aria-label="Academic profile" data-i18n-aria-label="cv.academic_profile">
+        <span>Sorbonne Université</span>
+        <span>Probability and random models</span>
+        <span>Paris</span>
+      </div>
+    </div>
+    <figure class="cv-hero-photo">
+      <img src="{{ site.baseurl }}/assets/img/cv-wuhan-tower.jpg?v=1" alt="Yellow Crane Tower at night in Wuhan" decoding="async" />
+      <figcaption>Yellow Crane Tower, Wuhan</figcaption>
+    </figure>
+  </section>
 
-  <h2 style="color: var(--claude-primary); font-size: 1.5rem; margin-top: 40px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--claude-border); font-weight: 600;">Education</h2>
+  <h2 class="cv-section-title">Education</h2>
 
   <div class="section-body">
 
@@ -77,7 +89,7 @@ title: Curriculum Vitae
 
   </div>
 
-  <h2 style="color: var(--claude-primary); font-size: 1.5rem; margin-top: 40px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--claude-border); font-weight: 600;">Skills</h2>
+  <h2 class="cv-section-title">Skills</h2>
 
   <div class="section-body">
     <div class="card" style="padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
