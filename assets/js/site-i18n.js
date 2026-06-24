@@ -471,10 +471,10 @@
       fr: "Étudiant en Bachelor of Science à l'École polytechnique",
       zh: "巴黎综合理工学院 Bachelor of Science 学生",
     },
-    "Sept. 2023 – present": {
-      en: "Sept. 2023 – present",
-      fr: "sept. 2023 – présent",
-      zh: "2023 年 9 月至今",
+    "Sept. 2023 – June 2026": {
+      en: "Sept. 2023 – June 2026",
+      fr: "sept. 2023 – juin 2026",
+      zh: "2023 年 9 月 – 2026 年 6 月",
     },
     "Tutoring in analysis and linear algebra for undergraduate (first-year) students.": {
       en: "Tutoring in analysis and linear algebra for undergraduate (first-year) students.",
