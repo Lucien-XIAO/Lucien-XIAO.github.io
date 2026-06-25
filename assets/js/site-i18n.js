@@ -221,10 +221,65 @@
       fr: "Textes courts et notes de lecture",
       zh: "短文与阅读笔记",
     },
+    "A concise home for unfinished mathematical writing and reading notes.": {
+      en: "A concise home for unfinished mathematical writing and reading notes.",
+      fr: "Un espace concis pour les textes mathématiques inachevés et les notes de lecture.",
+      zh: "一个用于存放未完成数学写作和阅读笔记的简洁空间。",
+    },
     "A place for mathematical notes, reading reflections, and longer academic writing.": {
       en: "A place for mathematical notes, reading reflections, and longer academic writing.",
       fr: "Un espace pour des notes mathématiques, des réflexions de lecture et des textes académiques plus longs.",
       zh: "用于放置数学笔记、阅读反思和较长学术文章的空间。",
+    },
+    "Mathematical Notes": {
+      en: "Mathematical Notes",
+      fr: "Notes mathématiques",
+      zh: "数学笔记",
+    },
+    "measure theory": {
+      en: "measure theory",
+      fr: "théorie de la mesure",
+      zh: "测度论",
+    },
+    "in progress": {
+      en: "in progress",
+      fr: "en cours",
+      zh: "未完成",
+    },
+    "Open notes": {
+      en: "Open notes",
+      fr: "Ouvrir les notes",
+      zh: "打开笔记",
+    },
+    "More essays later": {
+      en: "More essays later",
+      fr: "D'autres textes plus tard",
+      zh: "之后会加入更多文章",
+    },
+    "In progress": {
+      en: "In progress",
+      fr: "En cours",
+      zh: "未完成",
+    },
+    "A working document": {
+      en: "A working document",
+      fr: "Un document de travail",
+      zh: "一份正在写作中的文档",
+    },
+    "These notes are still being written. I keep them here as a working document rather than as a finished publication.": {
+      en: "These notes are still being written. I keep them here as a working document rather than as a finished publication.",
+      fr: "Ces notes sont encore en cours de rédaction. Je les garde ici comme document de travail plutôt que comme publication achevée.",
+      zh: "这些笔记仍在写作中。我把它们作为工作文档放在这里，而不是作为完成版出版物。",
+    },
+    "Built from my personal study notes on sigma-algebras, measurable maps, Borel sets, measures, and integration.": {
+      en: "Built from my personal study notes on sigma-algebras, measurable maps, Borel sets, measures, and integration.",
+      fr: "Construit à partir de mes notes personnelles sur les tribus, les applications mesurables, les boréliens, les mesures et l'intégration.",
+      zh: "整理自我关于 sigma-代数、可测映射、Borel 集、测度与积分的个人学习笔记。",
+    },
+    "Open PDF": {
+      en: "Open PDF",
+      fr: "Ouvrir le PDF",
+      zh: "打开 PDF",
     },
     "notes": {
       en: "notes",
