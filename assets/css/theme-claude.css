@@ -2539,7 +2539,7 @@ body.theme-claude .top-nav {
   background: rgba(var(--claude-paper-rgb), 0.94);
   border-bottom: 1px solid var(--claude-footer-border);
   box-shadow: none;
-  height: 70px;
+  height: 66px;
 }
 
 body.theme-claude .nav-container {
@@ -2558,17 +2558,22 @@ body.theme-claude .nav-left a:not(:first-child) {
   border: 0;
   border-radius: 0;
   color: var(--claude-text);
-  font-family: "Raleway", "Inter", sans-serif;
-  font-size: 12.5px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  padding: 9px 0 8px;
-  text-transform: uppercase;
+  font-family: "Inter", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 640;
+  letter-spacing: 0;
+  line-height: 1.2;
+  padding: 8px 0 9px;
+  text-transform: none;
 }
 
 body.theme-claude .nav-left a:not(:first-child) {
   margin-left: 22px;
+}
+
+body.theme-claude .nav-left a:first-child {
+  font-family: "Inter", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0;
 }
 
 body.theme-claude .nav-left a:first-child::before {
@@ -2584,8 +2589,8 @@ body.theme-claude .nav-left a:not(:first-child):hover {
 body.theme-claude .nav-left a.nav-active,
 body.theme-claude .nav-left a:not(:first-child).nav-active {
   background: transparent;
-  border-bottom: 2px solid var(--claude-text);
-  color: var(--claude-text);
+  border-bottom: 2px solid var(--claude-accent);
+  color: var(--claude-primary);
 }
 
 body.theme-claude .language-flag,

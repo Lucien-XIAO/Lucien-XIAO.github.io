@@ -25,7 +25,7 @@ main:
     i18n_key: nav.cv
     url: /cv/
   
-  - title: "M2-PMA (25-26)"
+  - title: "M2-PMA"
     i18n_key: nav.pma
     url: /PMA/   
 

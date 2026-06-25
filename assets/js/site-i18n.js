@@ -54,9 +54,9 @@
       zh: "简历",
     },
     "nav.pma": {
-      en: "M2-PMA (25-26)",
-      fr: "M2-PMA (25-26)",
-      zh: "M2-PMA (25-26)",
+      en: "M2-PMA",
+      fr: "M2-PMA",
+      zh: "M2-PMA",
     },
     "nav.mathreader": {
       en: "MathReader",
