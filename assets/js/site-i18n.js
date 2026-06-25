@@ -236,10 +236,10 @@
       fr: "Mécanique statistique",
       zh: "统计力学",
     },
-    "My current work concerns long-range Ising-type models and related questions on phase transitions, interfaces, and interacting particle systems.": {
-      en: "My current work concerns long-range Ising-type models and related questions on phase transitions, interfaces, and interacting particle systems.",
-      fr: "Mes travaux actuels portent sur des modèles de type Ising à longue portée et sur des questions liées aux transitions de phase, aux interfaces et aux systèmes de particules en interaction.",
-      zh: "我目前的工作围绕长程 Ising 型模型，以及相变、界面和相互作用粒子系统中的相关问题展开。",
+    "My current work concerns long-range models and related questions on phase transitions, interfaces, and interacting particle systems.": {
+      en: "My current work concerns long-range models and related questions on phase transitions, interfaces, and interacting particle systems.",
+      fr: "Mes travaux actuels portent sur des modèles à longue portée et sur des questions liées aux transitions de phase, aux interfaces et aux systèmes de particules en interaction.",
+      zh: "我目前的工作围绕长程模型，以及相变、界面和相互作用粒子系统中的相关问题展开。",
     },
     "Mathematical Modeling": {
       en: "Mathematical Modeling",
@@ -261,10 +261,10 @@
       fr: "LAMA / UPEC · Stage de M2",
       zh: "LAMA / UPEC · M2 实习",
     },
-    "Long-range Ising model": {
-      en: "Long-range Ising model",
-      fr: "Modèle d'Ising à longue portée",
-      zh: "长程 Ising 模型",
+    "Long-range models": {
+      en: "Long-range models",
+      fr: "Modèles à longue portée",
+      zh: "长程模型",
     },
     "Academic background and research experience.": {
       en: "Academic background and research experience.",
@@ -341,10 +341,10 @@
       fr: "Encadrant :",
       zh: "导师：",
     },
-    "Long-range Ising model": {
-      en: "Long-range Ising model",
-      fr: "Modèle d'Ising à longue portée",
-      zh: "长程 Ising 模型",
+    "Long-range models": {
+      en: "Long-range models",
+      fr: "Modèles à longue portée",
+      zh: "长程模型",
     },
     "Bi-Lipschitz equivalence of separated nets in Banach spaces": {
       en: "Bi-Lipschitz equivalence of separated nets in Banach spaces",
@@ -1445,19 +1445,19 @@
 
   const HTML_TRANSLATIONS = {
     "home.about.p1": {
-      en: 'I am currently completing my M2 internship at the <a href="https://lama-umr8050.fr/">LAMA</a> (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>), under the supervision of <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>. My internship focuses on the long-range Ising model and related questions in probability and statistical mechanics. I am also a second year Master\'s (M2) student in Probability and Random Models (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>), in the Stochastic Processes track, at <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.',
-      fr: 'Je suis actuellement en stage de M2 au <a href="https://lama-umr8050.fr/">LAMA</a> (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>), sous la direction d\'<a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>. Ce stage porte sur le modèle d\'Ising à longue portée et des questions connexes en probabilité et en mécanique statistique. Je suis également étudiant en deuxième année de master (M2) Probabilités et Modèles Aléatoires (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>), parcours processus stochastiques, à <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.',
-      zh: '我目前在 <a href="https://lama-umr8050.fr/">LAMA</a>（<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>）进行 M2 实习，由 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 指导。实习主题围绕长程 Ising 模型，以及概率论与统计力学中的相关问题展开。同时，我也是 <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a> 概率与随机模型硕士二年级（<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>）学生，方向为随机过程。',
+      en: 'I am currently completing my M2 internship at the <a href="https://lama-umr8050.fr/">LAMA</a> (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>), under the supervision of <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>. My internship focuses on long-range models and related questions in probability and statistical mechanics. I am also a second year Master\'s (M2) student in Probability and Random Models (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>), in the Stochastic Processes track, at <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.',
+      fr: 'Je suis actuellement en stage de M2 au <a href="https://lama-umr8050.fr/">LAMA</a> (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>), sous la direction d\'<a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>. Ce stage porte sur des modèles à longue portée et des questions connexes en probabilité et en mécanique statistique. Je suis également étudiant en deuxième année de master (M2) Probabilités et Modèles Aléatoires (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>), parcours processus stochastiques, à <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.',
+      zh: '我目前在 <a href="https://lama-umr8050.fr/">LAMA</a>（<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>）进行 M2 实习，由 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 指导。实习主题围绕长程模型，以及概率论与统计力学中的相关问题展开。同时，我也是 <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a> 概率与随机模型硕士二年级（<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>）学生，方向为随机过程。',
     },
     "home.about.p2": {
       en: 'I have been fortunate to work on several research projects, including the study of bi-Lipschitz equivalence of separated nets in Banach spaces with <a href="https://www.alexandroseskenazis.com/">Alexandros ESKENAZIS</a>, and collective motion modeling with <a href="https://sites.google.com/site/dianepeurichard/home">Diane PEURICHARD</a>.',
       fr: 'J\'ai eu la chance de travailler sur plusieurs projets de recherche, notamment l\'équivalence bi-lipschitzienne de réseaux séparés dans les espaces de Banach avec <a href="https://www.alexandroseskenazis.com/">Alexandros ESKENAZIS</a>, ainsi que la modélisation du mouvement collectif avec <a href="https://sites.google.com/site/dianepeurichard/home">Diane PEURICHARD</a>.',
       zh: '我很幸运参与过几个研究项目，包括与 <a href="https://www.alexandroseskenazis.com/">Alexandros ESKENAZIS</a> 研究 Banach 空间中分离网的双 Lipschitz 等价，以及与 <a href="https://sites.google.com/site/dianepeurichard/home">Diane PEURICHARD</a> 研究集体运动建模。',
     },
-    "home.news.ising": {
-      en: 'I’ll be working on the long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> at Université Paris-Est Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.',
-      fr: 'Je travaillerai sur le modèle d\'Ising à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> à l\'Université Paris-Est Créteil (UPEC) dans le cadre de mon stage de M2, du 20 avril au 20 juillet 2026.',
-      zh: '我将在 2026 年 4 月 20 日至 7 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 做 M2 实习，研究长程 Ising 模型。',
+    "home.news.long_range": {
+      en: 'I’ll be working on long-range models with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> at Université Paris-Est Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.',
+      fr: 'Je travaillerai sur des modèles à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> à l\'Université Paris-Est Créteil (UPEC) dans le cadre de mon stage de M2, du 20 avril au 20 juillet 2026.',
+      zh: '我将在 2026 年 4 月 20 日至 7 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 做 M2 实习，研究长程模型。',
     },
     "misc.percolation": {
       en: 'Interactive visualization of <em>Bond Percolation</em> on a 2D square lattice. In this model, <strong>p</strong> represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they are connected to at least one open bond, preventing isolated colored nodes. Try varying <strong>p</strong> around the critical threshold (0.5) to observe the phase transition in connectivity.',
