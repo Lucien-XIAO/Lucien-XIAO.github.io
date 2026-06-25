@@ -64,9 +64,9 @@
       zh: "MathReader",
     },
     "nav.misc": {
-      en: "Misc",
-      fr: "Divers",
-      zh: "杂项",
+      en: "Notebook",
+      fr: "Carnet",
+      zh: "札记",
     },
     "theme.toggle": {
       en: "Toggle dark mode",
@@ -135,6 +135,306 @@
       en: "Miscellaneous",
       fr: "Divers",
       zh: "杂项",
+    },
+    "Notebook": {
+      en: "Notebook",
+      fr: "Carnet",
+      zh: "札记",
+    },
+    "A quieter place for experiments and notes": {
+      en: "A quieter place for experiments and notes",
+      fr: "Un lieu plus calme pour les expériences et les notes",
+      zh: "一个更安静的实验与笔记空间",
+    },
+    "Mathematical experiments, project notes, photographs, and occasional writing gathered away from the main academic pages.": {
+      en: "Mathematical experiments, project notes, photographs, and occasional writing gathered away from the main academic pages.",
+      fr: "Expériences mathématiques, notes de projet, photographies et textes occasionnels, à l'écart des pages académiques principales.",
+      zh: "数学实验、项目札记、照片和偶尔写下的文章，都放在主学术页面之外。",
+    },
+    "Rooms": {
+      en: "Rooms",
+      fr: "Espaces",
+      zh: "分区",
+    },
+    "Mathematical Lab": {
+      en: "Mathematical Lab",
+      fr: "Laboratoire mathématique",
+      zh: "数学实验室",
+    },
+    "Interactive mathematical experiments": {
+      en: "Interactive mathematical experiments",
+      fr: "Expériences mathématiques interactives",
+      zh: "交互式数学实验",
+    },
+    "Probability, statistical mechanics, collective motion, and celestial mechanics in visual form.": {
+      en: "Probability, statistical mechanics, collective motion, and celestial mechanics in visual form.",
+      fr: "Probabilités, mécanique statistique, mouvement collectif et mécanique céleste sous forme visuelle.",
+      zh: "以可视化形式呈现概率、统计力学、集体运动和天体力学。",
+    },
+    "simulation": {
+      en: "simulation",
+      fr: "simulation",
+      zh: "模拟",
+    },
+    "stochastic models": {
+      en: "stochastic models",
+      fr: "modèles stochastiques",
+      zh: "随机模型",
+    },
+    "Project Notes": {
+      en: "Project Notes",
+      fr: "Notes de projet",
+      zh: "项目札记",
+    },
+    "Small tools and development notes": {
+      en: "Small tools and development notes",
+      fr: "Petits outils et notes de développement",
+      zh: "小工具与开发笔记",
+    },
+    "A home for MathReader notes and future research utilities.": {
+      en: "A home for MathReader notes and future research utilities.",
+      fr: "Un espace pour les notes de MathReader et de futurs outils de recherche.",
+      zh: "用于放置 MathReader 札记和未来研究小工具的空间。",
+    },
+    "apps": {
+      en: "apps",
+      fr: "apps",
+      zh: "应用",
+    },
+    "workflow": {
+      en: "workflow",
+      fr: "flux de travail",
+      zh: "工作流",
+    },
+    "AI tools": {
+      en: "AI tools",
+      fr: "outils IA",
+      zh: "AI 工具",
+    },
+    "Essays": {
+      en: "Essays",
+      fr: "Essais",
+      zh: "文章",
+    },
+    "Short writing and reading notes": {
+      en: "Short writing and reading notes",
+      fr: "Textes courts et notes de lecture",
+      zh: "短文与阅读笔记",
+    },
+    "A place for mathematical notes, reading reflections, and longer academic writing.": {
+      en: "A place for mathematical notes, reading reflections, and longer academic writing.",
+      fr: "Un espace pour des notes mathématiques, des réflexions de lecture et des textes académiques plus longs.",
+      zh: "用于放置数学笔记、阅读反思和较长学术文章的空间。",
+    },
+    "notes": {
+      en: "notes",
+      fr: "notes",
+      zh: "笔记",
+    },
+    "reading": {
+      en: "reading",
+      fr: "lecture",
+      zh: "阅读",
+    },
+    "ideas": {
+      en: "ideas",
+      fr: "idées",
+      zh: "想法",
+    },
+    "Photo Journal": {
+      en: "Photo Journal",
+      fr: "Carnet photo",
+      zh: "照片札记",
+    },
+    "Places, campuses, and city fragments": {
+      en: "Places, campuses, and city fragments",
+      fr: "Lieux, campus et fragments de ville",
+      zh: "地点、校园与城市片段",
+    },
+    "Photographs grouped by city and campus, with concise captions rather than scattered decorations.": {
+      en: "Photographs grouped by city and campus, with concise captions rather than scattered decorations.",
+      fr: "Des photographies regroupées par ville et par campus, avec des légendes concises plutôt que des images dispersées.",
+      zh: "照片按城市和校园归类，并配简洁说明，而不是散落在各处作装饰。",
+    },
+    "travel": {
+      en: "travel",
+      fr: "voyage",
+      zh: "旅行",
+    },
+    "Open": {
+      en: "Open",
+      fr: "Ouvrir",
+      zh: "打开",
+    },
+    "Back to Mathematical Lab": {
+      en: "Back to Mathematical Lab",
+      fr: "Retour au laboratoire mathématique",
+      zh: "返回数学实验室",
+    },
+    "Interactive visual mathematics": {
+      en: "Interactive visual mathematics",
+      fr: "Mathématiques visuelles interactives",
+      zh: "交互式可视化数学",
+    },
+    "Simulations and visual results from probability, statistical mechanics, collective motion, and celestial mechanics.": {
+      en: "Simulations and visual results from probability, statistical mechanics, collective motion, and celestial mechanics.",
+      fr: "Simulations et résultats visuels en probabilités, mécanique statistique, mouvement collectif et mécanique céleste.",
+      zh: "来自概率、统计力学、集体运动和天体力学的模拟与可视化结果。",
+    },
+    "Statistical mechanics": {
+      en: "Statistical mechanics",
+      fr: "Mécanique statistique",
+      zh: "统计力学",
+    },
+    "3D simulation": {
+      en: "3D simulation",
+      fr: "Simulation 3D",
+      zh: "三维模拟",
+    },
+    "Collective dynamics": {
+      en: "Collective dynamics",
+      fr: "Dynamique collective",
+      zh: "集体动力学",
+    },
+    "Celestial mechanics": {
+      en: "Celestial mechanics",
+      fr: "Mécanique céleste",
+      zh: "天体力学",
+    },
+    "A 2D square-lattice experiment for connectivity and phase transition intuition.": {
+      en: "A 2D square-lattice experiment for connectivity and phase transition intuition.",
+      fr: "Une expérience sur réseau carré 2D pour visualiser la connectivité et les transitions de phase.",
+      zh: "一个二维方格实验，用来直观看到连通性与相变。",
+    },
+    "A Dobrushin-boundary interface where temperature controls disorder.": {
+      en: "A Dobrushin-boundary interface where temperature controls disorder.",
+      fr: "Une interface avec conditions au bord de Dobrushin où la température contrôle le désordre.",
+      zh: "一个带 Dobrushin 边界条件的界面，温度控制其无序程度。",
+    },
+    "A cubic L x L x L box with a rotatable random interface surface.": {
+      en: "A cubic L x L x L box with a rotatable random interface surface.",
+      fr: "Une boîte cubique L x L x L avec une surface d'interface aléatoire rotative.",
+      zh: "一个 L x L x L 的立方体盒子，包含可旋转的随机界面曲面。",
+    },
+    "Two animations from an L3 internship on predator-prey collective dynamics.": {
+      en: "Two animations from an L3 internship on predator-prey collective dynamics.",
+      fr: "Deux animations issues d'un stage de L3 sur la dynamique collective proie-prédateur.",
+      zh: "来自本科三年级捕食者-猎物集体动力学实习的两段动画。",
+    },
+    "A visual comparison of real and simulated Earth-Moon-satellite trajectories.": {
+      en: "A visual comparison of real and simulated Earth-Moon-satellite trajectories.",
+      fr: "Une comparaison visuelle entre trajectoires réelles et simulées du système Terre-Lune-satellite.",
+      zh: "真实与模拟的地球-月球-卫星轨迹对比图。",
+    },
+    "Open experiment": {
+      en: "Open experiment",
+      fr: "Ouvrir l'expérience",
+      zh: "打开实验",
+    },
+    "Open result": {
+      en: "Open result",
+      fr: "Ouvrir le résultat",
+      zh: "打开结果",
+    },
+    "An interactive square-lattice visualization of open bonds and connectivity.": {
+      en: "An interactive square-lattice visualization of open bonds and connectivity.",
+      fr: "Une visualisation interactive des arêtes ouvertes et de la connectivité sur un réseau carré.",
+      zh: "一个展示开放边与连通性的方格交互可视化。",
+    },
+    "A two-dimensional Dobrushin-boundary simulation controlled by temperature.": {
+      en: "A two-dimensional Dobrushin-boundary simulation controlled by temperature.",
+      fr: "Une simulation bidimensionnelle avec conditions au bord de Dobrushin contrôlée par la température.",
+      zh: "一个由温度控制的二维 Dobrushin 边界模拟。",
+    },
+    "A rotatable L x L x L box with boundary phases and an estimated random interface.": {
+      en: "A rotatable L x L x L box with boundary phases and an estimated random interface.",
+      fr: "Une boîte L x L x L rotative avec phases au bord et interface aléatoire estimée.",
+      zh: "一个可旋转的 L x L x L 盒子，展示边界相与估计随机界面。",
+    },
+    "Two visualization results from my L3 internship on predator-prey collective motion.": {
+      en: "Two visualization results from my L3 internship on predator-prey collective motion.",
+      fr: "Deux résultats de visualisation issus de mon stage de L3 sur le mouvement collectif proie-prédateur.",
+      zh: "我本科三年级捕食者-猎物集体运动实习中的两个可视化结果。",
+    },
+    "An L3 physics internship result comparing real and simulated trajectories.": {
+      en: "An L3 physics internship result comparing real and simulated trajectories.",
+      fr: "Un résultat de stage de L3 en physique comparant trajectoires réelles et simulées.",
+      zh: "一个本科三年级物理实习结果，用于比较真实轨迹与模拟轨迹。",
+    },
+    "A place for project logs, implementation notes, and small research utilities.": {
+      en: "A place for project logs, implementation notes, and small research utilities.",
+      fr: "Un espace pour des journaux de projet, des notes d'implémentation et de petits outils de recherche.",
+      zh: "用于项目日志、实现笔记和研究小工具的空间。",
+    },
+    "Current project": {
+      en: "Current project",
+      fr: "Projet actuel",
+      zh: "当前项目",
+    },
+    "A macOS reader for mathematical PDFs, annotations, references, and AI-assisted reading.": {
+      en: "A macOS reader for mathematical PDFs, annotations, references, and AI-assisted reading.",
+      fr: "Un lecteur macOS pour PDF mathématiques, annotations, références et lecture assistée par IA.",
+      zh: "一个用于数学 PDF、批注、文献和 AI 辅助阅读的 macOS 阅读器。",
+    },
+    "Open project": {
+      en: "Open project",
+      fr: "Ouvrir le projet",
+      zh: "打开项目",
+    },
+    "Later": {
+      en: "Later",
+      fr: "Plus tard",
+      zh: "稍后",
+    },
+    "Development notes": {
+      en: "Development notes",
+      fr: "Notes de développement",
+      zh: "开发笔记",
+    },
+    "Short logs for future versions, design decisions, and mathematical software experiments.": {
+      en: "Short logs for future versions, design decisions, and mathematical software experiments.",
+      fr: "Courtes notes sur les versions futures, les choix de conception et les expériences de logiciel mathématique.",
+      zh: "记录未来版本、设计决策和数学软件实验的短札记。",
+    },
+    "A reserved space for mathematical notes, reading reflections, and longer academic writing.": {
+      en: "A reserved space for mathematical notes, reading reflections, and longer academic writing.",
+      fr: "Un espace réservé aux notes mathématiques, réflexions de lecture et textes académiques plus longs.",
+      zh: "为数学笔记、阅读反思和较长学术文章预留的空间。",
+    },
+    "Coming later": {
+      en: "Coming later",
+      fr: "À venir",
+      zh: "即将加入",
+    },
+    "No essays yet": {
+      en: "No essays yet",
+      fr: "Pas encore d'essais",
+      zh: "暂时还没有文章",
+    },
+    "Future posts can live here without mixing with simulations or photographs.": {
+      en: "Future posts can live here without mixing with simulations or photographs.",
+      fr: "Les futurs textes pourront vivre ici sans se mélanger aux simulations ou aux photographies.",
+      zh: "之后的文章可以放在这里，不会和模拟或照片混在一起。",
+    },
+    "A reserved space for photographs grouped by city, campus, and memory.": {
+      en: "A reserved space for photographs grouped by city, campus, and memory.",
+      fr: "Un espace réservé aux photographies regroupées par ville, campus et souvenir.",
+      zh: "为按城市、校园和记忆归类的照片预留的空间。",
+    },
+    "Paris": {
+      en: "Paris",
+      fr: "Paris",
+      zh: "巴黎",
+    },
+    "Wuhan": {
+      en: "Wuhan",
+      fr: "Wuhan",
+      zh: "武汉",
+    },
+    "Rome": {
+      en: "Rome",
+      fr: "Rome",
+      zh: "罗马",
     },
     "404 — Page Not Found | Yuguang XIAO": {
       en: "404 — Page Not Found | Yuguang XIAO",

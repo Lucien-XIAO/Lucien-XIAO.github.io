@@ -1,0 +1,27 @@
+---
+title: Bond Percolation
+permalink: /misc/lab/percolation/
+layout: page
+author_profile: true
+---
+
+<div class="notebook-page notebook-detail-page">
+  <a class="notebook-back-link" href="{{ site.baseurl }}/misc/lab/">Back to Mathematical Lab</a>
+
+  <section class="notebook-detail-hero">
+    <p class="notebook-kicker">Probability</p>
+    <h1>Bond Percolation</h1>
+    <p class="notebook-lede">An interactive square-lattice visualization of open bonds and connectivity.</p>
+  </section>
+
+  <div class="lab-frame-shell lab-frame-percolation">
+    <iframe src="{{ site.baseurl }}/misc/percolation_sim.html" title="Bond Percolation simulation" loading="lazy"></iframe>
+  </div>
+
+  <p class="lab-detail-copy" data-i18n-html="misc.percolation">
+    Interactive visualization of <em>Bond Percolation</em> on a 2D square lattice. In this model, <strong>p</strong>
+    represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they
+    are connected to at least one open bond, preventing isolated colored nodes. Try varying <strong>p</strong>
+    around the critical threshold (0.5) to observe the phase transition in connectivity.
+  </p>
+</div>

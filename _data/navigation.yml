@@ -33,7 +33,7 @@ main:
     i18n_key: nav.mathreader
     url: /mathreader/
 
-  - title: "Misc"
+  - title: "Notebook"
     i18n_key: nav.misc
     url: /misc/   
     
