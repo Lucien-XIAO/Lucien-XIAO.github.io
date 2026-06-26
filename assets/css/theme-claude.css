@@ -3669,6 +3669,7 @@ body.theme-claude .notebook-placeholder {
 }
 
 body.theme-claude .photo-journal-grid {
+  align-items: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -3679,6 +3680,10 @@ body.theme-claude .photo-journal-card {
 
 body.theme-claude .photo-journal-card img {
   aspect-ratio: 4 / 3;
+}
+
+body.theme-claude .photo-journal-card-portrait img {
+  aspect-ratio: 3 / 4;
 }
 
 body.theme-claude .photo-journal-card figcaption {

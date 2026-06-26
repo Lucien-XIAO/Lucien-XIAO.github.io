@@ -36,7 +36,7 @@ title: Curriculum Vitae
         <div class="experience-content">
           <p class="exp-title"><strong>M.S. in Probability</strong></p>
           <p class="exp-detail">Sorbonne Université, Paris</p>
-          <p class="exp-period">2026 (expected)</p>
+          <p class="exp-period">2025-2026 (expected)</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-default-lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+    content="A second year Master's (M2) student in Probability and Random Models (M2-PMA) with major stochastic process at Sorbonne Université. Previously, I completed a double Bachelor's degree in Mathematics and Physics at Sorbonne Université.">
+<meta name="keywords"
+    content="Yuguang XIAO, Sorbonne Université, M2-PMA, Probability and Random Models, Stochastic Processes, Master's Degree, Double Bachelor's Degree, Mathematics, Physics">
+<link rel="canonical" href="http://localhost:4000/misc/lab/" />
+<link rel="icon" href="/assets/img/yuguang-xiao-portrait.jpg?v=2" type="image/jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
+    crossorigin=anonymous>
+<script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/css/font_sans_serif.css">
+<link rel="stylesheet" href="/assets/css/style-no-dark-mode_old.css">
+<link rel="stylesheet" href="/assets/css/publications-no-dark-mode_old.css">
+<link rel="stylesheet" href="/assets/css/theme-claude.css?v=27">
+<script src="/assets/js/site-i18n.js?v=32" defer></script>
+<script>
+  (function() {
+    var theme = localStorage.getItem('theme');
+    if (theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+  })();
+</script>
+<title>Mathematical Lab</title>
+
+</head>
+<body class="theme-claude">
+  <div class="math-float-canvas" id="math-float-canvas"></div>
+<script>
+  (function() {
+    const symbols = [
+      // Basic Math & Greek Letters
+      '∫', '∑', '∞', '∂', 'ℙ', '𝔼', '∇', 'Δ', 'θ', 'λ', 'μ', 'σ',
+      'α', 'β', 'γ', 'ξ', 'π', 'ρ', 'τ', 'φ', 'ω', 'Ω', 'ℱ', '∩', '∪',
+      // Probability & Stochastic Processes
+      'ℙ(X=x)', '𝔼[X]', 'dμ(x)', 'B<sub>t</sub>', 'W<sub>t</sub>', 'd X<sub>t</sub> = μ dt + σ d W<sub>t</sub>',
+      'Var(X) = 𝔼[(X-μ)<sup>2</sup>]', 'Cov(X,Y) = 𝔼[XY] - 𝔼[X]𝔼[Y]',
+      'X<sub>n</sub> → N(0, σ<sup>2</sup>)', 'ℙ(A|B) = ℙ(B|A)ℙ(A)/ℙ(B)',
+      'φ<sub>X</sub>(t) = 𝔼[e<sup>itX</sup>]', 'H(X) = -∑ p(x)log p(x)',
+      // Statistical Mechanics & Ising Model
+      'ℋ = -J∑σ<sub>i</sub>σ<sub>j</sub>', 'Z = ∑ e<sup>-βℋ</sup>', 'σ<sub>i</sub> ∈ {±1}',
+      'm = tanh(βJm + h)', 'F = -kT ln Z', '⟨σ<sub>i</sub>σ<sub>j</sub>⟩ ∼ e<sup>-r/ξ</sup>',
+      'S = k<sub>B</sub> ln Ω', 'T<sub>c</sub> = 2J / k<sub>B</sub> ln(1+√2)'
+    ];
+    const canvas = document.getElementById('math-float-canvas');
+    if (!canvas) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    const numSymbols = window.innerWidth < 720 ? 7 : 12;
+
+    for (let i = 0; i < numSymbols; i++) {
+      // Distribute evenly across the screen width (0 to 100vw)
+      const baseLeft = (i / numSymbols) * 100; 
+      createSymbol(baseLeft);
+    }
+
+    function createSymbol(baseLeft) {
+      const span = document.createElement('span');
+      span.className = 'math-sym';
+      span.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      
+      // Randomize starting properties
+      // Add a tiny jitter around the base lane so it looks natural, but stays in its lane
+      const jitter = (Math.random() - 0.5) * 4; 
+      const startLeft = Math.max(2, Math.min(98, baseLeft + jitter)); 
+      
+      const startBottom = -(Math.random() * 24 + 8);
+      const delay = Math.random() * 10;
+      const duration = Math.random() * 18 + 22;
+      const fontSize = Math.random() * 18 + 18;
+      const opacity = Math.random() * 0.055 + 0.035;
+      const rotation = (Math.random() - 0.5) * 60; // -30 to 30 deg rotation
+      const scale = Math.random() * 0.5 + 0.8; // 0.8 to 1.3
+
+      span.style.left = startLeft + 'vw';
+      span.style.bottom = startBottom + 'vh';
+      span.style.fontSize = fontSize + 'px';
+      span.style.animationDuration = duration + 's';
+      span.style.animationDelay = delay + 's';
+      
+      // Pass custom properties to CSS animation
+      span.style.setProperty('--sym-opacity', opacity);
+      span.style.setProperty('--sym-rot', rotation + 'deg');
+      span.style.setProperty('--sym-scale', scale);
+
+      canvas.appendChild(span);
+
+      // Recreate symbol after animation ends to keep it going forever
+      span.addEventListener('animationend', () => {
+        span.remove();
+        // Respawn in the same horizontal lane to avoid dense cluster overlap
+        createSymbol(baseLeft);
+      });
+    }
+  })();
+</script>
+
+  <nav class="top-nav">
+  <div class="nav-container">
+    <div class="nav-left">
+      <a href="/" data-i18n="nav.home" >Home</a>
+      
+        <a href="/pub/"
+          data-i18n="nav.publications"
+          >
+          Publications
+        </a>
+      
+        <a href="/talks/"
+          data-i18n="nav.talks"
+          >
+          Talks
+        </a>
+      
+        <a href="/teaching/"
+          data-i18n="nav.teaching"
+          >
+          Teaching
+        </a>
+      
+        <a href="/cv/"
+          data-i18n="nav.cv"
+          >
+          CV
+        </a>
+      
+        <a href="/PMA/"
+          data-i18n="nav.pma"
+          >
+          M2-PMA
+        </a>
+      
+        <a href="/mathreader/"
+          data-i18n="nav.mathreader"
+          >
+          MathReader
+        </a>
+      
+        <a href="/misc/"
+          data-i18n="nav.misc"
+          class="nav-active">
+          Notebook
+        </a>
+      
+    </div>
+    <div class="nav-right">
+      <div class="language-switcher" data-language-switcher aria-label="Language selector">
+        <button type="button" class="language-flag" data-lang-option="en" title="Switch to English" aria-label="Switch to English">🇬🇧</button>
+        <button type="button" class="language-flag" data-lang-option="fr" title="Switch to French" aria-label="Switch to French">🇫🇷</button>
+        <button type="button" class="language-flag" data-lang-option="zh" title="Switch to Chinese" aria-label="Switch to Chinese">🇨🇳</button>
+      </div>
+      <button id="themeToggle" class="theme-toggle" title="Toggle Dark Mode" aria-label="Toggle dark mode"
+        data-i18n-title="theme.toggle" data-i18n-aria-label="theme.toggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+<script>
+  (function () {
+    const labels = {
+      en: { en: "Switch to English", fr: "Passer en anglais", zh: "切换到英文" },
+      fr: { en: "Switch to French", fr: "Passer en français", zh: "切换到法语" },
+      zh: { en: "Switch to Chinese", fr: "Passer en chinois", zh: "切换到中文" },
+    };
+    const normalize = (value) => {
+      const lang = String(value || "").toLowerCase();
+      if (lang.startsWith("zh")) return "zh";
+      if (lang.startsWith("fr")) return "fr";
+      return "en";
+    };
+    const syncFlags = (language) => {
+      const current = normalize(language || document.documentElement.dataset.language || document.documentElement.dataset.defaultLang || document.documentElement.lang);
+      document.querySelectorAll("[data-lang-option]").forEach((button) => {
+        const target = normalize(button.dataset.langOption);
+        const hidden = target === current;
+        button.hidden = hidden;
+        button.setAttribute("aria-hidden", hidden ? "true" : "false");
+        const label = labels[target] && labels[target][current];
+        if (label) {
+          button.title = label;
+          button.setAttribute("aria-label", label);
+        }
+      });
+    };
+    document.addEventListener("DOMContentLoaded", () => window.setTimeout(() => syncFlags(), 0));
+    window.addEventListener("site-language-change", (event) => syncFlags(event.detail && event.detail.language));
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest && event.target.closest("[data-lang-option]");
+      if (!button) return;
+      if (window.SiteI18n && typeof window.SiteI18n.applyLanguage === "function") {
+        window.SiteI18n.applyLanguage(button.dataset.langOption);
+      } else {
+        let requestEvent;
+        if (typeof window.CustomEvent === "function") {
+          requestEvent = new window.CustomEvent("site-language-request", {
+            detail: { language: button.dataset.langOption }
+          });
+        } else {
+          requestEvent = document.createEvent("CustomEvent");
+          requestEvent.initCustomEvent("site-language-request", false, false, {
+            language: button.dataset.langOption
+          });
+        }
+        window.dispatchEvent(requestEvent);
+      }
+      window.setTimeout(() => syncFlags(), 60);
+    });
+  })();
+</script>
+
+  <div class="page-wrapper">
+    <main class="page-main">
+      <div class="notebook-page">
+  <a class="notebook-back-link" href="/misc/">Notebook</a>
+
+  <section class="notebook-hero">
+    <div class="notebook-hero-copy">
+      <p class="notebook-kicker">Mathematical Lab</p>
+      <h1>Interactive visual mathematics</h1>
+      <p class="notebook-lede">Simulations and visual results from probability, statistical mechanics, collective motion, and celestial mechanics.</p>
+    </div>
+  </section>
+
+  <div class="lab-grid">
+    <a class="lab-card" href="/misc/lab/percolation/">
+      <span class="lab-preview lab-preview-percolation" aria-hidden="true"></span>
+      <span class="notebook-card-kicker">Probability</span>
+      <h2>Bond Percolation</h2>
+      <p>A 2D square-lattice experiment for connectivity and phase transition intuition.</p>
+      <span class="notebook-card-action">Open experiment</span>
+    </a>
+
+    <a class="lab-card" href="/misc/lab/ising-interface/">
+      <span class="lab-preview lab-preview-ising" aria-hidden="true"></span>
+      <span class="notebook-card-kicker">Statistical mechanics</span>
+      <h2>Ising Random Interface</h2>
+      <p>A Dobrushin-boundary interface where temperature controls disorder.</p>
+      <span class="notebook-card-action">Open experiment</span>
+    </a>
+
+    <a class="lab-card" href="/misc/lab/ising-3d/">
+      <span class="lab-preview lab-preview-ising3d" aria-hidden="true"></span>
+      <span class="notebook-card-kicker">3D simulation</span>
+      <h2>3D Ising Random Interface</h2>
+      <p>A cubic L x L x L box with a rotatable random interface surface.</p>
+      <span class="notebook-card-action">Open experiment</span>
+    </a>
+
+    <a class="lab-card" href="/misc/lab/collective-motion/">
+      <span class="lab-preview lab-preview-image" aria-hidden="true">
+        <img src="/interships/StageL3/resultats_visualises/stage-l3-result-n50-m1.gif" alt="" loading="lazy">
+      </span>
+      <span class="notebook-card-kicker">Collective dynamics</span>
+      <h2>Collective Motion with Predators</h2>
+      <p>Two animations from an L3 internship on predator-prey collective dynamics.</p>
+      <span class="notebook-card-action">Open result</span>
+    </a>
+
+    <a class="lab-card" href="/misc/lab/n-body/">
+      <span class="lab-preview lab-preview-image" aria-hidden="true">
+        <img src="/interships/Stage_phys_L3/M_E_S_3body.PNG" alt="" loading="lazy">
+      </span>
+      <span class="notebook-card-kicker">Celestial mechanics</span>
+      <h2>N-body Model in Astrophysics</h2>
+      <p>A visual comparison of real and simulated Earth-Moon-satellite trajectories.</p>
+      <span class="notebook-card-action">Open result</span>
+    </a>
+  </div>
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <p data-i18n="footer.copyright">&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+</footer>
+
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.nav-active')?.scrollIntoView({ block: 'nearest', inline: 'center' });
+      document.querySelectorAll('.section').forEach((el) => el.classList.add('visible'));
+    });
+    const toggle = document.getElementById('themeToggle');
+    if (toggle) {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        toggle.querySelector('i').className = saved === 'dark'
+          ? 'fa-solid fa-sun'
+          : 'fa-solid fa-moon';
+      }
+      toggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        toggle.querySelector('i').className = next === 'dark'
+          ? 'fa-solid fa-sun'
+          : 'fa-solid fa-moon';
+      });
+    }
+  </script>
+</body>
+</html>

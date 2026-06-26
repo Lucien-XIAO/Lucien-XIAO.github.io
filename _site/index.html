@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en" data-default-lang="en">
 <head>
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +8,19 @@
     content="A second year Master's (M2) student in Probability and Random Models (M2-PMA) with major stochastic process at Sorbonne Université. Previously, I completed a double Bachelor's degree in Mathematics and Physics at Sorbonne Université.">
 <meta name="keywords"
     content="Yuguang XIAO, Sorbonne Université, M2-PMA, Probability and Random Models, Stochastic Processes, Master's Degree, Double Bachelor's Degree, Mathematics, Physics">
-<link rel="canonical" href="http://0.0.0.0:4000/" />
-<link rel="icon" href="assets/img/favicon.png" type="image/png" />
+<link rel="canonical" href="http://localhost:4000/" />
+<link rel="icon" href="/assets/img/yuguang-xiao-portrait.jpg?v=2" type="image/jpeg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
     crossorigin=anonymous>
 <script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/assets/css/font_sans_serif.css">
 <link rel="stylesheet" href="/assets/css/style-no-dark-mode_old.css">
 <link rel="stylesheet" href="/assets/css/publications-no-dark-mode_old.css">
-<link rel="stylesheet" href="/assets/css/theme-claude.css">
+<link rel="stylesheet" href="/assets/css/theme-claude.css?v=27">
+<script src="/assets/js/site-i18n.js?v=32" defer></script>
 <script>
   (function() {
     var theme = localStorage.getItem('theme');
@@ -29,8 +30,9 @@
   })();
 </script>
 <title>Yuguang XIAO - Homepage</title>
+
 </head>
-<body class="theme-claude">
+<body class="theme-claude has-paris-strip">
   <div class="math-float-canvas" id="math-float-canvas"></div>
 <script>
   (function() {
@@ -51,7 +53,10 @@
     const canvas = document.getElementById('math-float-canvas');
     if (!canvas) return;
 
-    const numSymbols = 26; // number of symbols to show
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    const numSymbols = window.innerWidth < 720 ? 7 : 12;
 
     for (let i = 0; i < numSymbols; i++) {
       // Distribute evenly across the screen width (0 to 100vw)
@@ -66,14 +71,14 @@
       
       // Randomize starting properties
       // Add a tiny jitter around the base lane so it looks natural, but stays in its lane
-      const jitter = (Math.random() - 0.5) * 3; 
+      const jitter = (Math.random() - 0.5) * 4; 
       const startLeft = Math.max(2, Math.min(98, baseLeft + jitter)); 
       
-      const startBottom = -(Math.random() * 20 + 5); // Start slightly below screen
-      const delay = Math.random() * 5; // animation delay
-      const duration = Math.random() * 8 + 8; // 8 to 16s duration
-      const fontSize = Math.random() * 24 + 20; // 20px to 44px
-      const opacity = Math.random() * 0.12 + 0.10; // 0.10 to 0.22 max opacity
+      const startBottom = -(Math.random() * 24 + 8);
+      const delay = Math.random() * 10;
+      const duration = Math.random() * 18 + 22;
+      const fontSize = Math.random() * 18 + 18;
+      const opacity = Math.random() * 0.055 + 0.035;
       const rotation = (Math.random() - 0.5) * 60; // -30 to 30 deg rotation
       const scale = Math.random() * 0.5 + 0.8; // 0.8 to 1.3
 
@@ -103,98 +108,189 @@
   <nav class="top-nav">
   <div class="nav-container">
     <div class="nav-left">
-      <a href="/" class="nav-active">Home</a>
+      <a href="/" data-i18n="nav.home" class="nav-active">Home</a>
       
         <a href="/pub/"
+          data-i18n="nav.publications"
           >
           Publications
         </a>
       
         <a href="/talks/"
+          data-i18n="nav.talks"
           >
           Talks
         </a>
       
         <a href="/teaching/"
+          data-i18n="nav.teaching"
           >
           Teaching
         </a>
       
         <a href="/cv/"
+          data-i18n="nav.cv"
           >
           CV
         </a>
       
         <a href="/PMA/"
+          data-i18n="nav.pma"
           >
-          M2-PMA (25-26)
+          M2-PMA
+        </a>
+      
+        <a href="/mathreader/"
+          data-i18n="nav.mathreader"
+          >
+          MathReader
         </a>
       
         <a href="/misc/"
+          data-i18n="nav.misc"
           >
-          Misc
+          Notebook
         </a>
       
     </div>
     <div class="nav-right">
-      <button id="themeToggle" class="theme-toggle" title="Toggle Dark Mode">
+      <div class="language-switcher" data-language-switcher aria-label="Language selector">
+        <button type="button" class="language-flag" data-lang-option="en" title="Switch to English" aria-label="Switch to English">🇬🇧</button>
+        <button type="button" class="language-flag" data-lang-option="fr" title="Switch to French" aria-label="Switch to French">🇫🇷</button>
+        <button type="button" class="language-flag" data-lang-option="zh" title="Switch to Chinese" aria-label="Switch to Chinese">🇨🇳</button>
+      </div>
+      <button id="themeToggle" class="theme-toggle" title="Toggle Dark Mode" aria-label="Toggle dark mode"
+        data-i18n-title="theme.toggle" data-i18n-aria-label="theme.toggle">
         <i class="fa-solid fa-moon"></i>
       </button>
     </div>
   </div>
 </nav>
+<script>
+  (function () {
+    const labels = {
+      en: { en: "Switch to English", fr: "Passer en anglais", zh: "切换到英文" },
+      fr: { en: "Switch to French", fr: "Passer en français", zh: "切换到法语" },
+      zh: { en: "Switch to Chinese", fr: "Passer en chinois", zh: "切换到中文" },
+    };
+    const normalize = (value) => {
+      const lang = String(value || "").toLowerCase();
+      if (lang.startsWith("zh")) return "zh";
+      if (lang.startsWith("fr")) return "fr";
+      return "en";
+    };
+    const syncFlags = (language) => {
+      const current = normalize(language || document.documentElement.dataset.language || document.documentElement.dataset.defaultLang || document.documentElement.lang);
+      document.querySelectorAll("[data-lang-option]").forEach((button) => {
+        const target = normalize(button.dataset.langOption);
+        const hidden = target === current;
+        button.hidden = hidden;
+        button.setAttribute("aria-hidden", hidden ? "true" : "false");
+        const label = labels[target] && labels[target][current];
+        if (label) {
+          button.title = label;
+          button.setAttribute("aria-label", label);
+        }
+      });
+    };
+    document.addEventListener("DOMContentLoaded", () => window.setTimeout(() => syncFlags(), 0));
+    window.addEventListener("site-language-change", (event) => syncFlags(event.detail && event.detail.language));
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest && event.target.closest("[data-lang-option]");
+      if (!button) return;
+      if (window.SiteI18n && typeof window.SiteI18n.applyLanguage === "function") {
+        window.SiteI18n.applyLanguage(button.dataset.langOption);
+      } else {
+        let requestEvent;
+        if (typeof window.CustomEvent === "function") {
+          requestEvent = new window.CustomEvent("site-language-request", {
+            detail: { language: button.dataset.langOption }
+          });
+        } else {
+          requestEvent = document.createEvent("CustomEvent");
+          requestEvent.initCustomEvent("site-language-request", false, false, {
+            language: button.dataset.langOption
+          });
+        }
+        window.dispatchEvent(requestEvent);
+      }
+      window.setTimeout(() => syncFlags(), 60);
+    });
+  })();
+</script>
 
+  <div class="paris-photo-strip" aria-label="Paris skyline">
+    <img src="/assets/img/paris-banner.jpg?v=2" alt="Paris skyline at night over the Seine" decoding="async" />
+    <span class="photo-strip-caption">Paris at night over the Seine</span>
+  </div>
   <div class="wrapper">
     <header class="sidebar">
   <div class="profile-card">
-    <a class="image avatar"><img src="assets/img/avatar.png" alt="avatar"
-        onerror="this.src='assets/img/avatar.jpg'" /></a>
+    <a class="image avatar"><img src="/assets/img/yuguang-xiao-portrait.jpg?v=2" alt="Portrait of Yuguang XIAO" /></a>
     <h1 class="site-name">Yuguang XIAO</h1>
     <h2 class="site-name-cn">肖煜光</h2>
-    <p class="site-email" id="contact-email">yuguang dot xiao dot maths [at] gmail dot com</p>
+    <p class="site-email" id="contact-email">
+      <span>yuguang dot xiao dot maths [at]</span>
+      <span>gmail dot com</span>
+    </p>
     <div class="social-icons">
       <a href="#contact-email" class="js-email-link"
         data-contact-code="128-124-110-124-104-117-110-53-127-112-104-118-53-116-104-123-111-122-71-110-116-104-112-115-53-106-118-116"
-        data-email-target="#contact-email" title="Reveal email" aria-label="Reveal email">
+        data-email-target="#contact-email" title="Copy email address" aria-label="Copy email address"
+        data-i18n-title="contact.reveal" data-i18n-aria-label="contact.reveal">
         <i class="fa-solid fa-envelope"></i>
       </a>
       <a href="https://github.com/Lucien-XIAO" title="GitHub" target="_blank" rel="noopener">
         <i class="fa-brands fa-github"></i>
       </a>
-      <a href="https://www.linkedin.com/in/yuguang-xiao/" title="LinkedIn" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/yuguang-xiao-00b1281ba/" title="LinkedIn" target="_blank" rel="noopener">
         <i class="fa-brands fa-linkedin"></i>
       </a>
     </div>
-    <div class="visitor-map sidebar-map">
-      <script type="text/javascript" id="clustrmaps"
-        src="//cdn.clustrmaps.com/map_v2.js?cl=c2714f&w=240&t=tt&d=Ry9Pwc6MSE_msikSt6L8O_3AgKOkFiHyEz9ZUHUKwE4&co=faf9f7&ct=3d3929"></script>
-    </div>
   </div>
 </header>
+
     <section class="content">
       <div class="section" id="about-me">
   <h3 class="section-title">About Me</h3>
-  <div class="section-body">
-    <p>I am a second year Master's (M2) student in Probability and Random Models (<a
-        href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>) with major stochastic process at <a
-        href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.</p>
-    <p>I have been fortunate to work on several research projects, including the study of bi-Lipschitz equivalence of
+  <div class="section-body intro-copy">
+    <p data-i18n-html="home.about.p1">I am currently completing my M2 internship at the <a href="https://lama-umr8050.fr/">LAMA</a>
+      (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>), under the supervision of
+      <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>. My internship focuses on the
+      long-range models and related questions in probability and statistical mechanics. I am also a second year
+      Master's (M2) student in Probability and Random Models (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>),
+      in the Stochastic Processes track, at <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.</p>
+    <p data-i18n-html="home.about.p2">I have been fortunate to work on several research projects, including the study of bi-Lipschitz equivalence of
       separated nets in Banach spaces with <a href="https://www.alexandroseskenazis.com/">Alexandros ESKENAZIS</a>, and
       collective motion modeling with <a href="https://sites.google.com/site/dianepeurichard/home">Diane PEURICHARD</a>.
     </p>
+    <div class="intro-meta" aria-label="Research profile">
+      <span>M2-PMA · Stochastic Processes</span>
+      <span>LAMA / UPEC · M2 internship</span>
+      <span>Long-range models</span>
+    </div>
   </div>
 </div>
 
 <div class="section" id="interests">
-  <h3 class="section-title">Interests</h3>
+  <h3 class="section-title">Research Directions</h3>
   <div class="section-body">
-    <div class="card">
-      <ul class="custom-list">
-        <li>Probability theory</li>
-        <li>Random walk</li>
-        <li>Disordered system</li>
-        <li>Applications in statistical physics</li>
-      </ul>
+    <div class="research-direction-grid">
+      <article class="research-direction">
+        <span class="research-direction-index">01</span>
+        <h4>Stochastic Processes</h4>
+        <p>I am interested in random walks, Markov and non-Markovian dynamics, and the probabilistic structures behind memory effects.</p>
+      </article>
+      <article class="research-direction">
+        <span class="research-direction-index">02</span>
+        <h4>Statistical Mechanics</h4>
+        <p>My current work concerns long-range models and related questions on phase transitions, interfaces, and interacting particle systems.</p>
+      </article>
+      <article class="research-direction">
+        <span class="research-direction-index">03</span>
+        <h4>Mathematical Modeling</h4>
+        <p>I also enjoy probabilistic models arising from collective motion and neuroscience, especially Hawkes processes and stochastic models of neural activity.</p>
+      </article>
     </div>
   </div>
 </div>
@@ -202,11 +298,11 @@
 <div class="section" id="news">
   <h3 class="section-title">News</h3>
   <div class="section-body">
-    <div class="card">
+    <div class="card news-card">
       <ul class="custom-list">
-        <li><strong>[Apr 2026]</strong> I’ll be working on the long-range Ising model with <a
-            href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud Le Ny</a> at Université Paris-Est
-          Créteil (UPEC) as my M2 internship from April-20 to June-20 on 2026.</li>
+        <li><strong>[Apr 2026]</strong> <span data-i18n-html="home.news.long_range">I’ll be working on long-range models with <a
+            href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> at Université Paris-Est
+          Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.</span></li>
       </ul>
     </div>
   </div>
@@ -217,9 +313,9 @@
   <div class="section-body">
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="assets/img/SU_logo.jpg" alt="Sorbonne Université logo" />
+        <img class="institution-logo" src="assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université</strong></p>
+          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
           <p class="exp-detail">Master 2 in Probability and Random Models (PMA)</p>
           <p class="exp-period">2025-2026</p>
         </div>
@@ -227,9 +323,9 @@
     </div>
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="assets/img/SU_logo.jpg" alt="Sorbonne Université logo" />
+        <img class="institution-logo" src="assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université</strong></p>
+          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
           <p class="exp-detail">Master 1 Mathematics and Applications</p>
           <p class="exp-period">2024-2025</p>
         </div>
@@ -237,9 +333,9 @@
     </div>
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="assets/img/SU_logo.jpg" alt="Sorbonne Université logo" />
+        <img class="institution-logo" src="assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université</strong></p>
+          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
           <p class="exp-detail">Double Bachelor's degree in Mathematics and Physics</p>
           <p class="exp-period">2020-2024</p>
         </div>
@@ -253,24 +349,25 @@
   <div class="section-body">
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="assets/img/lama_logo.png" alt="UPEC logo" />
+        <img class="institution-logo" src="assets/img/lama-upec-logo.png" alt="UPEC logo" />
         <div class="experience-content">
-          <p class="exp-title"><strong>Université Paris-Est Créteil (UPEC)</strong></p>
+          <p class="exp-title"><strong>Université Paris-Est Créteil, Paris</strong></p>
           <p class="exp-detail">M2 Research Intern</p>
-          <p class="exp-detail"><em>Topic:</em> Long-range Ising model</p>
-          <p class="exp-detail"><em>Advisor:</em> <a href="https://perso.math.u-pem.fr/leny.arnaud/">Arnaud Le Ny</a>
+          <p class="exp-detail"><em>Topic:</em> <span class="exp-subject">Long-range models</span></p>
+          <p class="exp-detail"><em>Advisor:</em> <a href="https://perso.math.u-pem.fr/leny.arnaud/">Arnaud LE NY</a>
           </p>
-          <p class="exp-period">April 2026 - June 2026</p>
+          <p class="exp-period">April 2026 - July 2026</p>
         </div>
       </div>
     </div>
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="assets/img/IMJ_PRJ_logo.png" alt="IMJ-PRG logo" />
+        <img class="institution-logo" src="assets/img/imj-prg-logo.png" alt="IMJ-PRG logo" />
         <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université</strong></p>
+          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
           <p class="exp-detail">M1 Research Intern</p>
-          <p class="exp-detail"><em>Topic:</em> Bi-Lipschitz equivalence of separated nets in Banach spaces</p>
+          <p class="exp-detail"><em>Topic:</em> <span class="exp-subject">Bi-Lipschitz equivalence of separated nets in
+              Banach spaces</span></p>
           <p class="exp-detail"><em>Advisor:</em> <a href="https://www.alexandroseskenazis.com/" target="_blank"
               rel="noopener noreferrer">Alexandros ESKENAZIS</a></p>
           <p class="exp-period">2025</p>
@@ -285,11 +382,11 @@
     </div>
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="assets/img/LJLL_logo.jpg" alt="LJLL logo" />
+        <img class="institution-logo" src="assets/img/ljll-logo.jpg" alt="LJLL logo" />
         <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université</strong></p>
+          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
           <p class="exp-detail">L3 Research Intern</p>
-          <p class="exp-detail"><em>Topic:</em> Collective motion modeling</p>
+          <p class="exp-detail"><em>Topic:</em> <span class="exp-subject">Collective motion modeling</span></p>
           <p class="exp-detail"><em>Advisor:</em> <a href="https://sites.google.com/site/dianepeurichard/home/"
               target="_blank" rel="noopener noreferrer">Diane PEURICHARD</a></p>
           <p class="exp-period">2024</p>
@@ -305,51 +402,191 @@
   </div>
 </div>
 
-<div class="section" id="notes">
-  <h3 class="section-title">Various Notes</h3>
+<div class="section" id="materials">
+  <h3 class="section-title">Selected Materials</h3>
   <div class="section-body">
-    <div class="card timeline-item">
-      <div class="experience-item">
-        <div class="experience-content">
-          <p class="exp-title"><strong>Measure Theory</strong> <span class="exp-detail">(Work in progress)</span></p>
-          <p class="exp-detail">Self-compiled notes</p>
-          <p class="exp-period">Updated recently</p>
-          <div class="action-links">
-            <a href="../publications/Various_Notes/Measure_theory.pdf" target="_blank" rel="noopener noreferrer"><i
-                class="fa-solid fa-file-pdf"></i> PDF</a>
-          </div>
-        </div>
-      </div>
+    <div class="materials-grid">
+      <a class="material-link" href="/cv/">
+        <span class="material-link-icon"><i class="fa-solid fa-file-lines"></i></span>
+        <span>
+          <strong>CV</strong>
+          <em>Academic background and research experience.</em>
+        </span>
+      </a>
+      <a class="material-link" href="/PMA/">
+        <span class="material-link-icon"><i class="fa-solid fa-route"></i></span>
+        <span>
+          <strong>PMA Path</strong>
+          <em>Guide to the M2 Probability and Random Models program.</em>
+        </span>
+      </a>
+      <a class="material-link" href="/mathreader/">
+        <span class="material-link-icon"><i class="fa-solid fa-book-open-reader"></i></span>
+        <span>
+          <strong>MathReader</strong>
+          <em>A macOS tool for reading and organizing mathematical papers.</em>
+        </span>
+      </a>
+      <a class="material-link" href="/misc/essays/measure-theory/">
+        <span class="material-link-icon"><i class="fa-solid fa-square-root-variable"></i></span>
+        <span>
+          <strong>Measure Theory Notes</strong>
+          <em>Self-compiled notes, currently in progress.</em>
+        </span>
+      </a>
     </div>
   </div>
 </div>
+
     </section>
     <footer class="site-footer">
-  <p>&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+  <p data-i18n="footer.copyright">&copy; 2026 Yuguang XIAO. All rights reserved.</p>
 </footer>
 
   </div>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.nav-active')?.scrollIntoView({ block: 'nearest', inline: 'center' });
+
       const decodeContact = (value) => value
         .split('-')
         .map((code) => String.fromCharCode(Number(code) - 7))
         .join('');
 
+      const contactMessages = {
+        en: 'Email copied to clipboard',
+        fr: 'Adresse e-mail copiée',
+        zh: '邮箱地址已复制',
+      };
+
+      const currentLanguage = () => {
+        const lang = (document.documentElement.lang || document.documentElement.dataset.language || 'en').toLowerCase();
+        if (lang.startsWith('zh')) return 'zh';
+        if (lang.startsWith('fr')) return 'fr';
+        return 'en';
+      };
+
+      let contactToastTimer;
+      const showContactToast = (message) => {
+        let toast = document.querySelector('.contact-toast');
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.className = 'contact-toast';
+          toast.setAttribute('role', 'status');
+          toast.setAttribute('aria-live', 'polite');
+          document.body.appendChild(toast);
+        }
+
+        toast.textContent = message;
+        window.clearTimeout(contactToastTimer);
+        toast.classList.add('is-visible');
+        contactToastTimer = window.setTimeout(() => {
+          toast.classList.remove('is-visible');
+        }, 1600);
+      };
+
+      const copyText = async (text) => {
+        if (navigator.clipboard && window.isSecureContext) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch (error) {
+            // Fall back to the selection-based copy path below.
+          }
+        }
+
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        textarea.setSelectionRange(0, textarea.value.length);
+        try {
+          return document.execCommand('copy');
+        } finally {
+          textarea.remove();
+        }
+      };
+
       document.querySelectorAll('.js-email-link[data-contact-code]').forEach((link) => {
-        link.addEventListener('click', (event) => {
+        link.addEventListener('click', async (event) => {
           event.preventDefault();
 
           const email = decodeContact(link.dataset.contactCode || '');
           const targetSelector = link.dataset.emailTarget;
           const target = targetSelector ? document.querySelector(targetSelector) : null;
-          if (target) target.textContent = email;
+          const fallbackText = email.replace('@', ' [at] ').replace(/\./g, ' dot ');
 
-          window.location.href = `mai${'lto'}:${email}`;
+          try {
+            const copied = await copyText(email);
+            if (!copied) throw new Error('Copy unavailable');
+            showContactToast(contactMessages[currentLanguage()]);
+          } catch (error) {
+            if (target) target.textContent = fallbackText;
+            showContactToast(contactMessages[currentLanguage()]);
+          }
         });
       });
 
-      document.querySelectorAll('.section').forEach((el) => el.classList.add('visible'));
+      document.querySelectorAll('.section').forEach((el, index) => {
+        el.classList.add('visible');
+        el.style.transitionDelay = `${Math.min(index * 35, 180)}ms`;
+
+        const title = el.querySelector('.section-title');
+        const body = el.querySelector('.section-body');
+        if (!title || !body) return;
+
+        const sectionId = el.id || `section-${index + 1}`;
+        if (!el.id) el.id = sectionId;
+        if (!body.id) body.id = `${sectionId}-body`;
+
+        el.classList.add('is-collapsible');
+        title.setAttribute('role', 'button');
+        title.setAttribute('tabindex', '0');
+        title.setAttribute('aria-controls', body.id);
+        title.setAttribute('aria-expanded', 'true');
+
+        const openSection = () => {
+          el.classList.remove('is-collapsed');
+          title.setAttribute('aria-expanded', 'true');
+          body.style.height = '0px';
+          body.offsetHeight;
+          body.style.height = `${body.scrollHeight}px`;
+        };
+
+        const closeSection = () => {
+          title.setAttribute('aria-expanded', 'false');
+          body.style.height = `${body.scrollHeight}px`;
+          body.offsetHeight;
+          el.classList.add('is-collapsed');
+          body.style.height = '0px';
+        };
+
+        const toggleSection = () => {
+          if (el.classList.contains('is-collapsed')) {
+            openSection();
+          } else {
+            closeSection();
+          }
+        };
+
+        body.addEventListener('transitionend', (event) => {
+          if (event.target === body && event.propertyName === 'height' && !el.classList.contains('is-collapsed')) {
+            body.style.height = 'auto';
+          }
+        });
+
+        title.addEventListener('click', toggleSection);
+        title.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleSection();
+          }
+        });
+      });
     });
     
     const toggle = document.getElementById('themeToggle');
