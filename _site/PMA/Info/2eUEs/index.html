@@ -16,11 +16,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
     crossorigin=anonymous>
-<script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css?v=1">
 <link rel="stylesheet" href="/assets/css/font_sans_serif.css">
 <link rel="stylesheet" href="/assets/css/style-no-dark-mode_old.css">
 <link rel="stylesheet" href="/assets/css/publications-no-dark-mode_old.css">
-<link rel="stylesheet" href="/assets/css/theme-claude.css?v=27">
+<link rel="stylesheet" href="/assets/css/theme-claude.css?v=28">
 <script src="/assets/js/site-i18n.js?v=32" defer></script>
 <script>
   (function() {
@@ -90,7 +90,7 @@
       const delay = Math.random() * 10;
       const duration = Math.random() * 18 + 22;
       const fontSize = Math.random() * 18 + 18;
-      const opacity = Math.random() * 0.055 + 0.035;
+      const opacity = Math.random() * 0.07 + 0.05;
       const rotation = (Math.random() - 0.5) * 60; // -30 to 30 deg rotation
       const scale = Math.random() * 0.5 + 0.8; // 0.8 to 1.3
 
@@ -175,6 +175,60 @@
         data-i18n-title="theme.toggle" data-i18n-aria-label="theme.toggle">
         <i class="fa-solid fa-moon"></i>
       </button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile navigation overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-panel">
+      <a href="/" data-i18n="nav.home" >Home</a>
+      
+        <a href="/pub/"
+          data-i18n="nav.publications"
+          >
+          Publications
+        </a>
+      
+        <a href="/talks/"
+          data-i18n="nav.talks"
+          >
+          Talks
+        </a>
+      
+        <a href="/teaching/"
+          data-i18n="nav.teaching"
+          >
+          Teaching
+        </a>
+      
+        <a href="/cv/"
+          data-i18n="nav.cv"
+          >
+          CV
+        </a>
+      
+        <a href="/PMA/"
+          data-i18n="nav.pma"
+          class="mobile-nav-active">
+          M2-PMA
+        </a>
+      
+        <a href="/mathreader/"
+          data-i18n="nav.mathreader"
+          >
+          MathReader
+        </a>
+      
+        <a href="/misc/"
+          data-i18n="nav.misc"
+          >
+          Notebook
+        </a>
+      
     </div>
   </div>
 </nav>
@@ -227,6 +281,30 @@
         window.dispatchEvent(requestEvent);
       }
       window.setTimeout(() => syncFlags(), 60);
+    });
+  })();
+</script>
+<script>
+  (function () {
+    const btn = document.getElementById('hamburgerBtn');
+    const overlay = document.getElementById('mobileNav');
+    if (!btn || !overlay) return;
+
+    const toggle = (open) => {
+      const isOpen = typeof open === 'boolean' ? open : !overlay.classList.contains('is-open');
+      overlay.classList.toggle('is-open', isOpen);
+      btn.classList.toggle('is-active', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      overlay.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    btn.addEventListener('click', () => toggle());
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) toggle(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) toggle(false);
     });
   })();
 </script>
@@ -377,8 +455,33 @@
 
     </main>
     <footer class="site-footer">
-  <p data-i18n="footer.copyright">&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/" data-i18n="nav.home">Home</a>
+      <a href="/pub/" data-i18n="nav.publications">Publications</a>
+      <a href="/cv/" data-i18n="nav.cv">CV</a>
+      <a href="/teaching/" data-i18n="nav.teaching">Teaching</a>
+    </div>
+    <p data-i18n="footer.copyright">&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" data-i18n-aria-label="footer.back_to_top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
 </footer>
+<script>
+  (function () {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    const onScroll = () => {
+      btn.classList.toggle('is-visible', window.scrollY > 400);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
 
   </div>
   <script>

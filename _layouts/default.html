@@ -104,9 +104,27 @@
         });
       });
 
-      document.querySelectorAll('.section').forEach((el, index) => {
-        el.classList.add('visible');
-        el.style.transitionDelay = `${Math.min(index * 35, 180)}ms`;
+      /* IntersectionObserver: reveal sections on scroll */
+      const sections = document.querySelectorAll('.section');
+      const revealObserver = window.IntersectionObserver
+        ? new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' })
+        : null;
+
+      sections.forEach((el, index) => {
+        el.style.transitionDelay = `${Math.min(index * 60, 300)}ms`;
+
+        if (revealObserver) {
+          revealObserver.observe(el);
+        } else {
+          el.classList.add('visible');
+        }
 
         const title = el.querySelector('.section-title');
         const body = el.querySelector('.section-body');

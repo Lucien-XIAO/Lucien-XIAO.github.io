@@ -20,6 +20,24 @@
         data-i18n-title="theme.toggle" data-i18n-aria-label="theme.toggle">
         <i class="fa-solid fa-moon"></i>
       </button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile navigation overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-panel">
+      <a href="/" data-i18n="nav.home" {% if page.url == "/" %}class="mobile-nav-active"{% endif %}>Home</a>
+      {% for item in site.data.navigation.main %}
+        <a href="{{ item.url }}"
+          data-i18n="{{ item.i18n_key }}"
+          {% if page.url contains item.url %}class="mobile-nav-active"{% endif %}>
+          {{ item.title }}
+        </a>
+      {% endfor %}
     </div>
   </div>
 </nav>
@@ -72,6 +90,30 @@
         window.dispatchEvent(requestEvent);
       }
       window.setTimeout(() => syncFlags(), 60);
+    });
+  })();
+</script>
+<script>
+  (function () {
+    const btn = document.getElementById('hamburgerBtn');
+    const overlay = document.getElementById('mobileNav');
+    if (!btn || !overlay) return;
+
+    const toggle = (open) => {
+      const isOpen = typeof open === 'boolean' ? open : !overlay.classList.contains('is-open');
+      overlay.classList.toggle('is-open', isOpen);
+      btn.classList.toggle('is-active', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      overlay.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    btn.addEventListener('click', () => toggle());
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) toggle(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) toggle(false);
     });
   })();
 </script>

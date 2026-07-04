@@ -15,11 +15,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
     crossorigin=anonymous>
-<script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css?v=1">
 <link rel="stylesheet" href="/assets/css/font_sans_serif.css">
 <link rel="stylesheet" href="/assets/css/style-no-dark-mode_old.css">
 <link rel="stylesheet" href="/assets/css/publications-no-dark-mode_old.css">
-<link rel="stylesheet" href="/assets/css/theme-claude.css?v=27">
+<link rel="stylesheet" href="/assets/css/theme-claude.css?v=28">
 <script src="/assets/js/site-i18n.js?v=32" defer></script>
 <script>
   (function() {
@@ -78,7 +78,7 @@
       const delay = Math.random() * 10;
       const duration = Math.random() * 18 + 22;
       const fontSize = Math.random() * 18 + 18;
-      const opacity = Math.random() * 0.055 + 0.035;
+      const opacity = Math.random() * 0.07 + 0.05;
       const rotation = (Math.random() - 0.5) * 60; // -30 to 30 deg rotation
       const scale = Math.random() * 0.5 + 0.8; // 0.8 to 1.3
 
@@ -163,6 +163,60 @@
         data-i18n-title="theme.toggle" data-i18n-aria-label="theme.toggle">
         <i class="fa-solid fa-moon"></i>
       </button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile navigation overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-panel">
+      <a href="/" data-i18n="nav.home" class="mobile-nav-active">Home</a>
+      
+        <a href="/pub/"
+          data-i18n="nav.publications"
+          >
+          Publications
+        </a>
+      
+        <a href="/talks/"
+          data-i18n="nav.talks"
+          >
+          Talks
+        </a>
+      
+        <a href="/teaching/"
+          data-i18n="nav.teaching"
+          >
+          Teaching
+        </a>
+      
+        <a href="/cv/"
+          data-i18n="nav.cv"
+          >
+          CV
+        </a>
+      
+        <a href="/PMA/"
+          data-i18n="nav.pma"
+          >
+          M2-PMA
+        </a>
+      
+        <a href="/mathreader/"
+          data-i18n="nav.mathreader"
+          >
+          MathReader
+        </a>
+      
+        <a href="/misc/"
+          data-i18n="nav.misc"
+          >
+          Notebook
+        </a>
+      
     </div>
   </div>
 </nav>
@@ -218,6 +272,30 @@
     });
   })();
 </script>
+<script>
+  (function () {
+    const btn = document.getElementById('hamburgerBtn');
+    const overlay = document.getElementById('mobileNav');
+    if (!btn || !overlay) return;
+
+    const toggle = (open) => {
+      const isOpen = typeof open === 'boolean' ? open : !overlay.classList.contains('is-open');
+      overlay.classList.toggle('is-open', isOpen);
+      btn.classList.toggle('is-active', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      overlay.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    btn.addEventListener('click', () => toggle());
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) toggle(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) toggle(false);
+    });
+  })();
+</script>
 
   <div class="paris-photo-strip" aria-label="Paris skyline">
     <img src="/assets/img/paris-banner.jpg?v=2" alt="Paris skyline at night over the Seine" decoding="async" />
@@ -230,16 +308,15 @@
     <h1 class="site-name">Yuguang XIAO</h1>
     <h2 class="site-name-cn">肖煜光</h2>
     <p class="site-email" id="contact-email">
-      <span>yuguang dot xiao dot maths [at]</span>
-      <span>gmail dot com</span>
-    </p>
-    <div class="social-icons">
-      <a href="#contact-email" class="js-email-link"
+      <a href="#contact-email" class="js-email-link email-copy-btn"
         data-contact-code="128-124-110-124-104-117-110-53-127-112-104-118-53-116-104-123-111-122-71-110-116-104-112-115-53-106-118-116"
         data-email-target="#contact-email" title="Copy email address" aria-label="Copy email address"
         data-i18n-title="contact.reveal" data-i18n-aria-label="contact.reveal">
         <i class="fa-solid fa-envelope"></i>
+        <span data-i18n="contact.copy_hint">Click to copy email</span>
       </a>
+    </p>
+    <div class="social-icons">
       <a href="https://github.com/Lucien-XIAO" title="GitHub" target="_blank" rel="noopener">
         <i class="fa-brands fa-github"></i>
       </a>
@@ -257,7 +334,7 @@
     <p data-i18n-html="home.about.p1">I am currently completing my M2 internship at the <a href="https://lama-umr8050.fr/">LAMA</a>
       (<a href="https://www.u-pec.fr/">Université Paris-Est Créteil</a>), under the supervision of
       <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a>. My internship focuses on the
-      long-range models and related questions in probability and statistical mechanics. I am also a second year
+      long-range Ising model and related questions in probability and statistical mechanics. I am also a second year
       Master's (M2) student in Probability and Random Models (<a href="https://www.lpsm.paris/masters/modale/index">M2-PMA</a>),
       in the Stochastic Processes track, at <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.</p>
     <p data-i18n-html="home.about.p2">I have been fortunate to work on several research projects, including the study of bi-Lipschitz equivalence of
@@ -267,7 +344,7 @@
     <div class="intro-meta" aria-label="Research profile">
       <span>M2-PMA · Stochastic Processes</span>
       <span>LAMA / UPEC · M2 internship</span>
-      <span>Long-range models</span>
+      <span>Long-range Ising model</span>
     </div>
   </div>
 </div>
@@ -284,7 +361,7 @@
       <article class="research-direction">
         <span class="research-direction-index">02</span>
         <h4>Statistical Mechanics</h4>
-        <p>My current work concerns long-range models and related questions on phase transitions, interfaces, and interacting particle systems.</p>
+        <p>My current work concerns the long-range Ising model and related questions on phase transitions, interfaces, and interacting particle systems.</p>
       </article>
       <article class="research-direction">
         <span class="research-direction-index">03</span>
@@ -300,7 +377,7 @@
   <div class="section-body">
     <div class="card news-card">
       <ul class="custom-list">
-        <li><strong>[Apr 2026]</strong> <span data-i18n-html="home.news.long_range">I’ll be working on long-range models with <a
+        <li><strong>[Apr 2026]</strong> <span data-i18n-html="home.news.long_range">I’ll be working on the long-range Ising model with <a
             href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> at Université Paris-Est
           Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.</span></li>
       </ul>
@@ -353,7 +430,7 @@
         <div class="experience-content">
           <p class="exp-title"><strong>Université Paris-Est Créteil, Paris</strong></p>
           <p class="exp-detail">M2 Research Intern</p>
-          <p class="exp-detail"><em>Topic:</em> <span class="exp-subject">Long-range models</span></p>
+          <p class="exp-detail"><em>Topic:</em> <span class="exp-subject">Long-range Ising model</span></p>
           <p class="exp-detail"><em>Advisor:</em> <a href="https://perso.math.u-pem.fr/leny.arnaud/">Arnaud LE NY</a>
           </p>
           <p class="exp-period">April 2026 - July 2026</p>
@@ -440,8 +517,33 @@
 
     </section>
     <footer class="site-footer">
-  <p data-i18n="footer.copyright">&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/" data-i18n="nav.home">Home</a>
+      <a href="/pub/" data-i18n="nav.publications">Publications</a>
+      <a href="/cv/" data-i18n="nav.cv">CV</a>
+      <a href="/teaching/" data-i18n="nav.teaching">Teaching</a>
+    </div>
+    <p data-i18n="footer.copyright">&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" data-i18n-aria-label="footer.back_to_top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
 </footer>
+<script>
+  (function () {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    const onScroll = () => {
+      btn.classList.toggle('is-visible', window.scrollY > 400);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
 
   </div>
   <script>
@@ -531,9 +633,27 @@
         });
       });
 
-      document.querySelectorAll('.section').forEach((el, index) => {
-        el.classList.add('visible');
-        el.style.transitionDelay = `${Math.min(index * 35, 180)}ms`;
+      /* IntersectionObserver: reveal sections on scroll */
+      const sections = document.querySelectorAll('.section');
+      const revealObserver = window.IntersectionObserver
+        ? new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' })
+        : null;
+
+      sections.forEach((el, index) => {
+        el.style.transitionDelay = `${Math.min(index * 60, 300)}ms`;
+
+        if (revealObserver) {
+          revealObserver.observe(el);
+        } else {
+          el.classList.add('visible');
+        }
 
         const title = el.querySelector('.section-title');
         const body = el.querySelector('.section-body');

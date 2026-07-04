@@ -1,3 +1,28 @@
 <footer class="site-footer">
-  <p data-i18n="footer.copyright">&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/" data-i18n="nav.home">Home</a>
+      <a href="/pub/" data-i18n="nav.publications">Publications</a>
+      <a href="/cv/" data-i18n="nav.cv">CV</a>
+      <a href="/teaching/" data-i18n="nav.teaching">Teaching</a>
+    </div>
+    <p data-i18n="footer.copyright">&copy; 2026 Yuguang XIAO. All rights reserved.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" data-i18n-aria-label="footer.back_to_top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
 </footer>
+<script>
+  (function () {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    const onScroll = () => {
+      btn.classList.toggle('is-visible', window.scrollY > 400);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
