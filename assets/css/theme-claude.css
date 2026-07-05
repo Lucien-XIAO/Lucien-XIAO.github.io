@@ -2956,7 +2956,7 @@ body.theme-claude .mathreader-status a:hover {
 }
 
 body.theme-claude .materials-grid {
-  gap: 10px;
+  gap: 14px;
 }
 
 body.theme-claude .material-link,
@@ -2969,8 +2969,21 @@ body.theme-claude .mathreader-detail-grid > div {
 }
 
 body.theme-claude .material-link {
+  align-items: center;
+  background: rgba(var(--claude-paper-rgb), 0.38);
+  border-color: color-mix(in srgb, var(--claude-border) 72%, transparent);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(52, 68, 61, 0.035);
+  gap: 14px;
+  grid-template-columns: 42px minmax(0, 1fr);
   min-height: 88px;
-  padding: 13px;
+  padding: 16px;
+}
+
+body.theme-claude .section-body a.material-link {
+  color: var(--claude-text);
+  font-weight: inherit;
+  text-decoration: none;
 }
 
 body.theme-claude .material-link::after {
@@ -2980,17 +2993,35 @@ body.theme-claude .material-link::after {
 body.theme-claude .material-link:hover,
 body.theme-claude .mathreader-feature:hover,
 body.theme-claude .mathreader-detail-grid > div:hover {
-  background: var(--claude-accent-soft);
+  background: rgba(var(--claude-paper-rgb), 0.68);
   border-color: color-mix(in srgb, var(--claude-accent) 46%, transparent);
-  box-shadow: none;
+  box-shadow: 0 10px 24px rgba(52, 68, 61, 0.06);
   transform: translateY(-1px);
 }
 
 body.theme-claude .material-link-icon {
-  background: var(--claude-accent-soft);
-  border: 1px solid color-mix(in srgb, var(--claude-accent) 28%, transparent);
-  border-radius: 4px;
-  color: var(--claude-accent);
+  background: color-mix(in srgb, var(--claude-jade) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--claude-jade) 22%, transparent);
+  border-radius: 7px;
+  color: var(--claude-jade);
+  font-size: 17px;
+  height: 42px;
+  width: 42px;
+}
+
+body.theme-claude .material-link strong,
+body.theme-claude .material-link em {
+  text-decoration: none;
+}
+
+body.theme-claude .material-link strong {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+body.theme-claude .material-link em {
+  font-size: 13.5px;
+  line-height: 1.42;
 }
 
 body.theme-claude .site-footer {
