@@ -1824,6 +1824,11 @@
       fr: 'Je travaillerai sur le modèle d\'Ising à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> à l\'Université Paris-Est Créteil (UPEC) dans le cadre de mon stage de M2, du 20 avril au 20 juillet 2026.',
       zh: '我将在 2026 年 4 月 20 日至 7 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 做 M2 实习，研究长程 Ising 模型。',
     },
+    "home.news.mstic_fellowship": {
+      en: "I have been notified that I have been awarded a doctoral fellowship from ED MSTIC 532 to pursue my PhD from 2026 to 2029.",
+      fr: "J'ai reçu la notification de l'attribution d'une allocation doctorale de l'ED MSTIC 532 pour effectuer ma thèse de 2026 à 2029.",
+      zh: "我收到通知，获得 ED MSTIC 532 的博士奖学金资助，将于 2026–2029 年攻读博士。",
+    },
     "misc.percolation": {
       en: 'Interactive visualization of <em>Bond Percolation</em> on a 2D square lattice. In this model, <strong>p</strong> represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they are connected to at least one open bond, preventing isolated colored nodes. Try varying <strong>p</strong> around the critical threshold (0.5) to observe the phase transition in connectivity.',
       fr: 'Visualisation interactive de la <em>percolation par arêtes</em> sur un réseau carré en dimension 2. Ici, <strong>p</strong> désigne la probabilité qu\'une arête soit ouverte. Contrairement à la percolation par sites, les sommets ne sont colorés que s\'ils sont reliés à au moins une arête ouverte. Faites varier <strong>p</strong> autour du seuil critique 0,5 pour observer la transition de connectivité.',
