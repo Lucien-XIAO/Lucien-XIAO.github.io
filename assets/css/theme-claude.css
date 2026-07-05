@@ -1349,23 +1349,22 @@ body.theme-claude .skill-stars .empty-star {
   color: rgba(140, 133, 119, 0.28);
 }
 
+body.theme-claude .news-list {
+  max-width: 760px;
+  display: grid;
+  gap: 12px;
+}
+
 body.theme-claude .news-card {
   display: block;
-  max-width: 760px;
   padding: 16px 18px;
   border-left: 3px solid var(--claude-accent);
   border-radius: 8px;
   background: linear-gradient(90deg, var(--claude-accent-soft), transparent 72%);
 }
 
-body.theme-claude .news-card .custom-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-body.theme-claude .news-card .custom-list li {
-  margin-bottom: 0;
-  padding-left: 0;
+body.theme-claude .news-card p {
+  margin: 0;
 }
 
 body.theme-claude .institution-logo {

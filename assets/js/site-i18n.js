@@ -666,6 +666,11 @@
       fr: "[avr. 2026]",
       zh: "[2026 年 4 月]",
     },
+    "[Jul 2026]": {
+      en: "[Jul 2026]",
+      fr: "[juil. 2026]",
+      zh: "[2026 年 7 月]",
+    },
     "Master 2 in Probability and Random Models (PMA)": {
       en: "Master 2 in Probability and Random Models (PMA)",
       fr: "Master 2 Probabilités et Modèles Aléatoires (PMA)",
