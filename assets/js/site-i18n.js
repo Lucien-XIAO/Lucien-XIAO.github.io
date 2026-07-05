@@ -1825,9 +1825,9 @@
       zh: '我将在 2026 年 4 月 20 日至 7 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 做 M2 实习，研究长程 Ising 模型。',
     },
     "home.news.mstic_fellowship": {
-      en: "I am delighted to have been awarded a doctoral fellowship from the MSTIC Doctoral School (ED 532), supporting my PhD studies from 2026 to 2029.",
-      fr: "J'ai le plaisir d'avoir obtenu une allocation doctorale de l'École doctorale MSTIC (ED 532), qui soutiendra ma thèse de 2026 à 2029.",
-      zh: "很高兴获得 MSTIC 博士生院（ED 532）的博士奖学金资助，支持我在 2026–2029 年攻读博士。",
+      en: 'I am delighted to have been awarded a doctoral fellowship from the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>, supporting my PhD studies from 2026 to 2029.',
+      fr: 'J\'ai le plaisir d\'avoir obtenu une allocation doctorale de l\'<a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">École doctorale MSTIC (ED 532)</a>, qui soutiendra ma thèse de 2026 à 2029.',
+      zh: '很高兴获得 <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC 博士生院（ED 532）</a> 的博士奖学金资助，支持我在 2026–2029 年攻读博士。',
     },
     "misc.percolation": {
       en: 'Interactive visualization of <em>Bond Percolation</em> on a 2D square lattice. In this model, <strong>p</strong> represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they are connected to at least one open bond, preventing isolated colored nodes. Try varying <strong>p</strong> around the critical threshold (0.5) to observe the phase transition in connectivity.',
