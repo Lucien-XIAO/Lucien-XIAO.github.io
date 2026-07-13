@@ -87,6 +87,23 @@ title: Curriculum Vitae
       </div>
     </div>
 
+    <!-- Degree 5 -->
+    <div class="card timeline-item">
+      <div class="experience-item">
+        <img class="institution-logo" src="{{ site.baseurl }}/assets/img/wuhan-no3-middle-school-logo.jpg" alt="Wuhan No. 3 Middle School logo" />
+        <div class="experience-content">
+          <p class="exp-title"><strong>High School Diploma, Science Track</strong></p>
+          <p class="exp-detail">Wuhan No. 3 Middle School, Wuhan</p>
+          <div style="margin-top: 8px; font-size: 15px; color: var(--claude-text); opacity: 0.9;">
+            <ul>
+              <li>Coursework: Chinese, Mathematics, English, Physics, Chemistry, and Biology.</li>
+            </ul>
+          </div>
+          <p class="exp-period">2016 – 2019</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <h2 class="cv-section-title">Skills</h2>
