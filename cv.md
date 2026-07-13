@@ -90,7 +90,7 @@ title: Curriculum Vitae
     <!-- Degree 5 -->
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="{{ site.baseurl }}/assets/img/wuhan-no3-middle-school-logo.jpg" alt="Wuhan No. 3 Middle School logo" />
+        <img class="institution-logo institution-logo-wuhan" src="{{ site.baseurl }}/assets/img/wuhan-no3-middle-school-logo.jpg" alt="Wuhan No. 3 Middle School logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>High School Diploma, Science Track</strong></p>
           <p class="exp-detail">Wuhan No. 3 Middle School, Wuhan</p>

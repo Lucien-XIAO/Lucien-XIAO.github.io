@@ -2918,6 +2918,11 @@ body.theme-claude .institution-logo {
   width: 50px;
 }
 
+body.theme-claude .institution-logo-wuhan {
+  height: 66px;
+  width: 66px;
+}
+
 body.theme-claude .exp-title {
   font-size: 14.5px;
   font-weight: 700;
@@ -3197,6 +3202,11 @@ body.theme-claude .mathreader-mock-ai {
     height: 46px;
     margin-right: 0;
     width: 46px;
+  }
+
+  body.theme-claude .institution-logo-wuhan {
+    height: 56px;
+    width: 56px;
   }
 }
 
