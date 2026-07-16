@@ -20,16 +20,11 @@ mathjax: true
       <span aria-hidden="true">·</span>
       <time datetime="2026-07-16">2026 年 7 月 16 日</time>
       <span aria-hidden="true">·</span>
-      <span>约 15 分钟阅读</span>
+      <span>约 12 分钟阅读</span>
     </p>
   </header>
 
   <article class="essay-article" lang="zh-CN">
-    <figure class="essay-hero-figure">
-      <img src="{{ site.baseurl }}/assets/img/ising-model-essay-interface.png?v=1" alt="二维伊辛模型中红蓝两相与黄色随机界面的模拟图" decoding="async" />
-      <figcaption>二维伊辛模型的两相与随机界面。图像来自本站的数值模拟。</figcaption>
-    </figure>
-
     <p class="essay-opening">磁铁被加热后，为什么会在某个温度附近失去自发磁化？在标准大气压下，水为什么会在约 100°C 附近从液态转向气态？这些现象的微观机制并不相同，却共享一个关键词：<strong>相变</strong>。系统的组成没有突然改变，宏观行为却在临界参数附近发生了质的变化。</p>
 
     <p>伊辛模型的迷人之处，正是它用极少的规则抓住了这种变化。每个格点上只有一个正号或负号，格点之间只有简单的相互作用；然而，当格点数量足够多时，秩序、无序、临界涨落乃至不同尺度之间的自相似都会从中出现。</p>
@@ -39,7 +34,7 @@ mathjax: true
     </blockquote>
 
     <aside class="essay-note">
-      <strong>写作说明。</strong> 本文最初的历史叙事受到<a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">这个知乎问题中返朴转载的西湖大学科普文章</a>启发。这里保留了“最难的求和”这条线索，但重新核对了历史事实与数学结论，区分了二维和三维的情形，并补充了长程模型、共形 bootstrap 与 fuzzy sphere 的进展。
+      <strong>写作说明。</strong> 本文最初的历史叙事受到<a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">这个知乎问题中返朴转载的西湖大学科普文章</a>启发。这里保留了“最难的求和”这条线索，但重新核对了历史事实与数学结论。全文采取纯理论视角，重点放在精确解、共形结构、严格概率方法与长程相互作用。
     </aside>
 
     <h2>1. 从居里温度到一张格点</h2>
@@ -147,31 +142,28 @@ mathjax: true
 
     <p>1970 年，Alexander Polyakov 提出用共形对称理解临界涨落。对二维系统而言，共形变换可以在局部改变长度，却保持角度；它为“临界点没有特征尺度”提供了更强的数学语言。此后，Stanislav Smirnov、Dmitry Chelkak 等人的工作严格建立了平面临界伊辛模型若干观测量与界面的共形不变缩放极限。</p>
 
-    <p>三维伊辛模型至今没有像二维模型那样的闭式精确解，但这不等于我们对它一无所知。概率方法、重整化群、数值模拟与共形 bootstrap 已经给出极其精确的图景。Hugo Duminil-Copin 因解决统计物理相变概率理论中的长期难题，尤其是三维和四维问题，获得了 2022 年菲尔茨奖；相关成果包括三维伊辛相变连续性的严格证明。</p>
+    <p>三维伊辛模型至今没有像二维模型那样的闭式精确解，但这不等于我们对它一无所知。随机流、关联不等式、簇展开与红外界等严格工具，已经给出了关于相变存在性、唯一性与连续性的深刻结论。Hugo Duminil-Copin 因解决统计物理相变概率理论中的长期难题，尤其是三维和四维问题，获得了 2022 年菲尔茨奖。</p>
 
-    <h2>4. 三维：没有闭式解，不等于没有答案</h2>
+    <h2>4. 三维：哪些已经严格知道，哪些仍然开放</h2>
 
-    <p>“三维伊辛模型是否已经解出”很容易变成一个语言陷阱。截至 2026 年，我们仍不知道一个与昂萨格二维解相当的、能完整写出三维近邻模型热力学量的闭式公式。可是，“没有闭式解”与“不知道临界行为”是两件截然不同的事。</p>
+    <p>“三维伊辛模型是否已经解出”很容易变成一个语言陷阱。截至 2026 年，我们仍不知道一个与昂萨格二维解相当的、能完整写出三维近邻模型自由能与关联函数的闭式公式。但严格统计力学关心的不只是“能否写出公式”，还包括相变是否存在、Gibbs 态何时唯一，以及秩参量在临界点如何行为。</p>
 
-    <div class="essay-sequence" aria-label="研究三维伊辛模型的三条路径">
+    <div class="essay-sequence" aria-label="三维伊辛模型的三个严格理论层次">
       <section class="essay-step">
         <span class="essay-step-index">1</span>
         <div>
-          <h3>重整化群与蒙特卡洛</h3>
-          <p>重整化群解释了不同尺度之间如何流动，蒙特卡洛则直接对大型格点系统取样。两者从机制与数值两端逼近同一个临界点。</p>
+          <h3>相变的存在性</h3>
+          <p>Peierls 轮廓论证表明，在二维及更高维的近邻铁磁模型中，足够低温时可以存在多个 Gibbs 态。高温区的簇展开与唯一性论证则给出相反图景，从而在严格意义上建立了相变的存在。</p>
         </div>
       </section>
       <section class="essay-step">
         <span class="essay-step-index">2</span>
         <div>
-          <h3>共形 bootstrap：用自洽性缩小答案</h3>
-          <p>在临界极限假设共形对称后，幺正性、交叉对称和算符乘积展开会给关联函数施加强约束。许多表面上可能的理论被排除，三维 Ising 共形场论被压缩到参数空间中一座很小的“孤岛”。</p>
+          <h3>临界点的连续性</h3>
+          <p>Michael Aizenman、Hugo Duminil-Copin 与 Vladas Sidoravicius 利用无穷体积下的随机流表示，证明了三维近邻伊辛模型的自发磁化在临界点连续消失。换言之，该相变是连续的：</p>
           <div class="essay-equation essay-equation-compact">
             \[
-              \begin{aligned}
-                \Delta_\sigma &amp;= 0.5181489(10), \\
-                \Delta_\epsilon &amp;= 1.412625(10).
-              \end{aligned}
+              \lim_{\beta\downarrow\beta_c}m^*(\beta)=0.
             \]
           </div>
         </div>
@@ -179,16 +171,16 @@ mathjax: true
       <section class="essay-step">
         <span class="essay-step-index">3</span>
         <div>
-          <h3>Fuzzy sphere：从球面能谱读取共形数据</h3>
-          <p>通过经典与量子临界系统的对应，可以在球面上构造一个有限的 (2+1) 维量子模型。这种正规化在有限尺寸下保留旋转对称，并借助态–算符对应，从能谱中识别标度维数、共形塔和 OPE 系数。</p>
+          <h3>仍然开放的解析问题</h3>
+          <p>三维模型仍缺少完整的闭式自由能、任意距离关联函数和一套可与二维情形相比的临界结构严格推导。三维缩放极限的共形不变性如何从格点模型中严格产生，仍是核心难题之一。</p>
         </div>
       </section>
     </div>
 
-    <p>2023 年，Wei Zhu、Chao Han 及其合作者用量子 fuzzy sphere 正规化在三维 Ising 临界点的能谱中清晰识别出态–算符对应，直接展示了预期的共形结构。同年的后续工作还从微观模型中提取了 OPE 系数。这些结果不是把三维配分函数“一次求完”，而是换了一个更有效的问题：能否构造一个尽可能保留对称性的有限系统，再从它的能谱中读出临界理论？</p>
+    <p>随机流表示把自旋关联函数重写为具有偶奇约束的整数流之和，从而把解析问题与随机几何中的连通性联系起来。这也是伊辛模型长盛不衰的一个原因：同一个模型不断促成代数、组合、概率与分析之间的新对话。</p>
 
     <aside class="essay-note essay-note-caution">
-      <strong>“精确”有几种不同的意思。</strong> 闭式解、严格定理、受理论假设约束的数值界，以及高精度模拟并不是同一件事。三维伊辛模型仍缺少昂萨格意义上的完整解析解，但其临界指数和共形数据已经可以被极精确地刻画。
+      <strong>严格结果不等于完整精确解。</strong> 一个定理可以彻底解决“相变是否连续”，却不必同时给出所有热力学量的显式公式。所谓三维伊辛模型“尚未解出”，应当在这个更精确的意义上理解。
     </aside>
 
     <h2>5. 长程相互作用：远处也能“投票”</h2>
@@ -209,14 +201,6 @@ mathjax: true
     <p>最引人注目的变化发生在一维。若把耦合写成 \(J(r)\sim r^{-\alpha}\)，Freeman Dyson 在 1969 年证明了 \(1&lt;\alpha&lt;2\) 时低温相变的存在。临界端点 \(\alpha=2\) 更微妙，直到 1982 年才由 Jürg Fröhlich 与 Thomas Spencer 严格处理。换成上面的记号，这分别对应 \(0&lt;\sigma&lt;1\) 与 \(\sigma=1\)。长程纽带由此改变了“一维短程模型没有正温相变”的结论。</p>
 
     <p>随着 \(\sigma\) 改变，模型会在不同区间呈现平均场行为、真正的长程临界行为以及向短程普适类的交叉。临界指数如何变化、长程作用如何改变界面几何，至今仍是活跃的研究方向，也是我近期学习和研究的主题之一。</p>
-
-    <div class="essay-lab-link">
-      <div>
-        <strong>在本站继续观察</strong>
-        <p>调节温度，看看二维 Ising 两相之间的随机界面如何起伏。</p>
-      </div>
-      <a href="{{ site.baseurl }}/misc/lab/ising-interface/">打开交互模拟 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-    </div>
 
     <h2>6. 当“正负号”离开磁铁</h2>
 
@@ -277,9 +261,7 @@ mathjax: true
         <li><a href="https://www.projecteuclid.org/journals/communications-in-mathematical-physics/volume-84/issue-1/The-phase-transition-in-the-one-dimensional-Ising-model-with/cmp/1103921047.pdf" target="_blank" rel="noopener noreferrer">Jürg Fröhlich and Thomas Spencer, the \(1/r^2\) model (1982)</a></li>
         <li><a href="https://inspirehep.net/literature/61162" target="_blank" rel="noopener noreferrer">Alexander M. Polyakov, <em>Conformal Symmetry of Critical Fluctuations</em> (1970)</a></li>
         <li><a href="https://arxiv.org/abs/1109.1549" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin and Stanislav Smirnov, <em>Conformal Invariance of Lattice Models</em></a></li>
-        <li><a href="https://arxiv.org/abs/1603.04436" target="_blank" rel="noopener noreferrer">Filip Kos et al., <em>Precision Islands in the Ising and O(N) Models</em> (2016)</a></li>
-        <li><a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.13.021009" target="_blank" rel="noopener noreferrer">Wei Zhu et al., <em>Uncovering Conformal Symmetry in the 3D Ising Transition</em> (2023)</a></li>
-        <li><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.031601" target="_blank" rel="noopener noreferrer">Liangdong Hu, Yin-Chen He and Wei Zhu, <em>Operator Product Expansion Coefficients of the 3D Ising Criticality via Quantum Fuzzy Spheres</em> (2023)</a></li>
+        <li><a href="https://doi.org/10.1007/s00220-014-2093-y" target="_blank" rel="noopener noreferrer">Michael Aizenman, Hugo Duminil-Copin and Vladas Sidoravicius, <em>Random Currents and Continuity of Ising Model's Spontaneous Magnetization</em> (2015)</a></li>
         <li><a href="https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU_Fields22_Duminil-Copin_citation.pdf" target="_blank" rel="noopener noreferrer">IMU: Hugo Duminil-Copin, 2022 Fields Medal citation</a></li>
         <li><a href="https://www.youtube.com/watch?v=YIaGgrp1tmY" target="_blank" rel="noopener noreferrer">Jean Zinn-Justin, <em>The Ising Model: The Saga of the Critical Exponents</em></a></li>
       </ol>
