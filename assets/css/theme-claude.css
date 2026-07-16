@@ -3807,6 +3807,92 @@ body.theme-claude .essay-hero-figure figcaption {
   text-align: center;
 }
 
+body.theme-claude .essay-inline-figure {
+  margin: 30px auto 36px;
+}
+
+body.theme-claude .essay-figure-lattice {
+  max-width: 529px;
+}
+
+body.theme-claude .essay-figure-wide {
+  max-width: 680px;
+}
+
+body.theme-claude .essay-figure-medium {
+  max-width: 500px;
+}
+
+body.theme-claude .essay-figure-portrait {
+  max-width: 230px;
+}
+
+body.theme-claude .essay-figure-duo {
+  max-width: 560px;
+}
+
+body.theme-claude .essay-figure-duo-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body.theme-claude .essay-figure-duo-grid img {
+  aspect-ratio: 3 / 4;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+body.theme-claude .essay-figure-duo-portrait {
+  max-width: 460px;
+}
+
+body.theme-claude .essay-figure-duo-portrait .essay-figure-duo-grid img {
+  aspect-ratio: auto;
+  height: 240px;
+  object-fit: contain;
+}
+
+body.theme-claude .essay-figure-duo-landscape {
+  max-width: 700px;
+}
+
+body.theme-claude .essay-figure-duo-landscape .essay-figure-duo-grid img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+body.theme-claude .essay-figure-duo-label {
+  color: var(--claude-primary);
+  display: block;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 8px;
+  text-align: center;
+}
+
+body.theme-claude .essay-figure-credit {
+  display: block;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+@media (max-width: 520px) {
+  body.theme-claude .essay-figure-duo-grid {
+    gap: 12px;
+  }
+
+  body.theme-claude .essay-figure-duo-portrait .essay-figure-duo-grid img {
+    height: 210px;
+  }
+
+  body.theme-claude .essay-figure-duo-label {
+    font-size: 11px;
+  }
+}
+
 body.theme-claude .essay-pullquote {
   background: color-mix(in srgb, var(--claude-jade) 7%, transparent);
   border-left: 3px solid var(--claude-jade);
