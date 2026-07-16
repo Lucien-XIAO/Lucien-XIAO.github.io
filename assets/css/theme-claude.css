@@ -3803,8 +3803,20 @@ body.theme-claude .essay-hero-figure figcaption {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 12px;
   line-height: 1.55;
-  margin-top: 9px;
+  margin: 10px auto 0;
+  max-width: 96%;
+  overflow-wrap: anywhere;
   text-align: center;
+  text-wrap: pretty;
+}
+
+body.theme-claude .essay-figure-caption-main {
+  display: block;
+}
+
+body.theme-claude .essay-figure-caption-main strong {
+  color: var(--claude-primary);
+  font-weight: 700;
 }
 
 body.theme-claude .essay-inline-figure {
@@ -3876,9 +3888,11 @@ body.theme-claude .essay-figure-duo-label {
 }
 
 body.theme-claude .essay-figure-credit {
+  color: color-mix(in srgb, var(--claude-secondary) 82%, transparent);
   display: block;
-  font-size: 11px;
-  margin-top: 4px;
+  font-size: 10.5px;
+  line-height: 1.5;
+  margin-top: 5px;
 }
 
 @media (max-width: 520px) {
