@@ -3870,7 +3870,9 @@ body.theme-claude .essay-figure-duo-label {
   font-weight: 700;
   line-height: 1.4;
   margin-top: 8px;
+  overflow-wrap: anywhere;
   text-align: center;
+  text-wrap: balance;
 }
 
 body.theme-claude .essay-figure-credit {
