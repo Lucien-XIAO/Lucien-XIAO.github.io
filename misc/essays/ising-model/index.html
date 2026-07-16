@@ -20,7 +20,7 @@ mathjax: true
       <span aria-hidden="true">·</span>
       <time datetime="2026-07-16">2026 年 7 月 16 日</time>
       <span aria-hidden="true">·</span>
-      <span>约 12 分钟阅读</span>
+      <span>约 15 分钟阅读</span>
     </p>
   </header>
 
@@ -37,6 +37,10 @@ mathjax: true
     <blockquote class="essay-pullquote">
       <p>它并不是一块真实磁铁的缩小版，而是一副关于集体现象的最小骨架。</p>
     </blockquote>
+
+    <aside class="essay-note">
+      <strong>写作说明。</strong> 本文最初的历史叙事受到<a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">这个知乎问题中返朴转载的西湖大学科普文章</a>启发。这里保留了“最难的求和”这条线索，但重新核对了历史事实与数学结论，区分了二维和三维的情形，并补充了长程模型、共形 bootstrap 与 fuzzy sphere 的进展。
+    </aside>
 
     <h2>1. 从居里温度到一张格点</h2>
 
@@ -143,9 +147,51 @@ mathjax: true
 
     <p>1970 年，Alexander Polyakov 提出用共形对称理解临界涨落。对二维系统而言，共形变换可以在局部改变长度，却保持角度；它为“临界点没有特征尺度”提供了更强的数学语言。此后，Stanislav Smirnov、Dmitry Chelkak 等人的工作严格建立了平面临界伊辛模型若干观测量与界面的共形不变缩放极限。</p>
 
-    <p>三维伊辛模型至今没有像二维模型那样的闭式精确解，但这不等于我们对它一无所知。概率方法、重整化群、数值模拟与共形 bootstrap 已经给出极其精确的图景。Hugo Duminil-Copin 因解决统计物理相变概率理论中的长期难题，尤其是三维和四维问题，获得了 2022 年菲尔茨奖；相关成果包括三维相变的连续性与锐性。</p>
+    <p>三维伊辛模型至今没有像二维模型那样的闭式精确解，但这不等于我们对它一无所知。概率方法、重整化群、数值模拟与共形 bootstrap 已经给出极其精确的图景。Hugo Duminil-Copin 因解决统计物理相变概率理论中的长期难题，尤其是三维和四维问题，获得了 2022 年菲尔茨奖；相关成果包括三维伊辛相变连续性的严格证明。</p>
 
-    <h2>4. 长程相互作用：远处也能“投票”</h2>
+    <h2>4. 三维：没有闭式解，不等于没有答案</h2>
+
+    <p>“三维伊辛模型是否已经解出”很容易变成一个语言陷阱。截至 2026 年，我们仍不知道一个与昂萨格二维解相当的、能完整写出三维近邻模型热力学量的闭式公式。可是，“没有闭式解”与“不知道临界行为”是两件截然不同的事。</p>
+
+    <div class="essay-sequence" aria-label="研究三维伊辛模型的三条路径">
+      <section class="essay-step">
+        <span class="essay-step-index">1</span>
+        <div>
+          <h3>重整化群与蒙特卡洛</h3>
+          <p>重整化群解释了不同尺度之间如何流动，蒙特卡洛则直接对大型格点系统取样。两者从机制与数值两端逼近同一个临界点。</p>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div>
+          <h3>共形 bootstrap：用自洽性缩小答案</h3>
+          <p>在临界极限假设共形对称后，幺正性、交叉对称和算符乘积展开会给关联函数施加强约束。许多表面上可能的理论被排除，三维 Ising 共形场论被压缩到参数空间中一座很小的“孤岛”。</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              \begin{aligned}
+                \Delta_\sigma &amp;= 0.5181489(10), \\
+                \Delta_\epsilon &amp;= 1.412625(10).
+              \end{aligned}
+            \]
+          </div>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div>
+          <h3>Fuzzy sphere：从球面能谱读取共形数据</h3>
+          <p>通过经典与量子临界系统的对应，可以在球面上构造一个有限的 (2+1) 维量子模型。这种正规化在有限尺寸下保留旋转对称，并借助态–算符对应，从能谱中识别标度维数、共形塔和 OPE 系数。</p>
+        </div>
+      </section>
+    </div>
+
+    <p>2023 年，Wei Zhu、Chao Han 及其合作者用量子 fuzzy sphere 正规化在三维 Ising 临界点的能谱中清晰识别出态–算符对应，直接展示了预期的共形结构。同年的后续工作还从微观模型中提取了 OPE 系数。这些结果不是把三维配分函数“一次求完”，而是换了一个更有效的问题：能否构造一个尽可能保留对称性的有限系统，再从它的能谱中读出临界理论？</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>“精确”有几种不同的意思。</strong> 闭式解、严格定理、受理论假设约束的数值界，以及高精度模拟并不是同一件事。三维伊辛模型仍缺少昂萨格意义上的完整解析解，但其临界指数和共形数据已经可以被极精确地刻画。
+    </aside>
+
+    <h2>5. 长程相互作用：远处也能“投票”</h2>
 
     <p>近邻模型假设每个自旋只与身边的格点直接作用。这是一个极其成功的理想化，但许多体系的影响会跨越更远的距离。长程伊辛模型因此把哈密顿量改写为</p>
 
@@ -172,7 +218,7 @@ mathjax: true
       <a href="{{ site.baseurl }}/misc/lab/ising-interface/">打开交互模拟 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </div>
 
-    <h2>5. 当“正负号”离开磁铁</h2>
+    <h2>6. 当“正负号”离开磁铁</h2>
 
     <p>伊辛模型早已超出铁磁性的原始语境。它提供了一种可迁移的建模语言：先找出二元状态，再描述局部耦合与随机扰动，最后研究大量个体能否形成集体秩序。</p>
 
@@ -221,8 +267,9 @@ mathjax: true
     <p>从一维链上的失败，到二维精确解、共形不变性与长程相互作用，这个只有正负号的模型已经走过一个世纪。它不断提醒我们：微观规则可以简单得近乎朴素，而由它们共同生成的世界，未必简单。</p>
 
     <section class="essay-references" aria-labelledby="essay-references-title">
-      <h2 id="essay-references-title">延伸阅读</h2>
+      <h2 id="essay-references-title">参考与延伸阅读</h2>
       <ol>
+        <li><a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">知乎：关于三维伊辛模型的解析解的研究进展是怎么样的？（写作启发）</a></li>
         <li><a href="https://www.hs-augsburg.de/~harsch/anglica/Chronology/20thC/Ising/isi_fm00.html" target="_blank" rel="noopener noreferrer">Ernst Ising, <em>Contribution to the Theory of Ferromagnetism</em> (1925, English translation)</a></li>
         <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.65.117" target="_blank" rel="noopener noreferrer">Lars Onsager, <em>Crystal Statistics I</em> (1944)</a></li>
         <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.85.808" target="_blank" rel="noopener noreferrer">C. N. Yang, <em>The Spontaneous Magnetization of a Two-Dimensional Ising Model</em> (1952)</a></li>
@@ -230,6 +277,9 @@ mathjax: true
         <li><a href="https://www.projecteuclid.org/journals/communications-in-mathematical-physics/volume-84/issue-1/The-phase-transition-in-the-one-dimensional-Ising-model-with/cmp/1103921047.pdf" target="_blank" rel="noopener noreferrer">Jürg Fröhlich and Thomas Spencer, the \(1/r^2\) model (1982)</a></li>
         <li><a href="https://inspirehep.net/literature/61162" target="_blank" rel="noopener noreferrer">Alexander M. Polyakov, <em>Conformal Symmetry of Critical Fluctuations</em> (1970)</a></li>
         <li><a href="https://arxiv.org/abs/1109.1549" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin and Stanislav Smirnov, <em>Conformal Invariance of Lattice Models</em></a></li>
+        <li><a href="https://arxiv.org/abs/1603.04436" target="_blank" rel="noopener noreferrer">Filip Kos et al., <em>Precision Islands in the Ising and O(N) Models</em> (2016)</a></li>
+        <li><a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.13.021009" target="_blank" rel="noopener noreferrer">Wei Zhu et al., <em>Uncovering Conformal Symmetry in the 3D Ising Transition</em> (2023)</a></li>
+        <li><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.031601" target="_blank" rel="noopener noreferrer">Liangdong Hu, Yin-Chen He and Wei Zhu, <em>Operator Product Expansion Coefficients of the 3D Ising Criticality via Quantum Fuzzy Spheres</em> (2023)</a></li>
         <li><a href="https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU_Fields22_Duminil-Copin_citation.pdf" target="_blank" rel="noopener noreferrer">IMU: Hugo Duminil-Copin, 2022 Fields Medal citation</a></li>
         <li><a href="https://www.youtube.com/watch?v=YIaGgrp1tmY" target="_blank" rel="noopener noreferrer">Jean Zinn-Justin, <em>The Ising Model: The Saga of the Critical Exponents</em></a></li>
       </ol>
