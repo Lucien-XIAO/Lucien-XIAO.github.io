@@ -3699,6 +3699,279 @@ body.theme-claude .notebook-placeholder {
   padding: 28px;
 }
 
+/* --- Essay reading pages --- */
+body.theme-claude .notebook-card-cover {
+  background: var(--claude-paper);
+  border: 1px solid var(--claude-border);
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+body.theme-claude .notebook-card-cover img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+body.theme-claude .notebook-card-essay {
+  min-height: 430px;
+}
+
+body.theme-claude .essay-page {
+  max-width: 1040px;
+}
+
+body.theme-claude .essay-page .notebook-kicker {
+  letter-spacing: 0;
+}
+
+body.theme-claude .essay-detail-hero {
+  max-width: 860px;
+}
+
+body.theme-claude .essay-detail-hero h1 {
+  font-size: 46px;
+  letter-spacing: 0;
+  line-height: 1.18;
+  max-width: 840px;
+}
+
+body.theme-claude .essay-meta {
+  color: var(--claude-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  gap: 7px;
+  margin: 18px 0 0;
+}
+
+body.theme-claude .essay-article {
+  color: var(--claude-text);
+  font-family: "Noto Serif SC", "Songti SC", Georgia, serif;
+  font-size: 16.5px;
+  line-height: 1.9;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+body.theme-claude .essay-article p {
+  margin: 0 0 1.45em;
+}
+
+body.theme-claude .essay-opening {
+  font-size: 18px;
+  line-height: 1.88;
+}
+
+body.theme-claude .essay-article h2 {
+  border-bottom: 1px solid var(--claude-border);
+  color: var(--claude-primary);
+  font-family: "Noto Serif SC", "Songti SC", Georgia, serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.35;
+  margin: 2.5em 0 1em;
+  padding-bottom: 10px;
+}
+
+body.theme-claude .essay-article a {
+  color: var(--claude-jade);
+  text-decoration-color: color-mix(in srgb, var(--claude-jade) 42%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+body.theme-claude .essay-hero-figure {
+  margin: 0 0 36px;
+}
+
+body.theme-claude .essay-hero-figure img {
+  background: #ffffff;
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+body.theme-claude .essay-hero-figure figcaption {
+  color: var(--claude-secondary);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+  margin-top: 9px;
+  text-align: center;
+}
+
+body.theme-claude .essay-pullquote {
+  background: color-mix(in srgb, var(--claude-jade) 7%, transparent);
+  border-left: 3px solid var(--claude-jade);
+  color: var(--claude-primary);
+  font-size: 19px;
+  font-style: normal;
+  line-height: 1.75;
+  margin: 34px 0;
+  padding: 18px 22px;
+}
+
+body.theme-claude .essay-pullquote p {
+  margin: 0;
+}
+
+body.theme-claude .essay-equation {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 22px 0 28px;
+  overflow-x: auto;
+  padding: 4px 0;
+}
+
+body.theme-claude .essay-equation-compact {
+  margin: 10px 0 0;
+}
+
+body.theme-claude .essay-sequence {
+  border-bottom: 1px solid var(--claude-border);
+  border-top: 1px solid var(--claude-border);
+  margin: 32px 0;
+  padding: 6px 0;
+}
+
+body.theme-claude .essay-step {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 34px minmax(0, 1fr);
+  padding: 18px 4px;
+}
+
+body.theme-claude .essay-step + .essay-step {
+  border-top: 1px solid color-mix(in srgb, var(--claude-border) 62%, transparent);
+}
+
+body.theme-claude .essay-step-index {
+  align-items: center;
+  background: var(--claude-jade);
+  border-radius: 50%;
+  color: var(--claude-bg);
+  display: inline-flex;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 750;
+  height: 30px;
+  justify-content: center;
+  margin-top: 2px;
+  width: 30px;
+}
+
+body.theme-claude .essay-step h3 {
+  color: var(--claude-primary);
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 1.45;
+  margin: 0 0 6px;
+}
+
+body.theme-claude .essay-step p {
+  margin-bottom: 0;
+}
+
+body.theme-claude .essay-note {
+  background: color-mix(in srgb, var(--claude-blue) 7%, transparent);
+  border-left: 3px solid var(--claude-blue);
+  color: var(--claude-text);
+  margin: 30px 0;
+  padding: 17px 20px;
+}
+
+body.theme-claude .essay-note-caution {
+  background: color-mix(in srgb, var(--claude-accent) 6%, transparent);
+  border-left-color: var(--claude-accent);
+}
+
+body.theme-claude .essay-lab-link {
+  align-items: center;
+  border-bottom: 1px solid var(--claude-border);
+  border-top: 1px solid var(--claude-border);
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  margin: 34px 0;
+  padding: 20px 0;
+}
+
+body.theme-claude .essay-lab-link strong {
+  color: var(--claude-primary);
+}
+
+body.theme-claude .essay-lab-link p {
+  color: var(--claude-secondary);
+  font-size: 14px;
+  margin: 3px 0 0;
+}
+
+body.theme-claude .essay-lab-link a {
+  align-items: center;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 7px;
+  text-decoration: none;
+}
+
+body.theme-claude .essay-table-wrap {
+  margin: 28px 0;
+  overflow-x: auto;
+}
+
+body.theme-claude .essay-table {
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.65;
+  min-width: 680px;
+  width: 100%;
+}
+
+body.theme-claude .essay-table th,
+body.theme-claude .essay-table td {
+  border-bottom: 1px solid var(--claude-border);
+  padding: 13px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+body.theme-claude .essay-table th {
+  background: var(--claude-jade);
+  color: var(--claude-bg);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+}
+
+body.theme-claude .essay-table tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--claude-jade) 4%, transparent);
+}
+
+body.theme-claude .essay-references {
+  margin-top: 54px;
+}
+
+body.theme-claude .essay-references ol {
+  color: var(--claude-secondary);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0;
+  padding-left: 22px;
+}
+
+body.theme-claude .essay-references li + li {
+  margin-top: 9px;
+}
+
 body.theme-claude .photo-journal-grid {
   align-items: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -4003,6 +4276,34 @@ body.theme-claude .publications-hero-photo img {
   body.theme-claude .lab-card,
   body.theme-claude .notebook-placeholder {
     padding: 20px;
+  }
+
+  body.theme-claude .essay-detail-hero h1 {
+    font-size: 32px;
+  }
+
+  body.theme-claude .essay-article {
+    font-size: 16px;
+    line-height: 1.84;
+  }
+
+  body.theme-claude .essay-opening {
+    font-size: 17px;
+  }
+
+  body.theme-claude .essay-article h2 {
+    font-size: 22px;
+  }
+
+  body.theme-claude .essay-pullquote {
+    font-size: 17px;
+    padding: 16px 18px;
+  }
+
+  body.theme-claude .essay-lab-link {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
   }
 }
 

@@ -1,0 +1,238 @@
+---
+title: 从正负号到相变：伊辛模型的一百年
+description: 一个只有正负两种状态的格点模型，如何连接磁性、临界现象、共形不变性与长程相互作用。
+permalink: /misc/essays/ising-model/
+layout: page
+author_profile: true
+lang: zh-CN
+mathjax: true
+---
+
+<div class="notebook-page notebook-detail-page essay-page">
+  <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essays</a>
+
+  <header class="notebook-detail-hero essay-detail-hero" lang="zh-CN">
+    <p class="notebook-kicker">科普 · 统计力学</p>
+    <h1>从正负号到相变：伊辛模型的一百年</h1>
+    <p class="notebook-lede">一个只有正负两种状态的格点模型，如何连接磁性、临界现象、共形不变性与长程相互作用。</p>
+    <p class="essay-meta">
+      <span>肖煜光</span>
+      <span aria-hidden="true">·</span>
+      <time datetime="2026-07-16">2026 年 7 月 16 日</time>
+      <span aria-hidden="true">·</span>
+      <span>约 12 分钟阅读</span>
+    </p>
+  </header>
+
+  <article class="essay-article" lang="zh-CN">
+    <figure class="essay-hero-figure">
+      <img src="{{ site.baseurl }}/assets/img/ising-model-essay-interface.png?v=1" alt="二维伊辛模型中红蓝两相与黄色随机界面的模拟图" decoding="async" />
+      <figcaption>二维伊辛模型的两相与随机界面。图像来自本站的数值模拟。</figcaption>
+    </figure>
+
+    <p class="essay-opening">磁铁被加热后，为什么会在某个温度附近失去自发磁化？在标准大气压下，水为什么会在约 100°C 附近从液态转向气态？这些现象的微观机制并不相同，却共享一个关键词：<strong>相变</strong>。系统的组成没有突然改变，宏观行为却在临界参数附近发生了质的变化。</p>
+
+    <p>伊辛模型的迷人之处，正是它用极少的规则抓住了这种变化。每个格点上只有一个正号或负号，格点之间只有简单的相互作用；然而，当格点数量足够多时，秩序、无序、临界涨落乃至不同尺度之间的自相似都会从中出现。</p>
+
+    <blockquote class="essay-pullquote">
+      <p>它并不是一块真实磁铁的缩小版，而是一副关于集体现象的最小骨架。</p>
+    </blockquote>
+
+    <h2>1. 从居里温度到一张格点</h2>
+
+    <p>1895 年，皮埃尔·居里系统研究了磁性随温度的变化。铁磁材料升温到某个临界温度后，自发磁化消失；这个温度后来被称为<strong>居里温度</strong>。问题随之而来：大量微观磁矩之间究竟遵循什么规则，才会共同产生如此清晰的宏观转变？</p>
+
+    <p>1920 年，威廉·楞次提出了一个大胆的简化。把材料想成一张规则格点，每个位置只保留两种状态：</p>
+
+    <div class="essay-equation" aria-label="Each spin is either minus one or plus one">
+      \[
+        \sigma_i \in \{-1,+1\}.
+      \]
+    </div>
+
+    <p>这个二元变量不必被理解成电子自旋的完整量子描述；它只记录局部磁矩沿某一轴的两个可能方向。对于最经典的近邻铁磁模型，哈密顿量写成</p>
+
+    <div class="essay-equation" aria-label="Ising Hamiltonian with nearest-neighbor interactions and an external field">
+      \[
+        H(\sigma)
+        =-J\sum_{\langle i,j\rangle}\sigma_i\sigma_j
+        -h\sum_i\sigma_i,
+        \qquad J&gt;0.
+      \]
+    </div>
+
+    <p>第一项鼓励相邻自旋同向排列，第二项描述外磁场。温度则通过 Gibbs–Boltzmann 权重进入模型：低温更偏爱低能量构型，高温允许更多无序构型出现。</p>
+
+    <div class="essay-sequence" aria-label="从微观规则到宏观量的三个步骤">
+      <section class="essay-step">
+        <span class="essay-step-index">1</span>
+        <div>
+          <h3>写下能量</h3>
+          <p>相邻自旋一致时能量降低；能量推动系统形成大块同向区域。</p>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div>
+          <h3>让温度参与选择</h3>
+          <p>构型 \(\sigma\) 出现的概率为</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              \mathbb P_T(\sigma)=\frac{1}{Z(T)}
+              \exp\!\left(-\frac{H(\sigma)}{k_B T}\right).
+            \]
+          </div>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div>
+          <h3>对所有构型求和</h3>
+          <p>归一化常数 \(Z(T)\) 是配分函数：</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              Z(T)=\sum_{\sigma}
+              \exp\!\left(-\frac{H(\sigma)}{k_B T}\right).
+            \]
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p>困难也立刻显现出来：\(N\) 个格点共有 \(2^N\) 种构型。即使只有 256 个格点，状态数也约为 \(1.16\times10^{77}\)。我们无法逐一枚举，却仍希望从这片组合爆炸中读出磁化强度、比热和关联长度等宏观量。</p>
+
+    <h2>2. 一维没有相变，二维却有</h2>
+
+    <p>楞次把这个问题交给了学生恩斯特·伊辛。伊辛在 1924 年的博士论文中求解了一维近邻模型，并于 1925 年发表结果：在任何正温度下，一维短程链都没有自发磁化。</p>
+
+    <p>原因可以用“畴壁”来理解。把一段向上的自旋翻成向下，只需在两端制造有限的能量代价；但链越长，畴壁可以出现的位置越多。只要温度大于零，熵的优势最终会让畴壁大量出现，把长程秩序切碎。</p>
+
+    <p>二维则完全不同。1944 年，拉斯·昂萨格严格计算了零外场下方格子伊辛模型的自由能，证明它确实存在非零临界温度。对于各向同性耦合，临界点满足</p>
+
+    <div class="essay-equation">
+      \[
+        \sinh\!\left(\frac{2J}{k_B T_c}\right)=1,
+        \qquad
+        \frac{k_B T_c}{J}
+        =\frac{2}{\ln(1+\sqrt 2)}
+        \approx 2.269.
+      \]
+    </div>
+
+    <p>低于 \(T_c\) 时，大尺度磁化可以稳定存在；高于 \(T_c\) 时，热涨落摧毁这种秩序。1952 年，杨振宁进一步给出了二维方格子模型自发磁化的严格公式：</p>
+
+    <div class="essay-equation">
+      \[
+        m(T)=
+        \left[1-\sinh^{-4}\!\left(\frac{2J}{k_B T}\right)\right]^{1/8},
+        \qquad T&lt;T_c.
+      \]
+    </div>
+
+    <p>指数 \(1/8\) 不是装饰性的数字。它描述磁化在接近临界点时如何消失，也是二维伊辛普适类最著名的临界指数之一。</p>
+
+    <h2>3. 临界点：尺度消失以后</h2>
+
+    <p>远离临界温度时，自旋之间的关联通常只延伸有限距离。接近 \(T_c\) 时，关联长度迅速增长：小团簇嵌在大团簇中，大团簇又嵌在更大的结构里。此时系统不再偏爱某一个特征尺度，放大之后仍能看到相似的统计纹理。</p>
+
+    <p>这引向统计物理最深刻的思想之一：<strong>普适性</strong>。临界行为往往不取决于晶格间距或某一种原子的具体化学细节，而主要由空间维度、对称性和相互作用范围决定。二维伊辛模型的磁化指数 \(\beta=1/8\)、关联长度指数 \(\nu=1\) 和磁化率指数 \(\gamma=7/4\)，共同刻画了一个完整的普适类。</p>
+
+    <aside class="essay-note">
+      <strong>维度不能混用。</strong> 二维伊辛模型的指数属于二维体系；普通流体的液–气临界点通常落在<strong>三维</strong>伊辛普适类中，因此临界指数并不是 \(1/8\) 或 \(7/4\)。普适性意味着“同一类系统共享指数”，而不是“所有相变都使用同一组数字”。
+    </aside>
+
+    <p>1970 年，Alexander Polyakov 提出用共形对称理解临界涨落。对二维系统而言，共形变换可以在局部改变长度，却保持角度；它为“临界点没有特征尺度”提供了更强的数学语言。此后，Stanislav Smirnov、Dmitry Chelkak 等人的工作严格建立了平面临界伊辛模型若干观测量与界面的共形不变缩放极限。</p>
+
+    <p>三维伊辛模型至今没有像二维模型那样的闭式精确解，但这不等于我们对它一无所知。概率方法、重整化群、数值模拟与共形 bootstrap 已经给出极其精确的图景。Hugo Duminil-Copin 因解决统计物理相变概率理论中的长期难题，尤其是三维和四维问题，获得了 2022 年菲尔茨奖；相关成果包括三维相变的连续性与锐性。</p>
+
+    <h2>4. 长程相互作用：远处也能“投票”</h2>
+
+    <p>近邻模型假设每个自旋只与身边的格点直接作用。这是一个极其成功的理想化，但许多体系的影响会跨越更远的距离。长程伊辛模型因此把哈密顿量改写为</p>
+
+    <div class="essay-equation">
+      \[
+        H(\sigma)=-\sum_{i&lt;j}J_{ij}\sigma_i\sigma_j,
+        \qquad
+        J_{ij}\asymp\frac{1}{|i-j|^{d+\sigma}},
+        \quad \sigma&gt;0,
+      \]
+    </div>
+
+    <p>其中 \(d\) 是空间维度，参数 \(\sigma\) 控制作用衰减的速度。\(\sigma\) 越小，远处自旋的影响越强；\(\sigma\) 越大，模型越接近短程情形。</p>
+
+    <p>最引人注目的变化发生在一维。若把耦合写成 \(J(r)\sim r^{-\alpha}\)，Freeman Dyson 在 1969 年证明了 \(1&lt;\alpha&lt;2\) 时低温相变的存在。临界端点 \(\alpha=2\) 更微妙，直到 1982 年才由 Jürg Fröhlich 与 Thomas Spencer 严格处理。换成上面的记号，这分别对应 \(0&lt;\sigma&lt;1\) 与 \(\sigma=1\)。长程纽带由此改变了“一维短程模型没有正温相变”的结论。</p>
+
+    <p>随着 \(\sigma\) 改变，模型会在不同区间呈现平均场行为、真正的长程临界行为以及向短程普适类的交叉。临界指数如何变化、长程作用如何改变界面几何，至今仍是活跃的研究方向，也是我近期学习和研究的主题之一。</p>
+
+    <div class="essay-lab-link">
+      <div>
+        <strong>在本站继续观察</strong>
+        <p>调节温度，看看二维 Ising 两相之间的随机界面如何起伏。</p>
+      </div>
+      <a href="{{ site.baseurl }}/misc/lab/ising-interface/">打开交互模拟 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+
+    <h2>5. 当“正负号”离开磁铁</h2>
+
+    <p>伊辛模型早已超出铁磁性的原始语境。它提供了一种可迁移的建模语言：先找出二元状态，再描述局部耦合与随机扰动，最后研究大量个体能否形成集体秩序。</p>
+
+    <div class="essay-table-wrap">
+      <table class="essay-table">
+        <thead>
+          <tr>
+            <th>场景</th>
+            <th>二元变量</th>
+            <th>模型能够表达什么</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>格点气体</td>
+            <td>占据 / 空缺</td>
+            <td>粒子吸引与液–气相变；它与伊辛模型之间存在精确映射。</td>
+          </tr>
+          <tr>
+            <td>二元合金</td>
+            <td>A 原子 / B 原子</td>
+            <td>不同组分的局部偏好与有序–无序转变。</td>
+          </tr>
+          <tr>
+            <td>神经数据</td>
+            <td>激活 / 未激活</td>
+            <td>最大熵模型可描述神经元群体中的成对相关；“大脑是否工作在临界点”仍是需要检验的假说。</td>
+          </tr>
+          <tr>
+            <td>意见动力学</td>
+            <td>支持 / 反对</td>
+            <td>作为理想化模型研究模仿、噪声与群体极化，而不是预测真实社会。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>类比不是等同。</strong> 把神经元或意见写成 \(\pm1\) 并不意味着大脑或社会“就是一块磁铁”。模型的价值在于隔离机制、提出可检验的问题，并明确哪些现实细节被暂时忽略。
+    </aside>
+
+    <h2>结语：简单规则，复杂世界</h2>
+
+    <p>伊辛模型不是“万物理论”。它真正经久不衰的原因，是提供了一种极其清楚的思考方式：局部相互作用如何与随机性竞争？有限尺度上的微小规则，怎样在热力学极限中形成宏观秩序？临界点附近，为什么遥远位置之间会突然变得相关？</p>
+
+    <p>从一维链上的失败，到二维精确解、共形不变性与长程相互作用，这个只有正负号的模型已经走过一个世纪。它不断提醒我们：微观规则可以简单得近乎朴素，而由它们共同生成的世界，未必简单。</p>
+
+    <section class="essay-references" aria-labelledby="essay-references-title">
+      <h2 id="essay-references-title">延伸阅读</h2>
+      <ol>
+        <li><a href="https://www.hs-augsburg.de/~harsch/anglica/Chronology/20thC/Ising/isi_fm00.html" target="_blank" rel="noopener noreferrer">Ernst Ising, <em>Contribution to the Theory of Ferromagnetism</em> (1925, English translation)</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.65.117" target="_blank" rel="noopener noreferrer">Lars Onsager, <em>Crystal Statistics I</em> (1944)</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.85.808" target="_blank" rel="noopener noreferrer">C. N. Yang, <em>The Spontaneous Magnetization of a Two-Dimensional Ising Model</em> (1952)</a></li>
+        <li><a href="https://doi.org/10.1007/BF01645907" target="_blank" rel="noopener noreferrer">Freeman J. Dyson, <em>Existence of a Phase-Transition in a One-Dimensional Ising Ferromagnet</em> (1969)</a></li>
+        <li><a href="https://www.projecteuclid.org/journals/communications-in-mathematical-physics/volume-84/issue-1/The-phase-transition-in-the-one-dimensional-Ising-model-with/cmp/1103921047.pdf" target="_blank" rel="noopener noreferrer">Jürg Fröhlich and Thomas Spencer, the \(1/r^2\) model (1982)</a></li>
+        <li><a href="https://inspirehep.net/literature/61162" target="_blank" rel="noopener noreferrer">Alexander M. Polyakov, <em>Conformal Symmetry of Critical Fluctuations</em> (1970)</a></li>
+        <li><a href="https://arxiv.org/abs/1109.1549" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin and Stanislav Smirnov, <em>Conformal Invariance of Lattice Models</em></a></li>
+        <li><a href="https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU_Fields22_Duminil-Copin_citation.pdf" target="_blank" rel="noopener noreferrer">IMU: Hugo Duminil-Copin, 2022 Fields Medal citation</a></li>
+        <li><a href="https://www.youtube.com/watch?v=YIaGgrp1tmY" target="_blank" rel="noopener noreferrer">Jean Zinn-Justin, <em>The Ising Model: The Saga of the Critical Exponents</em></a></li>
+      </ol>
+    </section>
+  </article>
+</div>
