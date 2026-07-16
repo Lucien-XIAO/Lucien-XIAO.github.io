@@ -1,6 +1,6 @@
 ---
 title: 从正负号到相变：伊辛模型的一百年
-description: 一个只有正负两种状态的格点模型，如何连接磁性、相变、普适性、严格概率与无序体系。
+description: 一个只有正负两种状态的格点模型，如何连接磁性、相变、高低温对偶、三维共形自举、界面几何、严格概率与无序体系。
 permalink: /misc/essays/ising-model/
 layout: page
 author_profile: true
@@ -14,18 +14,18 @@ mathjax: true
   <header class="notebook-detail-hero essay-detail-hero" lang="zh-CN">
     <p class="notebook-kicker">科普 · 统计力学</p>
     <h1>从正负号到相变：伊辛模型的一百年</h1>
-    <p class="notebook-lede">一个只有正负两种状态的格点模型，如何连接磁性、相变、普适性、严格概率与无序体系。</p>
+    <p class="notebook-lede">一个只有正负两种状态的格点模型，如何连接磁性、相变、高低温对偶、三维共形自举、界面几何、严格概率与无序体系。</p>
     <p class="essay-meta">
       <span>Yuguang XIAO（肖煜光）</span>
       <span aria-hidden="true">·</span>
       <time datetime="2026-07-16">2026 年 7 月 16 日</time>
       <span aria-hidden="true">·</span>
-      <span>约 14 分钟阅读</span>
+      <span>约 22 分钟阅读</span>
     </p>
   </header>
 
   <article class="essay-article" lang="zh-CN">
-    <p class="essay-opening">磁铁被加热后，为什么会在某个温度附近失去自发磁化？在标准大气压下，水为什么会在约 100°C 附近从液态转向气态？这些现象的微观机制并不相同，却共享一个关键词：<strong>相变</strong>。系统的组成没有突然改变，宏观行为却在临界参数附近发生了质的变化。</p>
+    <p class="essay-opening">磁铁被加热后，为什么会在居里温度附近失去自发磁化？在标准大气压下，水为什么会在约 100°C 发生液气相变？这些现象的微观机制与相变类型并不相同，却共享一个关键词：<strong>相变</strong>。系统的组成没有改变，宏观状态却会在相界或临界点附近发生质的变化。</p>
 
     <p>伊辛模型的迷人之处，正是它用极少的规则抓住了这种变化。每个格点上只有一个正号或负号，格点之间只有简单的相互作用；然而，当格点数量足够多时，秩序、无序、临界涨落乃至不同尺度之间的自相似都会从中出现。</p>
 
@@ -34,7 +34,7 @@ mathjax: true
     </blockquote>
 
     <aside class="essay-note">
-      <strong>写作说明。</strong> 本文最初的历史叙事受到<a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">这个知乎问题中返朴转载的西湖大学科普文章</a>启发。这里保留了“最难的求和”这条线索，但重新核对了历史事实与数学结论。全文采取纯理论视角，重点放在精确解、尺度与共形结构、严格概率方法、长程相互作用和无序体系。
+      <strong>写作说明。</strong> 本文最初的历史叙事受到<a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">这个知乎问题中返朴转载的西湖大学科普文章</a>启发。这里保留了“最难的求和”这条线索，但重新核对了历史事实与数学结论。全文以理论脉络为主，重点放在精确解、高低温对偶、尺度与共形结构、严格概率方法、界面几何、长程相互作用和无序体系，并用一幅界面模拟图与两个交互实验辅助直观理解。
     </aside>
 
     <h2 id="model">1. 从居里温度到伊辛的格点</h2>
@@ -124,6 +124,7 @@ mathjax: true
       <img src="{{ site.baseurl }}/assets/img/lenz-ising.webp?v=1" width="733" height="414" alt="Wilhelm Lenz（威廉·楞次）与 Ernst Ising（恩斯特·伊辛）的黑白肖像并排图" loading="lazy" decoding="async" />
       <figcaption>
         <span class="essay-figure-caption-main">左：<strong>Wilhelm Lenz（威廉·楞次）</strong>；右：<strong>Ernst Ising（恩斯特·伊辛）</strong></span>
+        <span class="essay-figure-credit">图片来源：<a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">知乎问题中返朴转载的西湖大学科普文章</a></span>
       </figcaption>
     </figure>
 
@@ -153,7 +154,42 @@ mathjax: true
 
     <p>指数 \(1/8\) 不是装饰性的数字。它描述磁化在接近临界点时如何消失，也是二维伊辛普适类最著名的临界指数之一。</p>
 
-    <h2 id="universality">3. 从精确解到普适性</h2>
+    <h2 id="duality">3. Kramers–Wannier（克喇末–瓦尼尔）对偶性</h2>
+
+    <p>在 Lars Onsager（拉斯·昂萨格）给出二维严格解之前，Hendrik Kramers（亨德里克·克喇末）与 Gregory Wannier（格里高利·瓦尼尔）于 1941 年发现，方格子模型的高温展开与对偶格子上的低温展开可以相互对应。若进一步假设相变点唯一，这一对应便能确定临界温度。</p>
+
+    <p>这就是<strong>高低温对偶性（high-low temperature duality）</strong>。考虑零外磁场下的配分函数 \(Z(\beta)\)，其中 \(\beta = 1/(k_B T)\)：</p>
+
+    <div class="essay-equation">
+      \[
+        Z(\beta)=\sum_{\sigma}
+        \exp\!\left(\beta J\sum_{\langle i,j\rangle}\sigma_i\sigma_j\right).
+      \]
+    </div>
+
+    <p>在低温区（\(\beta\) 较大），系统主要围绕完全对齐的基态涨落。翻转一片自旋会产生一个“岛屿”，其边界形成<strong>畴壁（contour）</strong>；对这些畴壁求和，便得到关于低温参数 \(e^{-2\beta J}\) 的展开。</p>
+
+    <p>在高温区（\(\beta\) 较小），利用恒等式 \(e^{\beta J\sigma_i\sigma_j}=\cosh(\beta J)\bigl(1+\sigma_i\sigma_j\tanh(\beta J)\bigr)\) 展开玻尔兹曼因子。对自旋求和后，只有每个格点都具有偶数条入边的项保留下来，也就是由闭合环路组成的构型。因此，高温配分函数可以写成关于 \(\tanh(\beta J)\) 的环路展开。</p>
+
+    <p>二维方格子的对偶格子仍是方格子本身。把高温展开中的闭合环路视为对偶格子上的低温畴壁，就得到温度参数之间的对应关系：</p>
+
+    <div class="essay-equation">
+      \[
+        e^{-2\beta J}=\tanh(\beta^*J).
+      \]
+    </div>
+
+    <p>这里省略了依赖格点规模与边界条件的乘法因子；在周期边界条件下，还需同时处理不同的拓扑扇区。若假设系统只有一个相变点，那么它必须是对偶变换的固定点，即 \(\beta_c=\beta_c^*\)。于是</p>
+
+    <div class="essay-equation">
+      \[
+        \sinh\!\left(\frac{2J}{k_B T_c}\right)=1,
+      \]
+    </div>
+
+    <p>这与 Lars Onsager（拉斯·昂萨格）之后得到的精确解一致。高低温对偶把两个看似相反的区域联系起来，也成为现代统计物理与量子场论中诸多对偶思想的早期范例。</p>
+
+    <h2 id="universality">4. 从精确解到普适性</h2>
 
     <p>Lars Onsager（拉斯·昂萨格）与 Chen-Ning Yang（杨振宁）的公式精确回答了二维模型的关键问题，却也把一个更普遍的疑问推到台前：为什么微观细节相差很大的系统，会在临界点附近表现出相同的幂律？</p>
 
@@ -175,16 +211,20 @@ mathjax: true
         </div>
       </div>
       <figcaption>
-        <span class="essay-figure-caption-main">左：1968 年诺贝尔化学奖得主，给出二维精确解；右：<a href="https://www.nobelprize.org/prizes/physics/1982/summary/" target="_blank" rel="noopener noreferrer">1982 年诺贝尔物理学奖</a>得主，建立临界现象的重整化群框架</span>
+        <span class="essay-figure-caption-main">左：<strong>Lars Onsager（拉斯·昂萨格）</strong>，二维方格伊辛模型精确解的提出者、<a href="https://www.nobelprize.org/prizes/chemistry/1968/onsager/facts/" target="_blank" rel="noopener noreferrer">1968 年诺贝尔化学奖</a>得主；右：<strong>Kenneth G. Wilson（肯尼斯·威尔逊）</strong>，临界现象重整化群框架的奠基者、<a href="https://www.nobelprize.org/prizes/physics/1982/summary/" target="_blank" rel="noopener noreferrer">1982 年诺贝尔物理学奖</a>得主</span>
         <span class="essay-figure-credit">图片来源：左图，Nobel Foundation / <a href="https://commons.wikimedia.org/wiki/File:Onsager_1968.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>（公有领域）；右图，Nobel Foundation / <a href="https://commons.wikimedia.org/wiki/File:Kenneth_G._Wilson.121.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>（CC BY-SA 4.0）</span>
       </figcaption>
     </figure>
 
     <aside class="essay-note">
+      <strong>奖项说明。</strong> 图注中的奖项用于交代人物背景，并不表示奖项直接授予相邻段落讨论的具体成果。例如，Lars Onsager（拉斯·昂萨格）获得 1968 年诺贝尔化学奖，是因为他建立了不可逆过程的倒易关系，而不是因为二维伊辛模型的精确解。
+    </aside>
+
+    <aside class="essay-note">
       <strong>维度不能混用。</strong> 二维伊辛模型的指数属于二维体系；普通流体的液–气临界点通常落在<strong>三维</strong>伊辛普适类中，因此临界指数并不是 \(1/8\) 或 \(7/4\)。普适性意味着“同一类系统共享指数”，而不是“所有相变都使用同一组数字”。
     </aside>
 
-    <h2 id="rigorous-probability">4. 共形结构与严格概率</h2>
+    <h2 id="rigorous-probability">5. 共形结构与严格概率</h2>
 
     <p>尺度不变性在二维还有更强的版本。1970 年，Alexander Polyakov（亚历山大·波利亚科夫）提出用共形对称理解临界涨落；共形变换可以在局部改变长度，却保持角度，为“临界点没有特征尺度”提供了更精细的数学语言。</p>
 
@@ -202,21 +242,21 @@ mathjax: true
         </div>
       </div>
       <figcaption>
-        <span class="essay-figure-caption-main">左：2010 年菲尔兹奖得主；右：2022 年菲尔兹奖得主。二人代表了临界模型严格概率理论的两条重要进路</span>
-        <span class="essay-figure-credit">图片来源：左图，Renate Schmid（雷娜特·施密德）/ Oberwolfach Photo Collection，经 <a href="https://commons.wikimedia.org/wiki/File:Stanislav_Smirnov2.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>（CC BY-SA 2.0 DE）</span>
+        <span class="essay-figure-caption-main">左：<strong>Stanislav Smirnov（斯坦尼斯拉夫·斯米尔诺夫）</strong>，2010 年菲尔兹奖得主；右：<strong>Hugo Duminil-Copin（雨果·迪米尼-科潘）</strong>，2022 年菲尔兹奖得主。二人代表了临界模型严格概率理论的两条重要进路</span>
+        <span class="essay-figure-credit">图片来源：Wikipedia / Wikimedia Commons。左图，Renate Schmid（雷娜特·施密德）/ Oberwolfach Photo Collection，见 <a href="https://commons.wikimedia.org/wiki/File:Stanislav_Smirnov2.jpg" target="_blank" rel="noopener noreferrer">Stanislav Smirnov 图像页</a>（CC BY-SA 2.0 DE）；右图，见 <a href="https://en.wikipedia.org/wiki/Hugo_Duminil-Copin" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin 条目</a></span>
       </figcaption>
     </figure>
 
-    <h2 id="three-dimensional">5. 三维：哪些已经严格知道，哪些仍然开放</h2>
+    <h2 id="three-dimensional">6. 三维：严格结果与现代共形自举</h2>
 
-    <p>“三维伊辛模型是否已经解出”很容易变成一个语言陷阱。截至 2026 年，我们仍不知道一个与 Lars Onsager（拉斯·昂萨格）二维解相当的、能完整写出三维近邻模型自由能与关联函数的闭式公式。但严格统计力学关心的不只是“能否写出公式”，还包括相变是否存在、Gibbs 态何时唯一，以及秩参量在临界点如何行为。</p>
+    <p>“三维伊辛模型是否已经解出”很容易变成一个语言陷阱。截至 2026 年，我们仍不知道一个与 Lars Onsager（拉斯·昂萨格）二维解相当的、能完整写出三维近邻模型自由能与关联函数的闭式公式。但严格统计力学关心的不只是“能否写出公式”，还包括相变是否存在、Gibbs 态何时唯一，以及秩序参量在临界点如何行为。</p>
 
     <div class="essay-sequence" aria-label="三维伊辛模型的三个严格理论层次">
       <section class="essay-step">
         <span class="essay-step-index">1</span>
         <div>
           <h3>相变的存在性</h3>
-          <p>Rudolf Peierls（鲁道夫·佩尔斯）的轮廓论证表明，在二维及更高维的近邻铁磁模型中，足够低温时可以存在多个 Gibbs 态。高温区的簇展开与唯一性论证则给出相反图景，从而在严格意义上建立了相变的存在。</p>
+          <p>Rudolf Peierls（鲁道夫·佩尔斯）的轮廓论证（Peierls Argument）表明，在二维及更高维的近邻铁磁模型中，足够低温时可以存在多个 Gibbs 态。高温区的簇展开与唯一性论证则给出相反图景，从而在严格意义上建立了相变的存在。</p>
         </div>
       </section>
       <section class="essay-step">
@@ -242,11 +282,113 @@ mathjax: true
 
     <p>随机流表示把自旋关联函数重写为具有偶奇约束的整数流之和，从而把解析问题与随机几何中的连通性联系起来。这也是伊辛模型长盛不衰的一个原因：同一个模型不断促成代数、组合、概率与分析之间的新对话。</p>
 
+    <h3>连续极限中的共形自举</h3>
+
+    <p>严格概率方法从格点模型出发；现代<strong>共形自举（conformal bootstrap）</strong>则采取另一条路线。它假设三维伊辛临界点的连续极限由一个幺正共形场论描述，不再逐个枚举格点构型，也不需要进行蒙特卡洛抽样，而是直接研究局部算符及其关联函数必须满足的自洽条件。</p>
+
+    <p>同一个四点关联函数可以先融合前两个算符，也可以改用另一种融合次序。算符乘积展开（OPE）的结合律要求两种展开完全一致，这就是<strong>交叉对称性（crossing symmetry）</strong>。以自旋算符 \(\sigma\) 的四点函数为例，约束可以示意性地写成</p>
+
+    <div class="essay-equation">
+      \[
+        \sum_{\mathcal O}
+        \lambda_{\sigma\sigma\mathcal O}^{2}
+        F_{\Delta,\ell}(u,v)=0.
+      \]
+    </div>
+
+    <p>这里 \(u,v\) 是共形交比，\(\Delta\) 与 \(\ell\) 分别是中间算符的标度维数和自旋，\(\lambda_{\sigma\sigma\mathcal O}\) 是 OPE 系数。幺正性进一步给出 \(\lambda^2\geq0\) 以及算符维数的下界。于是，一个看似无限维的场论问题可以转化为凸优化与半正定规划：若某组临界数据无法满足这些约束，它就会被排除。</p>
+
+    <p>2008 年，Riccardo Rattazzi（里卡尔多·拉塔齐）、Slava Rychkov（斯拉瓦·雷奇科夫）等人使高维数值共形自举成为可计算的方法；2012 年，Sheer El-Showk（希尔·埃尔-肖克）等人在允许区域的边界上识别出三维伊辛模型的特征尖点；2015 年，David Simmons-Duffin（戴维·西蒙斯-达芬）开发的半正定规划求解器 SDPB 显著提高了计算能力；2016 年，Filip Kos（菲利普·科斯）等人联立 \(\sigma\) 与能量算符 \(\varepsilon\) 的多个关联函数，把允许区域压缩成著名的<strong>“伊辛孤岛”（Ising island）</strong>。</p>
+
+    <p>这一多关联函数分析给出的代表性高精度结果为</p>
+
+    <div class="essay-equation">
+      \[
+        \Delta_\sigma\approx0.5181489,
+        \qquad
+        \Delta_\varepsilon\approx1.412625.
+      \]
+    </div>
+
+    <p>它们是标度维数，而不是异常维度本身。在三维中，可由此换算出常用临界指数</p>
+
+    <div class="essay-equation">
+      \[
+        \begin{aligned}
+          \eta&=2\Delta_\sigma-(d-2)\approx0.03630,\\
+          \nu&=\frac{1}{d-\Delta_\varepsilon}\approx0.62997,
+          \qquad d=3.
+        \end{aligned}
+      \]
+    </div>
+
+    <p>共形自举没有给出类似二维自由能公式的闭式解析解，却展示了另一种“求解”方式：仅依靠连续极限中的对称性、结合律与幺正性，就能对三维临界数据施加极强的、可系统改进的数值约束。</p>
+
     <aside class="essay-note essay-note-caution">
-      <strong>严格结果不等于完整精确解。</strong> 一个定理可以彻底解决“相变是否连续”，却不必同时给出所有热力学量的显式公式。所谓三维伊辛模型“尚未解出”，应当在这个更精确的意义上理解。
+      <strong>三种层级需要区分。</strong> 格点上的严格定理、共形场论假设下的高精度数值界，以及像二维模型那样的完整闭式解，并不是同一件事。三维伊辛模型已经有深刻的严格结果和极精确的临界数据，但仍缺少与 Lars Onsager（拉斯·昂萨格）二维解相当的完整解析公式。
     </aside>
 
-    <h2 id="long-range">6. 长程相互作用：一维的例外</h2>
+    <h2 id="interface-models">7. 从自旋到高度：界面模型的涌现</h2>
+
+    <p>在零外场且 \(0&lt;T&lt;T_c\) 的相共存区，正相与负相可以同时出现。要研究两相之间边界的几何性质，就需要把目光从自旋本身移向<strong>相界面（phase interface）</strong>。</p>
+
+    <p>在有限格点中，可以采用以 Roland Dobrushin（罗兰·多布鲁申）命名的边界条件：例如在参考平面上方固定 \(+1\) 自旋、下方固定 \(-1\) 自旋，从而迫使系统在中间形成一条贯穿区域的界面。这类边界条件把“界面在哪里、如何涨落”变成了可以严格讨论的问题。</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-medium">
+      <img src="{{ site.baseurl }}/assets/img/interface_2d_beffara.png?v=1" width="500" height="500" alt="Dobrushin 边界条件下红色正自旋与蓝色负自旋之间形成的二维随机界面" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>Dobrushin（多布鲁申）边界条件下的二维伊辛界面</strong> · 上半部分红色区域表示 \(+1\) 自旋，下半部分蓝色区域表示 \(-1\) 自旋；两相之间形成一条横向随机界面</span>
+        <span class="essay-figure-credit">图像：Vincent Beffara（樊尚·贝法拉），由 Yuguang XIAO（肖煜光）提供</span>
+      </figcaption>
+    </figure>
+
+    <p>在足够低温下，由热涨落产生的自旋液滴与界面的折返（overhang）都受到抑制。若进一步采用<strong>无折返近似（no-overhang approximation）</strong>，让界面在每个水平位置只取一个高度，就可以用整数值高度函数 \(h_x\) 描述它。原来的自旋模型由此导向一类有效的<strong>高度模型（height model）</strong>。</p>
+
+    <p>最常见的有效界面能量只依赖相邻位置的高度差：</p>
+
+    <div class="essay-equation">
+      \[
+        H_p(h)=K\sum_{\langle x,y\rangle}|h_x-h_y|^p,
+        \qquad K&gt;0.
+      \]
+    </div>
+
+    <ul>
+      <li>当 \(p=1\) 时，得到经典的 <strong>solid-on-solid（SOS）模型</strong>；</li>
+      <li>当 \(p=2\) 时，得到<strong>离散高斯模型（discrete Gaussian model）</strong>。</li>
+    </ul>
+
+    <p>这种对应是一种低温有效描述，而不是对原始伊辛界面的无条件恒等变换。它舍弃了液滴、折返和更复杂的局部拓扑，却保留了研究大尺度界面涨落时最重要的自由度。</p>
+
+    <h3>维度与界面涨落</h3>
+
+    <p><strong>二维伊辛模型的界面对应一维高度函数。</strong> 对应的一维高度模型只要处在正的有效温度，增量就具有随机游走式的涨落；翻译回伊辛模型时，这一界面描述适用于 \(0&lt;T&lt;T_c\) 的相共存区。在高度模型中，典型行为为</p>
+
+    <div class="essay-equation">
+      \[
+        \bigl\langle(h_x-h_0)^2\bigr\rangle\asymp |x|.
+      \]
+    </div>
+
+    <p>界面宽度会随观察尺度增长，因此二维伊辛界面在这一意义下是<strong>粗糙的（rough）</strong>，而不是被局域在某条固定直线附近。</p>
+
+    <p><strong>三维伊辛模型的界面对应二维随机曲面。</strong> Roland Dobrushin（罗兰·多布鲁申）在 1972 年证明，对足够低的温度，界面被局域在参考平面附近，固定位置的典型高度涨落保持在 \(O(1)\) 量级；这就是严格意义下的低温<strong>刚性（rigidity）</strong>。</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>定理与理论预期需要区分。</strong> 对原始三维近邻伊辛模型，人们普遍预期存在某个 \(T_R&lt;T_c\) 的粗糙化温度：高于 \(T_R\) 后，界面进入粗糙相，其高度方差按 \(\log |x|\) 增长。在二维有效高度模型中，粗糙化可以通过 Coulomb gas（库仑气体）或 sine-Gordon（正弦–戈登）对偶表述为 Kosterlitz–Thouless（科斯特利茨–索利斯，KT）机制；把这一结论直接提升为原始三维近邻伊辛模型的严格等价，目前仍超出了已证明的范围。
+    </aside>
+
+    <p>从自旋到高度的过渡，把相变问题转化为随机曲面的几何问题，也是研究晶体表面、浸润转变以及长程作用下界面形状的基本出发点。接下来改变相互作用的距离尺度，就会进入长程伊辛模型的世界。</p>
+
+    <aside class="essay-note">
+      <strong>交互实验。</strong>
+      <ul>
+        <li><a href="{{ site.baseurl }}/misc/lab/ising-interface/"><strong>Ising Random Interface</strong></a>：观察二维 Dobrushin（多布鲁申）界面随温度和边界条件产生的涨落。</li>
+        <li><a href="{{ site.baseurl }}/misc/lab/ising-3d/"><strong>3D Ising Random Interface</strong></a>：从三维格点中观察两相共存与随机界面。</li>
+      </ul>
+    </aside>
+
+    <h2 id="long-range">8. 长程相互作用：一维的例外</h2>
 
     <p>近邻模型假设每个自旋只与身边的格点直接作用。这是一个极其成功的理想化，但许多体系的影响会跨越更远的距离。长程伊辛模型因此把哈密顿量改写为</p>
 
@@ -273,7 +415,7 @@ mathjax: true
 
     <p>随着 \(\sigma\) 改变，模型会在不同区间呈现平均场行为、真正的长程临界行为以及向短程普适类的交叉。临界指数如何变化、长程作用如何改变界面几何，至今仍是活跃的研究方向，也是我近期学习和研究的主题之一。</p>
 
-    <h2 id="disorder-and-learning">7. 无序与学习：伊辛型能量的两条支流</h2>
+    <h2 id="disorder-and-learning">9. 无序与学习：伊辛型能量的两条支流</h2>
 
     <p>离开均匀的近邻铁磁体以后，伊辛型能量仍然可以保留，但耦合的含义会改变。两条特别重要的理论支流，分别通向无序体系与神经网络。</p>
 
@@ -314,29 +456,40 @@ mathjax: true
 
     <p>伊辛模型不是“万物理论”。它真正经久不衰的原因，是提供了一种极其清楚的思考方式：局部相互作用如何与随机性竞争？有限尺度上的微小规则，怎样在热力学极限中形成宏观秩序？临界点附近，为什么遥远位置之间会突然变得相关？</p>
 
-    <p>这些人物并不是一串奖项。Pierre Curie（皮埃尔·居里）指出需要解释的宏观现象，Wilhelm Lenz（威廉·楞次）与 Ernst Ising（恩斯特·伊辛）把问题压缩成格点模型，Lars Onsager（拉斯·昂萨格）给出二维精确解，Kenneth G. Wilson（肯尼斯·威尔逊）解释普适性，Stanislav Smirnov（斯坦尼斯拉夫·斯米尔诺夫）与 Hugo Duminil-Copin（雨果·迪米尼-科潘）推进严格概率理论，David J. Thouless（戴维·J·索利斯）、Giorgio Parisi（乔治·帕里西）、John J. Hopfield（约翰·J·霍普菲尔德）与 Geoffrey Hinton（杰弗里·辛顿）则展示了相互作用范围、无序和能量景观如何把同一类数学结构带向新的问题。</p>
+    <p>这些人物并不是一串奖项。Pierre Curie（皮埃尔·居里）指出需要解释的宏观现象，Wilhelm Lenz（威廉·楞次）与 Ernst Ising（恩斯特·伊辛）把问题压缩成格点模型，Hendrik Kramers（亨德里克·克喇末）与 Gregory Wannier（格里高利·瓦尼尔）揭示高温和低温之间的对偶，Lars Onsager（拉斯·昂萨格）给出二维精确解，Kenneth G. Wilson（肯尼斯·威尔逊）则从尺度变化中解释普适性。</p>
 
-    <p>从一维链上的失败，到二维精确解、共形不变性、长程相互作用与无序体系，这个只有正负号的模型已经走过一个世纪。它不断提醒我们：微观规则可以简单得近乎朴素，而由它们共同生成的世界，未必简单。</p>
+    <p>此后，Roland Dobrushin（罗兰·多布鲁申）把界面刚性变成严格问题，Stanislav Smirnov（斯坦尼斯拉夫·斯米尔诺夫）与 Hugo Duminil-Copin（雨果·迪米尼-科潘）推进临界模型的概率理论；David J. Thouless（戴维·J·索利斯）、Giorgio Parisi（乔治·帕里西）、John J. Hopfield（约翰·J·霍普菲尔德）与 Geoffrey Hinton（杰弗里·辛顿）又展示了相互作用范围、无序和能量景观如何把同一类数学结构带向新的问题。</p>
+
+    <p>从一维链上的失败，到二维精确解、高低温对偶、共形不变性、三维共形自举、随机界面、长程相互作用与无序体系，这个只有正负号的模型已经走过一个世纪。它不断提醒我们：微观规则可以简单得近乎朴素，而由它们共同生成的世界，未必简单。</p>
 
     <section class="essay-references" aria-labelledby="essay-references-title">
       <h2 id="essay-references-title">参考与延伸阅读</h2>
       <ol>
-        <li><a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">知乎：关于三维伊辛模型的解析解的研究进展是怎么样的？（写作启发）</a></li>
-        <li><a href="https://www.hs-augsburg.de/~harsch/anglica/Chronology/20thC/Ising/isi_fm00.html" target="_blank" rel="noopener noreferrer">Ernst Ising（恩斯特·伊辛）, <em>Contribution to the Theory of Ferromagnetism</em> (1925, English translation)</a></li>
-        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.65.117" target="_blank" rel="noopener noreferrer">Lars Onsager（拉斯·昂萨格）, <em>Crystal Statistics I</em> (1944)</a></li>
-        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.85.808" target="_blank" rel="noopener noreferrer">C. N. Yang（杨振宁）, <em>The Spontaneous Magnetization of a Two-Dimensional Ising Model</em> (1952)</a></li>
-        <li><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.4.3174" target="_blank" rel="noopener noreferrer">Kenneth G. Wilson（肯尼斯·威尔逊）, <em>Renormalization Group and Critical Phenomena I</em> (1971)</a></li>
-        <li><a href="https://doi.org/10.1007/BF01645907" target="_blank" rel="noopener noreferrer">Freeman J. Dyson（弗里曼·J·戴森）, <em>Existence of a Phase-Transition in a One-Dimensional Ising Ferromagnet</em> (1969)</a></li>
-        <li><a href="https://doi.org/10.1103/PhysRev.187.732" target="_blank" rel="noopener noreferrer">David J. Thouless（戴维·J·索利斯）, <em>Long-Range Order in One-Dimensional Ising Systems</em> (1969)</a></li>
-        <li><a href="https://www.projecteuclid.org/journals/communications-in-mathematical-physics/volume-84/issue-1/The-phase-transition-in-the-one-dimensional-Ising-model-with/cmp/1103921047.pdf" target="_blank" rel="noopener noreferrer">Jürg Fröhlich（于尔格·弗勒利希） and Thomas Spencer（托马斯·斯宾塞）, the \(1/r^2\) model (1982)</a></li>
-        <li><a href="https://inspirehep.net/literature/61162" target="_blank" rel="noopener noreferrer">Alexander M. Polyakov（亚历山大·M·波利亚科夫）, <em>Conformal Symmetry of Critical Fluctuations</em> (1970)</a></li>
-        <li><a href="https://arxiv.org/abs/1109.1549" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin（雨果·迪米尼-科潘） and Stanislav Smirnov（斯坦尼斯拉夫·斯米尔诺夫）, <em>Conformal Invariance of Lattice Models</em></a></li>
-        <li><a href="https://doi.org/10.1007/s00220-014-2093-y" target="_blank" rel="noopener noreferrer">Michael Aizenman（迈克尔·艾森曼）, Hugo Duminil-Copin（雨果·迪米尼-科潘） and Vladas Sidoravicius（弗拉达斯·西多拉维丘斯）, <em>Random Currents and Continuity of Ising Model's Spontaneous Magnetization</em> (2015)</a></li>
-        <li><a href="https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU_Fields22_Duminil-Copin_citation.pdf" target="_blank" rel="noopener noreferrer">IMU: Hugo Duminil-Copin（雨果·迪米尼-科潘）, 2022 Fields Medal citation</a></li>
-        <li><a href="https://doi.org/10.1103/PhysRevLett.43.1754" target="_blank" rel="noopener noreferrer">Giorgio Parisi（乔治·帕里西）, <em>Infinite Number of Order Parameters for Spin-Glasses</em> (1979)</a></li>
-        <li><a href="https://doi.org/10.1073/pnas.79.8.2554" target="_blank" rel="noopener noreferrer">John J. Hopfield（约翰·J·霍普菲尔德）, <em>Neural Networks and Physical Systems with Emergent Collective Computational Abilities</em> (1982)</a></li>
-        <li><a href="https://doi.org/10.1016/S0364-0213(85)80012-4" target="_blank" rel="noopener noreferrer">David H. Ackley（戴维·H·阿克利）, Geoffrey E. Hinton（杰弗里·E·辛顿） and Terrence J. Sejnowski（特伦斯·J·谢诺夫斯基）, <em>A Learning Algorithm for Boltzmann Machines</em> (1985)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=YIaGgrp1tmY" target="_blank" rel="noopener noreferrer">Jean Zinn-Justin（让·津-朱斯坦）, <em>The Ising Model: The Saga of the Critical Exponents</em></a></li>
+        <li><a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">知乎：关于三维伊辛模型的解析解的研究进展是怎么样的？</a>（历史叙事与 Lenz–Ising 图片来源）</li>
+        <li><a href="https://www.hs-augsburg.de/~harsch/anglica/Chronology/20thC/Ising/isi_fm00.html" target="_blank" rel="noopener noreferrer">Ernst Ising（恩斯特·伊辛），<em>Contribution to the Theory of Ferromagnetism</em>（1925，英译本）</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.60.252" target="_blank" rel="noopener noreferrer">Hendrik A. Kramers（亨德里克·A·克喇末）与 Gregory H. Wannier（格里高利·H·瓦尼尔），<em>Statistics of the Two-Dimensional Ferromagnet. I</em>（1941）</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.65.117" target="_blank" rel="noopener noreferrer">Lars Onsager（拉斯·昂萨格），<em>Crystal Statistics I</em>（1944）</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.85.808" target="_blank" rel="noopener noreferrer">Chen-Ning Yang（杨振宁），<em>The Spontaneous Magnetization of a Two-Dimensional Ising Model</em>（1952）</a></li>
+        <li><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.4.3174" target="_blank" rel="noopener noreferrer">Kenneth G. Wilson（肯尼斯·威尔逊），<em>Renormalization Group and Critical Phenomena I</em>（1971）</a></li>
+        <li><a href="https://inspirehep.net/literature/61162" target="_blank" rel="noopener noreferrer">Alexander M. Polyakov（亚历山大·M·波利亚科夫），<em>Conformal Symmetry of Critical Fluctuations</em>（1970）</a></li>
+        <li><a href="https://arxiv.org/abs/0807.0004" target="_blank" rel="noopener noreferrer">Riccardo Rattazzi（里卡尔多·拉塔齐）、Vyacheslav S. Rychkov（维亚切斯拉夫·S·雷奇科夫）、Erik Tonni（埃里克·托尼）与 Alessandro Vichi（亚历山德罗·维基），<em>Bounding Scalar Operator Dimensions in 4D CFT</em>（2008）</a></li>
+        <li><a href="https://arxiv.org/abs/1203.6064" target="_blank" rel="noopener noreferrer">Sheer El-Showk（希尔·埃尔-肖克）、Miguel F. Paulos（米格尔·F·保罗斯）、David Poland（戴维·波兰）、Slava Rychkov（斯拉瓦·雷奇科夫）、David Simmons-Duffin（戴维·西蒙斯-达芬）与 Alessandro Vichi（亚历山德罗·维基），<em>Solving the 3D Ising Model with the Conformal Bootstrap</em>（2012）</a></li>
+        <li><a href="https://arxiv.org/abs/1502.02033" target="_blank" rel="noopener noreferrer">David Simmons-Duffin（戴维·西蒙斯-达芬），<em>A Semidefinite Program Solver for the Conformal Bootstrap</em>（2015）</a></li>
+        <li><a href="https://arxiv.org/abs/1603.04436" target="_blank" rel="noopener noreferrer">Filip Kos（菲利普·科斯）、David Poland（戴维·波兰）、David Simmons-Duffin（戴维·西蒙斯-达芬）与 Alessandro Vichi（亚历山德罗·维基），<em>Precision Islands in the Ising and O(N) Models</em>（2016）</a></li>
+        <li><a href="https://arxiv.org/abs/1109.1549" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin（雨果·迪米尼-科潘）与 Stanislav Smirnov（斯坦尼斯拉夫·斯米尔诺夫），<em>Conformal Invariance of Lattice Models</em>（2012）</a></li>
+        <li><a href="https://doi.org/10.1007/s00220-014-2093-y" target="_blank" rel="noopener noreferrer">Michael Aizenman（迈克尔·艾森曼）、Hugo Duminil-Copin（雨果·迪米尼-科潘）与 Vladas Sidoravicius（弗拉达斯·西多拉维丘斯），<em>Random Currents and Continuity of Ising Model's Spontaneous Magnetization</em>（2015）</a></li>
+        <li><a href="https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU_Fields22_Duminil-Copin_citation.pdf" target="_blank" rel="noopener noreferrer">International Mathematical Union（国际数学联盟），Hugo Duminil-Copin（雨果·迪米尼-科潘）2022 年菲尔兹奖授奖说明</a></li>
+        <li><a href="https://link.springer.com/article/10.1007/BF01645099" target="_blank" rel="noopener noreferrer">Roland L. Dobrushin（罗兰·L·多布鲁申），<em>Gibbs State Describing the Coexistence of Phases for a Three-Dimensional Ising Model</em>（1972）</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRevLett.38.993" target="_blank" rel="noopener noreferrer">Henk van Beijeren（亨克·范贝耶伦），<em>Interface Sharpness in the Ising Model</em>（1977）</a></li>
+        <li><a href="https://doi.org/10.1088/0022-3719/6/7/010" target="_blank" rel="noopener noreferrer">J. Michael Kosterlitz（J·迈克尔·科斯特利茨）与 David J. Thouless（戴维·J·索利斯），<em>Ordering, Metastability and Phase Transitions in Two-Dimensional Systems</em>（1973）</a></li>
+        <li><a href="https://arxiv.org/abs/1901.04980" target="_blank" rel="noopener noreferrer">Reza Gheissari（雷扎·盖萨里）与 Eyal Lubetzky（埃亚尔·卢贝茨基），<em>Maximum and Shape of Interfaces in 3D Ising Crystals</em>（2020）</a></li>
+        <li><a href="https://doi.org/10.1007/BF01645907" target="_blank" rel="noopener noreferrer">Freeman J. Dyson（弗里曼·J·戴森），<em>Existence of a Phase-Transition in a One-Dimensional Ising Ferromagnet</em>（1969）</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRev.187.732" target="_blank" rel="noopener noreferrer">David J. Thouless（戴维·J·索利斯），<em>Long-Range Order in One-Dimensional Ising Systems</em>（1969）</a></li>
+        <li><a href="https://www.projecteuclid.org/journals/communications-in-mathematical-physics/volume-84/issue-1/The-phase-transition-in-the-one-dimensional-Ising-model-with/cmp/1103921047.pdf" target="_blank" rel="noopener noreferrer">Jürg Fröhlich（于尔格·弗勒利希）与 Thomas Spencer（托马斯·斯宾塞），<em>The Phase Transition in the One-Dimensional Ising Model with 1/r² Interaction Energy</em>（1982）</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRevLett.43.1754" target="_blank" rel="noopener noreferrer">Giorgio Parisi（乔治·帕里西），<em>Infinite Number of Order Parameters for Spin-Glasses</em>（1979）</a></li>
+        <li><a href="https://doi.org/10.1073/pnas.79.8.2554" target="_blank" rel="noopener noreferrer">John J. Hopfield（约翰·J·霍普菲尔德），<em>Neural Networks and Physical Systems with Emergent Collective Computational Abilities</em>（1982）</a></li>
+        <li><a href="https://doi.org/10.1016/S0364-0213(85)80012-4" target="_blank" rel="noopener noreferrer">David H. Ackley（戴维·H·阿克利）、Geoffrey E. Hinton（杰弗里·E·辛顿）与 Terrence J. Sejnowski（特伦斯·J·谢诺夫斯基），<em>A Learning Algorithm for Boltzmann Machines</em>（1985）</a></li>
+        <li><a href="https://www.youtube.com/watch?v=YIaGgrp1tmY" target="_blank" rel="noopener noreferrer">Jean Zinn-Justin（让·津-朱斯坦），<em>The Ising Model: The Saga of the Critical Exponents</em></a></li>
       </ol>
     </section>
   </article>
