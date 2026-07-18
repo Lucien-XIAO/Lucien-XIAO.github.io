@@ -1,5 +1,5 @@
 name: Yuguang XIAO
-description: Homepage of Yuguang XIAO
+description: Research homepage of Yuguang XIAO — probability, mathematical statistical mechanics, and random interfaces
 url: "https://xiaoyuguang.com"
 baseurl: ""
 
@@ -7,7 +7,7 @@ author:
   avatar           : "yuguang-xiao-portrait.jpg"
   name             : "Yuguang XIAO (肖煜光)"
   pronouns         : ""
-  bio              : "A M2 student in Probability and Random models"
+  bio              : "Incoming PhD researcher in probability and mathematical statistical mechanics"
   location         : "Paris, France"
   employer         : "LPSM, Sorbonne University"
   uri              : "https://xiaoyuguang.fr"

@@ -91,6 +91,29 @@ body.theme-claude {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body.theme-claude .skip-link {
+  background: var(--claude-accent);
+  border-radius: 0 0 8px 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  left: 20px;
+  padding: 10px 14px;
+  position: fixed;
+  top: 0;
+  transform: translateY(-120%);
+  transition: transform 160ms ease;
+  z-index: 10001;
+}
+
+body.theme-claude .skip-link:focus {
+  transform: translateY(0);
+}
+
+body.theme-claude .mobile-brand {
+  display: none;
+}
+
 /* --- Top Navigation Bar --- */
 body.theme-claude .top-nav {
   position: fixed;
@@ -4751,5 +4774,148 @@ body.theme-claude .math-float-canvas {
     height: 34px;
     width: 34px;
     font-size: 12px;
+  }
+}
+
+/* ============================================
+   Homepage profile — clearer hierarchy and actions
+   ============================================ */
+
+body.theme-claude .profile-kicker {
+  color: var(--claude-jade);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+body.theme-claude .profile-status {
+  align-items: center;
+  background: color-mix(in srgb, var(--claude-jade) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--claude-jade) 24%, transparent);
+  border-radius: 8px;
+  color: var(--claude-jade);
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 650;
+  gap: 9px;
+  margin: 0 0 22px !important;
+  padding: 8px 11px;
+}
+
+body.theme-claude .status-dot {
+  background: var(--claude-jade);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--claude-jade) 14%, transparent);
+  flex: 0 0 auto;
+  height: 7px;
+  width: 7px;
+}
+
+body.theme-claude .profile-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+body.theme-claude .profile-action {
+  align-items: center;
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  color: var(--claude-text) !important;
+  display: inline-flex;
+  font-size: 13.5px;
+  font-weight: 700;
+  gap: 9px;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  text-decoration: none !important;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease !important;
+}
+
+body.theme-claude .profile-action:hover {
+  background: var(--claude-accent-soft);
+  border-color: color-mix(in srgb, var(--claude-accent) 42%, transparent);
+  color: var(--claude-accent) !important;
+  transform: translateY(-1px);
+}
+
+body.theme-claude .profile-action-primary {
+  background: var(--claude-accent);
+  border-color: var(--claude-accent);
+  color: #fff !important;
+}
+
+body.theme-claude .profile-action-primary:hover {
+  background: color-mix(in srgb, var(--claude-accent) 88%, #000);
+  border-color: transparent;
+  color: #fff !important;
+}
+
+body.theme-claude .news-card:first-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--claude-accent) 16%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--claude-accent) 10%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--claude-accent) 16%, transparent);
+}
+
+/* Content stays readable if scripts or observers are unavailable. */
+body.theme-claude .section {
+  opacity: 1;
+  transform: none;
+}
+
+.js body.theme-claude .section:not(.visible) {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+@media (max-width: 640px) {
+  body.theme-claude .nav-container {
+    gap: 12px;
+  }
+
+  body.theme-claude .mobile-brand {
+    align-items: center;
+    color: var(--claude-text);
+    display: inline-flex;
+    font-family: "Noto Serif SC", Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-right: auto;
+    text-decoration: none;
+  }
+
+  body.theme-claude .profile-kicker {
+    font-size: 10.5px;
+    letter-spacing: 0.075em;
+  }
+
+  body.theme-claude .profile-status {
+    align-items: flex-start;
+    line-height: 1.45;
+  }
+
+  body.theme-claude .status-dot {
+    margin-top: 6px;
+  }
+
+  body.theme-claude .profile-actions {
+    align-items: stretch;
+  }
+
+  body.theme-claude .profile-action {
+    flex: 1 1 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js body.theme-claude .section:not(.visible) {
+    opacity: 1;
+    transform: none;
   }
 }

@@ -4,6 +4,7 @@
   {% include head.html %}
 </head>
 <body class="theme-claude has-paris-strip">
+  <a class="skip-link" href="#main-content" data-i18n="accessibility.skip">Skip to main content</a>
   {% include math_float.html %}
   {% include nav.html %}
   <div class="paris-photo-strip" aria-label="Paris skyline">
@@ -12,9 +13,9 @@
   </div>
   <div class="wrapper">
     {% include sidebar.html %}
-    <section class="content">
+    <main class="content" id="main-content">
       {{ content }}
-    </section>
+    </main>
     {% include footer.html %}
   </div>
   <script>
@@ -183,20 +184,24 @@
     const toggle = document.getElementById('themeToggle');
     if (toggle) {
       const saved = localStorage.getItem('theme');
-      if (saved) {
-        document.documentElement.setAttribute('data-theme', saved);
-        toggle.innerHTML = saved === 'dark'
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const effectiveTheme = saved || (systemDark ? 'dark' : 'light');
+      const syncThemeToggle = (theme) => {
+        toggle.innerHTML = theme === 'dark'
           ? '<i class="fa-solid fa-sun"></i>'
           : '<i class="fa-solid fa-moon"></i>';
+        toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      };
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
       }
+      syncThemeToggle(effectiveTheme);
       toggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const current = document.documentElement.getAttribute('data-theme') || (systemDark ? 'dark' : 'light');
         const next = current === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
-        toggle.innerHTML = next === 'dark'
-          ? '<i class="fa-solid fa-sun"></i>'
-          : '<i class="fa-solid fa-moon"></i>';
+        syncThemeToggle(next);
       });
     }
   </script>

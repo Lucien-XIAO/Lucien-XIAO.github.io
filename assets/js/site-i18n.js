@@ -13,6 +13,11 @@
       fr: "Sélecteur de langue",
       zh: "语言切换",
     },
+    "accessibility.skip": {
+      en: "Skip to main content",
+      fr: "Aller au contenu principal",
+      zh: "跳到主要内容",
+    },
     "language.switch.en": {
       en: "Switch to English",
       fr: "Passer en anglais",
@@ -77,6 +82,31 @@
       en: "Copy email address",
       fr: "Copier l'adresse e-mail",
       zh: "复制邮箱地址",
+    },
+    "home.hero.kicker": {
+      en: "Probability · Statistical Mechanics · Random Interfaces",
+      fr: "Probabilités · Mécanique statistique · Interfaces aléatoires",
+      zh: "概率论 · 统计力学 · 随机界面",
+    },
+    "home.hero.status": {
+      en: "Incoming PhD researcher at Université Gustave Eiffel · October 2026",
+      fr: "Prochainement doctorant à l’Université Gustave Eiffel · Octobre 2026",
+      zh: "即将于 2026 年 10 月在古斯塔夫·埃菲尔大学攻读博士",
+    },
+    "home.hero.cv": {
+      en: "View CV",
+      fr: "Voir le CV",
+      zh: "查看简历",
+    },
+    "home.hero.publications": {
+      en: "Publications",
+      fr: "Publications",
+      zh: "论文",
+    },
+    "home.hero.contact": {
+      en: "Contact",
+      fr: "Contact",
+      zh: "联系我",
     },
     "footer.copyright": {
       en: "© 2026 Yuguang XIAO. All rights reserved.",
