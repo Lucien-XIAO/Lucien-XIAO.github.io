@@ -2,6 +2,31 @@ name: Yuguang XIAO
 description: Research homepage of Yuguang XIAO — probability, mathematical statistical mechanics, and random interfaces
 url: "https://xiaoyuguang.com"
 baseurl: ""
+lang: en
+timezone: Europe/Paris
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
+
+# Keep build artefacts and private working files out of the deployed site.
+exclude:
+  - anaconda_projects/
+  - publications/Various_Notes/.texpadtmp/
+  - publications/Various_Notes/apply_fixes.py
+  - publications/Various_Notes/convert.py
+  - publications/Various_Notes/gen_chunks.py
+  - publications/Various_Notes/chunks.json
+  - publications/Various_Notes/Measure_theory_bkp.tex
+  - publications/Various_Notes/Measure_theory_temp.tex
+  - "**/*.aux"
+  - "**/*.fdb_latexmk"
+  - "**/*.fls"
+  - "**/*.log"
+  - "**/*.out"
+  - "**/*.synctex.gz"
+  - "**/*.toc"
 
 author:
   avatar           : "yuguang-xiao-portrait.jpg"
@@ -10,7 +35,7 @@ author:
   bio              : "Incoming PhD researcher in probability and mathematical statistical mechanics"
   location         : "Paris, France"
   employer         : "LPSM, Sorbonne University"
-  uri              : "https://xiaoyuguang.fr"
+  uri              : "https://xiaoyuguang.com"
   email            : ""
   academia         : ""
   arxiv            : ""

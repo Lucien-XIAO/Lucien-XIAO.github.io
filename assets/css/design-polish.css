@@ -1,0 +1,423 @@
+/* ============================================
+   Design Polish — 视觉精修层
+   加载于 theme-claude.css 之后；同优先级、靠后生效。
+   设计语言：宣纸纸片、朱砂印章、玉色点缀（与主题一致）。
+   暗色模式经由 CSS 变量自动适配。
+   ============================================ */
+
+/* ---------- 全局质感 ---------- */
+
+body.theme-claude {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body.theme-claude ::selection {
+  background: var(--claude-accent);
+  color: var(--claude-paper);
+}
+
+body.theme-claude :focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--claude-jade) 65%, transparent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 细滚动条（与主题同色） */
+body.theme-claude ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body.theme-claude ::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--claude-secondary) 34%, transparent);
+  border: 3px solid var(--claude-bg);
+  border-radius: 999px;
+}
+
+body.theme-claude ::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--claude-accent) 55%, transparent);
+}
+
+body.theme-claude ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- 顶栏导航 ---------- */
+
+body.theme-claude .top-nav {
+  box-shadow: 0 10px 30px -18px rgba(36, 48, 44, 0.35);
+}
+
+/* 链接下划线滑入动画 */
+body.theme-claude .nav-left a {
+  position: relative;
+}
+
+body.theme-claude .nav-left a::after {
+  background: var(--claude-accent);
+  border-radius: 2px;
+  bottom: -3px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+}
+
+body.theme-claude .nav-left a:not(:first-child)::after {
+  bottom: 2px;
+  left: 10px;
+  right: 10px;
+}
+
+body.theme-claude .nav-left a:hover::after,
+body.theme-claude .nav-left a.nav-active::after {
+  transform: scaleX(1);
+}
+
+/* 首个链接（Home）原本无圆角背景，hover 不再突兀 */
+body.theme-claude .nav-left a.nav-active {
+  font-weight: 650;
+}
+
+/* ---------- 侧栏名片 ---------- */
+
+/* 头像：纸环 + 玉色外环（玉璧意象） */
+body.theme-claude .image.avatar img {
+  border: 4px solid var(--claude-paper);
+  outline: 1.5px solid color-mix(in srgb, var(--claude-jade) 42%, transparent);
+  outline-offset: 4px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, outline-color 0.35s ease;
+}
+
+body.theme-claude .image.avatar:hover img {
+  box-shadow: 0 18px 44px var(--claude-card-shadow);
+  outline-color: color-mix(in srgb, var(--claude-jade) 75%, transparent);
+  transform: translateY(-3px) scale(1.015);
+}
+
+/* 姓名层级：英文展示字 + 中文名加宽字距 */
+body.theme-claude .site-name {
+  font-family: "Raleway", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.015em;
+}
+
+body.theme-claude .site-name-cn {
+  color: var(--claude-secondary);
+  font-family: "Noto Serif SC", "Songti SC", serif;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  padding-left: 0.34em; /* 补偿末字间距，保持视觉居中 */
+}
+
+/* 邮箱：纸片 chip */
+body.theme-claude .site-email {
+  background: var(--claude-paper);
+  border: 1px solid var(--claude-border);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--claude-card-shadow);
+  display: inline-block;
+  padding: 8px 14px;
+}
+
+/* 社交图标：描边统一、hover 更有弹性 */
+body.theme-claude .social-icons a {
+  border: 1px solid var(--claude-border);
+  transition: transform 0.24s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, box-shadow 0.24s ease, border-color 0.2s ease;
+}
+
+body.theme-claude .social-icons a:hover {
+  border-color: var(--claude-accent);
+  transform: translateY(-3px) scale(1.06);
+}
+
+/* ---------- Section 标题：印章 + 渐隐发夹线 ---------- */
+
+body.theme-claude .section-title,
+body.theme-claude .section.is-collapsible .section-title {
+  align-items: center;
+  background-image: linear-gradient(90deg, var(--claude-accent), color-mix(in srgb, var(--claude-accent) 10%, transparent));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  border-bottom: none;
+  display: inline-flex;
+  font-family: "Noto Serif SC", "Songti SC", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  gap: 12px;
+  letter-spacing: 0.02em;
+  padding-bottom: 11px;
+  padding-right: 56px; /* 发夹线向右延伸，版面更透气 */
+}
+
+/* 朱砂印章方块 */
+body.theme-claude .section-title::before {
+  background: var(--claude-accent);
+  border-radius: 2.5px;
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--claude-accent) 38%, transparent);
+  content: "";
+  flex: 0 0 auto;
+  height: 10px;
+  width: 10px;
+}
+
+/* 折叠箭头与印章对齐微调 */
+body.theme-claude .section.is-collapsible .section-title::after {
+  margin-left: 2px;
+}
+
+/* hover 时发夹线变玉色，与文字变色一致 */
+body.theme-claude .section.is-collapsible .section-title:hover,
+body.theme-claude .section.is-collapsible .section-title:focus-visible {
+  background-image: linear-gradient(90deg, var(--claude-jade), color-mix(in srgb, var(--claude-jade) 10%, transparent));
+}
+
+/* ---------- 时间线条目：宣纸卡片化 ---------- */
+
+body.theme-claude .timeline-item {
+  background: var(--claude-paper);
+  border: 1px solid var(--claude-border);
+  border-radius: 14px;
+  box-shadow: 0 2px 10px var(--claude-card-shadow);
+  margin-bottom: 16px;
+  padding: 18px 20px 15px;
+  transition: transform 0.22s ease, box-shadow 0.26s ease, border-color 0.22s ease, background-color 0.3s ease;
+}
+
+body.theme-claude .timeline-item:hover {
+  border-color: color-mix(in srgb, var(--claude-accent) 38%, transparent);
+  box-shadow: 0 12px 30px var(--claude-card-shadow);
+  transform: translateY(-2px);
+}
+
+/* 竖线与圆点：配合卡片内边距重新定位，线条更细更柔 */
+body.theme-claude .timeline-item::before {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--claude-accent) 55%, transparent), transparent);
+  left: -21px;
+  width: 1.5px;
+}
+
+body.theme-claude .timeline-item::after {
+  background: var(--claude-paper);
+  border: 2.5px solid var(--claude-accent);
+  height: 8px;
+  left: -26px;
+  top: 24px;
+  width: 8px;
+}
+
+body.theme-claude .timeline-item .experience-content p:last-child,
+body.theme-claude .timeline-item .action-links:last-child {
+  margin-bottom: 0;
+}
+
+body.theme-claude .exp-period {
+  color: var(--claude-jade);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+/* 机构 Logo：在纸卡内更服帖 */
+body.theme-claude .institution-logo {
+  border-radius: 10px;
+}
+
+/* Report / Slides 链接：胶囊化 */
+body.theme-claude .action-links a {
+  border: 1px solid var(--claude-border);
+  border-radius: 999px;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+body.theme-claude .action-links a:hover {
+  transform: translateY(-1px);
+}
+
+/* ---------- News 卡片 ---------- */
+
+body.theme-claude .news-card {
+  background: var(--claude-paper);
+  border: 1px solid var(--claude-border) !important; /* 覆盖旧的三边描边补丁 */
+  border-left: 3px solid var(--claude-accent) !important;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px var(--claude-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.24s ease, border-color 0.2s ease, background-color 0.3s ease;
+}
+
+body.theme-claude .news-card:hover {
+  box-shadow: 0 10px 26px var(--claude-card-shadow);
+  transform: translateY(-1px);
+}
+
+body.theme-claude .news-card strong {
+  color: var(--claude-accent);
+  font-family: "Ubuntu Mono", "SF Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- 研究方向 ---------- */
+
+body.theme-claude .research-direction {
+  border-radius: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
+  transition: background-color 0.2s ease;
+}
+
+body.theme-claude .research-direction:hover {
+  background: var(--claude-paper);
+}
+
+body.theme-claude .research-direction-index {
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  opacity: 0.85;
+  padding-top: 2px;
+}
+
+/* ---------- Selected Materials 网格 ---------- */
+
+body.theme-claude .material-link {
+  background: var(--claude-paper);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px var(--claude-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.24s ease, border-color 0.2s ease, background-color 0.3s ease;
+}
+
+body.theme-claude .material-link:hover {
+  box-shadow: 0 12px 28px var(--claude-card-shadow);
+  transform: translateY(-2px);
+}
+
+body.theme-claude .material-link-icon {
+  background: linear-gradient(135deg, var(--claude-accent-soft), color-mix(in srgb, var(--claude-jade) 10%, transparent));
+  border: none;
+  border-radius: 10px;
+}
+
+/* ---------- 首页按钮组 ---------- */
+
+body.theme-claude .profile-action {
+  border-radius: 999px;
+  min-height: 42px;
+  padding: 0 18px;
+}
+
+body.theme-claude .profile-action:hover {
+  transform: translateY(-2px);
+}
+
+body.theme-claude .profile-action-primary {
+  background: linear-gradient(135deg, var(--claude-accent), color-mix(in srgb, var(--claude-accent) 82%, #5c1a14));
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--claude-accent) 32%, transparent);
+}
+
+body.theme-claude .profile-action-primary:hover {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--claude-accent) 92%, #fff), var(--claude-accent));
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--claude-accent) 40%, transparent);
+}
+
+body.theme-claude .profile-action-primary .fa-arrow-right {
+  transition: transform 0.2s ease;
+}
+
+body.theme-claude .profile-action-primary:hover .fa-arrow-right {
+  transform: translateX(3px);
+}
+
+/* 状态徽章：玉色胶囊更柔和 */
+body.theme-claude .profile-status {
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+
+/* 简介左侧玉色细线：与印章呼应，稍作加强 */
+body.theme-claude .intro-copy::before {
+  border-radius: 3px;
+  opacity: 0.55;
+  width: 3px;
+}
+
+/* ---------- 页脚 ---------- */
+
+body.theme-claude .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+body.theme-claude .footer-links a {
+  color: var(--claude-secondary);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+body.theme-claude .footer-links a:hover {
+  color: var(--claude-accent);
+}
+
+/* 发夹线上的玉色菱形饰件 */
+body.theme-claude .site-footer p {
+  position: relative;
+}
+
+body.theme-claude .site-footer p::before {
+  background: var(--claude-jade);
+  content: "";
+  height: 7px;
+  left: 50%;
+  opacity: 0.75;
+  position: absolute;
+  top: -4.5px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 7px;
+}
+
+/* ---------- 页面 Hero 照片：圆角统一 ---------- */
+
+body.theme-claude .teaching-hero-photo img,
+body.theme-claude .talks-hero-photo img,
+body.theme-claude .publications-hero-photo img,
+body.theme-claude .cv-hero-photo img {
+  border-radius: 12px;
+}
+
+/* ---------- 移动端微调 ---------- */
+
+@media (max-width: 640px) {
+  body.theme-claude .timeline-item {
+    padding: 15px 16px 13px;
+  }
+
+  body.theme-claude .section-title,
+  body.theme-claude .section.is-collapsible .section-title {
+    font-size: 18px;
+    padding-right: 28px;
+  }
+}
+
+/* ---------- 减少动态偏好 ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-claude .image.avatar img,
+  body.theme-claude .social-icons a,
+  body.theme-claude .timeline-item,
+  body.theme-claude .news-card,
+  body.theme-claude .material-link,
+  body.theme-claude .profile-action,
+  body.theme-claude .nav-left a::after {
+    transition: none;
+  }
+}

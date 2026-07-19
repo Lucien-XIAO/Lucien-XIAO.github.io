@@ -11,21 +11,52 @@
     content="Yuguang XIAO, Sorbonne Université, M2-PMA, Probability and Random Models, Stochastic Processes, Master's Degree, Double Bachelor's Degree, Mathematics, Physics">
 <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}" />
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Yuguang XIAO">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="{{ page.title | escape }}">
 <meta property="og:description" content="Yuguang XIAO — probability, statistical mechanics, stochastic processes, and random interfaces.">
 <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
 <meta property="og:image" content="{{ site.url }}/assets/img/yuguang-xiao-portrait.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="Yuguang XIAO — probability, statistical mechanics, stochastic processes, and random interfaces.">
+<meta name="twitter:image" content="{{ site.url }}/assets/img/yuguang-xiao-portrait.jpg">
+<meta name="theme-color" content="#F7F3EA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141A18" media="(prefers-color-scheme: dark)">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yuguang XIAO",
+  "alternateName": "肖煜光",
+  "url": "https://xiaoyuguang.com",
+  "image": "https://xiaoyuguang.com/assets/img/yuguang-xiao-portrait.jpg",
+  "jobTitle": "Incoming PhD researcher in probability and mathematical statistical mechanics",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Sorbonne Université"
+  },
+  "sameAs": [
+    "https://github.com/Lucien-XIAO",
+    "https://www.linkedin.com/in/yuguang-xiao-00b1281ba/"
+  ]
+}
+</script>
 <link rel="icon" href="/assets/img/yuguang-xiao-portrait.jpg?v=2" type="image/jpeg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+{% if page.layout == 'default' %}<link rel="preload" as="image" href="/assets/img/paris-banner.jpg?v=2" fetchpriority="high">
+{% endif %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Raleway:wght@400;500;600;700;800&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
     crossorigin=anonymous>
 <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css?v=1">
-<link rel="stylesheet" href="/assets/css/font_sans_serif.css">
 <link rel="stylesheet" href="/assets/css/style-no-dark-mode_old.css">
 <link rel="stylesheet" href="/assets/css/publications-no-dark-mode_old.css">
 <link rel="stylesheet" href="/assets/css/theme-claude.css?v=37">
+<link rel="stylesheet" href="/assets/css/design-polish.css?v=1">
 <script src="/assets/js/site-i18n.js?v=46" defer></script>
 {% if page.mathjax %}
 <script>

@@ -32,7 +32,7 @@ title: Curriculum Vitae
     <!-- Degree 1 -->
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="{{ site.baseurl }}/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
+        <img class="institution-logo" loading="lazy" decoding="async" src="{{ site.baseurl }}/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>M.S. in Probability</strong></p>
           <p class="exp-detail">Sorbonne Université, Paris</p>
@@ -44,7 +44,7 @@ title: Curriculum Vitae
     <!-- Degree 2 -->
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="{{ site.baseurl }}/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
+        <img class="institution-logo" loading="lazy" decoding="async" src="{{ site.baseurl }}/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>First-Year M.S. (M1) in Mathematics & Applications</strong></p>
           <p class="exp-detail">Sorbonne Université, Paris</p>
@@ -56,7 +56,7 @@ title: Curriculum Vitae
     <!-- Degree 3 -->
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="{{ site.baseurl }}/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
+        <img class="institution-logo" loading="lazy" decoding="async" src="{{ site.baseurl }}/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>B.S. in Mathematics</strong></p>
           <p class="exp-detail">Sorbonne Université, Paris</p>
@@ -73,7 +73,7 @@ title: Curriculum Vitae
     <!-- Degree 4 -->
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="{{ site.baseurl }}/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
+        <img class="institution-logo" loading="lazy" decoding="async" src="{{ site.baseurl }}/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>B.S. in Physics (Minor in Mathematics)</strong></p>
           <p class="exp-detail">Sorbonne Université, Paris</p>
@@ -90,7 +90,7 @@ title: Curriculum Vitae
     <!-- Degree 5 -->
     <div class="card timeline-item">
       <div class="experience-item">
-        <img class="institution-logo" src="{{ site.baseurl }}/assets/img/wuhan-no3-middle-school-logo.jpg" alt="Wuhan No. 3 Middle School logo" />
+        <img class="institution-logo" loading="lazy" decoding="async" src="{{ site.baseurl }}/assets/img/wuhan-no3-middle-school-logo.jpg" alt="Wuhan No. 3 Middle School logo" />
         <div class="experience-content">
           <p class="exp-title"><strong>High School Diploma, Science Track</strong></p>
           <p class="exp-detail">Wuhan No. 3 Middle School, Wuhan</p>
