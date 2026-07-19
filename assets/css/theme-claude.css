@@ -3771,6 +3771,35 @@ body.theme-claude .essay-meta {
   margin: 18px 0 0;
 }
 
+body.theme-claude .essay-language-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+body.theme-claude .essay-language-links a {
+  border: 1px solid var(--claude-border);
+  border-radius: 999px;
+  color: var(--claude-secondary);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px 11px;
+  text-decoration: none;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+body.theme-claude .essay-language-links a:hover,
+body.theme-claude .essay-language-links a:focus-visible,
+body.theme-claude .essay-language-links a.is-active {
+  background: color-mix(in srgb, var(--claude-primary) 9%, transparent);
+  border-color: color-mix(in srgb, var(--claude-primary) 42%, var(--claude-border));
+  color: var(--claude-primary);
+}
+
 body.theme-claude .essay-article {
   color: var(--claude-text);
   font-family: "Noto Serif SC", "Songti SC", Georgia, serif;
@@ -3778,6 +3807,11 @@ body.theme-claude .essay-article {
   line-height: 1.9;
   margin: 0 auto;
   max-width: 800px;
+}
+
+body.theme-claude .essay-article[lang="en"],
+body.theme-claude .essay-article[lang="fr"] {
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 body.theme-claude .essay-article p {

@@ -28,6 +28,21 @@
       return 'en';
     };
 
+    /* Localized links: pick the href variant matching the active language.
+       Usage: <a href="/default/" data-href-en="..." data-href-fr="..." data-href-zh="..."> */
+    var applyLocalizedHrefs = function () {
+      var lang = currentLanguage();
+      var key = 'href' + lang.charAt(0).toUpperCase() + lang.slice(1);
+      document.querySelectorAll('a[data-href-en]').forEach(function (link) {
+        var target = link.dataset[key] || link.dataset.hrefEn;
+        if (target && link.getAttribute('href') !== target) {
+          link.setAttribute('href', target);
+        }
+      });
+    };
+    applyLocalizedHrefs();
+    window.addEventListener('site-language-change', applyLocalizedHrefs);
+
     var contactToastTimer;
     var showContactToast = function (message) {
       var toast = document.querySelector('.contact-toast');

@@ -262,25 +262,132 @@ body.theme-claude .news-card strong {
   letter-spacing: 0.02em;
 }
 
-/* ---------- 研究方向 ---------- */
+/* ---------- 研究方向：三列卡片网格 ---------- */
 
-body.theme-claude .research-direction {
-  border-radius: 10px;
-  padding-left: 14px;
-  padding-right: 14px;
-  transition: background-color 0.2s ease;
+body.theme-claude .research-direction-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body.theme-claude .research-direction,
+body.theme-claude .research-direction:first-child {
+  background: var(--claude-paper);
+  border: 1px solid var(--claude-border);
+  border-radius: 14px;
+  box-shadow: 0 2px 10px var(--claude-card-shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 18px 18px;
+  position: relative;
+  transition: transform 0.22s ease, box-shadow 0.26s ease, border-color 0.22s ease, background-color 0.3s ease;
 }
 
 body.theme-claude .research-direction:hover {
-  background: var(--claude-paper);
+  border-color: color-mix(in srgb, var(--claude-accent) 38%, transparent);
+  box-shadow: 0 12px 30px var(--claude-card-shadow);
+  transform: translateY(-3px);
 }
 
+/* 图标 chip：与材料网格一致的渐变语言 */
+body.theme-claude .research-direction-icon {
+  align-items: center;
+  background: linear-gradient(135deg, var(--claude-accent-soft), color-mix(in srgb, var(--claude-jade) 10%, transparent));
+  border-radius: 10px;
+  color: var(--claude-accent);
+  display: inline-flex;
+  font-size: 16px;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: 14px;
+  transition: transform 0.24s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 40px;
+}
+
+body.theme-claude .research-direction:hover .research-direction-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* 序号：退居卡片右上角，作淡淡的标记 */
 body.theme-claude .research-direction-index {
-  font-family: "Noto Serif SC", Georgia, serif;
-  font-size: 19px;
+  color: var(--claude-secondary);
+  font-family: "Ubuntu Mono", "SF Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  padding: 0;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+body.theme-claude .research-direction h4 {
+  color: var(--claude-text);
+  font-size: 16.5px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  text-transform: none;
+}
+
+body.theme-claude .research-direction p {
+  color: var(--claude-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* 相关文章链接：贴卡片底部，虚线分隔 */
+body.theme-claude .research-direction > p {
+  flex: 1 0 auto; /* 撑开剩余空间，让链接自然贴底 */
+}
+
+body.theme-claude .research-direction-essay {
+  align-items: flex-start;
+  border-top: 1px dashed color-mix(in srgb, var(--claude-accent) 26%, transparent);
+  color: var(--claude-secondary);
+  display: flex;
+  gap: 9px;
+  margin-top: 14px;
+  padding-top: 13px;
+  text-decoration: none;
+}
+
+body.theme-claude .research-direction-essay > i {
+  color: var(--claude-jade);
+  font-size: 12.5px;
+  margin-top: 2.5px;
+}
+
+body.theme-claude .research-direction-essay-label {
+  color: var(--claude-jade);
+  display: block;
+  font-size: 10.5px;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+body.theme-claude .research-direction-essay-title {
+  color: var(--claude-text);
+  display: block;
+  font-size: 13px;
   font-weight: 600;
-  opacity: 0.85;
-  padding-top: 2px;
+  line-height: 1.5;
+  transition: color 0.18s ease;
+}
+
+body.theme-claude .research-direction-essay:hover .research-direction-essay-title {
+  color: var(--claude-accent);
+}
+
+@media (max-width: 720px) {
+  body.theme-claude .research-direction-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /* ---------- Selected Materials 网格 ---------- */
@@ -417,6 +524,8 @@ body.theme-claude .cv-hero-photo img {
   body.theme-claude .news-card,
   body.theme-claude .material-link,
   body.theme-claude .profile-action,
+  body.theme-claude .research-direction,
+  body.theme-claude .research-direction-icon,
   body.theme-claude .nav-left a::after {
     transition: none;
   }

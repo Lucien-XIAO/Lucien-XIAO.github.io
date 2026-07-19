@@ -1,0 +1,497 @@
+---
+title: "From Plus and Minus Signs to Phase Transitions: A Century of the Ising Model"
+description: "How a lattice model with only two local states connects magnetism, phase transitions, high-low temperature duality, the conformal bootstrap, interface geometry, rigorous probability, and disordered systems."
+permalink: /misc/essays/ising-model/en/
+layout: page
+author_profile: true
+lang: en
+mathjax: true
+---
+
+<div class="notebook-page notebook-detail-page essay-page">
+  <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essays</a>
+
+  <header class="notebook-detail-hero essay-detail-hero" lang="en">
+    <p class="notebook-kicker">Popular exposition · Statistical mechanics</p>
+    <h1>From Plus and Minus Signs to Phase Transitions: A Century of the Ising Model</h1>
+    <p class="notebook-lede">How a lattice model with only two local states connects magnetism, phase transitions, high-low temperature duality, the conformal bootstrap, interface geometry, rigorous probability, and disordered systems.</p>
+    <p class="essay-meta">
+      <span>Yuguang XIAO</span>
+      <span aria-hidden="true">·</span>
+      <time datetime="2026-07-16">July 16, 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>about 22 min read</span>
+    </p>
+    {% include ising-essay-language.html current="en" %}
+  </header>
+
+  <article class="essay-article" lang="en">
+    <p class="essay-opening">Why does a magnet lose its spontaneous magnetization near the Curie temperature when it is heated? Why does water, under standard atmospheric pressure, undergo a liquid-gas transition near 100°C? The microscopic mechanisms and the types of phase transition are not the same, but they share a central word: <strong>phase transition</strong>. The constituents of the system have not changed, yet the macroscopic state can change qualitatively near a phase boundary or a critical point.</p>
+
+    <p>The charm of the Ising model is that it captures this change with remarkably few rules. Each lattice site carries only a plus sign or a minus sign, and neighboring sites interact through a simple energy. Once the number of sites is large enough, however, order, disorder, critical fluctuations, and self-similarity across scales all begin to emerge.</p>
+
+    <blockquote class="essay-pullquote">
+      <p>It is not a miniature copy of a real magnet, but a minimal skeleton for thinking about collective phenomena.</p>
+    </blockquote>
+
+    <aside class="essay-note">
+      <strong>Writing note.</strong> The historical thread of this essay was first inspired by a popular article from Westlake University, reposted in <a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">this Zhihu discussion</a>. I keep the motif of the “hardest summation,” but I have rechecked the historical facts and the mathematical statements. The essay follows the theoretical line: exact solutions, high-low temperature duality, scale and conformal structures, rigorous probabilistic methods, interface geometry, long-range interactions, and disordered systems, with one simulated interface figure and two interactive experiments for intuition.
+    </aside>
+
+    <h2 id="model">1. From the Curie temperature to Ising's lattice</h2>
+
+    <p>In 1895, Pierre Curie systematically studied how magnetism varies with temperature. When a ferromagnetic material is heated above a certain critical temperature, spontaneous magnetization disappears; this temperature is now called the <strong>Curie temperature</strong>. A natural question follows: what rules among a huge number of microscopic magnetic moments can produce such a sharp macroscopic change?</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-portrait">
+      <img src="{{ site.baseurl }}/assets/img/pierre-curie.jpg?v=1" width="280" height="396" alt="Black-and-white portrait of Pierre Curie" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>Pierre Curie</strong> · 1859–1906</span>
+        <span class="essay-figure-credit">Image: Nobel Foundation / <a href="https://commons.wikimedia.org/wiki/File:PierreCurie.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (public domain)</span>
+      </figcaption>
+    </figure>
+
+    <p>In 1920, Wilhelm Lenz proposed a bold simplification. Imagine the material as a regular lattice, and keep only two possible states at each site:</p>
+
+    <div class="essay-equation" aria-label="Each spin is either minus one or plus one">
+      \[
+        \sigma_i \in \{-1,+1\}.
+      \]
+    </div>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-lattice">
+      <img src="{{ site.baseurl }}/assets/img/ising-model-lattice.png?v=1" width="529" height="378" alt="Ising spin configuration on a square lattice, with red up arrows and blue down arrows" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>An Ising spin configuration on the square lattice</strong> · red up arrows represent (+1), blue down arrows represent (-1), and gray lines connect nearest-neighbor sites</span>
+        <span class="essay-figure-credit">Drawing: Yuguang XIAO</span>
+      </figcaption>
+    </figure>
+
+    <p>This binary variable should not be read as a full quantum description of an electron spin. It records only the two possible orientations of a local magnetic moment along a chosen axis. For the classical nearest-neighbor ferromagnetic model, the Hamiltonian is</p>
+
+    <div class="essay-equation" aria-label="Ising Hamiltonian with nearest-neighbor interactions and an external field">
+      \[
+        H(\sigma)
+        =-J\sum_{\langle i,j\rangle}\sigma_i\sigma_j
+        -h\sum_i\sigma_i,
+        \qquad J&gt;0.
+      \]
+    </div>
+
+    <p>The first term favors neighboring spins that point in the same direction, while the second term describes an external magnetic field. Temperature enters through the Gibbs-Boltzmann weight: at low temperature, low-energy configurations are favored; at high temperature, many more disordered configurations become visible.</p>
+
+    <div class="essay-sequence" aria-label="Three steps from microscopic rules to macroscopic quantities">
+      <section class="essay-step">
+        <span class="essay-step-index">1</span>
+        <div>
+          <h3>Write down the energy</h3>
+          <p>Neighboring spins lower the energy when they agree; the energy pushes the system toward large aligned regions.</p>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div>
+          <h3>Let temperature choose</h3>
+          <p>The probability of observing a configuration \(\sigma\) is</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              \mathbb P_T(\sigma)=\frac{1}{Z(T)}
+              \exp\!\left(-\frac{H(\sigma)}{k_B T}\right).
+            \]
+          </div>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div>
+          <h3>Sum over all configurations</h3>
+          <p>The normalizing constant \(Z(T)\) is the partition function:</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              Z(T)=\sum_{\sigma}
+              \exp\!\left(-\frac{H(\sigma)}{k_B T}\right).
+            \]
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p>The difficulty appears immediately: a system with \(N\) sites has \(2^N\) configurations. Even with only 256 sites, the number of states is about \(1.16\times10^{77}\). We cannot enumerate them one by one, yet we still want to read from this combinatorial explosion macroscopic quantities such as magnetization, specific heat, and correlation length.</p>
+
+    <h2 id="dimensions">2. The failure in one dimension, the answer in two</h2>
+
+    <p>Wilhelm Lenz gave this problem to his student Ernst Ising. In his 1924 doctoral thesis, Ising solved the one-dimensional nearest-neighbor model, and published the result in 1925: at any positive temperature, the one-dimensional short-range chain has no spontaneous magnetization.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-wide">
+      <img src="{{ site.baseurl }}/assets/img/lenz-ising.webp?v=1" width="733" height="414" alt="Black-and-white portraits of Wilhelm Lenz and Ernst Ising side by side" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main">Left: <strong>Wilhelm Lenz</strong>; right: <strong>Ernst Ising</strong></span>
+        <span class="essay-figure-credit">Image: Westlake University popular article reposted in <a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">this Zhihu discussion</a></span>
+      </figcaption>
+    </figure>
+
+    <p>The reason can be understood in terms of domain walls. To flip a segment of up spins into down spins, one only pays a finite energy cost at the two ends; but the longer the chain is, the more places a domain wall can appear. As soon as the temperature is positive, entropy eventually wins, domain walls proliferate, and long-range order is broken into pieces.</p>
+
+    <p>In two dimensions, the situation is completely different. In 1944, Lars Onsager rigorously computed the free energy of the square-lattice Ising model at zero external field and proved that it does have a nonzero critical temperature. For isotropic coupling, the critical point satisfies</p>
+
+    <div class="essay-equation">
+      \[
+        \sinh\!\left(\frac{2J}{k_B T_c}\right)=1,
+        \qquad
+        \frac{k_B T_c}{J}
+        =\frac{2}{\ln(1+\sqrt 2)}
+        \approx 2.269.
+      \]
+    </div>
+
+    <p>Below \(T_c\), macroscopic magnetization can remain stable; above \(T_c\), thermal fluctuations destroy this order. In 1952, Chen-Ning Yang gave the exact formula for the spontaneous magnetization of the two-dimensional square-lattice model:</p>
+
+    <div class="essay-equation">
+      \[
+        m(T)=
+        \left[1-\sinh^{-4}\!\left(\frac{2J}{k_B T}\right)\right]^{1/8},
+        \qquad T&lt;T_c.
+      \]
+    </div>
+
+    <p>The exponent \(1/8\) is not decorative. It describes how the magnetization disappears near the critical point, and it is one of the most famous critical exponents of the two-dimensional Ising universality class.</p>
+
+    <h2 id="duality">3. Kramers-Wannier duality</h2>
+
+    <p>Before Onsager obtained the exact two-dimensional solution, Hendrik Kramers and Gregory Wannier discovered in 1941 that the high-temperature expansion of the square-lattice model can be matched with a low-temperature expansion on the dual lattice. If one further assumes that the phase transition point is unique, this correspondence determines the critical temperature.</p>
+
+    <p>This is <strong>high-low temperature duality</strong>. Consider the partition function \(Z(\beta)\) at zero external field, where \(\beta = 1/(k_B T)\):</p>
+
+    <div class="essay-equation">
+      \[
+        Z(\beta)=\sum_{\sigma}
+        \exp\!\left(\beta J\sum_{\langle i,j\rangle}\sigma_i\sigma_j\right).
+      \]
+    </div>
+
+    <p>At low temperature, where \(\beta\) is large, the system fluctuates mainly around the fully aligned ground states. Flipping a region of spins creates an island, whose boundary forms a <strong>contour</strong> or domain wall. Summing over such contours gives an expansion in the low-temperature parameter \(e^{-2\beta J}\).</p>
+
+    <p>At high temperature, where \(\beta\) is small, one expands the Boltzmann factor using \(e^{\beta J\sigma_i\sigma_j}=\cosh(\beta J)\bigl(1+\sigma_i\sigma_j\tanh(\beta J)\bigr)\). After summing over spins, only those terms survive in which each vertex has an even number of incident selected edges. These are configurations made of closed loops. Thus the high-temperature partition function can be written as a loop expansion in \(\tanh(\beta J)\).</p>
+
+    <p>The dual lattice of the square lattice is again a square lattice. Interpreting the closed loops in the high-temperature expansion as low-temperature contours on the dual lattice gives the relation between temperature parameters:</p>
+
+    <div class="essay-equation">
+      \[
+        e^{-2\beta J}=\tanh(\beta^*J).
+      \]
+    </div>
+
+    <p>Here we ignore multiplicative factors depending on the lattice size and the boundary conditions; with periodic boundary conditions, one must also handle different topological sectors. If the system has only one transition point, then it must be a fixed point of the duality transformation, namely \(\beta_c=\beta_c^*\). Therefore</p>
+
+    <div class="essay-equation">
+      \[
+        \sinh\!\left(\frac{2J}{k_B T_c}\right)=1.
+      \]
+    </div>
+
+    <p>This agrees with the exact result Onsager later obtained. High-low temperature duality links two apparently opposite regimes, and became an early model for many duality ideas in modern statistical physics and quantum field theory.</p>
+
+    <h2 id="universality">4. From exact solutions to universality</h2>
+
+    <p>The formulas of Onsager and Yang answer key questions about the two-dimensional model exactly, but they also push a broader question to the front: why do systems with very different microscopic details display the same power laws near criticality?</p>
+
+    <p>Far from the critical temperature, correlations between spins usually extend only over a finite distance. Near \(T_c\), the correlation length grows rapidly: small clusters sit inside larger clusters, and these larger clusters sit inside even larger structures. The system no longer prefers a characteristic scale, and after zooming in one sees statistically similar textures.</p>
+
+    <p>This is <strong>universality</strong>. Critical behavior is often not determined by the lattice spacing or the chemical details of the atoms, but mainly by spatial dimension, symmetry, and the range of interaction. The magnetization exponent \(\beta=1/8\), the correlation-length exponent \(\nu=1\), and the susceptibility exponent \(\gamma=7/4\) together describe a whole two-dimensional Ising universality class.</p>
+
+    <p>In the 1970s, Kenneth G. Wilson developed the renormalization group into a systematic framework for understanding universality. Looking at the system at larger and larger scales is equivalent to integrating out short-scale degrees of freedom. Parameters from different microscopic models may flow to the same fixed point, while only a few relevant directions determine the critical exponents. Universality is therefore not just an empirical coincidence, but a consequence of common structure under changes of scale.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-duo essay-figure-duo-portrait">
+      <div class="essay-figure-duo-grid">
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/lars-onsager.jpg?v=1" width="269" height="370" alt="Black-and-white portrait of Lars Onsager" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Lars Onsager</span>
+        </div>
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/kenneth-g-wilson.jpg?v=1" width="162" height="227" alt="Black-and-white portrait of Kenneth G. Wilson" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Kenneth G. Wilson</span>
+        </div>
+      </div>
+      <figcaption>
+        <span class="essay-figure-caption-main">Left: <strong>Lars Onsager</strong>, who found the exact solution of the two-dimensional square-lattice Ising model and received the <a href="https://www.nobelprize.org/prizes/chemistry/1968/onsager/facts/" target="_blank" rel="noopener noreferrer">1968 Nobel Prize in Chemistry</a>; right: <strong>Kenneth G. Wilson</strong>, founder of the renormalization-group framework for critical phenomena and recipient of the <a href="https://www.nobelprize.org/prizes/physics/1982/summary/" target="_blank" rel="noopener noreferrer">1982 Nobel Prize in Physics</a></span>
+        <span class="essay-figure-credit">Images: left, Nobel Foundation / <a href="https://commons.wikimedia.org/wiki/File:Onsager_1968.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (public domain); right, Nobel Foundation / <a href="https://commons.wikimedia.org/wiki/File:Kenneth_G._Wilson.121.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+      </figcaption>
+    </figure>
+
+    <aside class="essay-note">
+      <strong>About the prizes.</strong> The prizes mentioned in the captions provide historical context; they do not always refer directly to the specific results discussed nearby. For example, Onsager received the 1968 Nobel Prize in Chemistry for his reciprocal relations in irreversible processes, not for the exact solution of the two-dimensional Ising model.
+    </aside>
+
+    <aside class="essay-note">
+      <strong>Do not mix dimensions.</strong> The exponents of the two-dimensional Ising model belong to two-dimensional systems. The liquid-gas critical point of an ordinary fluid usually lies in the <strong>three-dimensional</strong> Ising universality class, so its critical exponents are not \(1/8\) or \(7/4\). Universality means that systems in the same class share exponents, not that all phase transitions use the same numbers.
+    </aside>
+
+    <h2 id="rigorous-probability">5. Conformal structure and rigorous probability</h2>
+
+    <p>In two dimensions, scale invariance has a stronger form. In 1970, Alexander Polyakov proposed using conformal symmetry to understand critical fluctuations. A conformal transformation can change lengths locally while preserving angles, providing a sharper mathematical language for the statement that a critical point has no characteristic length scale.</p>
+
+    <p>Later, work by Stanislav Smirnov, Dmitry Chelkak, and others rigorously established conformally invariant scaling limits for several observables and interfaces of the planar critical Ising model. Another rigorous route studies high-dimensional phase transitions through random currents, correlation inequalities, and random geometry. Hugo Duminil-Copin received the 2022 Fields Medal for solving long-standing problems in the probabilistic theory of phase transitions in statistical physics, especially in dimensions three and four.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-duo essay-figure-duo-landscape">
+      <div class="essay-figure-duo-grid">
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/stanislav-smirnov.jpg?v=1" width="400" height="300" alt="Outdoor portrait of Stanislav Smirnov" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Stanislav Smirnov</span>
+        </div>
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/hugo-duminil-copin.jpg?v=1" width="701" height="436" alt="Hugo Duminil-Copin standing in front of a whiteboard covered with mathematical formulas" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Hugo Duminil-Copin</span>
+        </div>
+      </div>
+      <figcaption>
+        <span class="essay-figure-caption-main">Left: <strong>Stanislav Smirnov</strong>, 2010 Fields Medalist; right: <strong>Hugo Duminil-Copin</strong>, 2022 Fields Medalist. Their work represents two major directions in the rigorous probability theory of critical models</span>
+        <span class="essay-figure-credit">Images: Wikipedia / Wikimedia Commons. Left, Renate Schmid / Oberwolfach Photo Collection, see <a href="https://commons.wikimedia.org/wiki/File:Stanislav_Smirnov2.jpg" target="_blank" rel="noopener noreferrer">Stanislav Smirnov image page</a> (CC BY-SA 2.0 DE); right, see <a href="https://en.wikipedia.org/wiki/Hugo_Duminil-Copin" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin entry</a></span>
+      </figcaption>
+    </figure>
+
+    <h2 id="three-dimensional">6. Three dimensions: rigorous results and the modern conformal bootstrap</h2>
+
+    <p>The question “has the three-dimensional Ising model been solved?” easily becomes a linguistic trap. As of 2026, we still do not know a closed formula comparable to Onsager's two-dimensional solution that gives the free energy and correlation functions of the three-dimensional nearest-neighbor model. But rigorous statistical mechanics asks not only whether one can write down such a formula; it also asks whether phase transitions exist, when Gibbs states are unique, and how order parameters behave at criticality.</p>
+
+    <div class="essay-sequence" aria-label="Three rigorous-theory levels for the three-dimensional Ising model">
+      <section class="essay-step">
+        <span class="essay-step-index">1</span>
+        <div>
+          <h3>Existence of a phase transition</h3>
+          <p>Rudolf Peierls's contour argument shows that in nearest-neighbor ferromagnetic models in two and higher dimensions, multiple Gibbs states can exist at sufficiently low temperature. Cluster expansions and uniqueness arguments give the opposite picture at high temperature, thereby establishing the existence of a phase transition in a rigorous sense.</p>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div>
+          <h3>Continuity at the critical point</h3>
+          <p>Michael Aizenman, Hugo Duminil-Copin, and Vladas Sidoravicius used the random-current representation in infinite volume to prove that the spontaneous magnetization of the three-dimensional nearest-neighbor Ising model vanishes continuously at the critical point. In other words, the transition is continuous:</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              \lim_{\beta\downarrow\beta_c}m^*(\beta)=0.
+            \]
+          </div>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div>
+          <h3>Analytic problems that remain open</h3>
+          <p>The three-dimensional model still lacks a complete closed form for the free energy, arbitrary-distance correlation functions, and a rigorous derivation of a critical structure comparable to the two-dimensional case. One central difficulty is to derive conformal invariance of the three-dimensional scaling limit directly from the lattice model.</p>
+        </div>
+      </section>
+    </div>
+
+    <p>The random-current representation rewrites spin correlation functions as sums over integer-valued currents with parity constraints, connecting analytic questions to connectivity in random geometry. This is one reason the Ising model remains so fertile: the same model keeps generating new conversations between algebra, combinatorics, probability, and analysis.</p>
+
+    <h3>The conformal bootstrap in the continuum limit</h3>
+
+    <p>Rigorous probabilistic methods start from the lattice model. The modern <strong>conformal bootstrap</strong> takes a different route. It assumes that the continuum limit of the three-dimensional Ising critical point is described by a unitary conformal field theory. Instead of enumerating lattice configurations or running Monte Carlo simulations, it studies the consistency conditions that local operators and their correlation functions must satisfy.</p>
+
+    <p>The same four-point function can be expanded by first fusing the first two operators, or by choosing a different fusion channel. Associativity of the operator product expansion requires the two expansions to agree exactly; this is <strong>crossing symmetry</strong>. For the four-point function of the spin operator \(\sigma\), the constraint can be schematically written as</p>
+
+    <div class="essay-equation">
+      \[
+        \sum_{\mathcal O}
+        \lambda_{\sigma\sigma\mathcal O}^{2}
+        F_{\Delta,\ell}(u,v)=0.
+      \]
+    </div>
+
+    <p>Here \(u,v\) are conformal cross-ratios, \(\Delta\) and \(\ell\) are respectively the scaling dimension and spin of an intermediate operator, and \(\lambda_{\sigma\sigma\mathcal O}\) is an OPE coefficient. Unitarity further imposes \(\lambda^2\geq0\) and lower bounds on operator dimensions. Thus an apparently infinite-dimensional field-theoretic problem can be turned into convex optimization and semidefinite programming: if a proposed set of critical data cannot satisfy these constraints, it is excluded.</p>
+
+    <p>In 2008, Riccardo Rattazzi, Slava Rychkov, and collaborators made the numerical conformal bootstrap in higher dimensions computationally effective. In 2012, Sheer El-Showk and collaborators identified the characteristic kink associated with the three-dimensional Ising model on the boundary of the allowed region. In 2015, David Simmons-Duffin's semidefinite-programming solver SDPB greatly improved the computational power of the method. In 2016, Filip Kos and collaborators combined several correlators involving the spin operator \(\sigma\) and the energy operator \(\varepsilon\), shrinking the allowed region to the famous <strong>Ising island</strong>.</p>
+
+    <p>A representative high-precision result from this mixed-correlator analysis is</p>
+
+    <div class="essay-equation">
+      \[
+        \Delta_\sigma\approx0.5181489,
+        \qquad
+        \Delta_\varepsilon\approx1.412625.
+      \]
+    </div>
+
+    <p>These are scaling dimensions, not anomalous dimensions themselves. In three dimensions, they can be converted into the usual critical exponents as follows:</p>
+
+    <div class="essay-equation">
+      \[
+        \begin{aligned}
+          \eta&=2\Delta_\sigma-(d-2)\approx0.03630,\\
+          \nu&=\frac{1}{d-\Delta_\varepsilon}\approx0.62997,
+          \qquad d=3.
+        \end{aligned}
+      \]
+    </div>
+
+    <p>The conformal bootstrap does not give a closed analytic formula like the two-dimensional free energy. It shows another way in which a model can be “solved”: using only symmetry, associativity, and unitarity in the continuum limit, one obtains extremely strong and systematically improvable numerical constraints on three-dimensional critical data.</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>Three levels should be kept separate.</strong> Rigorous theorems on the lattice, high-precision numerical bounds under conformal-field-theory assumptions, and a complete closed-form solution like the two-dimensional one are not the same thing. The three-dimensional Ising model has deep rigorous results and remarkably precise critical data, but it still lacks a complete analytic formula comparable to Onsager's two-dimensional solution.
+    </aside>
+
+    <h2 id="interface-models">7. From spins to heights: the emergence of interface models</h2>
+
+    <p>In the phase-coexistence region at zero external field and \(0&lt;T&lt;T_c\), the plus phase and the minus phase may coexist. To study the geometry of the boundary between them, one shifts attention from the spins themselves to the <strong>phase interface</strong>.</p>
+
+    <p>In a finite box, one can impose boundary conditions named after Roland Dobrushin: for instance, fix \(+1\) spins above a reference plane and \(-1\) spins below it, forcing the system to form an interface across the middle. Such boundary conditions turn the questions “where is the interface?” and “how does it fluctuate?” into rigorous mathematical problems.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-medium">
+      <img src="{{ site.baseurl }}/assets/img/interface_2d_beffara.png?v=1" width="500" height="500" alt="Two-dimensional random interface between red plus spins and blue minus spins under Dobrushin boundary conditions" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>A two-dimensional Ising interface under Dobrushin boundary conditions</strong> · the red upper region represents \(+1\) spins, the blue lower region represents \(-1\) spins, and a random horizontal interface forms between the two phases</span>
+        <span class="essay-figure-credit">Image: Vincent Beffara, provided by Yuguang XIAO</span>
+      </figcaption>
+    </figure>
+
+    <p>At sufficiently low temperature, droplets created by thermal fluctuations and overhangs of the interface are suppressed. If one further adopts a <strong>no-overhang approximation</strong>, so that the interface has a single height at each horizontal position, it can be described by an integer-valued height function \(h_x\). The original spin model then leads to an effective class of <strong>height models</strong>.</p>
+
+    <p>The most common effective interface energy depends only on height differences between neighboring positions:</p>
+
+    <div class="essay-equation">
+      \[
+        H_p(h)=K\sum_{\langle x,y\rangle}|h_x-h_y|^p,
+        \qquad K&gt;0.
+      \]
+    </div>
+
+    <ul>
+      <li>when \(p=1\), one obtains the classical <strong>solid-on-solid (SOS) model</strong>;</li>
+      <li>when \(p=2\), one obtains the <strong>discrete Gaussian model</strong>.</li>
+    </ul>
+
+    <p>This correspondence is a low-temperature effective description, not an unconditional identity for the original Ising interface. It discards droplets, overhangs, and more complicated local topology, while retaining the most important degrees of freedom for studying large-scale interface fluctuations.</p>
+
+    <h3>Dimension and interface fluctuations</h3>
+
+    <p><strong>The interface of the two-dimensional Ising model corresponds to a one-dimensional height function.</strong> The associated one-dimensional height model has random-walk-type fluctuations at any positive effective temperature. Translating back to the Ising model, this interface picture applies in the coexistence region \(0&lt;T&lt;T_c\). In the height model, the typical behavior is</p>
+
+    <div class="essay-equation">
+      \[
+        \bigl\langle(h_x-h_0)^2\bigr\rangle\asymp |x|.
+      \]
+    </div>
+
+    <p>The interface width grows with the observation scale. In this sense, the two-dimensional Ising interface is <strong>rough</strong>, rather than localized near a fixed straight line.</p>
+
+    <p><strong>The interface of the three-dimensional Ising model corresponds to a two-dimensional random surface.</strong> In 1972, Roland Dobrushin proved that at sufficiently low temperature, the interface is localized near the reference plane, and the typical height fluctuation at a fixed position remains of order \(O(1)\). This is low-temperature <strong>rigidity</strong> in a rigorous sense.</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>Theorems and theoretical expectations should be distinguished.</strong> For the original three-dimensional nearest-neighbor Ising model, it is widely expected that there exists a roughening temperature \(T_R&lt;T_c\): above \(T_R\), the interface enters a rough phase and its height variance grows like \(\log |x|\). In two-dimensional effective height models, roughening can be described through a Coulomb gas or sine-Gordon duality as a Kosterlitz-Thouless mechanism. Promoting this picture to a rigorous equivalence for the original three-dimensional nearest-neighbor Ising model is still beyond what has been proved.
+    </aside>
+
+    <p>The passage from spins to heights turns a phase-transition problem into a problem about random surfaces. It is also a basic starting point for the study of crystal surfaces, wetting transitions, and the shapes of interfaces under long-range interactions. Once the distance scale of the interaction is changed, we enter the world of long-range Ising models.</p>
+
+    <aside class="essay-note">
+      <strong>Interactive experiments.</strong>
+      <ul>
+        <li><a href="{{ site.baseurl }}/misc/lab/ising-interface/"><strong>Ising Random Interface</strong></a>: observe how a two-dimensional Dobrushin interface fluctuates as temperature and boundary conditions vary.</li>
+        <li><a href="{{ site.baseurl }}/misc/lab/ising-3d/"><strong>3D Ising Random Interface</strong></a>: observe phase coexistence and a random interface inside a three-dimensional lattice box.</li>
+      </ul>
+    </aside>
+
+    <h2 id="long-range">8. Long-range interactions: an exception in one dimension</h2>
+
+    <p>The nearest-neighbor model assumes that each spin interacts directly only with nearby sites. This is an extraordinarily successful idealization, but in many systems the influence extends over longer distances. The long-range Ising model therefore replaces the Hamiltonian by</p>
+
+    <div class="essay-equation">
+      \[
+        H(\sigma)=-\sum_{i&lt;j}J_{ij}\sigma_i\sigma_j,
+        \qquad
+        J_{ij}\asymp\frac{1}{|i-j|^{d+\sigma}},
+        \quad \sigma&gt;0,
+      \]
+    </div>
+
+    <p>Here \(d\) is the spatial dimension, and the parameter \(\sigma\) controls how fast the interaction decays. The smaller \(\sigma\) is, the stronger the influence of distant spins; the larger \(\sigma\) is, the closer the model becomes to a short-range one.</p>
+
+    <p>The most striking change occurs in one dimension. If the coupling is written as \(J(r)\sim r^{-\alpha}\), Freeman Dyson proved in 1969 the existence of a low-temperature phase transition for \(1&lt;\alpha&lt;2\). The endpoint \(\alpha=2\) is subtler: in the same year, David J. Thouless analyzed long-range order and anomalous critical behavior for inverse-square coupling; only in 1982 did Jürg Fröhlich and Thomas Spencer rigorously establish the phase transition at this endpoint. In the notation above, these cases correspond to \(0&lt;\sigma&lt;1\) and \(\sigma=1\), respectively. Long-range bonds therefore change the conclusion that one-dimensional short-range models have no positive-temperature phase transition.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-portrait">
+      <img src="{{ site.baseurl }}/assets/img/david-thouless.jpg?v=1" width="500" height="732" alt="Black-and-white portrait of David J. Thouless" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>David J. Thouless</strong> · <a href="https://www.nobelprize.org/prizes/physics/2016/summary/" target="_blank" rel="noopener noreferrer">2016 Nobel Prize in Physics</a></span>
+        <span class="essay-figure-credit">Image: Mary Levin / University of Washington, via <a href="https://commons.wikimedia.org/wiki/File:DavidThouless_1995_UW.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+      </figcaption>
+    </figure>
+
+    <p>As \(\sigma\) varies, the model passes through regimes of mean-field behavior, genuinely long-range critical behavior, and crossover toward the short-range universality class. How the critical exponents change, and how long-range interactions modify interface geometry, remain active research directions and are among the topics I have recently been studying.</p>
+
+    <h2 id="disorder-and-learning">9. Disorder and learning: two branches of Ising-type energy</h2>
+
+    <p>Once one leaves the uniform nearest-neighbor ferromagnet, the Ising-type energy can remain, but the meaning of the couplings changes. Two particularly important theoretical branches lead to disordered systems and neural networks.</p>
+
+    <p><strong>The first branch is spin glasses.</strong> If the couplings \(J_{ij}\) are no longer all positive, but have random signs, local preferences conflict with each other, producing frustration and an extremely complex structure of Gibbs states. Giorgio Parisi constructed the replica-symmetry-breaking scheme for the mean-field model introduced by David Sherrington and Scott Kirkpatrick, using a hierarchical order parameter to describe this disorder. Later work by Francesco Guerra and Michel Talagrand provided a rigorous mathematical foundation for Parisi's formula for the free energy.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-medium">
+      <img src="{{ site.baseurl }}/assets/img/giorgio-parisi.jpg?v=1" width="500" height="337" alt="Color portrait of Giorgio Parisi" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>Giorgio Parisi</strong> · <a href="https://www.nobelprize.org/prizes/physics/2021/summary/" target="_blank" rel="noopener noreferrer">2021 Nobel Prize in Physics</a></span>
+        <span class="essay-figure-credit">Image: Lorenza Parisi / <a href="https://commons.wikimedia.org/wiki/File:Parisi_giorgio.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+      </figcaption>
+    </figure>
+
+    <p><strong>The second branch leads to neural networks.</strong> The Hopfield network, named after John J. Hopfield, writes the states of binary neurons as an Ising-type energy function; stable memories correspond to attractors in the energy landscape. The Boltzmann machine developed by Geoffrey Hinton and collaborators incorporates thermal fluctuations into this framework, allowing the network to represent data by a Gibbs distribution. Both lines of work borrow the central language of statistical physics: how many simple variables form global structure through interaction.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-duo">
+      <div class="essay-figure-duo-grid">
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/john-hopfield.jpg?v=1" width="389" height="524" alt="Color portrait of John J. Hopfield" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">John J. Hopfield</span>
+        </div>
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/geoffrey-hinton.jpg?v=1" width="960" height="1344" alt="Color portrait of Geoffrey Hinton" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Geoffrey Hinton</span>
+        </div>
+      </div>
+      <figcaption>
+        <span class="essay-figure-caption-main">Joint recipients of the <a href="https://www.nobelprize.org/prizes/physics/2024/summary/" target="_blank" rel="noopener noreferrer">2024 Nobel Prize in Physics</a></span>
+        <span class="essay-figure-credit">Images: left, bhadeshia123 / <a href="https://commons.wikimedia.org/wiki/File:John_Hopfield_2016.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY 3.0); right, Christopher Michel / <a href="https://commons.wikimedia.org/wiki/File:Geoffrey_Hinton_in_2026.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+      </figcaption>
+    </figure>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>The same energy form does not mean the same physical system.</strong> Writing neurons as \(\pm1\) variables does not mean that the brain “is a magnet.” What is shared is the mathematical structure: binary variables, pairwise couplings, and Gibbs weights. Each field still has mechanisms that cannot be ignored.
+    </aside>
+
+    <h2 id="conclusion">Conclusion: simple rules, complex worlds</h2>
+
+    <p>The Ising model is not a “theory of everything.” Its enduring value lies in offering an exceptionally clear way of thinking: how do local interactions compete with randomness? How can small rules at finite scale create macroscopic order in the thermodynamic limit? Why do distant locations suddenly become correlated near a critical point?</p>
+
+    <p>The figures in this story are not merely a list of prizes. Pierre Curie identified the macroscopic phenomenon that required explanation. Wilhelm Lenz and Ernst Ising compressed the problem into a lattice model. Hendrik Kramers and Gregory Wannier revealed the duality between high and low temperatures. Lars Onsager solved the two-dimensional model exactly. Kenneth G. Wilson explained universality through changes of scale.</p>
+
+    <p>Later, Roland Dobrushin turned interface rigidity into a rigorous problem, while Stanislav Smirnov and Hugo Duminil-Copin advanced the probabilistic theory of critical models. David J. Thouless, Giorgio Parisi, John J. Hopfield, and Geoffrey Hinton showed how interaction range, disorder, and energy landscapes can carry the same kind of mathematical structure into new questions.</p>
+
+    <p>From the failure of the one-dimensional chain, to the exact two-dimensional solution, high-low temperature duality, conformal invariance, the three-dimensional conformal bootstrap, random interfaces, long-range interactions, and disordered systems, this model made only of plus and minus signs has already travelled through a century. It keeps reminding us that microscopic rules can be almost naive in their simplicity, while the worlds they generate need not be simple at all.</p>
+
+    <section class="essay-references" aria-labelledby="essay-references-title">
+      <h2 id="essay-references-title">References and Further Reading</h2>
+      <ol>
+        <li><a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">Zhihu: Research progress on analytic solutions of the three-dimensional Ising model?</a> (historical narrative and Lenz-Ising image source)</li>
+        <li><a href="https://www.hs-augsburg.de/~harsch/anglica/Chronology/20thC/Ising/isi_fm00.html" target="_blank" rel="noopener noreferrer">Ernst Ising, <em>Contribution to the Theory of Ferromagnetism</em> (1925, English translation)</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.60.252" target="_blank" rel="noopener noreferrer">Hendrik A. Kramers and Gregory H. Wannier, <em>Statistics of the Two-Dimensional Ferromagnet. I</em> (1941)</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.65.117" target="_blank" rel="noopener noreferrer">Lars Onsager, <em>Crystal Statistics I</em> (1944)</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.85.808" target="_blank" rel="noopener noreferrer">Chen-Ning Yang, <em>The Spontaneous Magnetization of a Two-Dimensional Ising Model</em> (1952)</a></li>
+        <li><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.4.3174" target="_blank" rel="noopener noreferrer">Kenneth G. Wilson, <em>Renormalization Group and Critical Phenomena I</em> (1971)</a></li>
+        <li><a href="https://inspirehep.net/literature/61162" target="_blank" rel="noopener noreferrer">Alexander M. Polyakov, <em>Conformal Symmetry of Critical Fluctuations</em> (1970)</a></li>
+        <li><a href="https://arxiv.org/abs/0807.0004" target="_blank" rel="noopener noreferrer">Riccardo Rattazzi, Vyacheslav S. Rychkov, Erik Tonni, and Alessandro Vichi, <em>Bounding Scalar Operator Dimensions in 4D CFT</em> (2008)</a></li>
+        <li><a href="https://arxiv.org/abs/1203.6064" target="_blank" rel="noopener noreferrer">Sheer El-Showk, Miguel F. Paulos, David Poland, Slava Rychkov, David Simmons-Duffin, and Alessandro Vichi, <em>Solving the 3D Ising Model with the Conformal Bootstrap</em> (2012)</a></li>
+        <li><a href="https://arxiv.org/abs/1502.02033" target="_blank" rel="noopener noreferrer">David Simmons-Duffin, <em>A Semidefinite Program Solver for the Conformal Bootstrap</em> (2015)</a></li>
+        <li><a href="https://arxiv.org/abs/1603.04436" target="_blank" rel="noopener noreferrer">Filip Kos, David Poland, David Simmons-Duffin, and Alessandro Vichi, <em>Precision Islands in the Ising and O(N) Models</em> (2016)</a></li>
+        <li><a href="https://arxiv.org/abs/1109.1549" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin and Stanislav Smirnov, <em>Conformal Invariance of Lattice Models</em> (2012)</a></li>
+        <li><a href="https://doi.org/10.1007/s00220-014-2093-y" target="_blank" rel="noopener noreferrer">Michael Aizenman, Hugo Duminil-Copin, and Vladas Sidoravicius, <em>Random Currents and Continuity of Ising Model's Spontaneous Magnetization</em> (2015)</a></li>
+        <li><a href="https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU_Fields22_Duminil-Copin_citation.pdf" target="_blank" rel="noopener noreferrer">International Mathematical Union, Hugo Duminil-Copin 2022 Fields Medal citation</a></li>
+        <li><a href="https://link.springer.com/article/10.1007/BF01645099" target="_blank" rel="noopener noreferrer">Roland L. Dobrushin, <em>Gibbs State Describing the Coexistence of Phases for a Three-Dimensional Ising Model</em> (1972)</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRevLett.38.993" target="_blank" rel="noopener noreferrer">Henk van Beijeren, <em>Interface Sharpness in the Ising Model</em> (1977)</a></li>
+        <li><a href="https://doi.org/10.1088/0022-3719/6/7/010" target="_blank" rel="noopener noreferrer">J. Michael Kosterlitz and David J. Thouless, <em>Ordering, Metastability and Phase Transitions in Two-Dimensional Systems</em> (1973)</a></li>
+        <li><a href="https://arxiv.org/abs/1901.04980" target="_blank" rel="noopener noreferrer">Reza Gheissari and Eyal Lubetzky, <em>Maximum and Shape of Interfaces in 3D Ising Crystals</em> (2020)</a></li>
+        <li><a href="https://doi.org/10.1007/BF01645907" target="_blank" rel="noopener noreferrer">Freeman J. Dyson, <em>Existence of a Phase-Transition in a One-Dimensional Ising Ferromagnet</em> (1969)</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRev.187.732" target="_blank" rel="noopener noreferrer">David J. Thouless, <em>Long-Range Order in One-Dimensional Ising Systems</em> (1969)</a></li>
+        <li><a href="https://www.projecteuclid.org/journals/communications-in-mathematical-physics/volume-84/issue-1/The-phase-transition-in-the-one-dimensional-Ising-model-with/cmp/1103921047.pdf" target="_blank" rel="noopener noreferrer">Jürg Fröhlich and Thomas Spencer, <em>The Phase Transition in the One-Dimensional Ising Model with 1/r² Interaction Energy</em> (1982)</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRevLett.43.1754" target="_blank" rel="noopener noreferrer">Giorgio Parisi, <em>Infinite Number of Order Parameters for Spin-Glasses</em> (1979)</a></li>
+        <li><a href="https://doi.org/10.1073/pnas.79.8.2554" target="_blank" rel="noopener noreferrer">John J. Hopfield, <em>Neural Networks and Physical Systems with Emergent Collective Computational Abilities</em> (1982)</a></li>
+        <li><a href="https://doi.org/10.1016/S0364-0213(85)80012-4" target="_blank" rel="noopener noreferrer">David H. Ackley, Geoffrey E. Hinton, and Terrence J. Sejnowski, <em>A Learning Algorithm for Boltzmann Machines</em> (1985)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=YIaGgrp1tmY" target="_blank" rel="noopener noreferrer">Jean Zinn-Justin, <em>The Ising Model: The Saga of the Critical Exponents</em></a></li>
+      </ol>
+    </section>
+  </article>
+</div>

@@ -108,6 +108,31 @@
       fr: "Contact",
       zh: "联系我",
     },
+    "essay.ising.kicker": {
+      en: "Popular exposition · Statistical mechanics",
+      fr: "Vulgarisation · mécanique statistique",
+      zh: "科普 · 统计力学",
+    },
+    "essay.ising.title": {
+      en: "From Plus and Minus Signs to Phase Transitions: A Century of the Ising Model",
+      fr: "Des signes plus et moins aux transitions de phase : un siècle du modèle d’Ising",
+      zh: "从正负号到相变：伊辛模型的一百年",
+    },
+    "essay.ising.summary": {
+      en: "How a two-state lattice model connects magnetism, critical phenomena, conformal invariance, and long-range interactions.",
+      fr: "Comment un modèle de réseau à deux états relie magnétisme, phénomènes critiques, invariance conforme et interactions à longue portée.",
+      zh: "一个只有正负两种状态的格点模型，如何连接磁性、临界现象、共形不变性与长程相互作用。",
+    },
+    "essay.ising.action": {
+      en: "Read essay",
+      fr: "Lire l’essai",
+      zh: "阅读全文",
+    },
+    "home.directions.related_essay": {
+      en: "Related essay",
+      fr: "Essai associé",
+      zh: "相关文章",
+    },
     "footer.copyright": {
       en: "© 2026 Yuguang XIAO. All rights reserved.",
       fr: "© 2026 Yuguang XIAO. Tous droits réservés.",

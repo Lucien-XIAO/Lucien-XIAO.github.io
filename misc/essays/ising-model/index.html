@@ -1,6 +1,6 @@
 ---
 title: 从正负号到相变：伊辛模型的一百年
-description: 一个只有正负两种状态的格点模型，如何连接磁性、相变、高低温对偶、三维共形自举、界面几何、严格概率与无序体系。
+description: 一个只有正负两种状态的格点模型，如何连接磁性、相变、高低温对偶、三维共形自举、界面几何、严格概率与无序体系；也是我对自己研究方向——长程伊辛模型与随机界面——的一次科普式整理。
 permalink: /misc/essays/ising-model/
 layout: page
 author_profile: true
@@ -12,9 +12,9 @@ mathjax: true
   <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essays</a>
 
   <header class="notebook-detail-hero essay-detail-hero" lang="zh-CN">
-    <p class="notebook-kicker">科普 · 统计力学</p>
+    <p class="notebook-kicker">科普 · 我的研究方向</p>
     <h1>从正负号到相变：伊辛模型的一百年</h1>
-    <p class="notebook-lede">一个只有正负两种状态的格点模型，如何连接磁性、相变、高低温对偶、三维共形自举、界面几何、严格概率与无序体系。</p>
+    <p class="notebook-lede">一个只有正负两种状态的格点模型，如何连接磁性、相变、高低温对偶、三维共形自举、界面几何、严格概率与无序体系。这也是我目前研究方向的一张地图：从经典相变理论出发，走向长程相互作用与随机界面。</p>
     <p class="essay-meta">
       <span>Yuguang XIAO（肖煜光）</span>
       <span aria-hidden="true">·</span>
@@ -22,6 +22,7 @@ mathjax: true
       <span aria-hidden="true">·</span>
       <span>约 22 分钟阅读</span>
     </p>
+    {% include ising-essay-language.html current="zh" %}
   </header>
 
   <article class="essay-article" lang="zh-CN">
@@ -29,12 +30,14 @@ mathjax: true
 
     <p>伊辛模型的迷人之处，正是它用极少的规则抓住了这种变化。每个格点上只有一个正号或负号，格点之间只有简单的相互作用；然而，当格点数量足够多时，秩序、无序、临界涨落乃至不同尺度之间的自相似都会从中出现。</p>
 
+    <p>对我而言，伊辛模型并不只是一个著名的名字。我目前的研究方向是<strong>概率论与数学统计力学</strong>：硕士阶段研究长程伊辛模型，即将开始的博士课题则围绕相界面模型展开。可以说，这篇文章既是一篇科普，也是一张我自己研究世界的地图——每一站，精确解、普适性、界面、长程作用，都对应着我正在学习、或试图向前推动一小步的问题。</p>
+
     <blockquote class="essay-pullquote">
       <p>它并不是一块真实磁铁的缩小版，而是一副关于集体现象的最小骨架。</p>
     </blockquote>
 
     <aside class="essay-note">
-      <strong>写作说明。</strong> 本文最初的历史叙事受到<a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">这个知乎问题中返朴转载的西湖大学科普文章</a>启发。这里保留了“最难的求和”这条线索，但重新核对了历史事实与数学结论。全文以理论脉络为主，重点放在精确解、高低温对偶、尺度与共形结构、严格概率方法、界面几何、长程相互作用和无序体系，并用一幅界面模拟图与两个交互实验辅助直观理解。
+      <strong>写作说明。</strong> 本文最初的历史叙事受到<a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">这个知乎问题中返朴转载的西湖大学科普文章</a>启发。这里保留了“最难的求和”这条线索，但重新核对了历史事实与数学结论。全文以理论脉络为主，重点放在精确解、高低温对偶、尺度与共形结构、严格概率方法、界面几何、长程相互作用和无序体系，并用一幅界面模拟图与两个交互实验辅助直观理解。在这次修订中，我有意让叙事向我自己的研究方向倾斜：界面几何与长程相互作用是全文的高潮，而不是尾声。
     </aside>
 
     <h2 id="model">1. 从居里温度到伊辛的格点</h2>
@@ -330,6 +333,8 @@ mathjax: true
 
     <h2 id="interface-models">7. 从自旋到高度：界面模型的涌现</h2>
 
+    <p>从这里开始，文章进入与我的研究最直接相关的部分。前面几章关心的是“秩序是否存在、何时消失”；而接下来的两章关心的是秩序之间的<strong>边界</strong>——它在哪里，长什么样，如何涨落。</p>
+
     <p>在零外场且 \(0&lt;T&lt;T_c\) 的相共存区，正相与负相可以同时出现。要研究两相之间边界的几何性质，就需要把目光从自旋本身移向<strong>相界面（phase interface）</strong>。</p>
 
     <p>在有限格点中，可以采用以 Roland Dobrushin（罗兰·多布鲁申）命名的边界条件：例如在参考平面上方固定 \(+1\) 自旋、下方固定 \(-1\) 自旋，从而迫使系统在中间形成一条贯穿区域的界面。这类边界条件把“界面在哪里、如何涨落”变成了可以严格讨论的问题。</p>
@@ -378,7 +383,7 @@ mathjax: true
       <strong>定理与理论预期需要区分。</strong> 对原始三维近邻伊辛模型，人们普遍预期存在某个 \(T_R&lt;T_c\) 的粗糙化温度：高于 \(T_R\) 后，界面进入粗糙相，其高度方差按 \(\log |x|\) 增长。在二维有效高度模型中，粗糙化可以通过 Coulomb gas（库仑气体）或 sine-Gordon（正弦–戈登）对偶表述为 Kosterlitz–Thouless（科斯特利茨–索利斯，KT）机制；把这一结论直接提升为原始三维近邻伊辛模型的严格等价，目前仍超出了已证明的范围。
     </aside>
 
-    <p>从自旋到高度的过渡，把相变问题转化为随机曲面的几何问题，也是研究晶体表面、浸润转变以及长程作用下界面形状的基本出发点。接下来改变相互作用的距离尺度，就会进入长程伊辛模型的世界。</p>
+    <p>从自旋到高度的过渡，把相变问题转化为随机曲面的几何问题，也是研究晶体表面、浸润转变以及长程作用下界面形状的基本出发点。随机界面也正是我博士课题<em>《数学统计力学中的界面模型》</em>（Modèles d'Interfaces en Mécanique Statistique Mathématique）的核心对象。接下来改变相互作用的距离尺度，就会进入长程伊辛模型的世界——也就是我硕士阶段实习研究的模型。</p>
 
     <aside class="essay-note">
       <strong>交互实验。</strong>
@@ -389,6 +394,8 @@ mathjax: true
     </aside>
 
     <h2 id="long-range">8. 长程相互作用：一维的例外</h2>
+
+    <p>如果说界面模型追问的是“秩序之间的边界长什么样”，那么长程相互作用追问的则是“影响究竟能传多远”。后者正是我硕士阶段研究的对象，也是这两章成为全文高潮的原因。</p>
 
     <p>近邻模型假设每个自旋只与身边的格点直接作用。这是一个极其成功的理想化，但许多体系的影响会跨越更远的距离。长程伊辛模型因此把哈密顿量改写为</p>
 
@@ -413,7 +420,13 @@ mathjax: true
       </figcaption>
     </figure>
 
-    <p>随着 \(\sigma\) 改变，模型会在不同区间呈现平均场行为、真正的长程临界行为以及向短程普适类的交叉。临界指数如何变化、长程作用如何改变界面几何，至今仍是活跃的研究方向，也是我近期学习和研究的主题之一。</p>
+    <p>随着 \(\sigma\) 改变，模型会在不同区间呈现平均场行为、真正的长程临界行为以及向短程普适类的交叉。临界指数如何变化、长程作用如何改变界面几何，至今仍是活跃的研究方向。</p>
+
+    <p>这也正是我硕士实习中占据中心位置的问题。2026 年春，我在巴黎东克雷泰伊大学（<a href="https://www.u-pec.fr/" target="_blank" rel="noopener noreferrer">UPEC</a>）的 <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a> 实验室跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> 研究长程伊辛模型：从一维 Dyson（戴森）模型出发，理解耦合衰减速度如何决定相变的存在与性质，并尝试弄清楚界面问题在这一框架下应当如何提出。这段实习让我从一个“学习这个模型的人”，慢慢变成一个“研究这个模型的人”，也将直接衔接我在 2026 年秋开始的博士课题。</p>
+
+    <aside class="essay-note">
+      <strong>关于我的研究。</strong> 我的博士课题名为 <em>Modèles d'Interfaces en Mécanique Statistique Mathématique</em>（数学统计力学中的界面模型），由 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> 指导、<a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> 共同指导，将于 2026 年 10 月在 <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a> 开始，受 <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC 博士院（ED 532）</a>奖学金资助。如果说这篇文章是一张地图，那么地图的边缘——界面几何与长程相互作用相交的地方——就是我未来几年工作的地方。
+    </aside>
 
     <h2 id="disorder-and-learning">9. 无序与学习：伊辛型能量的两条支流</h2>
 
@@ -461,6 +474,8 @@ mathjax: true
     <p>此后，Roland Dobrushin（罗兰·多布鲁申）把界面刚性变成严格问题，Stanislav Smirnov（斯坦尼斯拉夫·斯米尔诺夫）与 Hugo Duminil-Copin（雨果·迪米尼-科潘）推进临界模型的概率理论；David J. Thouless（戴维·J·索利斯）、Giorgio Parisi（乔治·帕里西）、John J. Hopfield（约翰·J·霍普菲尔德）与 Geoffrey Hinton（杰弗里·辛顿）又展示了相互作用范围、无序和能量景观如何把同一类数学结构带向新的问题。</p>
 
     <p>从一维链上的失败，到二维精确解、高低温对偶、共形不变性、三维共形自举、随机界面、长程相互作用与无序体系，这个只有正负号的模型已经走过一个世纪。它不断提醒我们：微观规则可以简单得近乎朴素，而由它们共同生成的世界，未必简单。</p>
+
+    <p>一百年前，Ernst Ising（恩斯特·伊辛）一度以为自己证明了这个模型的“失败”；一百年后，它依然是催生新问题最快的模型之一。对我个人而言，写作这篇文章的过程也是一次整理：把课堂上的定理、实习中的问题和博士课题的蓝图放进同一个坐标系。接下来的几年里，我希望能为这个故事写下属于自己的、哪怕很小的一段。</p>
 
     <section class="essay-references" aria-labelledby="essay-references-title">
       <h2 id="essay-references-title">参考与延伸阅读</h2>

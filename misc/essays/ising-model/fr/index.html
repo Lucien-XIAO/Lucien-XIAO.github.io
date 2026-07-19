@@ -1,0 +1,497 @@
+---
+title: "Des signes plus et moins aux transitions de phase : un siècle du modèle d’Ising"
+description: "Comment un modèle de réseau à deux états locaux relie magnétisme, transitions de phase, dualité haute-basse température, bootstrap conforme, géométrie des interfaces, probabilité rigoureuse et systèmes désordonnés."
+permalink: /misc/essays/ising-model/fr/
+layout: page
+author_profile: true
+lang: fr
+mathjax: true
+---
+
+<div class="notebook-page notebook-detail-page essay-page">
+  <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essais</a>
+
+  <header class="notebook-detail-hero essay-detail-hero" lang="fr">
+    <p class="notebook-kicker">Vulgarisation · mécanique statistique</p>
+    <h1>Des signes plus et moins aux transitions de phase : un siècle du modèle d’Ising</h1>
+    <p class="notebook-lede">Comment un modèle de réseau à deux états locaux relie magnétisme, transitions de phase, dualité haute-basse température, bootstrap conforme, géométrie des interfaces, probabilité rigoureuse et systèmes désordonnés.</p>
+    <p class="essay-meta">
+      <span>Yuguang XIAO</span>
+      <span aria-hidden="true">·</span>
+      <time datetime="2026-07-16">16 juillet 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>environ 22 min de lecture</span>
+    </p>
+    {% include ising-essay-language.html current="fr" %}
+  </header>
+
+  <article class="essay-article" lang="fr">
+    <p class="essay-opening">Pourquoi un aimant chauffé perd-il son aimantation spontanée au voisinage de la température de Curie ? Pourquoi l’eau, à pression atmosphérique standard, subit-elle une transition liquide-gaz autour de 100°C ? Les mécanismes microscopiques et les types de transition ne sont pas les mêmes, mais ces phénomènes partagent un mot central : <strong>transition de phase</strong>. Les constituants du système ne changent pas, et pourtant l’état macroscopique peut changer qualitativement près d’une frontière de phases ou d’un point critique.</p>
+
+    <p>Ce qui rend le modèle d’Ising fascinant, c’est qu’il saisit ce type de changement avec très peu de règles. Chaque site du réseau ne porte qu’un signe plus ou un signe moins, et les sites voisins interagissent par une énergie simple. Mais lorsque le nombre de sites devient très grand, l’ordre, le désordre, les fluctuations critiques et l’auto-similarité entre échelles apparaissent naturellement.</p>
+
+    <blockquote class="essay-pullquote">
+      <p>Ce n’est pas une miniature d’un aimant réel, mais une ossature minimale pour penser les phénomènes collectifs.</p>
+    </blockquote>
+
+    <aside class="essay-note">
+      <strong>Note de rédaction.</strong> Le fil historique de cet essai a d’abord été inspiré par un article de vulgarisation de Westlake University, repris dans <a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">cette discussion Zhihu</a>. Je conserve le motif de la « somme la plus difficile », mais j’ai revérifié les faits historiques et les énoncés mathématiques. Le texte suit surtout la ligne théorique : solutions exactes, dualité haute-basse température, structures d’échelle et structures conformes, méthodes probabilistes rigoureuses, géométrie des interfaces, interactions à longue portée et systèmes désordonnés, avec une figure d’interface simulée et deux expériences interactives pour soutenir l’intuition.
+    </aside>
+
+    <h2 id="model">1. De la température de Curie au réseau d’Ising</h2>
+
+    <p>En 1895, Pierre Curie étudie systématiquement la variation du magnétisme avec la température. Lorsqu’un matériau ferromagnétique est chauffé au-dessus d’une certaine température critique, son aimantation spontanée disparaît ; cette température est aujourd’hui appelée <strong>température de Curie</strong>. Une question naturelle se pose alors : quelles règles, entre une immense quantité de moments magnétiques microscopiques, peuvent produire une transition macroscopique aussi nette ?</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-portrait">
+      <img src="{{ site.baseurl }}/assets/img/pierre-curie.jpg?v=1" width="280" height="396" alt="Portrait en noir et blanc de Pierre Curie" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>Pierre Curie</strong> · 1859–1906</span>
+        <span class="essay-figure-credit">Image : Nobel Foundation / <a href="https://commons.wikimedia.org/wiki/File:PierreCurie.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (domaine public)</span>
+      </figcaption>
+    </figure>
+
+    <p>En 1920, Wilhelm Lenz propose une simplification audacieuse. On imagine le matériau comme un réseau régulier, et l’on ne garde que deux états possibles à chaque site :</p>
+
+    <div class="essay-equation" aria-label="Chaque spin vaut moins un ou plus un">
+      \[
+        \sigma_i \in \{-1,+1\}.
+      \]
+    </div>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-lattice">
+      <img src="{{ site.baseurl }}/assets/img/ising-model-lattice.png?v=1" width="529" height="378" alt="Configuration de spins d’Ising sur un réseau carré, avec des flèches rouges vers le haut et des flèches bleues vers le bas" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>Configuration de spins d’Ising sur le réseau carré</strong> · les flèches rouges vers le haut représentent (+1), les flèches bleues vers le bas représentent (-1), et les lignes grises relient les sites plus proches voisins</span>
+        <span class="essay-figure-credit">Dessin : Yuguang XIAO</span>
+      </figcaption>
+    </figure>
+
+    <p>Cette variable binaire ne doit pas être comprise comme une description quantique complète du spin électronique. Elle enregistre seulement deux orientations possibles d’un moment magnétique local le long d’un axe choisi. Pour le modèle ferromagnétique classique à plus proches voisins, l’hamiltonien s’écrit</p>
+
+    <div class="essay-equation" aria-label="Hamiltonien d’Ising avec interactions de plus proches voisins et champ externe">
+      \[
+        H(\sigma)
+        =-J\sum_{\langle i,j\rangle}\sigma_i\sigma_j
+        -h\sum_i\sigma_i,
+        \qquad J&gt;0.
+      \]
+    </div>
+
+    <p>Le premier terme favorise les spins voisins orientés dans le même sens ; le second décrit un champ magnétique extérieur. La température entre dans le modèle par le poids de Gibbs-Boltzmann : à basse température, les configurations de basse énergie sont favorisées ; à haute température, davantage de configurations désordonnées deviennent visibles.</p>
+
+    <div class="essay-sequence" aria-label="Trois étapes des règles microscopiques aux quantités macroscopiques">
+      <section class="essay-step">
+        <span class="essay-step-index">1</span>
+        <div>
+          <h3>Écrire l’énergie</h3>
+          <p>Lorsque deux spins voisins sont en accord, l’énergie diminue ; l’énergie pousse donc le système à former de grands domaines alignés.</p>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div>
+          <h3>Laisser la température choisir</h3>
+          <p>La probabilité d’observer une configuration \(\sigma\) est</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              \mathbb P_T(\sigma)=\frac{1}{Z(T)}
+              \exp\!\left(-\frac{H(\sigma)}{k_B T}\right).
+            \]
+          </div>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div>
+          <h3>Sommer sur toutes les configurations</h3>
+          <p>La constante de normalisation \(Z(T)\) est la fonction de partition :</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              Z(T)=\sum_{\sigma}
+              \exp\!\left(-\frac{H(\sigma)}{k_B T}\right).
+            \]
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p>La difficulté apparaît immédiatement : un système à \(N\) sites possède \(2^N\) configurations. Même avec seulement 256 sites, le nombre d’états est de l’ordre de \(1.16\times10^{77}\). Nous ne pouvons pas les énumérer une par une, mais nous voulons tout de même extraire de cette explosion combinatoire des quantités macroscopiques comme l’aimantation, la chaleur spécifique ou la longueur de corrélation.</p>
+
+    <h2 id="dimensions">2. L’échec en dimension un, la réponse en dimension deux</h2>
+
+    <p>Wilhelm Lenz confie ce problème à son étudiant Ernst Ising. Dans sa thèse de 1924, Ising résout le modèle à plus proches voisins en dimension un, puis publie le résultat en 1925 : à toute température strictement positive, la chaîne unidimensionnelle à courte portée n’a pas d’aimantation spontanée.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-wide">
+      <img src="{{ site.baseurl }}/assets/img/lenz-ising.webp?v=1" width="733" height="414" alt="Portraits en noir et blanc de Wilhelm Lenz et Ernst Ising côte à côte" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main">À gauche : <strong>Wilhelm Lenz</strong> ; à droite : <strong>Ernst Ising</strong></span>
+        <span class="essay-figure-credit">Image : article de vulgarisation de Westlake University repris dans <a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">cette discussion Zhihu</a></span>
+      </figcaption>
+    </figure>
+
+    <p>On peut comprendre la raison à partir des parois de domaine. Pour retourner un segment de spins vers le haut en spins vers le bas, il suffit de payer un coût d’énergie fini aux deux extrémités ; mais plus la chaîne est longue, plus une paroi de domaine peut apparaître à de nombreux endroits. Dès que la température est positive, l’entropie finit par l’emporter, les parois prolifèrent, et l’ordre à longue distance se morcelle.</p>
+
+    <p>En dimension deux, la situation est totalement différente. En 1944, Lars Onsager calcule rigoureusement l’énergie libre du modèle d’Ising sur le réseau carré à champ externe nul, et montre qu’il existe bien une température critique non nulle. Pour un couplage isotrope, le point critique satisfait</p>
+
+    <div class="essay-equation">
+      \[
+        \sinh\!\left(\frac{2J}{k_B T_c}\right)=1,
+        \qquad
+        \frac{k_B T_c}{J}
+        =\frac{2}{\ln(1+\sqrt 2)}
+        \approx 2.269.
+      \]
+    </div>
+
+    <p>En dessous de \(T_c\), une aimantation macroscopique peut rester stable ; au-dessus de \(T_c\), les fluctuations thermiques détruisent cet ordre. En 1952, Chen-Ning Yang donne la formule exacte de l’aimantation spontanée du modèle carré bidimensionnel :</p>
+
+    <div class="essay-equation">
+      \[
+        m(T)=
+        \left[1-\sinh^{-4}\!\left(\frac{2J}{k_B T}\right)\right]^{1/8},
+        \qquad T&lt;T_c.
+      \]
+    </div>
+
+    <p>L’exposant \(1/8\) n’est pas un nombre décoratif. Il décrit la manière dont l’aimantation s’annule au voisinage du point critique, et constitue l’un des exposants critiques les plus célèbres de la classe d’universalité d’Ising en dimension deux.</p>
+
+    <h2 id="duality">3. Dualité de Kramers-Wannier</h2>
+
+    <p>Avant la solution exacte d’Onsager, Hendrik Kramers et Gregory Wannier découvrent en 1941 que le développement haute température du modèle carré peut être mis en correspondance avec un développement basse température sur le réseau dual. Si l’on suppose en plus que le point de transition est unique, cette correspondance permet de déterminer la température critique.</p>
+
+    <p>C’est la <strong>dualité haute-basse température</strong>. Considérons la fonction de partition \(Z(\beta)\) à champ externe nul, avec \(\beta = 1/(k_B T)\) :</p>
+
+    <div class="essay-equation">
+      \[
+        Z(\beta)=\sum_{\sigma}
+        \exp\!\left(\beta J\sum_{\langle i,j\rangle}\sigma_i\sigma_j\right).
+      \]
+    </div>
+
+    <p>Dans le régime de basse température, où \(\beta\) est grand, le système fluctue surtout autour des états fondamentaux complètement alignés. Retourner une région de spins crée une île, dont le bord forme une <strong>paroi de domaine</strong> ou un contour. En sommant sur ces contours, on obtient un développement en le paramètre basse température \(e^{-2\beta J}\).</p>
+
+    <p>Dans le régime de haute température, où \(\beta\) est petit, on développe le facteur de Boltzmann à l’aide de l’identité \(e^{\beta J\sigma_i\sigma_j}=\cosh(\beta J)\bigl(1+\sigma_i\sigma_j\tanh(\beta J)\bigr)\). Après sommation sur les spins, seuls subsistent les termes pour lesquels chaque sommet possède un nombre pair d’arêtes sélectionnées. Ce sont des configurations formées de boucles fermées. La fonction de partition haute température s’écrit donc comme un développement en boucles en \(\tanh(\beta J)\).</p>
+
+    <p>Le réseau dual du réseau carré est encore un réseau carré. En interprétant les boucles fermées du développement haute température comme des contours basse température sur le réseau dual, on obtient la relation entre les paramètres de température :</p>
+
+    <div class="essay-equation">
+      \[
+        e^{-2\beta J}=\tanh(\beta^*J).
+      \]
+    </div>
+
+    <p>On omet ici des facteurs multiplicatifs dépendant de la taille du réseau et des conditions au bord ; avec des conditions périodiques, il faut aussi tenir compte de différents secteurs topologiques. Si le système n’a qu’un seul point de transition, celui-ci doit être un point fixe de la transformation de dualité, c’est-à-dire \(\beta_c=\beta_c^*\). Ainsi</p>
+
+    <div class="essay-equation">
+      \[
+        \sinh\!\left(\frac{2J}{k_B T_c}\right)=1.
+      \]
+    </div>
+
+    <p>Cela coïncide avec le résultat exact qu’Onsager obtiendra ensuite. La dualité haute-basse température relie deux régimes qui semblent opposés, et devient l’un des premiers exemples des idées de dualité qui traversent aujourd’hui la physique statistique et la théorie quantique des champs.</p>
+
+    <h2 id="universality">4. Des solutions exactes à l’universalité</h2>
+
+    <p>Les formules d’Onsager et de Yang répondent exactement à des questions clés du modèle bidimensionnel, mais elles mettent aussi au premier plan une interrogation plus générale : pourquoi des systèmes dont les détails microscopiques sont très différents manifestent-ils les mêmes lois de puissance près du point critique ?</p>
+
+    <p>Loin de la température critique, les corrélations entre spins ne s’étendent généralement que sur une distance finie. Près de \(T_c\), la longueur de corrélation croît rapidement : de petits amas sont contenus dans de plus grands amas, eux-mêmes contenus dans des structures encore plus grandes. Le système ne privilégie plus d’échelle caractéristique, et un zoom révèle des textures statistiquement similaires.</p>
+
+    <p>C’est l’<strong>universalité</strong>. Le comportement critique dépend souvent moins de l’espacement du réseau ou des détails chimiques des atomes que de la dimension spatiale, de la symétrie et de la portée des interactions. Dans le modèle d’Ising bidimensionnel, l’exposant d’aimantation \(\beta=1/8\), l’exposant de longueur de corrélation \(\nu=1\) et l’exposant de susceptibilité \(\gamma=7/4\) décrivent ensemble toute une classe d’universalité.</p>
+
+    <p>Dans les années 1970, Kenneth G. Wilson développe le groupe de renormalisation comme cadre systématique pour comprendre l’universalité. Observer le système à des échelles de plus en plus grandes revient à éliminer progressivement les degrés de liberté de courte échelle. Les paramètres de modèles microscopiques différents peuvent converger vers le même point fixe, tandis que quelques directions pertinentes déterminent les exposants critiques. L’universalité n’est donc plus seulement une coïncidence empirique, mais la conséquence d’une structure commune sous les changements d’échelle.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-duo essay-figure-duo-portrait">
+      <div class="essay-figure-duo-grid">
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/lars-onsager.jpg?v=1" width="269" height="370" alt="Portrait en noir et blanc de Lars Onsager" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Lars Onsager</span>
+        </div>
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/kenneth-g-wilson.jpg?v=1" width="162" height="227" alt="Portrait en noir et blanc de Kenneth G. Wilson" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Kenneth G. Wilson</span>
+        </div>
+      </div>
+      <figcaption>
+        <span class="essay-figure-caption-main">À gauche : <strong>Lars Onsager</strong>, auteur de la solution exacte du modèle d’Ising bidimensionnel sur réseau carré et lauréat du <a href="https://www.nobelprize.org/prizes/chemistry/1968/onsager/facts/" target="_blank" rel="noopener noreferrer">prix Nobel de chimie 1968</a> ; à droite : <strong>Kenneth G. Wilson</strong>, fondateur du cadre du groupe de renormalisation pour les phénomènes critiques et lauréat du <a href="https://www.nobelprize.org/prizes/physics/1982/summary/" target="_blank" rel="noopener noreferrer">prix Nobel de physique 1982</a></span>
+        <span class="essay-figure-credit">Images : à gauche, Nobel Foundation / <a href="https://commons.wikimedia.org/wiki/File:Onsager_1968.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (domaine public) ; à droite, Nobel Foundation / <a href="https://commons.wikimedia.org/wiki/File:Kenneth_G._Wilson.121.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+      </figcaption>
+    </figure>
+
+    <aside class="essay-note">
+      <strong>À propos des prix.</strong> Les prix mentionnés dans les légendes donnent un contexte historique ; ils ne renvoient pas toujours directement aux résultats discutés juste à côté. Par exemple, Onsager reçoit le prix Nobel de chimie 1968 pour ses relations de réciprocité dans les processus irréversibles, et non pour la solution exacte du modèle d’Ising en dimension deux.
+    </aside>
+
+    <aside class="essay-note">
+      <strong>Ne pas mélanger les dimensions.</strong> Les exposants du modèle d’Ising bidimensionnel appartiennent aux systèmes bidimensionnels. Le point critique liquide-gaz d’un fluide ordinaire relève généralement de la classe d’universalité d’Ising en <strong>dimension trois</strong>, et ses exposants critiques ne sont donc pas \(1/8\) ou \(7/4\). L’universalité signifie que les systèmes d’une même classe partagent des exposants, non que toutes les transitions de phase utilisent les mêmes nombres.
+    </aside>
+
+    <h2 id="rigorous-probability">5. Structure conforme et probabilité rigoureuse</h2>
+
+    <p>En dimension deux, l’invariance d’échelle possède une forme plus forte. En 1970, Alexander Polyakov propose d’utiliser la symétrie conforme pour comprendre les fluctuations critiques. Une transformation conforme peut modifier localement les longueurs tout en préservant les angles, ce qui donne un langage mathématique plus fin à l’idée qu’un point critique n’a pas d’échelle caractéristique.</p>
+
+    <p>Par la suite, les travaux de Stanislav Smirnov, Dmitry Chelkak et d’autres établissent rigoureusement des limites d’échelle conformément invariantes pour plusieurs observables et interfaces du modèle d’Ising critique planaire. Une autre voie rigoureuse étudie les transitions de phase en dimension supérieure à travers les courants aléatoires, les inégalités de corrélation et la géométrie aléatoire. Hugo Duminil-Copin reçoit la médaille Fields 2022 pour avoir résolu des problèmes de longue date dans la théorie probabiliste des transitions de phase en physique statistique, en particulier en dimensions trois et quatre.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-duo essay-figure-duo-landscape">
+      <div class="essay-figure-duo-grid">
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/stanislav-smirnov.jpg?v=1" width="400" height="300" alt="Portrait extérieur de Stanislav Smirnov" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Stanislav Smirnov</span>
+        </div>
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/hugo-duminil-copin.jpg?v=1" width="701" height="436" alt="Hugo Duminil-Copin debout devant un tableau rempli de formules mathématiques" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Hugo Duminil-Copin</span>
+        </div>
+      </div>
+      <figcaption>
+        <span class="essay-figure-caption-main">À gauche : <strong>Stanislav Smirnov</strong>, médaille Fields 2010 ; à droite : <strong>Hugo Duminil-Copin</strong>, médaille Fields 2022. Leurs travaux représentent deux directions majeures dans la théorie probabiliste rigoureuse des modèles critiques</span>
+        <span class="essay-figure-credit">Images : Wikipedia / Wikimedia Commons. À gauche, Renate Schmid / Oberwolfach Photo Collection, voir <a href="https://commons.wikimedia.org/wiki/File:Stanislav_Smirnov2.jpg" target="_blank" rel="noopener noreferrer">la page de l’image de Stanislav Smirnov</a> (CC BY-SA 2.0 DE) ; à droite, voir <a href="https://en.wikipedia.org/wiki/Hugo_Duminil-Copin" target="_blank" rel="noopener noreferrer">l’entrée Hugo Duminil-Copin</a></span>
+      </figcaption>
+    </figure>
+
+    <h2 id="three-dimensional">6. Dimension trois : résultats rigoureux et bootstrap conforme moderne</h2>
+
+    <p>La question « le modèle d’Ising en dimension trois est-il résolu ? » devient facilement un piège de langage. En 2026, on ne connaît toujours pas de formule fermée comparable à la solution bidimensionnelle d’Onsager, capable de donner l’énergie libre et les fonctions de corrélation du modèle à plus proches voisins en dimension trois. Mais la mécanique statistique rigoureuse ne demande pas seulement si l’on peut écrire une formule ; elle demande aussi si les transitions de phase existent, quand les états de Gibbs sont uniques, et comment les paramètres d’ordre se comportent au point critique.</p>
+
+    <div class="essay-sequence" aria-label="Trois niveaux de théorie rigoureuse pour le modèle d’Ising tridimensionnel">
+      <section class="essay-step">
+        <span class="essay-step-index">1</span>
+        <div>
+          <h3>Existence d’une transition de phase</h3>
+          <p>L’argument de contours de Rudolf Peierls montre que, dans les modèles ferromagnétiques à plus proches voisins en dimension deux et plus, plusieurs états de Gibbs peuvent exister à température suffisamment basse. Les développements en amas et les arguments d’unicité donnent l’image opposée à haute température, ce qui établit rigoureusement l’existence d’une transition de phase.</p>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div>
+          <h3>Continuité au point critique</h3>
+          <p>Michael Aizenman, Hugo Duminil-Copin et Vladas Sidoravicius utilisent la représentation par courants aléatoires en volume infini pour démontrer que l’aimantation spontanée du modèle d’Ising tridimensionnel à plus proches voisins s’annule continûment au point critique. Autrement dit, la transition est continue :</p>
+          <div class="essay-equation essay-equation-compact">
+            \[
+              \lim_{\beta\downarrow\beta_c}m^*(\beta)=0.
+            \]
+          </div>
+        </div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div>
+          <h3>Questions analytiques encore ouvertes</h3>
+          <p>Le modèle tridimensionnel ne possède toujours pas de forme fermée complète pour l’énergie libre, les fonctions de corrélation à distance arbitraire, ni une dérivation rigoureuse d’une structure critique comparable au cas bidimensionnel. L’une des difficultés centrales est de faire émerger rigoureusement l’invariance conforme de la limite d’échelle tridimensionnelle à partir du modèle sur réseau.</p>
+        </div>
+      </section>
+    </div>
+
+    <p>La représentation par courants aléatoires réécrit les fonctions de corrélation des spins comme des sommes de courants entiers soumis à des contraintes de parité, reliant ainsi les questions analytiques à la connectivité en géométrie aléatoire. C’est l’une des raisons pour lesquelles le modèle d’Ising reste si fécond : le même modèle provoque sans cesse de nouveaux dialogues entre algèbre, combinatoire, probabilité et analyse.</p>
+
+    <h3>Le bootstrap conforme dans la limite continue</h3>
+
+    <p>Les méthodes probabilistes rigoureuses partent du modèle sur réseau. Le <strong>bootstrap conforme</strong> moderne emprunte une autre voie. Il suppose que la limite continue du point critique d’Ising en dimension trois est décrite par une théorie conforme des champs unitaire. Au lieu d’énumérer les configurations du réseau ou de lancer des simulations de Monte Carlo, on étudie directement les conditions de cohérence que doivent satisfaire les opérateurs locaux et leurs fonctions de corrélation.</p>
+
+    <p>Une même fonction à quatre points peut être développée en fusionnant d’abord les deux premiers opérateurs, ou en choisissant un autre canal de fusion. L’associativité du développement en produits d’opérateurs impose que les deux développements coïncident exactement : c’est la <strong>symétrie de croisement</strong>. Pour la fonction à quatre points de l’opérateur de spin \(\sigma\), la contrainte peut s’écrire schématiquement</p>
+
+    <div class="essay-equation">
+      \[
+        \sum_{\mathcal O}
+        \lambda_{\sigma\sigma\mathcal O}^{2}
+        F_{\Delta,\ell}(u,v)=0.
+      \]
+    </div>
+
+    <p>Ici \(u,v\) sont les rapports conformes, \(\Delta\) et \(\ell\) désignent respectivement la dimension d’échelle et le spin d’un opérateur intermédiaire, et \(\lambda_{\sigma\sigma\mathcal O}\) est un coefficient d’OPE. L’unitarité impose en plus \(\lambda^2\geq0\) et des bornes inférieures sur les dimensions des opérateurs. Un problème de théorie des champs apparemment infini-dimensionnel peut donc être transformé en optimisation convexe et en programmation semi-définie : si un ensemble proposé de données critiques ne satisfait pas ces contraintes, il est exclu.</p>
+
+    <p>En 2008, Riccardo Rattazzi, Slava Rychkov et leurs collaborateurs rendent le bootstrap conforme numérique en dimension supérieure effectivement calculable. En 2012, Sheer El-Showk et ses collaborateurs identifient, sur le bord de la région autorisée, le coude caractéristique du modèle d’Ising tridimensionnel. En 2015, le solveur de programmation semi-définie SDPB développé par David Simmons-Duffin augmente fortement la puissance de calcul de la méthode. En 2016, Filip Kos et ses collaborateurs combinent plusieurs corrélateurs impliquant l’opérateur de spin \(\sigma\) et l’opérateur d’énergie \(\varepsilon\), réduisant la région autorisée à la célèbre <strong>île d’Ising</strong>.</p>
+
+    <p>Un résultat représentatif de haute précision issu de cette analyse à corrélateurs mixtes est</p>
+
+    <div class="essay-equation">
+      \[
+        \Delta_\sigma\approx0.5181489,
+        \qquad
+        \Delta_\varepsilon\approx1.412625.
+      \]
+    </div>
+
+    <p>Ce sont des dimensions d’échelle, et non directement des dimensions anomales. En dimension trois, on peut en déduire les exposants critiques usuels :</p>
+
+    <div class="essay-equation">
+      \[
+        \begin{aligned}
+          \eta&=2\Delta_\sigma-(d-2)\approx0.03630,\\
+          \nu&=\frac{1}{d-\Delta_\varepsilon}\approx0.62997,
+          \qquad d=3.
+        \end{aligned}
+      \]
+    </div>
+
+    <p>Le bootstrap conforme ne donne pas de formule analytique fermée comparable à l’énergie libre bidimensionnelle. Il montre une autre façon de « résoudre » un modèle : à partir seulement de la symétrie, de l’associativité et de l’unitarité dans la limite continue, on obtient des contraintes numériques extrêmement fortes et systématiquement améliorables sur les données critiques tridimensionnelles.</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>Trois niveaux doivent être distingués.</strong> Les théorèmes rigoureux sur le réseau, les bornes numériques de haute précision sous hypothèses de théorie conforme des champs, et une solution fermée complète comme en dimension deux ne sont pas la même chose. Le modèle d’Ising en dimension trois possède des résultats rigoureux profonds et des données critiques remarquablement précises, mais il n’a toujours pas de formule analytique complète comparable à la solution bidimensionnelle d’Onsager.
+    </aside>
+
+    <h2 id="interface-models">7. Des spins aux hauteurs : l’émergence des modèles d’interface</h2>
+
+    <p>Dans la région de coexistence des phases, à champ externe nul et \(0&lt;T&lt;T_c\), la phase plus et la phase moins peuvent apparaître simultanément. Pour étudier la géométrie de la frontière entre elles, il faut déplacer le regard des spins eux-mêmes vers l’<strong>interface de phase</strong>.</p>
+
+    <p>Dans une boîte finie, on peut imposer des conditions au bord nommées d’après Roland Dobrushin : par exemple, fixer les spins \(+1\) au-dessus d’un plan de référence et les spins \(-1\) en dessous, afin de forcer le système à former une interface au milieu. De telles conditions au bord transforment les questions « où est l’interface ? » et « comment fluctue-t-elle ? » en problèmes mathématiques rigoureux.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-medium">
+      <img src="{{ site.baseurl }}/assets/img/interface_2d_beffara.png?v=1" width="500" height="500" alt="Interface aléatoire bidimensionnelle entre spins plus rouges et spins moins bleus sous conditions au bord de Dobrushin" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>Interface d’Ising bidimensionnelle sous conditions au bord de Dobrushin</strong> · la région rouge supérieure représente les spins \(+1\), la région bleue inférieure représente les spins \(-1\), et une interface horizontale aléatoire se forme entre les deux phases</span>
+        <span class="essay-figure-credit">Image : Vincent Beffara, fournie par Yuguang XIAO</span>
+      </figcaption>
+    </figure>
+
+    <p>À température suffisamment basse, les gouttelettes créées par les fluctuations thermiques et les surplombs de l’interface sont fortement réprimés. Si l’on adopte en plus une <strong>approximation sans surplomb</strong>, dans laquelle l’interface possède une seule hauteur à chaque position horizontale, on peut la décrire par une fonction de hauteur entière \(h_x\). Le modèle de spins initial conduit alors à une classe effective de <strong>modèles de hauteur</strong>.</p>
+
+    <p>L’énergie effective d’interface la plus courante ne dépend que des différences de hauteur entre positions voisines :</p>
+
+    <div class="essay-equation">
+      \[
+        H_p(h)=K\sum_{\langle x,y\rangle}|h_x-h_y|^p,
+        \qquad K&gt;0.
+      \]
+    </div>
+
+    <ul>
+      <li>pour \(p=1\), on obtient le modèle classique <strong>solid-on-solid (SOS)</strong> ;</li>
+      <li>pour \(p=2\), on obtient le <strong>modèle gaussien discret</strong>.</li>
+    </ul>
+
+    <p>Cette correspondance est une description effective de basse température, et non une identité inconditionnelle pour l’interface d’Ising originale. Elle ignore les gouttelettes, les surplombs et des topologies locales plus complexes, tout en conservant les degrés de liberté essentiels pour l’étude des fluctuations d’interface à grande échelle.</p>
+
+    <h3>Dimension et fluctuations d’interface</h3>
+
+    <p><strong>L’interface du modèle d’Ising bidimensionnel correspond à une fonction de hauteur unidimensionnelle.</strong> Le modèle de hauteur associé présente, à toute température effective positive, des fluctuations de type marche aléatoire. Traduit dans le modèle d’Ising, ce tableau s’applique à la région de coexistence \(0&lt;T&lt;T_c\). Dans le modèle de hauteur, le comportement typique est</p>
+
+    <div class="essay-equation">
+      \[
+        \bigl\langle(h_x-h_0)^2\bigr\rangle\asymp |x|.
+      \]
+    </div>
+
+    <p>La largeur de l’interface croît avec l’échelle d’observation. En ce sens, l’interface d’Ising bidimensionnelle est <strong>rugueuse</strong>, plutôt que localisée au voisinage d’une droite fixe.</p>
+
+    <p><strong>L’interface du modèle d’Ising tridimensionnel correspond à une surface aléatoire bidimensionnelle.</strong> En 1972, Roland Dobrushin démontre qu’à température suffisamment basse, l’interface est localisée près du plan de référence, et que la fluctuation typique de hauteur en une position fixée reste d’ordre \(O(1)\). C’est la <strong>rigidité</strong> de basse température au sens rigoureux.</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>Il faut distinguer théorèmes et attentes théoriques.</strong> Pour le modèle d’Ising original tridimensionnel à plus proches voisins, on s’attend généralement à l’existence d’une température de rugosification \(T_R&lt;T_c\) : au-dessus de \(T_R\), l’interface entrerait dans une phase rugueuse, avec une variance de hauteur croissant comme \(\log |x|\). Dans les modèles de hauteur bidimensionnels effectifs, la rugosification peut être décrite par une dualité gaz de Coulomb ou sine-Gordon sous la forme d’un mécanisme de Kosterlitz-Thouless. Transformer cette image en équivalence rigoureuse pour le modèle d’Ising tridimensionnel original à plus proches voisins dépasse encore ce qui est démontré.
+    </aside>
+
+    <p>Le passage des spins aux hauteurs transforme un problème de transition de phase en problème de géométrie des surfaces aléatoires. Il constitue aussi un point de départ fondamental pour l’étude des surfaces cristallines, des transitions de mouillage et des formes d’interface sous interactions à longue portée. Dès que l’on modifie l’échelle de distance de l’interaction, on entre dans le monde des modèles d’Ising à longue portée.</p>
+
+    <aside class="essay-note">
+      <strong>Expériences interactives.</strong>
+      <ul>
+        <li><a href="{{ site.baseurl }}/misc/lab/ising-interface/"><strong>Ising Random Interface</strong></a> : observer les fluctuations d’une interface de Dobrushin bidimensionnelle lorsque la température et les conditions au bord varient.</li>
+        <li><a href="{{ site.baseurl }}/misc/lab/ising-3d/"><strong>3D Ising Random Interface</strong></a> : observer la coexistence de phases et une interface aléatoire dans une boîte de réseau tridimensionnelle.</li>
+      </ul>
+    </aside>
+
+    <h2 id="long-range">8. Interactions à longue portée : l’exception unidimensionnelle</h2>
+
+    <p>Le modèle à plus proches voisins suppose que chaque spin n’interagit directement qu’avec les sites voisins. C’est une idéalisation extrêmement efficace, mais dans de nombreux systèmes l’influence s’étend sur des distances plus grandes. Le modèle d’Ising à longue portée remplace donc l’hamiltonien par</p>
+
+    <div class="essay-equation">
+      \[
+        H(\sigma)=-\sum_{i&lt;j}J_{ij}\sigma_i\sigma_j,
+        \qquad
+        J_{ij}\asymp\frac{1}{|i-j|^{d+\sigma}},
+        \quad \sigma&gt;0,
+      \]
+    </div>
+
+    <p>Ici \(d\) est la dimension spatiale, et le paramètre \(\sigma\) contrôle la vitesse de décroissance de l’interaction. Plus \(\sigma\) est petit, plus l’influence des spins lointains est forte ; plus \(\sigma\) est grand, plus le modèle se rapproche d’un modèle à courte portée.</p>
+
+    <p>Le changement le plus frappant se produit en dimension un. Si le couplage s’écrit \(J(r)\sim r^{-\alpha}\), Freeman Dyson démontre en 1969 l’existence d’une transition de phase à basse température pour \(1&lt;\alpha&lt;2\). Le point limite \(\alpha=2\) est plus subtil : la même année, David J. Thouless analyse l’ordre à longue distance et le comportement critique anormal pour un couplage en inverse du carré ; ce n’est qu’en 1982 que Jürg Fröhlich et Thomas Spencer établissent rigoureusement la transition de phase à ce point limite. Dans la notation ci-dessus, ces cas correspondent respectivement à \(0&lt;\sigma&lt;1\) et \(\sigma=1\). Les liens à longue portée changent ainsi la conclusion selon laquelle les modèles unidimensionnels à courte portée n’ont pas de transition de phase à température positive.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-portrait">
+      <img src="{{ site.baseurl }}/assets/img/david-thouless.jpg?v=1" width="500" height="732" alt="Portrait en noir et blanc de David J. Thouless" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>David J. Thouless</strong> · <a href="https://www.nobelprize.org/prizes/physics/2016/summary/" target="_blank" rel="noopener noreferrer">prix Nobel de physique 2016</a></span>
+        <span class="essay-figure-credit">Image : Mary Levin / University of Washington, via <a href="https://commons.wikimedia.org/wiki/File:DavidThouless_1995_UW.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+      </figcaption>
+    </figure>
+
+    <p>Lorsque \(\sigma\) varie, le modèle traverse des régimes de comportement de champ moyen, de comportement critique véritablement à longue portée, puis de croisement vers la classe d’universalité à courte portée. La manière dont les exposants critiques changent, et la façon dont les interactions à longue portée modifient la géométrie des interfaces, restent des directions de recherche actives et font partie de mes thèmes récents d’étude.</p>
+
+    <h2 id="disorder-and-learning">9. Désordre et apprentissage : deux branches de l’énergie de type Ising</h2>
+
+    <p>Lorsqu’on quitte le ferromagnétique homogène à plus proches voisins, la forme énergétique de type Ising peut rester, mais le sens des couplages change. Deux branches théoriques particulièrement importantes mènent aux systèmes désordonnés et aux réseaux de neurones.</p>
+
+    <p><strong>La première branche est celle des verres de spin.</strong> Si les couplages \(J_{ij}\) ne sont plus tous positifs mais portent des signes aléatoires, les préférences locales entrent en conflit, produisant de la frustration et une structure extrêmement complexe d’états de Gibbs. Giorgio Parisi construit le schéma de brisure de symétrie de répliques pour le modèle de champ moyen proposé par David Sherrington et Scott Kirkpatrick, en utilisant un paramètre d’ordre hiérarchique pour décrire ce désordre. Les travaux ultérieurs de Francesco Guerra et Michel Talagrand donnent une base mathématique rigoureuse à la formule de Parisi pour l’énergie libre.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-medium">
+      <img src="{{ site.baseurl }}/assets/img/giorgio-parisi.jpg?v=1" width="500" height="337" alt="Portrait en couleur de Giorgio Parisi" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="essay-figure-caption-main"><strong>Giorgio Parisi</strong> · <a href="https://www.nobelprize.org/prizes/physics/2021/summary/" target="_blank" rel="noopener noreferrer">prix Nobel de physique 2021</a></span>
+        <span class="essay-figure-credit">Image : Lorenza Parisi / <a href="https://commons.wikimedia.org/wiki/File:Parisi_giorgio.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+      </figcaption>
+    </figure>
+
+    <p><strong>La seconde branche mène aux réseaux de neurones.</strong> Le réseau de Hopfield, nommé d’après John J. Hopfield, écrit les états de neurones binaires sous la forme d’une fonction d’énergie de type Ising ; les mémoires stables correspondent à des attracteurs dans le paysage d’énergie. La machine de Boltzmann développée par Geoffrey Hinton et ses collaborateurs incorpore les fluctuations thermiques dans ce cadre, permettant au réseau de représenter les données par une distribution de Gibbs. Ces deux lignes de travaux empruntent le langage central de la physique statistique : comment de nombreuses variables simples forment une structure globale par leurs interactions.</p>
+
+    <figure class="essay-hero-figure essay-inline-figure essay-figure-duo">
+      <div class="essay-figure-duo-grid">
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/john-hopfield.jpg?v=1" width="389" height="524" alt="Portrait en couleur de John J. Hopfield" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">John J. Hopfield</span>
+        </div>
+        <div>
+          <img src="{{ site.baseurl }}/assets/img/geoffrey-hinton.jpg?v=1" width="960" height="1344" alt="Portrait en couleur de Geoffrey Hinton" loading="lazy" decoding="async" />
+          <span class="essay-figure-duo-label">Geoffrey Hinton</span>
+        </div>
+      </div>
+      <figcaption>
+        <span class="essay-figure-caption-main">Lauréats conjoints du <a href="https://www.nobelprize.org/prizes/physics/2024/summary/" target="_blank" rel="noopener noreferrer">prix Nobel de physique 2024</a></span>
+        <span class="essay-figure-credit">Images : à gauche, bhadeshia123 / <a href="https://commons.wikimedia.org/wiki/File:John_Hopfield_2016.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY 3.0) ; à droite, Christopher Michel / <a href="https://commons.wikimedia.org/wiki/File:Geoffrey_Hinton_in_2026.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+      </figcaption>
+    </figure>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>Une même forme d’énergie ne signifie pas un même système physique.</strong> Écrire les neurones comme des variables \(\pm1\) ne signifie pas que le cerveau « est un aimant ». Ce qui est partagé, c’est la structure mathématique : variables binaires, couplages par paires et poids de Gibbs. Chaque domaine conserve toutefois des mécanismes propres qu’on ne peut pas supprimer.
+    </aside>
+
+    <h2 id="conclusion">Conclusion : règles simples, mondes complexes</h2>
+
+    <p>Le modèle d’Ising n’est pas une « théorie de tout ». Sa force durable est d’offrir une manière extrêmement claire de penser : comment les interactions locales entrent-elles en compétition avec l’aléa ? Comment de petites règles à échelle finie produisent-elles un ordre macroscopique dans la limite thermodynamique ? Pourquoi des positions lointaines deviennent-elles soudain corrélées près d’un point critique ?</p>
+
+    <p>Les personnages de cette histoire ne sont pas une simple suite de prix. Pierre Curie identifie le phénomène macroscopique qu’il faut expliquer. Wilhelm Lenz et Ernst Ising condensent le problème en un modèle sur réseau. Hendrik Kramers et Gregory Wannier révèlent la dualité entre hautes et basses températures. Lars Onsager donne la solution exacte en dimension deux. Kenneth G. Wilson explique l’universalité par les changements d’échelle.</p>
+
+    <p>Ensuite, Roland Dobrushin transforme la rigidité des interfaces en problème rigoureux, tandis que Stanislav Smirnov et Hugo Duminil-Copin font avancer la théorie probabiliste des modèles critiques. David J. Thouless, Giorgio Parisi, John J. Hopfield et Geoffrey Hinton montrent comment la portée des interactions, le désordre et les paysages d’énergie peuvent conduire la même famille de structures mathématiques vers de nouvelles questions.</p>
+
+    <p>De l’échec de la chaîne unidimensionnelle à la solution exacte bidimensionnelle, de la dualité haute-basse température à l’invariance conforme, du bootstrap conforme tridimensionnel aux interfaces aléatoires, aux interactions à longue portée et aux systèmes désordonnés, ce modèle fait seulement de signes plus et moins a déjà traversé un siècle. Il nous rappelle sans cesse que des règles microscopiques peuvent être presque naïves par leur simplicité, tandis que les mondes qu’elles engendrent ne le sont pas nécessairement.</p>
+
+    <section class="essay-references" aria-labelledby="essay-references-title">
+      <h2 id="essay-references-title">Références et lectures complémentaires</h2>
+      <ol>
+        <li><a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">Zhihu : progrès de recherche sur les solutions analytiques du modèle d’Ising tridimensionnel ?</a> (fil historique et source de l’image Lenz-Ising)</li>
+        <li><a href="https://www.hs-augsburg.de/~harsch/anglica/Chronology/20thC/Ising/isi_fm00.html" target="_blank" rel="noopener noreferrer">Ernst Ising, <em>Contribution to the Theory of Ferromagnetism</em> (1925, traduction anglaise)</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.60.252" target="_blank" rel="noopener noreferrer">Hendrik A. Kramers et Gregory H. Wannier, <em>Statistics of the Two-Dimensional Ferromagnet. I</em> (1941)</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.65.117" target="_blank" rel="noopener noreferrer">Lars Onsager, <em>Crystal Statistics I</em> (1944)</a></li>
+        <li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.85.808" target="_blank" rel="noopener noreferrer">Chen-Ning Yang, <em>The Spontaneous Magnetization of a Two-Dimensional Ising Model</em> (1952)</a></li>
+        <li><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.4.3174" target="_blank" rel="noopener noreferrer">Kenneth G. Wilson, <em>Renormalization Group and Critical Phenomena I</em> (1971)</a></li>
+        <li><a href="https://inspirehep.net/literature/61162" target="_blank" rel="noopener noreferrer">Alexander M. Polyakov, <em>Conformal Symmetry of Critical Fluctuations</em> (1970)</a></li>
+        <li><a href="https://arxiv.org/abs/0807.0004" target="_blank" rel="noopener noreferrer">Riccardo Rattazzi, Vyacheslav S. Rychkov, Erik Tonni et Alessandro Vichi, <em>Bounding Scalar Operator Dimensions in 4D CFT</em> (2008)</a></li>
+        <li><a href="https://arxiv.org/abs/1203.6064" target="_blank" rel="noopener noreferrer">Sheer El-Showk, Miguel F. Paulos, David Poland, Slava Rychkov, David Simmons-Duffin et Alessandro Vichi, <em>Solving the 3D Ising Model with the Conformal Bootstrap</em> (2012)</a></li>
+        <li><a href="https://arxiv.org/abs/1502.02033" target="_blank" rel="noopener noreferrer">David Simmons-Duffin, <em>A Semidefinite Program Solver for the Conformal Bootstrap</em> (2015)</a></li>
+        <li><a href="https://arxiv.org/abs/1603.04436" target="_blank" rel="noopener noreferrer">Filip Kos, David Poland, David Simmons-Duffin et Alessandro Vichi, <em>Precision Islands in the Ising and O(N) Models</em> (2016)</a></li>
+        <li><a href="https://arxiv.org/abs/1109.1549" target="_blank" rel="noopener noreferrer">Hugo Duminil-Copin et Stanislav Smirnov, <em>Conformal Invariance of Lattice Models</em> (2012)</a></li>
+        <li><a href="https://doi.org/10.1007/s00220-014-2093-y" target="_blank" rel="noopener noreferrer">Michael Aizenman, Hugo Duminil-Copin et Vladas Sidoravicius, <em>Random Currents and Continuity of Ising Model's Spontaneous Magnetization</em> (2015)</a></li>
+        <li><a href="https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU_Fields22_Duminil-Copin_citation.pdf" target="_blank" rel="noopener noreferrer">International Mathematical Union, citation de la médaille Fields 2022 de Hugo Duminil-Copin</a></li>
+        <li><a href="https://link.springer.com/article/10.1007/BF01645099" target="_blank" rel="noopener noreferrer">Roland L. Dobrushin, <em>Gibbs State Describing the Coexistence of Phases for a Three-Dimensional Ising Model</em> (1972)</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRevLett.38.993" target="_blank" rel="noopener noreferrer">Henk van Beijeren, <em>Interface Sharpness in the Ising Model</em> (1977)</a></li>
+        <li><a href="https://doi.org/10.1088/0022-3719/6/7/010" target="_blank" rel="noopener noreferrer">J. Michael Kosterlitz et David J. Thouless, <em>Ordering, Metastability and Phase Transitions in Two-Dimensional Systems</em> (1973)</a></li>
+        <li><a href="https://arxiv.org/abs/1901.04980" target="_blank" rel="noopener noreferrer">Reza Gheissari et Eyal Lubetzky, <em>Maximum and Shape of Interfaces in 3D Ising Crystals</em> (2020)</a></li>
+        <li><a href="https://doi.org/10.1007/BF01645907" target="_blank" rel="noopener noreferrer">Freeman J. Dyson, <em>Existence of a Phase-Transition in a One-Dimensional Ising Ferromagnet</em> (1969)</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRev.187.732" target="_blank" rel="noopener noreferrer">David J. Thouless, <em>Long-Range Order in One-Dimensional Ising Systems</em> (1969)</a></li>
+        <li><a href="https://www.projecteuclid.org/journals/communications-in-mathematical-physics/volume-84/issue-1/The-phase-transition-in-the-one-dimensional-Ising-model-with/cmp/1103921047.pdf" target="_blank" rel="noopener noreferrer">Jürg Fröhlich et Thomas Spencer, <em>The Phase Transition in the One-Dimensional Ising Model with 1/r² Interaction Energy</em> (1982)</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRevLett.43.1754" target="_blank" rel="noopener noreferrer">Giorgio Parisi, <em>Infinite Number of Order Parameters for Spin-Glasses</em> (1979)</a></li>
+        <li><a href="https://doi.org/10.1073/pnas.79.8.2554" target="_blank" rel="noopener noreferrer">John J. Hopfield, <em>Neural Networks and Physical Systems with Emergent Collective Computational Abilities</em> (1982)</a></li>
+        <li><a href="https://doi.org/10.1016/S0364-0213(85)80012-4" target="_blank" rel="noopener noreferrer">David H. Ackley, Geoffrey E. Hinton et Terrence J. Sejnowski, <em>A Learning Algorithm for Boltzmann Machines</em> (1985)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=YIaGgrp1tmY" target="_blank" rel="noopener noreferrer">Jean Zinn-Justin, <em>The Ising Model: The Saga of the Critical Exponents</em></a></li>
+      </ol>
+    </section>
+  </article>
+</div>
