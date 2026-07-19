@@ -1,0 +1,47 @@
+{% assign explorer_lang = include.lang | default: "en" %}
+<section class="saw-explorer" data-saw-explorer data-lang="{{ explorer_lang }}" aria-label="{% if explorer_lang == 'zh' %}随机游走交互实验{% elsif explorer_lang == 'fr' %}Expérience interactive de marche aléatoire{% else %}Interactive random-walk experiment{% endif %}">
+  <header class="saw-explorer-header">
+    <div>
+      <span class="saw-explorer-kicker">{% if explorer_lang == 'zh' %}交互实验{% elsif explorer_lang == 'fr' %}Expérience interactive{% else %}Interactive experiment{% endif %}</span>
+      <h3>{% if explorer_lang == 'zh' %}同样的步数，两种不同的几何{% elsif explorer_lang == 'fr' %}Un même nombre de pas, deux géométries{% else %}The same number of steps, two geometries{% endif %}</h3>
+    </div>
+  </header>
+
+  <div class="saw-canvas-wrap">
+    <canvas role="img" aria-label="{% if explorer_lang == 'zh' %}随机游走路径可视化{% elsif explorer_lang == 'fr' %}Visualisation d'une trajectoire aléatoire{% else %}Random-walk path visualization{% endif %}"></canvas>
+    <div class="saw-canvas-legend" aria-hidden="true">
+      <span><i class="saw-legend-dot saw-legend-start"></i>{% if explorer_lang == 'zh' %}起点{% elsif explorer_lang == 'fr' %}Départ{% else %}Start{% endif %}</span>
+      <span><i class="saw-legend-dot saw-legend-end"></i>{% if explorer_lang == 'zh' %}终点{% elsif explorer_lang == 'fr' %}Arrivée{% else %}End{% endif %}</span>
+    </div>
+  </div>
+
+  <div class="saw-control-panel">
+    <div class="saw-controls">
+      <div class="saw-mode-switch" role="group" aria-label="{% if explorer_lang == 'zh' %}游走类型{% elsif explorer_lang == 'fr' %}Type de marche{% else %}Walk type{% endif %}">
+        <button type="button" data-saw-mode="random" aria-pressed="false"><span data-saw-random-label></span></button>
+        <button type="button" class="is-active" data-saw-mode="saw" aria-pressed="true"><span data-saw-saw-label></span></button>
+      </div>
+
+      <label class="saw-step-control">
+        <span data-saw-steps-label></span>
+        <input data-saw-steps type="range" min="40" max="500" step="20" value="180" />
+        <output data-saw-step-output>180</output>
+      </label>
+
+      <button class="saw-regenerate" type="button" data-saw-regenerate></button>
+    </div>
+
+    <div class="saw-stats" aria-live="polite">
+      <div>
+        <span class="saw-stat-label" data-saw-distance-label></span>
+        <span class="saw-stat-value" data-saw-distance>0.0</span>
+      </div>
+      <div>
+        <span class="saw-stat-label" data-saw-third-label></span>
+        <span class="saw-stat-value" data-saw-third-value>0%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ site.baseurl }}/assets/js/saw-essay.js?v=1" defer></script>

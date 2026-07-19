@@ -128,6 +128,26 @@
       fr: "Lire l’essai",
       zh: "阅读全文",
     },
+    "essay.saw.kicker": {
+      en: "Popular exposition · Probability",
+      fr: "Vulgarisation · Probabilités",
+      zh: "科普 · 概率论",
+    },
+    "essay.saw.title": {
+      en: "Self-Avoiding Walks: Geometry, Polymers, and Criticality",
+      fr: "Marches auto-évitantes : géométrie, polymères et criticalité",
+      zh: "自回避随机游走：几何、聚合物与临界性",
+    },
+    "essay.saw.summary": {
+      en: "How one local prohibition connects polymer geometry, combinatorial growth, critical exponents, and SLE.",
+      fr: "Comment une interdiction locale relie géométrie des polymères, croissance combinatoire, exposants critiques et SLE.",
+      zh: "一条局部禁令，如何连接聚合物几何、组合增长、临界指数与 SLE。",
+    },
+    "essay.saw.action": {
+      en: "Read essay",
+      fr: "Lire l’essai",
+      zh: "阅读全文",
+    },
     "home.directions.related_essay": {
       en: "Related essay",
       fr: "Essai associé",

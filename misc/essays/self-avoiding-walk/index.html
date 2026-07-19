@@ -1,0 +1,197 @@
+---
+title: 自回避随机游走：几何、聚合物与临界性
+description: 一条随机路径如果永远不能再次访问已经走过的格点，会发生什么？从聚合物的排斥体积到连通常数、临界指数、lace expansion 与 SLE(8/3)，自回避随机游走把简单的局部禁令变成了深刻的全局几何。
+permalink: /misc/essays/self-avoiding-walk/
+layout: page
+author_profile: true
+lang: zh-CN
+mathjax: true
+---
+
+<div class="notebook-page notebook-detail-page essay-page">
+  <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essays</a>
+
+  <header class="notebook-detail-hero essay-detail-hero" lang="zh-CN">
+    <p class="notebook-kicker">科普 · 概率与随机几何</p>
+    <h1>自回避随机游走：几何、聚合物与临界性</h1>
+    <p class="notebook-lede">只增加一条规则——永远不能回到已经访问过的格点——普通随机游走就变成了一个至今没有被完全理解的模型。它既是长链聚合物的数学原型，也是组合计数、临界现象与平面共形几何相遇的地方。</p>
+    <p class="essay-meta">
+      <span>Yuguang XIAO（肖煜光）</span>
+      <span aria-hidden="true">·</span>
+      <time datetime="2026-07-20">2026 年 7 月 20 日</time>
+      <span aria-hidden="true">·</span>
+      <span>约 12 分钟阅读</span>
+    </p>
+    {% include saw-essay-language.html current="zh" %}
+  </header>
+
+  <article class="essay-article" lang="zh-CN">
+    <p class="essay-opening">想象一个人在方格纸上掷骰子：每一步向上、下、左或右走一格。普通随机游走允许他反复回到同一个地方；自回避随机游走则要求整条轨迹没有任何自交。这个看似微小的限制，会让路径产生记忆：下一步的选择不再只取决于当前位置，而要避开全部过去。</p>
+
+    <blockquote class="essay-pullquote">
+      <p>自回避不是“不能回头”，而是“不能忘记”。一条局部生成的路径，被迫记住自己的全部历史。</p>
+    </blockquote>
+
+    <h2 id="definition">1. 从随机游走到自回避</h2>
+
+    <p>在 \(d\) 维整数格点 \(\mathbb Z^d\) 上，一条长度为 \(n\) 的最近邻路径记为</p>
+
+    <div class="essay-equation">
+      \[
+        \omega=(\omega_0,\omega_1,\ldots,\omega_n),
+        \qquad \|\omega_{k+1}-\omega_k\|_1=1.
+      \]
+    </div>
+
+    <p>如果所有顶点 \(\omega_0,\ldots,\omega_n\) 两两不同，我们就称它为<strong>自回避随机游走</strong>（self-avoiding walk, SAW）。路径仍然可以转弯，也可以靠近自己；它唯一不能做的事，是再次踏上一个已经访问过的格点。</p>
+
+    <p>这条禁令破坏了普通随机游走最方便的性质。普通随机游走的增量相互独立，而自回避路径的下一步取决于完整历史，因此它既不是独立增量过程，也不是只看当前位置就能描述的 Markov 链。困难不来自规则很多，而来自一条规则牵动了整条路径。</p>
+
+    {% include saw-explorer.html lang="zh" %}
+
+    <p>在上面的实验里，普通随机游走经常折回并覆盖旧路径；自回避路径则被排斥体积撑开。这里的自回避样本由 <strong>pivot 算法</strong>生成：从一条合法路径出发，随机选取一个枢轴点，对后半段做旋转或反射，并只接受仍然没有自交的变换。</p>
+
+    <h2 id="polymer">2. 为什么聚合物会走出这样的路</h2>
+
+    <p>自回避随机游走最经典的物理解释来自高分子。把聚合物看成由许多单体连接而成的长链，每条格边代表相邻单体之间的键。真实物质不能在同一位置重叠；这个<strong>排斥体积</strong>效应，在最简格点模型里正对应自回避条件。</p>
+
+    <p>普通随机游走的典型末端距离满足 \(R_n\asymp n^{1/2}\)。自回避让链条更舒展，人们预期</p>
+
+    <div class="essay-equation">
+      \[
+        R_n=\sqrt{\mathbb E\!\left[|\omega_n-\omega_0|^2\right]}
+        \asymp n^\nu,
+      \]
+    </div>
+
+    <p>其中 \(\nu\) 是描述路径几何的临界指数。二维中理论预测 \(\nu=3/4\)；三维数值结果约为 \(0.5876\)；五维及更高维具有平均场指数 \(\nu=1/2\)，四维则处在临界维度并带有对数修正。</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>预测不等于定理。</strong> 对标准二维格点自回避随机游走，\(\nu=3/4\) 是受到物理理论和数值实验强烈支持的预测，但目前还没有严格证明。高维的高斯行为则可由 lace expansion 严格建立。
+    </aside>
+
+    <p>FLORY 的尺度论证优美地解释了为什么路径会膨胀。若一条长度为 \(n\) 的链占据尺度 \(R\)，弹性代价约为 \(R^2/n\)，自碰撞代价约为 \(n^2/R^d\)。平衡两者得到</p>
+
+    <div class="essay-equation">
+      \[
+        \frac{R^2}{n}\asymp\frac{n^2}{R^d}
+        \qquad\Longrightarrow\qquad
+        R\asymp n^{3/(d+2)}.
+      \]
+    </div>
+
+    <p>这个启发式计算在二维给出正确预测 \(3/4\)，在三维也异常接近数值结果，但它不是严格证明，并且在高维必须让位于平均场行为。它的价值在于把几何直觉压缩成能量与熵之间的一次平衡。</p>
+
+    <h2 id="counting">3. 有多少条路可以走？</h2>
+
+    <p>固定起点为原点，记 \(c_n\) 为长度 \(n\) 的自回避路径数。在二维方格上，最初几个数是</p>
+
+    <div class="essay-table-wrap">
+      <table class="essay-table">
+        <thead><tr><th>\(n\)</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead>
+        <tbody><tr><td>\(c_n\)</td><td>1</td><td>4</td><td>12</td><td>36</td><td>100</td><td>284</td><td>780</td><td>2172</td><td>5916</td></tr></tbody>
+      </table>
+    </div>
+
+    <p>把一条 \(n+m\) 步路径在第 \(n\) 步切开，会得到一条 \(n\) 步自回避路径和一条平移后的 \(m\) 步自回避路径，因此</p>
+
+    <div class="essay-equation">
+      \[
+        c_{n+m}\le c_n c_m.
+      \]
+    </div>
+
+    <p>这个次乘性与 FEKETE 引理保证极限</p>
+
+    <div class="essay-equation">
+      \[
+        \mu=\lim_{n\to\infty}c_n^{1/n}
+        =\inf_{n\ge1}c_n^{1/n}
+      \]
+    </div>
+
+    <p>存在。常数 \(\mu\) 称为格点的<strong>连通常数</strong>（connective constant），它刻画可选路径数的指数增长率。更精细的二维预测是 \(c_n\sim A\mu^n n^{\gamma-1}\)，其中 \(\gamma=43/32\)，但这个指数同样尚未在标准格点上得到严格证明。</p>
+
+    <h2 id="criticality">4. 计数如何变成临界现象</h2>
+
+    <p>将所有长度放进同一个生成函数：</p>
+
+    <div class="essay-equation">
+      \[
+        C(z)=\sum_{n\ge0}c_n z^n.
+      \]
+    </div>
+
+    <p>因为 \(c_n\) 大约以 \(\mu^n\) 增长，这个级数的收敛半径是 \(z_c=1/\mu\)。参数 \(z\) 可以理解成每一步的活度：当 \(z&lt;z_c\) 时，长路径被抑制；逼近 \(z_c\) 时，任意大的尺度都开始重要，路径的典型长度与空间跨度发散。一个组合计数问题由此获得了统计力学中的临界点。</p>
+
+    <p>这一视角也解释了为什么自回避随机游走、\(n\to0\) 极限下的 \(O(n)\) 模型和聚合物临界行为共享同一套指数。路径不再只是路径，而成为一个临界统计系统的几何观测量。</p>
+
+    <h2 id="honeycomb">5. 蜂窝格点上的精确常数</h2>
+
+    <p>连通常数通常没有已知闭式。即使在最熟悉的二维方格上，我们也只有高精度数值估计。一个著名例外是蜂窝格点：1982 年，Bernard NIENHUIS 通过 Coulomb gas 方法预测</p>
+
+    <div class="essay-equation">
+      \[
+        \mu_{\mathrm{hex}}=\sqrt{2+\sqrt2}\approx1.847759.
+      \]
+    </div>
+
+    <p>2012 年，Hugo DUMINIL-COPIN 与 Stanislav SMIRNOV 严格证明了这个公式。他们构造了带有复相位的<strong>准费米可观测量</strong>，使不同方向的路径贡献产生精确抵消。这个证明令人着迷之处在于：一个整数计数问题，最终由离散复分析中的局部恒等式解开。</p>
+
+    <aside class="essay-note">
+      <strong>精确解的边界。</strong> 这个定理精确给出了蜂窝格点的指数增长率 \(\mu\)，却没有同时证明二维路径的完整缩放极限，也没有证明 \(\nu=3/4\)。知道“有多少条”，与知道“一条典型路径长什么样”，是两个不同层次的问题。
+    </aside>
+
+    <h2 id="sle">6. 平面极限与 SLE\(_{8/3}\)</h2>
+
+    <p>把格点间距不断缩小，同时把路径放大到可见尺度，离散折线是否会收敛为某条连续随机曲线？二维中最有影响力的猜想是：适当定义的自回避随机游走缩放极限应当是 Schramm–Loewner evolution，参数为 \(\kappa=8/3\)，即 SLE\(_{8/3}\)。</p>
+
+    <p>SLE\(_{8/3}\) 的 Hausdorff 维数为</p>
+
+    <div class="essay-equation">
+      \[
+        1+\frac{\kappa}{8}=\frac43,
+      \]
+    </div>
+
+    <p>恰好与 \(1/\nu=4/3\) 的二维预测吻合。共形不变性、限制性质和临界指数由此拼成一幅高度一致的图景。然而，截至本文写作时，标准二维自回避随机游走收敛到 SLE\(_{8/3}\) 仍是开放问题。</p>
+
+    <h2 id="dimensions">7. 维度改变了什么</h2>
+
+    <div class="essay-sequence" aria-label="不同维度中的自回避随机游走">
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div><h3>二维：共形几何的猜想世界</h3><p>\(\nu=3/4\)、\(\gamma=43/32\) 与 SLE\(_{8/3}\) 形成精确预测，但核心缩放极限尚未被证明。</p></div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div><h3>三维：聚合物的现实维度</h3><p>没有共形映射带来的二维工具，也没有高维弱相交的简化；最精确的信息主要来自大规模数值模拟与重整化群。</p></div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">5+</span>
+        <div><h3>高维：回到高斯行为</h3><p>路径不同部分相遇的机会变小。HARA 与 SLADE 发展的 lace expansion 严格建立了五维及以上的平均场临界行为。</p></div>
+      </section>
+    </div>
+
+    <p>四维正好位于上临界维度：主指数回到 \(\nu=1/2\)，但仍留下对数修正。它像一道分水岭，下面是强烈自排斥塑造的非平凡几何，上面则是自回避逐渐变得不再改变主导尺度。</p>
+
+    <h2 id="conclusion">结语：一条路径的全部记忆</h2>
+
+    <p>自回避随机游走只有一句定义，却同时包含三个互相拉扯的问题：组合学问“有多少条路径”，概率论问“典型路径长什么样”，统计物理问“尺度变大时哪些特征会留下”。连通常数回答第一层，临界指数描述第二层，缩放极限则试图完成第三层。</p>
+
+    <p>最动人的地方，是这些答案并不同步。我们可以严格知道蜂窝格点上的指数增长率，却仍不知道二维典型路径是否真的趋向 SLE\(_{8/3}\)；我们能在高维证明高斯行为，却仍难以驯服最直观的二维和三维。自回避随机游走因此像它自己的轨迹：规则清楚，方向开放，并且每一步都带着此前全部历史。</p>
+
+    <section class="essay-references" aria-labelledby="saw-references-title">
+      <h2 id="saw-references-title">参考与延伸阅读</h2>
+      <ol>
+        <li><a href="https://doi.org/10.1017/S0305004100032692" target="_blank" rel="noopener noreferrer">J. M. HAMMERSLEY, <em>Percolation processes II. The connective constant</em> (1957)</a>.</li>
+        <li><a href="https://doi.org/10.1007/BF01022990" target="_blank" rel="noopener noreferrer">N. MADRAS and A. D. SOKAL, <em>The pivot algorithm: A highly efficient Monte Carlo method for the self-avoiding walk</em> (1988)</a>.</li>
+        <li><a href="https://doi.org/10.1007/BF02099442" target="_blank" rel="noopener noreferrer">T. HARA and G. SLADE, <em>Self-avoiding walk in five or more dimensions I. The critical behaviour</em> (1992)</a>.</li>
+        <li><a href="https://annals.math.princeton.edu/2012/175-3/p14" target="_blank" rel="noopener noreferrer">H. DUMINIL-COPIN and S. SMIRNOV, <em>The connective constant of the honeycomb lattice equals \(\sqrt{2+\sqrt2}\)</em> (2012)</a>.</li>
+        <li><a href="https://arxiv.org/abs/math/0204277" target="_blank" rel="noopener noreferrer">G. F. LAWLER, O. SCHRAMM and W. WERNER, <em>On the scaling limit of planar self-avoiding walk</em> (2004)</a>.</li>
+        <li><a href="https://arxiv.org/abs/1002.0494" target="_blank" rel="noopener noreferrer">N. CLISBY, <em>Accurate estimate of the critical exponent \(\nu\) for self-avoiding walks</em> (2010)</a>.</li>
+        <li><a href="https://doi.org/10.1007/978-1-4612-5132-6" target="_blank" rel="noopener noreferrer">N. MADRAS and G. SLADE, <em>The Self-Avoiding Walk</em> (1993)</a>.</li>
+      </ol>
+    </section>
+  </article>
+</div>

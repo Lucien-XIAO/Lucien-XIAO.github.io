@@ -1,0 +1,197 @@
+---
+title: "Self-Avoiding Walks: Geometry, Polymers, and Criticality"
+description: What happens when a random path is forbidden from visiting any lattice site twice? From excluded-volume polymers to the connective constant, critical exponents, the lace expansion, and SLE(8/3), a local prohibition creates a rich global geometry.
+permalink: /misc/essays/self-avoiding-walk/en/
+layout: page
+author_profile: true
+lang: en
+mathjax: true
+---
+
+<div class="notebook-page notebook-detail-page essay-page">
+  <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essays</a>
+
+  <header class="notebook-detail-hero essay-detail-hero" lang="en">
+    <p class="notebook-kicker">Exposition · Probability and random geometry</p>
+    <h1>Self-Avoiding Walks: Geometry, Polymers, and Criticality</h1>
+    <p class="notebook-lede">Add a single rule—never return to a site already visited—and the ordinary random walk becomes a model that is still not fully understood. It is at once a mathematical prototype for long polymers and a meeting point for combinatorics, critical phenomena, and planar conformal geometry.</p>
+    <p class="essay-meta">
+      <span>Yuguang XIAO</span>
+      <span aria-hidden="true">·</span>
+      <time datetime="2026-07-20">20 July 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>12 min read</span>
+    </p>
+    {% include saw-essay-language.html current="en" %}
+  </header>
+
+  <article class="essay-article" lang="en">
+    <p class="essay-opening">Imagine a walker on squared paper, choosing at each step to move up, down, left, or right. An ordinary random walk may return to the same place again and again. A self-avoiding walk requires the entire trace to remain free of self-intersections at lattice sites. This small restriction gives the path a memory: the next move depends not only on the present position, but on all of the past.</p>
+
+    <blockquote class="essay-pullquote">
+      <p>Self-avoidance does not mean “never turn back.” It means “never forget.” A locally generated path is forced to remember its entire history.</p>
+    </blockquote>
+
+    <h2 id="definition">1. From random walk to self-avoidance</h2>
+
+    <p>On the \(d\)-dimensional integer lattice \(\mathbb Z^d\), a nearest-neighbour path of length \(n\) is a sequence</p>
+
+    <div class="essay-equation">
+      \[
+        \omega=(\omega_0,\omega_1,\ldots,\omega_n),
+        \qquad \|\omega_{k+1}-\omega_k\|_1=1.
+      \]
+    </div>
+
+    <p>If the vertices \(\omega_0,\ldots,\omega_n\) are all distinct, the path is a <strong>self-avoiding walk</strong> (SAW). It may turn and it may pass close to itself; the one forbidden act is to step on a site it has already visited.</p>
+
+    <p>This prohibition destroys the most convenient feature of ordinary random walk. The increments of a simple random walk are independent, whereas the next step of a self-avoiding path depends on its complete history. It is neither an independent-increment process nor a Markov chain described by the current position alone. The difficulty comes not from having many rules, but from one rule coupling the whole path.</p>
+
+    {% include saw-explorer.html lang="en" %}
+
+    <p>In the experiment above, an ordinary walk repeatedly folds over and covers its old trace, while self-avoidance swells the path. The self-avoiding samples are produced by the <strong>pivot algorithm</strong>: choose a pivot vertex, rotate or reflect the remaining tail, and accept the transformation only if the resulting path is still self-avoiding.</p>
+
+    <h2 id="polymer">2. Why polymers trace such paths</h2>
+
+    <p>The classical physical interpretation comes from polymer science. Think of a polymer as a long chain of monomers, with lattice edges representing the bonds between consecutive monomers. Matter cannot occupy the same place twice. In the simplest lattice model, this <strong>excluded-volume</strong> effect is exactly the self-avoidance constraint.</p>
+
+    <p>For ordinary random walk, the typical end-to-end distance scales as \(R_n\asymp n^{1/2}\). Self-avoidance stretches the chain, and one expects</p>
+
+    <div class="essay-equation">
+      \[
+        R_n=\sqrt{\mathbb E\!\left[|\omega_n-\omega_0|^2\right]}
+        \asymp n^\nu,
+      \]
+    </div>
+
+    <p>where \(\nu\) is a critical exponent encoding the geometry of the path. In two dimensions, theory predicts \(\nu=3/4\). In three dimensions, the best numerical estimates are close to \(0.5876\). In dimensions five and above, the mean-field value \(\nu=1/2\) holds, while dimension four is critical and carries logarithmic corrections.</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>A prediction is not a theorem.</strong> For the standard two-dimensional lattice model, \(\nu=3/4\) is strongly supported by physical theory and numerical work, but it has not been proved. The Gaussian behaviour in high dimensions can, by contrast, be established rigorously through the lace expansion.
+    </aside>
+
+    <p>FLORY’s scaling argument gives an elegant explanation for the swelling. If a chain of length \(n\) occupies a region of size \(R\), its elastic cost is of order \(R^2/n\), while the cost of self-collisions is of order \(n^2/R^d\). Balancing the two gives</p>
+
+    <div class="essay-equation">
+      \[
+        \frac{R^2}{n}\asymp\frac{n^2}{R^d}
+        \qquad\Longrightarrow\qquad
+        R\asymp n^{3/(d+2)}.
+      \]
+    </div>
+
+    <p>This heuristic gives the expected value \(3/4\) in two dimensions and is remarkably close to the numerical value in three dimensions. It is not a proof, and in high dimensions it must give way to mean-field behaviour. Its strength is conceptual: geometry emerges from a balance between entropy and repulsion.</p>
+
+    <h2 id="counting">3. How many paths are there?</h2>
+
+    <p>Fix the starting point at the origin and let \(c_n\) denote the number of \(n\)-step self-avoiding walks. On the square lattice, the first values are</p>
+
+    <div class="essay-table-wrap">
+      <table class="essay-table">
+        <thead><tr><th>\(n\)</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead>
+        <tbody><tr><td>\(c_n\)</td><td>1</td><td>4</td><td>12</td><td>36</td><td>100</td><td>284</td><td>780</td><td>2172</td><td>5916</td></tr></tbody>
+      </table>
+    </div>
+
+    <p>Cutting an \((n+m)\)-step walk after step \(n\) produces an \(n\)-step self-avoiding walk and a translated \(m\)-step self-avoiding walk. Hence</p>
+
+    <div class="essay-equation">
+      \[
+        c_{n+m}\le c_n c_m.
+      \]
+    </div>
+
+    <p>This submultiplicativity, together with FEKETE’s lemma, guarantees the existence of</p>
+
+    <div class="essay-equation">
+      \[
+        \mu=\lim_{n\to\infty}c_n^{1/n}
+        =\inf_{n\ge1}c_n^{1/n}.
+      \]
+    </div>
+
+    <p>The number \(\mu\) is the lattice’s <strong>connective constant</strong>; it measures the exponential growth of the number of available paths. A more refined two-dimensional prediction is \(c_n\sim A\mu^n n^{\gamma-1}\), with \(\gamma=43/32\), but this exponent too remains unproved for the standard lattice models.</p>
+
+    <h2 id="criticality">4. When counting becomes a critical phenomenon</h2>
+
+    <p>Put all lengths into a single generating function:</p>
+
+    <div class="essay-equation">
+      \[
+        C(z)=\sum_{n\ge0}c_n z^n.
+      \]
+    </div>
+
+    <p>Since \(c_n\) grows roughly like \(\mu^n\), this series has radius of convergence \(z_c=1/\mu\). The parameter \(z\) may be read as an activity per step. When \(z&lt;z_c\), long paths are suppressed. As \(z\) approaches \(z_c\), arbitrarily large scales become relevant and both typical length and spatial extent diverge. A combinatorial counting problem has acquired a critical point in the sense of statistical mechanics.</p>
+
+    <p>This viewpoint also explains why the self-avoiding walk, the \(n\to0\) limit of the \(O(n)\) model, and polymer criticality share the same family of exponents. The path is no longer merely a path; it is a geometric observable of a critical statistical system.</p>
+
+    <h2 id="honeycomb">5. An exact constant on the honeycomb lattice</h2>
+
+    <p>Connective constants rarely have a known closed form. Even on the familiar square lattice, only high-precision numerical estimates are available. The celebrated exception is the honeycomb lattice. In 1982, Bernard NIENHUIS used Coulomb-gas arguments to predict</p>
+
+    <div class="essay-equation">
+      \[
+        \mu_{\mathrm{hex}}=\sqrt{2+\sqrt2}\approx1.847759.
+      \]
+    </div>
+
+    <p>In 2012, Hugo DUMINIL-COPIN and Stanislav SMIRNOV proved the formula rigorously. They constructed a complex-valued <strong>parafermionic observable</strong> whose contributions from paths in different directions cancel through an exact local identity. The striking point is that a problem of integer enumeration is solved by a piece of discrete complex analysis.</p>
+
+    <aside class="essay-note">
+      <strong>The boundary of the exact result.</strong> The theorem determines the exponential growth rate \(\mu\) on the honeycomb lattice. It does not at the same time prove the complete planar scaling limit, nor does it establish \(\nu=3/4\). Knowing how many paths exist and knowing the geometry of a typical path are different levels of understanding.
+    </aside>
+
+    <h2 id="sle">6. The planar limit and SLE\(_{8/3}\)</h2>
+
+    <p>Shrink the lattice spacing while magnifying the path to a visible scale. Does the discrete polygonal line converge to a continuous random curve? The leading conjecture in two dimensions is that a suitably defined scaling limit of self-avoiding walk is Schramm–Loewner evolution with parameter \(\kappa=8/3\), or SLE\(_{8/3}\).</p>
+
+    <p>The Hausdorff dimension of SLE\(_{8/3}\) is</p>
+
+    <div class="essay-equation">
+      \[
+        1+\frac{\kappa}{8}=\frac43,
+      \]
+    </div>
+
+    <p>exactly matching the prediction \(1/\nu=4/3\). Conformal invariance, the restriction property, and the critical exponents therefore form a remarkably coherent picture. Yet, as of this writing, convergence of the standard two-dimensional self-avoiding walk to SLE\(_{8/3}\) remains open.</p>
+
+    <h2 id="dimensions">7. What dimension changes</h2>
+
+    <div class="essay-sequence" aria-label="Self-avoiding walk across dimensions">
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div><h3>Two dimensions: conjectural conformal geometry</h3><p>The predictions \(\nu=3/4\), \(\gamma=43/32\), and SLE\(_{8/3}\) fit together precisely, but the central scaling-limit statement is still unproved.</p></div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div><h3>Three dimensions: the physical polymer world</h3><p>There is neither the conformal toolkit of the plane nor the weak-intersection simplification of high dimension. The sharpest information comes mainly from large-scale simulation and renormalisation-group methods.</p></div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">5+</span>
+        <div><h3>High dimensions: a return to Gaussian behaviour</h3><p>Different pieces of the path are less likely to meet. The lace expansion developed by HARA and SLADE rigorously yields mean-field critical behaviour in dimensions five and above.</p></div>
+      </section>
+    </div>
+
+    <p>Dimension four is the upper critical dimension. The leading exponent returns to \(\nu=1/2\), but logarithmic corrections remain. It is the watershed between the non-trivial geometry shaped by strong self-repulsion below and the Gaussian leading scale above.</p>
+
+    <h2 id="conclusion">Conclusion: the full memory of a path</h2>
+
+    <p>The self-avoiding walk has a one-line definition, yet it contains three competing questions. Combinatorics asks how many paths there are; probability asks what a typical path looks like; statistical mechanics asks which features survive as the scale grows. The connective constant answers the first question, critical exponents describe the second, and a scaling limit would complete the third.</p>
+
+    <p>What makes the subject beautiful is that these answers do not arrive together. We know the exact exponential growth rate on the honeycomb lattice, yet still do not know whether a typical planar path converges to SLE\(_{8/3}\). We can prove Gaussian behaviour in high dimensions, yet the most visual cases—two and three dimensions—remain elusive. The theory resembles its own paths: the rule is clear, the direction is open, and every step carries the whole history behind it.</p>
+
+    <section class="essay-references" aria-labelledby="saw-references-title">
+      <h2 id="saw-references-title">References and further reading</h2>
+      <ol>
+        <li><a href="https://doi.org/10.1017/S0305004100032692" target="_blank" rel="noopener noreferrer">J. M. HAMMERSLEY, <em>Percolation processes II. The connective constant</em> (1957)</a>.</li>
+        <li><a href="https://doi.org/10.1007/BF01022990" target="_blank" rel="noopener noreferrer">N. MADRAS and A. D. SOKAL, <em>The pivot algorithm: A highly efficient Monte Carlo method for the self-avoiding walk</em> (1988)</a>.</li>
+        <li><a href="https://doi.org/10.1007/BF02099442" target="_blank" rel="noopener noreferrer">T. HARA and G. SLADE, <em>Self-avoiding walk in five or more dimensions I. The critical behaviour</em> (1992)</a>.</li>
+        <li><a href="https://annals.math.princeton.edu/2012/175-3/p14" target="_blank" rel="noopener noreferrer">H. DUMINIL-COPIN and S. SMIRNOV, <em>The connective constant of the honeycomb lattice equals \(\sqrt{2+\sqrt2}\)</em> (2012)</a>.</li>
+        <li><a href="https://arxiv.org/abs/math/0204277" target="_blank" rel="noopener noreferrer">G. F. LAWLER, O. SCHRAMM and W. WERNER, <em>On the scaling limit of planar self-avoiding walk</em> (2004)</a>.</li>
+        <li><a href="https://arxiv.org/abs/1002.0494" target="_blank" rel="noopener noreferrer">N. CLISBY, <em>Accurate estimate of the critical exponent \(\nu\) for self-avoiding walks</em> (2010)</a>.</li>
+        <li><a href="https://doi.org/10.1007/978-1-4612-5132-6" target="_blank" rel="noopener noreferrer">N. MADRAS and G. SLADE, <em>The Self-Avoiding Walk</em> (1993)</a>.</li>
+      </ol>
+    </section>
+  </article>
+</div>

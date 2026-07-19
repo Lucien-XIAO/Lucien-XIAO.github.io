@@ -1,0 +1,197 @@
+---
+title: "Marches auto-évitantes : géométrie, polymères et criticalité"
+description: Que devient une trajectoire aléatoire lorsqu’elle ne peut jamais visiter deux fois le même sommet ? Des polymères à volume exclu à la constante de connectivité, aux exposants critiques, au lace expansion et à SLE(8/3), une interdiction locale engendre une géométrie globale profonde.
+permalink: /misc/essays/self-avoiding-walk/fr/
+layout: page
+author_profile: true
+lang: fr
+mathjax: true
+---
+
+<div class="notebook-page notebook-detail-page essay-page">
+  <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essais</a>
+
+  <header class="notebook-detail-hero essay-detail-hero" lang="fr">
+    <p class="notebook-kicker">Vulgarisation · Probabilités et géométrie aléatoire</p>
+    <h1>Marches auto-évitantes : géométrie, polymères et criticalité</h1>
+    <p class="notebook-lede">Il suffit d’ajouter une règle—ne jamais revenir sur un sommet déjà visité—pour transformer la marche aléatoire simple en un modèle encore loin d’être entièrement compris. C’est à la fois un prototype mathématique des polymères longs et un point de rencontre entre combinatoire, phénomènes critiques et géométrie conforme plane.</p>
+    <p class="essay-meta">
+      <span>Yuguang XIAO</span>
+      <span aria-hidden="true">·</span>
+      <time datetime="2026-07-20">20 juillet 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>12 min de lecture</span>
+    </p>
+    {% include saw-essay-language.html current="fr" %}
+  </header>
+
+  <article class="essay-article" lang="fr">
+    <p class="essay-opening">Imaginons une personne sur du papier quadrillé qui choisit à chaque pas de monter, descendre, aller à gauche ou à droite. Une marche aléatoire simple peut revenir sans cesse au même endroit. Une marche auto-évitante exige au contraire que la trajectoire ne visite jamais deux fois le même sommet du réseau. Cette petite contrainte donne une mémoire au chemin : le prochain pas dépend non seulement de la position présente, mais de tout le passé.</p>
+
+    <blockquote class="essay-pullquote">
+      <p>S’auto-éviter ne signifie pas « ne jamais faire demi-tour », mais « ne jamais oublier ». Une trajectoire construite localement doit se souvenir de toute son histoire.</p>
+    </blockquote>
+
+    <h2 id="definition">1. De la marche aléatoire à l’auto-évitement</h2>
+
+    <p>Sur le réseau entier \(\mathbb Z^d\), un chemin à plus proches voisins de longueur \(n\) est une suite</p>
+
+    <div class="essay-equation">
+      \[
+        \omega=(\omega_0,\omega_1,\ldots,\omega_n),
+        \qquad \|\omega_{k+1}-\omega_k\|_1=1.
+      \]
+    </div>
+
+    <p>Si les sommets \(\omega_0,\ldots,\omega_n\) sont tous distincts, on parle de <strong>marche auto-évitante</strong> (self-avoiding walk, SAW). Le chemin peut tourner et passer près de lui-même ; la seule action interdite consiste à poser le pied sur un sommet déjà visité.</p>
+
+    <p>Cette interdiction détruit la propriété la plus commode de la marche aléatoire simple. Les accroissements d’une marche simple sont indépendants, tandis que le prochain pas d’un chemin auto-évitant dépend de son histoire complète. Ce n’est ni un processus à accroissements indépendants, ni une chaîne de Markov que la position courante suffirait à décrire. La difficulté ne vient pas d’une profusion de règles, mais d’une seule règle qui couple toute la trajectoire.</p>
+
+    {% include saw-explorer.html lang="fr" %}
+
+    <p>Dans l’expérience ci-dessus, la marche simple se replie souvent sur elle-même et recouvre sa trace, tandis que l’auto-évitement dilate la trajectoire. Les échantillons auto-évitants sont produits par l’<strong>algorithme du pivot</strong> : on choisit un sommet pivot, on fait subir une rotation ou une réflexion à la partie restante, puis on n’accepte la transformation que si le nouveau chemin reste auto-évitant.</p>
+
+    <h2 id="polymer">2. Pourquoi les polymères dessinent de tels chemins</h2>
+
+    <p>L’interprétation physique classique vient de la science des polymères. On représente un polymère par une longue chaîne de monomères, les arêtes du réseau figurant les liaisons entre monomères consécutifs. La matière ne peut pas occuper deux fois le même lieu. Dans le modèle de réseau le plus simple, cet effet de <strong>volume exclu</strong> devient exactement la contrainte d’auto-évitement.</p>
+
+    <p>Pour une marche aléatoire simple, la distance bout à bout typique vérifie \(R_n\asymp n^{1/2}\). L’auto-évitement étire la chaîne, et l’on s’attend à</p>
+
+    <div class="essay-equation">
+      \[
+        R_n=\sqrt{\mathbb E\!\left[|\omega_n-\omega_0|^2\right]}
+        \asymp n^\nu,
+      \]
+    </div>
+
+    <p>où \(\nu\) est un exposant critique qui décrit la géométrie du chemin. En dimension deux, la théorie prédit \(\nu=3/4\). En dimension trois, les meilleures estimations numériques sont proches de \(0.5876\). À partir de la dimension cinq, on retrouve la valeur de champ moyen \(\nu=1/2\), tandis que la dimension quatre est critique et comporte des corrections logarithmiques.</p>
+
+    <aside class="essay-note essay-note-caution">
+      <strong>Une prédiction n’est pas un théorème.</strong> Pour le modèle standard en dimension deux, \(\nu=3/4\) est très solidement étayé par la théorie physique et les calculs numériques, mais n’a pas été démontré. Le comportement gaussien en grande dimension peut, en revanche, être établi rigoureusement grâce au lace expansion.
+    </aside>
+
+    <p>L’argument d’échelle de FLORY explique élégamment le gonflement. Si une chaîne de longueur \(n\) occupe une région de taille \(R\), son coût élastique est de l’ordre de \(R^2/n\), tandis que le coût des auto-collisions est de l’ordre de \(n^2/R^d\). En équilibrant les deux, on obtient</p>
+
+    <div class="essay-equation">
+      \[
+        \frac{R^2}{n}\asymp\frac{n^2}{R^d}
+        \qquad\Longrightarrow\qquad
+        R\asymp n^{3/(d+2)}.
+      \]
+    </div>
+
+    <p>Cette heuristique donne la valeur attendue \(3/4\) en dimension deux et se révèle étonnamment proche des résultats numériques en dimension trois. Ce n’est pas une preuve et, en grande dimension, elle doit céder la place au comportement de champ moyen. Sa force est conceptuelle : la géométrie résulte d’un équilibre entre entropie et répulsion.</p>
+
+    <h2 id="counting">3. Combien de chemins peut-on tracer ?</h2>
+
+    <p>Fixons l’origine comme point de départ et notons \(c_n\) le nombre de marches auto-évitantes de longueur \(n\). Sur le réseau carré, les premières valeurs sont</p>
+
+    <div class="essay-table-wrap">
+      <table class="essay-table">
+        <thead><tr><th>\(n\)</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead>
+        <tbody><tr><td>\(c_n\)</td><td>1</td><td>4</td><td>12</td><td>36</td><td>100</td><td>284</td><td>780</td><td>2172</td><td>5916</td></tr></tbody>
+      </table>
+    </div>
+
+    <p>En coupant une marche de \(n+m\) pas après le \(n\)-ième pas, on obtient une marche auto-évitante de longueur \(n\) et une marche auto-évitante translatée de longueur \(m\). Ainsi</p>
+
+    <div class="essay-equation">
+      \[
+        c_{n+m}\le c_n c_m.
+      \]
+    </div>
+
+    <p>Cette sous-multiplicativité, combinée au lemme de FEKETE, garantit l’existence de</p>
+
+    <div class="essay-equation">
+      \[
+        \mu=\lim_{n\to\infty}c_n^{1/n}
+        =\inf_{n\ge1}c_n^{1/n}.
+      \]
+    </div>
+
+    <p>Le nombre \(\mu\) est la <strong>constante de connectivité</strong> du réseau ; il mesure le taux de croissance exponentielle du nombre de chemins possibles. Une prédiction plus fine en dimension deux est \(c_n\sim A\mu^n n^{\gamma-1}\), avec \(\gamma=43/32\), mais cet exposant n’est lui non plus pas encore démontré pour les réseaux standards.</p>
+
+    <h2 id="criticality">4. Quand le dénombrement devient un phénomène critique</h2>
+
+    <p>Regroupons toutes les longueurs dans une fonction génératrice :</p>
+
+    <div class="essay-equation">
+      \[
+        C(z)=\sum_{n\ge0}c_n z^n.
+      \]
+    </div>
+
+    <p>Puisque \(c_n\) croît approximativement comme \(\mu^n\), cette série a pour rayon de convergence \(z_c=1/\mu\). Le paramètre \(z\) peut se lire comme une activité par pas. Pour \(z&lt;z_c\), les longs chemins sont supprimés. Lorsque \(z\) approche \(z_c\), des échelles arbitrairement grandes deviennent pertinentes, et la longueur comme l’étendue spatiale typiques divergent. Un problème de dénombrement combinatoire vient d’acquérir un point critique au sens de la mécanique statistique.</p>
+
+    <p>Ce point de vue explique aussi pourquoi la marche auto-évitante, la limite \(n\to0\) du modèle \(O(n)\) et la criticalité des polymères partagent la même famille d’exposants. Le chemin n’est plus seulement un chemin : il devient une observable géométrique d’un système statistique critique.</p>
+
+    <h2 id="honeycomb">5. Une constante exacte sur le réseau hexagonal</h2>
+
+    <p>Les constantes de connectivité possèdent rarement une forme fermée connue. Même sur le réseau carré familier, nous ne disposons que d’estimations numériques de haute précision. L’exception célèbre est le réseau hexagonal. En 1982, Bernard NIENHUIS prédit par la méthode du gaz de Coulomb que</p>
+
+    <div class="essay-equation">
+      \[
+        \mu_{\mathrm{hex}}=\sqrt{2+\sqrt2}\approx1.847759.
+      \]
+    </div>
+
+    <p>En 2012, Hugo DUMINIL-COPIN et Stanislav SMIRNOV démontrent rigoureusement cette formule. Ils construisent une <strong>observable parafermionique</strong> à valeurs complexes, pour laquelle les contributions des chemins orientés différemment s’annulent grâce à une identité locale exacte. Le fait remarquable est qu’un problème de dénombrement entier se résout par un morceau d’analyse complexe discrète.</p>
+
+    <aside class="essay-note">
+      <strong>La portée exacte du résultat.</strong> Le théorème détermine le taux de croissance exponentielle \(\mu\) sur le réseau hexagonal. Il ne démontre pas simultanément la limite d’échelle plane complète, ni la valeur \(\nu=3/4\). Savoir combien de chemins existent et connaître la géométrie d’un chemin typique sont deux niveaux de compréhension distincts.
+    </aside>
+
+    <h2 id="sle">6. La limite plane et SLE\(_{8/3}\)</h2>
+
+    <p>Réduisons le pas du réseau tout en agrandissant la trajectoire à une échelle visible. La ligne polygonale discrète converge-t-elle vers une courbe aléatoire continue ? La conjecture centrale en dimension deux affirme qu’une limite d’échelle convenablement définie de la marche auto-évitante devrait être une évolution de Schramm–Loewner de paramètre \(\kappa=8/3\), c’est-à-dire SLE\(_{8/3}\).</p>
+
+    <p>La dimension de Hausdorff de SLE\(_{8/3}\) vaut</p>
+
+    <div class="essay-equation">
+      \[
+        1+\frac{\kappa}{8}=\frac43,
+      \]
+    </div>
+
+    <p>ce qui coïncide exactement avec la prédiction \(1/\nu=4/3\). Invariance conforme, propriété de restriction et exposants critiques composent ainsi une image remarquablement cohérente. Pourtant, à ce jour, la convergence de la marche auto-évitante bidimensionnelle standard vers SLE\(_{8/3}\) reste un problème ouvert.</p>
+
+    <h2 id="dimensions">7. Ce que change la dimension</h2>
+
+    <div class="essay-sequence" aria-label="La marche auto-évitante selon la dimension">
+      <section class="essay-step">
+        <span class="essay-step-index">2</span>
+        <div><h3>Dimension deux : une géométrie conforme conjecturale</h3><p>Les prédictions \(\nu=3/4\), \(\gamma=43/32\) et SLE\(_{8/3}\) s’emboîtent exactement, mais l’énoncé central sur la limite d’échelle n’est toujours pas démontré.</p></div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">3</span>
+        <div><h3>Dimension trois : le monde physique des polymères</h3><p>On ne dispose ni des outils conformes du plan, ni de la simplification due aux faibles intersections en grande dimension. Les informations les plus précises viennent surtout des simulations à grande échelle et du groupe de renormalisation.</p></div>
+      </section>
+      <section class="essay-step">
+        <span class="essay-step-index">5+</span>
+        <div><h3>Grande dimension : retour au comportement gaussien</h3><p>Les différentes parties du chemin ont moins de chances de se rencontrer. Le lace expansion développé par HARA et SLADE établit rigoureusement le comportement critique de champ moyen à partir de la dimension cinq.</p></div>
+      </section>
+    </div>
+
+    <p>La dimension quatre est la dimension critique supérieure. L’exposant principal revient à \(\nu=1/2\), mais des corrections logarithmiques subsistent. Elle marque la frontière entre la géométrie non triviale façonnée par une forte auto-répulsion en dessous et l’échelle gaussienne dominante au-dessus.</p>
+
+    <h2 id="conclusion">Conclusion : toute la mémoire d’un chemin</h2>
+
+    <p>La marche auto-évitante tient en une ligne de définition, mais contient trois questions qui se répondent. La combinatoire demande combien de chemins existent ; les probabilités demandent à quoi ressemble un chemin typique ; la mécanique statistique demande quelles propriétés survivent lorsque l’échelle grandit. La constante de connectivité répond à la première, les exposants critiques décrivent la deuxième, et une limite d’échelle achèverait la troisième.</p>
+
+    <p>La beauté du sujet vient de ce que ces réponses n’arrivent pas ensemble. Nous connaissons exactement le taux de croissance exponentielle sur le réseau hexagonal, sans encore savoir si une trajectoire plane typique converge vraiment vers SLE\(_{8/3}\). Nous savons démontrer le comportement gaussien en grande dimension, tandis que les cas les plus visuels—les dimensions deux et trois—continuent de résister. La théorie ressemble à ses propres chemins : la règle est claire, la direction reste ouverte, et chaque pas porte toute l’histoire qui le précède.</p>
+
+    <section class="essay-references" aria-labelledby="saw-references-title">
+      <h2 id="saw-references-title">Références et lectures complémentaires</h2>
+      <ol>
+        <li><a href="https://doi.org/10.1017/S0305004100032692" target="_blank" rel="noopener noreferrer">J. M. HAMMERSLEY, <em>Percolation processes II. The connective constant</em> (1957)</a>.</li>
+        <li><a href="https://doi.org/10.1007/BF01022990" target="_blank" rel="noopener noreferrer">N. MADRAS et A. D. SOKAL, <em>The pivot algorithm: A highly efficient Monte Carlo method for the self-avoiding walk</em> (1988)</a>.</li>
+        <li><a href="https://doi.org/10.1007/BF02099442" target="_blank" rel="noopener noreferrer">T. HARA et G. SLADE, <em>Self-avoiding walk in five or more dimensions I. The critical behaviour</em> (1992)</a>.</li>
+        <li><a href="https://annals.math.princeton.edu/2012/175-3/p14" target="_blank" rel="noopener noreferrer">H. DUMINIL-COPIN et S. SMIRNOV, <em>The connective constant of the honeycomb lattice equals \(\sqrt{2+\sqrt2}\)</em> (2012)</a>.</li>
+        <li><a href="https://arxiv.org/abs/math/0204277" target="_blank" rel="noopener noreferrer">G. F. LAWLER, O. SCHRAMM et W. WERNER, <em>On the scaling limit of planar self-avoiding walk</em> (2004)</a>.</li>
+        <li><a href="https://arxiv.org/abs/1002.0494" target="_blank" rel="noopener noreferrer">N. CLISBY, <em>Accurate estimate of the critical exponent \(\nu\) for self-avoiding walks</em> (2010)</a>.</li>
+        <li><a href="https://doi.org/10.1007/978-1-4612-5132-6" target="_blank" rel="noopener noreferrer">N. MADRAS et G. SLADE, <em>The Self-Avoiding Walk</em> (1993)</a>.</li>
+      </ol>
+    </section>
+  </article>
+</div>

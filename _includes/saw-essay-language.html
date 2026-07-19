@@ -1,0 +1,82 @@
+{% assign current_lang = include.current | default: "zh" %}
+<nav class="essay-language-links" aria-label="Article languages">
+  <a href="{{ site.baseurl }}/misc/essays/self-avoiding-walk/?lang=zh" hreflang="zh-CN"{% if current_lang == "zh" %} class="is-active"{% endif %}>中文</a>
+  <a href="{{ site.baseurl }}/misc/essays/self-avoiding-walk/en/?lang=en" hreflang="en"{% if current_lang == "en" %} class="is-active"{% endif %}>English</a>
+  <a href="{{ site.baseurl }}/misc/essays/self-avoiding-walk/fr/?lang=fr" hreflang="fr"{% if current_lang == "fr" %} class="is-active"{% endif %}>Français</a>
+</nav>
+
+<script>
+  (function () {
+    var storageKey = "yuguang-site-language-v3";
+    var currentPageLanguage = "{{ current_lang }}";
+    var routes = {
+      zh: "{{ site.baseurl }}/misc/essays/self-avoiding-walk/",
+      en: "{{ site.baseurl }}/misc/essays/self-avoiding-walk/en/",
+      fr: "{{ site.baseurl }}/misc/essays/self-avoiding-walk/fr/"
+    };
+
+    function normalize(language) {
+      var value = String(language || "").toLowerCase();
+      if (value.indexOf("zh") === 0) return "zh";
+      if (value.indexOf("fr") === 0) return "fr";
+      return "en";
+    }
+
+    function normalizedPath(path) {
+      return String(path || "/").replace(/\/+$/, "") + "/";
+    }
+
+    function routeTo(language, keepQueryLanguage) {
+      var normalized = normalize(language);
+      var target = routes[normalized];
+      if (!target || normalizedPath(window.location.pathname) === normalizedPath(target)) return;
+
+      var params = new URLSearchParams(window.location.search);
+      if (keepQueryLanguage) {
+        params.set("lang", normalized);
+      } else {
+        params.delete("lang");
+      }
+
+      var query = params.toString();
+      window.location.href = target + (query ? "?" + query : "");
+    }
+
+    function getQueryLanguage() {
+      return new URLSearchParams(window.location.search).get("lang");
+    }
+
+    function getStoredLanguage() {
+      try {
+        return window.localStorage.getItem(storageKey);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function hasExplicitLanguagePreference() {
+      return Boolean(getQueryLanguage() || getStoredLanguage());
+    }
+
+    window.addEventListener("site-language-change", function (event) {
+      if (!event.detail || !event.detail.language) return;
+      if (!hasExplicitLanguagePreference() && currentPageLanguage !== "zh") return;
+      routeTo(event.detail.language, false);
+    });
+
+    window.addEventListener("DOMContentLoaded", function () {
+      var queryLanguage = getQueryLanguage();
+      if (queryLanguage) {
+        routeTo(queryLanguage, true);
+        return;
+      }
+
+      var storedLanguage = getStoredLanguage();
+      if (storedLanguage) {
+        routeTo(storedLanguage, false);
+      } else if (currentPageLanguage === "zh") {
+        routeTo("en", false);
+      }
+    });
+  })();
+</script>

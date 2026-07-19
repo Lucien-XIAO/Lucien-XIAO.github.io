@@ -4131,6 +4131,231 @@ body.theme-claude .essay-references li + li {
   margin-top: 9px;
 }
 
+body.theme-claude .saw-explorer {
+  background: #f7f8f5;
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  box-shadow: 0 16px 38px rgba(28, 49, 46, 0.08);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 34px 0 42px;
+  overflow: hidden;
+}
+
+body.theme-claude .saw-explorer-header {
+  align-items: end;
+  background: #ffffff;
+  border-bottom: 1px solid var(--claude-border);
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 18px 20px 16px;
+}
+
+body.theme-claude .saw-explorer-kicker {
+  color: var(--claude-jade);
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+body.theme-claude .saw-explorer-header h3 {
+  color: var(--claude-primary);
+  font-family: "Noto Serif SC", "Songti SC", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+body.theme-claude .saw-canvas-wrap {
+  background: #f7f8f5;
+  position: relative;
+}
+
+body.theme-claude .saw-canvas-wrap canvas {
+  aspect-ratio: 16 / 9;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+body.theme-claude .saw-canvas-legend {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(41, 73, 69, 0.14);
+  border-radius: 4px;
+  bottom: 12px;
+  color: var(--claude-secondary);
+  display: flex;
+  font-size: 10.5px;
+  gap: 12px;
+  padding: 6px 8px;
+  position: absolute;
+  right: 12px;
+}
+
+body.theme-claude .saw-canvas-legend span {
+  align-items: center;
+  display: inline-flex;
+  gap: 5px;
+}
+
+body.theme-claude .saw-legend-dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+}
+
+body.theme-claude .saw-legend-start {
+  background: #1f766f;
+}
+
+body.theme-claude .saw-legend-end {
+  background: #c44f3f;
+}
+
+body.theme-claude .saw-control-panel {
+  background: #ffffff;
+  border-top: 1px solid var(--claude-border);
+  padding: 16px 20px 18px;
+}
+
+body.theme-claude .saw-controls {
+  align-items: center;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: auto minmax(180px, 1fr) auto;
+}
+
+body.theme-claude .saw-mode-switch {
+  background: color-mix(in srgb, var(--claude-primary) 7%, #ffffff);
+  border: 1px solid var(--claude-border);
+  border-radius: 5px;
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 3px;
+}
+
+body.theme-claude .saw-mode-switch button,
+body.theme-claude .saw-regenerate {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+body.theme-claude .saw-mode-switch button {
+  background: transparent;
+  border-radius: 3px;
+  color: var(--claude-secondary);
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  min-height: 34px;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+
+body.theme-claude .saw-mode-switch button.is-active {
+  background: #ffffff;
+  box-shadow: 0 1px 5px rgba(25, 46, 43, 0.12);
+  color: var(--claude-primary);
+}
+
+body.theme-claude .saw-step-control {
+  align-items: center;
+  color: var(--claude-secondary);
+  display: grid;
+  font-size: 11.5px;
+  gap: 9px;
+  grid-template-columns: auto minmax(90px, 1fr) 34px;
+}
+
+body.theme-claude .saw-step-control input {
+  accent-color: var(--claude-jade);
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+body.theme-claude .saw-step-control output {
+  color: var(--claude-primary);
+  font-variant-numeric: tabular-nums;
+  font-weight: 750;
+  text-align: right;
+}
+
+body.theme-claude .saw-regenerate {
+  background: var(--claude-primary);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 750;
+  min-height: 36px;
+  padding: 8px 13px;
+}
+
+body.theme-claude .saw-regenerate:hover,
+body.theme-claude .saw-regenerate:focus-visible {
+  background: var(--claude-jade);
+}
+
+body.theme-claude .saw-stats {
+  border-top: 1px solid color-mix(in srgb, var(--claude-border) 70%, transparent);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 14px;
+  padding-top: 13px;
+}
+
+body.theme-claude .saw-stat-label {
+  color: var(--claude-secondary);
+  display: block;
+  font-size: 10.5px;
+  line-height: 1.3;
+}
+
+body.theme-claude .saw-stat-value {
+  color: var(--claude-primary);
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+@media (max-width: 720px) {
+  body.theme-claude .saw-controls {
+    grid-template-columns: 1fr;
+  }
+
+  body.theme-claude .saw-regenerate {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body.theme-claude .saw-explorer-header,
+  body.theme-claude .saw-control-panel {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  body.theme-claude .saw-canvas-wrap canvas {
+    aspect-ratio: 4 / 3;
+  }
+
+  body.theme-claude .saw-mode-switch button {
+    white-space: normal;
+  }
+}
+
 body.theme-claude .photo-journal-grid {
   align-items: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
