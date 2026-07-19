@@ -1,0 +1,25 @@
+{% assign demo_lang = include.lang | default: "en" %}
+<section class="saw-rule-demo" data-saw-rule-demo data-lang="{{ demo_lang }}" aria-label="{% if demo_lang == 'zh' %}自回避随机游走规则动画{% elsif demo_lang == 'fr' %}Animation de la règle d’auto-évitement{% else %}Self-avoiding walk rule animation{% endif %}">
+  <header class="saw-rule-demo-header">
+    <div>
+      <span class="saw-rule-demo-kicker">{% if demo_lang == 'zh' %}动画定义{% elsif demo_lang == 'fr' %}Définition animée{% else %}Animated definition{% endif %}</span>
+      <h3>{% if demo_lang == 'zh' %}一条会记住自己走过哪里的路径{% elsif demo_lang == 'fr' %}Un chemin qui se souvient de son passé{% else %}A path that remembers where it has been{% endif %}</h3>
+    </div>
+    <button class="saw-rule-replay" type="button" data-saw-rule-replay aria-label="{% if demo_lang == 'zh' %}重新播放动画{% elsif demo_lang == 'fr' %}Rejouer l’animation{% else %}Replay animation{% endif %}" title="{% if demo_lang == 'zh' %}重新播放{% elsif demo_lang == 'fr' %}Rejouer{% else %}Replay{% endif %}">
+      <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <div class="saw-rule-stage">
+    <canvas role="img" aria-label="{% if demo_lang == 'zh' %}路径访问新格点并拒绝重访旧格点的动画{% elsif demo_lang == 'fr' %}Animation d’un chemin qui accepte les nouveaux sommets et refuse les sommets déjà visités{% else %}Animation of a path accepting new sites and rejecting an already visited site{% endif %}"></canvas>
+    <div class="saw-rule-memory" aria-hidden="true">
+      <span class="saw-rule-memory-dot"></span>
+      {% if demo_lang == 'zh' %}已访问的格点会留在记忆中{% elsif demo_lang == 'fr' %}Les sommets visités restent en mémoire{% else %}Visited sites remain in memory{% endif %}
+    </div>
+  </div>
+
+  <div class="saw-rule-status" data-saw-rule-status aria-live="polite">
+    <span class="saw-rule-status-index" data-saw-rule-index></span>
+    <span class="saw-rule-status-message" data-saw-rule-message></span>
+  </div>
+</section>

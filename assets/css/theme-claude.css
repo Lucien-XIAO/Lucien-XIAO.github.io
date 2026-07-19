@@ -4131,6 +4131,164 @@ body.theme-claude .essay-references li + li {
   margin-top: 9px;
 }
 
+body.theme-claude .saw-rule-demo {
+  background: #f7f8f5;
+  border: 1px solid var(--claude-border);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(28, 49, 46, 0.07);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 34px 0 42px;
+  overflow: hidden;
+}
+
+body.theme-claude .saw-rule-demo-header {
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid var(--claude-border);
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 17px 20px 15px;
+}
+
+body.theme-claude .saw-rule-demo-kicker {
+  color: var(--claude-jade);
+  display: block;
+  font-size: 10.5px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+body.theme-claude .saw-rule-demo-header h3 {
+  color: var(--claude-primary);
+  font-family: "Noto Serif SC", "Songti SC", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+body.theme-claude .saw-rule-replay {
+  align-items: center;
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid var(--claude-border);
+  border-radius: 50%;
+  color: var(--claude-primary);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 13px;
+  height: 36px;
+  justify-content: center;
+  padding: 0;
+  transition: border-color 0.18s ease, color 0.18s ease;
+  width: 36px;
+}
+
+body.theme-claude .saw-rule-replay:hover,
+body.theme-claude .saw-rule-replay:focus-visible {
+  border-color: var(--claude-jade);
+  color: var(--claude-jade);
+}
+
+body.theme-claude .saw-rule-replay i {
+  transition: transform 0.2s ease;
+}
+
+body.theme-claude .saw-rule-replay:hover i,
+body.theme-claude .saw-rule-replay:focus-visible i {
+  transform: rotate(-55deg);
+}
+
+body.theme-claude .saw-rule-stage {
+  background: #f7f8f5;
+  position: relative;
+}
+
+body.theme-claude .saw-rule-stage canvas {
+  aspect-ratio: 16 / 7;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+body.theme-claude .saw-rule-memory {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(41, 73, 69, 0.14);
+  border-radius: 4px;
+  color: var(--claude-secondary);
+  display: flex;
+  font-size: 10.5px;
+  gap: 7px;
+  left: 12px;
+  line-height: 1.35;
+  padding: 6px 8px;
+  position: absolute;
+  top: 12px;
+}
+
+body.theme-claude .saw-rule-memory-dot {
+  background: rgba(31, 118, 111, 0.18);
+  border: 2px solid var(--claude-jade);
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+}
+
+body.theme-claude .saw-rule-status {
+  align-items: center;
+  background: #ffffff;
+  border-top: 1px solid var(--claude-border);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: auto minmax(0, 1fr);
+  min-height: 52px;
+  padding: 10px 20px;
+  transition: background 0.2s ease;
+}
+
+body.theme-claude .saw-rule-status-index {
+  background: color-mix(in srgb, var(--claude-jade) 11%, #ffffff);
+  border-radius: 4px;
+  color: var(--claude-jade);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  line-height: 1;
+  min-width: 54px;
+  padding: 7px 8px;
+  text-align: center;
+}
+
+body.theme-claude .saw-rule-status-message {
+  color: var(--claude-text);
+  font-size: 12.5px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+body.theme-claude .saw-rule-status.is-rejected {
+  background: color-mix(in srgb, #c44f3f 6%, #ffffff);
+}
+
+body.theme-claude .saw-rule-status.is-rejected .saw-rule-status-index {
+  background: color-mix(in srgb, #c44f3f 12%, #ffffff);
+  color: #a63f32;
+}
+
+body.theme-claude .saw-rule-status.is-rejected .saw-rule-status-message {
+  color: #8e382e;
+}
+
+body.theme-claude .saw-rule-status.is-complete .saw-rule-status-index {
+  background: var(--claude-primary);
+  color: #ffffff;
+}
+
 body.theme-claude .saw-explorer {
   background: #f7f8f5;
   border: 1px solid var(--claude-border);
@@ -4341,10 +4499,30 @@ body.theme-claude .saw-stat-value {
 }
 
 @media (max-width: 480px) {
+  body.theme-claude .saw-rule-demo-header,
+  body.theme-claude .saw-rule-status,
   body.theme-claude .saw-explorer-header,
   body.theme-claude .saw-control-panel {
     padding-left: 14px;
     padding-right: 14px;
+  }
+
+  body.theme-claude .saw-rule-stage canvas {
+    aspect-ratio: 4 / 3;
+  }
+
+  body.theme-claude .saw-rule-memory {
+    left: 8px;
+    max-width: calc(100% - 16px);
+    top: 8px;
+  }
+
+  body.theme-claude .saw-rule-status {
+    gap: 9px;
+  }
+
+  body.theme-claude .saw-rule-status-message {
+    font-size: 11.5px;
   }
 
   body.theme-claude .saw-canvas-wrap canvas {

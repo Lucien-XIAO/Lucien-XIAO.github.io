@@ -12,7 +12,12 @@
       acceptance: "Pivot 接受率",
       path: "路径",
       start: "起点",
-      end: "终点"
+      end: "终点",
+      ruleStep: "第",
+      ruleStepSuffix: "步",
+      ruleAccepted: "接受：这是一个从未访问过的新格点",
+      ruleRejected: "拒绝：这个格点已经在路径中出现过",
+      ruleComplete: "合法路径：每一个格点最多只访问一次"
     },
     en: {
       random: "Ordinary random walk",
@@ -24,7 +29,12 @@
       acceptance: "Pivot acceptance",
       path: "Path",
       start: "Start",
-      end: "End"
+      end: "End",
+      ruleStep: "Step",
+      ruleStepSuffix: "",
+      ruleAccepted: "Accepted: this site has not been visited before",
+      ruleRejected: "Rejected: this site is already part of the path",
+      ruleComplete: "Valid path: every site is visited at most once"
     },
     fr: {
       random: "Marche aléatoire simple",
@@ -36,7 +46,12 @@
       acceptance: "Acceptation des pivots",
       path: "Trajectoire",
       start: "Départ",
-      end: "Arrivée"
+      end: "Arrivée",
+      ruleStep: "Pas",
+      ruleStepSuffix: "",
+      ruleAccepted: "Accepté : ce sommet n’a jamais été visité",
+      ruleRejected: "Refusé : ce sommet appartient déjà au chemin",
+      ruleComplete: "Chemin valide : chaque sommet est visité au plus une fois"
     }
   };
 
@@ -117,6 +132,270 @@
     var dx = end[0] - start[0];
     var dy = end[1] - start[1];
     return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  function setupRuleDemo(root) {
+    var lang = root.getAttribute("data-lang") || "en";
+    var words = copy[lang] || copy.en;
+    var canvas = root.querySelector("canvas");
+    var context = canvas.getContext("2d");
+    var replay = root.querySelector("[data-saw-rule-replay]");
+    var status = root.querySelector("[data-saw-rule-status]");
+    var statusIndex = root.querySelector("[data-saw-rule-index]");
+    var statusMessage = root.querySelector("[data-saw-rule-message]");
+    var acceptedPath = [
+      [0, 0], [1, 0], [2, 0], [2, 1], [1, 1], [1, 2],
+      [2, 2], [3, 2], [3, 1], [4, 1], [4, 0], [3, 0],
+      [3, -1], [2, -1], [1, -1], [0, -1], [0, -2], [1, -2], [2, -2]
+    ];
+    var rejectedTarget = [2, 0];
+    var preRejectCount = 12;
+    var stepDuration = 360;
+    var rejectionDuration = 2200;
+    var rejectionStart = (preRejectCount - 1) * stepDuration;
+    var rejectionEnd = rejectionStart + rejectionDuration;
+    var drawingEnd = rejectionEnd + (acceptedPath.length - preRejectCount) * stepDuration;
+    var loopDuration = drawingEnd + 1500;
+    var animationFrame = null;
+    var animationStart = null;
+    var lastElapsed = 0;
+    var isVisible = true;
+    var lastStatusKey = "";
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function setCanvasSize() {
+      var rect = canvas.getBoundingClientRect();
+      var pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.max(1, Math.round(rect.width * pixelRatio));
+      canvas.height = Math.max(1, Math.round(rect.height * pixelRatio));
+      context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    }
+
+    function pointToCanvas(point, width, height) {
+      var scale = Math.min(width / 7.4, height / 6.4);
+      return [
+        width / 2 + (point[0] - 2) * scale,
+        height / 2 - point[1] * scale
+      ];
+    }
+
+    function interpolate(from, to, progress) {
+      var eased = progress * progress * (3 - 2 * progress);
+      return [
+        from[0] + (to[0] - from[0]) * eased,
+        from[1] + (to[1] - from[1]) * eased
+      ];
+    }
+
+    function timeline(elapsed) {
+      if (reduceMotion || elapsed >= drawingEnd) {
+        return {
+          points: acceptedPath.slice(),
+          head: null,
+          rejectedProgress: 0,
+          step: acceptedPath.length - 1,
+          phase: "complete"
+        };
+      }
+
+      if (elapsed < rejectionStart) {
+        var beforeSegment = Math.min(preRejectCount - 2, Math.floor(elapsed / stepDuration));
+        var beforeProgress = (elapsed % stepDuration) / stepDuration;
+        return {
+          points: acceptedPath.slice(0, beforeSegment + 1),
+          head: interpolate(acceptedPath[beforeSegment], acceptedPath[beforeSegment + 1], beforeProgress),
+          rejectedProgress: 0,
+          step: beforeSegment + 1,
+          phase: "accepted"
+        };
+      }
+
+      if (elapsed < rejectionEnd) {
+        return {
+          points: acceptedPath.slice(0, preRejectCount),
+          head: null,
+          rejectedProgress: (elapsed - rejectionStart) / rejectionDuration,
+          step: preRejectCount,
+          phase: "rejected"
+        };
+      }
+
+      var afterElapsed = elapsed - rejectionEnd;
+      var afterSegment = Math.min(
+        acceptedPath.length - 2,
+        preRejectCount - 1 + Math.floor(afterElapsed / stepDuration)
+      );
+      var afterProgress = (afterElapsed % stepDuration) / stepDuration;
+      return {
+        points: acceptedPath.slice(0, afterSegment + 1),
+        head: interpolate(acceptedPath[afterSegment], acceptedPath[afterSegment + 1], afterProgress),
+        rejectedProgress: 0,
+        step: afterSegment + 1,
+        phase: "accepted"
+      };
+    }
+
+    function updateStatus(state) {
+      var statusKey = state.phase + ":" + state.step;
+      if (statusKey === lastStatusKey) return;
+      lastStatusKey = statusKey;
+
+      status.classList.toggle("is-rejected", state.phase === "rejected");
+      status.classList.toggle("is-complete", state.phase === "complete");
+      statusIndex.textContent = state.phase === "complete"
+        ? "SAW"
+        : lang === "zh"
+          ? "第" + state.step + "步"
+          : words.ruleStep + " " + state.step + words.ruleStepSuffix;
+      statusMessage.textContent = state.phase === "rejected"
+        ? words.ruleRejected
+        : state.phase === "complete"
+          ? words.ruleComplete
+          : words.ruleAccepted;
+    }
+
+    function drawGrid(width, height, scale) {
+      var centerX = width / 2 - 2 * scale;
+      var centerY = height / 2;
+      context.strokeStyle = "rgba(31, 58, 55, 0.08)";
+      context.lineWidth = 1;
+
+      for (var x = centerX - scale; x <= centerX + scale * 6; x += scale) {
+        context.beginPath();
+        context.moveTo(x, 0);
+        context.lineTo(x, height);
+        context.stroke();
+      }
+      for (var y = centerY - scale * 3; y <= centerY + scale * 3; y += scale) {
+        context.beginPath();
+        context.moveTo(0, y);
+        context.lineTo(width, y);
+        context.stroke();
+      }
+    }
+
+    function draw(elapsed) {
+      var rect = canvas.getBoundingClientRect();
+      var width = rect.width;
+      var height = rect.height;
+      var scale = Math.min(width / 7.4, height / 6.4);
+      var state = timeline(elapsed);
+      var displayPoints = state.points.slice();
+      if (state.head) displayPoints.push(state.head);
+
+      context.clearRect(0, 0, width, height);
+      context.fillStyle = "#f7f8f5";
+      context.fillRect(0, 0, width, height);
+      drawGrid(width, height, scale);
+
+      displayPoints.forEach(function (point, index) {
+        var mapped = pointToCanvas(point, width, height);
+        var isHead = index === displayPoints.length - 1;
+        context.beginPath();
+        context.arc(mapped[0], mapped[1], isHead ? 7 : 5, 0, Math.PI * 2);
+        context.fillStyle = isHead ? "#c44f3f" : "rgba(31, 118, 111, 0.18)";
+        context.fill();
+      });
+
+      if (displayPoints.length > 1) {
+        context.beginPath();
+        displayPoints.forEach(function (point, index) {
+          var mapped = pointToCanvas(point, width, height);
+          if (index === 0) context.moveTo(mapped[0], mapped[1]);
+          else context.lineTo(mapped[0], mapped[1]);
+        });
+        context.strokeStyle = "#2a7a78";
+        context.lineCap = "round";
+        context.lineJoin = "round";
+        context.lineWidth = 4;
+        context.stroke();
+      }
+
+      state.points.forEach(function (point, index) {
+        var mapped = pointToCanvas(point, width, height);
+        context.beginPath();
+        context.arc(mapped[0], mapped[1], index === 0 ? 6 : 4, 0, Math.PI * 2);
+        context.fillStyle = index === 0 ? "#1f766f" : "#f7f8f5";
+        context.fill();
+        context.lineWidth = 2;
+        context.strokeStyle = "#2a7a78";
+        context.stroke();
+      });
+
+      if (state.phase === "rejected") {
+        var from = pointToCanvas(acceptedPath[preRejectCount - 1], width, height);
+        var target = pointToCanvas(rejectedTarget, width, height);
+        var ghost = interpolate(from, target, Math.min(1, state.rejectedProgress * 1.7));
+        var pulse = 10 + 6 * Math.sin(state.rejectedProgress * Math.PI * 3);
+
+        context.save();
+        context.setLineDash([7, 6]);
+        context.beginPath();
+        context.moveTo(from[0], from[1]);
+        context.lineTo(ghost[0], ghost[1]);
+        context.strokeStyle = "#c44f3f";
+        context.lineWidth = 4;
+        context.stroke();
+        context.restore();
+
+        context.beginPath();
+        context.arc(target[0], target[1], pulse, 0, Math.PI * 2);
+        context.strokeStyle = "rgba(196, 79, 63, 0.42)";
+        context.lineWidth = 3;
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(target[0] - 6, target[1] - 6);
+        context.lineTo(target[0] + 6, target[1] + 6);
+        context.moveTo(target[0] + 6, target[1] - 6);
+        context.lineTo(target[0] - 6, target[1] + 6);
+        context.strokeStyle = "#c44f3f";
+        context.lineWidth = 3;
+        context.stroke();
+      }
+
+      updateStatus(state);
+    }
+
+    function frame(now) {
+      if (!isVisible) return;
+      if (animationStart === null) animationStart = now;
+      lastElapsed = (now - animationStart) % loopDuration;
+      draw(lastElapsed);
+      animationFrame = window.requestAnimationFrame(frame);
+    }
+
+    function restart() {
+      animationStart = null;
+      lastElapsed = 0;
+      lastStatusKey = "";
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+      if (reduceMotion) {
+        draw(drawingEnd);
+      } else if (isVisible) {
+        animationFrame = window.requestAnimationFrame(frame);
+      }
+    }
+
+    replay.addEventListener("click", restart);
+
+    var resizeObserver = new ResizeObserver(function () {
+      setCanvasSize();
+      draw(reduceMotion ? drawingEnd : lastElapsed);
+    });
+    resizeObserver.observe(canvas);
+
+    if ("IntersectionObserver" in window) {
+      var visibilityObserver = new IntersectionObserver(function (entries) {
+        isVisible = entries[0].isIntersecting;
+        if (isVisible && !reduceMotion) restart();
+        if (!isVisible && animationFrame) window.cancelAnimationFrame(animationFrame);
+      }, { threshold: 0.15 });
+      visibilityObserver.observe(root);
+    }
+
+    setCanvasSize();
+    restart();
   }
 
   function setup(root) {
@@ -290,6 +569,7 @@
   }
 
   window.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[data-saw-rule-demo]").forEach(setupRuleDemo);
     document.querySelectorAll("[data-saw-explorer]").forEach(setup);
   });
 })();
