@@ -661,16 +661,6 @@
       fr: "Mes travaux actuels portent sur le modèle d'Ising à longue portée et sur des questions liées aux transitions de phase, aux interfaces et aux systèmes de particules en interaction.",
       zh: "我目前的工作围绕长程 Ising 模型，以及相变、界面和相互作用粒子系统中的相关问题展开。",
     },
-    "Mathematical Modeling": {
-      en: "Mathematical Modeling",
-      fr: "Modélisation mathématique",
-      zh: "数学建模",
-    },
-    "I also enjoy probabilistic models arising from collective motion and neuroscience, especially Hawkes processes and stochastic models of neural activity.": {
-      en: "I also enjoy probabilistic models arising from collective motion and neuroscience, especially Hawkes processes and stochastic models of neural activity.",
-      fr: "Je m'intéresse aussi aux modèles probabilistes issus du mouvement collectif et des neurosciences, en particulier aux processus de Hawkes et aux modèles stochastiques de l'activité neuronale.",
-      zh: "我也对来自集体运动和神经科学的概率模型感兴趣，尤其是 Hawkes 过程和神经活动的随机模型。",
-    },
     "M2-PMA · Stochastic Processes": {
       en: "M2-PMA · Stochastic Processes",
       fr: "M2-PMA · Processus stochastiques",
