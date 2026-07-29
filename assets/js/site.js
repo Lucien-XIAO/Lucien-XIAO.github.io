@@ -95,7 +95,7 @@
         var email = decodeContact(link.dataset.contactCode || '');
         var targetSelector = link.dataset.emailTarget;
         var target = targetSelector ? document.querySelector(targetSelector) : null;
-        var fallbackText = email.replace('@', ' [at] ').replace(/\./g, ' dot ');
+        var fallbackText = email.replace('@', ' [at] ').replace(/\./g, ' [dot] ');
 
         try {
           var copied = await copyText(email);
