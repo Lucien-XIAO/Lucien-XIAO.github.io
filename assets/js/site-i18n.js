@@ -706,6 +706,16 @@
       fr: "Modèles d’Ising à plus proches voisins et à longue portée, modèles de hauteur et interfaces aléatoires.",
       zh: "最近邻与长程伊辛模型、高度模型和随机界面。",
     },
+    "Future Interests": {
+      en: "Future Interests",
+      fr: "Perspectives de recherche",
+      zh: "未来研究兴趣",
+    },
+    "Schramm–Loewner evolution (SLE) and KPZ universality.": {
+      en: "Schramm–Loewner evolution (SLE) and KPZ universality.",
+      fr: "Évolution de Schramm–Loewner (SLE) et universalité KPZ.",
+      zh: "Schramm–Loewner 演化（SLE）与 KPZ 普适性。",
+    },
     "M2-PMA · Stochastic Processes": {
       en: "M2-PMA · Stochastic Processes",
       fr: "M2-PMA · Processus stochastiques",
