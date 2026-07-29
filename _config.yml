@@ -7,9 +7,6 @@ timezone: Europe/Paris
 markdown: kramdown
 highlighter: rouge
 
-plugins:
-  - jekyll-sitemap
-
 # Keep build artefacts and private working files out of the deployed site.
 exclude:
   - anaconda_projects/
