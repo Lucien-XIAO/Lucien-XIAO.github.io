@@ -313,11 +313,25 @@ body.theme-claude .home-hero-copy > p {
   max-width: 620px;
 }
 
+body.theme-claude .home-email {
+  border-bottom: 1px solid color-mix(in srgb, var(--site-accent) 42%, transparent);
+  color: var(--site-muted);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 18px;
+  text-decoration: none;
+}
+
+body.theme-claude .home-email:hover {
+  color: var(--site-accent);
+}
+
 body.theme-claude .home-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 32px;
+  margin-top: 26px;
 }
 
 body.theme-claude .home-action {
