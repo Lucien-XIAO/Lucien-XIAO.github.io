@@ -404,10 +404,6 @@ body.theme-claude .section-body a:hover {
   filter: none;
 }
 
-body.theme-claude .home-contact {
-  margin-top: 24px;
-}
-
 /* Plain research list: no cards, icons, numbers, or related-essay blocks. */
 body.theme-claude #interests .section-title {
   border-bottom: 0;
