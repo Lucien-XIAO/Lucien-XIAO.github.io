@@ -946,6 +946,31 @@
       fr: "J'ai suivi ce séminaire de probabilité pendant mon stage de M2 au LAMA / UPEC.",
       zh: "我在 LAMA / UPEC 的 M2 实习期间参加了这个概率研讨班。",
     },
+    "LAMA Probability and Statistics Seminar": {
+      en: "LAMA Probability and Statistics Seminar",
+      fr: "Séminaire de probabilités et statistiques du LAMA",
+      zh: "LAMA 概率与统计研讨班",
+    },
+    "Speaker: Christopher Chalhoub · Imperial College London · Visiting LAMA-UPEC": {
+      en: "Speaker: Christopher Chalhoub · Imperial College London · Visiting LAMA-UPEC",
+      fr: "Intervenant : Christopher Chalhoub · Imperial College London · En visite au LAMA-UPEC",
+      zh: "主讲人：Christopher Chalhoub · 帝国理工学院 · 访问 LAMA-UPEC",
+    },
+    "21 May 2026": {
+      en: "21 May 2026",
+      fr: "21 mai 2026",
+      zh: "2026 年 5 月 21 日",
+    },
+    "Talk:": {
+      en: "Talk:",
+      fr: "Exposé :",
+      zh: "报告题目：",
+    },
+    "I attended this seminar at Université Gustave Eiffel, room 2B111.": {
+      en: "I attended this seminar at Université Gustave Eiffel, room 2B111.",
+      fr: "J'ai assisté à ce séminaire à l'Université Gustave Eiffel, en salle 2B111.",
+      zh: "我在古斯塔夫·埃菲尔大学 2B111 教室参加了这场研讨班。",
+    },
     "Teaching Experience": {
       en: "Teaching Experience",
       fr: "Expérience d'enseignement",
