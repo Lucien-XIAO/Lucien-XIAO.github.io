@@ -409,27 +409,42 @@ body.theme-claude .home-contact {
 }
 
 /* Plain research list: no cards, icons, numbers, or related-essay blocks. */
+body.theme-claude #interests .section-title {
+  border-bottom: 0;
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+
 body.theme-claude .research-list {
-  border-top: 1px solid var(--site-border);
+  border: 0;
+  display: grid;
+  gap: 12px;
 }
 
 body.theme-claude .research-item {
-  border-bottom: 1px solid var(--site-border);
-  display: grid;
-  gap: 28px;
-  grid-template-columns: minmax(150px, 0.38fr) minmax(0, 1fr);
-  padding: 21px 0;
+  border: 0;
+  display: block;
+  padding: 0;
 }
 
 body.theme-claude .research-item h4 {
+  display: inline;
   font-size: 15.5px;
   font-weight: 650;
   line-height: 1.45;
   margin: 0;
 }
 
+body.theme-claude .research-item h4::after {
+  color: var(--site-muted);
+  content: " — ";
+  font-weight: 400;
+}
+
 body.theme-claude .research-item p {
   color: var(--site-muted);
+  display: inline;
+  font-size: 15.5px;
   margin: 0;
 }
 
@@ -854,15 +869,6 @@ body.theme-claude a {
   body.theme-claude .section-title,
   body.theme-claude .section.is-collapsible .section-title {
     font-size: 22px;
-  }
-
-  body.theme-claude .research-item {
-    display: block;
-    padding: 18px 0;
-  }
-
-  body.theme-claude .research-item h4 {
-    margin-bottom: 7px;
   }
 
   body.theme-claude .page-wrapper {

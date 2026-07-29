@@ -606,10 +606,10 @@
       fr: "Centres d'intérêt",
       zh: "研究兴趣",
     },
-    "Research Directions": {
-      en: "Research Directions",
-      fr: "Axes de recherche",
-      zh: "研究方向",
+    "Research": {
+      en: "Research",
+      fr: "Recherche",
+      zh: "研究",
     },
     "News": {
       en: "News",
@@ -681,20 +681,20 @@
       fr: "Processus stochastiques",
       zh: "随机过程",
     },
-    "I am interested in random walks, Markov and non-Markovian dynamics, and the probabilistic structures behind memory effects.": {
-      en: "I am interested in random walks, Markov and non-Markovian dynamics, and the probabilistic structures behind memory effects.",
-      fr: "Je m'intéresse aux marches aléatoires, aux dynamiques markoviennes et non markoviennes, ainsi qu'aux structures probabilistes derrière les effets de mémoire.",
-      zh: "我关注随机游走、马尔可夫与非马尔可夫动力学，以及记忆效应背后的概率结构。",
+    "Random walks, Markov and non-Markovian dynamics, and memory effects.": {
+      en: "Random walks, Markov and non-Markovian dynamics, and memory effects.",
+      fr: "Marches aléatoires, dynamiques markoviennes et non markoviennes, et effets de mémoire.",
+      zh: "随机游走、马尔可夫与非马尔可夫动力学，以及记忆效应。",
     },
     "Statistical Mechanics": {
       en: "Statistical Mechanics",
       fr: "Mécanique statistique",
       zh: "统计力学",
     },
-    "My current work concerns the long-range Ising model and related questions on phase transitions, interfaces, and interacting particle systems.": {
-      en: "My current work concerns the long-range Ising model and related questions on phase transitions, interfaces, and interacting particle systems.",
-      fr: "Mes travaux actuels portent sur le modèle d'Ising à longue portée et sur des questions liées aux transitions de phase, aux interfaces et aux systèmes de particules en interaction.",
-      zh: "我目前的工作围绕长程 Ising 模型，以及相变、界面和相互作用粒子系统中的相关问题展开。",
+    "Long-range Ising models, phase transitions, and random interfaces.": {
+      en: "Long-range Ising models, phase transitions, and random interfaces.",
+      fr: "Modèles d’Ising à longue portée, transitions de phase et interfaces aléatoires.",
+      zh: "长程 Ising 模型、相变与随机界面。",
     },
     "M2-PMA · Stochastic Processes": {
       en: "M2-PMA · Stochastic Processes",
