@@ -38,6 +38,11 @@
       fr: "Accueil",
       zh: "首页",
     },
+    "nav.research": {
+      en: "Research",
+      fr: "Recherche",
+      zh: "研究",
+    },
     "nav.publications": {
       en: "Publications",
       fr: "Publications",
@@ -73,6 +78,11 @@
       fr: "Carnet",
       zh: "札记",
     },
+    "nav.more": {
+      en: "More",
+      fr: "Plus",
+      zh: "更多",
+    },
     "theme.toggle": {
       en: "Toggle dark mode",
       fr: "Changer le mode sombre",
@@ -92,6 +102,11 @@
       en: "Incoming PhD researcher at Université Gustave Eiffel · October 2026",
       fr: "Prochainement doctorant à l’Université Gustave Eiffel · Octobre 2026",
       zh: "即将于 2026 年 10 月在古斯塔夫·埃菲尔大学攻读博士",
+    },
+    "home.hero.intro": {
+      en: "I work on probability and mathematical statistical mechanics, with a focus on the long-range Ising model and random interfaces.",
+      fr: "Je travaille en probabilités et en mécanique statistique mathématique, notamment sur le modèle d’Ising à longue portée et les interfaces aléatoires.",
+      zh: "我的研究方向是概率论与数学统计力学，重点关注长程伊辛模型和随机界面。",
     },
     "home.hero.cv": {
       en: "View CV",

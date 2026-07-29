@@ -3,16 +3,13 @@
 <head>
   {% include head.html %}
 </head>
-<body class="theme-claude has-paris-strip">
+<body class="theme-claude{% if page.url == '/' %} home-page{% endif %}">
   <a class="skip-link" href="#main-content" data-i18n="accessibility.skip">Skip to main content</a>
-  {% include math_float.html %}
   {% include nav.html %}
-  <div class="paris-photo-strip" aria-label="Paris skyline">
-    <img src="/assets/img/paris-banner.jpg?v=2" alt="Paris skyline at night over the Seine" decoding="async" fetchpriority="high" />
-    <span class="photo-strip-caption">Paris at night over the Seine</span>
-  </div>
   <div class="wrapper">
-    {% include sidebar.html %}
+    {% unless page.url == "/" %}
+      {% include sidebar.html %}
+    {% endunless %}
     <main class="content" id="main-content">
       {{ content }}
     </main>

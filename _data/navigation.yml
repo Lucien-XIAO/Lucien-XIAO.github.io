@@ -1,39 +1,41 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+primary:
+  - title: "Research"
+    i18n_key: nav.research
+    url: /#interests
 
-main:
-    
   - title: "Publications"
     i18n_key: nav.publications
     url: /pub/
-
-  - title: "Talks"
-    i18n_key: nav.talks
-    url: /talks/    
+    active_path: /pub/
 
   - title: "Teaching"
     i18n_key: nav.teaching
-    url: /teaching/   
-    
+    url: /teaching/
+    active_path: /teaching/
+
   - title: "CV"
     i18n_key: nav.cv
     url: /cv/
-  
+    active_path: /cv/
+
+more:
+  - title: "Talks"
+    i18n_key: nav.talks
+    url: /talks/
+    active_path: /talks/
+
   - title: "M2-PMA"
     i18n_key: nav.pma
-    url: /PMA/   
+    url: /PMA/
+    active_path: /PMA/
 
   - title: "MathReader"
     i18n_key: nav.mathreader
     url: /mathreader/
+    active_path: /mathreader/
 
   - title: "Notebook"
     i18n_key: nav.misc
-    url: /misc/   
+    url: /misc/
+    active_path: /misc/
     

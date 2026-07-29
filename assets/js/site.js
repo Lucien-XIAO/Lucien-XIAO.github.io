@@ -1,5 +1,5 @@
 /* Site-wide interactive behaviour: navigation state, email obfuscation,
-   section reveal/collapse, and the light/dark theme toggle.
+   and the light/dark theme toggle.
    Loaded with `defer` from _layouts/default.html. */
 (function () {
   'use strict';
@@ -108,80 +108,6 @@
       });
     });
 
-    /* IntersectionObserver: reveal sections on scroll */
-    var sections = document.querySelectorAll('.section');
-    var revealObserver = window.IntersectionObserver
-      ? new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' })
-      : null;
-
-    sections.forEach(function (el, index) {
-      el.style.transitionDelay = Math.min(index * 60, 300) + 'ms';
-
-      if (revealObserver) {
-        revealObserver.observe(el);
-      } else {
-        el.classList.add('visible');
-      }
-
-      var title = el.querySelector('.section-title');
-      var body = el.querySelector('.section-body');
-      if (!title || !body) return;
-
-      var sectionId = el.id || 'section-' + (index + 1);
-      if (!el.id) el.id = sectionId;
-      if (!body.id) body.id = sectionId + '-body';
-
-      el.classList.add('is-collapsible');
-      title.setAttribute('role', 'button');
-      title.setAttribute('tabindex', '0');
-      title.setAttribute('aria-controls', body.id);
-      title.setAttribute('aria-expanded', 'true');
-
-      var openSection = function () {
-        el.classList.remove('is-collapsed');
-        title.setAttribute('aria-expanded', 'true');
-        body.style.height = '0px';
-        body.offsetHeight; // eslint-disable-line no-unused-expressions
-        body.style.height = body.scrollHeight + 'px';
-      };
-
-      var closeSection = function () {
-        title.setAttribute('aria-expanded', 'false');
-        body.style.height = body.scrollHeight + 'px';
-        body.offsetHeight; // eslint-disable-line no-unused-expressions
-        el.classList.add('is-collapsed');
-        body.style.height = '0px';
-      };
-
-      var toggleSection = function () {
-        if (el.classList.contains('is-collapsed')) {
-          openSection();
-        } else {
-          closeSection();
-        }
-      };
-
-      body.addEventListener('transitionend', function (event) {
-        if (event.target === body && event.propertyName === 'height' && !el.classList.contains('is-collapsed')) {
-          body.style.height = 'auto';
-        }
-      });
-
-      title.addEventListener('click', toggleSection);
-      title.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          toggleSection();
-        }
-      });
-    });
   });
 
   /* Theme toggle (runs before DOMContentLoaded thanks to `defer`). */
