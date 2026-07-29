@@ -118,6 +118,16 @@
       fr: "Publications",
       zh: "论文",
     },
+    "home.hero.scroll": {
+      en: "Scroll",
+      fr: "Défiler",
+      zh: "下滑",
+    },
+    "home.hero.scroll_label": {
+      en: "Continue to About Me",
+      fr: "Accéder à la présentation",
+      zh: "继续查看个人简介",
+    },
     "home.hero.contact": {
       en: "Contact",
       fr: "Contact",
