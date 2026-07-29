@@ -314,12 +314,21 @@ body.theme-claude .home-hero-copy > p {
 }
 
 body.theme-claude .home-email {
+  appearance: none;
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--site-accent) 42%, transparent);
   color: var(--site-muted);
+  cursor: pointer;
   display: inline-block;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 500;
+  line-height: 1.5;
   margin-top: 18px;
+  padding: 0;
   text-decoration: none;
 }
 
