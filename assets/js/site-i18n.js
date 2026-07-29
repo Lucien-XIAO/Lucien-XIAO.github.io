@@ -786,16 +786,6 @@
       fr: "Double licence en mathématiques et physique",
       zh: "数学与物理双学士学位",
     },
-    "Wuhan No. 3 Middle School, Wuhan": {
-      en: "Wuhan No. 3 Middle School, Wuhan",
-      fr: "Lycée n° 3 de Wuhan, Wuhan",
-      zh: "武汉第三中学，武汉",
-    },
-    "Science track: Chinese, Mathematics, English, Physics, Chemistry, and Biology": {
-      en: "Science track: Chinese, Mathematics, English, Physics, Chemistry, and Biology",
-      fr: "Filière scientifique : chinois, mathématiques, anglais, physique, chimie et biologie",
-      zh: "理科方向：语文、数学、英语、物理、化学和生物",
-    },
     "M2 Research Intern": {
       en: "M2 Research Intern",
       fr: "Stagiaire de recherche M2",
@@ -1095,16 +1085,6 @@
       en: "Completed the MIPI (Math, CS, Physics, Engineering) track in the first year, followed by a Physics Major and Mathematics Minor.",
       fr: "Première année en parcours MIPI (mathématiques, informatique, physique, ingénierie), puis majeure physique et mineure mathématiques.",
       zh: "第一年完成 MIPI（数学、计算机、物理、工程）方向，之后主修物理并辅修数学。",
-    },
-    "High School Diploma, Science Track": {
-      en: "High School Diploma, Science Track",
-      fr: "Baccalauréat, filière scientifique",
-      zh: "高中毕业，理科方向",
-    },
-    "Coursework: Chinese, Mathematics, English, Physics, Chemistry, and Biology.": {
-      en: "Coursework: Chinese, Mathematics, English, Physics, Chemistry, and Biology.",
-      fr: "Cours suivis : chinois, mathématiques, anglais, physique, chimie et biologie.",
-      zh: "课程：语文、数学、英语、物理、化学和生物。",
     },
     "Skills": {
       en: "Skills",
