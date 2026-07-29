@@ -104,9 +104,9 @@
       zh: "即将于 2026 年 10 月在古斯塔夫·埃菲尔大学攻读博士",
     },
     "home.hero.intro": {
-      en: "I work on probability and mathematical statistical mechanics, with a focus on the long-range Ising model and random interfaces.",
-      fr: "Je travaille en probabilités et en mécanique statistique mathématique, notamment sur le modèle d’Ising à longue portée et les interfaces aléatoires.",
-      zh: "我的研究方向是概率论与数学统计力学，重点关注长程伊辛模型和随机界面。",
+      en: "I work in probability and mathematical statistical mechanics, with a focus on Ising models (nearest-neighbor and long-range), height models, and random interfaces.",
+      fr: "Je travaille en probabilités et en mécanique statistique mathématique, avec un intérêt particulier pour les modèles d’Ising (à plus proches voisins et à longue portée), les modèles de hauteur et les interfaces aléatoires.",
+      zh: "我的研究方向是概率论与数学统计力学，重点关注伊辛模型（最近邻与长程）、高度模型和随机界面。",
     },
     "home.hero.cv": {
       en: "View CV",
@@ -691,10 +691,10 @@
       fr: "Mécanique statistique",
       zh: "统计力学",
     },
-    "Long-range Ising models, phase transitions, and random interfaces.": {
-      en: "Long-range Ising models, phase transitions, and random interfaces.",
-      fr: "Modèles d’Ising à longue portée, transitions de phase et interfaces aléatoires.",
-      zh: "长程 Ising 模型、相变与随机界面。",
+    "Nearest-neighbor and long-range Ising models, height models, and random interfaces.": {
+      en: "Nearest-neighbor and long-range Ising models, height models, and random interfaces.",
+      fr: "Modèles d’Ising à plus proches voisins et à longue portée, modèles de hauteur et interfaces aléatoires.",
+      zh: "最近邻与长程伊辛模型、高度模型和随机界面。",
     },
     "M2-PMA · Stochastic Processes": {
       en: "M2-PMA · Stochastic Processes",
