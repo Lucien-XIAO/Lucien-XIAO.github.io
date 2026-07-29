@@ -1292,6 +1292,24 @@ body.theme-claude .exp-org {
   font-weight: 500;
 }
 
+body.theme-claude .exp-org .speaker-name {
+  color: var(--site-accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--site-accent) 42%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+body.theme-claude .exp-org a.speaker-name:hover {
+  text-decoration-color: var(--site-accent);
+}
+
+body.theme-claude .exp-org .speaker-affiliation {
+  color: var(--site-muted);
+  font-weight: 500;
+}
+
 body.theme-claude .exp-date {
   background: transparent;
   border: 1px solid var(--site-border);

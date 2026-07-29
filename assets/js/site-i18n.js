@@ -956,20 +956,30 @@
       fr: "Intervenant : Christopher Chalhoub · Imperial College London · En visite au LAMA-UPEC",
       zh: "主讲人：Christopher Chalhoub · 帝国理工学院 · 访问 LAMA-UPEC",
     },
+    "· Imperial College London · Visiting LAMA-UPEC": {
+      en: "· Imperial College London · Visiting LAMA-UPEC",
+      fr: "· Imperial College London · En visite au LAMA-UPEC",
+      zh: "· 帝国理工学院 · 访问 LAMA-UPEC",
+    },
     "21 May 2026": {
       en: "21 May 2026",
       fr: "21 mai 2026",
       zh: "2026 年 5 月 21 日",
+    },
+    "May 2026": {
+      en: "May 2026",
+      fr: "mai 2026",
+      zh: "2026 年 5 月",
     },
     "Talk:": {
       en: "Talk:",
       fr: "Exposé :",
       zh: "报告题目：",
     },
-    "I attended this seminar at Université Gustave Eiffel, room 2B111.": {
-      en: "I attended this seminar at Université Gustave Eiffel, room 2B111.",
-      fr: "J'ai assisté à ce séminaire à l'Université Gustave Eiffel, en salle 2B111.",
-      zh: "我在古斯塔夫·埃菲尔大学 2B111 教室参加了这场研讨班。",
+    "I attended this seminar on Thursday, 21 May 2026 at Université Gustave Eiffel, room 2B111.": {
+      en: "I attended this seminar on Thursday, 21 May 2026 at Université Gustave Eiffel, room 2B111.",
+      fr: "J'ai assisté à ce séminaire le jeudi 21 mai 2026 à l'Université Gustave Eiffel, en salle 2B111.",
+      zh: "我于 2026 年 5 月 21 日星期四在古斯塔夫·埃菲尔大学 2B111 教室参加了这场研讨班。",
     },
     "Teaching Experience": {
       en: "Teaching Experience",
