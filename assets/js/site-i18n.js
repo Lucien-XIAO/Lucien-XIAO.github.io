@@ -1006,6 +1006,46 @@
       fr: "Formation, parcours académique, expérience de recherche et compétences.",
       zh: "教育背景、学术经历、研究经验与技能。",
     },
+    "A concise record of my academic training and doctoral path.": {
+      en: "A concise record of my academic training and doctoral path.",
+      fr: "Un aperçu concis de ma formation académique et de mon parcours doctoral.",
+      zh: "我的学术训练与博士阶段经历概览。",
+    },
+    "Probability & Mathematical Statistical Mechanics": {
+      en: "Probability & Mathematical Statistical Mechanics",
+      fr: "Probabilités et mécanique statistique mathématique",
+      zh: "概率论与数学统计力学",
+    },
+    "From Oct. 2026": {
+      en: "From Oct. 2026",
+      fr: "À partir d’oct. 2026",
+      zh: "自 2026 年 10 月起",
+    },
+    "PhD in Mathematics": {
+      en: "PhD in Mathematics",
+      fr: "Doctorat en mathématiques",
+      zh: "数学博士",
+    },
+    "Incoming": {
+      en: "Incoming",
+      fr: "À venir",
+      zh: "即将开始",
+    },
+    "Doctoral project:": {
+      en: "Doctoral project:",
+      fr: "Sujet de thèse :",
+      zh: "博士课题：",
+    },
+    "Interface Models in Mathematical Statistical Mechanics": {
+      en: "Interface Models in Mathematical Statistical Mechanics",
+      fr: "Modèles d’interfaces en mécanique statistique mathématique",
+      zh: "数学统计力学中的界面模型",
+    },
+    "Supervised by Arnaud Le Ny (LAMA, UPEC) and Pierre Monmarché (LAMA, UGE).": {
+      en: "Supervised by Arnaud Le Ny (LAMA, UPEC) and Pierre Monmarché (LAMA, UGE).",
+      fr: "Sous la direction d’Arnaud Le Ny (LAMA, UPEC) et de Pierre Monmarché (LAMA, UGE).",
+      zh: "指导教师为 Arnaud Le Ny（LAMA，UPEC）和 Pierre Monmarché（LAMA，UGE）。",
+    },
     "Probability and random models": {
       en: "Probability and random models",
       fr: "Probabilités et modèles aléatoires",
@@ -1025,6 +1065,11 @@
       en: "Yellow Crane Tower, Wuhan",
       fr: "Tour de la Grue jaune, Wuhan",
       zh: "武汉黄鹤楼",
+    },
+    "Photographed near Guanghua Road and Aomen Road, Wuhan": {
+      en: "Photographed near Guanghua Road and Aomen Road, Wuhan",
+      fr: "Photographié près de Guanghua Road et Aomen Road, Wuhan",
+      zh: "拍摄于武汉光华路与澳门路附近",
     },
     "Paris at night over the Seine": {
       en: "Paris at night over the Seine",
