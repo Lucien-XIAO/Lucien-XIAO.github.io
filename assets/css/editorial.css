@@ -1005,3 +1005,780 @@ body.theme-claude a {
     animation: none;
   }
 }
+
+/* ==========================================================
+   Interior pages
+   One quiet editorial language across the academic site.
+   ========================================================== */
+
+body.theme-claude.interior-page .page-wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1040px;
+  min-height: 100svh;
+  padding: 112px 32px 88px;
+  width: 100%;
+}
+
+body.theme-claude.interior-page .page-main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body.theme-claude .publications-page,
+body.theme-claude .teaching-page,
+body.theme-claude .talks-page,
+body.theme-claude .cv-page,
+body.theme-claude .mathreader-page {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+body.theme-claude .notebook-page {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/* ---------- Shared page introductions ---------- */
+
+body.theme-claude .publications-hero,
+body.theme-claude .teaching-hero,
+body.theme-claude .talks-hero,
+body.theme-claude .cv-hero {
+  align-items: end;
+  border-bottom: 1px solid var(--site-border);
+  display: grid;
+  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  margin: 0 0 44px;
+  padding: 0 0 34px;
+}
+
+body.theme-claude .publications-hero-copy,
+body.theme-claude .teaching-hero-copy,
+body.theme-claude .talks-hero-copy,
+body.theme-claude .cv-hero-copy,
+body.theme-claude .notebook-hero-copy,
+body.theme-claude .notebook-detail-hero {
+  border-left: 0;
+  max-width: 680px;
+  padding-left: 0;
+}
+
+body.theme-claude .publications-kicker,
+body.theme-claude .teaching-kicker,
+body.theme-claude .talks-kicker,
+body.theme-claude .cv-kicker,
+body.theme-claude .notebook-kicker,
+body.theme-claude .mathreader-kicker {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: var(--site-accent);
+  display: block;
+  font-size: 10.5px;
+  font-weight: 650;
+  letter-spacing: 0.15em;
+  margin: 0 0 13px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+body.theme-claude .publications-hero h1,
+body.theme-claude .teaching-hero h1,
+body.theme-claude .talks-hero h1,
+body.theme-claude .cv-hero h1,
+body.theme-claude .notebook-hero h1,
+body.theme-claude .notebook-detail-hero h1,
+body.theme-claude .mathreader-hero h1 {
+  color: var(--site-text);
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: clamp(36px, 5vw, 46px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  margin: 0 0 14px;
+  max-width: 760px;
+}
+
+body.theme-claude .publications-lede,
+body.theme-claude .teaching-lede,
+body.theme-claude .talks-lede,
+body.theme-claude .cv-lede,
+body.theme-claude .notebook-lede,
+body.theme-claude .mathreader-lead {
+  color: var(--site-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 650px;
+}
+
+body.theme-claude .publications-hero-photo,
+body.theme-claude .teaching-hero-photo,
+body.theme-claude .talks-hero-photo {
+  justify-self: end;
+  margin: 0;
+  max-width: 240px;
+  width: 100%;
+}
+
+body.theme-claude .publications-hero-photo img,
+body.theme-claude .teaching-hero-photo img,
+body.theme-claude .talks-hero-photo img {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+  display: block;
+  filter: none;
+  object-fit: cover;
+  width: 100%;
+}
+
+body.theme-claude .cv-hero {
+  grid-template-columns: minmax(0, 1fr) 190px;
+}
+
+body.theme-claude .cv-hero-photo {
+  justify-self: end;
+  margin: 0;
+  max-width: 190px;
+  width: 100%;
+}
+
+body.theme-claude .cv-hero-photo img {
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+  filter: none;
+  object-fit: cover;
+  width: 100%;
+}
+
+body.theme-claude .publications-hero-photo figcaption,
+body.theme-claude .teaching-hero-photo figcaption,
+body.theme-claude .talks-hero-photo figcaption,
+body.theme-claude .cv-hero-photo figcaption {
+  color: var(--site-muted);
+  font-size: 11px;
+  line-height: 1.45;
+  margin-top: 8px;
+  text-align: left;
+}
+
+body.theme-claude .cv-hero-meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 21px;
+}
+
+body.theme-claude .cv-hero-meta span {
+  border: 0;
+  border-radius: 0;
+  color: var(--site-muted);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0;
+}
+
+body.theme-claude .cv-hero-meta span + span::before {
+  color: var(--site-border);
+  content: "·";
+  margin: 0 9px;
+}
+
+body.theme-claude .cv-section-title,
+body.theme-claude .teaching-period-title,
+body.theme-claude .notebook-section-title,
+body.theme-claude .mathreader-section h2 {
+  border: 0;
+  border-bottom: 1px solid var(--site-border);
+  color: var(--site-text);
+  display: block;
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+}
+
+/* ---------- Publications, teaching, talks and CV ---------- */
+
+body.theme-claude .empty-state-card {
+  align-items: flex-start;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--site-border);
+  border-radius: 0;
+  border-top: 1px solid var(--site-border);
+  box-shadow: none;
+  margin: 0;
+  max-width: none;
+  padding: 34px 0;
+  text-align: left;
+}
+
+body.theme-claude .empty-state-card:hover {
+  border-color: var(--site-border);
+}
+
+body.theme-claude .empty-state-icon {
+  color: var(--site-accent);
+  font-size: 22px;
+  margin-bottom: 13px;
+}
+
+body.theme-claude .empty-state-title {
+  color: var(--site-text);
+  font-size: 17px;
+  font-weight: 650;
+  margin-bottom: 6px;
+}
+
+body.theme-claude .empty-state-desc {
+  color: var(--site-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+body.theme-claude .experience-container {
+  display: block;
+}
+
+body.theme-claude .exp-card {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--site-border);
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  padding: 24px 0;
+}
+
+body.theme-claude .exp-card:first-child {
+  border-top: 1px solid var(--site-border);
+}
+
+body.theme-claude .exp-card::before {
+  display: none;
+}
+
+body.theme-claude .exp-card:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+body.theme-claude .exp-header {
+  gap: 16px;
+  margin-bottom: 11px;
+}
+
+body.theme-claude .exp-role {
+  color: var(--site-text);
+  font-size: 16px;
+  font-weight: 650;
+}
+
+body.theme-claude .exp-org {
+  color: var(--site-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body.theme-claude .exp-date {
+  background: transparent;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  color: var(--site-muted);
+  font-size: 11.5px;
+  font-weight: 550;
+  letter-spacing: 0;
+  padding: 4px 7px;
+  text-transform: none;
+}
+
+body.theme-claude .exp-details {
+  gap: 5px;
+}
+
+body.theme-claude .exp-details li {
+  color: var(--site-muted);
+  font-size: 14.5px;
+  line-height: 1.65;
+  padding-left: 16px;
+}
+
+body.theme-claude .exp-details li::before {
+  color: var(--site-accent);
+  content: "·";
+  font-size: 18px;
+  font-weight: 700;
+  top: -1px;
+}
+
+body.theme-claude .cv-page .section-body {
+  border-top: 1px solid var(--site-border);
+}
+
+body.theme-claude .cv-page .timeline-item {
+  background: transparent;
+  border: 0 !important;
+  border-bottom: 1px solid var(--site-border) !important;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 21px 0;
+}
+
+body.theme-claude .cv-page .institution-logo {
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+  height: 48px;
+  object-fit: contain;
+  width: 48px;
+}
+
+body.theme-claude .cv-page .exp-title {
+  color: var(--site-text);
+  font-size: 15.5px;
+  margin-bottom: 2px;
+}
+
+body.theme-claude .cv-page .exp-detail,
+body.theme-claude .cv-page .exp-period,
+body.theme-claude .cv-page li {
+  color: var(--site-muted);
+  font-size: 14px;
+}
+
+/* ---------- Notebook and related indexes ---------- */
+
+body.theme-claude .notebook-hero {
+  border-bottom: 1px solid var(--site-border);
+  margin: 0 0 34px;
+  padding: 0 0 32px;
+}
+
+body.theme-claude .notebook-detail-hero {
+  border-bottom: 1px solid var(--site-border);
+  margin: 0 0 28px;
+  padding: 0 0 28px;
+}
+
+body.theme-claude .notebook-grid,
+body.theme-claude .lab-grid,
+body.theme-claude .photo-journal-grid {
+  gap: 12px;
+}
+
+body.theme-claude .notebook-card,
+body.theme-claude .lab-card,
+body.theme-claude .notebook-placeholder,
+body.theme-claude .photo-journal-card,
+body.theme-claude .essay-card,
+body.theme-claude .project-card {
+  background: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+}
+
+body.theme-claude .notebook-card,
+body.theme-claude .lab-card {
+  min-height: 0;
+  padding: 21px;
+}
+
+body.theme-claude .notebook-card:hover,
+body.theme-claude .lab-card:hover,
+body.theme-claude .essay-card:hover,
+body.theme-claude .project-card:hover {
+  border-color: var(--site-accent);
+  box-shadow: none;
+  transform: none;
+}
+
+body.theme-claude .notebook-card-kicker {
+  color: var(--site-accent);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.13em;
+  margin-bottom: 10px;
+}
+
+body.theme-claude .notebook-card h2,
+body.theme-claude .lab-card h2,
+body.theme-claude .notebook-placeholder h2 {
+  color: var(--site-text);
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+body.theme-claude .notebook-card p,
+body.theme-claude .lab-card p,
+body.theme-claude .notebook-placeholder p {
+  color: var(--site-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+body.theme-claude .notebook-card-tags {
+  gap: 10px;
+  padding-top: 18px;
+}
+
+body.theme-claude .notebook-card-tags span {
+  border: 0;
+  border-radius: 0;
+  color: var(--site-muted);
+  font-size: 11px;
+  padding: 0;
+}
+
+body.theme-claude .notebook-card-tags span + span::before {
+  color: var(--site-border);
+  content: "·";
+  margin-right: 10px;
+}
+
+body.theme-claude .notebook-card-action {
+  color: var(--site-accent);
+  font-size: 12px;
+  margin-top: 17px;
+}
+
+/* ---------- MathReader ---------- */
+
+body.theme-claude .mathreader-hero {
+  align-items: center;
+  border-bottom: 1px solid var(--site-border);
+  gap: 46px;
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 0.8fr);
+  padding: 0 0 38px;
+}
+
+body.theme-claude .mathreader-actions {
+  gap: 9px;
+  margin-top: 22px;
+}
+
+body.theme-claude .mathreader-actions a,
+body.theme-claude .mathreader-status a {
+  background: transparent;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  color: var(--site-text);
+  min-height: 39px;
+  padding: 0 13px;
+}
+
+body.theme-claude .mathreader-actions a:first-child {
+  background: var(--site-accent);
+  border-color: var(--site-accent);
+  color: var(--site-bg);
+}
+
+body.theme-claude .mathreader-actions a:hover,
+body.theme-claude .mathreader-status a:hover {
+  background: transparent;
+  border-color: var(--site-accent);
+  color: var(--site-accent);
+  transform: none;
+}
+
+body.theme-claude .mathreader-actions a:first-child:hover {
+  background: var(--site-accent);
+  color: var(--site-bg);
+}
+
+body.theme-claude .mathreader-window {
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+}
+
+body.theme-claude .mathreader-window:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+body.theme-claude .mathreader-place-photo {
+  margin-top: 34px;
+  max-width: 700px;
+}
+
+body.theme-claude .mathreader-place-photo img {
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+  filter: none;
+}
+
+body.theme-claude .mathreader-section {
+  margin-top: 46px;
+}
+
+body.theme-claude .mathreader-feature-grid,
+body.theme-claude .mathreader-detail-grid {
+  gap: 10px;
+}
+
+body.theme-claude .mathreader-feature,
+body.theme-claude .mathreader-detail-grid > div {
+  background: transparent;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  padding: 18px;
+}
+
+body.theme-claude .mathreader-feature:hover,
+body.theme-claude .mathreader-detail-grid > div:hover {
+  border-color: var(--site-border);
+  transform: none;
+}
+
+body.theme-claude .mathreader-feature i {
+  color: var(--site-accent);
+  font-size: 18px;
+}
+
+body.theme-claude .mathreader-feature h3,
+body.theme-claude .mathreader-detail-grid h3,
+body.theme-claude .mathreader-step h3 {
+  color: var(--site-text);
+  font-size: 15px;
+  font-weight: 650;
+}
+
+body.theme-claude .mathreader-feature p,
+body.theme-claude .mathreader-detail-grid p,
+body.theme-claude .mathreader-step p,
+body.theme-claude .mathreader-status p {
+  color: var(--site-muted);
+}
+
+body.theme-claude .mathreader-workflow {
+  border-left: 1px solid var(--site-border);
+}
+
+body.theme-claude .mathreader-step::before {
+  background: var(--site-accent);
+  border-color: var(--site-bg);
+}
+
+body.theme-claude .mathreader-status {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--site-border);
+  border-radius: 0;
+  border-top: 1px solid var(--site-border);
+  padding: 21px 0;
+}
+
+/* ---------- PMA guide ---------- */
+
+body.theme-claude.pma-page .pma-campus-strip {
+  height: clamp(120px, 12vw, 170px);
+  margin-top: 64px;
+}
+
+body.theme-claude.pma-page .pma-campus-strip img {
+  filter: saturate(0.78) contrast(0.98);
+}
+
+body.theme-claude.pma-page .pma-campus-caption {
+  background: rgba(var(--claude-paper-rgb), 0.88);
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  color: var(--site-text);
+}
+
+body.theme-claude.pma-page .pma-wrapper {
+  max-width: 960px;
+  padding: 30px 32px 80px;
+}
+
+body.theme-claude.pma-page .pma-breadcrumb {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 34px;
+  padding: 0;
+}
+
+body.theme-claude.pma-page .pma-hero {
+  border-bottom: 1px solid var(--site-border);
+  margin-bottom: 48px;
+  padding-bottom: 34px;
+}
+
+body.theme-claude.pma-page .pma-hero::before {
+  display: none;
+}
+
+body.theme-claude.pma-page .pma-hero-label {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: var(--site-accent);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  margin-bottom: 13px;
+  padding: 0;
+}
+
+body.theme-claude.pma-page .pma-hero h1 {
+  color: var(--site-text);
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: clamp(34px, 5vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+body.theme-claude.pma-page .pma-hero-links a,
+body.theme-claude.pma-page .resource-btn,
+body.theme-claude.pma-page .parcours-doc-link {
+  background: transparent;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+  color: var(--site-text);
+  transform: none;
+}
+
+body.theme-claude.pma-page .pma-hero-links a:hover,
+body.theme-claude.pma-page .resource-btn:hover,
+body.theme-claude.pma-page .parcours-doc-link:hover {
+  background: transparent;
+  border-color: var(--site-accent);
+  box-shadow: none;
+  color: var(--site-accent);
+  transform: none;
+}
+
+body.theme-claude.pma-page .pma-hero-links a:hover i,
+body.theme-claude.pma-page .resource-btn:hover i {
+  color: var(--site-accent);
+}
+
+body.theme-claude.pma-page .pma-section {
+  margin-bottom: 48px;
+}
+
+body.theme-claude.pma-page .pma-section-title {
+  border-bottom: 1px solid var(--site-border);
+  color: var(--site-text);
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 21px;
+  font-weight: 600;
+  gap: 9px;
+  padding-bottom: 10px;
+}
+
+body.theme-claude.pma-page .pma-section-title::before {
+  display: none;
+}
+
+body.theme-claude.pma-page .pma-section-title i {
+  color: var(--site-accent);
+  font-size: 15px;
+}
+
+body.theme-claude.pma-page .info-box {
+  background: transparent;
+  border: 0;
+  border-left: 2px solid var(--site-accent);
+  border-radius: 0;
+  padding: 4px 0 4px 18px;
+}
+
+body.theme-claude.pma-page .alert {
+  background: var(--site-accent-soft);
+  border: 1px solid var(--site-border);
+  border-left: 3px solid var(--site-accent);
+  border-radius: var(--site-radius);
+  color: var(--site-text);
+}
+
+body.theme-claude.pma-page .course-info-card,
+body.theme-claude.pma-page .parcours-col,
+body.theme-claude.pma-page .ue-item {
+  background: transparent;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+}
+
+body.theme-claude.pma-page .course-info-card:hover,
+body.theme-claude.pma-page .parcours-col:hover,
+body.theme-claude.pma-page .ue-item:hover {
+  border-color: var(--site-border);
+  box-shadow: none;
+  transform: none;
+}
+
+body.theme-claude.pma-page .parcours-sem-header,
+body.theme-claude.pma-page .parcours-sem-s1,
+body.theme-claude.pma-page .parcours-sem-s2 {
+  background: var(--site-accent-soft);
+  border-bottom-color: var(--site-border);
+}
+
+body.theme-claude.pma-page .badge,
+body.theme-claude.pma-page .pma-hero-label,
+body.theme-claude.pma-page [class*="badge"] {
+  border-radius: var(--site-radius) !important;
+}
+
+@media (max-width: 720px) {
+  body.theme-claude.interior-page .page-wrapper {
+    padding: 88px 20px 64px;
+  }
+
+  body.theme-claude .publications-hero,
+  body.theme-claude .teaching-hero,
+  body.theme-claude .talks-hero,
+  body.theme-claude .cv-hero {
+    align-items: start;
+    gap: 24px;
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+  }
+
+  body.theme-claude .publications-hero-photo,
+  body.theme-claude .teaching-hero-photo,
+  body.theme-claude .talks-hero-photo,
+  body.theme-claude .cv-hero-photo {
+    justify-self: start;
+    max-width: 260px;
+  }
+
+  body.theme-claude .mathreader-hero {
+    gap: 28px;
+    grid-template-columns: 1fr;
+  }
+
+  body.theme-claude .mathreader-feature-grid,
+  body.theme-claude .mathreader-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.theme-claude.pma-page .pma-campus-strip {
+    height: 110px;
+    margin-top: 56px;
+  }
+
+  body.theme-claude.pma-page .pma-wrapper {
+    padding: 24px 20px 64px;
+  }
+}

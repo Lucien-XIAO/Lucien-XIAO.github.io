@@ -3,10 +3,11 @@
 <head>
   {% include head.html %}
 </head>
-<body class="theme-claude">
+<body class="theme-claude interior-page">
+  <a class="skip-link" href="#main-content" data-i18n="accessibility.skip">Skip to main content</a>
   {% include nav.html %}
   <div class="page-wrapper">
-    <main class="page-main">
+    <main class="page-main" id="main-content">
       {{ content }}
     </main>
     {% include footer.html %}
