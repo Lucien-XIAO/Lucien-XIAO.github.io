@@ -12,7 +12,7 @@ title: Curriculum Vitae
     <div class="cv-hero-copy">
       <p class="cv-kicker">Curriculum Vitae</p>
       <h1>Education & Academic Background</h1>
-      <p class="cv-lede">Education, academic background, research experience, and skills.</p>
+      <p class="cv-lede">Education, academic background, and research experience.</p>
       <div class="cv-hero-meta" aria-label="Academic profile" data-i18n-aria-label="cv.academic_profile">
         <span>Sorbonne Université, Paris</span>
         <span>Probability and random models</span>
@@ -104,86 +104,6 @@ title: Curriculum Vitae
       </div>
     </div>
 
-  </div>
-
-  <h2 class="cv-section-title">Skills</h2>
-
-  <div class="section-body">
-    <div class="card" style="padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
-      
-      <!-- Languages -->
-      <div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 20px; font-weight: 600; color: var(--claude-primary); display: flex; align-items: center; gap: 8px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
-          Languages
-        </h3>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--claude-border); padding-bottom: 8px;">
-            <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--claude-text);">
-              <span style="font-size: 20px;">🇨🇳</span>
-              <strong>Mandarin</strong> <span style="opacity: 0.6; font-size: 13px;">(Native)</span>
-            </div>
-            <div style="color: #fbbf24; font-size: 18px; letter-spacing: 2px;" title="5/5">
-              ★★★★★
-            </div>
-          </div>
-
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--claude-border); padding-bottom: 8px;">
-            <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--claude-text);">
-              <span style="font-size: 20px;">🇫🇷</span>
-              <strong>French</strong> <span style="opacity: 0.6; font-size: 13px;">(Fluent)</span>
-            </div>
-            <div class="skill-stars" title="3.5/5">
-              ★★★<span class="half-star">★</span><span class="empty-star">★</span>
-            </div>
-          </div>
-
-          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px;">
-            <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--claude-text);">
-              <span style="font-size: 20px;">🇬🇧</span>
-              <strong>English</strong> <span style="opacity: 0.6; font-size: 13px;">(Fluent)</span>
-            </div>
-            <div class="skill-stars" title="3.5/5">
-              ★★★<span class="half-star">★</span><span class="empty-star">★</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Technical Skills -->
-      <div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 20px; font-weight: 600; color: var(--claude-primary); display: flex; align-items: center; gap: 8px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          Technical Skills
-        </h3>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--claude-border); padding-bottom: 8px;">
-            <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--claude-text);">
-              <span style="font-size: 20px;">🐍</span>
-              <strong>Python</strong> <span style="opacity: 0.6; font-size: 13px;">(Proficient)</span>
-            </div>
-            <div style="color: #fbbf24; font-size: 18px; letter-spacing: 2px;" title="4/5">
-              ★★★★☆
-            </div>
-          </div>
-
-          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px;">
-            <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--claude-text);">
-              <span style="font-size: 20px;">📝</span>
-              <strong>LaTeX</strong> <span style="opacity: 0.6; font-size: 13px;">(Proficient)</span>
-            </div>
-            <div style="color: #fbbf24; font-size: 18px; letter-spacing: 2px;" title="4/5">
-              ★★★★☆
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
   </div>
 
 </div>
