@@ -1141,6 +1141,14 @@ body.theme-claude .cv-hero {
   grid-template-columns: minmax(0, 1fr) 190px;
 }
 
+body.theme-claude .talks-page .talks-hero {
+  display: block;
+}
+
+body.theme-claude .talks-page .talks-hero-copy {
+  max-width: 780px;
+}
+
 body.theme-claude .cv-hero-photo {
   justify-self: end;
   margin: 0;
