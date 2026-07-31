@@ -13,7 +13,7 @@ title: Curriculum Vitae
     <h1>Education & Academic Background</h1>
     <p class="cv-lede">A concise record of my academic training and doctoral path.</p>
     <div class="cv-profile-line" aria-label="Academic profile" data-i18n-aria-label="cv.academic_profile">
-      <span>LAMA · Université Gustave Eiffel</span>
+      <span>LAMA · CNRS · Université Gustave Eiffel · Université Paris-Est Créteil</span>
       <span>Probability & Mathematical Statistical Mechanics</span>
     </div>
   </header>
@@ -25,9 +25,11 @@ title: Curriculum Vitae
         <time datetime="2026-10">From Oct. 2026</time>
         <div class="cv-entry-content">
           <h3>PhD in Mathematics <span class="cv-status">Incoming</span></h3>
-          <p class="cv-institution">LAMA, Université Gustave Eiffel</p>
+          <p class="cv-institution">Université Gustave Eiffel</p>
+          <p>Research unit: LAMA (CNRS, Université Gustave Eiffel & Université Paris-Est Créteil).</p>
+          <p>Doctoral fellowship funded by Université Gustave Eiffel.</p>
           <p>Doctoral project: <em>Interface Models in Mathematical Statistical Mechanics</em>.</p>
-          <p>Supervised by Arnaud Le Ny (LAMA, UPEC) and Pierre Monmarché (LAMA, UGE).</p>
+          <p>Supervised by Arnaud Le Ny (LAMA, Université Paris-Est Créteil) and Pierre Monmarché (LAMA, Université Gustave Eiffel).</p>
         </div>
       </article>
 

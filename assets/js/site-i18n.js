@@ -1076,10 +1076,20 @@
       fr: "Modèles d’interfaces en mécanique statistique mathématique",
       zh: "数学统计力学中的界面模型",
     },
-    "Supervised by Arnaud Le Ny (LAMA, UPEC) and Pierre Monmarché (LAMA, UGE).": {
-      en: "Supervised by Arnaud Le Ny (LAMA, UPEC) and Pierre Monmarché (LAMA, UGE).",
-      fr: "Sous la direction d’Arnaud Le Ny (LAMA, UPEC) et de Pierre Monmarché (LAMA, UGE).",
-      zh: "指导教师为 Arnaud Le Ny（LAMA，UPEC）和 Pierre Monmarché（LAMA，UGE）。",
+    "Research unit: LAMA (CNRS, Université Gustave Eiffel & Université Paris-Est Créteil).": {
+      en: "Research unit: LAMA (CNRS, Université Gustave Eiffel & Université Paris-Est Créteil).",
+      fr: "Unité de recherche : LAMA (CNRS, Université Gustave Eiffel et Université Paris-Est Créteil).",
+      zh: "研究单位：LAMA（CNRS、古斯塔夫·埃菲尔大学与巴黎东克雷泰伊大学）。",
+    },
+    "Doctoral fellowship funded by Université Gustave Eiffel.": {
+      en: "Doctoral fellowship funded by Université Gustave Eiffel.",
+      fr: "Contrat doctoral financé par l’Université Gustave Eiffel.",
+      zh: "博士资助由古斯塔夫·埃菲尔大学提供。",
+    },
+    "Supervised by Arnaud Le Ny (LAMA, Université Paris-Est Créteil) and Pierre Monmarché (LAMA, Université Gustave Eiffel).": {
+      en: "Supervised by Arnaud Le Ny (LAMA, Université Paris-Est Créteil) and Pierre Monmarché (LAMA, Université Gustave Eiffel).",
+      fr: "Sous la direction d’Arnaud Le Ny (LAMA, Université Paris-Est Créteil) et de Pierre Monmarché (LAMA, Université Gustave Eiffel).",
+      zh: "指导教师为 Arnaud Le Ny（LAMA，巴黎东克雷泰伊大学）和 Pierre Monmarché（LAMA，古斯塔夫·埃菲尔大学）。",
     },
     "Probability and random models": {
       en: "Probability and random models",
