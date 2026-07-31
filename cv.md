@@ -27,7 +27,11 @@ title: Curriculum Vitae
           <h3>PhD in Mathematics <span class="cv-status">Incoming</span></h3>
           <p class="cv-institution">Université Gustave Eiffel</p>
           <p>Research unit: LAMA (CNRS, Université Gustave Eiffel & Université Paris-Est Créteil).</p>
-          <p>Doctoral fellowship funded by Université Gustave Eiffel.</p>
+          <p>
+            <span>Doctoral funding:</span>
+            <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>,
+            <span>funded by Université Gustave Eiffel.</span>
+          </p>
           <p>Doctoral project: <em>Interface Models in Mathematical Statistical Mechanics</em>.</p>
           <p>Supervised by Arnaud Le Ny (LAMA, Université Paris-Est Créteil) and Pierre Monmarché (LAMA, Université Gustave Eiffel).</p>
         </div>

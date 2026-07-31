@@ -771,6 +771,11 @@
       fr: "[juil. 2026]",
       zh: "[2026 年 7 月]",
     },
+    "[Oct 2026]": {
+      en: "[Oct 2026]",
+      fr: "[oct. 2026]",
+      zh: "[2026 年 10 月]",
+    },
     "Master 2 in Probability and Random Models (PMA)": {
       en: "Master 2 in Probability and Random Models (PMA)",
       fr: "Master 2 Probabilités et Modèles Aléatoires (PMA)",
@@ -1081,10 +1086,20 @@
       fr: "Unité de recherche : LAMA (CNRS, Université Gustave Eiffel et Université Paris-Est Créteil).",
       zh: "研究单位：LAMA（CNRS、古斯塔夫·埃菲尔大学与巴黎东克雷泰伊大学）。",
     },
-    "Doctoral fellowship funded by Université Gustave Eiffel.": {
-      en: "Doctoral fellowship funded by Université Gustave Eiffel.",
-      fr: "Contrat doctoral financé par l’Université Gustave Eiffel.",
-      zh: "博士资助由古斯塔夫·埃菲尔大学提供。",
+    "Doctoral funding:": {
+      en: "Doctoral funding:",
+      fr: "Financement doctoral :",
+      zh: "博士资助：",
+    },
+    "MSTIC Doctoral School (ED 532)": {
+      en: "MSTIC Doctoral School (ED 532)",
+      fr: "École doctorale MSTIC (ED 532)",
+      zh: "MSTIC 博士生院（ED 532）",
+    },
+    "funded by Université Gustave Eiffel.": {
+      en: "funded by Université Gustave Eiffel.",
+      fr: "financé par l’Université Gustave Eiffel.",
+      zh: "由古斯塔夫·埃菲尔大学资助。",
     },
     "Supervised by Arnaud Le Ny (LAMA, Université Paris-Est Créteil) and Pierre Monmarché (LAMA, Université Gustave Eiffel).": {
       en: "Supervised by Arnaud Le Ny (LAMA, Université Paris-Est Créteil) and Pierre Monmarché (LAMA, Université Gustave Eiffel).",
@@ -2018,6 +2033,11 @@
       en: 'I’ll be working on the long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> at Université Paris-Est Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.',
       fr: 'Je travaillerai sur le modèle d\'Ising à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> à l\'Université Paris-Est Créteil (UPEC) dans le cadre de mon stage de M2, du 20 avril au 20 juillet 2026.',
       zh: '我将在 2026 年 4 月 20 日至 7 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> 做 M2 实习，研究长程 Ising 模型。',
+    },
+    "home.news.stat_mech_creteil": {
+      en: '<a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> will take place on October 8–9, 2026, bringing together recent advances in statistical mechanics and discrete stochastic models.',
+      fr: 'L’atelier <a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> aura lieu les 8 et 9 octobre 2026 et réunira des travaux récents en mécanique statistique et sur les modèles stochastiques discrets.',
+      zh: '<a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> 将于 2026 年 10 月 8–9 日举行，聚焦统计力学与离散随机模型的最新进展。',
     },
     "home.news.mstic_fellowship": {
       en: 'I am delighted to have been awarded a doctoral fellowship from the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>, supporting my PhD at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> from October 1, 2026 to September 30, 2029. My doctoral project, <em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em>, will be supervised by <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (<a href="https://www.u-pec.fr/" target="_blank" rel="noopener noreferrer">UPEC</a>), with <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>) as co-supervisor.',
