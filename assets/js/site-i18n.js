@@ -203,6 +203,131 @@
       fr: "Profil académique",
       zh: "学术概况",
     },
+    "translations.card.kicker": {
+      en: "Mathematical translations",
+      fr: "Traductions mathématiques",
+      zh: "数学翻译",
+    },
+    "translations.card.title": {
+      en: "French mathematical notes in Chinese",
+      fr: "Polycopiés mathématiques français en chinois",
+      zh: "法语数学讲义中译",
+    },
+    "translations.card.summary": {
+      en: "Personal translations and typesetting projects that make carefully written French mathematics more accessible to Chinese readers.",
+      fr: "Des traductions et mises en page personnelles pour rendre de beaux textes mathématiques français plus accessibles aux lecteurs chinois.",
+      zh: "将我喜欢的法语数学资料译校并重新排版，让优质内容更方便地抵达中文读者。",
+    },
+    "translations.card.action": {
+      en: "Browse translations",
+      fr: "Voir les traductions",
+      zh: "浏览译作",
+    },
+    "translations.hero.kicker": {
+      en: "Mathematical translations",
+      fr: "Traductions mathématiques",
+      zh: "数学翻译",
+    },
+    "translations.hero.title": {
+      en: "French mathematical notes in Chinese",
+      fr: "Polycopiés mathématiques français en chinois",
+      zh: "法语数学讲义中译",
+    },
+    "translations.hero.lede": {
+      en: "A personal collection of French lecture notes that I translate, revise, and typeset for Chinese-speaking mathematics students and researchers.",
+      fr: "Une collection personnelle de polycopiés français que je traduis, révise et mets en page pour les étudiants et chercheurs en mathématiques sinophones.",
+      zh: "我把喜欢的法语数学讲义译校并重新排版成中文，分享给中文世界的数学学生与研究工作者。",
+    },
+    "translations.why.kicker": {
+      en: "Why I translate",
+      fr: "Pourquoi je traduis",
+      zh: "为何翻译",
+    },
+    "translations.why.title": {
+      en: "Sharing good mathematics across languages",
+      fr: "Faire circuler de belles mathématiques entre les langues",
+      zh: "让好的数学跨越语言",
+    },
+    "translations.why.body": {
+      en: "Alongside research and teaching, I translate and typeset French mathematical lecture notes that I particularly value. I do this as a personal interest, hoping to make carefully written French resources more accessible to mathematics students and researchers in China while preserving their notation, proofs, and mathematical voice.",
+      fr: "À côté de la recherche et de l’enseignement, je traduis et remets en page en chinois des polycopiés de mathématiques en français que j’apprécie particulièrement. C’est un travail personnel qui me tient à cœur : je souhaite rendre de bonnes ressources françaises plus accessibles aux étudiants et aux chercheurs en mathématiques en Chine, tout en préservant les notations, les démonstrations et la voix mathématique du texte original.",
+      zh: "除研究与教学之外，我也会把自己喜欢的法语数学 polycopié 译校并重新排版成中文。这是我的个人爱好：我希望将法国数学传统中结构清晰、证明完整的优质资料分享给中国的数学学生与数学工作者，同时尽量保留原文的记号、论证和数学风格。",
+    },
+    "translations.work.kicker": {
+      en: "Chinese edition",
+      fr: "Édition chinoise",
+      zh: "中文译本",
+    },
+    "translations.work.summary": {
+      en: "An independent Chinese edition based on Jean-François LE GALL's September 2006 lecture notes, carefully translated, checked, and typeset. Across 200 pages it develops integration and measure theory, probability, martingales, Markov chains, and an introduction to Brownian motion.",
+      fr: "Une édition chinoise indépendante, traduite, révisée et remise en page à partir du polycopié de septembre 2006 de Jean-François LE GALL. En 200 pages, elle développe l’intégration et la théorie de la mesure, les probabilités, les martingales, les chaînes de Markov et une introduction au mouvement brownien.",
+      zh: "依据 Jean-François LE GALL 2006 年 9 月法语课程讲义译校并重新排版的独立中文版本。全书 200 页，内容涵盖积分与测度、概率论、鞅、马尔可夫链以及布朗运动导论。",
+    },
+    "translations.meta.author": {
+      en: "Original author",
+      fr: "Auteur du texte original",
+      zh: "原作者",
+    },
+    "translations.meta.translation": {
+      en: "Chinese translation, revision, and typesetting",
+      fr: "Traduction chinoise, révision et mise en page",
+      zh: "中文译校与排版",
+    },
+    "translations.meta.based_on": {
+      en: "Based on",
+      fr: "Texte de référence",
+      zh: "翻译依据",
+    },
+    "translations.meta.source_value": {
+      en: "September 2006 French course notes",
+      fr: "Polycopié français de septembre 2006",
+      zh: "2006 年 9 月法语课程讲义",
+    },
+    "translations.meta.contents": {
+      en: "Contents",
+      fr: "Contenu",
+      zh: "内容",
+    },
+    "translations.meta.contents_value": {
+      en: "Integration · Probability · Stochastic processes",
+      fr: "Intégration · Probabilités · Processus aléatoires",
+      zh: "积分 · 概率 · 随机过程",
+    },
+    "translations.action.open": {
+      en: "Open Chinese PDF",
+      fr: "Ouvrir le PDF chinois",
+      zh: "打开中文 PDF",
+    },
+    "translations.action.download": {
+      en: "Download PDF",
+      fr: "Télécharger le PDF",
+      zh: "下载 PDF",
+    },
+    "translations.action.original": {
+      en: "Original French notes",
+      fr: "Polycopié français original",
+      zh: "查看原法文讲义",
+    },
+    "translations.cover.alt": {
+      en: "Cover of the Chinese edition of Integration, Probability and Stochastic Processes",
+      fr: "Couverture de l’édition chinoise d’Intégration, probabilités et processus aléatoires",
+      zh: "《积分、概率与随机过程》中文讲义封面",
+    },
+    "translations.cover.open_label": {
+      en: "Open the Chinese PDF",
+      fr: "Ouvrir le PDF chinois",
+      zh: "打开中文 PDF",
+    },
+    "translations.cover.caption": {
+      en: "Independent Chinese edition · August 2026",
+      fr: "Édition chinoise indépendante · août 2026",
+      zh: "独立中文译本 · 2026 年 8 月",
+    },
+    "translations.disclaimer": {
+      en: "This is an unofficial, non-commercial translation shared for study and exchange. Copyright in the original French text remains with its author; the source is linked above.",
+      fr: "Il s’agit d’une traduction non officielle et non commerciale, diffusée à des fins d’étude et d’échange. Les droits sur le texte français original restent ceux de son auteur ; la source est indiquée ci-dessus.",
+      zh: "这是用于学习与交流的非官方、非商业中文译本。原法文内容的著作权归原作者所有，原始资料链接见上。",
+    },
   };
 
   const TEXT_TRANSLATIONS = {
