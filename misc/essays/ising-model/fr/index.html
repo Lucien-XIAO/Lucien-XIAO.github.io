@@ -1,6 +1,6 @@
 ---
 title: "Des signes plus et moins aux transitions de phase : un siècle du modèle d’Ising"
-description: "Comment un modèle de réseau à deux états locaux relie magnétisme, transitions de phase, dualité haute-basse température, bootstrap conforme, géométrie des interfaces, probabilité rigoureuse et systèmes désordonnés."
+description: "Comment un modèle de réseau à deux états locaux relie magnétisme, transitions de phase, dualité haute-basse température, bootstrap conforme, géométrie des interfaces, probabilité rigoureuse et systèmes désordonnés ; c’est aussi une visite guidée de ma propre direction de recherche — les modèles d’Ising à longue portée et les interfaces aléatoires."
 permalink: /misc/essays/ising-model/fr/
 layout: page
 author_profile: true
@@ -12,9 +12,9 @@ mathjax: true
   <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essais</a>
 
   <header class="notebook-detail-hero essay-detail-hero" lang="fr">
-    <p class="notebook-kicker">Vulgarisation · mécanique statistique</p>
+    <p class="notebook-kicker">Vulgarisation · ma direction de recherche</p>
     <h1>Des signes plus et moins aux transitions de phase : un siècle du modèle d’Ising</h1>
-    <p class="notebook-lede">Comment un modèle de réseau à deux états locaux relie magnétisme, transitions de phase, dualité haute-basse température, bootstrap conforme, géométrie des interfaces, probabilité rigoureuse et systèmes désordonnés.</p>
+    <p class="notebook-lede">Comment un modèle de réseau à deux états locaux relie magnétisme, transitions de phase, dualité haute-basse température, bootstrap conforme, géométrie des interfaces, probabilité rigoureuse et systèmes désordonnés. C’est aussi une carte de mon paysage de recherche actuel : partir de la théorie classique des transitions de phase pour aller vers les interactions à longue portée et les interfaces aléatoires.</p>
     <p class="essay-meta">
       <span>Yuguang XIAO</span>
       <span aria-hidden="true">·</span>
@@ -30,12 +30,14 @@ mathjax: true
 
     <p>Ce qui rend le modèle d’Ising fascinant, c’est qu’il saisit ce type de changement avec très peu de règles. Chaque site du réseau ne porte qu’un signe plus ou un signe moins, et les sites voisins interagissent par une énergie simple. Mais lorsque le nombre de sites devient très grand, l’ordre, le désordre, les fluctuations critiques et l’auto-similarité entre échelles apparaissent naturellement.</p>
 
+    <p>Pour moi, le modèle d’Ising n’est pas seulement un nom célèbre. Mon domaine de recherche est la <strong>théorie des probabilités et la mécanique statistique mathématique</strong> : j’ai étudié les modèles d’Ising à longue portée pendant mon master, et mon futur projet de doctorat va un pas plus loin — il porte sur les <strong>modèles d’interface sous interactions à longue portée</strong>. En un sens, cet essai est à la fois une vulgarisation et une carte de mon propre monde de recherche : chaque étape — solutions exactes, universalité, interfaces, interactions à longue portée — correspond à un problème que j’apprends, ou que j’essaie de faire avancer d’un petit pas.</p>
+
     <blockquote class="essay-pullquote">
       <p>Ce n’est pas une miniature d’un aimant réel, mais une ossature minimale pour penser les phénomènes collectifs.</p>
     </blockquote>
 
     <aside class="essay-note">
-      <strong>Note de rédaction.</strong> Le fil historique de cet essai a d’abord été inspiré par un article de vulgarisation de Westlake University, repris dans <a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">cette discussion Zhihu</a>. Je conserve le motif de la « somme la plus difficile », mais j’ai revérifié les faits historiques et les énoncés mathématiques. Le texte suit surtout la ligne théorique : solutions exactes, dualité haute-basse température, structures d’échelle et structures conformes, méthodes probabilistes rigoureuses, géométrie des interfaces, interactions à longue portée et systèmes désordonnés, avec une figure d’interface simulée et deux expériences interactives pour soutenir l’intuition.
+      <strong>Note de rédaction.</strong> Le fil historique de cet essai a d’abord été inspiré par un article de vulgarisation de Westlake University, repris dans <a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">cette discussion Zhihu</a>. Je conserve le motif de la « somme la plus difficile », mais j’ai revérifié les faits historiques et les énoncés mathématiques. Le texte suit surtout la ligne théorique : solutions exactes, dualité haute-basse température, structures d’échelle et structures conformes, méthodes probabilistes rigoureuses, géométrie des interfaces, interactions à longue portée et systèmes désordonnés, avec une figure d’interface simulée et deux expériences interactives pour soutenir l’intuition. Dans cette révision, j’ai volontairement orienté le récit vers ma propre direction de recherche : la géométrie des interfaces et les interactions à longue portée en sont le point culminant, et non l’épilogue.
     </aside>
 
     <h2 id="model">1. De la température de Curie au réseau d’Ising</h2>
@@ -331,6 +333,8 @@ mathjax: true
 
     <h2 id="interface-models">7. Des spins aux hauteurs : l’émergence des modèles d’interface</h2>
 
+    <p>À partir d’ici, l’essai entre dans la partie la plus directement liée à ma recherche. Les chapitres précédents demandaient si l’ordre existe et quand il disparaît ; les deux chapitres suivants s’intéressent à la <strong>frontière</strong> entre les phases ordonnées — où elle se trouve, à quoi elle ressemble, et comment elle fluctue.</p>
+
     <p>Dans la région de coexistence des phases, à champ externe nul et \(0&lt;T&lt;T_c\), la phase plus et la phase moins peuvent apparaître simultanément. Pour étudier la géométrie de la frontière entre elles, il faut déplacer le regard des spins eux-mêmes vers l’<strong>interface de phase</strong>.</p>
 
     <p>Dans une boîte finie, on peut imposer des conditions au bord nommées d’après Roland Dobrushin : par exemple, fixer les spins \(+1\) au-dessus d’un plan de référence et les spins \(-1\) en dessous, afin de forcer le système à former une interface au milieu. De telles conditions au bord transforment les questions « où est l’interface ? » et « comment fluctue-t-elle ? » en problèmes mathématiques rigoureux.</p>
@@ -379,7 +383,7 @@ mathjax: true
       <strong>Il faut distinguer théorèmes et attentes théoriques.</strong> Pour le modèle d’Ising original tridimensionnel à plus proches voisins, on s’attend généralement à l’existence d’une température de rugosification \(T_R&lt;T_c\) : au-dessus de \(T_R\), l’interface entrerait dans une phase rugueuse, avec une variance de hauteur croissant comme \(\log |x|\). Dans les modèles de hauteur bidimensionnels effectifs, la rugosification peut être décrite par une dualité gaz de Coulomb ou sine-Gordon sous la forme d’un mécanisme de Kosterlitz-Thouless. Transformer cette image en équivalence rigoureuse pour le modèle d’Ising tridimensionnel original à plus proches voisins dépasse encore ce qui est démontré.
     </aside>
 
-    <p>Le passage des spins aux hauteurs transforme un problème de transition de phase en problème de géométrie des surfaces aléatoires. Il constitue aussi un point de départ fondamental pour l’étude des surfaces cristallines, des transitions de mouillage et des formes d’interface sous interactions à longue portée. Dès que l’on modifie l’échelle de distance de l’interaction, on entre dans le monde des modèles d’Ising à longue portée.</p>
+    <p>Le passage des spins aux hauteurs transforme un problème de transition de phase en problème de géométrie des surfaces aléatoires. Il constitue aussi un point de départ fondamental pour l’étude des surfaces cristallines, des transitions de mouillage et des formes d’interface sous interactions à longue portée. Les interfaces aléatoires sont précisément l’objet central de mon projet de doctorat, <em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em> — plus précisément, ce sont les <strong>interfaces sous interactions à longue portée</strong> qui m’intéressent. Dès que l’on modifie l’échelle de distance de l’interaction, on entre dans le monde des modèles d’Ising à longue portée : le sujet de mon stage de master, et l’endroit où mon travail doctoral rejoindra les problèmes d’interface.</p>
 
     <aside class="essay-note">
       <strong>Expériences interactives.</strong>
@@ -390,6 +394,8 @@ mathjax: true
     </aside>
 
     <h2 id="long-range">8. Interactions à longue portée : l’exception unidimensionnelle</h2>
+
+    <p>Si les modèles d’interface demandent à quoi ressemble la frontière entre les régions ordonnées, les interactions à longue portée demandent jusqu’où l’influence peut voyager. La première question est la scène de mon projet de doctorat, la seconde était le sujet de mon stage de master, et ma recherche doctorale se situe exactement à l’intersection de ces deux questions. Ces deux chapitres forment donc le point culminant de l’essai.</p>
 
     <p>Le modèle à plus proches voisins suppose que chaque spin n’interagit directement qu’avec les sites voisins. C’est une idéalisation extrêmement efficace, mais dans de nombreux systèmes l’influence s’étend sur des distances plus grandes. Le modèle d’Ising à longue portée remplace donc l’hamiltonien par</p>
 
@@ -414,7 +420,13 @@ mathjax: true
       </figcaption>
     </figure>
 
-    <p>Lorsque \(\sigma\) varie, le modèle traverse des régimes de comportement de champ moyen, de comportement critique véritablement à longue portée, puis de croisement vers la classe d’universalité à courte portée. La manière dont les exposants critiques changent, et la façon dont les interactions à longue portée modifient la géométrie des interfaces, restent des directions de recherche actives et font partie de mes thèmes récents d’étude.</p>
+    <p>Lorsque \(\sigma\) varie, le modèle traverse des régimes de comportement de champ moyen, de comportement critique véritablement à longue portée, puis de croisement vers la classe d’universalité à courte portée. La manière dont les exposants critiques changent, et la façon dont les interactions à longue portée modifient la géométrie des interfaces, restent des directions de recherche actives.</p>
+
+    <p>C’était aussi la question centrale de mon stage de master. Au printemps 2026, au laboratoire <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a> de l’<a href="https://www.u-pec.fr/" target="_blank" rel="noopener noreferrer">Université Paris-Est Créteil (UPEC)</a>, j’ai travaillé avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> sur les modèles d’Ising à longue portée : en partant du modèle unidimensionnel de Dyson, comprendre comment la vitesse de décroissance du couplage détermine l’existence et la nature de la transition de phase, et essayer de voir comment les problèmes d’interface doivent être formulés dans ce cadre. Ce stage m’a lentement fait passer de quelqu’un qui apprend ce modèle à quelqu’un qui le recherche ; et le point de rencontre entre interfaces et interactions à longue portée est exactement l’endroit où mon projet de doctorat, qui commence à l’automne 2026, approfondira.</p>
+
+    <aside class="essay-note">
+      <strong>À propos de ma recherche.</strong> Mon projet de doctorat s’intitule <em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em> et porte principalement sur les <strong>modèles d’interface sous interactions à longue portée</strong> : lorsque le couplage entre spins n’est plus limité aux plus proches voisins mais décroît en loi de puissance avec la distance, l’interface entre les deux phases reste-t-elle rugueuse ou rigide ? Comment ses fluctuations varient-elles avec le paramètre de décroissance \(\sigma\) ? Ces questions relient la géométrie des interfaces du chapitre 7 et les interactions à longue portée du chapitre 8. Le projet sera dirigé par <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a>, avec <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> comme co-encadrant, et débutera en octobre 2026 à l’<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a>, grâce à une bourse doctorale de l’<a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">École Doctorale MSTIC (ED 532)</a>. Si cet essai est une carte, alors son bord — là où la géométrie des interfaces rencontre les interactions à longue portée — est l’endroit où je travaillerai dans les années à venir.
+    </aside>
 
     <h2 id="disorder-and-learning">9. Désordre et apprentissage : deux branches de l’énergie de type Ising</h2>
 
@@ -462,6 +474,8 @@ mathjax: true
     <p>Ensuite, Roland Dobrushin transforme la rigidité des interfaces en problème rigoureux, tandis que Stanislav Smirnov et Hugo Duminil-Copin font avancer la théorie probabiliste des modèles critiques. David J. Thouless, Giorgio Parisi, John J. Hopfield et Geoffrey Hinton montrent comment la portée des interactions, le désordre et les paysages d’énergie peuvent conduire la même famille de structures mathématiques vers de nouvelles questions.</p>
 
     <p>De l’échec de la chaîne unidimensionnelle à la solution exacte bidimensionnelle, de la dualité haute-basse température à l’invariance conforme, du bootstrap conforme tridimensionnel aux interfaces aléatoires, aux interactions à longue portée et aux systèmes désordonnés, ce modèle fait seulement de signes plus et moins a déjà traversé un siècle. Il nous rappelle sans cesse que des règles microscopiques peuvent être presque naïves par leur simplicité, tandis que les mondes qu’elles engendrent ne le sont pas nécessairement.</p>
+
+    <p>Il y a un siècle, Ernst Ising a cru un instant avoir démontré l’échec de ce modèle ; un siècle plus tard, il reste l’un des modèles qui font naître le plus vite de nouvelles questions. Pour moi, l’écriture de cet essai a aussi été une manière de mettre de l’ordre : placer les théorèmes de mes cours, les questions de mon stage et le plan de mon projet de doctorat dans un même système de coordonnées. Dans les années à venir, j’espère ajouter mon propre paragraphe — si petit soit-il — à cette histoire.</p>
 
     <section class="essay-references" aria-labelledby="essay-references-title">
       <h2 id="essay-references-title">Références et lectures complémentaires</h2>

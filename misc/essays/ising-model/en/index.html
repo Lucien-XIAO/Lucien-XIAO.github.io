@@ -1,6 +1,6 @@
 ---
 title: "From Plus and Minus Signs to Phase Transitions: A Century of the Ising Model"
-description: "How a lattice model with only two local states connects magnetism, phase transitions, high-low temperature duality, the conformal bootstrap, interface geometry, rigorous probability, and disordered systems."
+description: "How a lattice model with only two local states connects magnetism, phase transitions, high-low temperature duality, the conformal bootstrap, interface geometry, rigorous probability, and disordered systems; it is also a guided tour of my own research direction — long-range Ising models and random interfaces."
 permalink: /misc/essays/ising-model/en/
 layout: page
 author_profile: true
@@ -12,9 +12,9 @@ mathjax: true
   <a class="notebook-back-link" href="{{ site.baseurl }}/misc/essays/">Essays</a>
 
   <header class="notebook-detail-hero essay-detail-hero" lang="en">
-    <p class="notebook-kicker">Popular exposition · Statistical mechanics</p>
+    <p class="notebook-kicker">Popular exposition · My research direction</p>
     <h1>From Plus and Minus Signs to Phase Transitions: A Century of the Ising Model</h1>
-    <p class="notebook-lede">How a lattice model with only two local states connects magnetism, phase transitions, high-low temperature duality, the conformal bootstrap, interface geometry, rigorous probability, and disordered systems.</p>
+    <p class="notebook-lede">How a lattice model with only two local states connects magnetism, phase transitions, high-low temperature duality, the conformal bootstrap, interface geometry, rigorous probability, and disordered systems. It is also a map of my current research landscape: starting from classical phase-transition theory and heading toward long-range interactions and random interfaces.</p>
     <p class="essay-meta">
       <span>Yuguang XIAO</span>
       <span aria-hidden="true">·</span>
@@ -30,12 +30,14 @@ mathjax: true
 
     <p>The charm of the Ising model is that it captures this change with remarkably few rules. Each lattice site carries only a plus sign or a minus sign, and neighboring sites interact through a simple energy. Once the number of sites is large enough, however, order, disorder, critical fluctuations, and self-similarity across scales all begin to emerge.</p>
 
+    <p>For me, the Ising model is not merely a famous name. My research field is <strong>probability theory and mathematical statistical mechanics</strong>: I studied long-range Ising models during my Master's, and my upcoming PhD project goes one step further — it concerns <strong>interface models under long-range interactions</strong>. In a sense, this essay is both a popular introduction and a map of my own research world: each stop — exact solutions, universality, interfaces, long-range interactions — corresponds to a problem I am learning about, or trying to push forward by a small step.</p>
+
     <blockquote class="essay-pullquote">
       <p>It is not a miniature copy of a real magnet, but a minimal skeleton for thinking about collective phenomena.</p>
     </blockquote>
 
     <aside class="essay-note">
-      <strong>Writing note.</strong> The historical thread of this essay was first inspired by a popular article from Westlake University, reposted in <a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">this Zhihu discussion</a>. I keep the motif of the “hardest summation,” but I have rechecked the historical facts and the mathematical statements. The essay follows the theoretical line: exact solutions, high-low temperature duality, scale and conformal structures, rigorous probabilistic methods, interface geometry, long-range interactions, and disordered systems, with one simulated interface figure and two interactive experiments for intuition.
+      <strong>Writing note.</strong> The historical thread of this essay was first inspired by a popular article from Westlake University, reposted in <a href="https://www.zhihu.com/question/51065122" target="_blank" rel="noopener noreferrer">this Zhihu discussion</a>. I keep the motif of the “hardest summation,” but I have rechecked the historical facts and the mathematical statements. The essay follows the theoretical line: exact solutions, high-low temperature duality, scale and conformal structures, rigorous probabilistic methods, interface geometry, long-range interactions, and disordered systems, with one simulated interface figure and two interactive experiments for intuition. In this revision, I have deliberately tilted the narrative toward my own research direction: interface geometry and long-range interactions are the climax of the essay, not its epilogue.
     </aside>
 
     <h2 id="model">1. From the Curie temperature to Ising's lattice</h2>
@@ -331,6 +333,8 @@ mathjax: true
 
     <h2 id="interface-models">7. From spins to heights: the emergence of interface models</h2>
 
+    <p>From here on, the essay enters the part most directly connected to my research. The previous chapters asked whether order exists and when it disappears; the next two chapters care about the <strong>boundary</strong> between ordered phases — where it is, what it looks like, and how it fluctuates.</p>
+
     <p>In the phase-coexistence region at zero external field and \(0&lt;T&lt;T_c\), the plus phase and the minus phase may coexist. To study the geometry of the boundary between them, one shifts attention from the spins themselves to the <strong>phase interface</strong>.</p>
 
     <p>In a finite box, one can impose boundary conditions named after Roland Dobrushin: for instance, fix \(+1\) spins above a reference plane and \(-1\) spins below it, forcing the system to form an interface across the middle. Such boundary conditions turn the questions “where is the interface?” and “how does it fluctuate?” into rigorous mathematical problems.</p>
@@ -379,7 +383,7 @@ mathjax: true
       <strong>Theorems and theoretical expectations should be distinguished.</strong> For the original three-dimensional nearest-neighbor Ising model, it is widely expected that there exists a roughening temperature \(T_R&lt;T_c\): above \(T_R\), the interface enters a rough phase and its height variance grows like \(\log |x|\). In two-dimensional effective height models, roughening can be described through a Coulomb gas or sine-Gordon duality as a Kosterlitz-Thouless mechanism. Promoting this picture to a rigorous equivalence for the original three-dimensional nearest-neighbor Ising model is still beyond what has been proved.
     </aside>
 
-    <p>The passage from spins to heights turns a phase-transition problem into a problem about random surfaces. It is also a basic starting point for the study of crystal surfaces, wetting transitions, and the shapes of interfaces under long-range interactions. Once the distance scale of the interaction is changed, we enter the world of long-range Ising models.</p>
+    <p>The passage from spins to heights turns a phase-transition problem into a problem about random surfaces. It is also a basic starting point for the study of crystal surfaces, wetting transitions, and the shapes of interfaces under long-range interactions. Random interfaces are precisely the central object of my PhD project, <em>Modèles d'Interfaces en Mécanique Statistique Mathématique</em> (Interface Models in Mathematical Statistical Mechanics) — more precisely, I care about <strong>interfaces under long-range interactions</strong>. Once the distance scale of the interaction is changed, we enter the world of long-range Ising models: the subject of my Master's internship, and the place where my doctoral work will meet interface problems.</p>
 
     <aside class="essay-note">
       <strong>Interactive experiments.</strong>
@@ -390,6 +394,8 @@ mathjax: true
     </aside>
 
     <h2 id="long-range">8. Long-range interactions: an exception in one dimension</h2>
+
+    <p>If interface models ask what the boundary between ordered regions looks like, long-range interactions ask how far influence can travel. The former is the stage of my PhD project, the latter was the subject of my Master's internship, and my doctoral research sits exactly at the intersection of these two questions. These two chapters are therefore the climax of the essay.</p>
 
     <p>The nearest-neighbor model assumes that each spin interacts directly only with nearby sites. This is an extraordinarily successful idealization, but in many systems the influence extends over longer distances. The long-range Ising model therefore replaces the Hamiltonian by</p>
 
@@ -414,7 +420,13 @@ mathjax: true
       </figcaption>
     </figure>
 
-    <p>As \(\sigma\) varies, the model passes through regimes of mean-field behavior, genuinely long-range critical behavior, and crossover toward the short-range universality class. How the critical exponents change, and how long-range interactions modify interface geometry, remain active research directions and are among the topics I have recently been studying.</p>
+    <p>As \(\sigma\) varies, the model passes through regimes of mean-field behavior, genuinely long-range critical behavior, and crossover toward the short-range universality class. How the critical exponents change, and how long-range interactions modify interface geometry, remain active research directions.</p>
+
+    <p>This was also the central question of my Master's internship. In the spring of 2026, at the <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a> laboratory of <a href="https://www.u-pec.fr/" target="_blank" rel="noopener noreferrer">Université Paris-Est Créteil (UPEC)</a>, I worked with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> on long-range Ising models: starting from the one-dimensional Dyson model, understanding how the decay rate of the coupling determines the existence and nature of the phase transition, and trying to see how interface problems should be formulated in this framework. This internship slowly turned me from someone who studies this model into someone who researches it; and the meeting point of interfaces and long-range interactions is exactly where my PhD project, beginning in autumn 2026, will dig deeper.</p>
+
+    <aside class="essay-note">
+      <strong>About my research.</strong> My PhD project is entitled <em>Modèles d'Interfaces en Mécanique Statistique Mathématique</em> (Interface Models in Mathematical Statistical Mechanics) and mainly concerns <strong>interface models under long-range interactions</strong>: when the coupling between spins is no longer restricted to nearest neighbors but decays as a power law with distance, is the interface between the two phases still rough or rigid? How do its fluctuations vary with the decay parameter \(\sigma\)? These questions tie together the interface geometry of Chapter 7 and the long-range interactions of Chapter 8. The project will be supervised by <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a>, with <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> as co-supervisor, and will start in October 2026 at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a>, supported by a doctoral fellowship from the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>. If this essay is a map, then its edge — where interface geometry meets long-range interactions — is where I will be working in the coming years.
+    </aside>
 
     <h2 id="disorder-and-learning">9. Disorder and learning: two branches of Ising-type energy</h2>
 
@@ -462,6 +474,8 @@ mathjax: true
     <p>Later, Roland Dobrushin turned interface rigidity into a rigorous problem, while Stanislav Smirnov and Hugo Duminil-Copin advanced the probabilistic theory of critical models. David J. Thouless, Giorgio Parisi, John J. Hopfield, and Geoffrey Hinton showed how interaction range, disorder, and energy landscapes can carry the same kind of mathematical structure into new questions.</p>
 
     <p>From the failure of the one-dimensional chain, to the exact two-dimensional solution, high-low temperature duality, conformal invariance, the three-dimensional conformal bootstrap, random interfaces, long-range interactions, and disordered systems, this model made only of plus and minus signs has already travelled through a century. It keeps reminding us that microscopic rules can be almost naive in their simplicity, while the worlds they generate need not be simple at all.</p>
+
+    <p>A century ago, Ernst Ising believed for a while that he had proved the failure of this model; a century later, it is still one of the fastest models at generating new questions. For me personally, writing this essay was also a way of putting things in order: placing the theorems from my courses, the questions from my internship, and the blueprint of my PhD project into a single coordinate system. In the years ahead, I hope to add my own paragraph — however small — to this story.</p>
 
     <section class="essay-references" aria-labelledby="essay-references-title">
       <h2 id="essay-references-title">References and Further Reading</h2>
