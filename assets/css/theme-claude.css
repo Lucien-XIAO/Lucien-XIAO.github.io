@@ -3777,6 +3777,10 @@ body.theme-claude .translation-feature {
   padding: 32px;
 }
 
+body.theme-claude .translation-feature + .translation-feature {
+  margin-top: 32px;
+}
+
 body.theme-claude .translation-cover {
   margin: 0;
 }

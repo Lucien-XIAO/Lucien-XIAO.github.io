@@ -209,9 +209,9 @@
       zh: "数学翻译",
     },
     "translations.card.title": {
-      en: "French mathematical notes in Chinese",
-      fr: "Polycopiés mathématiques français en chinois",
-      zh: "法语数学讲义中译",
+      en: "Mathematical texts in Chinese",
+      fr: "Textes mathématiques en chinois",
+      zh: "数学资料中译",
     },
     "translations.card.summary": {
       en: "Personal translations and typesetting projects that make carefully written French mathematics more accessible to Chinese readers.",
@@ -229,14 +229,14 @@
       zh: "数学翻译",
     },
     "translations.hero.title": {
-      en: "French mathematical notes in Chinese",
-      fr: "Polycopiés mathématiques français en chinois",
-      zh: "法语数学讲义中译",
+      en: "Mathematical texts in Chinese",
+      fr: "Textes mathématiques en chinois",
+      zh: "数学资料中译",
     },
     "translations.hero.lede": {
-      en: "A personal collection of French lecture notes that I translate, revise, and typeset for Chinese-speaking mathematics students and researchers.",
-      fr: "Une collection personnelle de polycopiés français que je traduis, révise et mets en page pour les étudiants et chercheurs en mathématiques sinophones.",
-      zh: "我把喜欢的法语数学讲义译校并重新排版成中文，分享给中文世界的数学学生与研究工作者。",
+      en: "A personal collection of mathematical lecture notes and books that I translate, revise, and typeset for Chinese-speaking mathematics students and researchers.",
+      fr: "Une collection personnelle de polycopiés et de livres de mathématiques que je traduis, révise et mets en page pour les étudiants et chercheurs en mathématiques sinophones.",
+      zh: "我把喜欢的数学讲义与著作译校并重新排版成中文，分享给中文世界的数学学生与研究工作者。",
     },
     "translations.why.kicker": {
       en: "Why I translate",
@@ -322,6 +322,46 @@
       en: "Independent Chinese edition · August 2026",
       fr: "Édition chinoise indépendante · août 2026",
       zh: "独立中文译本 · 2026 年 8 月",
+    },
+    "translations.brownian.summary": {
+      en: "An independent Chinese edition translated, revised, and typeset from Jean-François LE GALL's 2016 English edition. Across 257 pages it develops Gaussian processes, Brownian motion, martingales, continuous semimartingales, stochastic integration, Markov processes, connections with partial differential equations, stochastic differential equations, and local times, together with solutions to exercises.",
+      fr: "Une édition chinoise indépendante, traduite, révisée et remise en page à partir de l’édition anglaise de 2016 de Jean-François LE GALL. En 257 pages, elle développe les processus gaussiens, le mouvement brownien, les martingales, les semi-martingales continues, l’intégration stochastique, les processus de Markov, les liens avec les équations aux dérivées partielles, les équations différentielles stochastiques et les temps locaux, avec des solutions aux exercices.",
+      zh: "依据 Jean-François LE GALL 2016 年英文版译校并重新排版的独立中文讲义。全书 257 页，系统介绍高斯过程、布朗运动、鞅、连续半鞅、随机积分、马尔可夫过程及其与偏微分方程的联系、随机微分方程和局部时，并附有练习解答。",
+    },
+    "translations.brownian.source_value": {
+      en: "2016 English edition · Graduate Texts in Mathematics 274",
+      fr: "Édition anglaise de 2016 · Graduate Texts in Mathematics 274",
+      zh: "2016 年英文版 · Graduate Texts in Mathematics 274",
+    },
+    "translations.brownian.contents_value": {
+      en: "Brownian motion · Martingales · Stochastic calculus",
+      fr: "Mouvement brownien · Martingales · Calcul stochastique",
+      zh: "布朗运动 · 鞅 · 随机微积分",
+    },
+    "translations.brownian.action.original": {
+      en: "Original book",
+      fr: "Livre original",
+      zh: "查看英文原著",
+    },
+    "translations.brownian.cover.alt": {
+      en: "Cover of the Chinese edition of Brownian Motion, Martingales, and Stochastic Calculus",
+      fr: "Couverture de l’édition chinoise de Mouvement brownien, martingales et calcul stochastique",
+      zh: "《布朗运动、鞅与随机微积分》中文讲义封面",
+    },
+    "translations.brownian.cover.open_label": {
+      en: "Open the Chinese PDF of Brownian Motion, Martingales, and Stochastic Calculus",
+      fr: "Ouvrir le PDF chinois de Mouvement brownien, martingales et calcul stochastique",
+      zh: "打开《布朗运动、鞅与随机微积分》中文 PDF",
+    },
+    "translations.brownian.cover.caption": {
+      en: "Independent Chinese edition · August 2026",
+      fr: "Édition chinoise indépendante · août 2026",
+      zh: "独立中文讲义 · 2026 年 8 月",
+    },
+    "translations.brownian.disclaimer": {
+      en: "This is an unofficial, non-commercial translation shared for study and exchange. Copyright in the original English book remains with its author and publisher; the source is linked above.",
+      fr: "Il s’agit d’une traduction non officielle et non commerciale, diffusée à des fins d’étude et d’échange. Les droits sur le livre anglais original restent ceux de son auteur et de son éditeur ; la source est indiquée ci-dessus.",
+      zh: "这是用于学习与交流的非官方、非商业中文译本。英文原著的著作权归原作者与出版社所有，原著链接见上。",
     },
     "translations.disclaimer": {
       en: "This is an unofficial, non-commercial translation shared for study and exchange. Copyright in the original French text remains with its author; the source is linked above.",
