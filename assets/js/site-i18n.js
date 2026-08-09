@@ -268,6 +268,11 @@
       fr: "Auteur du texte original",
       zh: "原作者",
     },
+    "translations.meta.authors": {
+      en: "Original authors",
+      fr: "Auteurs du texte original",
+      zh: "原作者",
+    },
     "translations.meta.translation": {
       en: "Chinese translation, revision, and typesetting",
       fr: "Traduction chinoise, révision et mise en page",
@@ -361,6 +366,46 @@
     "translations.brownian.disclaimer": {
       en: "This is an unofficial, non-commercial translation shared for study and exchange. Copyright in the original English book remains with its author and publisher; the source is linked above.",
       fr: "Il s’agit d’une traduction non officielle et non commerciale, diffusée à des fins d’étude et d’échange. Les droits sur le livre anglais original restent ceux de son auteur et de son éditeur ; la source est indiquée ci-dessus.",
+      zh: "这是用于学习与交流的非官方、非商业中文译本。英文原著的著作权归原作者与出版社所有，原著链接见上。",
+    },
+    "translations.continuous_martingales.summary": {
+      en: "An independent Chinese edition translated, revised, and typeset from the third edition, third corrected printing (2005) of Daniel REVUZ and Marc YOR's monograph. Across 632 pages it develops Brownian motion, martingales, Markov processes, stochastic integration, martingale representation, local times, time reversal, Girsanov theory, stochastic differential equations, additive functionals, Bessel processes, Ray–Knight theorems, excursion theory, and distributional limit theorems.",
+      fr: "Une édition chinoise indépendante, traduite, révisée et remise en page à partir de la troisième édition de la monographie de Daniel REVUZ et Marc YOR, dans son troisième tirage corrigé (2005). En 632 pages, elle développe le mouvement brownien, les martingales, les processus de Markov, l’intégration stochastique, la représentation des martingales, les temps locaux, le retournement du temps, la théorie de Girsanov, les équations différentielles stochastiques, les fonctionnelles additives, les processus de Bessel, les théorèmes de Ray–Knight, la théorie des excursions et les théorèmes limites en loi.",
+      zh: "依据 Daniel REVUZ 与 Marc YOR 原著第三版第三次修订印刷（2005）译校并重新排版的独立中文讲义。全书 632 页，系统介绍布朗运动、鞅、马尔可夫过程、随机积分、鞅表示、局部时、时间反演、Girsanov 理论、随机微分方程、加性泛函、Bessel 过程、Ray–Knight 定理、游程理论与分布极限定理。",
+    },
+    "translations.continuous_martingales.source_value": {
+      en: "Third edition, third corrected printing (2005) · Grundlehren 293",
+      fr: "Troisième édition, troisième tirage corrigé (2005) · Grundlehren 293",
+      zh: "第三版第三次修订印刷（2005）· Grundlehren 293",
+    },
+    "translations.continuous_martingales.contents_value": {
+      en: "Brownian motion · Continuous martingales · Excursion theory",
+      fr: "Mouvement brownien · Martingales continues · Théorie des excursions",
+      zh: "布朗运动 · 连续鞅 · 游程理论",
+    },
+    "translations.continuous_martingales.action.original": {
+      en: "Original book",
+      fr: "Livre original",
+      zh: "查看英文原著",
+    },
+    "translations.continuous_martingales.cover.alt": {
+      en: "Cover of the Chinese edition of Continuous Martingales and Brownian Motion",
+      fr: "Couverture de l’édition chinoise de Martingales continues et mouvement brownien",
+      zh: "《连续鞅与布朗运动》中文讲义封面",
+    },
+    "translations.continuous_martingales.cover.open_label": {
+      en: "Open the Chinese PDF of Continuous Martingales and Brownian Motion",
+      fr: "Ouvrir le PDF chinois de Martingales continues et mouvement brownien",
+      zh: "打开《连续鞅与布朗运动》中文 PDF",
+    },
+    "translations.continuous_martingales.cover.caption": {
+      en: "Independent Chinese edition · August 2026",
+      fr: "Édition chinoise indépendante · août 2026",
+      zh: "独立中文讲义 · 2026 年 8 月",
+    },
+    "translations.continuous_martingales.disclaimer": {
+      en: "This is an unofficial, non-commercial translation shared for study and exchange. Copyright in the original English book remains with its authors and publisher; the source is linked above.",
+      fr: "Il s’agit d’une traduction non officielle et non commerciale, diffusée à des fins d’étude et d’échange. Les droits sur le livre anglais original restent ceux de ses auteurs et de son éditeur ; la source est indiquée ci-dessus.",
       zh: "这是用于学习与交流的非官方、非商业中文译本。英文原著的著作权归原作者与出版社所有，原著链接见上。",
     },
     "translations.disclaimer": {
