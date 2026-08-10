@@ -234,9 +234,9 @@
       zh: "数学资料中译",
     },
     "translations.hero.lede": {
-      en: "A personal collection of mathematical lecture notes and books that I translate, revise, and typeset for Chinese-speaking mathematics students and researchers.",
-      fr: "Une collection personnelle de polycopiés et de livres de mathématiques que je traduis, révise et mets en page pour les étudiants et chercheurs en mathématiques sinophones.",
-      zh: "我把喜欢的数学讲义与著作译校并重新排版成中文，分享给中文世界的数学学生与研究工作者。",
+      en: "A personal collection of mathematical lecture notes and books that I translate, revise, and typeset for Chinese-speaking mathematics students and researchers. The collection is arranged from foundational material to more advanced references.",
+      fr: "Une collection personnelle de polycopiés et de livres de mathématiques que je traduis, révise et mets en page pour les étudiants et chercheurs en mathématiques sinophones. La collection est présentée des bases vers les références les plus avancées.",
+      zh: "我把喜欢的数学讲义与著作译校并重新排版成中文，分享给中国的数学学生与数学工作者。以下译作按由基础到进阶的顺序排列。",
     },
     "translations.why.kicker": {
       en: "Why I translate",
@@ -257,6 +257,46 @@
       en: "Chinese edition",
       fr: "Édition chinoise",
       zh: "中文译本",
+    },
+    "translations.analysis.summary": {
+      en: "An independent Chinese edition based on the eighth edition (2023) of Marc BRIANE and Gilles PAGÈS's L3–M1 textbook. Across 451 pages it develops measure theory and Lebesgue integration from foundational material through Lp spaces, Fubini and change-of-variables theorems, convolution, and Fourier and Laplace transforms, with exercises, multiple-choice questions, and exam problems.",
+      fr: "Une édition chinoise indépendante établie à partir de la huitième édition (2023) du manuel de niveau L3–M1 de Marc BRIANE et Gilles PAGÈS. En 451 pages, elle développe la théorie de la mesure et l’intégration de Lebesgue depuis les fondements jusqu’aux espaces Lp, aux théorèmes de Fubini et de changement de variables, à la convolution ainsi qu’aux transformées de Fourier et de Laplace, avec des exercices, des QCM et des problèmes d’examen.",
+      zh: "依据 Marc BRIANE 与 Gilles PAGÈS 第 8 版法语教材（2023）译校并重新排版的独立中文讲义。全书 451 页，从 L3/M1 所需的测度论与 Lebesgue 积分基础出发，系统讨论 Lp 空间、Fubini 定理、变量替换、卷积以及 Fourier 与 Laplace 变换，并配有练习、选择题与考试问题。",
+    },
+    "translations.analysis.source_value": {
+      en: "Eighth French edition (2023) · De Boeck Supérieur",
+      fr: "Huitième édition française (2023) · De Boeck Supérieur",
+      zh: "法语第 8 版（2023）· De Boeck Supérieur",
+    },
+    "translations.analysis.contents_value": {
+      en: "Measure theory · Lebesgue integration · Fourier and Laplace transforms",
+      fr: "Théorie de la mesure · Intégration de Lebesgue · Transformées de Fourier et de Laplace",
+      zh: "测度论 · Lebesgue 积分 · Fourier 与 Laplace 变换",
+    },
+    "translations.analysis.action.original": {
+      en: "Original French book",
+      fr: "Livre français original",
+      zh: "查看法语原著",
+    },
+    "translations.analysis.cover.alt": {
+      en: "Cover of the Chinese edition of Integration Theory, Convolution, Fourier and Laplace Transforms",
+      fr: "Couverture de l’édition chinoise de Théorie de l’intégration, convolution, transformées de Fourier et de Laplace",
+      zh: "《分析：积分理论、卷积、Fourier 与 Laplace 变换》中文讲义封面",
+    },
+    "translations.analysis.cover.open_label": {
+      en: "Open the Chinese PDF of Integration Theory, Convolution, Fourier and Laplace Transforms",
+      fr: "Ouvrir le PDF chinois de Théorie de l’intégration, convolution, transformées de Fourier et de Laplace",
+      zh: "打开《分析：积分理论、卷积、Fourier 与 Laplace 变换》中文 PDF",
+    },
+    "translations.analysis.cover.caption": {
+      en: "Independent Chinese edition · August 2026",
+      fr: "Édition chinoise indépendante · août 2026",
+      zh: "独立中文讲义 · 2026 年 8 月",
+    },
+    "translations.analysis.disclaimer": {
+      en: "This is an unofficial, non-commercial translation shared for study and exchange. Copyright in the original French book remains with its authors and publisher; the source is linked above.",
+      fr: "Il s’agit d’une traduction non officielle et non commerciale, diffusée à des fins d’étude et d’échange. Les droits sur le livre français original restent ceux de ses auteurs et de son éditeur ; la source est indiquée ci-dessus.",
+      zh: "这是用于学习与交流的非官方、非商业中文译本。法语原著的著作权归原作者与出版社所有，原著链接见上。",
     },
     "translations.work.summary": {
       en: "An independent Chinese edition based on Jean-François LE GALL's September 2006 lecture notes, carefully translated, checked, and typeset. Across 200 pages it develops integration and measure theory, probability, martingales, Markov chains, and an introduction to Brownian motion.",
