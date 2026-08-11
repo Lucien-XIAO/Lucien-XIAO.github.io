@@ -203,6 +203,21 @@
       fr: "Profil académique",
       zh: "学术概况",
     },
+    "cv.doctoral.registration": {
+      en: 'Doctoral registration at Université Gustave Eiffel: <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>.',
+      fr: 'Inscription doctorale à l’Université Gustave Eiffel : <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">École doctorale MSTIC (ED 532)</a>.',
+      zh: '博士注册于古斯塔夫·埃菲尔大学：<a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC 博士生院（ED 532）</a>。',
+    },
+    "cv.doctoral.project": {
+      en: "Doctoral project: <strong><em>Interface Models in Mathematical Statistical Mechanics</em></strong>.",
+      fr: "Sujet de thèse : <strong><em>Modèles d’interfaces en mécanique statistique mathématique</em></strong>.",
+      zh: "博士课题：<strong><em>数学统计力学中的界面模型</em></strong>。",
+    },
+    "cv.doctoral.supervisors": {
+      en: 'Supervisors: <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (LAMA, Université Paris-Est Créteil) and <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (LAMA, Université Gustave Eiffel).',
+      fr: 'Direction : <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (LAMA, Université Paris-Est Créteil) et <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (LAMA, Université Gustave Eiffel).',
+      zh: '指导教师：<a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a>（LAMA，巴黎东克雷泰伊大学）和 <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a>（LAMA，古斯塔夫·埃菲尔大学）。',
+    },
     "translations.card.kicker": {
       en: "Mathematical translations",
       fr: "Traductions mathématiques",
@@ -1336,25 +1351,10 @@
       fr: "Unité de recherche : LAMA (CNRS, Université Gustave Eiffel et Université Paris-Est Créteil).",
       zh: "研究单位：LAMA（CNRS、古斯塔夫·埃菲尔大学与巴黎东克雷泰伊大学）。",
     },
-    "Doctoral funding:": {
-      en: "Doctoral funding:",
-      fr: "Financement doctoral :",
-      zh: "博士资助：",
-    },
     "MSTIC Doctoral School (ED 532)": {
       en: "MSTIC Doctoral School (ED 532)",
       fr: "École doctorale MSTIC (ED 532)",
       zh: "MSTIC 博士生院（ED 532）",
-    },
-    "funded by Université Gustave Eiffel.": {
-      en: "funded by Université Gustave Eiffel.",
-      fr: "financé par l’Université Gustave Eiffel.",
-      zh: "由古斯塔夫·埃菲尔大学资助。",
-    },
-    "Supervised by Arnaud Le Ny (LAMA, Université Paris-Est Créteil) and Pierre Monmarché (LAMA, Université Gustave Eiffel).": {
-      en: "Supervised by Arnaud Le Ny (LAMA, Université Paris-Est Créteil) and Pierre Monmarché (LAMA, Université Gustave Eiffel).",
-      fr: "Sous la direction d’Arnaud Le Ny (LAMA, Université Paris-Est Créteil) et de Pierre Monmarché (LAMA, Université Gustave Eiffel).",
-      zh: "指导教师为 Arnaud Le Ny（LAMA，巴黎东克雷泰伊大学）和 Pierre Monmarché（LAMA，古斯塔夫·埃菲尔大学）。",
     },
     "Probability and random models": {
       en: "Probability and random models",
