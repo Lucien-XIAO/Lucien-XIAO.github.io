@@ -178,14 +178,19 @@
       fr: "Essai associé",
       zh: "相关文章",
     },
+    "home.research.m2.period": {
+      en: "April-July 2026",
+      fr: "avril-juillet 2026",
+      zh: "2026年4月-7月",
+    },
     "home.research.m1.period": {
-      en: "February 2025 - May 2025",
-      fr: "février 2025 - mai 2025",
+      en: "February-May 2025",
+      fr: "février-mai 2025",
       zh: "2025年2月-5月",
     },
     "home.research.l3.period": {
-      en: "February 2024 - May 2024",
-      fr: "février 2024 - mai 2024",
+      en: "February-May 2024",
+      fr: "février-mai 2024",
       zh: "2024年2月-5月",
     },
     "footer.copyright": {
@@ -1105,11 +1110,6 @@
       en: "Collective motion modeling",
       fr: "Modélisation du mouvement collectif",
       zh: "集体运动建模",
-    },
-    "April 2026 - July 2026": {
-      en: "April 2026 - July 2026",
-      fr: "avril 2026 - juillet 2026",
-      zh: "2026 年 4 月 - 2026 年 7 月",
     },
     "Report": {
       en: "Report",
