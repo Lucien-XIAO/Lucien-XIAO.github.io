@@ -57,7 +57,7 @@ layout: pma
 
   <div class="alert alert-important">
     <i class="fa-solid fa-triangle-exclamation"></i>
-    <span>L'admission accorde la <strong>plus grande importance aux notes de Probabilités Approfondies</strong> (avec <a href="https://www.lpsm.paris/users/levyt/probas_approfondies" style="font-weight:700">Thierry LÉVY</a>). Toute note supérieure à <strong>14/20</strong> est très compétitive. Ce cours est le prérequis essentiel : espérance conditionnelle, martingales, convergence des martingales, chaînes de Markov.</span>
+    <span>L'admission accorde la <strong>plus grande importance aux notes de Probabilités Approfondies</strong> (avec <a href="https://www.lpsm.paris/users/levyt/probas_approfondies" target="_blank" rel="noopener noreferrer" style="font-weight:700">Thierry LÉVY</a>). Toute note supérieure à <strong>14/20</strong> est très compétitive. Ce cours est le prérequis essentiel : espérance conditionnelle, martingales, convergence des martingales, chaînes de Markov.</span>
   </div>
 
   <div class="alert alert-warning">

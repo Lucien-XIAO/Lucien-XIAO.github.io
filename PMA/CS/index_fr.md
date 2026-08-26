@@ -24,7 +24,7 @@ breadcrumb: Calcul Stochastique
     <div class="course-meta-grid">
       <div class="course-meta-item">
         <div class="course-meta-label">Professeur</div>
-        <div class="course-meta-value"><a href="https://perso.lpsm.paris/~nfournier/" target="_blank">Nicolas FOURNIER</a></div>
+        <div class="course-meta-value"><a href="https://perso.lpsm.paris/~nfournier/" target="_blank" rel="noopener noreferrer">Nicolas FOURNIER</a></div>
       </div>
       <div class="course-meta-item">
         <div class="course-meta-label">Crédits ECTS</div>
