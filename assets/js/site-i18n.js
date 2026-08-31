@@ -183,6 +183,11 @@
       fr: "avril-juillet 2026",
       zh: "2026年4月-7月",
     },
+    "home.research.m2.topic": {
+      en: "The Long-Range Ising Model in 1D at Inverse-Square Decay",
+      fr: "Le modèle d’Ising à longue portée en dimension 1 à décroissance en carré inverse",
+      zh: "具有平方反比衰减的一维长程 Ising 模型",
+    },
     "home.research.m1.period": {
       en: "February-May 2025",
       fr: "février-mai 2025",
