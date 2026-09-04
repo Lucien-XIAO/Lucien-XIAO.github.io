@@ -1426,11 +1426,6 @@
       fr: "Master en probabilités",
       zh: "概率论硕士",
     },
-    "2025-2026 (expected)": {
-      en: "2025-2026 (expected)",
-      fr: "2025-2026 (prévu)",
-      zh: "2025-2026（预计）",
-    },
     "First-Year M.S. (M1) in Mathematics & Applications": {
       en: "First-Year M.S. (M1) in Mathematics & Applications",
       fr: "M1 Mathématiques et Applications",
