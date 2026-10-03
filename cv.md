@@ -16,11 +16,19 @@ title: Curriculum Vitae
       <a href="/assets/docs/yuguang-xiao-cv-en.pdf" data-i18n-href="cv.pdf.href" download><i class="fa-solid fa-download" aria-hidden="true"></i> <span data-i18n="cv.download">Download CV (PDF)</span></a>
       <span data-i18n="cv.updated">Updated October 2026</span>
     </div>
-    <p class="cv-print-contact">xiaoyuguang.com · yuguang [dot] xiao [dot] maths [at] gmail [dot] com</p>
+    <p class="cv-print-contact">xiaoyuguang.com · yuguang.xiao [at] univ-eiffel.fr · +33 1 45 17 16 42 · Office P2 244</p>
     <div class="cv-profile-line" aria-label="Academic profile" data-i18n-aria-label="cv.academic_profile">
-      <span>LAMA · CNRS · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> · UPEC</span>
-      <span>Probability & Mathematical Statistical Mechanics</span>
+      <span><a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · CNRS · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> · UPEC</span>
+      <span data-i18n="cv.research_team">Probability & Statistics research team</span>
     </div>
+    <address class="cv-contact-line" aria-label="Contact details" data-i18n-aria-label="cv.contact_details">
+      <span data-i18n="cv.office">Office P2 244</span>
+      <a href="tel:+33145171642">+33 1 45 17 16 42</a>
+      <a href="#cv-contact-email" class="js-email-link" id="cv-contact-email"
+        data-contact-code="128-124-110-124-104-117-110-53-127-112-104-118-71-124-117-112-125-52-108-112-109-109-108-115-53-109-121"
+        data-email-target="#cv-contact-email" data-i18n-title="contact.reveal" data-i18n-aria-label="contact.reveal"
+        title="Copy email address" aria-label="Copy email address">yuguang.xiao [at] univ-eiffel.fr</a>
+    </address>
   </header>
 
   <section class="cv-document-section">

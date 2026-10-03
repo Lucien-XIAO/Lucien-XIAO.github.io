@@ -1425,6 +1425,21 @@ body.theme-claude .cv-profile-line span + span::before {
   margin: 0 9px;
 }
 
+body.theme-claude .cv-contact-line {
+  align-items: center;
+  color: var(--site-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-style: normal;
+  gap: 8px 18px;
+  margin-top: 10px;
+}
+
+body.theme-claude .cv-contact-line a {
+  color: inherit;
+}
+
 body.theme-claude .cv-document-section h2 {
   border-bottom: 1px solid var(--site-border);
   color: var(--site-text);
@@ -1915,6 +1930,12 @@ body.theme-claude.pma-page [class*="badge"] {
     content: none;
   }
 
+  body.theme-claude .cv-contact-line {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   body.theme-claude .mathreader-hero {
     gap: 28px;
     grid-template-columns: 1fr;
@@ -2138,6 +2159,7 @@ body.theme-claude .visually-hidden { clip-path: inset(50%); height: 1px; overflo
   body.theme-claude .cv-lede { font-size: 11pt; }
   body.theme-claude .cv-print-contact { display: block; font-size: 9pt; }
   body.theme-claude .cv-profile-line { font-size: 8pt; margin-top: 10px; }
+  body.theme-claude .cv-contact-line { display: none; }
   body.theme-claude .cv-document-section h2 { font-size: 15pt; break-after: avoid; }
   body.theme-claude .cv-entry { gap: 20px; grid-template-columns: 110px minmax(0, 1fr); padding: 15px 0; break-inside: avoid; }
   body.theme-claude .cv-entry time { font-size: 9pt; }

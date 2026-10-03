@@ -263,6 +263,21 @@
       fr: "Unité de recherche : LAMA (CNRS, UGE et UPEC).",
       zh: "研究单位：LAMA（CNRS、UGE 与 UPEC）。",
     },
+    "cv.research_team": {
+      en: "Probability & Statistics research team",
+      fr: "Équipe Probabilités et statistiques",
+      zh: "概率与统计研究团队",
+    },
+    "cv.contact_details": {
+      en: "Contact details",
+      fr: "Coordonnées",
+      zh: "联系方式",
+    },
+    "cv.office": {
+      en: "Office P2 244",
+      fr: "Bureau P2 244",
+      zh: "办公室 P2 244",
+    },
     "cv.m2.status": {
       en: "Completed",
       fr: "Diplôme obtenu",
@@ -2700,9 +2715,9 @@
       zh: '我于 2026 年 5 月 21 日星期四在 <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> 2B111 教室参加了这场研讨班。',
     },
     "home.hero.affiliation": {
-      en: 'LAMA · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
-      fr: 'LAMA · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
-      zh: 'LAMA · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
+      en: '<a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
+      fr: '<a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
+      zh: '<a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
     },
     "home.education.phd.detail": {
       en: '<em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em> · funded by the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>.',
@@ -2730,9 +2745,9 @@
       zh: "四份<a href=\"/misc/translations/\">中文数学译著</a>已上线，涵盖从积分理论到连续鞅的内容。",
     },
     "home.about.p1": {
-      en: "Since 1 October 2026, I have been a mathematics PhD student and doctoral researcher at <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>, based at <a href=\"https://lama-umr8050.fr/\">LAMA</a>. My project, <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>, is supervised by <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a> (UPEC) and co-supervised by <a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a> (UGE). The doctoral period runs through 30 September 2029 and is funded by the <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC Doctoral School (ED 532)</a>.",
-      fr: "Depuis le 1er octobre 2026, je suis doctorant contractuel en mathématiques à <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>, au sein du <a href=\"https://lama-umr8050.fr/\">LAMA</a>. Ma thèse, <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>, est dirigée par <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a> (UPEC) et co-encadrée par <a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a> (UGE). La période doctorale court jusqu’au 30 septembre 2029 et est financée par l’<a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">École doctorale MSTIC (ED 532)</a>.",
-      zh: "自 2026 年 10 月 1 日起，我在 <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a> 担任数学博士生和博士研究人员，并在 <a href=\"https://lama-umr8050.fr/\">LAMA</a> 开展研究。我的博士课题为<strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>（数学统计力学中的界面模型），由 <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a>（UPEC）指导、<a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a>（UGE）共同指导。博士阶段至 2029 年 9 月 30 日，由 <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC 博士生院（ED 532）</a>资助。",
+      en: "Since 1 October 2026, I have been a mathematics PhD student and doctoral researcher at <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>, based at <a href=\"https://lama-umr8050.fr/membres/xiao.yuguang\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> in Créteil as a member of the Probability and Statistics team. My project, <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>, is supervised by <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a> (UPEC) and co-supervised by <a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a> (UGE). The doctoral period runs through 30 September 2029 and is funded by the <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC Doctoral School (ED 532)</a>.",
+      fr: "Depuis le 1er octobre 2026, je suis doctorant contractuel en mathématiques à <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>, au sein du <a href=\"https://lama-umr8050.fr/membres/xiao.yuguang\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> à Créteil, dans l’équipe Probabilités et statistiques. Ma thèse, <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>, est dirigée par <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a> (UPEC) et co-encadrée par <a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a> (UGE). La période doctorale court jusqu’au 30 septembre 2029 et est financée par l’<a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">École doctorale MSTIC (ED 532)</a>.",
+      zh: "自 2026 年 10 月 1 日起，我在 <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a> 担任数学博士生和博士研究人员，并在位于 Créteil 的 <a href=\"https://lama-umr8050.fr/membres/xiao.yuguang\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> 概率与统计团队开展研究。我的博士课题为<strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>（数学统计力学中的界面模型），由 <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a>（UPEC）指导、<a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a>（UGE）共同指导。博士阶段至 2029 年 9 月 30 日，由 <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC 博士生院（ED 532）</a>资助。",
     },
     "home.about.p2": {
       en: "Alongside research, I translate mathematical texts into Chinese and develop <a href=\"/mathreader/\">MathReader</a>, a macOS tool for reading mathematical papers.",
