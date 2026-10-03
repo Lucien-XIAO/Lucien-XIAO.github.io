@@ -1,12 +1,13 @@
 primary:
   - title: "Research"
     i18n_key: nav.research
-    url: /#interests
+    url: /research/
+    active_path: /research/
 
-  - title: "Publications"
-    i18n_key: nav.publications
-    url: /pub/
-    active_path: /pub/
+  - title: "Translations"
+    i18n_key: nav.translations
+    url: /misc/translations/
+    active_path: /misc/translations/
 
   - title: "Teaching"
     i18n_key: nav.teaching
@@ -19,7 +20,12 @@ primary:
     active_path: /cv/
 
 more:
-  - title: "Talks"
+  - title: "Publications"
+    i18n_key: nav.publications
+    url: /pub/
+    active_path: /pub/
+
+  - title: "Academic Activities"
     i18n_key: nav.talks
     url: /talks/
     active_path: /talks/

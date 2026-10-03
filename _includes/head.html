@@ -1,30 +1,30 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% if page.url == "/" %}
+{% unless page.noindex or page.url == "/404.html" %}
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 {% else %}
 <meta name="robots" content="noindex, follow">
-{% endif %}
+{% endunless %}
 {% if page.description %}
 <meta name="description" content="{{ page.description | escape }}">
 {% else %}
 <meta name="description"
-    content="Yuguang XIAO is a researcher in probability and mathematical statistical mechanics, working on long-range Ising models and random interfaces. Incoming PhD researcher at Université Gustave Eiffel in October 2026.">
+    content="Yuguang XIAO is a PhD student and doctoral researcher at UGE, working in probability, mathematical statistical mechanics, long-range models, and random interfaces.">
 {% endif %}
 <meta name="keywords"
-    content="Yuguang XIAO, Sorbonne Université, M2-PMA, Probability and Random Models, Stochastic Processes, Master's Degree, Double Bachelor's Degree, Mathematics, Physics">
+    content="Yuguang XIAO, UGE, LAMA, MSTIC ED 532, PhD Mathematics, Mathematical Statistical Mechanics, Probability, Random Interfaces, Sorbonne Université, M2-PMA">
 <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}" />
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Yuguang XIAO">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="{{ page.title | escape }}">
-<meta property="og:description" content="Yuguang XIAO — probability, statistical mechanics, stochastic processes, and random interfaces.">
+<meta property="og:description" content="Yuguang XIAO — PhD student and doctoral researcher at UGE in probability, mathematical statistical mechanics, and random interfaces.">
 <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
 <meta property="og:image" content="{{ site.url }}/assets/img/yuguang-xiao-snow-portrait.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ page.title | escape }}">
-<meta name="twitter:description" content="Yuguang XIAO — probability, statistical mechanics, stochastic processes, and random interfaces.">
+<meta name="twitter:description" content="Yuguang XIAO — PhD student and doctoral researcher at UGE in probability, mathematical statistical mechanics, and random interfaces.">
 <meta name="twitter:image" content="{{ site.url }}/assets/img/yuguang-xiao-snow-portrait.jpg">
 <meta name="theme-color" content="#F7F3EA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141A18" media="(prefers-color-scheme: dark)">
@@ -36,10 +36,10 @@
   "alternateName": "肖煜光",
   "url": "https://xiaoyuguang.com",
   "image": "https://xiaoyuguang.com/assets/img/yuguang-xiao-snow-portrait.jpg",
-  "jobTitle": "Incoming PhD researcher in probability and mathematical statistical mechanics",
+  "jobTitle": "PhD student and doctoral researcher in mathematics",
   "affiliation": {
     "@type": "CollegeOrUniversity",
-    "name": "Sorbonne Université"
+    "name": "Université Gustave Eiffel"
   },
   "sameAs": [
     "https://github.com/Lucien-XIAO",
@@ -60,9 +60,9 @@
 <link rel="stylesheet" href="/assets/css/publications-no-dark-mode_old.css">
 <link rel="stylesheet" href="/assets/css/theme-claude.css?v=39">
 <link rel="stylesheet" href="/assets/css/design-polish.css?v=2">
-{% unless page.layout == 'pma' %}<link rel="stylesheet" href="/assets/css/editorial.css?v=6">
+{% unless page.layout == 'pma' %}<link rel="stylesheet" href="/assets/css/editorial.css?v=7">
 {% endunless %}
-<script src="/assets/js/site-i18n.js?v=64" defer></script>
+<script src="/assets/js/site-i18n.js?v=66" defer></script>
 {% if page.mathjax %}
 <script>
   window.MathJax = {

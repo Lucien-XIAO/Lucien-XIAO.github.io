@@ -15,6 +15,31 @@ author_profile: true
     <p class="notebook-lede" data-i18n="translations.hero.lede">A personal collection of mathematical lecture notes and books that I translate, revise, and typeset for Chinese-speaking mathematics students and researchers, arranged from foundational material to more advanced references.</p>
   </header>
 
+  <section class="translation-catalog" aria-labelledby="translation-catalog-title">
+    <h2 id="translation-catalog-title" data-i18n="translations.catalog.title">Reading guide</h2>
+    <p data-i18n="translations.catalog.intro">A suggested progression from foundational analysis to advanced probability. All PDFs are in Chinese.</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-labelledby="translation-catalog-title">
+      <table>
+        <thead><tr>
+          <th scope="col" data-i18n="translations.catalog.work">Text and authors</th>
+          <th scope="col" data-i18n="translations.catalog.prerequisite">Suggested prerequisites</th>
+          <th scope="col" data-i18n="translations.catalog.version">Version</th>
+          <th scope="col">PDF</th>
+        </tr></thead>
+        <tbody>
+          {% for work in site.data.translations %}
+          <tr>
+            <th scope="row"><a href="#{{ work.anchor }}" data-i18n="translations.catalog.{{ work.id }}.title">{{ work.title }}</a><small>{{ work.authors }}</small></th>
+            <td data-i18n="translations.catalog.{{ work.id }}.prerequisite">{{ work.prerequisite }}</td>
+            <td><time datetime="2026-08" data-i18n="home.news.august">August 2026</time></td>
+            <td><a href="/misc/translations/{{ work.pdf }}" download data-i18n-title="translations.action.download" title="Download PDF"><i class="fa-solid fa-download" aria-hidden="true"></i><span class="visually-hidden" data-i18n="translations.action.download">Download PDF</span></a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <section class="translation-statement" aria-labelledby="translation-statement-title">
     <p class="notebook-kicker" data-i18n="translations.why.kicker">Why I translate</p>
     <div class="translation-statement-copy">

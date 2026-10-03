@@ -1,0 +1,39 @@
+- id: m2
+  level: M2
+  institution: "LAMA, Université Paris-Est Créteil, Paris"
+  title: The Long-Range Ising Model in 1D at Inverse-Square Decay
+  title_key: home.research.m2.topic
+  period: April-July 2026
+  period_key: home.research.m2.period
+  advisor: Arnaud LE NY
+  advisor_url: https://perso.math.u-pem.fr/leny.arnaud/
+  summary: "A study of the critical magnetisation jump through FK renormalisation and random currents, with a comparison to the inverse-square Discrete Gaussian Chain."
+  summary_key: research.m2.summary
+  report: /interships/StageM2/long-range-ising-model-m2-report.pdf
+  slides: /interships/StageM2/long-range-ising-model-m2-slides.pdf
+- id: m1
+  level: M1
+  institution: "Sorbonne Université, Paris"
+  title: Bi-Lipschitz equivalence of separated nets in Banach spaces
+  title_key: research.m1.title
+  period: February-May 2025
+  period_key: home.research.m1.period
+  advisor: Alexandros ESKENAZIS
+  advisor_url: https://www.alexandroseskenazis.com/
+  summary: "A research internship in the geometry of Banach spaces, focusing on bi-Lipschitz equivalence of separated nets."
+  summary_key: research.m1.summary
+  report: /interships/StageM1/rapport_M1.pdf
+  slides: /interships/StageM1/diapo_M1.pdf
+- id: l3
+  level: L3
+  institution: "Sorbonne Université, Paris"
+  title: Collective motion modeling
+  title_key: research.l3.title
+  period: February-May 2024
+  period_key: home.research.l3.period
+  advisor: Diane PEURICHARD
+  advisor_url: https://sites.google.com/site/dianepeurichard/home/
+  summary: "Modeling and Python simulations of collective motion in the presence of predators."
+  summary_key: research.l3.summary
+  report: /interships/StageL3/rappot.pdf
+  slides: /interships/StageL3/diapo.pdf

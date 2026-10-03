@@ -1,0 +1,34 @@
+---
+title: Research
+description: Research projects and internship reports by Yuguang XIAO, in probability, mathematical statistical mechanics and Banach space geometry.
+permalink: /research/
+layout: page
+---
+<div class="research-page">
+  <header class="notebook-detail-hero">
+    <p class="notebook-kicker" data-i18n="nav.research">Research</p>
+    <h1 data-i18n="research.title">Probability and random interfaces</h1>
+    <p class="notebook-lede" data-i18n="research.lede">My work connects stochastic processes, mathematical statistical mechanics, and the geometry of random models.</p>
+  </header>
+  <section class="research-doctoral">
+    <h2 data-i18n="research.doctoral">Doctoral research · 2026–2029</h2>
+    <p data-i18n-html="cv.doctoral.project">Doctoral project: <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>.</p>
+    <p data-i18n-html="cv.doctoral.supervisors">Supervisor: <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (UPEC). Co-supervisor: <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (UGE).</p>
+    <p data-i18n-html="research.doctoral.context">Based at <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a> and employed by <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> from 1 October 2026 to 30 September 2029, with funding from the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>. The research lies at the intersection of probability, statistical mechanics, and ergodic theory.</p>
+  </section>
+  <section id="reports" class="research-reports">
+    <h2 data-i18n="research.reports">Internship reports</h2>
+    {% for project in site.data.research %}
+      {% if forloop.first %}{% include research-project.html project=project featured=true %}{% else %}{% include research-project.html project=project %}{% endif %}
+    {% endfor %}
+  </section>
+  <section class="research-reading">
+    <h2 data-i18n="research.reading">Expository writing and experiments</h2>
+    <div class="reading-list">
+      <a href="/misc/essays/ising-model/"><span data-i18n="essay.ising.title">From Plus and Minus Signs to Phase Transitions: A Century of the Ising Model</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="/misc/essays/self-avoiding-walk/"><span data-i18n="essay.saw.title">Self-Avoiding Walks: Geometry, Polymers, and Criticality</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="/misc/lab/ising-interface/"><span data-i18n="research.ising.lab">Ising interfaces: an interactive experiment</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="/pub/"><span data-i18n="nav.publications">Publications</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </section>
+</div>

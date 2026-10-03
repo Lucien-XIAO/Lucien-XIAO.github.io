@@ -1,0 +1,24 @@
+- id: analysis
+  anchor: translation-analysis-title
+  title: Integration, convolution, Fourier and Laplace transforms
+  authors: Marc BRIANE · Gilles PAGÈS
+  prerequisite: Calculus and linear algebra
+  pdf: integration-convolution-fourier-laplace-zh.pdf
+- id: integration
+  anchor: translation-integration-title
+  title: Integration, probability and stochastic processes
+  authors: Jean-François LE GALL
+  prerequisite: Analysis and elementary probability
+  pdf: integration-probability-stochastic-processes-zh.pdf
+- id: brownian
+  anchor: translation-brownian-title
+  title: Brownian motion, martingales and stochastic calculus
+  authors: Jean-François LE GALL
+  prerequisite: Measure-theoretic probability and discrete martingales
+  pdf: brownian-motion-martingales-stochastic-calculus-zh.pdf
+- id: continuous
+  anchor: translation-continuous-martingales-title
+  title: Continuous martingales and Brownian motion
+  authors: Daniel REVUZ · Marc YOR
+  prerequisite: Brownian motion and stochastic integration
+  pdf: continuous-martingales-brownian-motion-zh.pdf

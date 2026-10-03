@@ -1,226 +1,105 @@
 ---
 layout: default
 title: Yuguang XIAO - Homepage
-description: Yuguang XIAO (肖煜光) — incoming PhD student in mathematics at LAMA, Université Gustave Eiffel. Research in probability and mathematical statistical mechanics, including Ising models, height models, and random interfaces.
+description: Yuguang XIAO (肖煜光), PhD student and doctoral researcher in mathematics at LAMA and UGE since 1 October 2026. Research, reports and Chinese mathematical translations.
 ---
 
 <section class="home-hero" aria-labelledby="home-name">
   <canvas class="home-research-canvas" id="homeResearchCanvas" aria-hidden="true"></canvas>
   <div class="home-hero-inner">
-    <img class="home-portrait" src="/assets/img/yuguang-xiao-snow-portrait.jpg"
+    <img class="home-portrait" src="/assets/img/yuguang-xiao-snow-portrait.jpg" width="220" height="270"
       alt="Portrait of Yuguang XIAO" decoding="async" fetchpriority="high" />
     <div class="home-hero-copy">
       <h1 id="home-name">Yuguang XIAO <span lang="zh-CN">肖煜光</span></h1>
-      <p data-i18n="home.hero.intro">I work in probability and mathematical statistical mechanics, with a focus on Ising models (nearest-neighbor and long-range), height models, and random interfaces.</p>
+      <p class="home-status" data-i18n="home.hero.status">PhD student · Doctoral researcher</p>
+      <p class="home-affiliation" data-i18n-html="home.hero.affiliation">LAMA · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a></p>
+      <p class="home-intro" data-i18n="home.hero.intro">I study probability and mathematical statistical mechanics, with a focus on long-range models and random interfaces.</p>
       <button type="button" class="home-email js-email-link" id="home-email"
         data-contact-code="128-124-110-124-104-117-110-53-127-112-104-118-53-116-104-123-111-122-71-110-116-104-112-115-53-106-118-116"
         data-email-target="#home-email" data-i18n-title="contact.reveal" data-i18n-aria-label="contact.reveal"
         title="Copy email address" aria-label="Copy email address">yuguang [dot] xiao [dot] maths [at] gmail [dot] com</button>
-      <div class="home-hero-actions" aria-label="Profile shortcuts">
-        <a class="home-action home-action-primary" href="/cv/" data-i18n="home.hero.cv">View CV</a>
-        <a class="home-action" href="/pub/" data-i18n="home.hero.publications">Publications</a>
+      <div class="home-hero-actions">
+        <a class="home-action home-action-primary" href="/research/"><span data-i18n="nav.research">Research</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="home-action" href="/cv/" data-i18n="home.hero.cv">View CV</a>
       </div>
     </div>
   </div>
-  <a class="home-scroll-cue" href="#about-me" data-home-scroll-next
-    data-i18n-aria-label="home.hero.scroll_label" aria-label="Continue to About Me">
-    <span data-i18n="home.hero.scroll">Scroll</span>
-    <i aria-hidden="true"></i>
-  </a>
 </section>
 
-<div class="section" id="about-me">
-  <h3 class="section-title">About Me</h3>
+<section class="section" id="about-me">
+  <h2 class="section-title" data-i18n="home.about.title">About me</h2>
   <div class="section-body intro-copy">
-    <p data-i18n-html="home.about.p1">Beginning in October 2026, I will be a PhD student in mathematics at the
-      <a href="https://lama-umr8050.fr/">LAMA</a>, <a href="https://www.univ-gustave-eiffel.fr/">Université Gustave Eiffel</a>.
-      My doctoral project, <em>Interface Models in Mathematical Statistical Mechanics</em>, will be supervised by
-      <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a>
-      (LAMA, <a href="https://www.u-pec.fr/">UPEC</a>) and
-      <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre Monmarché</a>
-      (LAMA, <a href="https://www.univ-gustave-eiffel.fr/">UGE</a>). The project lies at the intersection of probability
-      theory, statistical mechanics, and ergodic theory. Previously, I was a student in the
-      <a href="https://www.lpsm.paris/masters/modale/index">M2 Probabilités et Modèles Aléatoires</a> program at
-      <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.</p>
-    <p data-i18n-html="home.about.p2">I have been fortunate to take part in several research projects, including the
-      long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a>,
-      bi-Lipschitz equivalence of separated nets in Banach spaces with
-      <a href="https://www.alexandroseskenazis.com/" target="_blank" rel="noopener noreferrer">Alexandros Eskenazis</a>, and collective motion modeling with
-      <a href="https://sites.google.com/site/dianepeurichard/home" target="_blank" rel="noopener noreferrer">Diane Peurichard</a>.</p>
+    <p data-i18n-html="home.about.p1">Since 1 October 2026, I have been a mathematics PhD student and doctoral researcher at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>, based at <a href="https://lama-umr8050.fr/">LAMA</a>. My project, <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>, is supervised by <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (UPEC) and co-supervised by <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (UGE). The doctoral period runs through 30 September 2029 and is funded by the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>.</p>
+    <p data-i18n-html="home.about.p2">Alongside research, I translate mathematical texts into Chinese and develop <a href="/mathreader/">MathReader</a>, a macOS tool for reading mathematical papers.</p>
   </div>
-</div>
+</section>
 
-<div class="section" id="news">
-  <h3 class="section-title">News</h3>
-  <div class="section-body">
-    <div class="news-list">
-      <article class="card news-card">
-        <p><strong>[Oct 2026]</strong> <span data-i18n-html="home.news.stat_mech_creteil"><a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> will take place on October 8–9, 2026, bringing together recent advances in statistical mechanics and discrete stochastic models.</span></p>
-      </article>
-      <article class="card news-card">
-        <p><strong>[Jul 2026]</strong> <span data-i18n-html="home.news.mstic_fellowship">I am delighted to have been awarded a doctoral fellowship from the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>, supporting my PhD at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> from October 1, 2026 to September 30, 2029. My doctoral project, <em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em>, will be supervised by <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (<a href="https://www.u-pec.fr/" target="_blank" rel="noopener noreferrer">UPEC</a>), with <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>) as co-supervisor.</span></p>
-      </article>
-      <article class="card news-card">
-        <p><strong>[Apr 2026]</strong> <span data-i18n-html="home.news.long_range">I’ll be working on the long-range Ising model with <a
-              href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank">Arnaud LE NY</a> at Université Paris-Est
-            Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.</span></p>
-      </article>
-    </div>
-  </div>
-</div>
-
-<div class="section" id="interests">
-  <h3 class="section-title">Research</h3>
-  <div class="section-body">
-    <div class="research-list">
-      <article class="research-item">
-        <h4>Stochastic Processes</h4>
-        <p>Random walks, Markov and non-Markovian dynamics, and memory effects.</p>
-      </article>
-      <article class="research-item">
-        <h4>Statistical Mechanics</h4>
-        <p>Nearest-neighbor and long-range Ising models, height models, and random interfaces.</p>
-      </article>
-      <article class="research-item">
-        <h4>Future Interests</h4>
-        <p>Schramm–Loewner evolution (SLE) and KPZ universality.</p>
-      </article>
-    </div>
-  </div>
-</div>
-
-<div class="section" id="education">
-  <h3 class="section-title">Education</h3>
-  <div class="section-body">
-    <div class="card timeline-item">
-      <div class="experience-item">
-        <img class="institution-logo" loading="lazy" decoding="async" src="assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
-        <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
-          <p class="exp-detail">Master 2 in Probability and Random Models (PMA)</p>
-          <p class="exp-period">2025-2026</p>
-        </div>
-      </div>
-    </div>
-    <div class="card timeline-item">
-      <div class="experience-item">
-        <img class="institution-logo" loading="lazy" decoding="async" src="assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
-        <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
-          <p class="exp-detail">Master 1 Mathematics and Applications</p>
-          <p class="exp-period">2024-2025</p>
-        </div>
-      </div>
-    </div>
-    <div class="card timeline-item">
-      <div class="experience-item">
-        <img class="institution-logo" loading="lazy" decoding="async" src="assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" />
-        <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
-          <p class="exp-detail">Double Bachelor's degree in Mathematics and Physics</p>
-          <p class="exp-period">2020-2024</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section" id="experience">
-  <h3 class="section-title">Research Experience</h3>
-  <div class="section-body">
-    <div class="card timeline-item">
-      <div class="experience-item">
-        <img class="institution-logo" loading="lazy" decoding="async" src="assets/img/lama-upec-logo.png" alt="UPEC logo" />
-        <div class="experience-content">
-          <p class="exp-title"><strong>Université Paris-Est Créteil, Paris</strong></p>
-          <p class="exp-detail">M2 Research Intern</p>
-          <p class="exp-detail"><em>Topic:</em> <span class="exp-subject" data-i18n="home.research.m2.topic">The Long-Range Ising Model in 1D at Inverse-Square Decay</span></p>
-          <p class="exp-detail"><em>Advisor:</em> <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a>
-          </p>
-          <p class="exp-period" data-i18n="home.research.m2.period">April-July 2026</p>
-          <div class="action-links">
-            <a href="/interships/StageM2/long-range-ising-model-m2-report.pdf" target="_blank" rel="noopener noreferrer"><i
-                class="fa-solid fa-file-pdf"></i> Report</a>
-            <a href="/interships/StageM2/long-range-ising-model-m2-slides.pdf" target="_blank" rel="noopener noreferrer"><i
-                class="fa-solid fa-file-powerpoint"></i> Slides</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card timeline-item">
-      <div class="experience-item">
-        <img class="institution-logo" loading="lazy" decoding="async" src="assets/img/imj-prg-logo.png" alt="IMJ-PRG logo" />
-        <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
-          <p class="exp-detail">M1 Research Intern</p>
-          <p class="exp-detail"><em>Topic:</em> <span class="exp-subject">Bi-Lipschitz equivalence of separated nets in
-              Banach spaces</span></p>
-          <p class="exp-detail"><em>Advisor:</em> <a href="https://www.alexandroseskenazis.com/" target="_blank"
-              rel="noopener noreferrer">Alexandros ESKENAZIS</a></p>
-          <p class="exp-period" data-i18n="home.research.m1.period">February-May 2025</p>
-          <div class="action-links">
-            <a href="/interships/StageM1/rapport_M1.pdf" target="_blank" rel="noopener noreferrer"><i
-                class="fa-solid fa-file-pdf"></i> Report</a>
-            <a href="/interships/StageM1/diapo_M1.pdf" target="_blank" rel="noopener noreferrer"><i
-                class="fa-solid fa-file-powerpoint"></i> Slides</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card timeline-item">
-      <div class="experience-item">
-        <img class="institution-logo" loading="lazy" decoding="async" src="assets/img/ljll-logo.jpg" alt="LJLL logo" />
-        <div class="experience-content">
-          <p class="exp-title"><strong>Sorbonne Université, Paris</strong></p>
-          <p class="exp-detail">L3 Research Intern</p>
-          <p class="exp-detail"><em>Topic:</em> <span class="exp-subject">Collective motion modeling</span></p>
-          <p class="exp-detail"><em>Advisor:</em> <a href="https://sites.google.com/site/dianepeurichard/home/"
-              target="_blank" rel="noopener noreferrer">Diane PEURICHARD</a></p>
-          <p class="exp-period" data-i18n="home.research.l3.period">February-May 2024</p>
-          <div class="action-links">
-            <a href="/interships/StageL3/rappot.pdf" target="_blank" rel="noopener noreferrer"><i
-                class="fa-solid fa-file-pdf"></i> Report</a>
-            <a href="/interships/StageL3/diapo.pdf" target="_blank" rel="noopener noreferrer"><i
-                class="fa-solid fa-file-powerpoint"></i> Slides</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section" id="materials">
-  <h3 class="section-title">Selected Materials</h3>
-  <div class="section-body">
-    <div class="materials-grid">
-      <a class="material-link" href="/cv/">
-        <span class="material-link-icon"><i class="fa-solid fa-file-lines"></i></span>
-        <span>
-          <strong>CV</strong>
-          <em>Academic background and research experience.</em>
-        </span>
+<section class="section" id="education">
+  <h2 class="section-title" data-i18n="home.education.title">Education</h2>
+  <div class="section-body education-list">
+    <article class="education-item education-item-current">
+      <a class="education-logo" href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer" aria-label="UGE">
+        <img src="/assets/img/uge-logo.svg" alt="UGE logo" width="150" height="31" loading="lazy" decoding="async" />
       </a>
-      <a class="material-link" href="/PMA/">
-        <span class="material-link-icon"><i class="fa-solid fa-route"></i></span>
-        <span>
-          <strong>PMA Path</strong>
-          <em>Guide to the M2 Probability and Random Models program.</em>
-        </span>
+      <div class="education-content">
+        <p class="education-period" data-i18n="home.education.phd.period">1 October 2026 – 30 September 2029</p>
+        <h3><span data-i18n="home.education.phd.degree">PhD in Mathematics · Doctoral researcher</span> <span class="education-status" data-i18n="home.education.current">Current</span></h3>
+        <p class="education-institution"><a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> · <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a></p>
+        <p data-i18n-html="home.education.phd.detail"><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em> · funded by the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>.</p>
+      </div>
+    </article>
+    <article class="education-item">
+      <a class="education-logo education-logo-square" href="https://www.sorbonne-universite.fr/" target="_blank" rel="noopener noreferrer" aria-label="Sorbonne Université">
+        <img src="/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" width="54" height="54" loading="lazy" decoding="async" />
       </a>
-      <a class="material-link" href="/mathreader/">
-        <span class="material-link-icon"><i class="fa-solid fa-book-open-reader"></i></span>
-        <span>
-          <strong>MathReader</strong>
-          <em>A macOS tool for reading and organizing mathematical papers.</em>
-        </span>
-      </a>
-      <a class="material-link" href="/misc/essays/measure-theory/">
-        <span class="material-link-icon"><i class="fa-solid fa-square-root-variable"></i></span>
-        <span>
-          <strong>Measure Theory Notes</strong>
-          <em>Self-compiled notes, currently in progress.</em>
-        </span>
-      </a>
+      <div class="education-content">
+        <p class="education-period">2025 – 2026</p>
+        <h3><span data-i18n="home.education.m2.degree">Master 2 in Probability and Random Models (PMA)</span> <span class="education-status education-status-complete" data-i18n="home.education.completed">Completed</span></h3>
+        <p class="education-institution"><a href="https://www.sorbonne-universite.fr/" target="_blank" rel="noopener noreferrer">Sorbonne Université, Paris</a></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="interests">
+  <h2 class="section-title" data-i18n="home.featured.title">Selected research</h2>
+  <div class="section-body">
+    {% include research-project.html project=site.data.research.first home=true %}
+    <div class="home-directions">
+      <p data-i18n="home.directions.processes">Stochastic processes: random walks and Markovian or non-Markovian dynamics.</p>
+      <p data-i18n="home.directions.interfaces">Statistical mechanics: Ising models, height models and random interfaces.</p>
+      <p data-i18n="home.directions.future">Further interests: SLE and KPZ universality.</p>
     </div>
   </div>
-</div>
+</section>
+
+<section class="section" id="news">
+  <h2 class="section-title" data-i18n="home.news.title">News</h2>
+  <div class="section-body news-list">
+    <article class="news-card">
+      <p><time datetime="2026-10-01" data-i18n="home.news.october">1 October 2026</time> <span data-i18n-html="home.news.started_phd">I started my PhD and doctoral employment at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>, joining <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a> to work on interface models in mathematical statistical mechanics.</span></p>
+    </article>
+    <article class="news-card">
+      <p><time datetime="2026-09" data-i18n="home.news.september">September 2026</time> <span data-i18n-html="home.news.graduated">I have completed my M2 at Sorbonne Université. My <a href="/research/#m2">internship report and slides</a> on the inverse-square long-range Ising model are now available.</span></p>
+    </article>
+    <article class="news-card">
+      <p><time datetime="2026-08" data-i18n="home.news.august">August 2026</time> <span data-i18n-html="home.news.translations">Four <a href="/misc/translations/">Chinese mathematical translations</a> are available, from integration theory to continuous martingales.</span></p>
+    </article>
+    <article class="news-card">
+      <p><time datetime="2026-07" data-i18n="home.news.july">July 2026</time> <span data-i18n-html="home.news.mstic_fellowship">I was awarded doctoral funding from the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a> for my 2026–2029 PhD at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>.</span></p>
+    </article>
+  </div>
+  <p class="upcoming-event"><span data-i18n="home.news.upcoming">Upcoming:</span> <a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> · <span data-i18n="home.news.workshop.date">8-9 October 2026</span></p>
+</section>
+
+<section class="section" id="materials">
+  <h2 class="section-title">Selected Materials</h2>
+  <div class="section-body">
+    <div class="reading-list home-materials">
+      <a href="/misc/translations/"><span><strong data-i18n="nav.translations">Translations</strong><small data-i18n="home.materials.translations">Four mathematical texts in Chinese, from integration to stochastic calculus.</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="/misc/essays/"><span><strong data-i18n="home.materials.essays">Mathematical essays</strong><small data-i18n="home.materials.essays.summary">Ising models, self-avoiding walks and interactive explanations.</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="/mathreader/"><span><strong>MathReader</strong><small data-i18n="home.materials.mathreader">A macOS reader for mathematical papers, annotations and AI-assisted reading.</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="/PMA/"><span><strong data-i18n="home.materials.pma">M2-PMA guide</strong><small data-i18n="home.materials.pma.summary">Course choices and personal experience from the 2025-2026 cohort.</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>

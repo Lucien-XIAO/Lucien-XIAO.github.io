@@ -1,0 +1,16 @@
+{% assign project = include.project %}
+<article class="research-project" id="{{ project.id }}">
+  <p class="research-project-meta"><span>{{ project.level }}</span> · <span data-i18n="research.internship">Research internship</span> · <span data-i18n="{{ project.period_key }}">{{ project.period }}</span></p>
+  <h3 data-i18n="{{ project.title_key }}">{{ project.title }}</h3>
+  <p class="research-project-institution">{{ project.institution }}</p>
+  <p><span data-i18n="research.advisor">Supervisor:</span> <a href="{{ project.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ project.advisor }}</a></p>
+  <p class="research-project-summary" data-i18n="{{ project.summary_key }}">{{ project.summary }}</p>
+  {% if include.featured %}
+  <p class="research-project-result" data-i18n="research.m2.result">The report reconstructs the Ising renormalisation argument and examines the limits of transferring random-current methods to the discrete Gaussian setting; the motivating open problem remains unresolved.</p>
+  {% endif %}
+  <div class="action-links">
+    <a href="{{ project.report }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span data-i18n="research.report">Report</span></a>
+    <a href="{{ project.slides }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i> <span data-i18n="research.slides">Slides</span></a>
+    {% if include.home %}<a href="/research/#reports"><span data-i18n="research.all">All research projects</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>{% endif %}
+  </div>
+</article>
