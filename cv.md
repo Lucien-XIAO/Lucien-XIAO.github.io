@@ -31,7 +31,7 @@ title: Curriculum Vitae
       <article class="cv-entry">
         <time>2025 – 2026</time>
         <div class="cv-entry-content">
-          <h3>Master 2 in Probability and Random Models (PMA) <span class="cv-status cv-status-complete" data-i18n="cv.m2.status">Completed</span></h3>
+          <h3>Master 2 in Probability and Random Models (PMA)</h3>
           <p class="cv-institution">Sorbonne Université, Paris</p>
         </div>
       </article>

@@ -19,11 +19,16 @@ async function main() {
         const response = await page.goto(site.origin + route + '?lang=' + lang, { waitUntil: 'networkidle' });
         check(response.ok() && new URL(page.url()).pathname === route, 'Original page remains available: ' + route);
         check(await page.evaluate(value => SiteI18n.getLanguage() === value, lang), 'Language: ' + lang);
+        if (route === '/' || route === '/cv/') {
+          check(await page.locator('.education-status-complete, .cv-status-complete').count() === 0, 'Completed badges removed');
+        }
         if (route === '/') {
           check(await page.locator('.home-hero-actions, .home-hero .home-action').count() === 0, 'Hero shortcut buttons removed');
           check(await page.locator('.nav-left a[href="/cv/"], .nav-left a[href="/research/"]').count() === 2, 'CV and Research navigation remains');
           const about = await page.locator('[data-i18n-html="home.about.p1"]').textContent();
-          check(about.includes('Créteil') && about.includes('Marne-la-Vallée'), 'Both LAMA locations shown');
+          check(about.includes('Créteil') && about.includes('Champs-sur-Marne'), 'Both LAMA locations shown');
+          check(await page.locator('.education-item-current .education-institution').textContent() === 'LAMA - Université Gustave Eiffel, Champs-sur-Marne', 'Education institution city is correct');
+          check(!(await page.locator('#main-content').textContent()).includes('Marne-la-Vallée'), 'Previous location label removed');
           check((await page.locator('#about-me .home-office').textContent()).includes('2P 244'), 'Separate UPEC office line shown');
         }
         check(await page.locator('.footer-links').count() === 0, 'Duplicate footer navigation removed');
