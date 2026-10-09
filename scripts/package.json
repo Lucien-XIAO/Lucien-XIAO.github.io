@@ -2,7 +2,6 @@
   "name": "academic-site-checks",
   "private": true,
   "scripts": {
-    "cv": "node render-cv.cjs",
     "check": "node check-site.cjs"
   },
   "devDependencies": {

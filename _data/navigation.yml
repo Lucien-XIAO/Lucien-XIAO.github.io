@@ -1,13 +1,13 @@
 primary:
-  - title: "Research"
-    i18n_key: nav.research
-    url: /research/
-    active_path: /research/
+  - title: "Publications"
+    i18n_key: nav.publications
+    url: /pub/
+    active_path: /pub/
 
-  - title: "Translations"
-    i18n_key: nav.translations
-    url: /misc/translations/
-    active_path: /misc/translations/
+  - title: "Talks"
+    i18n_key: nav.talks_short
+    url: /talks/
+    active_path: /talks/
 
   - title: "Teaching"
     i18n_key: nav.teaching
@@ -19,21 +19,21 @@ primary:
     url: /cv/
     active_path: /cv/
 
-more:
-  - title: "Publications"
-    i18n_key: nav.publications
-    url: /pub/
-    active_path: /pub/
-
-  - title: "Academic Activities"
-    i18n_key: nav.talks
-    url: /talks/
-    active_path: /talks/
-
   - title: "M2-PMA"
     i18n_key: nav.pma
     url: /PMA/
     active_path: /PMA/
+
+more:
+  - title: "Research"
+    i18n_key: nav.research
+    url: /research/
+    active_path: /research/
+
+  - title: "Translations"
+    i18n_key: nav.translations
+    url: /misc/translations/
+    active_path: /misc/translations/
 
   - title: "MathReader"
     i18n_key: nav.mathreader
@@ -44,4 +44,5 @@ more:
     i18n_key: nav.misc
     url: /misc/
     active_path: /misc/
+    active_exclude: /misc/translations/
     

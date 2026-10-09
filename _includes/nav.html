@@ -13,7 +13,9 @@
       {% assign more_active = false %}
       {% for item in site.data.navigation.more %}
         {% if item.active_path and page.url contains item.active_path %}
-          {% assign more_active = true %}
+          {% unless item.active_exclude and page.url contains item.active_exclude %}
+            {% assign more_active = true %}
+          {% endunless %}
         {% endif %}
       {% endfor %}
       <details class="nav-more{% if more_active %} nav-more-active{% endif %}">
@@ -22,7 +24,7 @@
           {% for item in site.data.navigation.more %}
             <a href="{{ item.url }}"
               data-i18n="{{ item.i18n_key }}"
-              {% if item.active_path and page.url contains item.active_path %}class="nav-active"{% endif %}>
+              {% if item.active_path and page.url contains item.active_path %}{% unless item.active_exclude and page.url contains item.active_exclude %}class="nav-active"{% endunless %}{% endif %}>
               {{ item.title }}
             </a>
           {% endfor %}
@@ -63,7 +65,7 @@
           {% for item in site.data.navigation.more %}
             <a href="{{ item.url }}"
               data-i18n="{{ item.i18n_key }}"
-              {% if item.active_path and page.url contains item.active_path %}class="mobile-nav-active"{% endif %}>
+              {% if item.active_path and page.url contains item.active_path %}{% unless item.active_exclude and page.url contains item.active_exclude %}class="mobile-nav-active"{% endunless %}{% endif %}>
               {{ item.title }}
             </a>
           {% endfor %}

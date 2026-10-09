@@ -19,9 +19,19 @@ async function main() {
         const response = await page.goto(site.origin + route + '?lang=' + lang, { waitUntil: 'networkidle' });
         check(response.ok() && new URL(page.url()).pathname === route, 'Original page remains available: ' + route);
         check(await page.evaluate(value => SiteI18n.getLanguage() === value, lang), 'Language: ' + lang);
+        check(await page.locator('.footer-links').count() === 0, 'Duplicate footer navigation removed');
+        check(await page.locator('.site-footer, .site-footer p').evaluateAll(elements => elements.every(el => getComputedStyle(el).borderTopWidth === '0px')), 'Footer divider removed');
+        if (route === '/cv/') {
+          check(await page.locator('.cv-document-section').count() === 1, 'CV contains only Education');
+          check(await page.locator('.cv-entry').count() === 5, 'All five education entries remain');
+          check(await page.locator('.cv-download, .cv-contact-line, .cv-print-contact').count() === 0, 'CV download and contact blocks removed');
+          check(await page.locator('.cv-document a[href*=".pdf"]').count() === 0, 'No CV PDF links');
+          check(await page.locator('.cv-document').innerText().then(text => !/P2 244|1 45 17 16 42|univ-eiffel\.fr/.test(text)), 'CV contact details absent');
+        }
       }
     }
     await page.goto(site.origin + '/?lang=en', { waitUntil: 'networkidle' });
+    check(JSON.stringify((await page.locator('.nav-left > a, .nav-more > summary').allTextContents()).map(text => text.trim())) === JSON.stringify(['Home', 'Publications', 'Talks', 'Teaching', 'CV', 'M2-PMA', 'More']), 'Requested top navigation order');
     check(await page.locator('.home-hero #homeResearchCanvas').count() === 1, 'Original hero restored');
     check(await page.locator('#education').count() === 1, 'Original education section restored');
     check(await page.locator('.nav-left a[href="/writing/"]').count() === 0, 'Redesigned Writing navigation removed');

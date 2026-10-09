@@ -11,24 +11,6 @@ title: Curriculum Vitae
   <header class="cv-document-header">
     <p class="cv-kicker">Curriculum Vitae</p>
     <h1>Yuguang XIAO <span lang="zh-CN">肖煜光</span></h1>
-    <p class="cv-lede" data-i18n="cv.lede">Academic training, research experience and teaching.</p>
-    <div class="action-links cv-download">
-      <a href="/assets/docs/yuguang-xiao-cv-en.pdf" data-i18n-href="cv.pdf.href" download><i class="fa-solid fa-download" aria-hidden="true"></i> <span data-i18n="cv.download">Download CV (PDF)</span></a>
-      <span data-i18n="cv.updated">Updated October 2026</span>
-    </div>
-    <p class="cv-print-contact">xiaoyuguang.com · {{ site.author.email }}<br><span data-i18n="contact.office">Office</span> {{ site.data.profile.office }} · LAMA / UPEC · {{ site.data.profile.phone }}</p>
-    <div class="cv-profile-line" aria-label="Academic profile" data-i18n-aria-label="cv.academic_profile">
-      <span><a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · CNRS · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> · UPEC</span>
-      <span data-i18n="cv.research_team">Probability & Statistics research team</span>
-    </div>
-    <address class="cv-contact-line" aria-label="Contact details" data-i18n-aria-label="cv.contact_details">
-      <span data-i18n="cv.office">Office P2 244</span>
-      <a href="tel:+33145171642">+33 1 45 17 16 42</a>
-      <a href="#cv-contact-email" class="js-email-link" id="cv-contact-email"
-        data-contact-code="128-124-110-124-104-117-110-53-127-112-104-118-71-124-117-112-125-52-108-112-109-109-108-115-53-109-121"
-        data-email-target="#cv-contact-email" data-i18n-title="contact.reveal" data-i18n-aria-label="contact.reveal"
-        title="Copy email address" aria-label="Copy email address">yuguang.xiao [at] univ-eiffel.fr</a>
-    </address>
   </header>
 
   <section class="cv-document-section">
@@ -80,24 +62,5 @@ title: Curriculum Vitae
         </div>
       </article>
     </div>
-  </section>
-  <section class="cv-document-section cv-research" id="experience">
-    <h2>Research Experience</h2>
-    {% for project in site.data.research %}{% include research-project.html project=project %}{% endfor %}
-  </section>
-  <section class="cv-document-section">
-    <h2>Teaching</h2>
-    <article class="cv-entry">
-      <time data-i18n="cv.tutoring.period">September 2023 - June 2026</time>
-      <div class="cv-entry-content">
-        <h3>Private Mathematics Tutor</h3>
-        <p data-i18n="cv.tutoring">Continuous one-to-one mathematics tutoring for the same École Polytechnique Bachelor of Science student over three academic years, covering the full mathematics curriculum, questions and problem-solving practice.</p>
-      </div>
-    </article>
-  </section>
-  <section class="cv-document-section cv-materials">
-    <h2 data-i18n="cv.projects">Mathematical projects</h2>
-    <p><a href="/misc/translations/" data-i18n="nav.translations">Translations</a> · <span data-i18n="home.materials.translations">Four mathematical texts in Chinese, from integration to stochastic calculus.</span></p>
-    <p><a href="/mathreader/">MathReader</a> · <span data-i18n="home.materials.mathreader">A macOS reader for mathematical papers, annotations and AI-assisted reading.</span></p>
   </section>
 </div>

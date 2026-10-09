@@ -234,21 +234,6 @@
       fr: "Formation, expériences de recherche et enseignement.",
       zh: "教育背景、研究经历与教学。",
     },
-    "cv.download": {
-      en: "Download CV (PDF)",
-      fr: "Télécharger le CV (PDF)",
-      zh: "下载简历（PDF）",
-    },
-    "cv.pdf.href": {
-      en: "/assets/docs/yuguang-xiao-cv-en.pdf",
-      fr: "/assets/docs/yuguang-xiao-cv-fr.pdf",
-      zh: "/assets/docs/yuguang-xiao-cv-zh.pdf",
-    },
-    "cv.updated": {
-      en: "Updated October 2026",
-      fr: "Mis à jour en octobre 2026",
-      zh: "更新于 2026 年 10 月",
-    },
     "cv.doctoral.period": {
       en: "1 Oct. 2026 – 30 Sep. 2029",
       fr: "1er oct. 2026 – 30 sept. 2029",
@@ -498,6 +483,11 @@
       en: "Academic activities",
       fr: "Activités académiques",
       zh: "学术活动",
+    },
+    "nav.talks_short": {
+      en: "Talks",
+      fr: "Exposés",
+      zh: "报告",
     },
     "nav.teaching": {
       en: "Teaching",

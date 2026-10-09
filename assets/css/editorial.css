@@ -736,16 +736,14 @@ body.theme-claude.pma-page [class*="card"]:hover {
 
 /* ---------- Footer and utility controls ---------- */
 
-body.theme-claude .site-footer {
-  border-top: 1px solid var(--site-border);
+body.theme-claude .site-footer,
+body.theme-claude .site-footer p,
+body.theme-claude .page-wrapper .site-footer p {
+  border-top: 0 !important;
 }
 
 body.theme-claude .site-footer p::before {
   display: none;
-}
-
-body.theme-claude .footer-links a {
-  transition: color 140ms ease;
 }
 
 body.theme-claude .back-to-top {
@@ -843,6 +841,27 @@ body.theme-claude a {
   transition: color 140ms ease !important;
 }
 
+/* Keep the full navigation and its dropdown usable on small tablets. */
+@media (min-width: 641px) and (max-width: 768px) {
+  body.theme-claude .nav-left,
+  body.theme-claude.pma-page .nav-left {
+    gap: 12px;
+    overflow: visible;
+  }
+
+  body.theme-claude.pma-page .nav-container {
+    overflow: visible;
+  }
+
+  body.theme-claude .nav-left > a,
+  body.theme-claude .nav-left > a:not(:first-child),
+  body.theme-claude .nav-more > summary {
+    font-size: 13px;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 760px) {
   body.theme-claude .nav-container {
     padding: 0 18px;
@@ -865,6 +884,8 @@ body.theme-claude a {
 
 @media (max-width: 640px) {
   body.theme-claude .top-nav {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     height: 56px;
   }
 
@@ -876,6 +897,7 @@ body.theme-claude a {
 
   body.theme-claude .mobile-nav-overlay {
     background: rgba(0, 0, 0, 0.28);
+    overflow-y: auto;
     top: 56px;
     transition: none;
   }
@@ -1394,9 +1416,8 @@ body.theme-claude .cv-document {
 }
 
 body.theme-claude .cv-document-header {
-  border-bottom: 1px solid var(--site-border);
-  margin-bottom: 46px;
-  padding-bottom: 32px;
+  margin-bottom: 28px;
+  padding-bottom: 0;
 }
 
 body.theme-claude .cv-document-header h1 {
@@ -1423,21 +1444,6 @@ body.theme-claude .cv-profile-line span + span::before {
   color: var(--site-border);
   content: "·";
   margin: 0 9px;
-}
-
-body.theme-claude .cv-contact-line {
-  align-items: center;
-  color: var(--site-muted);
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 12px;
-  font-style: normal;
-  gap: 8px 18px;
-  margin-top: 10px;
-}
-
-body.theme-claude .cv-contact-line a {
-  color: inherit;
 }
 
 body.theme-claude .cv-document-section h2 {
@@ -1930,12 +1936,6 @@ body.theme-claude.pma-page [class*="badge"] {
     content: none;
   }
 
-  body.theme-claude .cv-contact-line {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 5px;
-  }
-
   body.theme-claude .mathreader-hero {
     gap: 28px;
     grid-template-columns: 1fr;
@@ -2096,9 +2096,6 @@ body.theme-claude .reading-list a:hover strong { color: var(--site-accent); }
 
 body.theme-claude .cv-document-section + .cv-document-section { margin-top: 42px; }
 body.theme-claude .cv-document-header h1 span { color: var(--site-muted); font-size: 20px; white-space: nowrap; }
-body.theme-claude .cv-download { align-items: center; gap: 20px; margin-top: 24px; }
-body.theme-claude .cv-download > span { font-size: 12px; color: var(--site-muted); }
-body.theme-claude .cv-print-contact { display: none; }
 body.theme-claude .cv-document .research-project h3 { font-size: 17px; }
 body.theme-claude .cv-document .research-project .research-project-summary { font-size: 14px; }
 body.theme-claude .cv-materials p { font-size: 14px; }
@@ -2153,22 +2150,19 @@ body.theme-claude .visually-hidden { clip-path: inset(50%); height: 1px; overflo
   body.theme-claude .research-project h3 { font-size: 20px; }
   body.theme-claude .research-project .action-links { gap: 12px 18px; }
   body.theme-claude :is(.notebook-detail-hero, .notebook-hero, .mathreader-hero, .talks-hero, .publications-hero, .teaching-hero, .cv-document-header) h1 { font-size: 32px; }
-  body.theme-claude .cv-download { gap: 10px; }
   body.theme-claude .notebook-photo-pair { grid-template-columns: 1fr; }
 }
 
 @media print {
   @page { size: A4; margin: 16mm 17mm; }
   body.theme-claude { background: #fff; color: #222; font-size: 10pt; }
-  body.theme-claude :is(.top-nav, .site-footer, .skip-link, .cv-download) { display: none !important; }
+  body.theme-claude :is(.top-nav, .site-footer, .skip-link) { display: none !important; }
   body.theme-claude.interior-page .page-wrapper { padding: 0; margin: 0; min-height: 0; max-width: none; }
   body.theme-claude .cv-document { max-width: none; }
   body.theme-claude .cv-document-header { margin-bottom: 22px; padding-bottom: 16px; }
   body.theme-claude .cv-document-header h1 { font-size: 26pt; }
   body.theme-claude .cv-lede { font-size: 11pt; }
-  body.theme-claude .cv-print-contact { display: block; font-size: 9pt; }
   body.theme-claude .cv-profile-line { font-size: 8pt; margin-top: 10px; }
-  body.theme-claude .cv-contact-line { display: none; }
   body.theme-claude .cv-document-section h2 { font-size: 15pt; break-after: avoid; }
   body.theme-claude .cv-entry { gap: 20px; grid-template-columns: 110px minmax(0, 1fr); padding: 15px 0; break-inside: avoid; }
   body.theme-claude .cv-entry time { font-size: 9pt; }
