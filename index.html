@@ -37,8 +37,8 @@ description: Yuguang XIAO (肖煜光), PhD student and doctoral researcher in ma
   <h2 class="section-title" data-i18n="home.education.title">Education</h2>
   <div class="section-body education-list">
     <article class="education-item education-item-current">
-      <a class="education-logo" href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer" aria-label="UGE">
-        <img src="/assets/img/uge-logo.svg" alt="UGE logo" width="150" height="31" loading="lazy" decoding="async" />
+      <a class="education-logo education-logo-uge" href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer" aria-label="UGE">
+        <img src="/assets/img/uge-mark.svg" alt="UGE logo" width="50" height="50" loading="lazy" decoding="async" />
       </a>
       <div class="education-content">
         <p class="education-period" data-i18n="home.education.phd.period">1 October 2026 – 30 September 2029</p>
@@ -48,8 +48,8 @@ description: Yuguang XIAO (肖煜光), PhD student and doctoral researcher in ma
       </div>
     </article>
     <article class="education-item">
-      <a class="education-logo education-logo-square" href="https://www.sorbonne-universite.fr/" target="_blank" rel="noopener noreferrer" aria-label="Sorbonne Université">
-        <img src="/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" width="54" height="54" loading="lazy" decoding="async" />
+      <a class="education-logo" href="https://www.sorbonne-universite.fr/" target="_blank" rel="noopener noreferrer" aria-label="Sorbonne Université">
+        <img src="/assets/img/sorbonne-universite-logo.jpg" alt="Sorbonne Université logo" width="50" height="50" loading="lazy" decoding="async" />
       </a>
       <div class="education-content">
         <p class="education-period">2025 – 2026</p>
@@ -60,15 +60,21 @@ description: Yuguang XIAO (肖煜光), PhD student and doctoral researcher in ma
   </div>
 </section>
 
-<section class="section" id="interests">
+<section class="section" id="interests" aria-labelledby="research-interests-heading">
+  <h2 class="section-title" id="research-interests-heading" data-i18n="home.directions.title">Research interests</h2>
+  <div class="section-body">
+    <ul class="home-directions" role="list">
+      <li data-i18n-html="home.directions.processes"><strong>Stochastic processes</strong> — random walks and Markovian or non-Markovian dynamics.</li>
+      <li data-i18n-html="home.directions.interfaces"><strong>Statistical mechanics</strong> — Ising models, height models and random interfaces.</li>
+      <li data-i18n-html="home.directions.future"><strong>Further interests</strong> — SLE and KPZ universality.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="selected-research">
   <h2 class="section-title" data-i18n="home.featured.title">Selected research</h2>
   <div class="section-body">
     {% include research-project.html project=site.data.research.first home=true %}
-    <div class="home-directions">
-      <p data-i18n="home.directions.processes">Stochastic processes: random walks and Markovian or non-Markovian dynamics.</p>
-      <p data-i18n="home.directions.interfaces">Statistical mechanics: Ising models, height models and random interfaces.</p>
-      <p data-i18n="home.directions.future">Further interests: SLE and KPZ universality.</p>
-    </div>
   </div>
 </section>
 
@@ -81,14 +87,7 @@ description: Yuguang XIAO (肖煜光), PhD student and doctoral researcher in ma
     <article class="news-card">
       <p><time datetime="2026-09" data-i18n="home.news.september">September 2026</time> <span data-i18n-html="home.news.graduated">I have completed my M2 at Sorbonne Université. My <a href="/research/#m2">internship report and slides</a> on the inverse-square long-range Ising model are now available.</span></p>
     </article>
-    <article class="news-card">
-      <p><time datetime="2026-08" data-i18n="home.news.august">August 2026</time> <span data-i18n-html="home.news.translations">Four <a href="/misc/translations/">Chinese mathematical translations</a> are available, from integration theory to continuous martingales.</span></p>
-    </article>
-    <article class="news-card">
-      <p><time datetime="2026-07" data-i18n="home.news.july">July 2026</time> <span data-i18n-html="home.news.mstic_fellowship">I was awarded doctoral funding from the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a> for my 2026–2029 PhD at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>.</span></p>
-    </article>
   </div>
-  <p class="upcoming-event"><span data-i18n="home.news.upcoming">Upcoming:</span> <a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> · <span data-i18n="home.news.workshop.date">8-9 October 2026</span></p>
 </section>
 
 <section class="section" id="materials">

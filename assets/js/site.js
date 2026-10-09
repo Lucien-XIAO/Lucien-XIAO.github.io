@@ -20,6 +20,11 @@
       fr: 'Adresse e-mail copiée',
       zh: '邮箱地址已复制'
     };
+    var contactFailureMessages = {
+      en: 'Could not copy. Please select and copy the email address.',
+      fr: 'Copie impossible. Veuillez sélectionner et copier l’adresse e-mail.',
+      zh: '复制失败，请选中邮箱地址手动复制。'
+    };
 
     var currentLanguage = function () {
       var lang = (document.documentElement.lang || document.documentElement.dataset.language || 'en').toLowerCase();
@@ -72,6 +77,7 @@
         }
       }
 
+      var previousFocus = document.activeElement;
       var textarea = document.createElement('textarea');
       textarea.value = text;
       textarea.setAttribute('readonly', '');
@@ -85,6 +91,7 @@
         return document.execCommand('copy');
       } finally {
         textarea.remove();
+        if (previousFocus) previousFocus.focus({ preventScroll: true });
       }
     };
 
@@ -103,7 +110,7 @@
           showContactToast(contactMessages[currentLanguage()]);
         } catch (error) {
           if (target) target.textContent = fallbackText;
-          showContactToast(contactMessages[currentLanguage()]);
+          showContactToast(contactFailureMessages[currentLanguage()]);
         }
       });
     });
@@ -113,7 +120,8 @@
   /* Theme toggle (runs before DOMContentLoaded thanks to `defer`). */
   var toggle = document.getElementById('themeToggle');
   if (toggle) {
-    var saved = localStorage.getItem('theme');
+    var saved;
+    try { saved = localStorage.getItem('theme'); } catch (_) {}
     var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     var effectiveTheme = saved || (systemDark ? 'dark' : 'light');
     var syncThemeToggle = function (theme) {
@@ -130,7 +138,7 @@
       var current = document.documentElement.getAttribute('data-theme') || (systemDark ? 'dark' : 'light');
       var next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
+      try { localStorage.setItem('theme', next); } catch (_) {}
       syncThemeToggle(next);
     });
   }

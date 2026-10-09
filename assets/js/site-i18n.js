@@ -8,6 +8,7 @@
   };
 
   const KEYED_TRANSLATIONS = {
+    "contact.office": { en: "Office", fr: "Bureau", zh: "办公室" },
     "nav.translations": {
       en: "Translations",
       fr: "Traductions",
@@ -23,20 +24,25 @@
       fr: "Travaux de recherche",
       zh: "代表性研究",
     },
+    "home.directions.title": {
+      en: "Research interests",
+      fr: "Intérêts de recherche",
+      zh: "研究兴趣",
+    },
     "home.directions.processes": {
-      en: "Stochastic processes: random walks and Markovian or non-Markovian dynamics.",
-      fr: "Processus stochastiques : marches aléatoires et dynamiques markoviennes ou non markoviennes.",
-      zh: "随机过程：随机游走，以及马尔可夫与非马尔可夫动力学。",
+      en: "<strong>Stochastic processes</strong> — random walks and Markovian or non-Markovian dynamics.",
+      fr: "<strong>Processus stochastiques</strong> — marches aléatoires et dynamiques markoviennes ou non markoviennes.",
+      zh: "<strong>随机过程</strong>：随机游走，以及马尔可夫与非马尔可夫动力学。",
     },
     "home.directions.interfaces": {
-      en: "Statistical mechanics: Ising models, height models and random interfaces.",
-      fr: "Mécanique statistique : modèles d’Ising, modèles de hauteur et interfaces aléatoires.",
-      zh: "统计力学：Ising 模型、高度模型与随机界面。",
+      en: "<strong>Statistical mechanics</strong> — Ising models, height models and random interfaces.",
+      fr: "<strong>Mécanique statistique</strong> — modèles d’Ising, modèles de hauteur et interfaces aléatoires.",
+      zh: "<strong>统计力学</strong>：Ising 模型、高度模型与随机界面。",
     },
     "home.directions.future": {
-      en: "Further interests: SLE and KPZ universality.",
-      fr: "Autres centres d’intérêt : SLE et universalité KPZ.",
-      zh: "进一步感兴趣的方向：SLE 与 KPZ 普适性。",
+      en: "<strong>Further interests</strong> — SLE and KPZ universality.",
+      fr: "<strong>Autres centres d’intérêt</strong> — SLE et universalité KPZ.",
+      zh: "<strong>进一步感兴趣的方向</strong>：SLE 与 KPZ 普适性。",
     },
     "home.education.title": {
       en: "Education",

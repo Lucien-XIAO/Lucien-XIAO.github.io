@@ -205,11 +205,6 @@
       animationFrame = 0;
     };
 
-    var isHeroCurrent = function () {
-      var bounds = hero.getBoundingClientRect();
-      return bounds.bottom >= window.innerHeight * 0.72 && bounds.top <= 80;
-    };
-
     var scrollToNext = function () {
       if (scrollLocked) return;
       scrollLocked = true;
@@ -230,38 +225,7 @@
       });
     }
 
-    window.addEventListener('wheel', function (event) {
-      if (event.defaultPrevented || event.deltaY < 8 || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-      if (!isHeroCurrent()) return;
-      event.preventDefault();
-      scrollToNext();
-    }, { passive: false });
-
-    var touchStartX = 0;
-    var touchStartY = 0;
-    hero.addEventListener('touchstart', function (event) {
-      if (!event.touches.length) return;
-      touchStartX = event.touches[0].clientX;
-      touchStartY = event.touches[0].clientY;
-    }, { passive: true });
-
-    hero.addEventListener('touchend', function (event) {
-      if (!event.changedTouches.length || !isHeroCurrent()) return;
-      var deltaX = event.changedTouches[0].clientX - touchStartX;
-      var deltaY = event.changedTouches[0].clientY - touchStartY;
-      if (deltaY < -52 && Math.abs(deltaY) > Math.abs(deltaX)) scrollToNext();
-    }, { passive: true });
-
-    window.addEventListener('keydown', function (event) {
-      var target = event.target;
-      var interactive = target && target.closest && target.closest('a, button, input, textarea, select, summary');
-      if (interactive || !isHeroCurrent()) return;
-      if (event.key === 'ArrowDown' || event.key === 'PageDown' || event.key === ' ') {
-        event.preventDefault();
-        scrollToNext();
-      }
-    });
-
+    // Keep the animated hero, but let wheel, touch and keyboard scrolling remain native.
     if ('IntersectionObserver' in window) {
       var observer = new IntersectionObserver(function (entries) {
         heroVisible = entries[0].isIntersecting;

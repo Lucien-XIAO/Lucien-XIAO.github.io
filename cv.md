@@ -16,7 +16,7 @@ title: Curriculum Vitae
       <a href="/assets/docs/yuguang-xiao-cv-en.pdf" data-i18n-href="cv.pdf.href" download><i class="fa-solid fa-download" aria-hidden="true"></i> <span data-i18n="cv.download">Download CV (PDF)</span></a>
       <span data-i18n="cv.updated">Updated October 2026</span>
     </div>
-    <p class="cv-print-contact">xiaoyuguang.com · yuguang.xiao [at] univ-eiffel.fr · +33 1 45 17 16 42 · Office P2 244</p>
+    <p class="cv-print-contact">xiaoyuguang.com · {{ site.author.email }}<br><span data-i18n="contact.office">Office</span> {{ site.data.profile.office }} · LAMA / UPEC · {{ site.data.profile.phone }}</p>
     <div class="cv-profile-line" aria-label="Academic profile" data-i18n-aria-label="cv.academic_profile">
       <span><a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · CNRS · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> · UPEC</span>
       <span data-i18n="cv.research_team">Probability & Statistics research team</span>

@@ -9,6 +9,9 @@ highlighter: rouge
 
 # Keep build artefacts and private working files out of the deployed site.
 exclude:
+  - scripts/
+  - tmp/
+  - tests/
   - anaconda_projects/
   - publications/Various_Notes/.texpadtmp/
   - publications/Various_Notes/apply_fixes.py
