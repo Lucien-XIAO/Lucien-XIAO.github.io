@@ -19,6 +19,13 @@ async function main() {
         const response = await page.goto(site.origin + route + '?lang=' + lang, { waitUntil: 'networkidle' });
         check(response.ok() && new URL(page.url()).pathname === route, 'Original page remains available: ' + route);
         check(await page.evaluate(value => SiteI18n.getLanguage() === value, lang), 'Language: ' + lang);
+        if (route === '/') {
+          check(await page.locator('.home-hero-actions, .home-hero .home-action').count() === 0, 'Hero shortcut buttons removed');
+          check(await page.locator('.nav-left a[href="/cv/"], .nav-left a[href="/research/"]').count() === 2, 'CV and Research navigation remains');
+          const about = await page.locator('[data-i18n-html="home.about.p1"]').textContent();
+          check(about.includes('Créteil') && about.includes('Marne-la-Vallée'), 'Both LAMA locations shown');
+          check((await page.locator('#about-me .home-office').textContent()).includes('2P 244'), 'Separate UPEC office line shown');
+        }
         check(await page.locator('.footer-links').count() === 0, 'Duplicate footer navigation removed');
         check(await page.locator('.site-footer, .site-footer p').evaluateAll(elements => elements.every(el => getComputedStyle(el).borderTopWidth === '0px')), 'Footer divider removed');
         if (route === '/cv/') {
@@ -26,7 +33,7 @@ async function main() {
           check(await page.locator('.cv-entry').count() === 5, 'All five education entries remain');
           check(await page.locator('.cv-download, .cv-contact-line, .cv-print-contact').count() === 0, 'CV download and contact blocks removed');
           check(await page.locator('.cv-document a[href*=".pdf"]').count() === 0, 'No CV PDF links');
-          check(await page.locator('.cv-document').innerText().then(text => !/P2 244|1 45 17 16 42|univ-eiffel\.fr/.test(text)), 'CV contact details absent');
+          check(await page.locator('.cv-document').innerText().then(text => !/(?:P2|2P) 244|1 45 17 16 42|univ-eiffel\.fr/.test(text)), 'CV contact details absent');
         }
       }
     }
