@@ -13,9 +13,14 @@ async function main() {
   page.on('pageerror', error => errors.push(error.message));
   let checks = 0;
   function check(value, message) { assert.ok(value, message); checks++; }
+  const workshopDetails = {
+    en: { date: '8–9 October 2026', attendance: 'I attended the workshop as an audience member and did not give a talk.' },
+    fr: { date: '8–9 octobre 2026', attendance: 'J’ai assisté à cet atelier en tant qu’auditeur, sans y donner d’exposé.' },
+    zh: { date: '2026 年 10 月 8–9 日', attendance: '我作为听众参加了这次研讨会，未作报告。' },
+  };
   try {
     for (const lang of ['en', 'fr', 'zh']) {
-      for (const route of ['/', '/research/', '/pub/', '/teaching/', '/misc/', '/misc/essays/', '/cv/', '/misc/translations/']) {
+      for (const route of ['/', '/research/', '/pub/', '/talks/', '/teaching/', '/misc/', '/misc/essays/', '/cv/', '/misc/translations/']) {
         const response = await page.goto(site.origin + route + '?lang=' + lang, { waitUntil: 'networkidle' });
         check(response.ok() && new URL(page.url()).pathname === route, 'Original page remains available: ' + route);
         check(await page.evaluate(value => SiteI18n.getLanguage() === value, lang), 'Language: ' + lang);
@@ -40,6 +45,19 @@ async function main() {
         }
         check(await page.locator('.footer-links').count() === 0, 'Duplicate footer navigation removed');
         check(await page.locator('.site-footer, .site-footer p').evaluateAll(elements => elements.every(el => getComputedStyle(el).borderTopWidth === '0px')), 'Footer divider removed');
+        if (route === '/talks/') {
+          check(await page.locator('.talks-page .exp-card').count() === 1, 'Only confirmed workshop attendance is listed');
+          check(await page.locator('.exp-role a').textContent() === 'Stat-Mech in Créteil 2026', 'Correct workshop title');
+          check(await page.locator('.exp-role a').getAttribute('href') === 'https://statmechcreteil.sciencesconf.org/?lang=en', 'Official workshop link');
+          check(await page.locator('.exp-date').textContent() === workshopDetails[lang].date, 'Workshop dates in ' + lang);
+          check(await page.locator('[data-i18n="activities.statmech.attendance"]').textContent() === workshopDetails[lang].attendance, 'Audience participation, not a speaker, in ' + lang);
+          check(!/CHALHOUB|Joseph CHEN|2B111|matrices aléatoires/i.test(await page.locator('.talks-page').textContent()), 'Incorrect seminar records removed');
+          await page.screenshot({ path: path.join(shots, 'attendance-' + lang + '-desktop.png'), fullPage: true });
+          await page.setViewportSize({ width: 390, height: 844 });
+          check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Attendance page mobile width in ' + lang);
+          await page.screenshot({ path: path.join(shots, 'attendance-' + lang + '-mobile.png'), fullPage: true });
+          await page.setViewportSize({ width: 1440, height: 1000 });
+        }
         if (route === '/cv/') {
           check(await page.locator('.cv-document-section').count() === 1, 'CV contains only Education');
           check(await page.locator('.cv-entry').count() === 5, 'All five education entries remain');
@@ -74,7 +92,7 @@ async function main() {
     await page.locator('#themeToggle').click();
     check(await page.locator('html').getAttribute('data-theme') === 'dark', 'Theme toggle');
     check(errors.length === 0, errors.join('; '));
-    console.log('PASS: ' + checks + ' checks; original layout, 8 routes, 3 languages, mobile menu, email and theme.');
+    console.log('PASS: ' + checks + ' checks; original layout, 9 routes, 3 languages, mobile menu, email and theme.');
   } finally { await site.close(); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

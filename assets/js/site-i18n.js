@@ -305,19 +305,29 @@
       zh: "阅读我的研究实习报告",
     },
     "activities.title": {
-      en: "Seminars and academic activities",
-      fr: "Séminaires et activités académiques",
-      zh: "研讨班与学术活动",
+      en: "Conferences and workshops",
+      fr: "Conférences et ateliers",
+      zh: "学术会议与研讨会",
     },
     "activities.lede": {
-      en: "Seminars I attended during my studies and research internships.",
-      fr: "Séminaires auxquels j’ai assisté pendant mes études et mes stages de recherche.",
-      zh: "学习及研究实习期间，我参加的研讨班。",
+      en: "Academic events I attended as an audience member.",
+      fr: "Événements scientifiques auxquels j’ai assisté en tant qu’auditeur.",
+      zh: "我作为听众参加的学术活动。",
     },
     "activities.attended": {
-      en: "Seminars attended",
-      fr: "Séminaires suivis",
-      zh: "参加的研讨班",
+      en: "Workshops attended",
+      fr: "Ateliers suivis",
+      zh: "参加的研讨会",
+    },
+    "activities.statmech.date": {
+      en: "8–9 October 2026",
+      fr: "8–9 octobre 2026",
+      zh: "2026 年 10 月 8–9 日",
+    },
+    "activities.statmech.attendance": {
+      en: "I attended the workshop as an audience member and did not give a talk.",
+      fr: "J’ai assisté à cet atelier en tant qu’auditeur, sans y donner d’exposé.",
+      zh: "我作为听众参加了这次研讨会，未作报告。",
     },
     "teaching.student": {
       en: "Individual tutoring for an École Polytechnique Bachelor of Science student",
@@ -1652,50 +1662,15 @@
       fr: "Je n'ai pas d'exposé prévu pour le moment.",
       zh: "目前还没有已安排的报告。",
     },
-    "University of Paris-Est Créteil (UPEC) Probability Seminar": {
-      en: "University of Paris-Est Créteil (UPEC) Probability Seminar",
-      fr: "Séminaire de probabilité de l'Université Paris-Est Créteil (UPEC)",
-      zh: "Université Paris-Est Créteil (UPEC) 概率研讨班",
-    },
     "Speaker:": {
       en: "Speaker:",
       fr: "Intervenant :",
       zh: "主讲人：",
     },
-    "Joseph CHEN": {
-      en: "Joseph CHEN",
-      fr: "Joseph CHEN",
-      zh: "Joseph CHEN",
-    },
-    "Speaker: Joseph CHEN": {
-      en: "Speaker: Joseph CHEN",
-      fr: "Intervenant : Joseph CHEN",
-      zh: "主讲人：Joseph CHEN",
-    },
     "Apr. 2026": {
       en: "Apr. 2026",
       fr: "avr. 2026",
       zh: "2026 年 4 月",
-    },
-    "I attended this probability seminar during my M2 internship at LAMA / UPEC.": {
-      en: "I attended this probability seminar during my M2 internship at LAMA / UPEC.",
-      fr: "J'ai suivi ce séminaire de probabilité pendant mon stage de M2 au LAMA / UPEC.",
-      zh: "我在 LAMA / UPEC 的 M2 实习期间参加了这个概率研讨班。",
-    },
-    "LAMA Probability and Statistics Seminar": {
-      en: "LAMA Probability and Statistics Seminar",
-      fr: "Séminaire de probabilités et statistiques du LAMA",
-      zh: "LAMA 概率与统计研讨班",
-    },
-    "Speaker: Christopher Chalhoub · Imperial College London · Visiting LAMA-UPEC": {
-      en: "Speaker: Christopher Chalhoub · Imperial College London · Visiting LAMA-UPEC",
-      fr: "Intervenant : Christopher Chalhoub · Imperial College London · En visite au LAMA-UPEC",
-      zh: "主讲人：Christopher Chalhoub · 帝国理工学院 · 访问 LAMA-UPEC",
-    },
-    "· Imperial College London · Visiting LAMA-UPEC": {
-      en: "· Imperial College London · Visiting LAMA-UPEC",
-      fr: "· Imperial College London · En visite au LAMA-UPEC",
-      zh: "· 帝国理工学院 · 访问 LAMA-UPEC",
     },
     "21 May 2026": {
       en: "21 May 2026",
@@ -2710,11 +2685,6 @@
   };
 
   const HTML_TRANSLATIONS = {
-    "activities.seminar.uge": {
-      en: 'I attended this seminar on Thursday, 21 May 2026 at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>, room 2B111.',
-      fr: 'J’ai assisté à ce séminaire le jeudi 21 mai 2026 à <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>, en salle 2B111.',
-      zh: '我于 2026 年 5 月 21 日星期四在 <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> 2B111 教室参加了这场研讨班。',
-    },
     "home.hero.affiliation": {
       en: '<a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
       fr: '<a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
