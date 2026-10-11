@@ -26,6 +26,10 @@ async function main() {
           check(await page.locator('.education-status-complete, .cv-status-complete').count() === 0, 'Completed badges removed');
         }
         if (route === '/') {
+          check(await page.locator('#materials, .home-materials').count() === 0, 'Homepage Selected Materials section removed');
+          check(await page.locator('.nav-left a[href="/misc/translations/"], .nav-left a[href="/mathreader/"], .nav-left a[href="/PMA/"]').count() === 3, 'Materials pages remain accessible from navigation');
+          check(await page.locator('#selected-research [data-i18n="research.all"], #selected-research a[href="/research/#reports"]').count() === 0, 'All research projects shortcut removed');
+          check(await page.locator('#selected-research .action-links a').count() === 2, 'Research report and slides links remain');
           check(await page.locator('.home-hero-actions, .home-hero .home-action').count() === 0, 'Hero shortcut buttons removed');
           check(await page.locator('.nav-left a[href="/cv/"], .nav-left a[href="/research/"]').count() === 2, 'CV and Research navigation remains');
           const about = await page.locator('[data-i18n-html="home.about.p1"]').textContent();
