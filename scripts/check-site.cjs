@@ -19,6 +19,9 @@ async function main() {
         const response = await page.goto(site.origin + route + '?lang=' + lang, { waitUntil: 'networkidle' });
         check(response.ok() && new URL(page.url()).pathname === route, 'Original page remains available: ' + route);
         check(await page.evaluate(value => SiteI18n.getLanguage() === value, lang), 'Language: ' + lang);
+        if (route === '/' || route === '/research/') {
+          check(await page.locator('#m2 .research-project-institution').textContent() === 'LAMA - Université Paris-Est Créteil, Créteil', 'M2 internship institution is in Créteil');
+        }
         if (route === '/' || route === '/cv/') {
           check(await page.locator('.education-status-complete, .cv-status-complete').count() === 0, 'Completed badges removed');
         }
