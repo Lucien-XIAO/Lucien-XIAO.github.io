@@ -24,6 +24,7 @@ async function main() {
         const response = await page.goto(site.origin + route + '?lang=' + lang, { waitUntil: 'networkidle' });
         check(response.ok() && new URL(page.url()).pathname === route, 'Original page remains available: ' + route);
         check(await page.evaluate(value => SiteI18n.getLanguage() === value, lang), 'Language: ' + lang);
+        check(await page.locator('script[type="application/ld+json"]').evaluateAll(elements => elements.some(el => JSON.parse(el.textContent).email === 'mailto:yuguang.xiao2@univ-eiffel.fr')), 'Current email in page metadata');
         if (route === '/' || route === '/research/') {
           check(await page.locator('#m2 .research-project-institution').textContent() === 'LAMA - Université Paris-Est Créteil, Créteil', 'M2 internship institution is in Créteil');
         }
@@ -31,6 +32,7 @@ async function main() {
           check(await page.locator('.education-status-complete, .cv-status-complete').count() === 0, 'Completed badges removed');
         }
         if (route === '/') {
+          check(await page.locator('#home-email').textContent() === 'yuguang.xiao2 [at] univ-eiffel.fr', 'Current email displayed');
           check(await page.locator('#materials, .home-materials').count() === 0, 'Homepage Selected Materials section removed');
           check(await page.locator('.nav-left a[href="/misc/translations/"], .nav-left a[href="/mathreader/"], .nav-left a[href="/PMA/"]').count() === 3, 'Materials pages remain accessible from navigation');
           check(await page.locator('#selected-research [data-i18n="research.all"], #selected-research a[href="/research/#reports"]').count() === 0, 'All research projects shortcut removed');
@@ -84,11 +86,11 @@ async function main() {
     await page.evaluate(() => Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async value => { window.copiedEmail = value; } } }));
     await page.locator('#home-email').click();
     await page.waitForFunction(() => document.querySelector('.contact-toast')?.textContent.includes('copied'));
-    check(await page.evaluate(() => window.copiedEmail) === 'yuguang.xiao@univ-eiffel.fr', 'School email copied');
+    check(await page.evaluate(() => window.copiedEmail) === 'yuguang.xiao2@univ-eiffel.fr', 'School email copied');
     await page.evaluate(() => { Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async () => { throw Error('Denied'); } } }); document.execCommand = () => false; });
     await page.locator('#home-email').click();
     await page.waitForFunction(() => document.querySelector('.contact-toast')?.textContent.includes('Could not copy'));
-    checks++;
+    check(await page.locator('#home-email').textContent() === 'yuguang [dot] xiao2 [at] univ-eiffel [dot] fr', 'Current email displayed on copy failure');
     await page.locator('#themeToggle').click();
     check(await page.locator('html').getAttribute('data-theme') === 'dark', 'Theme toggle');
     check(errors.length === 0, errors.join('; '));
