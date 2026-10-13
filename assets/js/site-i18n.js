@@ -24,6 +24,11 @@
       fr: "Bureau à l’UPEC :",
       zh: "UPEC 办公室：",
     },
+    "home.about.uge_office": {
+      en: "UGE office:",
+      fr: "Bureau à l’UGE :",
+      zh: "UGE 办公室：",
+    },
     "home.featured.title": {
       en: "Selected research",
       fr: "Travaux de recherche",

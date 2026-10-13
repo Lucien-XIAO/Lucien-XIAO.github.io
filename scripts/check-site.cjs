@@ -43,7 +43,10 @@ async function main() {
           check(about.includes('Créteil') && about.includes('Champs-sur-Marne'), 'Both LAMA locations shown');
           check(await page.locator('.education-item-current .education-institution').textContent() === 'LAMA - Université Gustave Eiffel, Champs-sur-Marne', 'Education institution city is correct');
           check(!(await page.locator('#main-content').textContent()).includes('Marne-la-Vallée'), 'Previous location label removed');
-          check((await page.locator('#about-me .home-office').textContent()).includes('2P 244'), 'Separate UPEC office line shown');
+          check((await page.locator('#about-me .home-office-upec').textContent()).includes('2P 244'), 'Separate UPEC office line preserved');
+          check(await page.locator('#about-me .home-office').count() === 2, 'UPEC and UGE offices shown on separate lines');
+          const ugeOfficeLabel = { en: 'UGE office:', fr: 'Bureau à l’UGE :', zh: 'UGE 办公室：' }[lang];
+          check(await page.locator('#about-me .home-office-uge').textContent() === ugeOfficeLabel + ' 4B 090', 'UGE office shown in ' + lang);
         }
         check(await page.locator('.footer-links').count() === 0, 'Duplicate footer navigation removed');
         check(await page.locator('.site-footer, .site-footer p').evaluateAll(elements => elements.every(el => getComputedStyle(el).borderTopWidth === '0px')), 'Footer divider removed');
