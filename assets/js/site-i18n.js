@@ -190,9 +190,9 @@
       zh: "博士研究 · 2026–2029",
     },
     "research.doctoral.context": {
-      en: "Based at <a href=\"https://lama-umr8050.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> and employed by <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a> from 1 October 2026 to 30 September 2029, with funding from the <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC Doctoral School (ED 532)</a>. The research lies at the intersection of probability, statistical mechanics, and ergodic theory.",
-      fr: "Rattaché au <a href=\"https://lama-umr8050.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> et employé par <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a> du 1er octobre 2026 au 30 septembre 2029, avec un financement de l’<a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">École doctorale MSTIC (ED 532)</a>. Le projet se situe à l’interface des probabilités, de la mécanique statistique et de la théorie ergodique.",
-      zh: "自 2026 年 10 月 1 日至 2029 年 9 月 30 日，受聘于 <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>，在 <a href=\"https://lama-umr8050.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> 开展研究，并由 <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC 博士生院（ED 532）</a>资助。课题涉及概率论、统计力学与遍历理论的交叉方向。",
+      en: "Based at <a href=\"https://lama-umr8050.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a>, I have been a PhD student at <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">Université Gustave Eiffel</a> since 1 October 2026. The research lies at the intersection of probability, statistical mechanics, and ergodic theory.",
+      fr: "Rattaché au <a href=\"https://lama-umr8050.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a>, je suis doctorant à l’<a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">Université Gustave Eiffel</a> depuis le 1er octobre 2026. Le projet se situe à l’interface des probabilités, de la mécanique statistique et de la théorie ergodique.",
+      zh: "自 2026 年 10 月 1 日起，我在 <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">Université Gustave Eiffel</a> 攻读博士，并在 <a href=\"https://lama-umr8050.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> 开展研究。课题涉及概率论、统计力学与遍历理论的交叉方向。",
     },
     "research.reports": {
       en: "Internship reports",
@@ -275,9 +275,9 @@
       zh: "联系方式",
     },
     "cv.office": {
-      en: "Office P2 244",
-      fr: "Bureau P2 244",
-      zh: "办公室 P2 244",
+      en: "Office 2P 244",
+      fr: "Bureau 2P 244",
+      zh: "办公室 2P 244",
     },
     "cv.m2.status": {
       en: "Completed",
@@ -560,9 +560,9 @@
       zh: "数学博士生 · 博士研究人员",
     },
     "home.hero.intro": {
-      en: "I study probability and mathematical statistical mechanics, with a focus on long-range models and random interfaces.",
-      fr: "Je m’intéresse aux probabilités et à la mécanique statistique mathématique, en particulier aux modèles à longue portée et aux interfaces aléatoires.",
-      zh: "我研究概率论与数学统计力学，重点关注长程模型和随机界面。",
+      en: "I work in probability and mathematical statistical mechanics, with a focus on Ising models (nearest-neighbor and long-range), height models, and random interfaces.",
+      fr: "Je travaille en probabilités et en mécanique statistique mathématique, avec un intérêt particulier pour les modèles d’Ising (à plus proches voisins et à longue portée), les modèles de hauteur et les interfaces aléatoires.",
+      zh: "我的研究方向是概率论与数学统计力学，重点关注伊辛模型（最近邻与长程）、高度模型和随机界面。",
     },
     "home.hero.cv": {
       en: "View CV",
@@ -678,11 +678,6 @@
       en: "Academic profile",
       fr: "Profil académique",
       zh: "学术概况",
-    },
-    "cv.doctoral.registration": {
-      en: 'Doctoral contract funded by the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>.',
-      fr: 'Contrat doctoral financé par l’<a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">École doctorale MSTIC (ED 532)</a>.',
-      zh: '博士合同由 <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC 博士生院（ED 532）</a>资助。',
     },
     "cv.doctoral.project": {
       en: "Doctoral project: <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>.",
@@ -1777,11 +1772,6 @@
       fr: "Modèles d’interfaces en mécanique statistique mathématique",
       zh: "数学统计力学中的界面模型",
     },
-    "MSTIC Doctoral School (ED 532)": {
-      en: "MSTIC Doctoral School (ED 532)",
-      fr: "École doctorale MSTIC (ED 532)",
-      zh: "MSTIC 博士生院（ED 532）",
-    },
     "Probability and random models": {
       en: "Probability and random models",
       fr: "Probabilités et modèles aléatoires",
@@ -2696,9 +2686,9 @@
       zh: '<a href="https://lama-umr8050.fr/membres/xiao.yuguang" target="_blank" rel="noopener noreferrer">LAMA</a> · <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
     },
     "home.education.phd.detail": {
-      en: '<em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em> · funded by the <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC Doctoral School (ED 532)</a>.',
-      fr: '<em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em> · financé par l’<a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">École doctorale MSTIC (ED 532)</a>.',
-      zh: '<em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em>（数学统计力学中的界面模型）· 由 <a href="https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic" target="_blank" rel="noopener noreferrer">MSTIC 博士生院（ED 532）</a>资助。',
+      en: "<em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em>.",
+      fr: "<em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em>.",
+      zh: "<em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em>（数学统计力学中的界面模型）。",
     },
     "home.news.started_phd": {
       en: 'I started my PhD and doctoral employment at <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>, joining <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a> to work on interface models in mathematical statistical mechanics.',
@@ -2706,9 +2696,9 @@
       zh: '我已在 <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> 开始博士阶段并入职博士研究岗位，在 <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a> 研究数学统计力学中的界面模型。',
     },
     "cv.doctoral.institution": {
-      en: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
-      fr: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
-      zh: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a>',
+      en: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a>',
+      fr: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a>',
+      zh: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a>',
     },
     "home.news.graduated": {
       en: "I have completed my M2 at Sorbonne Université. My <a href=\"/research/#m2\">internship report and slides</a> on the inverse-square long-range Ising model are now available.",
@@ -2720,10 +2710,15 @@
       fr: "Quatre <a href=\"/misc/translations/\">traductions mathématiques en chinois</a> sont disponibles, de la théorie de l’intégration aux martingales continues.",
       zh: "四份<a href=\"/misc/translations/\">中文数学译著</a>已上线，涵盖从积分理论到连续鞅的内容。",
     },
+    "home.about.p2": {
+      en: 'I have been fortunate to take part in several research projects, including the long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a>, bi-Lipschitz equivalence of separated nets in Banach spaces with <a href="https://www.alexandroseskenazis.com/" target="_blank" rel="noopener noreferrer">Alexandros Eskenazis</a>, and collective motion modeling with <a href="https://sites.google.com/site/dianepeurichard/home" target="_blank" rel="noopener noreferrer">Diane Peurichard</a>.',
+      fr: 'J’ai eu la chance de participer à plusieurs projets de recherche, notamment sur le modèle d’Ising à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a>, l’équivalence bi-lipschitzienne de réseaux séparés dans les espaces de Banach avec <a href="https://www.alexandroseskenazis.com/" target="_blank" rel="noopener noreferrer">Alexandros Eskenazis</a>, et la modélisation du mouvement collectif avec <a href="https://sites.google.com/site/dianepeurichard/home" target="_blank" rel="noopener noreferrer">Diane Peurichard</a>.',
+      zh: '我有幸参与多个研究项目，包括与 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a> 研究长程 Ising 模型、与 <a href="https://www.alexandroseskenazis.com/" target="_blank" rel="noopener noreferrer">Alexandros Eskenazis</a> 研究 Banach 空间中分离网的双 Lipschitz 等价，以及与 <a href="https://sites.google.com/site/dianepeurichard/home" target="_blank" rel="noopener noreferrer">Diane Peurichard</a> 研究集体运动建模。',
+    },
     "home.about.p1": {
-      en: "Since 1 October 2026, I have been a mathematics PhD student and doctoral researcher at <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>, based at <a href=\"https://lama-umr8050.fr/membres/xiao.yuguang\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> in Créteil and Champs-sur-Marne as a member of the Probability and Statistics team. My project, <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>, is supervised by <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a> (UPEC) and co-supervised by <a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a> (UGE). The doctoral period runs through 30 September 2029 and is funded by the <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC Doctoral School (ED 532)</a>.",
-      fr: "Depuis le 1er octobre 2026, je suis doctorant contractuel en mathématiques à <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>, au sein du <a href=\"https://lama-umr8050.fr/membres/xiao.yuguang\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a>, sur les sites de Créteil et de Champs-sur-Marne, dans l’équipe Probabilités et statistiques. Ma thèse, <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>, est dirigée par <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a> (UPEC) et co-encadrée par <a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a> (UGE). La période doctorale court jusqu’au 30 septembre 2029 et est financée par l’<a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">École doctorale MSTIC (ED 532)</a>.",
-      zh: "自 2026 年 10 月 1 日起，我在 <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a> 担任数学博士生和博士研究人员，并作为 <a href=\"https://lama-umr8050.fr/membres/xiao.yuguang\" target=\"_blank\" rel=\"noopener noreferrer\">LAMA</a> 概率与统计团队成员，在 Créteil 和 Champs-sur-Marne 两地开展研究。我的博士课题为<strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>（数学统计力学中的界面模型），由 <a href=\"https://perso.math.u-pem.fr/leny.arnaud/\" target=\"_blank\" rel=\"noopener noreferrer\">Arnaud LE NY</a>（UPEC）指导、<a href=\"https://perso.math.u-pem.fr/pmonmarc/\" target=\"_blank\" rel=\"noopener noreferrer\">Pierre MONMARCHÉ</a>（UGE）共同指导。博士阶段至 2029 年 9 月 30 日，由 <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC 博士生院（ED 532）</a>资助。",
+      en: 'Since 1 October 2026, I have been a PhD student in mathematics at the <a href="https://lama-umr8050.fr/">LAMA</a>, <a href="https://www.univ-gustave-eiffel.fr/">Université Gustave Eiffel</a>. My doctoral project, <em>Interface Models in Mathematical Statistical Mechanics</em>, is supervised by <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a> (LAMA, <a href="https://www.u-pec.fr/">UPEC</a>) and <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre Monmarché</a> (LAMA, <a href="https://www.univ-gustave-eiffel.fr/">UGE</a>). The project lies at the intersection of probability theory, statistical mechanics, and ergodic theory. Previously, I was a student in the <a href="https://www.lpsm.paris/masters/modale/index">M2 Probabilités et Modèles Aléatoires</a> program at <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.',
+      fr: 'Depuis le 1er octobre 2026, je suis doctorant en mathématiques au <a href="https://lama-umr8050.fr/">LAMA</a>, à l’<a href="https://www.univ-gustave-eiffel.fr/">Université Gustave Eiffel</a>. Ma thèse, intitulée <em>Modèles d’interfaces en mécanique statistique mathématique</em>, est dirigée par <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a> (LAMA, <a href="https://www.u-pec.fr/">UPEC</a>) et <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre Monmarché</a> (LAMA, <a href="https://www.univ-gustave-eiffel.fr/">UGE</a>). Ce projet se situe à l’interface des probabilités, de la mécanique statistique et de la théorie ergodique. Auparavant, j’étais étudiant du <a href="https://www.lpsm.paris/masters/modale/index">M2 Probabilités et Modèles Aléatoires</a> à <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.',
+      zh: '自 2026 年 10 月 1 日起，我在 <a href="https://www.univ-gustave-eiffel.fr/">Université Gustave Eiffel</a> 的 <a href="https://lama-umr8050.fr/">LAMA</a> 攻读数学博士。我的博士课题为<em>数学统计力学中的界面模型</em>，由 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a>（LAMA，<a href="https://www.u-pec.fr/">UPEC</a>）和 <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre Monmarché</a>（LAMA，<a href="https://www.univ-gustave-eiffel.fr/">UGE</a>）共同指导。该课题位于概率论、统计力学与遍历理论的交叉方向。此前，我是 <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a> <a href="https://www.lpsm.paris/masters/modale/index">M2 Probabilités et Modèles Aléatoires</a> 项目的学生。',
     },
     "home.news.long_range": {
       en: 'I’ll be working on the long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> at Université Paris-Est Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.',
@@ -2731,14 +2726,9 @@
       zh: '我将在 2026 年 4 月 20 日至 7 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> 做 M2 实习，研究长程 Ising 模型。',
     },
     "home.news.stat_mech_creteil": {
-      en: '<a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> will take place on October 8–9, 2026, bringing together recent advances in statistical mechanics and discrete stochastic models.',
-      fr: 'L’atelier <a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> aura lieu les 8 et 9 octobre 2026 et réunira des travaux récents en mécanique statistique et sur les modèles stochastiques discrets.',
-      zh: '<a href="https://statmechcreteil.sciencesconf.org/" target="_blank" rel="noopener noreferrer">Stat-Mech in Créteil 2026</a> 将于 2026 年 10 月 8–9 日举行，聚焦统计力学与离散随机模型的最新进展。',
-    },
-    "home.news.mstic_fellowship": {
-      en: "I was awarded doctoral funding from the <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC Doctoral School (ED 532)</a> for my 2026–2029 PhD at <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>.",
-      fr: "J’ai obtenu un financement doctoral de l’<a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">École doctorale MSTIC (ED 532)</a> pour ma thèse 2026–2029 à <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a>.",
-      zh: "我获得了 <a href=\"https://www.univ-gustave-eiffel.fr/la-recherche/doctorats-et-hdr/ed-mstic\" target=\"_blank\" rel=\"noopener noreferrer\">MSTIC 博士生院（ED 532）</a>的博士资助，用于在 <a href=\"https://www.univ-gustave-eiffel.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">UGE</a> 开展 2026–2029 年博士研究。",
+      en: "I attended <a href=\"https://statmechcreteil.sciencesconf.org/?lang=en\" target=\"_blank\" rel=\"noopener noreferrer\">Stat-Mech in Créteil 2026</a> on 8–9 October 2026 as an audience member.",
+      fr: "J’ai assisté à l’atelier <a href=\"https://statmechcreteil.sciencesconf.org/?lang=en\" target=\"_blank\" rel=\"noopener noreferrer\">Stat-Mech in Créteil 2026</a>, les 8 et 9 octobre 2026, en tant qu’auditeur.",
+      zh: "我于 2026 年 10 月 8–9 日作为听众参加了 <a href=\"https://statmechcreteil.sciencesconf.org/?lang=en\" target=\"_blank\" rel=\"noopener noreferrer\">Stat-Mech in Créteil 2026</a> 研讨会。",
     },
     "misc.percolation": {
       en: 'Interactive visualization of <em>Bond Percolation</em> on a 2D square lattice. In this model, <strong>p</strong> represents the probability of a bond (edge) being open. Unlike site percolation, nodes are only colored if they are connected to at least one open bond, preventing isolated colored nodes. Try varying <strong>p</strong> around the critical threshold (0.5) to observe the phase transition in connectivity.',
