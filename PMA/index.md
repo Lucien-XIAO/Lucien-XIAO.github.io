@@ -41,16 +41,36 @@ layout: pma
     <div class="course-info-card" style="margin-bottom:0;">
       <div class="content-list-title">Premier semestre</div>
       <ul class="content-list">
-        <li>Probabilités Approfondies</li>
-        <li>Statistiques</li>
+        <li class="admission-course-item">
+          <div class="admission-course-details">
+            <span class="admission-course-name">Probabilités Approfondies</span>
+            <span class="admission-course-teacher">Thierry Lévy</span>
+          </div>
+        </li>
+        <li class="admission-course-item">
+          <div class="admission-course-details">
+            <span class="admission-course-name">Statistiques</span>
+            <span class="admission-course-teacher">Arnaud Guyader · Anna Ben-Hamou</span>
+          </div>
+        </li>
         <li>Anglais + OIP</li>
       </ul>
     </div>
     <div class="course-info-card" style="margin-bottom:0;">
       <div class="content-list-title">Deuxième semestre</div>
       <ul class="content-list">
-        <li>Analyse fonctionnelle approfondie et calcul des variations</li>
-        <li>Introduction au calcul stochastique et au contrôle stochastique</li>
+        <li class="admission-course-item">
+          <div class="admission-course-details">
+            <span class="admission-course-name">Analyse fonctionnelle approfondie et calcul des variations</span>
+            <span class="admission-course-teacher">Hervé Le Dret</span>
+          </div>
+        </li>
+        <li class="admission-course-item">
+          <div class="admission-course-details">
+            <span class="admission-course-name">Introduction au calcul stochastique et au contrôle stochastique</span>
+            <span class="admission-course-teacher">Idris Kharroubi</span>
+          </div>
+        </li>
         <li>Mémoire de M1</li>
       </ul>
     </div>

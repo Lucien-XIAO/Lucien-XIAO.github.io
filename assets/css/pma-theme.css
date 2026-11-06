@@ -321,6 +321,18 @@ body.theme-claude.pma-page .math-float-canvas {
   border-radius: 50%;
 }
 
+.content-list .admission-course-item { align-items: flex-start; }
+.content-list .admission-course-item::before { margin-top: 7px; }
+.admission-course-details { flex: 1; min-width: 0; }
+.admission-course-name { display: block; }
+.admission-course-teacher {
+  display: block;
+  margin-top: 4px;
+  color: var(--claude-secondary);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
 /* ---- Resource Buttons ---- */
 .resource-group { margin-bottom: 32px; }
 .resource-group-title {
