@@ -104,13 +104,17 @@
       en: "Statistics",
       zh: "统计",
     },
-    "Analyse Fonctionnelle Approfondie & CV": {
-      en: "Advanced Functional Analysis & CV",
-      zh: "高等泛函分析与 CV",
+    "Anglais + OIP": {
+      en: "English + OIP",
+      zh: "英语 + OIP",
     },
-    "Introduction au Calcul Stochastique": {
-      en: "Introduction to Stochastic Calculus",
-      zh: "随机积分导论",
+    "Analyse fonctionnelle approfondie et calcul des variations": {
+      en: "Advanced Functional Analysis and Calculus of Variations",
+      zh: "高等泛函分析与变分法",
+    },
+    "Introduction au calcul stochastique et au contrôle stochastique": {
+      en: "Introduction to Stochastic Calculus and Stochastic Control",
+      zh: "随机微积分与随机控制导论",
     },
     "Mémoire de M1": {
       en: "M1 thesis",
@@ -199,10 +203,6 @@
     "Méthodes classiques pour les EDP, modélisation": {
       en: "Classical methods for PDEs and modeling",
       zh: "偏微分方程与建模的经典方法",
-    },
-    "Analyse fonctionnelle approfondie, CV": {
-      en: "Advanced functional analysis, CV",
-      zh: "高等泛函分析，CV",
     },
     "Modèles mathématiques en neurosciences": {
       en: "Mathematical models in neuroscience",

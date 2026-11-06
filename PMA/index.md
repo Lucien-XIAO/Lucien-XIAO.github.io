@@ -43,13 +43,14 @@ layout: pma
       <ul class="content-list">
         <li>Probabilités Approfondies</li>
         <li>Statistiques</li>
+        <li>Anglais + OIP</li>
       </ul>
     </div>
     <div class="course-info-card" style="margin-bottom:0;">
       <div class="content-list-title">Deuxième semestre</div>
       <ul class="content-list">
-        <li>Analyse Fonctionnelle Approfondie &amp; CV</li>
-        <li>Introduction au Calcul Stochastique</li>
+        <li>Analyse fonctionnelle approfondie et calcul des variations</li>
+        <li>Introduction au calcul stochastique et au contrôle stochastique</li>
         <li>Mémoire de M1</li>
       </ul>
     </div>
@@ -177,7 +178,7 @@ layout: pma
       </li>
       <li class="ue-item">
         <div class="ue-item-left">
-          <div class="ue-name">Analyse fonctionnelle approfondie, CV</div>
+          <div class="ue-name">Analyse fonctionnelle approfondie et calcul des variations</div>
           <div class="ue-code">MU4MA225</div>
         </div>
         <span class="ue-ects">6 ECTS</span>
