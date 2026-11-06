@@ -1300,6 +1300,11 @@ body.theme-claude .exp-card:first-child {
   border-top: 1px solid var(--site-border);
 }
 
+body.theme-claude .teaching-period-title + .experience-container > .exp-card:first-child {
+  border-top: 0;
+  padding-top: 4px;
+}
+
 body.theme-claude .exp-card::before {
   display: none;
 }

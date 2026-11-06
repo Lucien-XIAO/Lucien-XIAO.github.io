@@ -22,8 +22,10 @@ async function main() {
   };
   try {
     check(!doctoralFunder.test(fs.readFileSync(path.join(path.resolve(process.argv[2]), 'assets/js/site-i18n.js'), 'utf8')), 'Built translation bundle contains no personal doctoral funder');
+    check((await page.request.get(site.origin + '/research/')).status() === 404, 'Removed research page returns 404');
+    check(!fs.readFileSync(path.join(path.resolve(process.argv[2]), 'sitemap.xml'), 'utf8').includes('/research/'), 'Removed research page is absent from sitemap');
     for (const lang of ['en', 'fr', 'zh']) {
-      for (const route of ['/', '/research/', '/pub/', '/talks/', '/teaching/', '/misc/', '/misc/essays/', '/cv/', '/misc/translations/']) {
+      for (const route of ['/', '/pub/', '/talks/', '/teaching/', '/misc/', '/misc/essays/', '/cv/', '/misc/translations/']) {
         const response = await page.goto(site.origin + route + '?lang=' + lang, { waitUntil: 'networkidle' });
         check(response.ok() && new URL(page.url()).pathname === route, 'Original page remains available: ' + route);
         check(await page.evaluate(value => SiteI18n.getLanguage() === value, lang), 'Language: ' + lang);
@@ -32,8 +34,8 @@ async function main() {
           const markup = await page.locator(region).evaluate(element => element.outerHTML);
           check(!doctoralFunder.test(markup) && !personalFunding.test(markup), 'No personal doctoral funding information in ' + region + ': ' + route + ' (' + lang + ')');
         }
-        if (route === '/research/') {
-          check(await page.locator('#m2 .research-project-institution').textContent() === 'LAMA - Université Paris-Est Créteil, Créteil', 'M2 internship institution is in Créteil');
+        if (route === '/pub/') {
+          check(await page.locator('[data-i18n="publications.reports"], a[href^="/research/"]').count() === 0, 'Research reports entry removed from Publications');
         }
         if (route === '/' || route === '/cv/') {
           check(await page.locator('.education-status-complete, .cv-status-complete').count() === 0, 'Completed badges removed');
@@ -78,6 +80,9 @@ async function main() {
         if (route === '/cv/') {
           check(await page.locator('.cv-document-section').count() === 1, 'CV contains only Education');
           check(await page.locator('.cv-entry').count() === 5, 'All five education entries remain');
+          const m1Entry = page.locator('.cv-entry').nth(2);
+          check((await m1Entry.locator('h3').textContent()).includes('M1') && (await m1Entry.locator('time').textContent()).replace(/\s/g, '') === '2024–2025', 'Original M1 degree and dates remain');
+          check(await m1Entry.locator('.cv-institution > span').textContent() === 'Sorbonne Université, Paris', 'Original M1 school remains');
           check(await page.locator('.cv-document-header .cv-lede, .cv-document-header .cv-profile-line').count() === 2, 'Historical CV introduction restored');
           const currentStatus = { en: 'Current', fr: 'En cours', zh: '在读' }[lang];
           check(await page.locator('[data-i18n="cv.doctoral.status"]').textContent() === currentStatus, 'CV explicitly shows ongoing doctoral study in ' + lang);
@@ -95,8 +100,8 @@ async function main() {
           check(await page.locator('.cv-document').innerText().then(text => !/(?:P2|2P) 244|1 45 17 16 42|univ-eiffel\.fr/.test(text)), 'CV contact details absent');
           if (lang === 'zh') await page.locator('.cv-entry').first().screenshot({ path: path.join(shots, 'cv-doctoral-zh-detail.png') });
         }
-        if (route === '/research/' || route === '/cv/') {
-          const name = route === '/research/' ? 'research' : 'cv';
+        if (route === '/cv/') {
+          const name = 'cv';
           await page.screenshot({ path: path.join(shots, name + '-' + lang + '-desktop.png'), fullPage: true });
           await page.setViewportSize({ width: 390, height: 844 });
           check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), name + ' mobile width in ' + lang);
@@ -132,7 +137,7 @@ async function main() {
     await page.locator('#themeToggle').click();
     check(await page.locator('html').getAttribute('data-theme') === 'dark', 'Theme toggle');
     check(errors.length === 0, errors.join('; '));
-    console.log('PASS: ' + checks + ' checks; September layout, current doctoral status, no personal funding disclosures, 9 routes, 3 languages, mobile menu, email and theme.');
+    console.log('PASS: ' + checks + ' checks; September layout, current doctoral status, no personal funding disclosures, 8 routes, 3 languages, mobile menu, email and theme.');
   } finally { await site.close(); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

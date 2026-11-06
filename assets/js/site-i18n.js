@@ -304,11 +304,6 @@
       fr: "Aucune publication ni prépublication n’est répertoriée pour le moment.",
       zh: "目前暂无已列出的论文或预印本。",
     },
-    "publications.reports": {
-      en: "Read my research internship reports",
-      fr: "Consulter mes rapports de stage de recherche",
-      zh: "阅读我的研究实习报告",
-    },
     "activities.title": {
       en: "Conferences and workshops",
       fr: "Conférences et ateliers",
@@ -2706,9 +2701,9 @@
       zh: "Université Gustave Eiffel",
     },
     "home.news.graduated": {
-      en: "I have completed my M2 at Sorbonne Université. My <a href=\"/research/#m2\">internship report and slides</a> on the inverse-square long-range Ising model are now available.",
-      fr: "J’ai obtenu mon M2 à Sorbonne Université. Mon <a href=\"/research/#m2\">rapport de stage et mes diapositives</a> sur le modèle d’Ising à longue portée à décroissance en carré inverse sont disponibles.",
-      zh: "我已从索邦大学 M2 项目毕业。关于平方反比衰减长程 Ising 模型的<a href=\"/research/#m2\">实习报告与幻灯片</a>现已开放阅读。",
+      en: "I have completed my M2 at Sorbonne Université. My <a href=\"/#experience\">internship report and slides</a> on the inverse-square long-range Ising model are now available.",
+      fr: "J’ai obtenu mon M2 à Sorbonne Université. Mon <a href=\"/#experience\">rapport de stage et mes diapositives</a> sur le modèle d’Ising à longue portée à décroissance en carré inverse sont disponibles.",
+      zh: "我已从索邦大学 M2 项目毕业。关于平方反比衰减长程 Ising 模型的<a href=\"/#experience\">实习报告与幻灯片</a>现已开放阅读。",
     },
     "home.news.translations": {
       en: "Four <a href=\"/misc/translations/\">Chinese mathematical translations</a> are available, from integration theory to continuous martingales.",
