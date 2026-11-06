@@ -304,31 +304,6 @@
       fr: "Aucune publication ni prépublication n’est répertoriée pour le moment.",
       zh: "目前暂无已列出的论文或预印本。",
     },
-    "activities.title": {
-      en: "Conferences and workshops",
-      fr: "Conférences et ateliers",
-      zh: "学术会议与研讨会",
-    },
-    "activities.lede": {
-      en: "Academic events I attended as an audience member.",
-      fr: "Événements scientifiques auxquels j’ai assisté en tant qu’auditeur.",
-      zh: "我作为听众参加的学术活动。",
-    },
-    "activities.attended": {
-      en: "Workshops attended",
-      fr: "Ateliers suivis",
-      zh: "参加的研讨会",
-    },
-    "activities.statmech.date": {
-      en: "8–9 October 2026",
-      fr: "8–9 octobre 2026",
-      zh: "2026 年 10 月 8–9 日",
-    },
-    "activities.statmech.attendance": {
-      en: "I attended the workshop as an audience member and did not give a talk.",
-      fr: "J’ai assisté à cet atelier en tant qu’auditeur, sans y donner d’exposé.",
-      zh: "我作为听众参加了这次研讨会，未作报告。",
-    },
     "teaching.student": {
       en: "Individual tutoring for an École Polytechnique Bachelor of Science student",
       fr: "Tutorat individuel d’un étudiant du Bachelor of Science de l’École polytechnique",
@@ -493,16 +468,6 @@
       en: "Publications",
       fr: "Publications",
       zh: "论文",
-    },
-    "nav.talks": {
-      en: "Academic activities",
-      fr: "Activités académiques",
-      zh: "学术活动",
-    },
-    "nav.talks_short": {
-      en: "Talks",
-      fr: "Exposés",
-      zh: "报告",
     },
     "nav.teaching": {
       en: "Teaching",
@@ -942,11 +907,6 @@
   };
 
   const TEXT_TRANSLATIONS = {
-    "Academic Activities": {
-      en: "Academic Activities",
-      fr: "Activités académiques",
-      zh: "学术活动",
-    },
     "Mathematical Translations": {
       en: "Mathematical Translations",
       fr: "Traductions mathématiques",
@@ -961,11 +921,6 @@
       en: "Publications",
       fr: "Publications",
       zh: "论文",
-    },
-    "Talks": {
-      en: "Talks",
-      fr: "Exposés",
-      zh: "报告",
     },
     "Teaching": {
       en: "Teaching",

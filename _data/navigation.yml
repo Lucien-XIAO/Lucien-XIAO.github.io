@@ -20,11 +20,6 @@ primary:
     active_path: /PMA/
 
 more:
-  - title: "Talks"
-    i18n_key: nav.talks
-    url: /talks/
-    active_path: /talks/
-
   - title: "MathReader"
     i18n_key: nav.mathreader
     url: /mathreader/
