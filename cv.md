@@ -22,13 +22,13 @@ title: Curriculum Vitae
     <h2>Education</h2>
     <div class="cv-entry-list">
       <article class="cv-entry">
-        <div class="cv-entry-meta">
-          <time datetime="2026" data-i18n="cv.doctoral.period">2026–Present</time>
-          <img class="cv-school-logo cv-school-logo-uge" src="/assets/img/uge-mark.svg" width="64" height="64" alt="Université Gustave Eiffel logo" loading="lazy" decoding="async">
-        </div>
+        <time datetime="2026" data-i18n="cv.doctoral.period">2026–Present</time>
         <div class="cv-entry-content">
           <h3><span data-i18n="cv.doctoral.degree">PhD in Mathematics · Doctoral researcher</span> <span class="cv-status" data-i18n="cv.doctoral.status">Current</span></h3>
-          <p class="cv-institution" data-i18n="cv.doctoral.institution">Université Gustave Eiffel</p>
+          <p class="cv-institution">
+            <img class="cv-school-logo cv-school-logo-uge" src="/assets/img/uge-mark.svg" width="24" height="24" alt="" loading="lazy" decoding="async">
+            <span data-i18n="cv.doctoral.institution">Université Gustave Eiffel</span>
+          </p>
           <p data-i18n="cv.doctoral.unit">Research unit: LAMA (CNRS, Université Gustave Eiffel & Université Paris-Est Créteil).</p>
           <p data-i18n-html="cv.doctoral.project">Doctoral project: <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>.</p>
           <p data-i18n="cv.doctoral.supervisors_plain">Supervisor: Arnaud LE NY (LAMA, Université Paris-Est Créteil). Co-supervisor: Pierre MONMARCHÉ (LAMA, Université Gustave Eiffel).</p>
@@ -36,47 +36,47 @@ title: Curriculum Vitae
       </article>
 
       <article class="cv-entry">
-        <div class="cv-entry-meta">
-          <time>2025 – 2026</time>
-          <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="64" height="64" alt="Sorbonne Université logo" loading="lazy" decoding="async">
-        </div>
+        <time>2025 – 2026</time>
         <div class="cv-entry-content">
           <h3>Master 2 in Probability and Random Models (PMA)</h3>
-          <p class="cv-institution">Sorbonne Université, Paris</p>
+          <p class="cv-institution">
+            <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="24" height="24" alt="" loading="lazy" decoding="async">
+            <span>Sorbonne Université, Paris</span>
+          </p>
         </div>
       </article>
 
       <article class="cv-entry">
-        <div class="cv-entry-meta">
-          <time>2024 – 2025</time>
-          <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="64" height="64" alt="Sorbonne Université logo" loading="lazy" decoding="async">
-        </div>
+        <time>2024 – 2025</time>
         <div class="cv-entry-content">
           <h3>First-Year M.S. (M1) in Mathematics & Applications</h3>
-          <p class="cv-institution">Sorbonne Université, Paris</p>
+          <p class="cv-institution">
+            <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="24" height="24" alt="" loading="lazy" decoding="async">
+            <span>Sorbonne Université, Paris</span>
+          </p>
         </div>
       </article>
 
       <article class="cv-entry">
-        <div class="cv-entry-meta">
-          <time>2023 – 2024</time>
-          <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="64" height="64" alt="Sorbonne Université logo" loading="lazy" decoding="async">
-        </div>
+        <time>2023 – 2024</time>
         <div class="cv-entry-content">
           <h3>B.S. in Mathematics</h3>
-          <p class="cv-institution">Sorbonne Université, Paris</p>
+          <p class="cv-institution">
+            <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="24" height="24" alt="" loading="lazy" decoding="async">
+            <span>Sorbonne Université, Paris</span>
+          </p>
           <p>Completed an intensive one-year program to obtain a second Bachelor's degree in Mathematics.</p>
         </div>
       </article>
 
       <article class="cv-entry">
-        <div class="cv-entry-meta">
-          <time>2020 – 2023</time>
-          <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="64" height="64" alt="Sorbonne Université logo" loading="lazy" decoding="async">
-        </div>
+        <time>2020 – 2023</time>
         <div class="cv-entry-content">
           <h3>B.S. in Physics (Minor in Mathematics)</h3>
-          <p class="cv-institution">Sorbonne Université, Paris</p>
+          <p class="cv-institution">
+            <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="24" height="24" alt="" loading="lazy" decoding="async">
+            <span>Sorbonne Université, Paris</span>
+          </p>
           <p>Completed the MIPI (Math, CS, Physics, Engineering) track in the first year, followed by a Physics Major and Mathematics Minor.</p>
         </div>
       </article>
