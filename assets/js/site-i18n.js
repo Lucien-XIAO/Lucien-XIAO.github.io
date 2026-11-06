@@ -1784,7 +1784,7 @@
     },
     "First-Year M.S. (M1) in Mathematics & Applications": {
       en: "First-Year M.S. (M1) in Mathematics & Applications",
-      fr: "M1 Mathématiques et Applications",
+      fr: "Master 1 Mathématiques et Applications",
       zh: "数学与应用硕士一年级（M1）",
     },
     "B.S. in Mathematics": {
