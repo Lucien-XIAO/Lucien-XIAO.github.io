@@ -646,12 +646,12 @@
     },
     "cv.doctoral.supervisors_plain": {
       en: "Supervisor: Arnaud LE NY (UPEC). Co-supervisor: Pierre MONMARCHÉ (UGE).",
-      fr: "Directeur de thèse : Arnaud LE NY (UPEC). Co-encadrant : Pierre MONMARCHÉ (UGE).",
+      fr: "Directeur de thèse : Arnaud LE NY (UPEC). Co-directeur : Pierre MONMARCHÉ (UGE).",
       zh: "导师：Arnaud LE NY（UPEC）；共同导师：Pierre MONMARCHÉ（UGE）。",
     },
     "cv.doctoral.supervisors": {
       en: 'Supervisor: <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (UPEC). Co-supervisor: <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (UGE).',
-      fr: 'Directeur de thèse : <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (UPEC). Co-encadrant : <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (UGE).',
+      fr: 'Directeur de thèse : <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (UPEC). Co-directeur : <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (UGE).',
       zh: '导师：<a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a>（UPEC）；共同导师：<a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a>（UGE）。',
     },
     "translations.card.kicker": {
