@@ -1124,6 +1124,10 @@ body.theme-claude .mathreader-hero h1 {
   max-width: 760px;
 }
 
+body.theme-claude :is(.publications-hero, .teaching-hero, .talks-hero, .mathreader-hero) h1 {
+  font-size: clamp(36px, 5vw, 46px);
+}
+
 body.theme-claude .publications-lede,
 body.theme-claude .teaching-lede,
 body.theme-claude .talks-lede,
@@ -1462,6 +1466,25 @@ body.theme-claude .cv-entry {
   padding: 24px 0 25px;
 }
 
+body.theme-claude .cv-entry-meta {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+body.theme-claude .cv-school-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+[data-theme="dark"] body.theme-claude .cv-school-logo-uge { filter: brightness(0) invert(0.9); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body.theme-claude .cv-school-logo-uge { filter: brightness(0) invert(0.9); }
+}
+
 body.theme-claude .cv-entry time {
   color: var(--site-muted);
   font-size: 12px;
@@ -1608,7 +1631,7 @@ body.theme-claude .notebook-card-action {
 /* ---------- MathReader ---------- */
 
 body.theme-claude .mathreader-hero {
-  display: block;
+  display: grid;
   align-items: center;
   border-bottom: 1px solid var(--site-border);
   gap: 46px;
@@ -1919,6 +1942,14 @@ body.theme-claude.pma-page [class*="badge"] {
     padding: 21px 0 22px;
   }
 
+  body.theme-claude .cv-entry-meta {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  body.theme-claude .cv-school-logo { width: 48px; height: 48px; }
+
   body.theme-claude .cv-entry time {
     padding-top: 0;
   }
@@ -1950,6 +1981,27 @@ body.theme-claude.pma-page [class*="badge"] {
 
   body.theme-claude.pma-page .pma-wrapper {
     padding: 24px 20px 64px;
+  }
+}
+
+/* Keep the original side-by-side introduction in narrow desktop windows. */
+@media (min-width: 601px) and (max-width: 720px) {
+  body.theme-claude .teaching-hero,
+  body.theme-claude .publications-hero {
+    align-items: center;
+    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) 200px;
+  }
+
+  body.theme-claude .teaching-hero-photo,
+  body.theme-claude .publications-hero-photo {
+    justify-self: end;
+    max-width: 200px;
+  }
+
+  body.theme-claude .mathreader-hero {
+    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
   }
 }
 
@@ -2098,7 +2150,7 @@ body.theme-claude .cv-materials p { font-size: 14px; }
 
 body.theme-claude .mathreader-hero-copy { max-width: 800px; }
 body.theme-claude .mathreader-hero h1 { text-transform: none; }
-body.theme-claude .mathreader-product-shot { margin: 30px 0 48px; }
+body.theme-claude .mathreader-product-shot { margin: 0; min-width: 0; }
 body.theme-claude .mathreader-product-shot img {
   aspect-ratio: 3414 / 2214;
   border: 1px solid var(--site-border);
@@ -2140,7 +2192,7 @@ body.theme-claude .visually-hidden { clip-path: inset(50%); height: 1px; overflo
   body.theme-claude .education-status { margin-left: 4px; }
   body.theme-claude .research-project h3 { font-size: 20px; }
   body.theme-claude .research-project .action-links { gap: 12px 18px; }
-  body.theme-claude :is(.notebook-detail-hero, .notebook-hero, .mathreader-hero, .talks-hero, .publications-hero, .teaching-hero) h1 { font-size: 32px; }
+  body.theme-claude :is(.notebook-detail-hero, .notebook-hero) h1 { font-size: 32px; }
   body.theme-claude .notebook-photo-pair { grid-template-columns: 1fr; }
 }
 

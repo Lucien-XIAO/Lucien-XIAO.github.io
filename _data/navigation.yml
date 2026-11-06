@@ -1,8 +1,4 @@
 primary:
-  - title: "Research"
-    i18n_key: nav.research
-    url: /#interests
-
   - title: "Publications"
     i18n_key: nav.publications
     url: /pub/
@@ -18,16 +14,16 @@ primary:
     url: /cv/
     active_path: /cv/
 
+  - title: "M2-PMA"
+    i18n_key: nav.pma
+    url: /PMA/
+    active_path: /PMA/
+
 more:
   - title: "Talks"
     i18n_key: nav.talks
     url: /talks/
     active_path: /talks/
-
-  - title: "M2-PMA"
-    i18n_key: nav.pma
-    url: /PMA/
-    active_path: /PMA/
 
   - title: "MathReader"
     i18n_key: nav.mathreader

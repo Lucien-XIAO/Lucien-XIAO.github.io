@@ -46,7 +46,7 @@ async function main() {
           check(await page.locator('#experience .action-links a').count() === 6, 'Three reports and three slide links remain');
           check(await page.locator('#experience .experience-item').first().locator('.exp-title').textContent().then(text => text.includes('LAMA') && text.includes('Créteil')), 'Historical M2 experience names the correct institution');
           check(await page.locator('.home-hero-actions a[href="/cv/"], .home-hero-actions a[href="/pub/"]').count() === 2, 'Historical hero shortcuts restored');
-          check(await page.locator('.nav-left a[href="/cv/"], .nav-left a[href="/#interests"]').count() === 2, 'CV and research-section navigation remains');
+          check(await page.locator('.nav-left > a[href="/cv/"], .nav-left > a[href="/PMA/"]').count() === 2, 'CV and M2-PMA are primary navigation items');
           const about = await page.locator('[data-i18n-html="home.about.p1"]').textContent();
           const doctoralStart = { en: 'Since 1 October 2026', fr: 'Depuis le 1er octobre 2026', zh: '自 2026 年 10 月 1 日起' }[lang];
           check(about.includes(doctoralStart) && about.includes('Université Gustave Eiffel'), 'Homepage describes doctoral study already underway in ' + lang);
@@ -81,8 +81,14 @@ async function main() {
           check(await page.locator('.cv-document-header .cv-lede, .cv-document-header .cv-profile-line').count() === 2, 'Historical CV introduction restored');
           const currentStatus = { en: 'Current', fr: 'En cours', zh: '在读' }[lang];
           check(await page.locator('[data-i18n="cv.doctoral.status"]').textContent() === currentStatus, 'CV explicitly shows ongoing doctoral study in ' + lang);
-          check(await page.locator('.cv-entry').first().locator('time').getAttribute('datetime') === '2026-10-01', 'Doctoral start date is 1 October 2026');
-          check((await page.locator('[data-i18n-html="cv.doctoral.institution"]').textContent()).includes('Université Gustave Eiffel'), 'Full doctoral institution name');
+          check(await page.locator('.cv-entry').first().locator('time').getAttribute('datetime') === '2026', 'CV doctoral date displays the start year');
+          const doctoralPeriod = { en: '2026 – Present', fr: '2026 – aujourd’hui', zh: '2026 – 至今' }[lang];
+          check(await page.locator('[data-i18n="cv.doctoral.period"]').textContent() === doctoralPeriod, 'CV doctoral date is open-ended in ' + lang);
+          check(await page.locator('[data-i18n="cv.doctoral.institution"]').textContent() === 'Université Gustave Eiffel', 'Full doctoral institution name in plain text');
+          check(await page.locator('.cv-entry a').count() === 0, 'Education schools and supervisors have no hyperlinks');
+          const logoPaths = await page.locator('.cv-entry img.cv-school-logo').evaluateAll(logos => logos.map(logo => logo.getAttribute('src')));
+          check(JSON.stringify(logoPaths) === JSON.stringify(['/assets/img/uge-mark.svg', ...Array(4).fill('/assets/img/sorbonne-universite-logo.jpg')]), 'All five entries show the correct school logo');
+          check(await page.locator('.cv-entry img.cv-school-logo').evaluateAll(async logos => (await Promise.all(logos.map(async logo => { logo.loading = 'eager'; try { await logo.decode(); } catch (_) {} return logo.complete && logo.naturalWidth > 0; }))).every(Boolean)), 'All school logos load');
           check(!/\bincoming\b|will (?:start|begin|join)|commencerai|rejoindrai|即将|将于/i.test(await page.locator('.cv-entry').first().textContent()), 'CV has no future doctoral status');
           check(await page.locator('.cv-download, .cv-contact-line, .cv-print-contact').count() === 0, 'CV download and contact blocks removed');
           check(await page.locator('.cv-document a[href*=".pdf"]').count() === 0, 'No CV PDF links');
@@ -100,8 +106,9 @@ async function main() {
       }
     }
     await page.goto(site.origin + '/?lang=en', { waitUntil: 'networkidle' });
-    check(JSON.stringify((await page.locator('.nav-left > a, .nav-more > summary').allTextContents()).map(text => text.trim())) === JSON.stringify(['Home', 'Research', 'Publications', 'Teaching', 'CV', 'More']), 'Historical top navigation order');
+    check(JSON.stringify((await page.locator('.nav-left > a, .nav-more > summary').allTextContents()).map(text => text.trim())) === JSON.stringify(['Home', 'Publications', 'Teaching', 'CV', 'M2-PMA', 'More']), 'Requested top navigation order');
     check(await page.locator('.nav-more a[href="/misc/translations/"]').count() === 1, 'Translations remains available in More');
+    check(await page.locator('.nav-left a[href="/#interests"], .nav-left a[href="/research/"], .nav-more a[href="/PMA/"]').count() === 0, 'Research navigation removed and M2-PMA moved out of More');
     check(await page.locator('.home-hero #homeResearchCanvas').count() === 1, 'Original hero restored');
     check(await page.locator('#education').count() === 1, 'Original education section restored');
     check(await page.locator('.nav-left a[href="/writing/"]').count() === 0, 'Redesigned Writing navigation removed');

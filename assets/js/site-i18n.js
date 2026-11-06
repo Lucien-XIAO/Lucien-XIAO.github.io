@@ -245,9 +245,9 @@
       zh: "教育背景、研究经历与教学。",
     },
     "cv.doctoral.period": {
-      en: "1 Oct. 2026 – 30 Sep. 2029",
-      fr: "1er oct. 2026 – 30 sept. 2029",
-      zh: "2026 年 10 月 1 日至 2029 年 9 月 30 日",
+      en: "2026 – Present",
+      fr: "2026 – aujourd’hui",
+      zh: "2026 – 至今",
     },
     "cv.doctoral.degree": {
       en: "PhD in Mathematics · Doctoral researcher",
@@ -683,6 +683,11 @@
       en: "Doctoral project: <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>.",
       fr: "Sujet de thèse : <strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>.",
       zh: "博士课题：<strong><em>Modèles d’Interfaces en Mécanique Statistique Mathématique</em></strong>（数学统计力学中的界面模型）。",
+    },
+    "cv.doctoral.supervisors_plain": {
+      en: "Supervisor: Arnaud LE NY (UPEC). Co-supervisor: Pierre MONMARCHÉ (UGE).",
+      fr: "Directeur de thèse : Arnaud LE NY (UPEC). Co-encadrant : Pierre MONMARCHÉ (UGE).",
+      zh: "导师：Arnaud LE NY（UPEC）；共同导师：Pierre MONMARCHÉ（UGE）。",
     },
     "cv.doctoral.supervisors": {
       en: 'Supervisor: <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> (UPEC). Co-supervisor: <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre MONMARCHÉ</a> (UGE).',
@@ -2696,9 +2701,9 @@
       zh: '我已在 <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">UGE</a> 开始博士阶段并入职博士研究岗位，在 <a href="https://lama-umr8050.fr/" target="_blank" rel="noopener noreferrer">LAMA</a> 研究数学统计力学中的界面模型。',
     },
     "cv.doctoral.institution": {
-      en: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a>',
-      fr: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a>',
-      zh: '<a href="https://www.univ-gustave-eiffel.fr/" target="_blank" rel="noopener noreferrer">Université Gustave Eiffel</a>',
+      en: "Université Gustave Eiffel",
+      fr: "Université Gustave Eiffel",
+      zh: "Université Gustave Eiffel",
     },
     "home.news.graduated": {
       en: "I have completed my M2 at Sorbonne Université. My <a href=\"/research/#m2\">internship report and slides</a> on the inverse-square long-range Ising model are now available.",
