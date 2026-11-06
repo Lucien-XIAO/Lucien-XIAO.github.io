@@ -48,7 +48,7 @@ async function main() {
           const doctoralStart = { en: 'Since 1 October 2026', fr: 'Depuis le 1er octobre 2026', zh: '自 2026 年 10 月 1 日起' }[lang];
           check(about.includes(doctoralStart) && about.includes('Université Gustave Eiffel'), 'Homepage describes doctoral study already underway in ' + lang);
           check(!/\bincoming\b|will (?:start|begin|join)|commencerai|rejoindrai|即将|将于/i.test(about), 'Homepage has no future doctoral status');
-          check(await page.locator('#education .experience-item').count() === 3, 'Historical homepage education structure restored');
+          check(await page.locator('#education .experience-item').count() === 4, 'Homepage education includes the current doctorate and three earlier degrees');
           check(!(await page.locator('#main-content').textContent()).includes('Marne-la-Vallée'), 'Previous location label removed');
           check((await page.locator('#about-me .home-office-upec').textContent()).includes('2P 244'), 'Separate UPEC office line preserved');
           check(await page.locator('#about-me .home-office').count() === 2, 'UPEC and UGE offices shown on separate lines');

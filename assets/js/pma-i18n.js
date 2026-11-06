@@ -72,9 +72,9 @@
       en: "M2-PMA is fundamentally one of the strongest Master 2 programs in Île-de-France for pure probability and stochastic processes, alongside the M2 Mathematics of Randomness at Université Paris-Saclay and the rising M2 MATH at Paris Dauphine-PSL. The program has three tracks: Stochastic Processes, Applied Probability, and EDProba.",
       zh: "M2-PMA 基本上是法兰西岛地区纯概率与随机过程方向最强的 Master 2 项目之一；另一个是巴黎萨克雷大学的 M2 Mathématiques de l'aléatoire，而巴黎九大 Dauphine-PSL 的 M2 MATH 也正在迅速崛起。这个 M2 包含三个方向：随机过程、应用概率和 EDProba。",
     },
-    "Le M2-PMA admet environ 20 à 30 étudiants chaque année, y compris des normaliens de l'ENS-PSL, des ingénieurs de l'École polytechnique, et de très bons étudiants internationaux. La plupart choisissent la Majeure Processus Stochastiques — environ 20 personnes.": {
-      en: "M2-PMA admits about 20 to 30 students each year, including ENS-PSL students, École polytechnique engineers, and very strong international students. Most choose the Stochastic Processes track, about 20 people.",
-      zh: "M2-PMA 每年大约录取 20 到 30 名学生，其中包括 ENS-PSL 的学生、巴黎综合理工学院工程师，以及非常优秀的国际学生。大多数人选择随机过程方向，大约 20 人。",
+    "Le M2-PMA admet environ 20 à 30 étudiants chaque année, y compris des normaliens de l'ENS-PSL, des élèves de l'École polytechnique et d'autres grandes écoles d'ingénieurs, ainsi que de très bons étudiants internationaux. La plupart choisissent la Majeure Processus Stochastiques — environ 20 personnes.": {
+      en: "M2-PMA admits about 20 to 30 students each year, including ENS-PSL students, students from École polytechnique and other leading engineering schools, and very strong international students. Most choose the Stochastic Processes track, about 20 people.",
+      zh: "M2-PMA 每年大约录取 20 到 30 名学生，其中包括 ENS-PSL 的学生、巴黎综合理工学院及其他优秀工程师学校的学生，以及非常优秀的国际学生。大多数人选择随机过程方向，大约 20 人。",
     },
     "À partir de 2025–2026, une nouvelle majeure EDProba (EDP + Probabilités) est proposée conjointement avec le M2 Modélisation du LJLL. Si vous êtes inscrit en Modélisation, vous recevrez le diplôme Modélisation plutôt que le diplôme PMA.": {
       en: "Starting in 2025-2026, a new EDProba track (PDE + Probability) is offered jointly with the LJLL M2 Modeling program. If you are enrolled in Modeling, you receive the Modeling diploma rather than the PMA diploma.",

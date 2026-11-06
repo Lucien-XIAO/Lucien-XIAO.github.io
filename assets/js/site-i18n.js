@@ -244,6 +244,11 @@
       fr: "Formation, expériences de recherche et enseignement.",
       zh: "教育背景、研究经历与教学。",
     },
+    "home.education.phd": {
+      en: "PhD in Mathematics · LAMA",
+      fr: "Doctorat en mathématiques · LAMA",
+      zh: "数学博士 · LAMA",
+    },
     "cv.doctoral.period": {
       en: "2026 – Present",
       fr: "2026 – aujourd’hui",

@@ -615,6 +615,10 @@ body.theme-claude .institution-logo {
   box-shadow: none;
 }
 
+body.theme-claude .institution-logo-uge {
+  background: #fff;
+}
+
 body.theme-claude .action-links a {
   background: transparent;
   border: 0;

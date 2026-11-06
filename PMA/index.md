@@ -20,7 +20,7 @@ layout: pma
 
   <div class="info-box">
     <p>Le <strong>M2-PMA</strong> est fondamentalement l'un des programmes de Master 2 les plus solides en Île-de-France pour les probabilités pures ou les processus stochastiques (l'autre étant le <a href="https://www.universite-paris-saclay.fr/formation/master/mathematiques-et-applications/m2-mathematiques-de-laleatoire#presentation">M2 Mathématiques de l'aléatoire</a> de l'Université Paris-Saclay ; et la nouvelle force montante du M2 <a href="https://dauphine.psl.eu/en/training/masters-degrees/mathematics-and-applied-mathematics/applied-and-theoretical-mathematics-masters-year-2">MATH</a> de Paris Dauphine-PSL). Ce M2 contient trois majeures : <em>Processus stochastiques</em>, <em>Probabilités appliquées</em> et <em>EDProba</em>.</p>
-    <p>Le M2-PMA admet environ <strong>20 à 30 étudiants</strong> chaque année, y compris des normaliens de l'ENS-PSL, des ingénieurs de l'École polytechnique, et de très bons étudiants internationaux. La plupart choisissent la Majeure <em>Processus Stochastiques</em> — environ 20 personnes.</p>
+    <p>Le M2-PMA admet environ <strong>20 à 30 étudiants</strong> chaque année, y compris des normaliens de l'ENS-PSL, des élèves de l'École polytechnique et d'autres grandes écoles d'ingénieurs, ainsi que de très bons étudiants internationaux. La plupart choisissent la Majeure <em>Processus Stochastiques</em> — environ 20 personnes.</p>
   </div>
 
   <div class="alert alert-tip">
