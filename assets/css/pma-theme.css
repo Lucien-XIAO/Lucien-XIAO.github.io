@@ -515,7 +515,7 @@ body.theme-claude.pma-page .math-float-canvas {
 /* ---- Mon Parcours Timeline ---- */
 .parcours-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
 }
 .parcours-col {
@@ -576,7 +576,7 @@ body.theme-claude.pma-page .math-float-canvas {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   padding-top: 2px;
 }
-.parcours-course-body { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.parcours-course-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
 .parcours-course-name {
   font-size: 14.5px; font-weight: 600; color: var(--claude-text);
   line-height: 1.4; text-decoration: none;
@@ -1112,6 +1112,7 @@ a.parcours-course-name:hover { text-decoration: underline; text-underline-offset
   .pma-page .pma-wrapper { padding: 30px 20px 60px; }
   .pma-hero h1 { font-size: 26px; }
   .courses-grid { grid-template-columns: 1fr; }
+  .parcours-grid { grid-template-columns: 1fr; }
   .admission-course-grid { grid-template-columns: 1fr; }
   .course-meta-grid { grid-template-columns: 1fr 1fr; }
   .info-cards-grid { grid-template-columns: 1fr 1fr; }

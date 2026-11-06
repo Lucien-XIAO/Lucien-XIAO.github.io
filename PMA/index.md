@@ -216,7 +216,7 @@ layout: pma
           <span class="parcours-idx">01</span>
           <div class="parcours-course-body">
             <a href="/PMA/CS/fr/" class="parcours-course-name">Calcul Stochastique et Processus de Diffusion</a>
-            <span class="parcours-course-sub">9 ECTS · Majeure PS</span>
+            <span class="parcours-course-sub">9 ECTS · Nicolas Fournier</span>
           </div>
           <span class="parcours-course-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </li>
@@ -224,7 +224,7 @@ layout: pma
           <span class="parcours-idx">02</span>
           <div class="parcours-course-body">
             <a href="/PMA/Markov-I/fr/" class="parcours-course-name">Chaînes et Processus de Markov (Markov I)</a>
-            <span class="parcours-course-sub">9 ECTS · Nuages Poissonniens</span>
+            <span class="parcours-course-sub">9 ECTS · Thomas Duquesne</span>
           </div>
           <span class="parcours-course-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </li>
@@ -232,7 +232,7 @@ layout: pma
           <span class="parcours-idx">03</span>
           <div class="parcours-course-body">
             <a href="/PMA/CGP/fr/" class="parcours-course-name">Convergence des Mesures, Grandes Déviations, Percolation</a>
-            <span class="parcours-course-sub">6 ECTS</span>
+            <span class="parcours-course-sub">6 ECTS · Thierry Lévy</span>
           </div>
           <span class="parcours-course-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </li>
@@ -240,7 +240,7 @@ layout: pma
           <span class="parcours-idx">04</span>
           <div class="parcours-course-body">
             <a href="/PMA/Markov-II/fr/" class="parcours-course-name">Markov II — Nuages, Lévy, Excursions</a>
-            <span class="parcours-course-sub">6 ECTS</span>
+            <span class="parcours-course-sub">6 ECTS · Thomas Duquesne</span>
           </div>
           <span class="parcours-course-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </li>
@@ -259,47 +259,42 @@ layout: pma
           <span class="parcours-idx">01</span>
           <div class="parcours-course-body">
             <span class="parcours-course-name">Determinantal processes, random matrices and hyperuniformity</span>
-            <span class="parcours-course-sub">6 ECTS</span>
+            <span class="parcours-course-sub">6 ECTS · Raphaël Lachièze-Rey</span>
           </div>
         </li>
         <li class="parcours-course-item">
           <span class="parcours-idx">02</span>
           <div class="parcours-course-body">
             <span class="parcours-course-name">Systèmes désordonnés et polymères dirigés</span>
-            <span class="parcours-course-sub">6 ECTS
-              · <a href="/PMA/doc/Diapo_DS.pdf" class="parcours-doc-link"><i class="fa-regular fa-file-powerpoint"></i> diapo</a>
-            </span>
+            <span class="parcours-course-sub">6 ECTS · Quentin Berger</span>
           </div>
         </li>
         <li class="parcours-course-item">
           <span class="parcours-idx">03</span>
           <div class="parcours-course-body">
             <span class="parcours-course-name">Invariance conforme en mécanique statistique</span>
-            <span class="parcours-course-sub">6 ECTS</span>
+            <span class="parcours-course-sub">6 ECTS · Cédric Boutillier · Titus Lupu</span>
           </div>
         </li>
         <li class="parcours-course-item">
           <span class="parcours-idx">04</span>
           <div class="parcours-course-body">
             <span class="parcours-course-name">Modèles probabilistes pour les neurosciences</span>
-            <span class="parcours-course-sub">6 ECTS
-              · <a href="/PMA/doc/rapport_neuro.pdf" class="parcours-doc-link"><i class="fa-solid fa-file-pdf"></i> rapport</a>
-              · <a href="/PMA/doc/Diapo_neuro.pdf" class="parcours-doc-link"><i class="fa-regular fa-file-powerpoint"></i> diapo</a>
-            </span>
+            <span class="parcours-course-sub">6 ECTS · Michèle Thieullen</span>
           </div>
         </li>
         <li class="parcours-course-item">
           <span class="parcours-idx">05</span>
           <div class="parcours-course-body">
             <span class="parcours-course-name">Integrable probability and the KPZ universality class</span>
-            <span class="parcours-course-sub">6 ECTS</span>
+            <span class="parcours-course-sub">6 ECTS · Guillaume Barraquand</span>
           </div>
         </li>
         <li class="parcours-course-item">
           <span class="parcours-idx">06</span>
           <div class="parcours-course-body">
             <span class="parcours-course-name">Ising model</span>
-            <span class="parcours-course-sub">6 ECTS</span>
+            <span class="parcours-course-sub">6 ECTS · Piet Lammers</span>
           </div>
         </li>
       </ol>
