@@ -49,7 +49,7 @@ title: Curriculum Vitae
       <article class="cv-entry">
         <time>2024 – 2025</time>
         <div class="cv-entry-content">
-          <h3>First-Year M.S. (M1) in Mathematics & Applications</h3>
+          <h3>Master 1 in Mathematics and Applications</h3>
           <p class="cv-institution">
             <img class="cv-school-logo" src="/assets/img/sorbonne-universite-logo.jpg" width="24" height="24" alt="" loading="lazy" decoding="async">
             <span>Sorbonne Université, Paris</span>

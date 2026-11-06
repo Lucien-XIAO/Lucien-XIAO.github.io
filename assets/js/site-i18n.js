@@ -1482,8 +1482,8 @@
       fr: "Master 2 Probabilités et Modèles Aléatoires (PMA)",
       zh: "概率与随机模型硕士二年级（PMA）",
     },
-    "Master 1 Mathematics and Applications": {
-      en: "Master 1 Mathematics and Applications",
+    "Master 1 in Mathematics and Applications": {
+      en: "Master 1 in Mathematics and Applications",
       fr: "Master 1 Mathématiques et Applications",
       zh: "数学与应用硕士一年级",
     },
@@ -1781,11 +1781,6 @@
       en: "M.S. in Probability",
       fr: "Master en probabilités",
       zh: "概率论硕士",
-    },
-    "First-Year M.S. (M1) in Mathematics & Applications": {
-      en: "First-Year M.S. (M1) in Mathematics & Applications",
-      fr: "Master 1 Mathématiques et Applications",
-      zh: "数学与应用硕士一年级（M1）",
     },
     "B.S. in Mathematics": {
       en: "B.S. in Mathematics",

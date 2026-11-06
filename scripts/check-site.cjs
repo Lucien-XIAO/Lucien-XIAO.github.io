@@ -63,8 +63,8 @@ async function main() {
           check(await page.locator('.cv-document-section').count() === 1, 'CV contains only Education');
           check(await page.locator('.cv-entry').count() === 5, 'All five education entries remain');
           const m1Entry = page.locator('.cv-entry').nth(2);
-          const m1Label = lang === 'fr' ? 'Master 1 Mathématiques et Applications' : 'M1';
-          check((await m1Entry.locator('h3').textContent()).includes(m1Label) && (await m1Entry.locator('time').textContent()).replace(/\s/g, '') === '2024–2025', 'M1 degree and dates remain, with Master 1 written in full in French');
+          const m1Label = { en: 'Master 1 in Mathematics and Applications', fr: 'Master 1 Mathématiques et Applications', zh: '数学与应用硕士一年级' }[lang];
+          check((await m1Entry.locator('h3').textContent()) === m1Label && (await m1Entry.locator('time').textContent()).replace(/\s/g, '') === '2024–2025', 'Master 1 title is written in full and the original dates remain');
           check(await m1Entry.locator('.cv-institution > span').textContent() === 'Sorbonne Université, Paris', 'Original M1 school remains');
           check(await page.locator('.cv-document-header .cv-lede, .cv-document-header .cv-profile-line').count() === 2, 'Historical CV introduction restored');
           const currentStatus = { en: 'Current', fr: 'En cours', zh: '在读' }[lang];
