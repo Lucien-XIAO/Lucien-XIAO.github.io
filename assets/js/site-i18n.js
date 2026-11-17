@@ -2666,9 +2666,9 @@
       zh: '自 2026 年 10 月 1 日起，我在 <a href="https://www.univ-gustave-eiffel.fr/">Université Gustave Eiffel</a> 攻读数学博士，并在 <a href="https://lama-umr8050.fr/">LAMA</a> 开展研究。我的博士课题为<em>数学统计力学中的界面模型</em>，由 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud Le Ny</a>（LAMA，<a href="https://www.u-pec.fr/">UPEC</a>）和 <a href="https://perso.math.u-pem.fr/pmonmarc/" target="_blank" rel="noopener noreferrer">Pierre Monmarché</a>（LAMA，<a href="https://www.univ-gustave-eiffel.fr/">UGE</a>）共同指导。该课题位于概率论、统计力学与遍历理论的交叉领域。此前，我曾就读于 <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a> 的 <a href="https://www.lpsm.paris/masters/modale/index">M2 Probabilités et Modèles Aléatoires</a> 项目。',
     },
     "home.news.long_range": {
-      en: 'I’ll be working on the long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> at Université Paris-Est Créteil (UPEC) as my M2 internship from April 20 to July 20, 2026.',
-      fr: 'Je travaillerai sur le modèle d\'Ising à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> à l\'Université Paris-Est Créteil (UPEC) dans le cadre de mon stage de M2, du 20 avril au 20 juillet 2026.',
-      zh: '我将在 2026 年 4 月 20 日至 7 月 20 日，于 Université Paris-Est Créteil (UPEC) 跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> 做 M2 实习，研究长程 Ising 模型。',
+      en: 'I worked on the long-range Ising model with <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> during my M2 internship at Université Paris-Est Créteil (UPEC), from April 20 to July 20, 2026.',
+      fr: 'J’ai travaillé sur le modèle d’Ising à longue portée avec <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> à l’Université Paris-Est Créteil (UPEC) dans le cadre de mon stage de M2, du 20 avril au 20 juillet 2026.',
+      zh: '我于 2026 年 4 月 20 日至 7 月 20 日在 Université Paris-Est Créteil (UPEC) 完成了 M2 实习，跟随 <a href="https://perso.math.u-pem.fr/leny.arnaud/" target="_blank" rel="noopener noreferrer">Arnaud LE NY</a> 研究长程 Ising 模型。',
     },
     "home.news.stat_mech_creteil": {
       en: "I attended <a href=\"https://statmechcreteil.sciencesconf.org/?lang=en\" target=\"_blank\" rel=\"noopener noreferrer\">Stat-Mech in Créteil 2026</a> on 8–9 October 2026 as an audience member.",
