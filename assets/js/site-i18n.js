@@ -1407,20 +1407,20 @@
       fr: "Mécanique statistique",
       zh: "统计力学",
     },
-    "Nearest-neighbor and long-range Ising models, height models, and random interfaces.": {
-      en: "Nearest-neighbor and long-range Ising models, height models, and random interfaces.",
-      fr: "Modèles d’Ising à plus proches voisins et à longue portée, modèles de hauteur et interfaces aléatoires.",
-      zh: "最近邻与长程伊辛模型、高度模型和随机界面。",
+    "Ising and Potts models, percolation, height models, and random interfaces.": {
+      en: "Ising and Potts models, percolation, height models, and random interfaces.",
+      fr: "Modèles d’Ising et de Potts, percolation, modèles de hauteur et interfaces aléatoires.",
+      zh: "伊辛模型、Potts 模型、渗流、高度模型和随机界面。",
     },
     "Future Interests": {
       en: "Future Interests",
       fr: "Perspectives de recherche",
       zh: "未来研究兴趣",
     },
-    "Schramm–Loewner evolution (SLE) and KPZ universality.": {
-      en: "Schramm–Loewner evolution (SLE) and KPZ universality.",
-      fr: "Évolution de Schramm–Loewner (SLE) et universalité KPZ.",
-      zh: "Schramm–Loewner 演化（SLE）与 KPZ 普适性。",
+    "Glauber dynamics for the Ising model and Schramm–Loewner evolution (SLE).": {
+      en: "Glauber dynamics for the Ising model and Schramm–Loewner evolution (SLE).",
+      fr: "Dynamique de Glauber du modèle d’Ising et évolution de Schramm–Loewner (SLE).",
+      zh: "伊辛模型的 Glauber 动力学与 Schramm–Loewner 演化（SLE）。",
     },
     "M2-PMA · Stochastic Processes": {
       en: "M2-PMA · Stochastic Processes",
