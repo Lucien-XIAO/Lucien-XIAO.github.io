@@ -525,9 +525,9 @@
       zh: "数学博士生 · 博士研究人员",
     },
     "home.hero.intro": {
-      en: "I work in probability and mathematical statistical mechanics, with a focus on Ising models (nearest-neighbor and long-range), height models, and random interfaces.",
-      fr: "Je travaille en probabilités et en mécanique statistique mathématique, avec un intérêt particulier pour les modèles d’Ising (à plus proches voisins et à longue portée), les modèles de hauteur et les interfaces aléatoires.",
-      zh: "我的研究方向是概率论与数学统计力学，重点关注伊辛模型（最近邻与长程）、高度模型和随机界面。",
+      en: "My research focuses on random interfaces in statistical mechanics, particularly in Ising models and height models.",
+      fr: "Mes recherches portent sur les interfaces aléatoires en mécanique statistique, notamment dans les modèles d’Ising et les modèles de hauteur.",
+      zh: "我研究统计力学中的随机界面，尤其关注伊辛模型和高度模型。",
     },
     "home.hero.cv": {
       en: "View CV",
