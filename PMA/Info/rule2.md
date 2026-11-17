@@ -41,11 +41,11 @@ breadcrumb: Règles S2
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;">
   <div style="border:1px solid var(--claude-border);border-top:3px solid var(--claude-accent);border-radius:10px;padding:18px;">
-    <div style="font-size:13px;font-weight:800;color:var(--claude-accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Cours sous contrat (obligatoires)</div>
+    <div class="pma-i18n-fragment" style="font-size:13px;font-weight:800;color:var(--claude-accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Cours sous contrat (obligatoires)</div>
     <p style="font-size:14px;color:var(--claude-text);margin:0;line-height:1.7;">Les notes <strong>\(N_1, N_2, N_3\)</strong> sont enregistrées comme les <strong>trois cours obligatoires</strong> du semestre. Si 2 ou 3 appartiennent au même bloc, le jury les répartit administrativement dans 3 blocs distincts — aucune incidence pour l'étudiant.</p>
   </div>
   <div style="border:1px solid var(--claude-border);border-top:3px solid #2563eb;border-radius:10px;padding:18px;">
-    <div style="font-size:13px;font-weight:800;color:#2563eb;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Cours hors contrat (bonus)</div>
+    <div class="pma-i18n-fragment" style="font-size:13px;font-weight:800;color:#2563eb;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Cours hors contrat (bonus)</div>
     <p style="font-size:14px;color:var(--claude-text);margin:0 0 10px;line-height:1.7;">Les notes <strong>\(N_4, N_5, N_6, \ldots\)</strong> ne sont pas obligatoires mais génèrent des <strong>points de bonus</strong> significatifs.</p>
     <div style="display:flex;flex-direction:column;gap:5px;">
       <span class="badge badge-green" style="width:fit-content;">✅ Validé : \(N \ge 10\)</span>
@@ -56,27 +56,27 @@ breadcrumb: Règles S2
 </div>
 
 <!-- ===== BONUS ===== -->
-<h2 class="rule-section-title"><span class="rule-num">4</span> Système de bonus</h2>
-<div style="display:flex;flex-direction:column;gap:10px;">
+<h2 class="rule-section-title" id="bonus-system"><span class="rule-num">4</span> Système de bonus</h2>
+<div class="rule-bonus-list" data-pma-i18n-scope style="display:flex;flex-direction:column;gap:10px;">
   <div style="border:1px solid var(--claude-border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:16px;background:rgba(5,150,105,.04);">
     <div style="font-size:22px;font-weight:900;color:#059669;min-width:40px;text-align:center;">+1</div>
     <div>
-      <div style="font-size:14px;font-weight:700;color:var(--claude-text);margin-bottom:3px;">1er cours hors contrat validé (si \(N_4 \ge 10\))</div>
-      <div style="font-size:13px;color:var(--claude-secondary);">+1 point sur <strong>\(N_2\)</strong> et <strong>\(N_3\)</strong> · Gain sur moyenne : <strong style="color:#059669;">+0,4 point</strong>/20</div>
+      <div style="font-size:14px;font-weight:700;color:var(--claude-text);margin-bottom:3px;"><span class="pma-i18n-fragment">1er cours hors contrat validé (si</span> <span style="white-space:nowrap;">\(N_4 \ge 10\)<span class="pma-i18n-fragment">)</span></span></div>
+      <div style="font-size:13px;color:var(--claude-secondary);"><span class="pma-i18n-fragment">+1 point sur</span> <strong>\(N_2\)</strong> <span class="pma-i18n-fragment">et</span> <strong>\(N_3\)</strong> <span class="pma-i18n-fragment">· Gain sur moyenne :</span> <strong style="color:#059669;"><span class="pma-i18n-fragment">+0,4 point</span></strong>/20</div>
     </div>
   </div>
   <div style="border:1px solid var(--claude-border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:16px;background:rgba(37,99,235,.04);">
     <div style="font-size:22px;font-weight:900;color:#2563eb;min-width:40px;text-align:center;">+1</div>
     <div>
-      <div style="font-size:14px;font-weight:700;color:var(--claude-text);margin-bottom:3px;">Chaque cours hors contrat supplémentaire (\(N_5, N_6, \ldots\))</div>
-      <div style="font-size:13px;color:var(--claude-secondary);">+1 point sur <strong>\(N_1\)</strong>, <strong>\(N_2\)</strong> et <strong>\(N_3\)</strong> · Gain sur moyenne : <strong style="color:#2563eb;">+0,6 point</strong>/20</div>
+      <div style="font-size:14px;font-weight:700;color:var(--claude-text);margin-bottom:3px;"><span class="pma-i18n-fragment">Chaque cours hors contrat supplémentaire (</span><span style="white-space:nowrap;">\(N_5, N_6, \ldots\)<span class="pma-i18n-fragment">)</span></span></div>
+      <div style="font-size:13px;color:var(--claude-secondary);"><span class="pma-i18n-fragment">+1 point sur</span> <strong>\(N_1\)</strong>, <strong>\(N_2\)</strong> <span class="pma-i18n-fragment">et</span> <strong>\(N_3\)</strong> <span class="pma-i18n-fragment">· Gain sur moyenne :</span> <strong style="color:#2563eb;"><span class="pma-i18n-fragment">+0,6 point</span></strong>/20</div>
     </div>
   </div>
   <div style="border:1px solid var(--claude-border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:16px;background:rgba(245,158,11,.04);">
     <div style="font-size:22px;font-weight:900;color:#d97706;min-width:40px;text-align:center;">+1</div>
     <div>
-      <div style="font-size:14px;font-weight:700;color:var(--claude-text);margin-bottom:3px;">Chaque cours presque validé (\(8 \le N &lt; 10\))</div>
-      <div style="font-size:13px;color:var(--claude-secondary);">+1 point sur <strong>\(N_3\)</strong> · Gain sur moyenne : <strong style="color:#d97706;">+0,2 point</strong>/20</div>
+      <div style="font-size:14px;font-weight:700;color:var(--claude-text);margin-bottom:3px;"><span class="pma-i18n-fragment">Chaque cours presque validé (</span><span style="white-space:nowrap;">\(8 \le N &lt; 10\)<span class="pma-i18n-fragment">)</span></span></div>
+      <div style="font-size:13px;color:var(--claude-secondary);"><span class="pma-i18n-fragment">+1 point sur</span> <strong>\(N_3\)</strong> <span class="pma-i18n-fragment">· Gain sur moyenne :</span> <strong style="color:#d97706;"><span class="pma-i18n-fragment">+0,2 point</span></strong>/20</div>
     </div>
   </div>
 </div>

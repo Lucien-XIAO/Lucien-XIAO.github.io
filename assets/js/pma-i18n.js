@@ -12,6 +12,10 @@
       en: "Semester 2 Rules: Thesis and Internship (M2)",
       zh: "第二学期规则：论文与实习（M2）",
     },
+    "Règles S2": {
+      en: "Semester 2 rules",
+      zh: "第二学期规则",
+    },
     "Cours et Modalités d'Évaluation du S2 2025–2026": {
       en: "S2 Courses and Assessment Methods 2025-2026",
       zh: "2025-2026 第二学期课程与考核方式",
@@ -912,6 +916,46 @@
       en: "Bonus system",
       zh: "加分机制",
     },
+    "1er cours hors contrat validé (si": {
+      en: "First passed extra-contract course (if",
+      zh: "第一门通过的合同外课程（若",
+    },
+    "Chaque cours hors contrat supplémentaire (": {
+      en: "Each additional extra-contract course (",
+      zh: "每一门额外的合同外课程（",
+    },
+    "Chaque cours presque validé (": {
+      en: "Each nearly passed course (",
+      zh: "每一门接近通过的课程（",
+    },
+    ")": {
+      en: ")",
+      zh: "）",
+    },
+    "+1 point sur": {
+      en: "Add 1 point to",
+      zh: "以下成绩各加 1 分：",
+    },
+    "et": {
+      en: "and",
+      zh: "和",
+    },
+    "· Gain sur moyenne :": {
+      en: "· Increase in average:",
+      zh: "· 平均分提升：",
+    },
+    "+0,4 point": {
+      en: "+0.4 points",
+      zh: "+0.4 分",
+    },
+    "+0,6 point": {
+      en: "+0.6 points",
+      zh: "+0.6 分",
+    },
+    "+0,2 point": {
+      en: "+0.2 points",
+      zh: "+0.2 分",
+    },
     "1er cours hors contrat validé (si \\(N_4 \\ge 10\\))": {
       en: "First validated extra-contract course (if \\(N_4 \\ge 10\\))",
       zh: "第一门通过的合同外课程（若 \\(N_4 \\ge 10\\)）",
@@ -1501,6 +1545,7 @@
   };
 
   const SELECTORS = [
+    ".pma-i18n-fragment",
     ".pma-hero-label",
     ".pma-hero h1",
     ".pma-hero p",

@@ -2792,7 +2792,7 @@
     const parent = node.parentElement;
     if (!parent) return true;
     return Boolean(parent.closest(
-      "script, style, noscript, iframe, canvas, svg, code, pre, textarea, input, select, option, [data-i18n], [data-i18n-html]"
+      "script, style, noscript, iframe, canvas, svg, code, pre, textarea, input, select, option, [data-i18n], [data-i18n-html], [data-pma-i18n-scope]"
     ));
   }
 
