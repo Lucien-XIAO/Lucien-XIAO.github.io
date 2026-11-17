@@ -150,9 +150,19 @@
       zh: "M2-PMA 指引",
     },
     "home.materials.pma.summary": {
-      en: "Course choices and personal experience from the 2025-2026 cohort.",
-      fr: "Choix de cours et retour d’expérience de la promotion 2025-2026.",
-      zh: "2025-2026 学年课程选择与个人学习经验。",
+      en: "Course choices and personal experience from the 2025–2026 cohort.",
+      fr: "Choix de cours et retour d’expérience de la promotion 2025–2026.",
+      zh: "2025–2026 学年的课程选择与个人学习经验。",
+    },
+    "home.materials.cv.summary": {
+      en: "Academic background.",
+      fr: "Formation universitaire.",
+      zh: "教育背景。",
+    },
+    "home.materials.notes.summary": {
+      en: "Personal notes, still in progress.",
+      fr: "Notes personnelles en cours de rédaction.",
+      zh: "个人整理的笔记，仍在编写中。",
     },
     "research.title": {
       en: "Probability and random interfaces",
@@ -545,9 +555,9 @@
       zh: "论文",
     },
     "home.hero.scroll": {
-      en: "Scroll",
-      fr: "Défiler",
-      zh: "下滑",
+      en: "Scroll down",
+      fr: "Faire défiler",
+      zh: "向下滚动",
     },
     "home.hero.scroll_label": {
       en: "Continue to About Me",
@@ -605,9 +615,9 @@
       zh: "相关文章",
     },
     "home.research.m2.period": {
-      en: "April-July 2026",
-      fr: "avril-juillet 2026",
-      zh: "2026年4月-7月",
+      en: "April–July 2026",
+      fr: "avril–juillet 2026",
+      zh: "2026 年 4 月至 7 月",
     },
     "home.research.m2.topic": {
       en: "The Long-Range Ising Model in 1D at Inverse-Square Decay",
@@ -615,14 +625,19 @@
       zh: "具有平方反比衰减的一维长程 Ising 模型",
     },
     "home.research.m1.period": {
-      en: "February-May 2025",
-      fr: "février-mai 2025",
-      zh: "2025年2月-5月",
+      en: "February–May 2025",
+      fr: "février–mai 2025",
+      zh: "2025 年 2 月至 5 月",
     },
     "home.research.l3.period": {
-      en: "February-May 2024",
-      fr: "février-mai 2024",
-      zh: "2024年2月-5月",
+      en: "February–May 2024",
+      fr: "février–mai 2024",
+      zh: "2024 年 2 月至 5 月",
+    },
+    "home.research.supervision": {
+      en: "Supervisor:",
+      fr: "Encadrement :",
+      zh: "指导教师：",
     },
     "footer.copyright": {
       en: "© 2026 Yuguang XIAO. All rights reserved.",
@@ -1352,10 +1367,10 @@
       fr: "Notes diverses",
       zh: "学习笔记",
     },
-    "Selected Materials": {
-      en: "Selected Materials",
-      fr: "Documents choisis",
-      zh: "精选材料",
+    "Selected Resources": {
+      en: "Selected Resources",
+      fr: "Sélection de ressources",
+      zh: "精选资源",
     },
     "Probability": {
       en: "Probability",
@@ -1407,10 +1422,10 @@
       fr: "Modèles d’Ising et de Potts, percolation, modèles de hauteur et interfaces aléatoires.",
       zh: "伊辛模型、Potts 模型、渗流、高度模型和随机界面。",
     },
-    "Future Interests": {
-      en: "Future Interests",
+    "Research Perspectives": {
+      en: "Research Perspectives",
       fr: "Perspectives de recherche",
-      zh: "未来研究兴趣",
+      zh: "研究展望",
     },
     "Glauber dynamics for the Ising model and Schramm–Loewner evolution (SLE).": {
       en: "Glauber dynamics for the Ising model and Schramm–Loewner evolution (SLE).",
@@ -1487,25 +1502,25 @@
       fr: "Master 1 Mathématiques et Applications",
       zh: "数学与应用硕士一年级",
     },
-    "Double Bachelor's degree in Mathematics and Physics": {
-      en: "Double Bachelor's degree in Mathematics and Physics",
-      fr: "Double licence en mathématiques et physique",
-      zh: "数学与物理双学士学位",
+    "Bachelor’s degrees in Mathematics and Physics": {
+      en: "Bachelor’s degrees in Mathematics and Physics",
+      fr: "Licences en mathématiques et en physique",
+      zh: "数学学士与物理学士学位",
     },
-    "M2 Research Intern": {
-      en: "M2 Research Intern",
-      fr: "Stagiaire de recherche M2",
-      zh: "M2 研究实习生",
+    "M2 Research Internship": {
+      en: "M2 Research Internship",
+      fr: "Stage de recherche de M2",
+      zh: "硕士二年级研究实习",
     },
-    "M1 Research Intern": {
-      en: "M1 Research Intern",
-      fr: "Stagiaire de recherche M1",
-      zh: "M1 研究实习生",
+    "M1 Research Internship": {
+      en: "M1 Research Internship",
+      fr: "Stage de recherche de M1",
+      zh: "硕士一年级研究实习",
     },
-    "L3 Research Intern": {
-      en: "L3 Research Intern",
-      fr: "Stagiaire de recherche L3",
-      zh: "本科三年级研究实习生",
+    "L3 Research Internship": {
+      en: "L3 Research Internship",
+      fr: "Stage de recherche de L3",
+      zh: "本科三年级研究实习",
     },
     "Topic:": {
       en: "Topic:",
