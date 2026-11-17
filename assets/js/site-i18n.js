@@ -525,8 +525,8 @@
       zh: "数学博士生 · 博士研究人员",
     },
     "home.hero.intro": {
-      en: "My research focuses on models in statistical mechanics, particularly long-range models.",
-      fr: "Mes recherches portent sur les modèles en mécanique statistique, notamment dans les modèles à longue portée.",
+      en: "My research focuses on models of statistical mechanics, particularly long-range models.",
+      fr: "Mes recherches portent sur les modèles de mécanique statistique, notamment les modèles à longue portée.",
       zh: "我的研究关注统计力学模型，尤其是长程模型。",
     },
     "home.hero.cv": {
