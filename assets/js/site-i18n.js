@@ -1392,16 +1392,6 @@
       fr: "Neurosciences mathématiques : processus de Hawkes et modèles stochastiques de l'activité neuronale",
       zh: "数学神经科学：Hawkes 过程与神经活动的随机模型",
     },
-    "Stochastic Processes": {
-      en: "Stochastic Processes",
-      fr: "Processus stochastiques",
-      zh: "随机过程",
-    },
-    "Random walks, Markov and non-Markovian dynamics, and memory effects.": {
-      en: "Random walks, Markov and non-Markovian dynamics, and memory effects.",
-      fr: "Marches aléatoires, dynamiques markoviennes et non markoviennes, et effets de mémoire.",
-      zh: "随机游走、马尔可夫与非马尔可夫动力学，以及记忆效应。",
-    },
     "Statistical Mechanics": {
       en: "Statistical Mechanics",
       fr: "Mécanique statistique",
