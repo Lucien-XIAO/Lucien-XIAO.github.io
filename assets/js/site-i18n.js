@@ -19,6 +19,11 @@
       fr: "À propos",
       zh: "关于我",
     },
+    "home.about.offices_intro": {
+      en: "You can find me in either of my two offices:",
+      fr: "Vous pouvez me retrouver dans l’un de mes deux bureaux :",
+      zh: "您可以在以下办公室找到我：",
+    },
     "home.about.office": {
       en: "UPEC office:",
       fr: "Bureau à l’UPEC :",
